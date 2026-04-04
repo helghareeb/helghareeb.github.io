@@ -1,31 +1,75 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+
+const editions = (await getCollection('editions'))
+  .filter((entry) => entry.data.lang === 'en')
+  .slice(0, 6);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
   title="Critical Editions | Dr. Haitham A. El-Ghareeb"
-  description="Critical editions section of the personal scholarly website"
+  description="Critical editions and manuscript-related work section"
 >
   <main class="page-main">
     <section class="shell hero">
       <p class="hero__eyebrow">Critical Editions</p>
       <h1 class="hero__title">Scholarly editorial work and manuscript-related projects</h1>
       <p class="hero__lead">
-        This section is dedicated to published and ongoing critical editions, with room for
-        concise scholarly descriptions, status labels, and related references.
+        This section presents the editorial and manuscript-oriented side of the scholarly profile,
+        with space for published editions, works in progress, and concise academic notes on each item.
       </p>
     </section>
 
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">Identity of the section</p>
+          <h2 class="section-title">A distinct scholarly track</h2>
+          <p>
+            Critical editions are treated here as a separate body of scholarly work, not merely as
+            an appendix to books or articles, which reflects their importance within the wider project.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">Future format</p>
+          <h2 class="section-title">How entries will be presented</h2>
+          <p>
+            Each edition will later include a title, short scholarly description, status, and any
+            publication or reference details that help position the work clearly.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section class="shell notice-card">
-      <h2 class="section-title">Planned details</h2>
+      <h2 class="section-title">Expected metadata for each edition</h2>
       <ul class="list-clean">
-        <li>Edition titles and publication status.</li>
-        <li>Short scholarly descriptions for each work.</li>
-        <li>Relevant links and related project references.</li>
+        <li>Edition title.</li>
+        <li>Publication or completion status.</li>
+        <li>Short academic description.</li>
+        <li>Relevant links or references where available.</li>
       </ul>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Initial sample entries</p>
+        <h2 class="section-title">Editorial items prepared for later refinement</h2>
+      </div>
+
+      <div class="grid-two">
+        {editions.map((edition) => (
+          <article class="content-card">
+            <p class="content-card__meta">{edition.data.status ?? 'Provisional'}</p>
+            <h3>{edition.data.title}</h3>
+            <p>{edition.data.summary}</p>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

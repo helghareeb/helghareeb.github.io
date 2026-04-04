@@ -1,6 +1,11 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+
+const books = (await getCollection('books'))
+  .filter((entry) => entry.data.lang === 'ar')
+  .slice(0, 6);
 ---
 
 <BaseLayout
@@ -48,6 +53,23 @@ import '../../../styles/global.css';
         <li>بيانات النشر أو سنة الإصدار.</li>
         <li>رابط خارجي أو معلومات إضافية عند التوفر.</li>
       </ul>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">نماذج أولية</p>
+        <h2 class="section-title">مدخلات أولية قابلة للتعديل</h2>
+      </div>
+
+      <div class="grid-two">
+        {books.map((book) => (
+          <article class="content-card">
+            <p class="content-card__meta">{book.data.status ?? 'مسودة أولية'}</p>
+            <h3>{book.data.title}</h3>
+            <p>{book.data.summary}</p>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

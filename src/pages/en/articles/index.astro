@@ -1,31 +1,77 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
+  .slice(0, 6);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
   title="Articles | Dr. Haitham A. El-Ghareeb"
-  description="Articles section of the personal scholarly website"
+  description="Articles and thematic series section of the personal scholarly website"
 >
   <main class="page-main">
     <section class="shell hero">
       <p class="hero__eyebrow">Articles</p>
       <h1 class="hero__title">Articles, essays, and thematic series</h1>
       <p class="hero__lead">
-        This route is prepared for article archives, selected published pieces, and future
-        thematic series arranged in a structured and navigable format.
+        This section is designed as the website's ongoing publishing space, gathering original
+        articles, selected externally published pieces, and future thematic series in a clear archive.
       </p>
     </section>
 
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">Purpose</p>
+          <h2 class="section-title">A living publication archive</h2>
+          <p>
+            The articles section is intended to document ongoing intellectual output and organize it
+            by topic, series, and publication context.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">Scalability</p>
+          <h2 class="section-title">Built for continuous growth</h2>
+          <p>
+            The current site structure is prepared to receive entries gradually while preserving a
+            coherent archive for browsing and long-term reference.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section class="shell notice-card">
-      <h2 class="section-title">Planned structure</h2>
+      <h2 class="section-title">Planned content types</h2>
       <ul class="list-clean">
-        <li>Original website articles and essays.</li>
-        <li>Selected externally published pieces.</li>
-        <li>Series, categories, and topic-based organization.</li>
+        <li>Original website essays and articles.</li>
+        <li>Selected externally published writings.</li>
+        <li>Thematic series and topic-based groupings.</li>
+        <li>Summaries and categories for easier navigation.</li>
       </ul>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Initial sample entries</p>
+        <h2 class="section-title">Provisional article records</h2>
+      </div>
+
+      <div class="grid-two">
+        {articles.map((article) => (
+          <article class="content-card">
+            <p class="content-card__meta">
+              {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+            </p>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.summary}</p>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

@@ -1,31 +1,75 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+
+const books = (await getCollection('books'))
+  .filter((entry) => entry.data.lang === 'en')
+  .slice(0, 6);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
   title="Books | Dr. Haitham A. El-Ghareeb"
-  description="Books section of the personal scholarly website"
+  description="Books and authored works section of the personal scholarly website"
 >
   <main class="page-main">
     <section class="shell hero">
       <p class="hero__eyebrow">Books</p>
       <h1 class="hero__title">Authored and published works</h1>
       <p class="hero__lead">
-        This section is prepared for books authored and published by Dr. Haitham A. El-Ghareeb,
-        with space for descriptions, publication details, and related links.
+        This section is reserved for books that represent the scholarly profile of Dr. Haitham
+        A. El-Ghareeb, with room for descriptions, publication details, and future dedicated entries.
       </p>
     </section>
 
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">Section purpose</p>
+          <h2 class="section-title">A structured bibliography-facing space</h2>
+          <p>
+            The books page is intended to gather authored works in a readable format that can later
+            expand into individual book pages with richer scholarly and publication metadata.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">Current stage</p>
+          <h2 class="section-title">Prepared for gradual entry</h2>
+          <p>
+            The final list of titles is not entered yet, but the site structure is already ready
+            to receive books progressively without another redesign.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section class="shell notice-card">
-      <h2 class="section-title">This section will include</h2>
+      <h2 class="section-title">Expected information for each title</h2>
       <ul class="list-clean">
-        <li>Approved book titles and short descriptions.</li>
-        <li>Core publication information.</li>
-        <li>External links where relevant.</li>
+        <li>Full title.</li>
+        <li>Short descriptive summary.</li>
+        <li>Publication details or year.</li>
+        <li>Relevant external links when available.</li>
       </ul>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Initial sample entries</p>
+        <h2 class="section-title">Provisional items ready for later editing</h2>
+      </div>
+
+      <div class="grid-two">
+        {books.map((book) => (
+          <article class="content-card">
+            <p class="content-card__meta">{book.data.status ?? 'Provisional'}</p>
+            <h3>{book.data.title}</h3>
+            <p>{book.data.summary}</p>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

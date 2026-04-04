@@ -1,31 +1,77 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+  .slice(0, 6);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
   title="المقالات | د. هيثم الغريب"
-  description="قسم المقالات ضمن الموقع الشخصي العلمي"
+  description="قسم المقالات والسلاسل العلمية ضمن الموقع الشخصي العلمي"
 >
   <main class="page-main">
     <section class="shell hero">
       <p class="hero__eyebrow">المقالات</p>
       <h1 class="hero__title">أرشفة المقالات والسلاسل العلمية</h1>
       <p class="hero__lead">
-        هذا القسم مهيأ ليكون واجهة النشر المتجدد داخل الموقع، مع إمكان تنظيم المقالات
-        بحسب التصنيف والسلسلة والجهة المنشور فيها، بما في ذلك المقالات الأصلية والمواد الخارجية المختارة.
+        خُصص هذا القسم ليكون واجهة النشر المتجدد في الموقع، وليجمع المقالات الأصلية
+        والمقالات المنشورة خارجيًا والسلاسل الموضوعية في بنية منظمة سهلة التصفح والرجوع.
       </p>
     </section>
 
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">وظيفة القسم</p>
+          <h2 class="section-title">مساحة للنشر والتوثيق</h2>
+          <p>
+            سيضم هذا القسم المادة المقالية المرتبطة بالمشروع العلمي للدكتور هيثم الغريب،
+            مع تنظيم المحتوى بحسب الموضوعات والسلاسل والجهات المنشور فيها.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">اتجاه التوسع</p>
+          <h2 class="section-title">أرشيف قابل للنمو</h2>
+          <p>
+            أُعدت البنية الحالية لتسمح بإضافة المقالات تباعًا، وربط كل مقال بتصنيفه وملخصه
+            وسلسلته، بما يجعل القسم مرجعًا حيًا للنشر العلمي والمعرفي.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section class="shell notice-card">
-      <h2 class="section-title">سيجري تنظيم هذا القسم على مراحل</h2>
+      <h2 class="section-title">أنواع المحتوى المنتظر إدراجها</h2>
       <ul class="list-clean">
-        <li>إدراج المقالات الأصلية المنشورة على الموقع.</li>
-        <li>أرشفة المقالات المنشورة في منصات خارجية مثل الألوكة.</li>
-        <li>ربط المقالات بالسلاسل والتصنيفات الموضوعية.</li>
+        <li>مقالات أصلية منشورة على الموقع.</li>
+        <li>مقالات منشورة في منصات خارجية مثل الألوكة.</li>
+        <li>سلاسل علمية أو موضوعات مترابطة.</li>
+        <li>ملخصات وتصنيفات لتسهيل التصفح والأرشفة.</li>
       </ul>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">نماذج أولية</p>
+        <h2 class="section-title">مداخل مقالية قابلة للتحرير</h2>
+      </div>
+
+      <div class="grid-two">
+        {articles.map((article) => (
+          <article class="content-card">
+            <p class="content-card__meta">
+              {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+            </p>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.summary}</p>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>
