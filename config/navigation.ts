@@ -1,0 +1,28 @@
+export const navigation = {
+  ar: [
+    { label: 'الرئيسية', href: '/ar/' },
+    { label: 'نبذة', href: '/ar/about/' },
+    { label: 'السيرة الذاتية', href: '/ar/cv/' },
+    { label: 'الكتب', href: '/ar/books/' },
+    { label: 'التحقيقات', href: '/ar/editions/' },
+    { label: 'المقالات', href: '/ar/articles/' },
+    { label: 'المجالات العلمية', href: '/ar/fields/' },
+    { label: 'المشروعات العلمية', href: '/ar/projects/' },
+    { label: 'الوسائط', href: '/ar/media/' },
+    { label: 'الروابط الخارجية', href: '/ar/external-links/' },
+    { label: 'تواصل', href: '/ar/contact/' },
+  ],
+  en: [
+    { label: 'Home', href: '/en/' },
+    { label: 'About', href: '/en/about/' },
+    { label: 'CV', href: '/en/cv/' },
+    { label: 'Books', href: '/en/books/' },
+    { label: 'Critical Editions', href: '/en/critical-editions/' },
+    { label: 'Articles', href: '/en/articles/' },
+    { label: 'Scholarly Fields', href: '/en/fields/' },
+    { label: 'Projects', href: '/en/projects/' },
+    { label: 'Media', href: '/en/media/' },
+    { label: 'External Links', href: '/en/external-links/' },
+    { label: 'Contact', href: '/en/contact/' },
+  ],
+};
