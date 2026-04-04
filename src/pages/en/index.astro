@@ -1,6 +1,19 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
+
+const featuredBooks = (await getCollection('books'))
+  .filter((entry) => entry.data.lang === 'en')
+  .slice(0, 2);
+
+const featuredEditions = (await getCollection('editions'))
+  .filter((entry) => entry.data.lang === 'en')
+  .slice(0, 2);
+
+const featuredArticles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -35,8 +48,8 @@ import '../../styles/global.css';
           <span>Academic profile, publications, editions, and structured content growth.</span>
         </article>
         <article class="stat-card">
-          <strong>Launch Edition</strong>
-          <span>A clean first release prepared for steady expansion.</span>
+          <strong>Live Content</strong>
+          <span>The home page now surfaces actual entries from the content collections.</span>
         </article>
       </div>
     </section>
@@ -54,56 +67,54 @@ import '../../styles/global.css';
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Core sections</p>
-        <h2 class="section-title">What visitors can access now</h2>
+        <p class="section-kicker">Books</p>
+        <h2 class="section-title">Featured provisional titles</h2>
       </div>
 
-      <div class="grid-three">
-        <article class="feature-card">
-          <h3>About</h3>
-          <p>An introductory page for the scholarly profile and broader purpose of the site.</p>
-        </article>
-        <article class="feature-card">
-          <h3>CV</h3>
-          <p>A dedicated route for academic background, experience, and professional record.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Books</h3>
-          <p>A structured section for authored and published books with room for future detail pages.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Critical Editions</h3>
-          <p>A distinct section highlighting scholarly editorial work as an independent body of output.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Articles</h3>
-          <p>A route prepared for essays, research notes, published pieces, and thematic series.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Progressive Expansion</h3>
-          <p>The current release is intentionally lean and ready for additional scholarly sections.</p>
-        </article>
+      <div class="grid-two">
+        {featuredBooks.map((book) => (
+          <article class="content-card">
+            <p class="content-card__meta">{book.data.status ?? 'Provisional'}</p>
+            <h3>{book.data.title}</h3>
+            <p>{book.data.summary}</p>
+          </article>
+        ))}
       </div>
     </section>
 
     <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Critical Editions</p>
+        <h2 class="section-title">Featured editorial entries</h2>
+      </div>
+
       <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">Available now</p>
-          <h3>Clear structure and stable navigation</h3>
-          <p>
-            The current interface focuses on clarity, readability, and a dependable launch-ready
-            foundation for the main public sections.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">Coming next</p>
-          <h3>Approved content and richer scholarly detail</h3>
-          <p>
-            The next updates will replace placeholder text with approved biography, publication
-            data, article entries, and specialized research-oriented sections.
-          </p>
-        </article>
+        {featuredEditions.map((edition) => (
+          <article class="content-card">
+            <p class="content-card__meta">{edition.data.status ?? 'Provisional'}</p>
+            <h3>{edition.data.title}</h3>
+            <p>{edition.data.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Articles</p>
+        <h2 class="section-title">Recent article entries</h2>
+      </div>
+
+      <div class="grid-three">
+        {featuredArticles.map((article) => (
+          <article class="content-card">
+            <p class="content-card__meta">
+              {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+            </p>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.summary}</p>
+          </article>
+        ))}
       </div>
     </section>
 

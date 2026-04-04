@@ -67,6 +67,14 @@ This project uses Astro.
 - `npm run preview` to preview the production build locally
 - `npm run check` to run Astro checks
 
+## Deployment
+
+The repository is configured to deploy to GitHub Pages through GitHub Actions.
+
+- Push to `master` to trigger deployment.
+- In the GitHub repository settings, set Pages to use `GitHub Actions` as the source if it is not already enabled.
+- The workflow publishes the generated `dist/` output automatically.
+
 ## Launch Notes
 
 Before calling this a full first release, the following items still need attention:

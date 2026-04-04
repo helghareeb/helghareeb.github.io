@@ -1,6 +1,19 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
+
+const featuredBooks = (await getCollection('books'))
+  .filter((entry) => entry.data.lang === 'ar')
+  .slice(0, 2);
+
+const featuredEditions = (await getCollection('editions'))
+  .filter((entry) => entry.data.lang === 'ar')
+  .slice(0, 2);
+
+const featuredArticles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -35,8 +48,8 @@ import '../../styles/global.css';
           <span>نبذة، سيرة ذاتية، كتب، تحقيقات، ومقالات.</span>
         </article>
         <article class="stat-card">
-          <strong>قابل للتوسع</strong>
-          <span>جاهز لإضافة الأقسام العلمية والمشروعات والوسائط لاحقًا.</span>
+          <strong>محتوى حي</strong>
+          <span>الصفحة الرئيسية تعرض الآن نماذج فعلية من المحتوى المُدخل.</span>
         </article>
       </div>
     </section>
@@ -55,61 +68,54 @@ import '../../styles/global.css';
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">المسارات الأساسية</p>
-        <h2 class="section-title">أقسام الانطلاق في النسخة الحالية</h2>
+        <p class="section-kicker">الكتب</p>
+        <h2 class="section-title">نماذج من المؤلفات</h2>
       </div>
 
-      <div class="grid-three">
-        <article class="feature-card">
-          <h3>السيرة الذاتية</h3>
-          <p>عرض موجز للمسار الأكاديمي والخبرات والمؤهلات والروابط العلمية.</p>
-        </article>
-        <article class="feature-card">
-          <h3>الكتب</h3>
-          <p>تهيئة قسم مستقل للمؤلفات مع إمكان توسيعه إلى صفحات تفصيلية لكل كتاب.</p>
-        </article>
-        <article class="feature-card">
-          <h3>التحقيقات</h3>
-          <p>فصل واضح لأعمال التحقيق العلمي وإبرازها بوصفها مسارًا علميًا مستقلًا.</p>
-        </article>
-        <article class="feature-card">
-          <h3>المقالات</h3>
-          <p>تمهيد لأرشفة المقالات الأصلية والمقالات المنشورة خارجيًا والسلاسل العلمية.</p>
-        </article>
-        <article class="feature-card">
-          <h3>النسخة الإنجليزية</h3>
-          <p>واجهة موازية مختصرة تدعم الحضور العلمي الدولي وتقدم المسارات الأساسية نفسها.</p>
-        </article>
-        <article class="feature-card">
-          <h3>البنية المستقبلية</h3>
-          <p>قابلة للتوسع نحو المشاريع العلمية والوسائط والمجالات البحثية المتخصصة.</p>
-        </article>
+      <div class="grid-two">
+        {featuredBooks.map((book) => (
+          <article class="content-card">
+            <p class="content-card__meta">{book.data.status ?? 'بيانات أولية'}</p>
+            <h3>{book.data.title}</h3>
+            <p>{book.data.summary}</p>
+          </article>
+        ))}
       </div>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">أولوية الإطلاق</p>
-        <h2 class="section-title">ما الذي تعكسه هذه النسخة اليوم؟</h2>
+        <p class="section-kicker">التحقيقات</p>
+        <h2 class="section-title">نماذج من أعمال التحقيق</h2>
       </div>
 
       <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">جاهز الآن</p>
-          <h3>هيكل واضح وواجهة منظمة</h3>
-          <p>
-            تحتوي النسخة الحالية على بنية مستقرة للصفحات الأساسية، وتنقل واضح، وتجربة
-            تصفح مناسبة كبداية رسمية للموقع.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">قيد الاستكمال</p>
-          <h3>المحتوى التفصيلي والتوسعات اللاحقة</h3>
-          <p>
-            سيجري تباعًا استبدال النصوص الأولية بالمحتوى العلمي المعتمد، ثم إضافة الأقسام
-            التخصصية والمواد المنشورة والوسائط.
-          </p>
-        </article>
+        {featuredEditions.map((edition) => (
+          <article class="content-card">
+            <p class="content-card__meta">{edition.data.status ?? 'بيانات أولية'}</p>
+            <h3>{edition.data.title}</h3>
+            <p>{edition.data.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">المقالات</p>
+        <h2 class="section-title">أحدث المداخل المقالية</h2>
+      </div>
+
+      <div class="grid-three">
+        {featuredArticles.map((article) => (
+          <article class="content-card">
+            <p class="content-card__meta">
+              {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+            </p>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.summary}</p>
+          </article>
+        ))}
       </div>
     </section>
 
