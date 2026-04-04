@@ -7,13 +7,47 @@ import '../../../styles/global.css';
   lang="ar"
   dir="rtl"
   title="الكتب | د. هيثم الغريب"
-  description="قسم الكتب ضمن الموقع الشخصي العلمي"
+  description="قسم الكتب والمؤلفات ضمن الموقع الشخصي العلمي"
 >
-  <main style="padding: 4rem 1rem; max-width: 960px; margin: 0 auto;">
-    <h1>الكتب</h1>
-    <p>
-      هذه صفحة أولية لقسم الكتب، وستعرض لاحقًا الكتب المؤلفة والمنشورة
-      مع أوصافها وبياناتها وروابطها ذات الصلة.
-    </p>
+  <main class="page-main">
+    <section class="shell hero">
+      <p class="hero__eyebrow">الكتب</p>
+      <h1 class="hero__title">قسم المؤلفات والكتب المنشورة</h1>
+      <p class="hero__lead">
+        يجمع هذا القسم المؤلفات المنشورة وما يتصل بها من بيانات تعريفية وروابط وملاحظات
+        ببليوجرافية مختصرة، مع إمكان التوسع لاحقًا إلى صفحات مستقلة لكل عمل.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">وصف القسم</p>
+          <h2 class="section-title">ما الذي سيظهر هنا؟</h2>
+          <p>
+            ستعرض في هذه الصفحة الكتب التي تعبر عن المسار العلمي للدكتور هيثم الغريب، مع
+            تقديم مختصر لكل كتاب وبيانات النشر وما يلزم من وصلات أو إحالات.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">الحالة الحالية</p>
+          <h2 class="section-title">مرحلة التهيئة</h2>
+          <p>
+            لم تُدرج القائمة النهائية بعد، لكن البنية الحالية أُعدت لتستقبل الكتب المعتمدة
+            تباعًا دون الحاجة إلى إعادة تنظيم الموقع من جديد.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell notice-card">
+      <h2 class="section-title">البيانات المنتظرة لكل كتاب</h2>
+      <ul class="list-clean">
+        <li>العنوان الكامل.</li>
+        <li>وصف مختصر أو ملخص تعريفي.</li>
+        <li>بيانات النشر أو سنة الإصدار.</li>
+        <li>رابط خارجي أو معلومات إضافية عند التوفر.</li>
+      </ul>
+    </section>
   </main>
 </BaseLayout>

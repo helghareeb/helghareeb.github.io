@@ -1,0 +1,64 @@
+---
+import { navigation } from '../../config/navigation';
+import { siteConfig } from '../../config/site';
+
+interface Props {
+  lang: 'ar' | 'en';
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const links = navigation[lang];
+const localePairs: Record<string, string> = {
+  '/': '/en/',
+  '/ar/': '/en/',
+  '/ar/about/': '/en/about/',
+  '/ar/cv/': '/en/cv/',
+  '/ar/books/': '/en/books/',
+  '/ar/editions/': '/en/critical-editions/',
+  '/ar/articles/': '/en/articles/',
+  '/en/': '/ar/',
+  '/en/about/': '/ar/about/',
+  '/en/cv/': '/ar/cv/',
+  '/en/books/': '/ar/books/',
+  '/en/critical-editions/': '/ar/editions/',
+  '/en/articles/': '/ar/articles/',
+};
+
+const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+const switchLocalePath = localePairs[currentPath] ?? localePairs[normalizedPath] ?? (lang === 'ar' ? '/en/' : '/ar/');
+
+const homeHref = lang === 'ar' ? '/ar/' : '/en/';
+const siteName = lang === 'ar' ? siteConfig.nameAr : siteConfig.nameEn;
+const languageLabel = lang === 'ar' ? 'English' : 'العربية';
+const languageAria = lang === 'ar' ? 'الانتقال إلى النسخة الإنجليزية' : 'Switch to Arabic version';
+---
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <div class="site-header__brand">
+      <a class="site-brand" href={homeHref}>
+        <span class="site-brand__eyebrow">{lang === 'ar' ? 'موقع علمي شخصي' : 'Personal Scholarly Website'}</span>
+        <span class="site-brand__title">{siteName}</span>
+      </a>
+    </div>
+
+    <div class="site-header__controls">
+      <nav class="site-nav" aria-label={lang === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}>
+        {links.map((link) => {
+          const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
+
+          return (
+            <a class:list={['site-nav__link', { 'is-active': isActive }]} href={link.href}>
+              {link.label}
+            </a>
+          );
+        })}
+      </nav>
+
+      <a class="locale-switch" href={switchLocalePath} aria-label={languageAria}>
+        {languageLabel}
+      </a>
+    </div>
+  </div>
+</header>

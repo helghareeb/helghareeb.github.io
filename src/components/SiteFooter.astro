@@ -1,0 +1,51 @@
+---
+import { navigation } from '../../config/navigation';
+import { siteConfig } from '../../config/site';
+
+interface Props {
+  lang: 'ar' | 'en';
+}
+
+const { lang } = Astro.props;
+const links = navigation[lang];
+const siteName = lang === 'ar' ? siteConfig.nameAr : siteConfig.nameEn;
+const description =
+  lang === 'ar'
+    ? 'نسخة إطلاق أولية لموقع علمي ثنائي اللغة مخصص للتعريف بالأعمال العلمية والبحثية والمنشورات.'
+    : 'An initial launch edition of a bilingual scholarly website presenting academic work, publications, and research directions.';
+const quickLinks = links.slice(0, 5);
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="shell site-footer__grid">
+    <section>
+      <p class="footer-kicker">{lang === 'ar' ? 'عن الموقع' : 'About the site'}</p>
+      <h2 class="footer-title">{siteName}</h2>
+      <p class="footer-copy">{description}</p>
+    </section>
+
+    <section>
+      <p class="footer-kicker">{lang === 'ar' ? 'روابط سريعة' : 'Quick links'}</p>
+      <div class="footer-links">
+        {quickLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <p class="footer-kicker">{lang === 'ar' ? 'الحالة الحالية' : 'Current status'}</p>
+      <p class="footer-copy">
+        {lang === 'ar'
+          ? 'الواجهة الحالية تمثل الإصدار الأولي المنظّم، مع استمرار استكمال المحتوى التفصيلي وتوسعة الأقسام المتخصصة.'
+          : 'This release is a structured first edition, with detailed content and additional scholarly sections to be expanded progressively.'}
+      </p>
+    </section>
+  </div>
+
+  <div class="shell site-footer__bottom">
+    <p>{siteName}</p>
+    <p>{year}</p>
+  </div>
+</footer>

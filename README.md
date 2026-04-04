@@ -1,27 +1,91 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Landing Page](http://startbootstrap.com/template-overviews/landing-page/)
+# Dr. Haitham A. El-Ghareeb Personal Scholarly Website
 
-[Landing Page](http://startbootstrap.com/template-overviews/landing-page/) is a multipurpose landing page template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+This repository contains the rebuilt bilingual personal scholarly website for Dr. Haitham A. El-Ghareeb, prepared for deployment on GitHub Pages using Astro.
 
-## Getting Started
+The project is being developed as a modern Arabic-first scholarly site with an English interface, focused on presenting academic identity, books, critical editions, articles, research interests, and future digital scholarly projects.
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git`
-* Fork the repo
+## Current Status
 
-## Bugs and Issues
+The repository is now an Astro-based bilingual website scaffold with:
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-landing-page/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/).
+- bilingual routing for Arabic and English
+- a shared base layout
+- initial placeholder pages for the core sections already created
+- project planning and architecture notes under `project-docs/`
+- early content files under `content/`
 
-## Creator
+At the moment, the implementation is still in the first functional stage: the main routes exist, but most sections still contain placeholder copy and several planned routes are not yet created.
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+## Implemented Routes
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+### Arabic
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+- `/`
+- `/ar/`
+- `/ar/about/`
+- `/ar/cv/`
+- `/ar/books/`
+- `/ar/editions/`
+- `/ar/articles/`
 
-## Copyright and License
+### English
 
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/gh-pages/LICENSE) license.
+- `/en/`
+- `/en/about/`
+- `/en/cv/`
+- `/en/books/`
+- `/en/critical-editions/`
+
+## Repository Structure
+
+```text
+.
+|-- astro.config.mjs
+|-- config/
+|   |-- navigation.ts
+|   `-- site.ts
+|-- content/
+|   |-- ar/
+|   `-- en/
+|-- project-docs/
+|-- src/
+|   |-- layouts/
+|   |-- pages/
+|   `-- styles/
+|-- README.md
+`-- LICENSE
+```
+
+## Development
+
+This project uses Astro.
+
+### Scripts
+
+- `npm run dev` to start the local development server
+- `npm run build` to generate the production build
+- `npm run preview` to preview the production build locally
+- `npm run check` to run Astro checks
+
+## Launch Notes
+
+Before calling this a full first release, the following items still need attention:
+
+- replace placeholder copy on the existing pages with approved scholarly content
+- align the navigation with the routes that actually exist, or create the missing pages
+- verify the production build in a Node.js environment with `npm`
+- continue filling the scholarly sections with approved production content
+
+## Project Documentation
+
+Planning and implementation notes are kept in `project-docs/`, including:
+
+- `project-plan.md`
+- `site-map.md`
+- `navigation-structure.md`
+- `technical-architecture.md`
+- `update-log.md`
+
+## Licensing
+
+This repository is released under the MIT License. See `LICENSE`.
