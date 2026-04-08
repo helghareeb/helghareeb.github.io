@@ -1,0 +1,96 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+
+const fieldLinks = (await getCollection('fields'))
+  .filter((entry) => entry.data.lang === 'ar')
+  .sort((a, b) => a.data.order - b.data.order);
+
+const primarySections = [
+  { title: 'نبذة', href: '/ar/about/' },
+  { title: 'السيرة الذاتية', href: '/ar/cv/' },
+  { title: 'الكتب', href: '/ar/books/' },
+  { title: 'التحقيقات', href: '/ar/editions/' },
+  { title: 'المقالات', href: '/ar/articles/' },
+];
+
+const expansionSections = [
+  { title: 'المجالات العلمية', href: '/ar/fields/' },
+  { title: 'المشروعات', href: '/ar/projects/' },
+  { title: 'الوسائط', href: '/ar/media/' },
+  { title: 'الروابط الخارجية', href: '/ar/external-links/' },
+  { title: 'المسار التعليمي', href: '/ar/learning-path/' },
+  { title: 'تواصل', href: '/ar/contact/' },
+];
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="دليل الموقع | د. هيثم الغريب"
+  description="فهرس عام للمسارات والصفحات الحالية في الموقع"
+>
+  <main class="page-main">
+    <section class="shell hero hero--portal">
+      <p class="hero__eyebrow">دليل الموقع</p>
+      <h1 class="hero__title">فهرس عام للمسارات الحالية</h1>
+      <p class="hero__lead">
+        هذه الصفحة تقدم نظرة منظمة على البنية الحالية للموقع، لتسهيل الوصول السريع إلى
+        الأقسام الرئيسة، ومسارات التوسع، والصفحات الفرعية للمجالات العلمية.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">الأقسام الأساسية</p>
+        <h2 class="section-title">صفحات التعريف والمادة الأساسية</h2>
+      </div>
+
+      <div class="grid-two">
+        {primarySections.map((section) => (
+          <a class="card-link" href={section.href}>
+            <article class="content-card">
+              <h3>{section.title}</h3>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">مسارات التوسع</p>
+        <h2 class="section-title">الأقسام الجديدة المجهزة للنمو</h2>
+      </div>
+
+      <div class="grid-two">
+        {expansionSections.map((section) => (
+          <a class="card-link" href={section.href}>
+            <article class="content-card">
+              <h3>{section.title}</h3>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">المجالات العلمية</p>
+        <h2 class="section-title">الصفحات الفرعية المتخصصة</h2>
+      </div>
+
+      <div class="grid-three">
+        {fieldLinks.map((field) => (
+          <a class="card-link" href={field.data.href}>
+            <article class="feature-card feature-card--field">
+              <h3>{field.data.title}</h3>
+              <p>{field.data.summary}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

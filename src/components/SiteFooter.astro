@@ -13,7 +13,9 @@ const description =
   lang === 'ar'
     ? 'نسخة إطلاق أولية لموقع علمي ثنائي اللغة مخصص للتعريف بالأعمال العلمية والبحثية والمنشورات.'
     : 'An initial launch edition of a bilingual scholarly website presenting academic work, publications, and research directions.';
-const quickLinks = links.slice(0, 5);
+const quickLinks = links.slice(0, 6);
+const extendedLinks = links.slice(6);
+const siteIndexLink = lang === 'ar' ? '/ar/site-map/' : '/en/site-map/';
 const year = new Date().getFullYear();
 ---
 
@@ -35,11 +37,21 @@ const year = new Date().getFullYear();
     </section>
 
     <section>
+      <p class="footer-kicker">{lang === 'ar' ? 'أقسام التوسع' : 'Expansion Areas'}</p>
+      <div class="footer-links">
+        {extendedLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+        <a href={siteIndexLink}>{lang === 'ar' ? 'دليل الموقع' : 'Site Index'}</a>
+      </div>
+    </section>
+
+    <section>
       <p class="footer-kicker">{lang === 'ar' ? 'الحالة الحالية' : 'Current status'}</p>
       <p class="footer-copy">
         {lang === 'ar'
-          ? 'الواجهة الحالية تمثل الإصدار الأولي المنظّم، مع استمرار استكمال المحتوى التفصيلي وتوسعة الأقسام المتخصصة.'
-          : 'This release is a structured first edition, with detailed content and additional scholarly sections to be expanded progressively.'}
+          ? 'الواجهة الحالية أصبحت أقرب إلى خريطة المشروع المعتمدة، مع جاهزية أكبر لإدخال المحتوى المعتمد تدريجيًا.'
+          : 'The current release now reflects the broader site map more closely and is better prepared for gradual content entry.'}
       </p>
     </section>
   </div>

@@ -14,6 +14,23 @@ const featuredEditions = (await getCollection('editions'))
 const featuredArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
   .slice(0, 3);
+
+const featuredProjects = (await getCollection('projects'))
+  .filter((entry) => entry.data.lang === 'en')
+  .slice(0, 2);
+
+const featuredFields = (await getCollection('fields'))
+  .filter((entry) => entry.data.lang === 'en' && entry.data.featured)
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3);
+
+const featuredMedia = (await getCollection('media'))
+  .filter((entry) => entry.data.lang === 'en')
+  .slice(0, 1);
+
+const featuredLinks = (await getCollection('externalLinks'))
+  .filter((entry) => entry.data.lang === 'en' && entry.data.featured)
+  .slice(0, 1);
 ---
 
 <BaseLayout
@@ -22,14 +39,20 @@ const featuredArticles = (await getCollection('articles'))
   title="Dr. Haitham A. El-Ghareeb | Personal Scholarly Website"
   description="English interface of the personal scholarly website of Dr. Haitham A. El-Ghareeb"
 >
-  <main class="page-main">
-    <section class="shell hero">
+  <main class="page-main page-main--home">
+    <section class="shell hero hero--home">
       <p class="hero__eyebrow">English Interface</p>
       <h1 class="hero__title">Dr. Haitham A. El-Ghareeb</h1>
       <p class="hero__lead">
         A bilingual scholarly website designed to present academic identity, books, critical
         editions, articles, and future research-facing digital sections in a clear and modern structure.
       </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">Arabic-first structure</span>
+        <span class="hero__badge">Bilingual experience</span>
+        <span class="hero__badge">Built for gradual growth</span>
+      </div>
 
       <div class="hero__actions">
         <a class="button" href="/en/cv/">View CV</a>
@@ -45,16 +68,16 @@ const featuredArticles = (await getCollection('articles'))
         </article>
         <article class="stat-card">
           <strong>Scholarly Focus</strong>
-          <span>Academic profile, publications, editions, and structured content growth.</span>
+          <span>Profile, publications, scholarly fields, projects, links, and media growth.</span>
         </article>
         <article class="stat-card">
-          <strong>Live Content</strong>
-          <span>The home page now surfaces actual entries from the content collections.</span>
+          <strong>Structured Expansion</strong>
+          <span>The home page now reflects the expanded architecture of the site.</span>
         </article>
       </div>
     </section>
 
-    <section class="shell section">
+    <section class="shell section section--soft">
       <div class="section-heading">
         <p class="section-kicker">Overview</p>
         <h2 class="section-title">A structured foundation for a growing scholarly archive</h2>
@@ -62,6 +85,28 @@ const featuredArticles = (await getCollection('articles'))
           This edition establishes the core public-facing structure of the website and prepares
           the ground for richer biography, publication records, article archives, and specialized sections.
         </p>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Site gateway</p>
+        <h2 class="section-title">Major tracks in the current edition</h2>
+        <p class="section-copy">
+          Before detailed content is filled in, the home page now exposes the main paths through
+          which the site is meant to grow over time.
+        </p>
+      </div>
+
+      <div class="grid-three">
+        {featuredFields.map((field) => (
+          <a class="card-link" href={field.data.href}>
+            <article class="feature-card feature-card--field">
+              <h3>{field.data.title}</h3>
+              <p>{field.data.summary}</p>
+            </article>
+          </a>
+        ))}
       </div>
     </section>
 
@@ -101,6 +146,37 @@ const featuredArticles = (await getCollection('articles'))
 
     <section class="shell section">
       <div class="section-heading">
+        <p class="section-kicker">Projects, media, and links</p>
+        <h2 class="section-title">Tracks ready for gradual activation</h2>
+      </div>
+
+      <div class="grid-three">
+        {featuredProjects.map((project) => (
+          <article class="content-card">
+            <p class="content-card__meta">{project.data.status ?? 'In preparation'}</p>
+            <h3>{project.data.title}</h3>
+            <p>{project.data.summary}</p>
+          </article>
+        ))}
+        {featuredMedia.map((item) => (
+          <article class="content-card">
+            <p class="content-card__meta">{item.data.type ?? 'Media'}</p>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.summary}</p>
+          </article>
+        ))}
+        {featuredLinks.map((link) => (
+          <article class="content-card">
+            <p class="content-card__meta">{link.data.category ?? 'External Links'}</p>
+            <h3>{link.data.title}</h3>
+            <p>{link.data.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
         <p class="section-kicker">Articles</p>
         <h2 class="section-title">Recent article entries</h2>
       </div>
@@ -120,15 +196,17 @@ const featuredArticles = (await getCollection('articles'))
 
     <section class="shell cta-panel">
       <div>
-        <p class="section-kicker">Start here</p>
-        <h2 class="section-title">Explore the current edition</h2>
+        <p class="section-kicker">Organized foundation</p>
+        <h2 class="section-title">The site is now prepared for structured growth</h2>
         <p class="section-copy">
-          Begin with the profile pages or move directly to books, critical editions, and articles.
+          Future work can now focus on approved content and refinement rather than restructuring
+          the architecture each time a new section is activated.
         </p>
       </div>
       <div class="hero__actions">
-        <a class="button" href="/en/about/">About</a>
-        <a class="button-secondary" href="/en/cv/">CV</a>
+        <a class="button" href="/en/scholarly-fields/">Scholarly Fields</a>
+        <a class="button-secondary" href="/en/projects/">Projects</a>
+        <a class="button-secondary" href="/en/learning-path/">Learning Path</a>
       </div>
     </section>
   </main>

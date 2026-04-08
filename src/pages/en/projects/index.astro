@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+
+const projects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'en').slice(0, 6);
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title="Projects | Dr. Haitham A. El-Ghareeb"
+  description="Current and planned scholarly projects"
+>
+  <main class="page-main">
+    <section class="shell hero">
+      <p class="hero__eyebrow">Projects</p>
+      <h1 class="hero__title">A space for scholarly and digital initiatives</h1>
+      <p class="hero__lead">
+        This section is designed to document current and planned projects, clarify their scope and
+        status, and connect them to the broader scholarly structure of the website.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">Purpose</p>
+          <h2 class="section-title">Documenting active work</h2>
+          <p>
+            The projects area is intended to gather initiatives in one place so they can be presented,
+            tracked, and linked to related publications, editions, and articles.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">Next expansion</p>
+          <h2 class="section-title">Dedicated pages per project</h2>
+          <p>
+            The current structure prepares for detailed standalone project pages with descriptions,
+            outputs, links, and progress information once approved content is available.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Initial entries</p>
+        <h2 class="section-title">Provisional project records</h2>
+      </div>
+
+      <div class="grid-two">
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <article class="content-card">
+              <p class="content-card__meta">{project.data.status ?? 'In preparation'}</p>
+              <h3>{project.data.title}</h3>
+              <p>{project.data.summary}</p>
+            </article>
+          ))
+        ) : (
+          <article class="notice-card">
+            <h2 class="section-title">Ready for project entries</h2>
+            <p>
+              No English project items have been entered yet, but the site structure is now ready
+              to surface them as soon as they are added.
+            </p>
+          </article>
+        )}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

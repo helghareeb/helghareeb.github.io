@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="الألوكة | د. هيثم الغريب"
+  description="قسم مستقل لمقالات الألوكة وروابطها وملخصاتها"
+>
+  <main class="page-main page-main--detail">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">الألوكة</p>
+      <h1 class="hero__title">بوابة لمقالات الألوكة داخل الموقع</h1>
+      <p class="hero__lead">
+        هذا القسم مخصص لتجميع المقالات المنشورة في الألوكة وربطها بسياقها داخل الموقع،
+        بحيث لا تبقى مجرد روابط متناثرة بل تدخل ضمن أرشفة علمية أوضح.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">منشورات خارجية</span>
+        <span class="hero__badge">ملخصات وروابط</span>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">التنظيم</p>
+          <h2 class="section-title">ملخصات وروابط أصلية</h2>
+          <p>
+            سيحتوي القسم لاحقًا على عنوان كل مقال، وملخصه، ورابطه الأصلي، وتصنيفه، وما إذا
+            كانت له نسخة مستقلة داخل الموقع.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">الربط الداخلي</p>
+          <h2 class="section-title">صلة بالأرشيف العام</h2>
+          <p>
+            ستظهر مقالات الألوكة أيضًا في الأرشيف المقالي العام بحسب ما يناسب التصنيف والسلسلة
+            والعلاقة بالمجال العلمي.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

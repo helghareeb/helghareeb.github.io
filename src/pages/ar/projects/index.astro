@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+
+const projects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'ar').slice(0, 6);
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="المشروعات العلمية | د. هيثم الغريب"
+  description="قسم المشروعات العلمية الحالية والمخطط لها"
+>
+  <main class="page-main">
+    <section class="shell hero">
+      <p class="hero__eyebrow">المشروعات العلمية</p>
+      <h1 class="hero__title">مساحة لتتبع المبادرات العلمية والرقمية</h1>
+      <p class="hero__lead">
+        هذا القسم مخصص لعرض المشروعات القائمة أو المخطط لها، مع بيان مجال كل مشروع،
+        ووصفه المختصر، وحالته، وعلاقته بالأقسام العلمية الأخرى في الموقع.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">وظيفة القسم</p>
+          <h2 class="section-title">توثيق العمل الجاري</h2>
+          <p>
+            الهدف من هذا القسم هو جمع المبادرات البحثية والرقمية في موضع واحد، حتى يسهل
+            عرضها وتتبع تطورها وربطها بالمقالات والكتب والتحقيقات ذات الصلة.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">اتجاه التطوير</p>
+          <h2 class="section-title">صفحات مستقلة لكل مشروع</h2>
+          <p>
+            البنية الحالية تمهد لإضافة صفحة مستقلة لكل مشروع، تتضمن الوصف، والحالة، والروابط،
+            والمخرجات المتصلة به عند توفر المحتوى المعتمد.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">مدخلات أولية</p>
+        <h2 class="section-title">نماذج من محتوى المشروعات</h2>
+      </div>
+
+      <div class="grid-two">
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <article class="content-card">
+              <p class="content-card__meta">{project.data.status ?? 'قيد التنظيم'}</p>
+              <h3>{project.data.title}</h3>
+              <p>{project.data.summary}</p>
+            </article>
+          ))
+        ) : (
+          <article class="notice-card">
+            <h2 class="section-title">القسم مهيأ لاستقبال المشروعات</h2>
+            <p>
+              لا توجد بعد عناصر مشروع عربية مدخلة في مجموعات المحتوى، لكن البنية أصبحت جاهزة
+              لاستقبالها وربطها بالواجهة.
+            </p>
+          </article>
+        )}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

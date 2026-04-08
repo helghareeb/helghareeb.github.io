@@ -1,0 +1,47 @@
+---
+import { breadcrumbLabels } from '../../config/breadcrumbs';
+
+interface Props {
+  lang: 'ar' | 'en';
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+const localeHome = lang === 'ar' ? '/ar/' : '/en/';
+const homeLabel = lang === 'ar' ? 'الرئيسية' : 'Home';
+const segments = normalizedPath.split('/').filter(Boolean);
+
+const breadcrumbItems =
+  normalizedPath === '/' || normalizedPath === localeHome
+    ? []
+    : segments.map((_, index) => {
+        const path = `/${segments.slice(0, index + 1).join('/')}/`;
+        const label = breadcrumbLabels[path]?.[lang];
+
+        return {
+          href: path,
+          label: label ?? segments[index].replace(/-/g, ' '),
+        };
+      });
+---
+
+{
+  breadcrumbItems.length > 0 && (
+    <nav class="shell breadcrumbs" aria-label={lang === 'ar' ? 'مسار التنقل' : 'Breadcrumb'}>
+      <a class="breadcrumbs__link" href={localeHome}>{homeLabel}</a>
+      {breadcrumbItems.map((item, index) => (
+        <>
+          <span class="breadcrumbs__sep" aria-hidden="true">
+            {lang === 'ar' ? '‹' : '›'}
+          </span>
+          {index === breadcrumbItems.length - 1 ? (
+            <span class="breadcrumbs__current">{item.label}</span>
+          ) : (
+            <a class="breadcrumbs__link" href={item.href}>{item.label}</a>
+          )}
+        </>
+      ))}
+    </nav>
+  )
+}

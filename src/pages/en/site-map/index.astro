@@ -1,0 +1,96 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+
+const fieldLinks = (await getCollection('fields'))
+  .filter((entry) => entry.data.lang === 'en')
+  .sort((a, b) => a.data.order - b.data.order);
+
+const primarySections = [
+  { title: 'About', href: '/en/about/' },
+  { title: 'CV', href: '/en/cv/' },
+  { title: 'Books', href: '/en/books/' },
+  { title: 'Critical Editions', href: '/en/critical-editions/' },
+  { title: 'Articles', href: '/en/articles/' },
+];
+
+const expansionSections = [
+  { title: 'Scholarly Fields', href: '/en/scholarly-fields/' },
+  { title: 'Projects', href: '/en/projects/' },
+  { title: 'Media', href: '/en/media/' },
+  { title: 'External Links', href: '/en/external-links/' },
+  { title: 'Learning Path', href: '/en/learning-path/' },
+  { title: 'Contact', href: '/en/contact/' },
+];
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title="Site Index | Dr. Haitham A. El-Ghareeb"
+  description="A general index of the current site structure"
+>
+  <main class="page-main">
+    <section class="shell hero hero--portal">
+      <p class="hero__eyebrow">Site Index</p>
+      <h1 class="hero__title">A structured guide to the current site</h1>
+      <p class="hero__lead">
+        This page provides a practical overview of the current architecture so visitors can move
+        quickly across the main sections, expansion paths, and specialized scholarly field pages.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Core sections</p>
+        <h2 class="section-title">Profile and foundational content areas</h2>
+      </div>
+
+      <div class="grid-two">
+        {primarySections.map((section) => (
+          <a class="card-link" href={section.href}>
+            <article class="content-card">
+              <h3>{section.title}</h3>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Expansion paths</p>
+        <h2 class="section-title">Sections prepared for gradual growth</h2>
+      </div>
+
+      <div class="grid-two">
+        {expansionSections.map((section) => (
+          <a class="card-link" href={section.href}>
+            <article class="content-card">
+              <h3>{section.title}</h3>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Scholarly fields</p>
+        <h2 class="section-title">Current specialized field pages</h2>
+      </div>
+
+      <div class="grid-three">
+        {fieldLinks.map((field) => (
+          <a class="card-link" href={field.data.href}>
+            <article class="feature-card feature-card--field">
+              <h3>{field.data.title}</h3>
+              <p>{field.data.summary}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

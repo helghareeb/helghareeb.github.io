@@ -192,6 +192,36 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
+"externalLinks": Record<string, {
+  id: string;
+  render(): Render[".md"];
+  slug: string;
+  body: string;
+  collection: "externalLinks";
+  data: InferEntrySchema<"externalLinks">;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
+"fields": Record<string, {
+  id: string;
+  render(): Render[".md"];
+  slug: string;
+  body: string;
+  collection: "fields";
+  data: InferEntrySchema<"fields">;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
+"media": Record<string, {
+  id: string;
+  render(): Render[".md"];
+  slug: string;
+  body: string;
+  collection: "media";
+  data: InferEntrySchema<"media">;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
 "projects": Record<string, {
   id: string;
   render(): Render[".md"];

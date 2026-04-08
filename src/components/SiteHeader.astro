@@ -9,6 +9,8 @@ interface Props {
 
 const { lang, currentPath } = Astro.props;
 const links = navigation[lang];
+const primaryLinks = links.slice(0, 6);
+const secondaryLinks = links.slice(6);
 const localePairs: Record<string, string> = {
   '/': '/en/',
   '/ar/': '/en/',
@@ -17,18 +19,47 @@ const localePairs: Record<string, string> = {
   '/ar/books/': '/en/books/',
   '/ar/editions/': '/en/critical-editions/',
   '/ar/articles/': '/en/articles/',
+  '/ar/fields/': '/en/scholarly-fields/',
+  '/ar/projects/': '/en/projects/',
+  '/ar/media/': '/en/media/',
+  '/ar/external-links/': '/en/external-links/',
+  '/ar/contact/': '/en/contact/',
+  '/ar/learning-path/': '/en/learning-path/',
+  '/ar/site-map/': '/en/site-map/',
+  '/ar/fields/islamic-studies/': '/en/scholarly-fields/islamic-studies/',
+  '/ar/fields/defense-of-sunnah/': '/en/scholarly-fields/defense-of-sunnah/',
+  '/ar/fields/alukah/': '/en/scholarly-fields/alukah/',
+  '/ar/fields/manuscripts/': '/en/scholarly-fields/manuscripts/',
+  '/ar/fields/ai-and-islamic-heritage/': '/en/scholarly-fields/ai-and-islamic-heritage/',
+  '/ar/fields/academic-reviewing/': '/en/scholarly-fields/academic-reviewing/',
+  '/ar/fields/e-learning/': '/en/scholarly-fields/e-learning/',
   '/en/': '/ar/',
   '/en/about/': '/ar/about/',
   '/en/cv/': '/ar/cv/',
   '/en/books/': '/ar/books/',
   '/en/critical-editions/': '/ar/editions/',
   '/en/articles/': '/ar/articles/',
+  '/en/scholarly-fields/': '/ar/fields/',
+  '/en/projects/': '/ar/projects/',
+  '/en/media/': '/ar/media/',
+  '/en/external-links/': '/ar/external-links/',
+  '/en/contact/': '/ar/contact/',
+  '/en/learning-path/': '/ar/learning-path/',
+  '/en/site-map/': '/ar/site-map/',
+  '/en/scholarly-fields/islamic-studies/': '/ar/fields/islamic-studies/',
+  '/en/scholarly-fields/defense-of-sunnah/': '/ar/fields/defense-of-sunnah/',
+  '/en/scholarly-fields/alukah/': '/ar/fields/alukah/',
+  '/en/scholarly-fields/manuscripts/': '/ar/fields/manuscripts/',
+  '/en/scholarly-fields/ai-and-islamic-heritage/': '/ar/fields/ai-and-islamic-heritage/',
+  '/en/scholarly-fields/academic-reviewing/': '/ar/fields/academic-reviewing/',
+  '/en/scholarly-fields/e-learning/': '/ar/fields/e-learning/',
 };
 
 const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
 const switchLocalePath = localePairs[currentPath] ?? localePairs[normalizedPath] ?? (lang === 'ar' ? '/en/' : '/ar/');
 
 const homeHref = lang === 'ar' ? '/ar/' : '/en/';
+const siteIndexHref = lang === 'ar' ? '/ar/site-map/' : '/en/site-map/';
 const siteName = lang === 'ar' ? siteConfig.nameAr : siteConfig.nameEn;
 const languageLabel = lang === 'ar' ? 'English' : 'العربية';
 const languageAria = lang === 'ar' ? 'الانتقال إلى النسخة الإنجليزية' : 'Switch to Arabic version';
@@ -44,21 +75,41 @@ const languageAria = lang === 'ar' ? 'الانتقال إلى النسخة ال�
     </div>
 
     <div class="site-header__controls">
-      <nav class="site-nav" aria-label={lang === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}>
-        {links.map((link) => {
-          const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
+      <nav class="site-nav-group" aria-label={lang === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}>
+        <div class="site-nav site-nav--primary">
+          {primaryLinks.map((link) => {
+            const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
 
-          return (
-            <a class:list={['site-nav__link', { 'is-active': isActive }]} href={link.href}>
-              {link.label}
-            </a>
-          );
-        })}
+            return (
+              <a class:list={['site-nav__link', { 'is-active': isActive }]} href={link.href}>
+                {link.label}
+              </a>
+            );
+          })}
+        </div>
+
+        <div class="site-nav site-nav--secondary">
+          {secondaryLinks.map((link) => {
+            const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
+
+            return (
+              <a class:list={['site-nav__link', 'site-nav__link--secondary', { 'is-active': isActive }]} href={link.href}>
+                {link.label}
+              </a>
+            );
+          })}
+        </div>
       </nav>
 
-      <a class="locale-switch" href={switchLocalePath} aria-label={languageAria}>
-        {languageLabel}
-      </a>
+      <div class="site-header__utilities">
+        <a class="site-index-link" href={siteIndexHref}>
+          {lang === 'ar' ? 'دليل الموقع' : 'Site Index'}
+        </a>
+
+        <a class="locale-switch" href={switchLocalePath} aria-label={languageAria}>
+          {languageLabel}
+        </a>
+      </div>
     </div>
   </div>
 </header>

@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+
+const pathStages = [
+  'A foundational stage focused on essentials, orientation, and core points of entry.',
+  'A method-building stage centered on primary disciplines and their internal order.',
+  'A broader reading and research stage shaped by specialization and sustained study.',
+  'A productive stage linking scholarship to writing, teaching, and project-based work.',
+];
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title="Suggested Learning Path | Dr. Haitham A. El-Ghareeb"
+  description="A provisional structured learning path for students"
+>
+  <main class="page-main">
+    <section class="shell hero">
+      <p class="hero__eyebrow">Suggested Learning Path</p>
+      <h1 class="hero__title">A structured view of scholarly progression</h1>
+      <p class="hero__lead">
+        This section is intended to present an organized learning path for students, with attention
+        to sequencing, methodological development, and the relationship between reading and formation.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Framework</p>
+        <h2 class="section-title">Provisional stages for later expansion</h2>
+      </div>
+
+      <div class="grid-two">
+        {pathStages.map((stage, index) => (
+          <article class="content-card">
+            <p class="content-card__meta">Stage {index + 1}</p>
+            <p>{stage}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

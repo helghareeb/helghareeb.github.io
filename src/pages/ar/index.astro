@@ -14,6 +14,23 @@ const featuredEditions = (await getCollection('editions'))
 const featuredArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
   .slice(0, 3);
+
+const featuredProjects = (await getCollection('projects'))
+  .filter((entry) => entry.data.lang === 'ar')
+  .slice(0, 2);
+
+const featuredFields = (await getCollection('fields'))
+  .filter((entry) => entry.data.lang === 'ar' && entry.data.featured)
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3);
+
+const featuredMedia = (await getCollection('media'))
+  .filter((entry) => entry.data.lang === 'ar')
+  .slice(0, 1);
+
+const featuredLinks = (await getCollection('externalLinks'))
+  .filter((entry) => entry.data.lang === 'ar' && entry.data.featured)
+  .slice(0, 1);
 ---
 
 <BaseLayout
@@ -22,14 +39,20 @@ const featuredArticles = (await getCollection('articles'))
   title="الموقع الشخصي العلمي | د. هيثم الغريب"
   description="الواجهة العربية للموقع الشخصي العلمي للدكتور هيثم الغريب"
 >
-  <main class="page-main">
-    <section class="shell hero">
+  <main class="page-main page-main--home">
+    <section class="shell hero hero--home">
       <p class="hero__eyebrow">الواجهة العربية</p>
       <h1 class="hero__title">الموقع الشخصي العلمي للدكتور هيثم الغريب</h1>
       <p class="hero__lead">
         موقع علمي شخصي ثنائي اللغة يهدف إلى عرض السيرة العلمية، والكتب، والتحقيقات،
         والمقالات، ومسارات العمل الأكاديمي والمعرفي في صورة حديثة واضحة ومنظمة.
       </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">واجهة عربية أساسية</span>
+        <span class="hero__badge">بنية ثنائية اللغة</span>
+        <span class="hero__badge">قابلة للتوسع المنظم</span>
+      </div>
 
       <div class="hero__actions">
         <a class="button" href="/ar/cv/">السيرة الذاتية</a>
@@ -45,16 +68,16 @@ const featuredArticles = (await getCollection('articles'))
         </article>
         <article class="stat-card">
           <strong>أقسام أساسية</strong>
-          <span>نبذة، سيرة ذاتية، كتب، تحقيقات، ومقالات.</span>
+          <span>أقسام رئيسية ومجالات علمية ومشروعات وروابط ووسائط.</span>
         </article>
         <article class="stat-card">
-          <strong>محتوى حي</strong>
-          <span>الصفحة الرئيسية تعرض الآن نماذج فعلية من المحتوى المُدخل.</span>
+          <strong>بنية قابلة للتوسع</strong>
+          <span>الواجهة الرئيسية تعرض الآن أقسام الموقع الموسعة ومداخله المنظمة.</span>
         </article>
       </div>
     </section>
 
-    <section class="shell section">
+    <section class="shell section section--soft">
       <div class="section-heading">
         <p class="section-kicker">نبذة موجزة</p>
         <h2 class="section-title">هوية علمية تجمع بين البحث والتنظيم الرقمي</h2>
@@ -63,6 +86,28 @@ const featuredArticles = (await getCollection('articles'))
           البحثية بصورة رصينة، مع عناية خاصة بالكتب، والتحقيق العلمي، والدراسات الإسلامية،
           والمجالات المتصلة بالمحتوى العلمي الرقمي.
         </p>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">بوابة الموقع</p>
+        <h2 class="section-title">المسارات الكبرى في النسخة الحالية</h2>
+        <p class="section-copy">
+          قبل إدخال المحتوى التفصيلي، صارت البنية الحالية أوضح في عرض المسارات الرئيسة التي
+          سيتوسع عبرها الموقع خلال المراحل القادمة.
+        </p>
+      </div>
+
+      <div class="grid-three">
+        {featuredFields.map((field) => (
+          <a class="card-link" href={field.data.href}>
+            <article class="feature-card feature-card--field">
+              <h3>{field.data.title}</h3>
+              <p>{field.data.summary}</p>
+            </article>
+          </a>
+        ))}
       </div>
     </section>
 
@@ -102,6 +147,37 @@ const featuredArticles = (await getCollection('articles'))
 
     <section class="shell section">
       <div class="section-heading">
+        <p class="section-kicker">المشروعات والوسائط والروابط</p>
+        <h2 class="section-title">مسارات جاهزة للتفعيل التدريجي</h2>
+      </div>
+
+      <div class="grid-three">
+        {featuredProjects.map((project) => (
+          <article class="content-card">
+            <p class="content-card__meta">{project.data.status ?? 'قيد التنظيم'}</p>
+            <h3>{project.data.title}</h3>
+            <p>{project.data.summary}</p>
+          </article>
+        ))}
+        {featuredMedia.map((item) => (
+          <article class="content-card">
+            <p class="content-card__meta">{item.data.type ?? 'وسائط'}</p>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.summary}</p>
+          </article>
+        ))}
+        {featuredLinks.map((link) => (
+          <article class="content-card">
+            <p class="content-card__meta">{link.data.category ?? 'روابط خارجية'}</p>
+            <h3>{link.data.title}</h3>
+            <p>{link.data.summary}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
         <p class="section-kicker">المقالات</p>
         <h2 class="section-title">أحدث المداخل المقالية</h2>
       </div>
@@ -121,16 +197,17 @@ const featuredArticles = (await getCollection('articles'))
 
     <section class="shell cta-panel">
       <div>
-        <p class="section-kicker">خطوة تالية</p>
-        <h2 class="section-title">ابدأ بالأقسام الأساسية</h2>
+        <p class="section-kicker">جاهزية تنظيمية</p>
+        <h2 class="section-title">الموقع مهيأ الآن للتوسع المنظم</h2>
         <p class="section-copy">
-          يمكن البدء الآن من النبذة، أو مراجعة السيرة الذاتية، أو الانتقال مباشرة إلى الكتب
-          والتحقيقات والمقالات.
+          صار بالإمكان متابعة العمل لاحقًا عبر إدخال المحتوى المعتمد أو تطوير البوابات
+          الحالية دون الحاجة إلى إعادة ترتيب الهيكل من جديد.
         </p>
       </div>
       <div class="hero__actions">
-        <a class="button" href="/ar/about/">نبذة</a>
-        <a class="button-secondary" href="/ar/cv/">السيرة الذاتية</a>
+        <a class="button" href="/ar/fields/">المجالات العلمية</a>
+        <a class="button-secondary" href="/ar/projects/">المشروعات</a>
+        <a class="button-secondary" href="/ar/learning-path/">المسار التعليمي</a>
       </div>
     </section>
   </main>

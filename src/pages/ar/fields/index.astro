@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+
+const fieldCards = [
+  {
+    title: 'الدراسات الإسلامية',
+    copy: 'المظلة الأوسع للمحتوى العلمي المرتبط بالتراث، والحديث، والمناهج، والقضايا العلمية المتصلة به.',
+    href: '/ar/fields/islamic-studies/',
+  },
+  {
+    title: 'الدفاع عن السنة والشبهات',
+    copy: 'مساحة مخصصة للردود العلمية المنظمة، والسلاسل التي تعالج الإشكالات والشبهات بمنهجية واضحة.',
+    href: '/ar/fields/defense-of-sunnah/',
+  },
+  {
+    title: 'الألوكة',
+    copy: 'قسم مستقل لتجميع المقالات المنشورة في الألوكة وربطها بملخصاتها وسياقاتها العلمية داخل الموقع.',
+    href: '/ar/fields/alukah/',
+  },
+  {
+    title: 'المخطوطات',
+    copy: 'قسم يعرض الاهتمام بالمخطوطات وصفًا وتحقيقًا ومنهجًا، مع الربط بأعمال التحقيق العلمي.',
+    href: '/ar/fields/manuscripts/',
+  },
+  {
+    title: 'الذكاء الاصطناعي والتراث الإسلامي',
+    copy: 'قسم يجمع الرؤية المعاصرة المتعلقة بخدمة التراث والمعرفة الإسلامية بالأدوات الرقمية الحديثة.',
+    href: '/ar/fields/ai-and-islamic-heritage/',
+  },
+  {
+    title: 'التحكيم العلمي',
+    copy: 'عرض موجز منظم لخبرة التحكيم العلمي والرسائل والأعمال التي جرت مراجعتها على نحو عام.',
+    href: '/ar/fields/academic-reviewing/',
+  },
+  {
+    title: 'التعليم الإلكتروني للعلوم الإسلامية',
+    copy: 'مساحة للمبادرات والرؤى والمواد التي تربط التعليم الشرعي بالوسائط والمنهجيات الرقمية.',
+    href: '/ar/fields/e-learning/',
+  },
+];
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="المجالات العلمية | د. هيثم الغريب"
+  description="بوابة المجالات العلمية المتخصصة ضمن الموقع الشخصي العلمي"
+>
+  <main class="page-main">
+    <section class="shell hero hero--portal">
+      <p class="hero__eyebrow">المجالات العلمية</p>
+      <h1 class="hero__title">بوابة للأقسام العلمية المتخصصة</h1>
+      <p class="hero__lead">
+        خُصصت هذه الصفحة لتكون مظلة جامعة للمجالات العلمية التي يقوم عليها المشروع، بحيث
+        يسهل الانتقال منها إلى المحاور المتخصصة التي ستتوسع تباعًا في النسخة القادمة من الموقع.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">بوابة جامعة</span>
+        <span class="hero__badge">محاور متخصصة</span>
+        <span class="hero__badge">مرتبطة بالمقالات والمشروعات</span>
+      </div>
+
+      <div class="hero__actions">
+        <a class="button" href="/ar/articles/">استعراض المقالات</a>
+        <a class="button-secondary" href="/ar/learning-path/">المسار التعليمي المقترح</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">تنظيم معرفي</p>
+        <h2 class="section-title">المحاور المعتمدة في وثائق المشروع</h2>
+        <p class="section-copy">
+          البنية الحالية تقدم المدخل العام لهذه الأقسام، مع تمهيدها لاحقًا لصفحات تفصيلية،
+          ومحتوى مقالي، وروابط داخلية، وأرشفة حسب الموضوع والسلسلة.
+        </p>
+      </div>
+
+      <div class="grid-three">
+        {fieldCards.map((field) => (
+          <a class="card-link" href={field.href}>
+          <article class="feature-card feature-card--field">
+            <h3>{field.title}</h3>
+            <p>{field.copy}</p>
+          </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell notice-card">
+      <h2 class="section-title">حالة التنفيذ الحالية</h2>
+      <p>
+        تم إنشاء هذه البوابة لتثبيت الهيكل الملاحي للمشروع وربط الأقسام الكبرى بالموقع،
+        على أن تُستكمل لاحقًا الصفحات الفرعية والمحتوى التفصيلي المعتمد لكل مجال.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

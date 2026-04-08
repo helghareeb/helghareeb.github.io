@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title="Alukah | Dr. Haitham A. El-Ghareeb"
+  description="A dedicated area for Alukah articles, summaries, and external references"
+>
+  <main class="page-main page-main--detail">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Alukah</p>
+      <h1 class="hero__title">An internal gateway to Alukah publications</h1>
+      <p class="hero__lead">
+        This section prepares the site to collect Alukah articles in one place and present them
+        as part of the broader scholarly archive rather than as isolated external links.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">External publications</span>
+        <span class="hero__badge">Summaries and links</span>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        <article class="content-card">
+          <p class="content-card__meta">Structure</p>
+          <h2 class="section-title">Summaries and source links</h2>
+          <p>
+            Future entries can include the article title, summary, original source link, category,
+            and whether a local site version also exists.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">Integration</p>
+          <h2 class="section-title">Connected to the article archive</h2>
+          <p>
+            Alukah content can also surface through the general articles section wherever thematic
+            overlap or archive logic makes that useful.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

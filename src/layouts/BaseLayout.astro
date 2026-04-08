@@ -1,5 +1,6 @@
 ---
 import SiteFooter from '../components/SiteFooter.astro';
+import SiteBreadcrumbs from '../components/SiteBreadcrumbs.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 
 export interface Props {
@@ -30,6 +31,7 @@ const currentPath = Astro.url.pathname;
   <body>
     <div class="site-frame">
       <SiteHeader lang={lang} currentPath={currentPath} />
+      <SiteBreadcrumbs lang={lang} currentPath={currentPath} />
       <slot />
       <SiteFooter lang={lang} />
     </div>

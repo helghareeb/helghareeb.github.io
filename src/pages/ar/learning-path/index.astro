@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+
+const pathStages = [
+  'مرحلة تأسيسية تعنى بضبط الأصول والمداخل العامة.',
+  'مرحلة بناء منهجي في العلوم المركزية ومساراتها.',
+  'مرحلة توسع قرائي وبحثي مرتبطة بالتخصص والاهتمام.',
+  'مرحلة إنتاج علمي وتحريري وربط بالوسائط والمشروعات.',
+];
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="المسار التعليمي المقترح | د. هيثم الغريب"
+  description="تصور أولي للمسار التعليمي المقترح لطالب العلم"
+>
+  <main class="page-main">
+    <section class="shell hero">
+      <p class="hero__eyebrow">المسار التعليمي المقترح</p>
+      <h1 class="hero__title">تصور منظم للتدرج العلمي</h1>
+      <p class="hero__lead">
+        هذا القسم مخصص لعرض تصور تربوي وعلمي مقترح لطالب العلم، من حيث التدرج، وترتيب
+        المراحل، وربط القراءة بالتكوين المنهجي والقدرة على الإفادة لاحقًا.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">المنهج</p>
+        <h2 class="section-title">مراحل أولية قابلة للتفصيل</h2>
+      </div>
+
+      <div class="grid-two">
+        {pathStages.map((stage, index) => (
+          <article class="content-card">
+            <p class="content-card__meta">المرحلة {index + 1}</p>
+            <p>{stage}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell notice-card">
+      <h2 class="section-title">سيُستكمل بالمادة المعتمدة</h2>
+      <p>
+        أُنشئت الصفحة الآن لتثبيت وجود هذا القسم في الهيكل العام، على أن تُملأ لاحقًا
+        بالمحتوى التفصيلي والروابط والمراجع المقترحة لكل مرحلة.
+      </p>
+    </section>
+  </main>
+</BaseLayout>
