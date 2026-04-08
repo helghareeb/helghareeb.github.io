@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
 
 const articles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
@@ -15,44 +16,65 @@ const articles = (await getCollection('articles'))
   description="قسم المقالات والسلاسل العلمية ضمن الموقع الشخصي العلمي"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">المقالات</p>
       <h1 class="hero__title">أرشفة المقالات والسلاسل العلمية</h1>
       <p class="hero__lead">
         خُصص هذا القسم ليكون واجهة النشر المتجدد في الموقع، وليجمع المقالات الأصلية
         والمقالات المنشورة خارجيًا والسلاسل الموضوعية في بنية منظمة سهلة التصفح والرجوع.
       </p>
-    </section>
 
-    <section class="shell section">
-      <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">وظيفة القسم</p>
-          <h2 class="section-title">مساحة للنشر والتوثيق</h2>
-          <p>
-            سيضم هذا القسم المادة المقالية المرتبطة بالمشروع العلمي للدكتور هيثم الغريب،
-            مع تنظيم المحتوى بحسب الموضوعات والسلاسل والجهات المنشور فيها.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">اتجاه التوسع</p>
-          <h2 class="section-title">أرشيف قابل للنمو</h2>
-          <p>
-            أُعدت البنية الحالية لتسمح بإضافة المقالات تباعًا، وربط كل مقال بتصنيفه وملخصه
-            وسلسلته، بما يجعل القسم مرجعًا حيًا للنشر العلمي والمعرفي.
-          </p>
-        </article>
+      <div class="hero__badge-row">
+        <span class="hero__badge">مقالات أصلية</span>
+        <span class="hero__badge">سلاسل علمية</span>
+        <span class="hero__badge">أرشفة منظمة</span>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">أنواع المحتوى المنتظر إدراجها</h2>
-      <ul class="list-clean">
-        <li>مقالات أصلية منشورة على الموقع.</li>
-        <li>مقالات منشورة في منصات خارجية مثل الألوكة.</li>
-        <li>سلاسل علمية أو موضوعات مترابطة.</li>
-        <li>ملخصات وتصنيفات لتسهيل التصفح والأرشفة.</li>
-      </ul>
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">وظيفة القسم</p>
+        <h2 class="section-title">مساحة للنشر والتوثيق المستمر</h2>
+        <p class="section-copy">
+          سيجمع هذا الأرشيف المقالات الأصلية، والكتابات المرتبطة بسلاسل علمية، والمواد ذات
+          الصلة بالنشر الخارجي، ضمن بنية تسهل الرجوع والربط بين الموضوعات.
+        </p>
+        <ul class="entity-tags">
+          <li>تاريخ النشر</li>
+          <li>التصنيف</li>
+          <li>السلسلة</li>
+          <li>المصدر</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">جاهزية العرض</p>
+        <ul class="entity-list">
+          <li><strong>الحالة الحالية:</strong> بطاقات وصفحات مفردة للمقالات.</li>
+          <li><strong>التطوير القادم:</strong> مزيد من المقالات والوسوم والتصنيفات عند الحاجة.</li>
+          <li><strong>الهدف:</strong> جعل القسم مرجعًا حيًا للنشر العلمي والمعرفي.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="entity-meta-grid">
+        <article class="content-card entity-card">
+          <p class="content-card__meta">نوع المقال</p>
+          <h3>أصلي أو خارجي</h3>
+          <p>يمكن تمييز المقالات الأصلية عن المقالات المرتبطة بمنصات نشر خارجية.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">تنظيم داخلي</p>
+          <h3>سلسلة وتصنيف</h3>
+          <p>كل بطاقة يمكن ربطها بسلسلة علمية أو بتصنيف موضوعي واضح.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">تجربة القراءة</p>
+          <h3>زمن ومصدر</h3>
+          <p>تظهر بيانات مختصرة مثل زمن القراءة والمصدر حين تكون متوفرة.</p>
+        </article>
+      </div>
     </section>
 
     <section class="shell section">
@@ -63,13 +85,18 @@ const articles = (await getCollection('articles'))
 
       <div class="grid-two">
         {articles.map((article) => (
-          <article class="content-card">
-            <p class="content-card__meta">
-              {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
-            </p>
-            <h3>{article.data.title}</h3>
-            <p>{article.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">
+                {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+              </p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+              <p class="content-card__meta">
+                {[article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
+              </p>
+            </article>
+          </a>
         ))}
       </div>
     </section>

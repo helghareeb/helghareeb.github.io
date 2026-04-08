@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import EntityEntryPage from '../../../components/EntityEntryPage.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { getEntryRouteSlug } from '../../../utils/content-routing';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('media')).filter((entry) => entry.data.lang === 'en');
+
+  return entries.map((entry) => ({
+    params: { slug: getEntryRouteSlug(entry.slug) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout lang="en" dir="ltr" title={`${entry.data.title} | Media`} description={entry.data.summary}>
+  <EntityEntryPage
+    lang="en"
+    eyebrow="Media"
+    title={entry.data.title}
+    summary={entry.data.summary}
+    badges={['Media page', entry.data.type ?? 'Media', entry.data.status ?? 'Provisional']}
+    metaItems={[
+      { label: 'Section', value: 'Media' },
+      { label: 'Type', value: entry.data.type ?? 'Unspecified' },
+      { label: 'Status', value: entry.data.status ?? 'Unspecified' },
+      ...(entry.data.platform ? [{ label: 'Platform', value: entry.data.platform }] : []),
+    ]}
+    backHref="/en/media/"
+    backLabel="Back to media"
+    externalUrl={entry.data.externalUrl}
+    externalLabel="External link"
+  >
+    <Content />
+  </EntityEntryPage>
+</BaseLayout>

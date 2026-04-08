@@ -26,6 +26,19 @@
         "series": {
           "type": "string"
         },
+        "sourceName": {
+          "type": "string"
+        },
+        "articleType": {
+          "type": "string"
+        },
+        "readingTime": {
+          "type": "string"
+        },
+        "externalUrl": {
+          "type": "string",
+          "format": "uri"
+        },
         "draft": {
           "type": "boolean",
           "default": false

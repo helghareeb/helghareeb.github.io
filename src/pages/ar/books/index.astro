@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
 
 const books = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'ar')
@@ -15,44 +16,66 @@ const books = (await getCollection('books'))
   description="قسم الكتب والمؤلفات ضمن الموقع الشخصي العلمي"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الكتب</p>
       <h1 class="hero__title">قسم المؤلفات والكتب المنشورة</h1>
       <p class="hero__lead">
         يجمع هذا القسم المؤلفات المنشورة وما يتصل بها من بيانات تعريفية وروابط وملاحظات
         ببليوجرافية مختصرة، مع إمكان التوسع لاحقًا إلى صفحات مستقلة لكل عمل.
       </p>
-    </section>
 
-    <section class="shell section">
-      <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">وصف القسم</p>
-          <h2 class="section-title">ما الذي سيظهر هنا؟</h2>
-          <p>
-            ستعرض في هذه الصفحة الكتب التي تعبر عن المسار العلمي للدكتور هيثم الغريب، مع
-            تقديم مختصر لكل كتاب وبيانات النشر وما يلزم من وصلات أو إحالات.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">الحالة الحالية</p>
-          <h2 class="section-title">مرحلة التهيئة</h2>
-          <p>
-            لم تُدرج القائمة النهائية بعد، لكن البنية الحالية أُعدت لتستقبل الكتب المعتمدة
-            تباعًا دون الحاجة إلى إعادة تنظيم الموقع من جديد.
-          </p>
-        </article>
+      <div class="hero__badge-row">
+        <span class="hero__badge">كتب ومؤلفات</span>
+        <span class="hero__badge">بيانات ببليوجرافية</span>
+        <span class="hero__badge">صفحات مستقلة لاحقًا</span>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">البيانات المنتظرة لكل كتاب</h2>
-      <ul class="list-clean">
-        <li>العنوان الكامل.</li>
-        <li>وصف مختصر أو ملخص تعريفي.</li>
-        <li>بيانات النشر أو سنة الإصدار.</li>
-        <li>رابط خارجي أو معلومات إضافية عند التوفر.</li>
-      </ul>
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">وصف القسم</p>
+        <h2 class="section-title">مساحة ببليوجرافية قابلة للنمو</h2>
+        <p class="section-copy">
+          هذه الصفحة مهيأة لعرض الكتب بصيغة منظمة تسمح لاحقًا بظهور كل عنوان مع وصفه،
+          وبيانات نشره، وروابطه، ثم الانتقال في مرحلة لاحقة إلى صفحة مستقلة لكل كتاب.
+        </p>
+
+        <ul class="entity-tags">
+          <li>عناوين معتمدة</li>
+          <li>وصف مختصر</li>
+          <li>بيانات نشر</li>
+          <li>روابط خارجية</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">جاهزية القالب</p>
+        <ul class="entity-list">
+          <li><strong>الصيغة الحالية:</strong> بطاقات عرض أولية جاهزة للتغذية بالبيانات.</li>
+          <li><strong>الخطوة اللاحقة:</strong> إضافة سنة النشر والناشر وروابط العمل عند التوفر.</li>
+          <li><strong>الفائدة:</strong> إمكان البناء على نفس القالب دون إعادة تصميم لاحقًا.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="entity-meta-grid">
+        <article class="content-card entity-card">
+          <p class="content-card__meta">نوع البيانات</p>
+          <h3>تعريف بالكتاب</h3>
+          <p>العنوان الكامل، وملخص وجيز، وما يحدد موقع العمل داخل المسار العلمي العام.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">بيانات النشر</p>
+          <h3>معلومة مرجعية واضحة</h3>
+          <p>سنة الإصدار، الجهة الناشرة، أو أي بيانات ببليوجرافية نافعة للقارئ والباحث.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">صلة رقمية</p>
+          <h3>روابط وإحالات</h3>
+          <p>رابط خارجي، صفحة بيع، أو موضع ظهور العمل في منصات أخرى عند الحاجة.</p>
+        </article>
+      </div>
     </section>
 
     <section class="shell section">
@@ -63,11 +86,14 @@ const books = (await getCollection('books'))
 
       <div class="grid-two">
         {books.map((book) => (
-          <article class="content-card">
-            <p class="content-card__meta">{book.data.status ?? 'مسودة أولية'}</p>
-            <h3>{book.data.title}</h3>
-            <p>{book.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{book.data.status ?? 'مسودة أولية'}</p>
+              <h3>{book.data.title}</h3>
+              <p>{book.data.summary}</p>
+              <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+            </article>
+          </a>
         ))}
       </div>
     </section>

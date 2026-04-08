@@ -1,0 +1,85 @@
+---
+interface MetaItem {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  lang: 'ar' | 'en';
+  eyebrow: string;
+  title: string;
+  summary?: string;
+  badges?: string[];
+  metaItems?: MetaItem[];
+  backHref: string;
+  backLabel: string;
+  externalUrl?: string;
+  externalLabel?: string;
+}
+
+const {
+  lang,
+  eyebrow,
+  title,
+  summary,
+  badges = [],
+  metaItems = [],
+  backHref,
+  backLabel,
+  externalUrl,
+  externalLabel,
+} = Astro.props;
+---
+
+<main class="page-main page-main--detail">
+  <section class="shell hero hero--detail">
+    <p class="hero__eyebrow">{eyebrow}</p>
+    <h1 class="hero__title">{title}</h1>
+    {summary && <p class="hero__lead">{summary}</p>}
+
+    {badges.length > 0 && (
+      <div class="hero__badge-row">
+        {badges.map((badge) => (
+          <span class="hero__badge">{badge}</span>
+        ))}
+      </div>
+    )}
+  </section>
+
+  <section class="shell entity-grid">
+    <article class="entity-summary">
+      <p class="entity-kicker">{lang === 'ar' ? 'نبذة' : 'Overview'}</p>
+      <h2 class="section-title">{lang === 'ar' ? 'مدخل موجز للعمل' : 'A concise entry for this item'}</h2>
+      <p class="section-copy">
+        {summary ??
+          (lang === 'ar'
+            ? 'هذه صفحة عنصر مفرد ضمن الموقع، مهيأة لعرض وصفه وبياناته وروابطه بشكل مستقل.'
+            : 'This is a standalone item page prepared to present the work, its metadata, and related links in an independent format.')}
+      </p>
+    </article>
+
+    <article class="entity-panel">
+      <p class="entity-kicker">{lang === 'ar' ? 'بيانات موجزة' : 'Quick metadata'}</p>
+      <ul class="entity-list">
+        {metaItems.map((item) => (
+          <li><strong>{item.label}:</strong> {item.value}</li>
+        ))}
+        {externalUrl && (
+          <li>
+            <strong>{lang === 'ar' ? 'الرابط' : 'Link'}:</strong> <a href={externalUrl}>{externalLabel ?? externalUrl}</a>
+          </li>
+        )}
+        <li>
+          <strong>{lang === 'ar' ? 'الرجوع' : 'Back'}:</strong> <a href={backHref}>{backLabel}</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="shell section">
+    <div class="entity-panel">
+      <p class="entity-kicker">{lang === 'ar' ? 'التفاصيل' : 'Details'}</p>
+      <slot />
+    </div>
+  </section>
+</main>

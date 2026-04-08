@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
 
 const articles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
@@ -15,44 +16,65 @@ const articles = (await getCollection('articles'))
   description="Articles and thematic series section of the personal scholarly website"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Articles</p>
       <h1 class="hero__title">Articles, essays, and thematic series</h1>
       <p class="hero__lead">
         This section is designed as the website's ongoing publishing space, gathering original
         articles, selected externally published pieces, and future thematic series in a clear archive.
       </p>
-    </section>
 
-    <section class="shell section">
-      <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">Purpose</p>
-          <h2 class="section-title">A living publication archive</h2>
-          <p>
-            The articles section is intended to document ongoing intellectual output and organize it
-            by topic, series, and publication context.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">Scalability</p>
-          <h2 class="section-title">Built for continuous growth</h2>
-          <p>
-            The current site structure is prepared to receive entries gradually while preserving a
-            coherent archive for browsing and long-term reference.
-          </p>
-        </article>
+      <div class="hero__badge-row">
+        <span class="hero__badge">Original articles</span>
+        <span class="hero__badge">Thematic series</span>
+        <span class="hero__badge">Structured archive</span>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Planned content types</h2>
-      <ul class="list-clean">
-        <li>Original website essays and articles.</li>
-        <li>Selected externally published writings.</li>
-        <li>Thematic series and topic-based groupings.</li>
-        <li>Summaries and categories for easier navigation.</li>
-      </ul>
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Purpose</p>
+        <h2 class="section-title">A living archive for ongoing publication</h2>
+        <p class="section-copy">
+          This archive is prepared for original articles, linked external writing, and thematic
+          series, with structured metadata that supports both browsing and long-term reference.
+        </p>
+        <ul class="entity-tags">
+          <li>Date</li>
+          <li>Category</li>
+          <li>Series</li>
+          <li>Source</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Display readiness</p>
+        <ul class="entity-list">
+          <li><strong>Current state:</strong> article cards and standalone item pages are active.</li>
+          <li><strong>Next step:</strong> more entries, tags, and deeper classification as needed.</li>
+          <li><strong>Goal:</strong> preserve a coherent scholarly archive as the site grows.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="entity-meta-grid">
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Article type</p>
+          <h3>Original or external</h3>
+          <p>Entries can distinguish between original site writing and externally linked publication.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Internal structure</p>
+          <h3>Series and category</h3>
+          <p>Each item can be tied to a thematic series or an organizing subject category.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Reading context</p>
+          <h3>Time and source</h3>
+          <p>Compact metadata can surface reading time and source when those details are available.</p>
+        </article>
+      </div>
     </section>
 
     <section class="shell section">
@@ -63,13 +85,18 @@ const articles = (await getCollection('articles'))
 
       <div class="grid-two">
         {articles.map((article) => (
-          <article class="content-card">
-            <p class="content-card__meta">
-              {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
-            </p>
-            <h3>{article.data.title}</h3>
-            <p>{article.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">
+                {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+              </p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+              <p class="content-card__meta">
+                {[article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
+              </p>
+            </article>
+          </a>
         ))}
       </div>
     </section>

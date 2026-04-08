@@ -5,6 +5,10 @@ date: "2026-04-05"
 summary: "مقال تمهيدي حول قيمة الموقع العلمي الشخصي في جمع المادة البحثية وتقديمها بصورة واضحة ومتجددة."
 category: "النشر العلمي الرقمي"
 series: "بناء المشروع العلمي"
+sourceName: "الموقع الشخصي العلمي"
+articleType: "مقال أصلي"
+readingTime: "6 دقائق"
+externalUrl: "https://example.com/ar/articles/digital-scholarly-presence"
 draft: false
 ---
 

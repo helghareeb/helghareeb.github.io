@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
 
 const books = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'en')
@@ -15,44 +16,66 @@ const books = (await getCollection('books'))
   description="Books and authored works section of the personal scholarly website"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Books</p>
       <h1 class="hero__title">Authored and published works</h1>
       <p class="hero__lead">
         This section is reserved for books that represent the scholarly profile of Dr. Haitham
         A. El-Ghareeb, with room for descriptions, publication details, and future dedicated entries.
       </p>
-    </section>
 
-    <section class="shell section">
-      <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">Section purpose</p>
-          <h2 class="section-title">A structured bibliography-facing space</h2>
-          <p>
-            The books page is intended to gather authored works in a readable format that can later
-            expand into individual book pages with richer scholarly and publication metadata.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">Current stage</p>
-          <h2 class="section-title">Prepared for gradual entry</h2>
-          <p>
-            The final list of titles is not entered yet, but the site structure is already ready
-            to receive books progressively without another redesign.
-          </p>
-        </article>
+      <div class="hero__badge-row">
+        <span class="hero__badge">Books and authored works</span>
+        <span class="hero__badge">Bibliographic metadata</span>
+        <span class="hero__badge">Dedicated pages later</span>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Expected information for each title</h2>
-      <ul class="list-clean">
-        <li>Full title.</li>
-        <li>Short descriptive summary.</li>
-        <li>Publication details or year.</li>
-        <li>Relevant external links when available.</li>
-      </ul>
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Section purpose</p>
+        <h2 class="section-title">A bibliography-facing structure ready to grow</h2>
+        <p class="section-copy">
+          The current page is designed to hold book records in a clear format now and expand later
+          into standalone book pages with richer publishing and scholarly metadata.
+        </p>
+
+        <ul class="entity-tags">
+          <li>Approved titles</li>
+          <li>Short summary</li>
+          <li>Publication details</li>
+          <li>External links</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Template readiness</p>
+        <ul class="entity-list">
+          <li><strong>Current form:</strong> compact cards ready for progressive data entry.</li>
+          <li><strong>Next step:</strong> publisher, year, and access links when available.</li>
+          <li><strong>Long-term use:</strong> no redesign needed when more titles are added.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="entity-meta-grid">
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Identity</p>
+          <h3>What the title is</h3>
+          <p>Each entry can later foreground the book's title and role within the wider scholarly profile.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Publication</p>
+          <h3>Clear reference details</h3>
+          <p>Publication year, publisher, or other useful bibliographic reference points.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Access</p>
+          <h3>Links and references</h3>
+          <p>Space for outward links, listings, or external access points when appropriate.</p>
+        </article>
+      </div>
     </section>
 
     <section class="shell section">
@@ -63,11 +86,14 @@ const books = (await getCollection('books'))
 
       <div class="grid-two">
         {books.map((book) => (
-          <article class="content-card">
-            <p class="content-card__meta">{book.data.status ?? 'Provisional'}</p>
-            <h3>{book.data.title}</h3>
-            <p>{book.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{book.data.status ?? 'Provisional'}</p>
+              <h3>{book.data.title}</h3>
+              <p>{book.data.summary}</p>
+              <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+            </article>
+          </a>
         ))}
       </div>
     </section>

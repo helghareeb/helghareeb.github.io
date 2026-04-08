@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
 
 const projects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'en').slice(0, 6);
 ---
@@ -13,32 +14,64 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
   description="Current and planned scholarly projects"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Projects</p>
       <h1 class="hero__title">A space for scholarly and digital initiatives</h1>
       <p class="hero__lead">
         This section is designed to document current and planned projects, clarify their scope and
         status, and connect them to the broader scholarly structure of the website.
       </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">Scholarly initiatives</span>
+        <span class="hero__badge">Digital projects</span>
+        <span class="hero__badge">Status tracking</span>
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Purpose</p>
+        <h2 class="section-title">A single place to document ongoing work</h2>
+        <p class="section-copy">
+          Projects can appear here as distinct entries with summaries, status, scope, and later
+          links to outputs, related articles, or supporting pages.
+        </p>
+
+        <ul class="entity-tags">
+          <li>Project title</li>
+          <li>Scope</li>
+          <li>Status</li>
+          <li>Related outputs</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Expansion logic</p>
+        <ul class="entity-list">
+          <li><strong>Current view:</strong> concise project cards for fast orientation.</li>
+          <li><strong>Next stage:</strong> standalone project pages for larger initiatives.</li>
+          <li><strong>Value:</strong> the site can track scholarly work as it evolves.</li>
+        </ul>
+      </article>
     </section>
 
     <section class="shell section">
-      <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">Purpose</p>
-          <h2 class="section-title">Documenting active work</h2>
-          <p>
-            The projects area is intended to gather initiatives in one place so they can be presented,
-            tracked, and linked to related publications, editions, and articles.
-          </p>
+      <div class="entity-meta-grid">
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Description</p>
+          <h3>What the project does</h3>
+          <p>A clear short explanation of the scholarly, digital, or educational purpose.</p>
         </article>
-        <article class="content-card">
-          <p class="content-card__meta">Next expansion</p>
-          <h2 class="section-title">Dedicated pages per project</h2>
-          <p>
-            The current structure prepares for detailed standalone project pages with descriptions,
-            outputs, links, and progress information once approved content is available.
-          </p>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">State</p>
+          <h3>Active or planned</h3>
+          <p>Status labels make it easier to understand what is underway and what is still intended.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Connections</p>
+          <h3>Links and outputs</h3>
+          <p>The template is ready to connect each project with related pages or public outputs later.</p>
         </article>
       </div>
     </section>
@@ -52,11 +85,14 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
       <div class="grid-two">
         {projects.length > 0 ? (
           projects.map((project) => (
-            <article class="content-card">
-              <p class="content-card__meta">{project.data.status ?? 'In preparation'}</p>
-              <h3>{project.data.title}</h3>
-              <p>{project.data.summary}</p>
-            </article>
+            <a class="card-link" href={getEntryPath('projects', 'en', project.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{project.data.status ?? 'In preparation'}</p>
+                <h3>{project.data.title}</h3>
+                <p>{project.data.summary}</p>
+                <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
+              </article>
+            </a>
           ))
         ) : (
           <article class="notice-card">

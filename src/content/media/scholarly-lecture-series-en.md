@@ -4,6 +4,7 @@ lang: "en"
 summary: "A provisional media entry demonstrating how recorded lectures or media series can be organized."
 type: "Video"
 status: "In preparation"
+platform: "External platform"
 externalUrl: "https://example.com/en/media/lecture-series"
 ---
 

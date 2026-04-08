@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import EntityEntryPage from '../../../components/EntityEntryPage.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { getEntryRouteSlug } from '../../../utils/content-routing';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('externalLinks')).filter((entry) => entry.data.lang === 'ar');
+
+  return entries.map((entry) => ({
+    params: { slug: getEntryRouteSlug(entry.slug) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={`${entry.data.title} | الروابط الخارجية`} description={entry.data.summary}>
+  <EntityEntryPage
+    lang="ar"
+    eyebrow="رابط خارجي"
+    title={entry.data.title}
+    summary={entry.data.summary}
+    badges={['رابط موصوف', entry.data.linkType ?? 'رابط', entry.data.category ?? 'تصنيف عام']}
+    metaItems={[
+      { label: 'القسم', value: 'الروابط الخارجية' },
+      ...(entry.data.sourceName ? [{ label: 'الجهة', value: entry.data.sourceName }] : []),
+      ...(entry.data.linkType ? [{ label: 'النوع', value: entry.data.linkType }] : []),
+      { label: 'مميز', value: entry.data.featured ? 'نعم' : 'لا' },
+    ]}
+    backHref="/ar/external-links/"
+    backLabel="العودة إلى قسم الروابط الخارجية"
+    externalUrl={entry.data.externalUrl}
+    externalLabel="فتح الرابط"
+  >
+    <Content />
+  </EntityEntryPage>
+</BaseLayout>

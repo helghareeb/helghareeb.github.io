@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import EntityEntryPage from '../../../components/EntityEntryPage.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { getEntryRouteSlug } from '../../../utils/content-routing';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('projects')).filter((entry) => entry.data.lang === 'en');
+
+  return entries.map((entry) => ({
+    params: { slug: getEntryRouteSlug(entry.slug) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout lang="en" dir="ltr" title={`${entry.data.title} | Projects`} description={entry.data.summary}>
+  <EntityEntryPage
+    lang="en"
+    eyebrow="Project"
+    title={entry.data.title}
+    summary={entry.data.summary}
+    badges={['Project page', 'Standalone entry', entry.data.status ?? 'Provisional']}
+    metaItems={[
+      { label: 'Section', value: 'Projects' },
+      { label: 'Status', value: entry.data.status ?? 'Unspecified' },
+      ...(entry.data.area ? [{ label: 'Area', value: entry.data.area }] : []),
+      ...(entry.data.startYear ? [{ label: 'Start year', value: entry.data.startYear }] : []),
+    ]}
+    backHref="/en/projects/"
+    backLabel="Back to projects"
+    externalUrl={entry.data.externalUrl}
+    externalLabel="Project link"
+  >
+    <Content />
+  </EntityEntryPage>
+</BaseLayout>

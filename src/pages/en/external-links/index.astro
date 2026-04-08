@@ -1,6 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
+
+const links = (await getCollection('externalLinks')).filter((entry) => entry.data.lang === 'en').slice(0, 6);
 ---
 
 <BaseLayout
@@ -10,33 +14,64 @@ import '../../../styles/global.css';
   description="Educational, professional, and publication-related external links"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">External Links</p>
       <h1 class="hero__title">Educational resources and externally hosted work</h1>
       <p class="hero__lead">
         This section is intended to gather useful external resources, professional links, and pages
         where books, articles, or related scholarly work are published outside the website itself.
       </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">Described links</span>
+        <span class="hero__badge">Professional and educational</span>
+        <span class="hero__badge">External publication access</span>
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Section character</p>
+        <h2 class="section-title">Documented links rather than a raw list</h2>
+        <p class="section-copy">
+          This area is intended to collect external links with concise descriptions, type labels,
+          and source context so links remain meaningful within the logic of the website.
+        </p>
+        <ul class="entity-tags">
+          <li>Category</li>
+          <li>Type</li>
+          <li>Source</li>
+          <li>External URL</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Uses</p>
+        <ul class="entity-list">
+          <li><strong>Educational links:</strong> useful resources, references, or platforms.</li>
+          <li><strong>Professional links:</strong> profiles or public academic presence.</li>
+          <li><strong>Publication links:</strong> access points to work published elsewhere.</li>
+        </ul>
+      </article>
     </section>
 
     <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Initial entries</p>
+        <h2 class="section-title">External links prepared for expansion</h2>
+      </div>
+
       <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">Educational resources</p>
-          <h2 class="section-title">Useful links for visitors</h2>
-          <p>
-            The page can later host carefully selected educational and research-oriented resources
-            organized by topic, audience, or purpose.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">Publication access points</p>
-          <h2 class="section-title">Connections to work beyond the site</h2>
-          <p>
-            It also provides a place for linking outward to profiles, article hosts, and publication
-            pages connected with the broader scholarly presence of the site owner.
-          </p>
-        </article>
+        {links.map((link) => (
+          <a class="card-link" href={getEntryPath('externalLinks', 'en', link.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{[link.data.category, link.data.linkType].filter(Boolean).join(' | ')}</p>
+              <h3>{link.data.title}</h3>
+              <p>{link.data.summary}</p>
+              <p class="content-card__meta">{link.data.sourceName}</p>
+            </article>
+          </a>
+        ))}
       </div>
     </section>
   </main>

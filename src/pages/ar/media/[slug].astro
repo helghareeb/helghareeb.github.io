@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import EntityEntryPage from '../../../components/EntityEntryPage.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { getEntryRouteSlug } from '../../../utils/content-routing';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('media')).filter((entry) => entry.data.lang === 'ar');
+
+  return entries.map((entry) => ({
+    params: { slug: getEntryRouteSlug(entry.slug) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={`${entry.data.title} | الوسائط`} description={entry.data.summary}>
+  <EntityEntryPage
+    lang="ar"
+    eyebrow="وسيط"
+    title={entry.data.title}
+    summary={entry.data.summary}
+    badges={['صفحة وسيط', entry.data.type ?? 'وسائط', entry.data.status ?? 'بيانات أولية']}
+    metaItems={[
+      { label: 'القسم', value: 'الوسائط' },
+      { label: 'النوع', value: entry.data.type ?? 'غير محدد' },
+      { label: 'الحالة', value: entry.data.status ?? 'غير محددة' },
+      ...(entry.data.platform ? [{ label: 'المنصة', value: entry.data.platform }] : []),
+    ]}
+    backHref="/ar/media/"
+    backLabel="العودة إلى قسم الوسائط"
+    externalUrl={entry.data.externalUrl}
+    externalLabel="الرابط الخارجي"
+  >
+    <Content />
+  </EntityEntryPage>
+</BaseLayout>

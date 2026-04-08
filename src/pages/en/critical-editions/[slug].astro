@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import EntityEntryPage from '../../../components/EntityEntryPage.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { getEntryRouteSlug } from '../../../utils/content-routing';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('editions')).filter((entry) => entry.data.lang === 'en');
+
+  return entries.map((entry) => ({
+    params: { slug: getEntryRouteSlug(entry.slug) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout lang="en" dir="ltr" title={`${entry.data.title} | Critical Editions`} description={entry.data.summary}>
+  <EntityEntryPage
+    lang="en"
+    eyebrow="Critical Edition"
+    title={entry.data.title}
+    summary={entry.data.summary}
+    badges={['Edition page', 'Scholarly note', entry.data.status ?? 'Provisional']}
+    metaItems={[
+      { label: 'Section', value: 'Critical Editions' },
+      { label: 'Status', value: entry.data.status ?? 'Unspecified' },
+      ...(entry.data.workType ? [{ label: 'Work type', value: entry.data.workType }] : []),
+      ...(entry.data.sourceType ? [{ label: 'Source type', value: entry.data.sourceType }] : []),
+      ...(entry.data.year ? [{ label: 'Year', value: entry.data.year }] : []),
+    ]}
+    backHref="/en/critical-editions/"
+    backLabel="Back to critical editions"
+    externalUrl={entry.data.externalUrl}
+    externalLabel="Edition link"
+  >
+    <Content />
+  </EntityEntryPage>
+</BaseLayout>

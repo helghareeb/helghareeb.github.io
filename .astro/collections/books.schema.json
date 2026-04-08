@@ -20,6 +20,19 @@
         "status": {
           "type": "string"
         },
+        "year": {
+          "type": "string"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "workType": {
+          "type": "string"
+        },
+        "externalUrl": {
+          "type": "string",
+          "format": "uri"
+        },
         "$schema": {
           "type": "string"
         }

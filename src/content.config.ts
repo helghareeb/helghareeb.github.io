@@ -8,6 +8,10 @@ const articles = defineCollection({
     summary: z.string().optional(),
     category: z.string().optional(),
     series: z.string().optional(),
+    sourceName: z.string().optional(),
+    articleType: z.string().optional(),
+    readingTime: z.string().optional(),
+    externalUrl: z.string().url().optional(),
     draft: z.boolean().default(false),
   }),
 });
@@ -18,6 +22,10 @@ const books = defineCollection({
     lang: z.enum(['ar', 'en']),
     summary: z.string().optional(),
     status: z.string().optional(),
+    year: z.string().optional(),
+    publisher: z.string().optional(),
+    workType: z.string().optional(),
+    externalUrl: z.string().url().optional(),
   }),
 });
 
@@ -27,6 +35,10 @@ const editions = defineCollection({
     lang: z.enum(['ar', 'en']),
     summary: z.string().optional(),
     status: z.string().optional(),
+    year: z.string().optional(),
+    workType: z.string().optional(),
+    sourceType: z.string().optional(),
+    externalUrl: z.string().url().optional(),
   }),
 });
 
@@ -36,6 +48,9 @@ const projects = defineCollection({
     lang: z.enum(['ar', 'en']),
     summary: z.string().optional(),
     status: z.string().optional(),
+    area: z.string().optional(),
+    startYear: z.string().optional(),
+    externalUrl: z.string().url().optional(),
   }),
 });
 
@@ -46,6 +61,7 @@ const media = defineCollection({
     summary: z.string().optional(),
     type: z.string().optional(),
     status: z.string().optional(),
+    platform: z.string().optional(),
     externalUrl: z.string().url().optional(),
   }),
 });
@@ -56,6 +72,8 @@ const externalLinks = defineCollection({
     lang: z.enum(['ar', 'en']),
     summary: z.string().optional(),
     category: z.string().optional(),
+    linkType: z.string().optional(),
+    sourceName: z.string().optional(),
     externalUrl: z.string().url().optional(),
     featured: z.boolean().default(false),
   }),

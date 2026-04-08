@@ -4,6 +4,7 @@ lang: "ar"
 summary: "مدخل أولي لقسم الوسائط يعبّر عن إمكانية جمع المحاضرات أو المواد المسجلة في بنية منظمة."
 type: "مرئيات"
 status: "قيد التنظيم"
+platform: "منصة خارجية"
 externalUrl: "https://example.com/ar/media/lecture-series"
 ---
 

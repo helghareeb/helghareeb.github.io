@@ -5,6 +5,10 @@ date: "2026-04-05"
 summary: "A provisional article entry about the importance of a personal scholarly website as a durable academic archive."
 category: "Digital Scholarly Publishing"
 series: "Building the Scholarly Project"
+sourceName: "Personal Scholarly Website"
+articleType: "Original article"
+readingTime: "6 min read"
+externalUrl: "https://example.com/en/articles/scholarly-digital-presence"
 draft: false
 ---
 

@@ -1,6 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
+
+const links = (await getCollection('externalLinks')).filter((entry) => entry.data.lang === 'ar').slice(0, 6);
 ---
 
 <BaseLayout
@@ -10,42 +14,65 @@ import '../../../styles/global.css';
   description="قسم الروابط التعليمية والخارجية المرتبطة بالأعمال والمنشورات"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الروابط الخارجية</p>
       <h1 class="hero__title">روابط تعليمية ومهنية وأعمال منشورة خارج الموقع</h1>
       <p class="hero__lead">
         أُنشئ هذا القسم ليجمع الروابط التعليمية المفيدة، والروابط المهنية والأكاديمية،
         والصفحات الخارجية التي نُشرت فيها كتب أو مقالات أو مواد ذات صلة بالمشروع العلمي.
       </p>
-    </section>
 
-    <section class="shell section">
-      <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">روابط تعليمية</p>
-          <h2 class="section-title">مواد نافعة للزائر</h2>
-          <p>
-            سيضم هذا المسار روابط مختارة ذات فائدة تعليمية أو بحثية، مرتبة بحسب الموضوع أو
-            المستوى أو الجهة الناشرة.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">روابط الأعمال</p>
-          <h2 class="section-title">نقاط وصول إلى منشورات خارجية</h2>
-          <p>
-            كما سيُستخدم لتجميع الروابط الخارجية المتعلقة بصاحب الموقع في المنصات الأكاديمية
-            أو العلمية أو مواقع النشر التي تستضيف بعض الأعمال.
-          </p>
-        </article>
+      <div class="hero__badge-row">
+        <span class="hero__badge">روابط موصوفة</span>
+        <span class="hero__badge">روابط مهنية وتعليمية</span>
+        <span class="hero__badge">وصول إلى نشر خارجي</span>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">جاهز لاستقبال العناصر</h2>
-      <p>
-        البنية الحالية مناسبة لإضافة قوائم وروابط موصوفة لاحقًا، سواء كانت تعليمية عامة
-        أو خاصة بالأعمال المنشورة خارج الموقع.
-      </p>
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">طبيعة القسم</p>
+        <h2 class="section-title">روابط موثقة لا مجرد قائمة خام</h2>
+        <p class="section-copy">
+          صُمم هذا القسم ليجمع الروابط الخارجية مع وصف موجز ونوع الرابط والجهة المرتبطة به،
+          بحيث تكون الروابط مفهومة ومفيدة داخل سياق الموقع لا معزولة عنه.
+        </p>
+        <ul class="entity-tags">
+          <li>تصنيف الرابط</li>
+          <li>نوعه</li>
+          <li>الجهة</li>
+          <li>الرابط الخارجي</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">استعمالات القسم</p>
+        <ul class="entity-list">
+          <li><strong>روابط تعليمية:</strong> مواد نافعة أو مراجع أو منصات ذات صلة.</li>
+          <li><strong>روابط مهنية:</strong> ملفات شخصية أو حضور أكاديمي خارجي.</li>
+          <li><strong>روابط نشر:</strong> نقاط وصول إلى أعمال منشورة خارج الموقع.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">نماذج أولية</p>
+        <h2 class="section-title">روابط مهيأة للتوسعة</h2>
+      </div>
+
+      <div class="grid-two">
+        {links.map((link) => (
+          <a class="card-link" href={getEntryPath('externalLinks', 'ar', link.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{[link.data.category, link.data.linkType].filter(Boolean).join(' | ')}</p>
+              <h3>{link.data.title}</h3>
+              <p>{link.data.summary}</p>
+              <p class="content-card__meta">{link.data.sourceName}</p>
+            </article>
+          </a>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

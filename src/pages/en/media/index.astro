@@ -1,6 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
+
+const media = (await getCollection('media')).filter((entry) => entry.data.lang === 'en').slice(0, 6);
 ---
 
 <BaseLayout
@@ -10,38 +14,83 @@ import '../../../styles/global.css';
   description="Audio, video, and media-facing scholarly materials"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Media</p>
       <h1 class="hero__title">Audio, video, and educational media materials</h1>
       <p class="hero__lead">
         This section is reserved for recorded lectures, audiovisual materials, explanatory series,
         and media-linked learning resources, with the option to host large files externally.
       </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">Audio and video</span>
+        <span class="hero__badge">External hosting ready</span>
+        <span class="hero__badge">Learning series</span>
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Presentation model</p>
+        <h2 class="section-title">Prepared for light metadata and external delivery</h2>
+        <p class="section-copy">
+          Media records can appear here as compact entries with type, summary, status, and external
+          links, while heavier assets remain hosted elsewhere when that is more practical.
+        </p>
+
+        <ul class="entity-tags">
+          <li>Media type</li>
+          <li>Short description</li>
+          <li>Status</li>
+          <li>External URL</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Display categories</p>
+        <ul class="entity-list">
+          <li><strong>Audio:</strong> lectures, recordings, or spoken series.</li>
+          <li><strong>Video:</strong> presentations, lessons, or visual explanations.</li>
+          <li><strong>Series:</strong> grouped educational media by topic or level.</li>
+        </ul>
+      </article>
     </section>
 
     <section class="shell section">
       <div class="grid-three">
-        <article class="feature-card">
+        <article class="feature-card feature-card--field">
           <h3>Audio</h3>
           <p>For lectures, audio recordings, or serialized spoken materials organized for reuse.</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card feature-card--field">
           <h3>Video</h3>
           <p>For visual lectures, presentations, or explanations linked to the site's scholarly areas.</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card feature-card--field">
           <h3>Learning series</h3>
           <p>For structured educational sequences that may later be grouped by topic or audience.</p>
         </article>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Prepared for later content</h2>
-      <p>
-        The page is now in place as part of the public structure and can later receive categorized
-        media entries, descriptions, and external links.
-      </p>
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Initial entries</p>
+        <h2 class="section-title">Provisional media records</h2>
+      </div>
+
+      <div class="grid-two">
+        {media.map((item) => (
+          <a class="card-link" href={getEntryPath('media', 'en', item.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{item.data.type ?? 'Media'}</p>
+              <h3>{item.data.title}</h3>
+              <p>{item.data.summary}</p>
+              <p class="content-card__meta">{[item.data.platform, item.data.status].filter(Boolean).join(' | ')}</p>
+            </article>
+          </a>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

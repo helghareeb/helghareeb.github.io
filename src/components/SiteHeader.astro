@@ -55,8 +55,31 @@ const localePairs: Record<string, string> = {
   '/en/scholarly-fields/e-learning/': '/ar/fields/e-learning/',
 };
 
+const dynamicLocaleMatchers: Array<{
+  pattern: RegExp;
+  replace: string;
+}> = [
+  { pattern: /^\/ar\/articles\/([^/]+)\/$/, replace: '/en/articles/$1/' },
+  { pattern: /^\/en\/articles\/([^/]+)\/$/, replace: '/ar/articles/$1/' },
+  { pattern: /^\/ar\/books\/([^/]+)\/$/, replace: '/en/books/$1/' },
+  { pattern: /^\/en\/books\/([^/]+)\/$/, replace: '/ar/books/$1/' },
+  { pattern: /^\/ar\/editions\/([^/]+)\/$/, replace: '/en/critical-editions/$1/' },
+  { pattern: /^\/en\/critical-editions\/([^/]+)\/$/, replace: '/ar/editions/$1/' },
+  { pattern: /^\/ar\/projects\/([^/]+)\/$/, replace: '/en/projects/$1/' },
+  { pattern: /^\/en\/projects\/([^/]+)\/$/, replace: '/ar/projects/$1/' },
+  { pattern: /^\/ar\/media\/([^/]+)\/$/, replace: '/en/media/$1/' },
+  { pattern: /^\/en\/media\/([^/]+)\/$/, replace: '/ar/media/$1/' },
+  { pattern: /^\/ar\/external-links\/([^/]+)\/$/, replace: '/en/external-links/$1/' },
+  { pattern: /^\/en\/external-links\/([^/]+)\/$/, replace: '/ar/external-links/$1/' },
+];
+
 const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
-const switchLocalePath = localePairs[currentPath] ?? localePairs[normalizedPath] ?? (lang === 'ar' ? '/en/' : '/ar/');
+const matchedDynamicLocale = dynamicLocaleMatchers.find(({ pattern }) => pattern.test(normalizedPath));
+const dynamicLocalePath = matchedDynamicLocale
+  ? normalizedPath.replace(matchedDynamicLocale.pattern, matchedDynamicLocale.replace)
+  : undefined;
+const switchLocalePath =
+  localePairs[currentPath] ?? localePairs[normalizedPath] ?? dynamicLocalePath ?? (lang === 'ar' ? '/en/' : '/ar/');
 
 const homeHref = lang === 'ar' ? '/ar/' : '/en/';
 const siteIndexHref = lang === 'ar' ? '/ar/site-map/' : '/en/site-map/';

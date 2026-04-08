@@ -20,6 +20,16 @@
         "status": {
           "type": "string"
         },
+        "area": {
+          "type": "string"
+        },
+        "startYear": {
+          "type": "string"
+        },
+        "externalUrl": {
+          "type": "string",
+          "format": "uri"
+        },
         "$schema": {
           "type": "string"
         }

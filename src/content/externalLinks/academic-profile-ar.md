@@ -3,6 +3,8 @@ title: "روابط أكاديمية ومهنية"
 lang: "ar"
 summary: "مدخل أولي لقسم الروابط الخارجية يتيح لاحقًا جمع الصفحات المهنية أو الأكاديمية ذات الصلة."
 category: "روابط مهنية"
+linkType: "ملف شخصي"
+sourceName: "منصة أكاديمية"
 externalUrl: "https://example.com/ar/profile"
 featured: true
 ---

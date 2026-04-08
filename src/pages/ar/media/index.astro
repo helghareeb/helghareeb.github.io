@@ -1,6 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
+
+const media = (await getCollection('media')).filter((entry) => entry.data.lang === 'ar').slice(0, 6);
 ---
 
 <BaseLayout
@@ -10,38 +14,83 @@ import '../../../styles/global.css';
   description="قسم المواد الصوتية والمرئية والوسائط العلمية"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الوسائط</p>
       <h1 class="hero__title">المواد الصوتية والمرئية والمحتوى التعليمي</h1>
       <p class="hero__lead">
         خُصص هذا القسم لتجميع المواد الصوتية والمرئية والشروحات المسجلة وما يتصل بها من
         سلاسل أو روابط خارجية، مع مراعاة أن الوسائط الثقيلة يمكن ربطها خارجيًا عند الحاجة.
       </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">صوتيات ومرئيات</span>
+        <span class="hero__badge">روابط خارجية ممكنة</span>
+        <span class="hero__badge">سلاسل تعليمية</span>
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">منهج العرض</p>
+        <h2 class="section-title">قسم مهيأ للوسائط الخفيفة والروابط الثقيلة</h2>
+        <p class="section-copy">
+          يمكن لهذا القسم أن يجمع المواد المسجلة في بطاقات واضحة، مع إبقاء الوسائط الثقيلة
+          مرتبطة خارجيًا متى كان ذلك أنسب للنشر والتنظيم.
+        </p>
+
+        <ul class="entity-tags">
+          <li>نوع الوسيط</li>
+          <li>وصف مختصر</li>
+          <li>حالة النشر</li>
+          <li>رابط خارجي</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">فئات العرض</p>
+        <ul class="entity-list">
+          <li><strong>الصوتيات:</strong> دروس أو تسجيلات أو رسائل علمية.</li>
+          <li><strong>المرئيات:</strong> محاضرات وشروحات ومواد بصرية.</li>
+          <li><strong>السلاسل:</strong> مواد منظمة بحسب الموضوع أو المستوى.</li>
+        </ul>
+      </article>
     </section>
 
     <section class="shell section">
       <div class="grid-three">
-        <article class="feature-card">
+        <article class="feature-card feature-card--field">
           <h3>الصوتيات</h3>
           <p>تجميع الدروس أو الرسائل الصوتية في عرض واضح قابل للأرشفة والتحديث.</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card feature-card--field">
           <h3>المرئيات</h3>
           <p>عرض المحاضرات والشروحات المرئية وربطها بالسياق العلمي والقسم المناسب.</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card feature-card--field">
           <h3>السلاسل التعليمية</h3>
           <p>تنظيم المحتوى المتسلسل ضمن وحدات يسهل الوصول إليها من الواجهة الرئيسية والأقسام.</p>
         </article>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">المنهج المعتمد</h2>
-      <p>
-        هذا القسم حاضر الآن كبنية مستقلة ضمن الموقع، وسيُملأ لاحقًا بعناصر الوسائط الفعلية
-        وروابطها ووصفها المختصر بحسب النوع أو الموضوع أو السلسلة.
-      </p>
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">نماذج أولية</p>
+        <h2 class="section-title">عناصر وسائط قابلة للتوسعة</h2>
+      </div>
+
+      <div class="grid-two">
+        {media.map((item) => (
+          <a class="card-link" href={getEntryPath('media', 'ar', item.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{item.data.type ?? 'وسائط'}</p>
+              <h3>{item.data.title}</h3>
+              <p>{item.data.summary}</p>
+              <p class="content-card__meta">{[item.data.platform, item.data.status].filter(Boolean).join(' | ')}</p>
+            </article>
+          </a>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

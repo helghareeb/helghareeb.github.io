@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
 
 const editions = (await getCollection('editions'))
   .filter((entry) => entry.data.lang === 'en')
@@ -15,44 +16,66 @@ const editions = (await getCollection('editions'))
   description="Critical editions and manuscript-related work section"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Critical Editions</p>
       <h1 class="hero__title">Scholarly editorial work and manuscript-related projects</h1>
       <p class="hero__lead">
         This section presents the editorial and manuscript-oriented side of the scholarly profile,
         with space for published editions, works in progress, and concise academic notes on each item.
       </p>
-    </section>
 
-    <section class="shell section">
-      <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">Identity of the section</p>
-          <h2 class="section-title">A distinct scholarly track</h2>
-          <p>
-            Critical editions are treated here as a separate body of scholarly work, not merely as
-            an appendix to books or articles, which reflects their importance within the wider project.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">Future format</p>
-          <h2 class="section-title">How entries will be presented</h2>
-          <p>
-            Each edition will later include a title, short scholarly description, status, and any
-            publication or reference details that help position the work clearly.
-          </p>
-        </article>
+      <div class="hero__badge-row">
+        <span class="hero__badge">Critical editions</span>
+        <span class="hero__badge">Status-aware entries</span>
+        <span class="hero__badge">Short academic notes</span>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Expected metadata for each edition</h2>
-      <ul class="list-clean">
-        <li>Edition title.</li>
-        <li>Publication or completion status.</li>
-        <li>Short academic description.</li>
-        <li>Relevant links or references where available.</li>
-      </ul>
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Identity of the section</p>
+        <h2 class="section-title">A distinct editorial track within the site</h2>
+        <p class="section-copy">
+          Critical editions are represented here as an independent scholarly area with their own
+          metadata, status labels, and future potential for dedicated item pages.
+        </p>
+
+        <ul class="entity-tags">
+          <li>Edition title</li>
+          <li>Status</li>
+          <li>Academic description</li>
+          <li>References</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Presentation logic</p>
+        <ul class="entity-list">
+          <li><strong>Published work:</strong> shown with concise reference information.</li>
+          <li><strong>Work in progress:</strong> presented with its current stage.</li>
+          <li><strong>Future path:</strong> larger editions can later receive dedicated pages.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="entity-meta-grid">
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Scholarly angle</p>
+          <h3>Brief academic framing</h3>
+          <p>A short note can explain the edition's scholarly importance or manuscript scope.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Progress state</p>
+          <h3>Published or underway</h3>
+          <p>The status line helps visitors distinguish completed editions from ongoing work.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">Related paths</p>
+          <h3>Linked to manuscripts</h3>
+          <p>Later references can connect these entries to the manuscripts field and related articles.</p>
+        </article>
+      </div>
     </section>
 
     <section class="shell section">
@@ -63,11 +86,14 @@ const editions = (await getCollection('editions'))
 
       <div class="grid-two">
         {editions.map((edition) => (
-          <article class="content-card">
-            <p class="content-card__meta">{edition.data.status ?? 'Provisional'}</p>
-            <h3>{edition.data.title}</h3>
-            <p>{edition.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('editions', 'en', edition.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{edition.data.status ?? 'Provisional'}</p>
+              <h3>{edition.data.title}</h3>
+              <p>{edition.data.summary}</p>
+              <p class="content-card__meta">{[edition.data.workType, edition.data.year].filter(Boolean).join(' | ')}</p>
+            </article>
+          </a>
         ))}
       </div>
     </section>

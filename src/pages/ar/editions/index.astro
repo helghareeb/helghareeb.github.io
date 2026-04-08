@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
 
 const editions = (await getCollection('editions'))
   .filter((entry) => entry.data.lang === 'ar')
@@ -15,44 +16,66 @@ const editions = (await getCollection('editions'))
   description="قسم التحقيقات والمخطوطات ضمن الموقع الشخصي العلمي"
 >
   <main class="page-main">
-    <section class="shell hero">
+    <section class="shell hero hero--detail">
       <p class="hero__eyebrow">التحقيقات</p>
       <h1 class="hero__title">أعمال التحقيق العلمي والمخطوطات</h1>
       <p class="hero__lead">
         يبرز هذا القسم جانب التحقيق العلمي بوصفه مسارًا مستقلًا داخل الموقع، ويُنتظر أن
         يضم الأعمال المنشورة أو التي ما تزال قيد الإعداد، مع بيانات علمية موجزة لكل عمل.
       </p>
-    </section>
 
-    <section class="shell section">
-      <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">التركيز</p>
-          <h2 class="section-title">هوية هذا القسم</h2>
-          <p>
-            خُصص هذا القسم لإظهار العناية بالتحقيق والمخطوطات والتحرير العلمي، مع إتاحة
-            عرض مستقل يفرق بين هذا المسار وبين الكتب العامة والمقالات.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">التوسع المقبل</p>
-          <h2 class="section-title">صيغة العرض المقصودة</h2>
-          <p>
-            سيعرض كل تحقيق بعنوانه، ووصفه المختصر، وحالته، وبيانات نشره أو مرحلته الحالية،
-            إضافة إلى ما يتصل به من روابط أو أعمال ذات صلة.
-          </p>
-        </article>
+      <div class="hero__badge-row">
+        <span class="hero__badge">تحقيقات ومخطوطات</span>
+        <span class="hero__badge">حالة العمل</span>
+        <span class="hero__badge">وصف علمي مختصر</span>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">البيانات المنتظرة لكل عمل</h2>
-      <ul class="list-clean">
-        <li>عنوان التحقيق أو العمل المخطوط.</li>
-        <li>الحالة: منشور أو قيد الإنجاز أو تحت الإعداد.</li>
-        <li>وصف علمي مختصر.</li>
-        <li>رابط أو إحالة ذات صلة عند التوفر.</li>
-      </ul>
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">هوية القسم</p>
+        <h2 class="section-title">مسار مستقل داخل المشروع العلمي</h2>
+        <p class="section-copy">
+          يُعامل هذا القسم بوصفه مسارًا مستقلًا عن الكتب العامة والمقالات، بحيث يظهر فيه
+          كل عمل تحقيق بعنوانه، ووصفه العلمي، وحالته، وما يتصل به من روابط أو ملاحظات.
+        </p>
+
+        <ul class="entity-tags">
+          <li>عنوان التحقيق</li>
+          <li>حالة العمل</li>
+          <li>وصف علمي</li>
+          <li>روابط مرجعية</li>
+        </ul>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">صيغة العرض</p>
+        <ul class="entity-list">
+          <li><strong>المنشور:</strong> يظهر مع بيانات النشر والإشارة إلى طبيعة العمل.</li>
+          <li><strong>قيد الإنجاز:</strong> يظهر مع مرحلة التقدم أو الحالة العامة.</li>
+          <li><strong>المقترح لاحقًا:</strong> صفحات مستقلة لأعمال التحقيق الكبرى.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="entity-meta-grid">
+        <article class="content-card entity-card">
+          <p class="content-card__meta">البعد العلمي</p>
+          <h3>وصف موجز للعمل</h3>
+          <p>توضيح قيمة التحقيق أو موضوع المخطوط بلغة مختصرة ومحكمة.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">مرحلة الإنجاز</p>
+          <h3>منشور أو قيد الإعداد</h3>
+          <p>تمييز الحالة الحالية لكل عمل حتى يفهم الزائر ما تم إنجازه بالفعل.</p>
+        </article>
+        <article class="content-card entity-card">
+          <p class="content-card__meta">صلة بالأقسام</p>
+          <h3>ارتباط بالمخطوطات</h3>
+          <p>إحالات لاحقة إلى قسم المخطوطات أو المقالات ذات الصلة المنهجية.</p>
+        </article>
+      </div>
     </section>
 
     <section class="shell section">
@@ -63,11 +86,14 @@ const editions = (await getCollection('editions'))
 
       <div class="grid-two">
         {editions.map((edition) => (
-          <article class="content-card">
-            <p class="content-card__meta">{edition.data.status ?? 'بيانات أولية'}</p>
-            <h3>{edition.data.title}</h3>
-            <p>{edition.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('editions', 'ar', edition.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{edition.data.status ?? 'بيانات أولية'}</p>
+              <h3>{edition.data.title}</h3>
+              <p>{edition.data.summary}</p>
+              <p class="content-card__meta">{[edition.data.workType, edition.data.year].filter(Boolean).join(' | ')}</p>
+            </article>
+          </a>
         ))}
       </div>
     </section>
