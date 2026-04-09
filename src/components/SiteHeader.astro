@@ -19,6 +19,7 @@ const localePairs: Record<string, string> = {
   '/ar/books/': '/en/books/',
   '/ar/editions/': '/en/critical-editions/',
   '/ar/articles/': '/en/articles/',
+  '/ar/articles/series/': '/en/articles/',
   '/ar/fields/': '/en/scholarly-fields/',
   '/ar/projects/': '/en/projects/',
   '/ar/media/': '/en/media/',
@@ -39,6 +40,7 @@ const localePairs: Record<string, string> = {
   '/en/books/': '/ar/books/',
   '/en/critical-editions/': '/ar/editions/',
   '/en/articles/': '/ar/articles/',
+  '/en/articles/series/': '/ar/articles/',
   '/en/scholarly-fields/': '/ar/fields/',
   '/en/projects/': '/ar/projects/',
   '/en/media/': '/ar/media/',
@@ -60,7 +62,9 @@ const dynamicLocaleMatchers: Array<{
   replace: string;
 }> = [
   { pattern: /^\/ar\/articles\/([^/]+)\/$/, replace: '/en/articles/$1/' },
+  { pattern: /^\/ar\/articles\/series\/([^/]+)\/$/, replace: '/en/articles/' },
   { pattern: /^\/en\/articles\/([^/]+)\/$/, replace: '/ar/articles/$1/' },
+  { pattern: /^\/en\/articles\/series\/([^/]+)\/$/, replace: '/ar/articles/' },
   { pattern: /^\/ar\/books\/([^/]+)\/$/, replace: '/en/books/$1/' },
   { pattern: /^\/en\/books\/([^/]+)\/$/, replace: '/ar/books/$1/' },
   { pattern: /^\/ar\/editions\/([^/]+)\/$/, replace: '/en/critical-editions/$1/' },
@@ -97,42 +101,48 @@ const languageAria = lang === 'ar' ? 'الانتقال إلى النسخة ال�
       </a>
     </div>
 
-    <div class="site-header__controls">
-      <nav class="site-nav-group" aria-label={lang === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}>
-        <div class="site-nav site-nav--primary">
-          {primaryLinks.map((link) => {
-            const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
+    <details class="site-header__menu">
+      <summary class="site-header__toggle">
+        <span>{lang === 'ar' ? 'القائمة' : 'Menu'}</span>
+      </summary>
 
-            return (
-              <a class:list={['site-nav__link', { 'is-active': isActive }]} href={link.href}>
-                {link.label}
-              </a>
-            );
-          })}
+      <div class="site-header__controls">
+        <nav class="site-nav-group" aria-label={lang === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}>
+          <div class="site-nav site-nav--primary">
+            {primaryLinks.map((link) => {
+              const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
+
+              return (
+                <a class:list={['site-nav__link', { 'is-active': isActive }]} href={link.href}>
+                  {link.label}
+                </a>
+              );
+            })}
+          </div>
+
+          <div class="site-nav site-nav--secondary">
+            {secondaryLinks.map((link) => {
+              const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
+
+              return (
+                <a class:list={['site-nav__link', 'site-nav__link--secondary', { 'is-active': isActive }]} href={link.href}>
+                  {link.label}
+                </a>
+              );
+            })}
+          </div>
+        </nav>
+
+        <div class="site-header__utilities">
+          <a class="site-index-link" href={siteIndexHref}>
+            {lang === 'ar' ? 'دليل الموقع' : 'Site Index'}
+          </a>
+
+          <a class="locale-switch" href={switchLocalePath} aria-label={languageAria}>
+            {languageLabel}
+          </a>
         </div>
-
-        <div class="site-nav site-nav--secondary">
-          {secondaryLinks.map((link) => {
-            const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
-
-            return (
-              <a class:list={['site-nav__link', 'site-nav__link--secondary', { 'is-active': isActive }]} href={link.href}>
-                {link.label}
-              </a>
-            );
-          })}
-        </div>
-      </nav>
-
-      <div class="site-header__utilities">
-        <a class="site-index-link" href={siteIndexHref}>
-          {lang === 'ar' ? 'دليل الموقع' : 'Site Index'}
-        </a>
-
-        <a class="locale-switch" href={switchLocalePath} aria-label={languageAria}>
-          {languageLabel}
-        </a>
       </div>
-    </div>
+    </details>
   </div>
 </header>

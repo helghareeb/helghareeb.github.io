@@ -2,11 +2,48 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
-import { getEntryPath } from '../../../utils/content-routing';
+import { getArticleSeriesPath, getEntryPath } from '../../../utils/content-routing';
 
-const articles = (await getCollection('articles'))
+const allArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+  .sort((a, b) => {
+    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+    return bTime - aTime;
+  });
+
+const articles = allArticles
   .slice(0, 6);
+
+const seriesMap = new Map<
+  string,
+  {
+    title: string;
+    slug: string;
+    count: number;
+  }
+>();
+
+for (const article of allArticles) {
+  if (!article.data.series || !article.data.seriesSlug) continue;
+
+  const existing = seriesMap.get(article.data.seriesSlug);
+
+  if (existing) {
+    existing.count += 1;
+  } else {
+    seriesMap.set(article.data.seriesSlug, {
+      title: article.data.series,
+      slug: article.data.seriesSlug,
+      count: 1,
+    });
+  }
+}
+
+const featuredSeries = Array.from(seriesMap.values())
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -50,7 +87,7 @@ const articles = (await getCollection('articles'))
       <article class="entity-panel">
         <p class="entity-kicker">جاهزية العرض</p>
         <ul class="entity-list">
-          <li><strong>الحالة الحالية:</strong> بطاقات وصفحات مفردة للمقالات.</li>
+          <li><strong>الحالة الحالية:</strong> بطاقات وصفحات مفردة للمقالات، مع سلسلة مستوردة ومنظمة داخل الموقع.</li>
           <li><strong>التطوير القادم:</strong> مزيد من المقالات والوسوم والتصنيفات عند الحاجة.</li>
           <li><strong>الهدف:</strong> جعل القسم مرجعًا حيًا للنشر العلمي والمعرفي.</li>
         </ul>
@@ -78,9 +115,36 @@ const articles = (await getCollection('articles'))
     </section>
 
     <section class="shell section">
+      {featuredSeries.length > 0 && (
+        <div class="section-heading">
+          <p class="section-kicker">سلاسل بارزة</p>
+          <h2 class="section-title">سلاسل منظمة داخل الأرشيف</h2>
+          <p class="section-copy">
+            أصبح قسم المقالات لا يضم موادًا مفردة فقط، بل يضم أيضًا سلاسل مرتبة يمكن
+            متابعتها من خلال فهرس مستقل لكل سلسلة.
+          </p>
+        </div>
+      )}
+
+      {featuredSeries.length > 0 && (
+        <div class="grid-two">
+          {featuredSeries.map((series) => (
+            <a class="card-link" href={getArticleSeriesPath('ar', series.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">سلسلة مقالية | {series.count} مادة</p>
+                <h3>{series.title}</h3>
+                <p>الانتقال إلى صفحة السلسلة لمتابعة موادها مرتبة داخل الأرشيف.</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">نماذج أولية</p>
-        <h2 class="section-title">مداخل مقالية قابلة للتحرير</h2>
+        <p class="section-kicker">أحدث المواد</p>
+        <h2 class="section-title">مقالات منشورة داخل الأرشيف</h2>
       </div>
 
       <div class="grid-two">
@@ -93,7 +157,7 @@ const articles = (await getCollection('articles'))
               <h3>{article.data.title}</h3>
               <p>{article.data.summary}</p>
               <p class="content-card__meta">
-                {[article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
+                {[article.data.series, article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
               </p>
             </article>
           </a>

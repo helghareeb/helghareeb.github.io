@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
+import { getArticleSeriesPath } from '../../utils/content-routing';
 
 const featuredBooks = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'ar')
@@ -13,7 +14,17 @@ const featuredEditions = (await getCollection('editions'))
 
 const featuredArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+  .sort((a, b) => {
+    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+    return bTime - aTime;
+  })
   .slice(0, 3);
+
+const alRisalaSeries = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.seriesSlug === 'al-risala')
+  .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
 
 const featuredProjects = (await getCollection('projects'))
   .filter((entry) => entry.data.lang === 'ar')
@@ -174,6 +185,36 @@ const featuredLinks = (await getCollection('externalLinks'))
           </article>
         ))}
       </div>
+    </section>
+
+    <section class="shell section">
+      {alRisalaSeries.length > 0 && (
+        <div class="section-heading">
+          <p class="section-kicker">سلسلة جديدة</p>
+          <h2 class="section-title">شرح مختصر لكتاب الرسالة للشافعي</h2>
+          <p class="section-copy">
+            أضيفت إلى الموقع سلسلة كاملة منظمة داخل الأرشيف، مع صفحة خاصة بالسلسلة
+            ومسار مرتب لمتابعة حلقاتها.
+          </p>
+        </div>
+      )}
+
+      {alRisalaSeries.length > 0 && (
+        <div class="cta-panel">
+          <div>
+            <p class="section-kicker">ضمن قسم المقالات</p>
+            <h2 class="section-title">سلسلة: شرح د. ياسر برهامي</h2>
+            <p class="section-copy">
+              تحتوي السلسلة الآن على {alRisalaSeries.length} مادة مرتبة، ويمكن الدخول إليها
+              من فهرس مستقل داخل الموقع بدل الاعتماد على الروابط الخارجية وحدها.
+            </p>
+          </div>
+          <div class="hero__actions">
+            <a class="button" href={getArticleSeriesPath('ar', 'al-risala')}>عرض السلسلة</a>
+            <a class="button-secondary" href="/ar/articles/">قسم المقالات</a>
+          </div>
+        </div>
+      )}
     </section>
 
     <section class="shell section">

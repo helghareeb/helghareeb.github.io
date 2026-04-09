@@ -1,0 +1,105 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { getArticleSeriesPath } from '../../../../utils/content-routing';
+
+const articles = (await getCollection('articles')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.series);
+
+const seriesMap = new Map<
+  string,
+  {
+    title: string;
+    slug: string;
+    count: number;
+    latestDate?: string;
+    latestTitle?: string;
+    category?: string;
+  }
+>();
+
+for (const article of articles) {
+  const slug = article.data.seriesSlug ?? article.slug;
+  const existing = seriesMap.get(slug);
+
+  if (!existing) {
+    seriesMap.set(slug, {
+      title: article.data.series!,
+      slug,
+      count: 1,
+      latestDate: article.data.date,
+      latestTitle: article.data.title,
+      category: article.data.category,
+    });
+    continue;
+  }
+
+  existing.count += 1;
+
+  const existingTime = existing.latestDate ? new Date(existing.latestDate).getTime() : 0;
+  const articleTime = article.data.date ? new Date(article.data.date).getTime() : 0;
+
+  if (articleTime >= existingTime) {
+    existing.latestDate = article.data.date;
+    existing.latestTitle = article.data.title;
+    existing.category = article.data.category;
+  }
+}
+
+const seriesEntries = Array.from(seriesMap.values()).sort((a, b) => {
+  const aTime = a.latestDate ? new Date(a.latestDate).getTime() : 0;
+  const bTime = b.latestDate ? new Date(b.latestDate).getTime() : 0;
+
+  return bTime - aTime;
+});
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="السلاسل المقالية | د. هيثم الغريب"
+  description="فهرس السلاسل المقالية داخل الموقع الشخصي العلمي"
+>
+  <main class="page-main">
+    <section class="shell hero hero--portal">
+      <p class="hero__eyebrow">السلاسل المقالية</p>
+      <h1 class="hero__title">فهرس السلاسل العلمية داخل قسم المقالات</h1>
+      <p class="hero__lead">
+        يجمع هذا المسار السلاسل الموضوعية المرتبة داخل الأرشيف، بحيث يسهل الانتقال إلى
+        كل سلسلة بصفتها وحدة متكاملة لا مجرد مقالات متفرقة.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">فهرس موحد</span>
+        <span class="hero__badge">ترتيب حلقي</span>
+        <span class="hero__badge">تنقل أوضح</span>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">السلاسل المتاحة</p>
+        <h2 class="section-title">مداخل السلاسل الحالية</h2>
+      </div>
+
+      <div class="grid-two">
+        {seriesEntries.map((series) => (
+          <a class="card-link" href={getArticleSeriesPath('ar', series.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">
+                {[series.category, `${series.count} مادة`].filter(Boolean).join(' | ')}
+              </p>
+              <h3>{series.title}</h3>
+              <p>
+                {series.latestTitle
+                  ? `آخر مادة مضافة في هذه السلسلة: ${series.latestTitle}`
+                  : 'سلسلة مقالية منظمة داخل الأرشيف.'}
+              </p>
+              <p class="content-card__meta">{series.latestDate ?? 'بدون تاريخ'}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

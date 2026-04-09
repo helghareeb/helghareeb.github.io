@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import EntityEntryPage from '../../../components/EntityEntryPage.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
-import { getEntryRouteSlug } from '../../../utils/content-routing';
+import { getArticleSeriesPath, getEntryPath, getEntryRouteSlug } from '../../../utils/content-routing';
 
 export async function getStaticPaths() {
   const entries = (await getCollection('articles')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
@@ -16,6 +16,20 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const seriesEntries = entry.data.seriesSlug
+  ? (await getCollection('articles'))
+      .filter(
+        (item) =>
+          item.data.lang === 'ar' &&
+          !item.data.draft &&
+          item.data.seriesSlug === entry.data.seriesSlug,
+      )
+      .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0))
+  : [];
+const currentSeriesIndex = seriesEntries.findIndex((item) => item.id === entry.id);
+const previousSeriesEntry = currentSeriesIndex > 0 ? seriesEntries[currentSeriesIndex - 1] : undefined;
+const nextSeriesEntry =
+  currentSeriesIndex >= 0 && currentSeriesIndex < seriesEntries.length - 1 ? seriesEntries[currentSeriesIndex + 1] : undefined;
 ---
 
 <BaseLayout lang="ar" dir="rtl" title={`${entry.data.title} | المقالات`} description={entry.data.summary}>
@@ -29,6 +43,7 @@ const { Content } = await render(entry);
       { label: 'القسم', value: 'المقالات' },
       ...(entry.data.date ? [{ label: 'التاريخ', value: entry.data.date }] : []),
       ...(entry.data.series ? [{ label: 'السلسلة', value: entry.data.series }] : []),
+      ...(entry.data.seriesOrder ? [{ label: 'ترتيب الحلقة', value: `${entry.data.seriesOrder}` }] : []),
       ...(entry.data.sourceName ? [{ label: 'المصدر', value: entry.data.sourceName }] : []),
       ...(entry.data.readingTime ? [{ label: 'زمن القراءة', value: entry.data.readingTime }] : []),
     ]}
@@ -38,5 +53,34 @@ const { Content } = await render(entry);
     externalLabel="رابط المقال"
   >
     <Content />
+
+    {entry.data.seriesSlug && (
+      <div class="section section--soft">
+        <p class="entity-kicker">داخل السلسلة</p>
+        <div class="section-heading">
+          <h2 class="section-title">متابعة قراءة السلسلة</h2>
+          <p class="section-copy">
+            تنتمي هذه المقالة إلى سلسلة منظمة داخل الموقع، ويمكن الرجوع إلى فهرس السلسلة
+            أو الانتقال إلى الحلقة السابقة أو التالية عند توفرها.
+          </p>
+        </div>
+
+        <div class="hero__actions">
+          <a class="button-secondary" href={getArticleSeriesPath('ar', entry.data.seriesSlug)}>
+            عرض فهرس السلسلة
+          </a>
+          {previousSeriesEntry && (
+            <a class="button-secondary" href={getEntryPath('articles', 'ar', previousSeriesEntry.slug)}>
+              الحلقة السابقة
+            </a>
+          )}
+          {nextSeriesEntry && (
+            <a class="button-secondary" href={getEntryPath('articles', 'ar', nextSeriesEntry.slug)}>
+              الحلقة التالية
+            </a>
+          )}
+        </div>
+      </div>
+    )}
   </EntityEntryPage>
 </BaseLayout>

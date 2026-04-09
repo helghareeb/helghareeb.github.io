@@ -26,6 +26,13 @@
         "series": {
           "type": "string"
         },
+        "seriesSlug": {
+          "type": "string"
+        },
+        "seriesOrder": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
         "sourceName": {
           "type": "string"
         },

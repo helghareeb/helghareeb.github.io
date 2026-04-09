@@ -1,0 +1,107 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
+
+export async function getStaticPaths() {
+  const articles = (await getCollection('articles')).filter(
+    (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.series && entry.data.seriesSlug,
+  );
+
+  const seriesMap = new Map<string, { title: string }>();
+
+  for (const article of articles) {
+    const slug = article.data.seriesSlug!;
+    if (!seriesMap.has(slug)) {
+      seriesMap.set(slug, { title: article.data.series! });
+    }
+  }
+
+  return Array.from(seriesMap.entries()).map(([series, data]) => ({
+    params: { series },
+    props: { seriesSlug: series, seriesTitle: data.title },
+  }));
+}
+
+const { seriesSlug, seriesTitle } = Astro.props;
+const seriesArticles = (await getCollection('articles'))
+  .filter(
+    (entry) =>
+      entry.data.lang === 'ar' &&
+      !entry.data.draft &&
+      entry.data.seriesSlug === seriesSlug,
+  )
+  .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
+
+const firstArticle = seriesArticles[0];
+const lastArticle = seriesArticles[seriesArticles.length - 1];
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title={`${seriesTitle} | السلاسل المقالية`}
+  description={`فهرس سلسلة ${seriesTitle} داخل الموقع الشخصي العلمي`}
+>
+  <main class="page-main">
+    <section class="shell hero hero--portal">
+      <p class="hero__eyebrow">سلسلة مقالية</p>
+      <h1 class="hero__title">{seriesTitle}</h1>
+      <p class="hero__lead">
+        صفحة جامعة لترتيب مواد هذه السلسلة والتنقل بينها بحسب تسلسلها داخل الأرشيف.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">{seriesArticles.length} مادة</span>
+        {firstArticle?.data.date && <span class="hero__badge">البداية: {firstArticle.data.date}</span>}
+        {lastArticle?.data.date && <span class="hero__badge">الآخر: {lastArticle.data.date}</span>}
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">وصف السلسلة</p>
+        <h2 class="section-title">مسار واحد بمواد مرتبة</h2>
+        <p class="section-copy">
+          جُمعت هذه المواد داخل صفحة مستقلة حتى يسهل تتبع السلسلة على نحو متسلسل،
+          مع الاحتفاظ بكل مقالة في صفحتها المفردة داخل الأرشيف العام.
+        </p>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">بيانات موجزة</p>
+        <ul class="entity-list">
+          <li><strong>عدد المواد:</strong> {seriesArticles.length}</li>
+          {firstArticle?.data.category && <li><strong>التصنيف:</strong> {firstArticle.data.category}</li>}
+          {firstArticle?.data.sourceName && <li><strong>المصدر:</strong> {firstArticle.data.sourceName}</li>}
+          <li><strong>الرجوع:</strong> <a href="/ar/articles/">قسم المقالات</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">مواد السلسلة</p>
+        <h2 class="section-title">الترتيب الكامل</h2>
+      </div>
+
+      <div class="grid-two">
+        {seriesArticles.map((article) => (
+          <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">
+                {[article.data.seriesOrder ? `الحلقة ${article.data.seriesOrder}` : undefined, article.data.date].filter(Boolean).join(' | ')}
+              </p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+              <p class="content-card__meta">
+                {[article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
+              </p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

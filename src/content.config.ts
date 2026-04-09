@@ -8,6 +8,8 @@ const articles = defineCollection({
     summary: z.string().optional(),
     category: z.string().optional(),
     series: z.string().optional(),
+    seriesSlug: z.string().optional(),
+    seriesOrder: z.number().int().positive().optional(),
     sourceName: z.string().optional(),
     articleType: z.string().optional(),
     readingTime: z.string().optional(),

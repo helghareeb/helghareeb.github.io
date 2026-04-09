@@ -41,3 +41,9 @@ export function getCollectionBasePath(collection: CollectionKey, lang: Locale) {
 export function getEntryPath(collection: CollectionKey, lang: Locale, slug: string) {
   return `${getCollectionBasePath(collection, lang)}${getEntryRouteSlug(slug)}/`;
 }
+
+export function getArticleSeriesPath(lang: Locale, seriesSlug: string) {
+  const basePath = lang === 'ar' ? '/ar/articles/series/' : '/en/articles/series/';
+
+  return `${basePath}${seriesSlug}/`;
+}
