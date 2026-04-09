@@ -4,7 +4,13 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
 
-const links = (await getCollection('externalLinks')).filter((entry) => entry.data.lang === 'en').slice(0, 6);
+const links = (await getCollection('externalLinks'))
+  .filter((entry) => entry.data.lang === 'en')
+  .sort((a, b) => {
+    if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
+
+    return a.data.title.localeCompare(b.data.title, 'en');
+  });
 ---
 
 <BaseLayout
@@ -57,8 +63,12 @@ const links = (await getCollection('externalLinks')).filter((entry) => entry.dat
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Initial entries</p>
-        <h2 class="section-title">External links prepared for expansion</h2>
+        <p class="section-kicker">Published references</p>
+        <h2 class="section-title">Archive of documented external links</h2>
+        <p class="section-copy">
+          This section now includes {links.length} described external entries covering academic
+          profiles, published writing, institutional references, and selected public mentions.
+        </p>
       </div>
 
       <div class="grid-two">

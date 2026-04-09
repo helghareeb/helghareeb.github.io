@@ -4,7 +4,13 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
 
-const links = (await getCollection('externalLinks')).filter((entry) => entry.data.lang === 'ar').slice(0, 6);
+const links = (await getCollection('externalLinks'))
+  .filter((entry) => entry.data.lang === 'ar')
+  .sort((a, b) => {
+    if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
+
+    return a.data.title.localeCompare(b.data.title, 'ar');
+  });
 ---
 
 <BaseLayout
@@ -57,8 +63,12 @@ const links = (await getCollection('externalLinks')).filter((entry) => entry.dat
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">نماذج أولية</p>
-        <h2 class="section-title">روابط مهيأة للتوسعة</h2>
+        <p class="section-kicker">روابط منشورة</p>
+        <h2 class="section-title">أرشيف الروابط الخارجية الموصوفة</h2>
+        <p class="section-copy">
+          يضم هذا القسم الآن {links.length} رابطًا خارجيًا موصوفًا، تشمل ملفات أكاديمية،
+          وصفحات نشر، ومقالات، ومراجع مؤسسية، وإشارات خارجية ذات صلة.
+        </p>
       </div>
 
       <div class="grid-two">

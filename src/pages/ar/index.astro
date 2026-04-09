@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
-import { getArticleSeriesPath } from '../../utils/content-routing';
+import { getArticleSeriesPath, getEntryPath } from '../../utils/content-routing';
 
 const featuredBooks = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'ar')
@@ -80,7 +80,7 @@ const featuredMedia = (await getCollection('media'))
 
 const featuredLinks = (await getCollection('externalLinks'))
   .filter((entry) => entry.data.lang === 'ar' && entry.data.featured)
-  .slice(0, 1);
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -217,11 +217,13 @@ const featuredLinks = (await getCollection('externalLinks'))
           </article>
         ))}
         {featuredLinks.map((link) => (
-          <article class="content-card">
-            <p class="content-card__meta">{link.data.category ?? 'روابط خارجية'}</p>
-            <h3>{link.data.title}</h3>
-            <p>{link.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('externalLinks', 'ar', link.slug)}>
+            <article class="content-card">
+              <p class="content-card__meta">{link.data.category ?? 'روابط خارجية'}</p>
+              <h3>{link.data.title}</h3>
+              <p>{link.data.summary}</p>
+            </article>
+          </a>
         ))}
       </div>
     </section>
