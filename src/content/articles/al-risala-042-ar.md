@@ -4,7 +4,7 @@ lang: "ar"
 date: "2024-12-28"
 summary: ""
 category: "أصول الفقه"
-series: "شرح مختصر لكتاب الرسالة للشافعي - شرح د. ياسر برهامي"
+series: "مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي"
 seriesSlug: "al-risala"
 seriesOrder: 42
 sourceName: "فاعلم أنه لا إله إلا الله"

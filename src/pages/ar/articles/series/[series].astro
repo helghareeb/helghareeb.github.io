@@ -81,6 +81,16 @@ const lastArticle = seriesArticles[seriesArticles.length - 1];
     </section>
 
     <section class="shell section">
+      {seriesSlug === 'al-risala-ahmad-naqeeb' && (
+        <article class="notice-card">
+          <h2>تنبيه تنظيمي</h2>
+          <p>
+            هذه السلسلة مستوردة من مصدر خارجي، وقد تبيّن أثناء الجمع أن رابط الدرس
+            `63` غير متاح في المصدر الأصلي، ولذلك لا تظهر له مادة داخل الأرشيف الحالي.
+          </p>
+        </article>
+      )}
+
       <div class="section-heading">
         <p class="section-kicker">مواد السلسلة</p>
         <h2 class="section-title">الترتيب الكامل</h2>
@@ -91,7 +101,7 @@ const lastArticle = seriesArticles[seriesArticles.length - 1];
           <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
             <article class="content-card entity-card">
               <p class="content-card__meta">
-                {[article.data.seriesOrder ? `الحلقة ${article.data.seriesOrder}` : undefined, article.data.date].filter(Boolean).join(' | ')}
+                {[article.data.date, article.data.articleType].filter(Boolean).join(' | ')}
               </p>
               <h3>{article.data.title}</h3>
               <p>{article.data.summary}</p>

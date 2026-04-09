@@ -43,7 +43,6 @@ const nextSeriesEntry =
       { label: 'القسم', value: 'المقالات' },
       ...(entry.data.date ? [{ label: 'التاريخ', value: entry.data.date }] : []),
       ...(entry.data.series ? [{ label: 'السلسلة', value: entry.data.series }] : []),
-      ...(entry.data.seriesOrder ? [{ label: 'ترتيب الحلقة', value: `${entry.data.seriesOrder}` }] : []),
       ...(entry.data.sourceName ? [{ label: 'المصدر', value: entry.data.sourceName }] : []),
       ...(entry.data.readingTime ? [{ label: 'زمن القراءة', value: entry.data.readingTime }] : []),
     ]}

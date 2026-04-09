@@ -6,6 +6,7 @@ import argparse
 import html
 import math
 import re
+import sys
 import textwrap
 import urllib.parse
 import urllib.request
@@ -23,7 +24,7 @@ SOURCE_NAME = "فاعلم أنه لا إله إلا الله"
 
 @dataclass
 class SeriesEntry:
-    title: str
+    title: str | None
     url: str
 
 
@@ -65,6 +66,18 @@ def parse_docx_links(docx_path: Path) -> list[SeriesEntry]:
 
         seen.add(key)
         entries.append(SeriesEntry(title=text, url=links[0]))
+
+    return entries
+
+
+def parse_url_list(list_path: Path) -> list[SeriesEntry]:
+    entries: list[SeriesEntry] = []
+
+    for line in list_path.read_text(encoding="utf-8").splitlines():
+        url = line.strip()
+        if not url or url.startswith("#"):
+            continue
+        entries.append(SeriesEntry(title=None, url=url))
 
     return entries
 
@@ -193,6 +206,12 @@ def extract_post(html_text: str) -> tuple[str, str, str, list[str]]:
     return title, published, summary, blocks
 
 
+def normalize_title(title: str, prefix: str | None) -> str:
+    if prefix and re.fullmatch(r"\d+", title):
+        return f"{prefix} {title}"
+    return title
+
+
 def estimate_reading_time(blocks: list[str]) -> str:
     text = " ".join(blocks)
     words = len(re.findall(r"\S+", text))
@@ -254,9 +273,11 @@ def write_entry(
     slug_prefix: str,
     series_name: str,
     category: str,
+    numeric_title_prefix: str | None,
 ) -> Path:
     html_text = fetch_html(entry.url)
     title, published, summary, blocks = extract_post(html_text)
+    title = normalize_title(title, numeric_title_prefix)
     date = to_iso_date(published)
     reading_time = estimate_reading_time(blocks)
     frontmatter = build_frontmatter(
@@ -279,26 +300,41 @@ def write_entry(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Import a WordPress article series into Astro content files.")
-    parser.add_argument("docx_path", type=Path, help="Path to the Word document containing one title and URL per line.")
+    parser.add_argument("input_path", type=Path, help="Path to a Word document or a plain text file containing series links.")
     parser.add_argument("--output-dir", type=Path, default=Path("src/content/articles"))
     parser.add_argument("--slug-prefix", default="al-risala")
-    parser.add_argument("--series-name", default="شرح مختصر لكتاب الرسالة للشافعي - شرح د. ياسر برهامي")
+    parser.add_argument("--series-name", default="مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي")
     parser.add_argument("--category", default="أصول الفقه")
+    parser.add_argument("--numeric-title-prefix", default=None)
     args = parser.parse_args()
 
-    entries = parse_docx_links(args.docx_path)
+    if args.input_path.suffix.lower() == ".docx":
+        entries = parse_docx_links(args.input_path)
+    else:
+        entries = parse_url_list(args.input_path)
+
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
+    failures: list[tuple[int, str, str]] = []
+
     for index, entry in enumerate(entries, 1):
-        path = write_entry(
-            entry=entry,
-            index=index,
-            output_dir=args.output_dir,
-            slug_prefix=args.slug_prefix,
-            series_name=args.series_name,
-            category=args.category,
-        )
-        print(path)
+        try:
+            path = write_entry(
+                entry=entry,
+                index=index,
+                output_dir=args.output_dir,
+                slug_prefix=args.slug_prefix,
+                series_name=args.series_name,
+                category=args.category,
+                numeric_title_prefix=args.numeric_title_prefix,
+            )
+            print(path)
+        except Exception as exc:
+            failures.append((index, entry.url, str(exc)))
+            print(f"SKIPPED {index:03d} {entry.url} :: {exc}", file=sys.stderr)
+
+    if failures:
+        print(f"Completed with {len(failures)} skipped entr{'y' if len(failures) == 1 else 'ies'}.", file=sys.stderr)
 
 
 if __name__ == "__main__":

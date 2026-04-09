@@ -22,9 +22,48 @@ const featuredArticles = (await getCollection('articles'))
   })
   .slice(0, 3);
 
-const alRisalaSeries = (await getCollection('articles'))
-  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.seriesSlug === 'al-risala')
-  .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
+const articleSeriesMap = new Map<
+  string,
+  {
+    title: string;
+    slug: string;
+    count: number;
+    latestDate?: string;
+  }
+>();
+
+for (const article of await getCollection('articles')) {
+  if (article.data.lang !== 'ar' || article.data.draft || !article.data.series || !article.data.seriesSlug) continue;
+
+  const existing = articleSeriesMap.get(article.data.seriesSlug);
+
+  if (existing) {
+    existing.count += 1;
+
+    const existingTime = existing.latestDate ? new Date(existing.latestDate).getTime() : 0;
+    const articleTime = article.data.date ? new Date(article.data.date).getTime() : 0;
+
+    if (articleTime >= existingTime) {
+      existing.latestDate = article.data.date;
+    }
+  } else {
+    articleSeriesMap.set(article.data.seriesSlug, {
+      title: article.data.series,
+      slug: article.data.seriesSlug,
+      count: 1,
+      latestDate: article.data.date,
+    });
+  }
+}
+
+const featuredSeries = Array.from(articleSeriesMap.values())
+  .sort((a, b) => {
+    const aTime = a.latestDate ? new Date(a.latestDate).getTime() : 0;
+    const bTime = b.latestDate ? new Date(b.latestDate).getTime() : 0;
+
+    return bTime - aTime;
+  })
+  .slice(0, 2);
 
 const featuredProjects = (await getCollection('projects'))
   .filter((entry) => entry.data.lang === 'ar')
@@ -188,31 +227,35 @@ const featuredLinks = (await getCollection('externalLinks'))
     </section>
 
     <section class="shell section">
-      {alRisalaSeries.length > 0 && (
+      {featuredSeries.length > 0 && (
         <div class="section-heading">
-          <p class="section-kicker">سلسلة جديدة</p>
-          <h2 class="section-title">شرح مختصر لكتاب الرسالة للشافعي</h2>
+          <p class="section-kicker">سلاسل بارزة</p>
+          <h2 class="section-title">سلاسل مقالية نشطة داخل الأرشيف</h2>
           <p class="section-copy">
-            أضيفت إلى الموقع سلسلة كاملة منظمة داخل الأرشيف، مع صفحة خاصة بالسلسلة
-            ومسار مرتب لمتابعة حلقاتها.
+            لم يعد قسم المقالات يقتصر على المواد المفردة، بل صار يضم سلاسل كاملة
+            منظَّمة داخل الموقع مع صفحات مستقلة لكل سلسلة.
           </p>
         </div>
       )}
 
-      {alRisalaSeries.length > 0 && (
-        <div class="cta-panel">
-          <div>
-            <p class="section-kicker">ضمن قسم المقالات</p>
-            <h2 class="section-title">سلسلة: شرح د. ياسر برهامي</h2>
-            <p class="section-copy">
-              تحتوي السلسلة الآن على {alRisalaSeries.length} مادة مرتبة، ويمكن الدخول إليها
-              من فهرس مستقل داخل الموقع بدل الاعتماد على الروابط الخارجية وحدها.
-            </p>
-          </div>
-          <div class="hero__actions">
-            <a class="button" href={getArticleSeriesPath('ar', 'al-risala')}>عرض السلسلة</a>
-            <a class="button-secondary" href="/ar/articles/">قسم المقالات</a>
-          </div>
+      {featuredSeries.length > 0 && (
+        <div class="grid-two">
+          {featuredSeries.map((series) => (
+            <article class="cta-panel">
+              <div>
+                <p class="section-kicker">ضمن قسم المقالات</p>
+                <h2 class="section-title">{series.title}</h2>
+                <p class="section-copy">
+                  تحتوي هذه السلسلة الآن على {series.count} مادة مرتبة، ويمكن الدخول إليها
+                  من فهرس مستقل داخل الموقع.
+                </p>
+              </div>
+              <div class="hero__actions">
+                <a class="button" href={getArticleSeriesPath('ar', series.slug)}>عرض السلسلة</a>
+                <a class="button-secondary" href="/ar/articles/">قسم المقالات</a>
+              </div>
+            </article>
+          ))}
         </div>
       )}
     </section>
