@@ -53,6 +53,20 @@ const nextSeriesEntry =
   >
     <Content />
 
+    {entry.data.sourceName && entry.data.externalUrl && (
+      <section class="notice-card">
+        <p class="entity-kicker">النشر الأصلي</p>
+        <h2 class="section-title">المقال منشور أيضًا على {entry.data.sourceName}</h2>
+        <p>
+          هذه الصفحة تُظهر نسخة داخلية منظمة من المقال ضمن أرشيف الموقع، بينما يظل النشر
+          الأصلي متاحًا على {entry.data.sourceName}.
+        </p>
+        <p>
+          <a href={entry.data.externalUrl}>الانتقال إلى المقال على {entry.data.sourceName}</a>
+        </p>
+      </section>
+    )}
+
     {entry.data.seriesSlug && (
       <div class="section section--soft">
         <p class="entity-kicker">داخل السلسلة</p>

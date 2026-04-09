@@ -38,5 +38,19 @@ const { Content } = await render(entry);
     externalLabel="Article link"
   >
     <Content />
+
+    {entry.data.sourceName && entry.data.externalUrl && (
+      <section class="notice-card">
+        <p class="entity-kicker">Original publication</p>
+        <h2 class="section-title">This article is also published on {entry.data.sourceName}</h2>
+        <p>
+          This page presents an organized in-site version of the article within the website archive,
+          while the original publication remains available on {entry.data.sourceName}.
+        </p>
+        <p>
+          <a href={entry.data.externalUrl}>Go to the article on {entry.data.sourceName}</a>
+        </p>
+      </section>
+    )}
   </EntityEntryPage>
 </BaseLayout>
