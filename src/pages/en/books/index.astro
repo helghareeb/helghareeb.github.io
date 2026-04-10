@@ -6,6 +6,16 @@ import { getEntryPath } from '../../../utils/content-routing';
 
 const books = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'en')
+  .sort((a, b) => {
+    const yearDiff = Number(b.data.year ?? 0) - Number(a.data.year ?? 0);
+    if (yearDiff !== 0) return yearDiff;
+
+    const publishedA = /published/i.test(a.data.status ?? '');
+    const publishedB = /published/i.test(b.data.status ?? '');
+    if (publishedA !== publishedB) return publishedB ? 1 : -1;
+
+    return a.data.title.localeCompare(b.data.title, 'en');
+  })
   .slice(0, 6);
 ---
 
@@ -20,24 +30,24 @@ const books = (await getCollection('books'))
       <p class="hero__eyebrow">Books</p>
       <h1 class="hero__title">Authored and published works</h1>
       <p class="hero__lead">
-        This section is reserved for books that represent the scholarly profile of Dr. Haitham
-        A. El-Ghareeb, with room for descriptions, publication details, and future dedicated entries.
+        This section gathers authored books, course books, and publication-ready manuscripts
+        that represent the scholarly and academic profile of Dr. Haitham A. El-Ghareeb.
       </p>
 
       <div class="hero__badge-row">
         <span class="hero__badge">Books and authored works</span>
         <span class="hero__badge">Bibliographic metadata</span>
-        <span class="hero__badge">Dedicated pages later</span>
+        <span class="hero__badge">Direct access links</span>
       </div>
     </section>
 
     <section class="shell entity-grid">
       <article class="entity-summary">
         <p class="entity-kicker">Section purpose</p>
-        <h2 class="section-title">A bibliography-facing structure ready to grow</h2>
+        <h2 class="section-title">A clearer bibliography-facing archive</h2>
         <p class="section-copy">
-          The current page is designed to hold book records in a clear format now and expand later
-          into standalone book pages with richer publishing and scholarly metadata.
+          The page presents books in a consistent format that combines title, summary,
+          publication context, and outward access links where available.
         </p>
 
         <ul class="entity-tags">
@@ -51,9 +61,9 @@ const books = (await getCollection('books'))
       <article class="entity-panel">
         <p class="entity-kicker">Template readiness</p>
         <ul class="entity-list">
-          <li><strong>Current form:</strong> compact cards ready for progressive data entry.</li>
-          <li><strong>Next step:</strong> publisher, year, and access links when available.</li>
-          <li><strong>Long-term use:</strong> no redesign needed when more titles are added.</li>
+          <li><strong>Current form:</strong> compact cards with title, summary, year, and access point.</li>
+          <li><strong>Ordering:</strong> newer and more publication-ready entries appear first.</li>
+          <li><strong>Long-term use:</strong> the same layout can absorb more titles without redesign.</li>
         </ul>
       </article>
     </section>
@@ -80,8 +90,8 @@ const books = (await getCollection('books'))
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Initial sample entries</p>
-        <h2 class="section-title">Provisional items ready for later editing</h2>
+        <p class="section-kicker">Current entries</p>
+        <h2 class="section-title">Books shown with the latest items first</h2>
       </div>
 
       <div class="grid-two">

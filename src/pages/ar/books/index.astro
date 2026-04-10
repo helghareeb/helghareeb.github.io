@@ -21,23 +21,23 @@ const books = (await getCollection('books'))
       <h1 class="hero__title">قسم المؤلفات والكتب المنشورة</h1>
       <p class="hero__lead">
         يجمع هذا القسم المؤلفات المنشورة وما يتصل بها من بيانات تعريفية وروابط وملاحظات
-        ببليوجرافية مختصرة، مع إمكان التوسع لاحقًا إلى صفحات مستقلة لكل عمل.
+        ببليوجرافية مختصرة، مع تنظيم يسهل الرجوع إلى كل عمل.
       </p>
 
       <div class="hero__badge-row">
         <span class="hero__badge">كتب ومؤلفات</span>
         <span class="hero__badge">بيانات ببليوجرافية</span>
-        <span class="hero__badge">صفحات مستقلة لاحقًا</span>
+        <span class="hero__badge">روابط وإحالات</span>
       </div>
     </section>
 
     <section class="shell entity-grid">
       <article class="entity-summary">
         <p class="entity-kicker">وصف القسم</p>
-        <h2 class="section-title">مساحة ببليوجرافية قابلة للنمو</h2>
+        <h2 class="section-title">مساحة ببليوجرافية منظمة</h2>
         <p class="section-copy">
-          هذه الصفحة مهيأة لعرض الكتب بصيغة منظمة تسمح لاحقًا بظهور كل عنوان مع وصفه،
-          وبيانات نشره، وروابطه، ثم الانتقال في مرحلة لاحقة إلى صفحة مستقلة لكل كتاب.
+          تعرض هذه الصفحة الكتب بصيغة منظمة تجمع العنوان، والوصف، وبيانات النشر، والروابط
+          المفيدة، بما يمنح القارئ مدخلًا واضحًا إلى الأعمال المنشورة.
         </p>
 
         <ul class="entity-tags">
@@ -51,9 +51,9 @@ const books = (await getCollection('books'))
       <article class="entity-panel">
         <p class="entity-kicker">جاهزية القالب</p>
         <ul class="entity-list">
-          <li><strong>الصيغة الحالية:</strong> بطاقات عرض أولية جاهزة للتغذية بالبيانات.</li>
-          <li><strong>الخطوة اللاحقة:</strong> إضافة سنة النشر والناشر وروابط العمل عند التوفر.</li>
-          <li><strong>الفائدة:</strong> إمكان البناء على نفس القالب دون إعادة تصميم لاحقًا.</li>
+          <li><strong>الصيغة الحالية:</strong> بطاقات عرض موجزة تعرّف بكل عمل.</li>
+          <li><strong>البيانات المعروضة:</strong> العنوان والوصف وبيانات النشر والرابط عند التوفر.</li>
+          <li><strong>الفائدة:</strong> جمع الأعمال في موضع واحد يسهل الرجوع إليه ومتابعته.</li>
         </ul>
       </article>
     </section>
@@ -80,15 +80,15 @@ const books = (await getCollection('books'))
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">نماذج أولية</p>
-        <h2 class="section-title">مدخلات أولية قابلة للتعديل</h2>
+        <p class="section-kicker">كتب ظاهرة</p>
+        <h2 class="section-title">نماذج من الأعمال المدرجة</h2>
       </div>
 
       <div class="grid-two">
         {books.map((book) => (
           <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
             <article class="content-card entity-card">
-              <p class="content-card__meta">{book.data.status ?? 'مسودة أولية'}</p>
+              <p class="content-card__meta">{book.data.status ?? 'بيانات متاحة'}</p>
               <h3>{book.data.title}</h3>
               <p>{book.data.summary}</p>
               <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>

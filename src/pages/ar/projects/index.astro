@@ -11,14 +11,14 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
   lang="ar"
   dir="rtl"
   title="المشروعات العلمية | د. هيثم الغريب"
-  description="قسم المشروعات العلمية الحالية والمخطط لها"
+  description="قسم المشروعات العلمية الحالية وما يتصل بها من وصف وروابط"
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">المشروعات العلمية</p>
       <h1 class="hero__title">مساحة لتتبع المبادرات العلمية والرقمية</h1>
       <p class="hero__lead">
-        هذا القسم مخصص لعرض المشروعات القائمة أو المخطط لها، مع بيان مجال كل مشروع،
+        هذا القسم مخصص لعرض المشروعات القائمة، مع بيان مجال كل مشروع،
         ووصفه المختصر، وحالته، وعلاقته بالأقسام العلمية الأخرى في الموقع.
       </p>
 
@@ -34,8 +34,8 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
         <p class="entity-kicker">وظيفة القسم</p>
         <h2 class="section-title">توثيق مسار العمل الجاري</h2>
         <p class="section-copy">
-          سيعرض هذا القسم المشروعات بوصفها وحدات مستقلة لها عنوان، ووصف، وحالة، وروابط،
-          مع إمكان الربط بينها وبين المقالات والكتب والتحقيقات ذات الصلة.
+          يعرض هذا القسم المشروعات بوصفها وحدات مستقلة لها عنوان، ووصف، وحالة، وروابط،
+          مع ربطها بالمقالات والكتب والتحقيقات ذات الصلة متى وُجدت.
         </p>
 
         <ul class="entity-tags">
@@ -50,7 +50,7 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
         <p class="entity-kicker">آلية التوسع</p>
         <ul class="entity-list">
           <li><strong>المدخل الحالي:</strong> بطاقة مختصرة تعرض جوهر المشروع.</li>
-          <li><strong>التطوير القادم:</strong> صفحة مستقلة لكل مشروع كبير.</li>
+          <li><strong>العناصر الظاهرة:</strong> مجال العمل، والحالة، والوصف، والروابط المرتبطة.</li>
           <li><strong>القيمة العملية:</strong> متابعة العمل المعرفي والرقمي من موضع واحد.</li>
         </ul>
       </article>
@@ -65,20 +65,20 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
         </article>
         <article class="content-card entity-card">
           <p class="content-card__meta">الحالة</p>
-          <h3>نشط أو مخطط له</h3>
-          <p>إظهار المرحلة الحالية ليساعد الزائر على فهم ما هو قائم وما هو قيد الإعداد.</p>
+          <h3>نشط أو جارٍ</h3>
+          <p>إظهار المرحلة الحالية ليساعد الزائر على فهم ما هو قائم وما هو في طور التنفيذ.</p>
         </article>
         <article class="content-card entity-card">
           <p class="content-card__meta">الروابط</p>
           <h3>مخرجات وإحالات</h3>
-          <p>تمهيد لربط المشروع بمقال أو صفحة أو مورد ذي صلة عند توفره.</p>
+          <p>ربط المشروع بمقال أو صفحة أو مورد ذي صلة متى كان ذلك متاحًا داخل الموقع.</p>
         </article>
       </div>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">مدخلات أولية</p>
+        <p class="section-kicker">مشروعات ظاهرة</p>
         <h2 class="section-title">نماذج من محتوى المشروعات</h2>
       </div>
 
@@ -87,7 +87,7 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
           projects.map((project) => (
             <a class="card-link" href={getEntryPath('projects', 'ar', project.slug)}>
               <article class="content-card entity-card">
-                <p class="content-card__meta">{project.data.status ?? 'قيد التنظيم'}</p>
+                <p class="content-card__meta">{project.data.status ?? 'نشط'}</p>
                 <h3>{project.data.title}</h3>
                 <p>{project.data.summary}</p>
                 <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
@@ -96,10 +96,10 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
           ))
         ) : (
           <article class="notice-card">
-            <h2 class="section-title">القسم مهيأ لاستقبال المشروعات</h2>
+            <h2 class="section-title">لا توجد عناصر ظاهرة بعد</h2>
             <p>
-              لا توجد بعد عناصر مشروع عربية مدخلة في مجموعات المحتوى، لكن البنية أصبحت جاهزة
-              لاستقبالها وربطها بالواجهة.
+              لا توجد حاليًا عناصر مشروع عربية مدخلة في مجموعات المحتوى، وسيظهر هذا القسم
+              تلقائيًا متى أضيفت المشروعات إلى الأرشيف.
             </p>
           </article>
         )}

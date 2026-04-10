@@ -5,7 +5,9 @@ summary: "A digital project designed to gather biography, books, critical editio
 status: "Active"
 area: "Digital Scholarly Publishing"
 startYear: "2026"
-externalUrl: "https://example.com/en/projects/scholarly-site-project"
+externalUrl: "https://github.com/helghareeb/helghareeb.github.io"
 ---
 
-This is an initial project entry prepared for future use when the projects section is activated.
+This project is the bilingual digital home of the wider scholarly archive, bringing together
+biography, books, articles, critical editions, external links, and research-facing sections
+within a single structured website.

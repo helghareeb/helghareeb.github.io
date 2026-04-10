@@ -6,6 +6,16 @@ import { getEntryPath } from '../../utils/content-routing';
 
 const featuredBooks = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'en')
+  .sort((a, b) => {
+    const yearDiff = Number(b.data.year ?? 0) - Number(a.data.year ?? 0);
+    if (yearDiff !== 0) return yearDiff;
+
+    const publishedA = /published/i.test(a.data.status ?? '');
+    const publishedB = /published/i.test(b.data.status ?? '');
+    if (publishedA !== publishedB) return publishedB ? 1 : -1;
+
+    return a.data.title.localeCompare(b.data.title, 'en');
+  })
   .slice(0, 2);
 
 const featuredEditions = (await getCollection('editions'))
@@ -114,13 +124,13 @@ const featuredLinks = (await getCollection('externalLinks'))
     <section class="shell section">
       <div class="section-heading">
         <p class="section-kicker">Books</p>
-        <h2 class="section-title">Featured provisional titles</h2>
+        <h2 class="section-title">Recent and publication-ready titles</h2>
       </div>
 
       <div class="grid-two">
         {featuredBooks.map((book) => (
           <article class="content-card">
-            <p class="content-card__meta">{book.data.status ?? 'Provisional'}</p>
+            <p class="content-card__meta">{book.data.status ?? 'Available'}</p>
             <h3>{book.data.title}</h3>
             <p>{book.data.summary}</p>
           </article>
