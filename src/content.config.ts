@@ -7,6 +7,7 @@ const articles = defineCollection({
     date: z.string().optional(),
     summary: z.string().optional(),
     category: z.string().optional(),
+    translationKey: z.string().optional(),
     series: z.string().optional(),
     seriesSlug: z.string().optional(),
     seriesOrder: z.number().int().positive().optional(),

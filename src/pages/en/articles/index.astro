@@ -2,11 +2,47 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
-import { getEntryPath } from '../../../utils/content-routing';
+import { getArticleSeriesPath, getEntryPath } from '../../../utils/content-routing';
 
-const articles = (await getCollection('articles'))
+const allArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
-  .slice(0, 6);
+  .sort((a, b) => {
+    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+    return bTime - aTime;
+  });
+
+const articles = allArticles.slice(0, 6);
+
+const seriesMap = new Map<
+  string,
+  {
+    title: string;
+    slug: string;
+    count: number;
+  }
+>();
+
+for (const article of allArticles) {
+  if (!article.data.series || !article.data.seriesSlug) continue;
+
+  const existing = seriesMap.get(article.data.seriesSlug);
+
+  if (existing) {
+    existing.count += 1;
+  } else {
+    seriesMap.set(article.data.seriesSlug, {
+      title: article.data.series,
+      slug: article.data.seriesSlug,
+      count: 1,
+    });
+  }
+}
+
+const featuredSeries = Array.from(seriesMap.values())
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -78,27 +114,64 @@ const articles = (await getCollection('articles'))
     </section>
 
     <section class="shell section">
+      {featuredSeries.length > 0 && (
+        <div class="section-heading">
+          <p class="section-kicker">Featured series</p>
+          <h2 class="section-title">Structured series inside the archive</h2>
+          <p class="section-copy">
+            The English archive can now present connected article series through dedicated landing
+            pages, not only as isolated entries.
+          </p>
+        </div>
+      )}
+
+      {featuredSeries.length > 0 && (
+        <div class="grid-two">
+          {featuredSeries.map((series) => (
+            <a class="card-link" href={getArticleSeriesPath('en', series.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">Article series | {series.count} entries</p>
+                <h3>{series.title}</h3>
+                <p>Open the series page to browse its translated entries in order.</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Initial sample entries</p>
-        <h2 class="section-title">Provisional article records</h2>
+        <p class="section-kicker">Latest entries</p>
+        <h2 class="section-title">Published articles inside the archive</h2>
       </div>
 
-      <div class="grid-two">
-        {articles.map((article) => (
-          <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
-            <article class="content-card entity-card">
-              <p class="content-card__meta">
-                {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
-              </p>
-              <h3>{article.data.title}</h3>
-              <p>{article.data.summary}</p>
-              <p class="content-card__meta">
-                {[article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
-              </p>
-            </article>
-          </a>
-        ))}
-      </div>
+      {articles.length > 0 ? (
+        <div class="grid-two">
+          {articles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">
+                  {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+                </p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+                <p class="content-card__meta">
+                  {[article.data.series, article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
+                </p>
+              </article>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <article class="notice-card">
+          <h2>No English articles are published yet</h2>
+          <p>
+            The archive is ready for translated and original English entries. Once article files are
+            added, they will appear here automatically.
+          </p>
+        </article>
+      )}
     </section>
   </main>
 </BaseLayout>

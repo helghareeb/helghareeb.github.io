@@ -1,0 +1,145 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import '../../../../../styles/global.css';
+import { getArticleSeriesPath, getEntryPath } from '../../../../../utils/content-routing';
+
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.sourceName === 'Alukah Network')
+  .sort((a, b) => {
+    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+    return bTime - aTime;
+  });
+
+const categoryMap = new Map<string, number>();
+const seriesMap = new Map<string, { title: string; count: number }>();
+
+for (const article of articles) {
+  if (article.data.category) {
+    categoryMap.set(article.data.category, (categoryMap.get(article.data.category) ?? 0) + 1);
+  }
+
+  if (article.data.series && article.data.seriesSlug) {
+    const existing = seriesMap.get(article.data.seriesSlug);
+    if (existing) {
+      existing.count += 1;
+    } else {
+      seriesMap.set(article.data.seriesSlug, { title: article.data.series, count: 1 });
+    }
+  }
+}
+
+const topCategories = Array.from(categoryMap.entries()).sort((a, b) => b[1] - a[1]).slice(0, 6);
+const topSeries = Array.from(seriesMap.entries())
+  .map(([slug, data]) => ({ slug, ...data }))
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 6);
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title="Alukah Articles | Dr. Haitham A. El-Ghareeb"
+  description="An internal list of English Alukah articles published on the website"
+>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Alukah Articles</p>
+      <h1 class="hero__title">English Alukah articles inside the site archive</h1>
+      <p class="hero__lead">
+        This page gathers the English Alukah entries published inside the site so they can be found
+        from one place as translation batches continue.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">{articles.length} entries</span>
+        <span class="hero__badge">{seriesMap.size} visible series</span>
+        <span class="hero__badge">{categoryMap.size} categories</span>
+      </div>
+
+      <div class="hero__actions">
+        <a class="button" href="/en/scholarly-fields/alukah/">Alukah gateway</a>
+        <a class="button-secondary" href="/en/external-links/alukah-author-page/">Author page on Alukah</a>
+      </div>
+    </section>
+
+    {articles.length > 0 ? (
+      <>
+        <section class="shell entity-grid">
+          <article class="entity-summary">
+            <p class="entity-kicker">Archive snapshot</p>
+            <h2 class="section-title">Translated Alukah presence on the website</h2>
+            <p class="section-copy">
+              These entries are English in-site versions of articles originally published on Alukah,
+              preserved with source context, categories, dates, and direct access to the original publication.
+            </p>
+          </article>
+
+          <article class="entity-panel">
+            <p class="entity-kicker">Top categories</p>
+            <ul class="entity-list">
+              {topCategories.map(([name, count]) => (
+                <li><strong>{name}:</strong> {count}</li>
+              ))}
+            </ul>
+          </article>
+        </section>
+
+        {topSeries.length > 0 && (
+          <section class="shell section">
+            <div class="section-heading">
+              <p class="section-kicker">Series</p>
+              <h2 class="section-title">Translated Alukah series</h2>
+            </div>
+
+            <div class="grid-two">
+              {topSeries.map((series) => (
+                <a class="card-link" href={getArticleSeriesPath('en', series.slug)}>
+                  <article class="content-card entity-card">
+                    <p class="content-card__meta">Article series | {series.count} entries</p>
+                    <h3>{series.title}</h3>
+                    <p>Open the series page to browse translated entries in order.</p>
+                  </article>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section class="shell section">
+          <div class="section-heading">
+            <p class="section-kicker">Published entries</p>
+            <h2 class="section-title">English Alukah list</h2>
+          </div>
+
+          <div class="grid-two">
+            {articles.map((article) => (
+              <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+                <article class="content-card entity-card">
+                  <p class="content-card__meta">
+                    {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+                  </p>
+                  <h3>{article.data.title}</h3>
+                  <p>{article.data.summary}</p>
+                  <p class="content-card__meta">
+                    {[article.data.series, article.data.readingTime].filter(Boolean).join(' | ')}
+                  </p>
+                </article>
+              </a>
+            ))}
+          </div>
+        </section>
+      </>
+    ) : (
+      <section class="shell notice-card">
+        <h2>No English Alukah articles are published yet</h2>
+        <p>
+          The page is ready. As each translation batch is added, the entries will appear here
+          automatically.
+        </p>
+      </section>
+    )}
+  </main>
+</BaseLayout>

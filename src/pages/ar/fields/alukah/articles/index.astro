@@ -1,0 +1,137 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import '../../../../../styles/global.css';
+import { getArticleSeriesPath, getEntryPath } from '../../../../../utils/content-routing';
+
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.sourceName === 'شبكة الألوكة')
+  .sort((a, b) => {
+    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+    return bTime - aTime;
+  });
+
+const categoryMap = new Map<string, number>();
+const seriesMap = new Map<string, { title: string; count: number }>();
+
+for (const article of articles) {
+  if (article.data.category) {
+    categoryMap.set(article.data.category, (categoryMap.get(article.data.category) ?? 0) + 1);
+  }
+
+  if (article.data.series && article.data.seriesSlug) {
+    const existing = seriesMap.get(article.data.seriesSlug);
+    if (existing) {
+      existing.count += 1;
+    } else {
+      seriesMap.set(article.data.seriesSlug, { title: article.data.series, count: 1 });
+    }
+  }
+}
+
+const topCategories = Array.from(categoryMap.entries()).sort((a, b) => b[1] - a[1]).slice(0, 6);
+const topSeries = Array.from(seriesMap.entries())
+  .map(([slug, data]) => ({ slug, ...data }))
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 6);
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="مقالات الألوكة | د. هيثم الغريب"
+  description="قائمة داخلية تجمع مقالات الألوكة المستوردة إلى الموقع"
+>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">مقالات الألوكة</p>
+      <h1 class="hero__title">قائمة المقالات المستوردة من شبكة الألوكة</h1>
+      <p class="hero__lead">
+        هذه الصفحة تجمع مواد الألوكة التي أُدخلت إلى الموقع حتى يسهل الرجوع إليها من مكان
+        واحد، مع الحفاظ على ظهورها أيضًا داخل الأرشيف العام للمقالات.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">{articles.length} مقالًا</span>
+        <span class="hero__badge">{seriesMap.size} سلاسل ظاهرة</span>
+        <span class="hero__badge">{categoryMap.size} تصنيفات</span>
+      </div>
+
+      <div class="hero__actions">
+        <a class="button" href="/ar/fields/alukah/">بوابة الألوكة</a>
+        <a class="button-secondary" href="/ar/external-links/alukah-author-page/">صفحة الكاتب في الألوكة</a>
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">ملخص الأرشيف</p>
+        <h2 class="section-title">حضور الألوكة داخل الموقع</h2>
+        <p class="section-copy">
+          المقالات هنا هي نسخ داخلية منظمة لمواد منشورة أصلًا على الألوكة، مع بيانات التاريخ
+          والتصنيف والمصدر والرابط الأصلي، وبعضها مندمج أيضًا داخل سلاسل موضوعية.
+        </p>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">أبرز التصنيفات</p>
+        <ul class="entity-list">
+          {topCategories.map(([name, count]) => (
+            <li><strong>{name}:</strong> {count}</li>
+          ))}
+        </ul>
+      </article>
+    </section>
+
+    {topSeries.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">سلاسل الألوكة</p>
+          <h2 class="section-title">سلاسل ظاهرة داخل الأرشيف</h2>
+          <p class="section-copy">
+            بعض مواد الألوكة انتظمت في سلاسل واضحة، ويمكن تتبعها من خلال صفحات السلاسل
+            الموجودة أصلًا داخل قسم المقالات.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          {topSeries.map((series) => (
+            <a class="card-link" href={getArticleSeriesPath('ar', series.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">سلسلة مقالية | {series.count} مادة</p>
+                <h3>{series.title}</h3>
+                <p>الانتقال إلى صفحة السلسلة لمتابعة موادها مترابطة داخل الأرشيف.</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">كل المواد</p>
+        <h2 class="section-title">قائمة مقالات الألوكة داخل الموقع</h2>
+      </div>
+
+      <div class="grid-two">
+        {articles.map((article) => (
+          <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">
+                {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+              </p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+              <p class="content-card__meta">
+                {[article.data.series, article.data.readingTime].filter(Boolean).join(' | ')}
+              </p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
