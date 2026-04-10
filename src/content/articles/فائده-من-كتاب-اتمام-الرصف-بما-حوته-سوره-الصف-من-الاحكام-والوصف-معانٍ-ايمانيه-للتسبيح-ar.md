@@ -4,6 +4,7 @@ lang: "ar"
 date: "2025-04-15"
 summary: "فائدة من كتاب (إتمام الرصف بما حوته سورة الصفِّ من الأحكام والوصف):"
 category: "الذكر والدعاء"
+translationKey: "alukah-faith-meanings-of-tasbih"
 series: "إتمام الرصف بذكر ما حوته سورة الصف من الأحكام والوصف"
 seriesSlug: "اتمام-الرصف-بذكر-ما-حوته-سوره-الصف-من-الاحكام-والوصف"
 seriesOrder: 6

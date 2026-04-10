@@ -4,6 +4,7 @@ lang: "ar"
 date: "2025-04-19"
 summary: "معنى لفظ الجلالة (الله)"
 category: "عقيدة وتوحيد"
+translationKey: "alukah-meaning-of-the-name-allah"
 series: "إتمام الرصف بذكر ما حوته سورة الصف من الأحكام والوصف"
 seriesSlug: "اتمام-الرصف-بذكر-ما-حوته-سوره-الصف-من-الاحكام-والوصف"
 seriesOrder: 7

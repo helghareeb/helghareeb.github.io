@@ -2,6 +2,279 @@
 
 ## 2026-04-10
 ### ما أُنجز
+- نشر الدفعة السابعة عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/chastity-is-the-fortress-of-woman-and-the-safeguard-of-society-en.md`
+  - `src/content/articles/qadi-iyad-and-his-efforts-through-mashariq-al-anwar-and-ikmal-al-mulim-en.md`
+  - `src/content/articles/a-benefit-on-researching-the-narrations-of-the-nephew-of-ibn-wahb-from-his-uncle-in-sahih-muslim-en.md`
+  - `src/content/articles/scholarly-criticism-of-some-material-in-the-sahihayn-is-proof-of-their-authenticity-and-rank-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة السابعة عشرة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة السابعة عشرة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `70`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `67` مقالة عبر أول سبع عشرة دفعة.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة السادسة عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/half-of-ramadan-has-passed-o-servant-of-allah-en.md`
+  - `src/content/articles/patterns-of-islamic-education-in-the-digital-age-a-comparative-study-en.md`
+  - `src/content/articles/between-personal-ijtihad-and-legitimate-taqlid-a-response-to-the-claim-of-worshipping-by-what-settles-in-the-heart-en.md`
+  - `src/content/articles/between-praising-al-bukhari-and-rejecting-his-hadiths-a-methodological-contradiction-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة السادسة عشرة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة السادسة عشرة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `66`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `63` مقالة عبر أول ست عشرة دفعة.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الخامسة عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/hypocrisy-a-renewed-danger-in-a-modern-garb-sermon-en.md`
+  - `src/content/articles/a-benefit-on-gradualness-in-dawah-en.md`
+  - `src/content/articles/a-benefit-from-itmam-al-rasf-faith-filled-meanings-of-tasbih-en.md`
+  - `src/content/articles/benefits-from-the-biography-of-imam-ibn-daqiq-al-id-625-702-ah-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الخامسة عشرة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الخامسة عشرة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `62`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `59` مقالة عبر أول خمس عشرة دفعة.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الرابعة عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/reasons-for-the-differences-among-manuscripts-of-sahih-al-bukhari-en.md`
+  - `src/content/articles/a-benefit-on-the-descriptions-of-the-throne-of-the-most-merciful-en.md`
+  - `src/content/articles/a-benefit-on-the-rule-that-substituting-one-companion-for-another-does-not-harm-the-report-en.md`
+  - `src/content/articles/a-benefit-on-the-superiority-of-the-companions-of-the-prophet-over-the-companions-of-moses-and-jesus-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الرابعة عشرة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الرابعة عشرة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `58`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `55` مقالة عبر أول أربع عشرة دفعة.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الثالثة عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/al-bukhari-and-the-umayyad-and-abbasid-state-a-study-of-the-politicization-claim-en.md`
+  - `src/content/articles/revelation-and-desire-en.md`
+  - `src/content/articles/the-severity-of-divine-abhorrence-a-linguistic-and-legal-reading-of-kabura-maqtan-en.md`
+  - `src/content/articles/a-benefit-on-the-categories-of-bayan-according-to-al-shafii-in-al-risalah-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثالثة عشرة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الثالثة عشرة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `54`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `51` مقالة عبر أول ثلاث عشرة دفعة.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الثانية عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/persisting-in-error-is-more-dangerous-than-the-error-itself-en.md`
+  - `src/content/articles/al-hafiz-al-daraqutni-and-his-two-books-al-ilzamat-and-al-tatabbu-en.md`
+  - `src/content/articles/hypocrisy-between-yesterday-and-today-a-contemporary-reading-in-light-of-the-prophetic-method-en.md`
+  - `src/content/articles/the-role-of-artificial-intelligence-in-enhancing-educational-efficiency-an-in-depth-analysis-of-applications-in-islamic-education-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثانية عشرة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الثانية عشرة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `50`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `47` مقالة عبر أول اثنتي عشرة دفعة.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الحادية عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/changes-daees-should-consider-when-dealing-with-different-generations-en.md`
+  - `src/content/articles/al-hakim-dimensions-and-indications-in-quranic-context-and-legal-foundation-en.md`
+  - `src/content/articles/patterns-of-e-learning-in-terms-of-study-progression-a-comparison-and-analysis-en.md`
+  - `src/content/articles/an-analysis-of-the-probabilistic-verification-method-in-the-study-of-prophetic-hadith-an-in-depth-academic-critique-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الحادية عشرة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الحادية عشرة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `46`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `43` مقالة عبر أول إحدى عشرة دفعة.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة العاشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/al-istihsan-and-analogy-in-imam-al-shafiis-method-en.md`
+  - `src/content/articles/artificial-intelligence-and-its-relationship-to-the-islamic-sciences-an-advanced-academic-vision-en.md`
+  - `src/content/articles/the-importance-of-technology-in-serving-the-sciences-of-the-prophetic-sunnah-the-multi-isnad-project-for-sahih-muslim-as-a-model-en.md`
+  - `src/content/articles/the-meaning-of-the-divine-name-allah-a-benefit-from-itmam-al-rasf-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة العاشرة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة العاشرة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `42`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `39` مقالة عبر أول عشر دفعات.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة التاسعة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/between-al-ilal-al-saghir-and-al-ilal-al-kabir-of-al-tirmidhi-en.md`
+  - `src/content/articles/the-problem-of-engineering-thinking-in-dawah-work-en.md`
+  - `src/content/articles/o-son-of-adam-do-not-be-less-perceptive-than-the-heavens-the-earth-and-the-mountains-en.md`
+  - `src/content/articles/the-problem-of-choosing-ones-post-how-a-muslim-young-man-finds-his-role-in-supporting-his-faith-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة التاسعة لضمان استمرار الربط الصحيح بين النسختين.
+- استبدال المقالة الإنجليزية المكررة التي ظهرت أثناء تجهيز هذه الجولة بمقالة رابعة جديدة، حتى تبقى الدفعة التاسعة مكوَّنة من `4` إضافات فريدة فعلًا.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة التاسعة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `38`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `35` مقالة عبر أول تسع دفعات.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الثامنة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/strategies-of-hypocrisy-in-undermining-societies-en.md`
+  - `src/content/articles/lasting-divine-patterns-from-surat-al-anfal-en.md`
+  - `src/content/articles/salvation-from-wandering-by-holding-to-the-clear-and-taking-satan-as-an-enemy-en.md`
+  - `src/content/articles/the-problem-of-knowledge-formation-for-muslim-youth-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثامنة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الثامنة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `34`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `31` مقالة عبر أول ثماني دفعات.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة السابعة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/distinguishing-between-transmission-and-copy-in-sahih-al-bukhari-en.md`
+  - `src/content/articles/the-ummahs-care-for-the-transmissions-and-copies-of-sahih-al-bukhari-en.md`
+  - `src/content/articles/returning-to-the-beginning-of-revelation-as-the-ummahs-way-out-en.md`
+  - `src/content/articles/abu-ali-al-ghassani-al-jayyani-and-his-book-taqyid-al-muhmal-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة السابعة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة السابعة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `30`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `27` مقالة عبر أول سبع دفعات.
+- ظهرت أثناء مزامنة المحتوى رسالة `Duplicate id` عابرة لمادة عربية واحدة في هذه الجولة، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة السادسة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/when-the-sun-of-revelation-shone-a-short-story-en.md`
+  - `src/content/articles/a-note-on-the-conditions-of-a-word-taking-alif-and-lam-en.md`
+  - `src/content/articles/a-note-on-the-varieties-of-trial-en.md`
+  - `src/content/articles/ibn-qarqul-al-hamzi-and-his-book-matali-al-anwar-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة السادسة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة السادسة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `26`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `23` مقالة عبر أول ست دفعات.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الخامسة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/a-note-on-the-difference-between-bayan-and-jadal-wa-burhan-en.md`
+  - `src/content/articles/why-are-mawquf-reports-so-frequent-from-ibn-masud-en.md`
+  - `src/content/articles/disagreement-is-evil-en.md`
+  - `src/content/articles/themes-of-belief-and-dawah-in-khutbat-al-hajah-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الخامسة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الخامسة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `22`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `19` مقالة عبر أول خمس دفعات.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الرابعة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/between-the-image-of-knowledge-and-its-reality-en.md`
+  - `src/content/articles/will-you-forgive-him-on-the-day-of-resurrection-en.md`
+  - `src/content/articles/among-the-etiquette-of-the-student-of-knowledge-with-the-quran-and-sunnah-en.md`
+  - `src/content/articles/when-he-betrayed-the-trust-and-fell-into-heedlessness-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الرابعة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الرابعة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `18`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `15` مقالة عبر أول أربع دفعات.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الثالثة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/short-story-when-he-changed-they-changed-en.md`
+  - `src/content/articles/where-are-we-driving-our-children-a-real-story-en.md`
+  - `src/content/articles/the-white-hair-a-short-story-en.md`
+  - `src/content/articles/real-story-when-slogans-faded-and-revelation-shone-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثالثة لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الثالثة من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `14`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `11` مقالة عبر أول ثلاث دفعات.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية في هذه الجولة أيضًا، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
+- نشر الدفعة الثانية من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/a-note-on-the-book-accepting-reports-and-knowing-transmitters-en.md`
+  - `src/content/articles/benefits-related-to-mamar-bin-rashid-and-his-coming-to-yemen-en.md`
+  - `src/content/articles/a-subtle-point-on-gifting-the-reward-of-recitation-to-the-dead-en.md`
+  - `src/content/articles/do-the-texts-encompass-all-emerging-events-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثانية لضمان استمرار الربط الصحيح بين النسختين.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد إضافة الدفعة الثانية من الترجمات الإنجليزية.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `10`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `7` مقالات عبر أول دفعتين.
+- ظهرت أثناء مزامنة المحتوى رسائل `Duplicate id` عابرة لبعض المقالات العربية، لكن نتيجة التحقق النهائية خرجت بلا أخطاء أو تحذيرات.
+
+## 2026-04-10
+### ما أُنجز
 - إنشاء صفحة عربية مجمعة لمقالات الألوكة داخل:
   - `src/pages/ar/fields/alukah/articles/index.astro`
   تعرض جميع مقالات الألوكة المستوردة داخل الموقع، مع أبرز التصنيفات والسلاسل.
