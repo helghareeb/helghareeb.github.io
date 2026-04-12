@@ -1,0 +1,60 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import EntityEntryPage from '../../../../components/EntityEntryPage.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { getStudyBenefitBookPath, getStudyBenefitRouteSlug } from '../../../../utils/study';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('studyBenefits')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
+
+  return entries.map((entry) => ({
+    params: { slug: getStudyBenefitRouteSlug(entry.slug) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props as { entry: CollectionEntry<'studyBenefits'> };
+const { Content } = await render(entry);
+const seoTitle = buildSeoTitle(entry.data.title, {
+  lang: 'ar',
+  section: 'فوائد من كتب متنوعة',
+});
+const seoDescription = buildSeoDescription(entry.data.summary, [
+  entry.data.field,
+  entry.data.bookTitle,
+  entry.data.teacher,
+]);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <EntityEntryPage
+    lang="ar"
+    eyebrow="دفتر فوائد"
+    title={entry.data.title}
+    summary={entry.data.summary}
+    badges={['فوائد مرتبة', entry.data.field, entry.data.bookTitle]}
+    metaItems={[
+      { label: 'القسم', value: 'مذاكرة طالب العلم' },
+      { label: 'المسار', value: 'فوائد من كتب متنوعة' },
+      { label: 'الفن', value: entry.data.field },
+      { label: 'الكتاب', value: entry.data.bookTitle },
+      ...(entry.data.teacher ? [{ label: 'الشرح', value: entry.data.teacher }] : []),
+      ...(entry.data.sourceSeries ? [{ label: 'المصدر الدراسي', value: entry.data.sourceSeries }] : []),
+    ]}
+    backHref={getStudyBenefitBookPath('ar', entry.data.fieldSlug, entry.data.bookSlug)}
+    backLabel="العودة إلى صفحة الكتاب"
+  >
+    <section class="notice-card">
+      <p class="entity-kicker">تنبيه تحريري</p>
+      <h2 class="section-title">هذه الفوائد من إعداد الموقع</h2>
+      <p>
+        جرى ترتيب هذه الفوائد ونشرها داخل الموقع للاستفادة الدراسية، مع التأكيد أن الشيخ
+        لم يطّلع على هذه الصياغة المنشورة هنا، ولم تُعرض عليه للمراجعة.
+      </p>
+    </section>
+
+    <Content />
+  </EntityEntryPage>
+</BaseLayout>

@@ -3,33 +3,13 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { getEntryPath } from '../../../../utils/content-routing';
+import { getStudyBenefitBookPath, groupStudyBenefits, getStudyBenefitRouteSlug } from '../../../../utils/study';
 
 const publishedBenefits = (await getCollection('studyBenefits')).filter(
   (entry) => entry.data.lang === 'ar' && !entry.data.draft,
 );
-
-const startingBooks = [
-  {
-    field: 'أصول الفقه',
-    book: 'الرسالة للشافعي',
-    teacher: 'د. أحمد النقيب',
-  },
-  {
-    field: 'أصول الفقه',
-    book: 'الرسالة للشافعي',
-    teacher: 'الشيخ سامي العربي',
-  },
-  {
-    field: 'أصول الفقه',
-    book: 'الرسالة للشافعي',
-    teacher: 'الشيخ حسين عبدالرازق',
-  },
-  {
-    field: 'التفسير وعلوم القرآن',
-    book: 'التعليق على الفاتحة والبقرة من تفسير الطبري',
-    teacher: 'الشيخ حسين',
-  },
-];
+const groupedBenefits = groupStudyBenefits(publishedBenefits);
 
 const seoTitle = buildSeoTitle('فوائد من كتب متنوعة', {
   lang: 'ar',
@@ -69,27 +49,44 @@ const seoDescription = buildSeoDescription(
         <p class="entity-kicker">الحالة الحالية</p>
         <ul class="entity-list">
           <li><strong>الفوائد المنشورة:</strong> {publishedBenefits.length}</li>
-          <li><strong>الانطلاقة المعتمدة:</strong> الرسالة للشافعي وتفسير الطبري</li>
-          <li><strong>الترتيب القادم:</strong> إدخال أول دفعات الفوائد بصياغة قصيرة قابلة للمراجعة</li>
+          <li><strong>الكتب الظاهرة:</strong> {groupedBenefits.length}</li>
+          <li><strong>الانطلاقة المعتمدة:</strong> الرسالة للشافعي ضمن شرح د. أحمد النقيب</li>
         </ul>
       </article>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">مصادر البداية</p>
-        <h2 class="section-title">الكتب والشروح المعتمدة لأول دفعة</h2>
+        <p class="section-kicker">الكتب المنشورة</p>
+        <h2 class="section-title">الفوائد مرتبة بالفن ثم بالكتاب</h2>
       </div>
 
-      <div class="grid-two">
-        {startingBooks.map((item) => (
-          <article class="content-card entity-card">
-            <p class="content-card__meta">{item.field}</p>
-            <h3>{item.book}</h3>
-            <p>{item.teacher}</p>
-          </article>
-        ))}
-      </div>
+      {groupedBenefits.length === 0 ? (
+        <article class="notice-card">
+          <h2 class="section-title">لم تُنشر دفاتر الفوائد بعد</h2>
+          <p>البنية جاهزة، وأول ما سيظهر هنا سيكون دفاتر فوائد الرسالة وتفسير الطبري بحسب الخطة المعتمدة.</p>
+        </article>
+      ) : (
+        <div class="grid-two">
+          {groupedBenefits.map((group) => (
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{group.field}</p>
+              <h3>
+                <a href={getStudyBenefitBookPath('ar', group.fieldSlug, group.bookSlug)}>{group.bookTitle}</a>
+              </h3>
+              <p>{group.teacher ?? 'مادة دراسة منظمة داخل الموقع'}</p>
+              <p class="content-card__meta">{group.entries.length} دفاتر فوائد</p>
+              <ul class="entity-list">
+                {group.entries.map((entry) => (
+                  <li>
+                    <a href={getEntryPath('studyBenefits', 'ar', getStudyBenefitRouteSlug(entry.slug))}>{entry.data.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      )}
     </section>
   </main>
 </BaseLayout>

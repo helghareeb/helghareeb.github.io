@@ -1,5 +1,162 @@
 # سجل التحديثات
 
+## 2026-04-13
+### ما أُنجز
+- بدء مسار جديد منشور داخل `فوائد من كتب متنوعة` من:
+  - `تفسير الطبري: الفاتحة والبقرة`
+  من تعليق الشيخ حسين عبدالرازق
+- إضافة `7` دفاتر فوائد عربية منشورة داخل:
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-tafsir-and-quranic-sciences-ar.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-methodology-and-usul-ar.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-linguistic-benefits-ar.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-creedal-and-faith-benefits-ar.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-fiqh-rulings-ar.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-educational-and-spiritual-benefits-ar.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-reading-landmarks-ar.md`
+- إضافة `7` صفحات إنجليزية مرافقة داخل:
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-tafsir-and-quranic-sciences-en.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-methodology-and-usul-en.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-linguistic-benefits-en.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-creedal-and-faith-benefits-en.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-fiqh-rulings-en.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-educational-and-spiritual-benefits-en.md`
+  - `src/content/studyBenefits/tafsir-al-tabari-husayn-abd-al-raziq-reading-landmarks-en.md`
+- توسيع `config/breadcrumbs.ts` لإضافة:
+  - الحقلين الجديدين `المنهج والأصول` و`التفسير وعلوم القرآن`
+  - صفحات الكتاب الجديد داخل مسار الفوائد بالعربية والإنجليزية
+- تحديث:
+  - `project-docs/current-status.md`
+  - `project-docs/project-plan.md`
+  - `project-docs/study-section-plan.md`
+
+### تحقق تقني
+- `npm run check`: سيجري بعد هذه الجولة مباشرة
+
+### الحالة الحالية
+- صار قسم `فوائد من كتب متنوعة` يضم الآن مسارًا منشورًا رابعًا ظاهرًا للزوار:
+  - `تفسير الطبري: الفاتحة والبقرة`
+  من تعليق الشيخ حسين عبدالرازق
+- وصارت فوائد د. ياسر برهامي على `الرسالة` مثبتة بوصفها مادة مؤجلة، بينما المسار العملي التالي الأقرب هو:
+  - بناء أول دفعة حقيقية من `Flashcards` لكتاب `أخصر المختصرات`
+
+## 2026-04-13
+### ما أُنجز
+- إضافة دفعة ثالثة داخل مسار `فوائد من كتب متنوعة` من:
+  - شرح الشيخ حسين عبدالرازق لكتاب `الرسالة` للشافعي
+- إضافة `5` دفاتر فوائد عربية منشورة داخل:
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-methodological-and-educational-benefits-ar.md`
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-rules-of-debate-and-refutation-ar.md`
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-creedal-and-faith-benefits-ar.md`
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-tafsir-and-language-benefits-ar.md`
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-usul-and-hadith-benefits-ar.md`
+- إضافة `5` صفحات إنجليزية مرافقة داخل:
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-methodological-and-educational-benefits-en.md`
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-rules-of-debate-and-refutation-en.md`
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-creedal-and-faith-benefits-en.md`
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-tafsir-and-language-benefits-en.md`
+  - `src/content/studyBenefits/al-risala-husayn-abd-al-raziq-usul-and-hadith-benefits-en.md`
+- توسيع `breadcrumbs` لتشمل صفحات كتاب `الرسالة` الخاصة بدفعة الشيخ حسين في الحقول الخمسة.
+- تحديث:
+  - `project-docs/current-status.md`
+  - `project-docs/project-plan.md`
+- تثبيت قرار العمل التالي في التوثيق:
+  - تأجيل فوائد د. ياسر برهامي حتى تكتمل مادتها
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة بنتيجة:
+  - `0 errors`
+  - `0 warnings`
+  - `0 hints`
+
+### الحالة الحالية
+- صار لدينا الآن ثلاثة مصادر منشورة داخل مسار فوائد `الرسالة`:
+  - د. أحمد النقيب
+  - الشيخ سامي العربي
+  - الشيخ حسين عبدالرازق
+- والخطوة التالية ليست د. ياسر فورًا، بل انتظار اكتمال مادته، أو الانتقال إلى فوائد تفسير الطبري للشيخ حسين، أو فتح مسار `Flashcards`.
+
+## 2026-04-13
+### ما أُنجز
+- إضافة دفعة ثانية داخل مسار `فوائد من كتب متنوعة` من:
+  - شرح الشيخ سامي العربي لكتاب `الرسالة` للشافعي
+- إضافة `5` دفاتر فوائد عربية منشورة داخل:
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-methodological-and-educational-benefits-ar.md`
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-method-and-refutation-ar.md`
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-aqidah-and-faith-benefits-ar.md`
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-tafsir-and-language-benefits-ar.md`
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-usul-and-hadith-benefits-ar.md`
+- إضافة `5` صفحات إنجليزية مرافقة داخل:
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-methodological-and-educational-benefits-en.md`
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-method-and-refutation-en.md`
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-aqidah-and-faith-benefits-en.md`
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-tafsir-and-language-benefits-en.md`
+  - `src/content/studyBenefits/al-risala-samy-al-arabi-usul-and-hadith-benefits-en.md`
+- توسيع `breadcrumbs` لتشمل الحقول الجديدة التي ظهرت مع هذه الدفعة:
+  - `المنهج والرد على المخالف`
+  - `العقيدة والإيمان`
+  - `التفسير واللغة`
+  - وصفحات كتاب `الرسالة` الخاصة بشرح الشيخ سامي العربي
+- تحديث:
+  - `project-docs/current-status.md`
+  - `project-docs/project-plan.md`
+- تثبيت الترتيب القادم في التوثيق:
+  - شرح د. ياسر برهامي على `الرسالة`
+  - ثم شرح الشيخ حسين عبدالرازق على `الرسالة`
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة بنتيجة:
+  - `0 errors`
+  - `0 warnings`
+  - `0 hints`
+
+### الحالة الحالية
+- صار لدينا الآن مصدران منشوران فعليًا داخل مسار فوائد `الرسالة`:
+  - د. أحمد النقيب
+  - الشيخ سامي العربي
+- الخطوة الطبيعية التالية: إدخال فوائد د. ياسر برهامي على `الرسالة` بنفس النمط التنظيمي.
+
+## 2026-04-13
+### ما أُنجز
+- بدء النشر الفعلي داخل مسار `فوائد من كتب متنوعة` من الكتاب الأول:
+  - شرح د. أحمد النقيب لكتاب `الرسالة` للشافعي
+- إضافة `4` دفاتر فوائد عربية منشورة داخل:
+  - `src/content/studyBenefits/al-risala-ahmad-naqeeb-linguistic-and-methodological-notes-ar.md`
+  - `src/content/studyBenefits/al-risala-ahmad-naqeeb-fiqh-rulings-ar.md`
+  - `src/content/studyBenefits/al-risala-ahmad-naqeeb-usul-and-principles-ar.md`
+  - `src/content/studyBenefits/al-risala-ahmad-naqeeb-educational-and-spiritual-benefits-ar.md`
+- إضافة `4` صفحات إنجليزية مرافقة داخل:
+  - `src/content/studyBenefits/al-risala-ahmad-naqeeb-linguistic-and-methodological-notes-en.md`
+  - `src/content/studyBenefits/al-risala-ahmad-naqeeb-fiqh-rulings-en.md`
+  - `src/content/studyBenefits/al-risala-ahmad-naqeeb-usul-and-principles-en.md`
+  - `src/content/studyBenefits/al-risala-ahmad-naqeeb-educational-and-spiritual-benefits-en.md`
+- إنشاء صفحات عرض ديناميكية جديدة لمسار الفوائد:
+  - الصفحة المفردة لكل دفتر فوائد بالعربية والإنجليزية
+  - صفحة الكتاب داخل الفن بالعربية والإنجليزية
+- تحويل فهرس `فوائد من كتب متنوعة` إلى فهرس فعلي يعرض المواد المنشورة مرتبة بالفن ثم بالكتاب.
+- تحديث البنية التقنية الداعمة لهذا المسار في:
+  - `src/content.config.ts`
+  - `src/utils/study.ts`
+  - `src/utils/locale-switch.ts`
+  - `config/breadcrumbs.ts`
+  - `src/pages/sitemap.xml.ts`
+- تثبيت تنبيه تحريري ظاهر في الصفحات يوضح أن هذه الفوائد من إعداد الموقع، وأن الشيخ لم يطّلع عليها.
+- تحديث:
+  - `project-docs/current-status.md`
+  - `project-docs/project-plan.md`
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة بنتيجة:
+  - `0 errors`
+  - `0 warnings`
+  - `0 hints`
+
+### الحالة الحالية
+- صار قسم `فوائد من كتب متنوعة` يحتوي الآن على أول مادة منشورة فعلًا داخل الموقع، مع هيكل يسمح لنا بالاستمرار كتابًا بعد كتاب، وفنًا بعد فن.
+- الخطوة الطبيعية التالية:
+  - مواصلة الكتاب نفسه إذا أردنا مزيد تفريع
+  - أو الانتقال مباشرة إلى فوائد الشيخ سامي العربي على `الرسالة`
+  - أو فتح أول دفعة أسئلة `Flashcards` لكتاب `أخصر المختصرات`
+
 ## 2026-04-12
 ### ما أُنجز
 - تحويل خطة `مذاكرة طالب العلم` إلى طبقة تنفيذية أولى داخل الموقع عبر:

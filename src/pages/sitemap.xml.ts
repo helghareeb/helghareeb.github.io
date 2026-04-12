@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { navigation } from '../../config/navigation';
 import { siteConfig } from '../../config/site';
 import { getArticleSeriesPath, getEntryPath, getFlashcardModePath } from '../utils/content-routing';
+import { getStudyBenefitBookPath } from '../utils/study';
 
 const staticPaths = [
   '/',
@@ -74,7 +75,7 @@ const toSitemapUrl = (path: string, lastmod?: string) => {
 };
 
 export const GET: APIRoute = async () => {
-  const [articles, books, editions, projects, media, externalLinks, flashcardDecks] = await Promise.all([
+  const [articles, books, editions, projects, media, externalLinks, flashcardDecks, studyBenefits] = await Promise.all([
     getCollection('articles'),
     getCollection('books'),
     getCollection('editions'),
@@ -82,6 +83,7 @@ export const GET: APIRoute = async () => {
     getCollection('media'),
     getCollection('externalLinks'),
     getCollection('flashcardDecks'),
+    getCollection('studyBenefits'),
   ]);
 
   const urls = new Map<string, string | undefined>();
@@ -120,6 +122,18 @@ export const GET: APIRoute = async () => {
 
   for (const entry of externalLinks) {
     urls.set(getEntryPath('externalLinks', entry.data.lang, entry.slug), undefined);
+  }
+
+  const studyBookGroups = new Set<string>();
+
+  for (const entry of studyBenefits.filter((item) => !item.data.draft)) {
+    urls.set(getEntryPath('studyBenefits', entry.data.lang, entry.slug), undefined);
+    const groupKey = `${entry.data.lang}::${entry.data.fieldSlug}::${entry.data.bookSlug}`;
+
+    if (!studyBookGroups.has(groupKey)) {
+      studyBookGroups.add(groupKey);
+      urls.set(getStudyBenefitBookPath(entry.data.lang, entry.data.fieldSlug, entry.data.bookSlug), undefined);
+    }
   }
 
   for (const entry of flashcardDecks.filter((item) => !item.data.draft)) {

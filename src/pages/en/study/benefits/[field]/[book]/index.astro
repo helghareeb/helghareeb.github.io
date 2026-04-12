@@ -1,0 +1,79 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import '../../../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../../../utils/seo';
+import { getEntryPath } from '../../../../../../utils/content-routing';
+import { getStudyBenefitRouteSlug } from '../../../../../../utils/study';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('studyBenefits')).filter((entry) => entry.data.lang === 'en' && !entry.data.draft);
+  const groups = new Map<string, CollectionEntry<'studyBenefits'>[]>();
+
+  for (const entry of entries) {
+    const key = `${entry.data.fieldSlug}::${entry.data.bookSlug}`;
+    groups.set(key, [...(groups.get(key) ?? []), entry]);
+  }
+
+  return Array.from(groups.entries()).map(([key, groupedEntries]) => {
+    const [field, book] = key.split('::');
+
+    return {
+      params: { field, book },
+      props: { entries: groupedEntries.sort((a, b) => a.data.title.localeCompare(b.data.title, 'en')) },
+    };
+  });
+}
+
+const { entries } = Astro.props as { entries: CollectionEntry<'studyBenefits'>[] };
+const referenceEntry = entries[0];
+const seoTitle = buildSeoTitle(referenceEntry.data.bookTitle, {
+  lang: 'en',
+  section: 'Benefits from Books',
+});
+const seoDescription = buildSeoDescription(
+  `A grouped study page for notebooks related to ${referenceEntry.data.bookTitle} inside the Study Hub.`,
+  [referenceEntry.data.field, referenceEntry.data.teacher, `${entries.length} published notebooks`],
+);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Benefits from Books</p>
+      <h1 class="hero__title">{referenceEntry.data.bookTitle}</h1>
+      <p class="hero__lead">
+        This page gathers the published study notebooks for this book inside the site, with field,
+        lesson-source, and subject structure kept visible for easier review.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">{referenceEntry.data.field}</span>
+        {referenceEntry.data.teacher && <span class="hero__badge">{referenceEntry.data.teacher}</span>}
+        <span class="hero__badge">{entries.length} study notebooks</span>
+      </div>
+    </section>
+
+    <section class="shell notice-card">
+      <h2 class="section-title">Editorial note</h2>
+      <p>
+        These notes were organized and published on the site for study use. The teacher did not
+        review this published version.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        {entries.map((entry) => (
+          <a class="card-link" href={getEntryPath('studyBenefits', 'en', getStudyBenefitRouteSlug(entry.slug))}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{entry.data.field}</p>
+              <h3>{entry.data.title}</h3>
+              <p>{entry.data.summary}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

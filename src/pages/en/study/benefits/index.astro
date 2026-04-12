@@ -3,33 +3,13 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { getEntryPath } from '../../../../utils/content-routing';
+import { getStudyBenefitBookPath, groupStudyBenefits, getStudyBenefitRouteSlug } from '../../../../utils/study';
 
 const publishedBenefits = (await getCollection('studyBenefits')).filter(
   (entry) => entry.data.lang === 'en' && !entry.data.draft,
 );
-
-const startingBooks = [
-  {
-    field: 'Usul al-Fiqh',
-    book: "al-Risalah by al-Shafi'i",
-    teacher: 'Dr. Ahmad al-Naqeeb',
-  },
-  {
-    field: 'Usul al-Fiqh',
-    book: "al-Risalah by al-Shafi'i",
-    teacher: "Shaykh Samy al-'Arabi",
-  },
-  {
-    field: 'Usul al-Fiqh',
-    book: "al-Risalah by al-Shafi'i",
-    teacher: 'Shaykh Husayn Abd al-Raziq',
-  },
-  {
-    field: 'Tafsir and Qur\'anic Studies',
-    book: "Commentary on al-Fatihah and al-Baqarah from al-Tabari's Tafsir",
-    teacher: 'Shaykh Husayn',
-  },
-];
+const groupedBenefits = groupStudyBenefits(publishedBenefits);
 
 const seoTitle = buildSeoTitle('Benefits from Books', {
   lang: 'en',
@@ -69,27 +49,44 @@ const seoDescription = buildSeoDescription(
         <p class="entity-kicker">Current state</p>
         <ul class="entity-list">
           <li><strong>Published notes:</strong> {publishedBenefits.length}</li>
-          <li><strong>Approved starting point:</strong> al-Risalah and al-Tabari-related study material</li>
-          <li><strong>Next editorial step:</strong> first short reviewed batches of notes</li>
+          <li><strong>Books currently shown:</strong> {groupedBenefits.length}</li>
+          <li><strong>Current starting point:</strong> al-Risalah through Dr. Ahmad al-Naqeeb's lessons</li>
         </ul>
       </article>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Initial sources</p>
-        <h2 class="section-title">Books and lesson sources chosen for the first batch</h2>
+        <p class="section-kicker">Published books</p>
+        <h2 class="section-title">Benefits arranged by field and then by book</h2>
       </div>
 
-      <div class="grid-two">
-        {startingBooks.map((item) => (
-          <article class="content-card entity-card">
-            <p class="content-card__meta">{item.field}</p>
-            <h3>{item.book}</h3>
-            <p>{item.teacher}</p>
-          </article>
-        ))}
-      </div>
+      {groupedBenefits.length === 0 ? (
+        <article class="notice-card">
+          <h2 class="section-title">No study notebooks have been published yet</h2>
+          <p>The structure is ready, and the first visible material here begins with al-Risalah and later related study notebooks.</p>
+        </article>
+      ) : (
+        <div class="grid-two">
+          {groupedBenefits.map((group) => (
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{group.field}</p>
+              <h3>
+                <a href={getStudyBenefitBookPath('en', group.fieldSlug, group.bookSlug)}>{group.bookTitle}</a>
+              </h3>
+              <p>{group.teacher ?? 'Organized study material inside the site'}</p>
+              <p class="content-card__meta">{group.entries.length} study notebooks</p>
+              <ul class="entity-list">
+                {group.entries.map((entry) => (
+                  <li>
+                    <a href={getEntryPath('studyBenefits', 'en', getStudyBenefitRouteSlug(entry.slug))}>{entry.data.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      )}
     </section>
   </main>
 </BaseLayout>

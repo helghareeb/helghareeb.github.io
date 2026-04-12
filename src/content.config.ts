@@ -99,6 +99,7 @@ const studyBenefits = defineCollection({
     lang: z.enum(['ar', 'en']),
     summary: z.string().optional(),
     field: z.string(),
+    fieldSlug: z.string(),
     bookTitle: z.string(),
     bookSlug: z.string(),
     teacher: z.string().optional(),

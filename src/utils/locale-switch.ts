@@ -147,6 +147,10 @@ export async function getAlternateLocalePath(currentPath: string, lang: Locale) 
     { pattern: /^\/en\/study\/flashcards\/([^/]+)\/$/, getPath: (match) => `/ar/study/flashcards/${match[1]}/` },
     { pattern: /^\/ar\/study\/flashcards\/([^/]+)\/(review|training|test|results)\/$/, getPath: (match) => `/en/study/flashcards/${match[1]}/${match[2]}/` },
     { pattern: /^\/en\/study\/flashcards\/([^/]+)\/(review|training|test|results)\/$/, getPath: (match) => `/ar/study/flashcards/${match[1]}/${match[2]}/` },
+    { pattern: /^\/ar\/study\/benefits\/([^/]+)\/$/, getPath: (match) => `/en/study/benefits/${match[1]}/` },
+    { pattern: /^\/en\/study\/benefits\/([^/]+)\/$/, getPath: (match) => `/ar/study/benefits/${match[1]}/` },
+    { pattern: /^\/ar\/study\/benefits\/([^/]+)\/([^/]+)\/$/, getPath: (match) => `/en/study/benefits/${match[1]}/${match[2]}/` },
+    { pattern: /^\/en\/study\/benefits\/([^/]+)\/([^/]+)\/$/, getPath: (match) => `/ar/study/benefits/${match[1]}/${match[2]}/` },
   ];
 
   const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
