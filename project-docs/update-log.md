@@ -2,6 +2,79 @@
 
 ## 2026-04-12
 ### ما أُنجز
+- تحويل خطة `مذاكرة طالب العلم` إلى طبقة تنفيذية أولى داخل الموقع عبر:
+  - إضافة قسم جديد في الملاحة العربية والإنجليزية:
+    - `/ar/study/`
+    - `/en/study/`
+- إضافة مجموعات محتوى جديدة في:
+  - `src/content.config.ts`
+  وتشمل:
+  - `studyBenefits`
+  - `flashcardDecks`
+  - `flashcards`
+- إنشاء الصفحات الأساسية لهذا المسار:
+  - `src/pages/ar/study/index.astro`
+  - `src/pages/en/study/index.astro`
+  - `src/pages/ar/study/benefits/index.astro`
+  - `src/pages/en/study/benefits/index.astro`
+  - `src/pages/ar/study/flashcards/index.astro`
+  - `src/pages/en/study/flashcards/index.astro`
+- إنشاء البنية الأولية لأول deck في بطاقات المذاكرة لكتاب `أخصر المختصرات`، بما يشمل:
+  - صفحة الكتاب
+  - صفحات `review`
+  - صفحات `training`
+  - صفحات `test`
+  - صفحات `results`
+  في العربية والإنجليزية
+- إضافة أول مدخل محتوى لهذا المسار داخل:
+  - `src/content/flashcardDecks/akhsar-al-mukhtasarat-ar.md`
+  - `src/content/flashcardDecks/akhsar-al-mukhtasarat-en.md`
+- تحديث الربط البنيوي لهذا القسم في:
+  - `config/navigation.ts`
+  - `config/breadcrumbs.ts`
+  - `src/utils/content-routing.ts`
+  - `src/utils/locale-switch.ts`
+  - `src/pages/sitemap.xml.ts`
+  - `src/pages/ar/site-map/index.astro`
+  - `src/pages/en/site-map/index.astro`
+  - `project-docs/project-plan.md`
+  - `project-docs/current-status.md`
+
+### تحقق تنظيمي
+- أصبح مسار `مذاكرة طالب العلم` الآن ظاهرًا في الموقع نفسه، لا مجرد خطة موثقة.
+- صارت نقطة البداية العملية لمسار `Flashcards` مثبتة داخل المحتوى وقابلة للتوسعة التدريجية.
+
+### الحالة الحالية
+- الخطوة الطبيعية التالية صارت واضحة ومباشرة:
+  - إدخال أول دفعات `studyBenefits` من شرح `الرسالة`
+  - ثم بناء أول أسئلة `Flashcards` لكتاب `أخصر المختصرات` على دفعات صغيرة
+
+## 2026-04-12
+### ما أُنجز
+- تثبيت مسار مشروع جديد داخل الموقع بعنوان:
+  - `مذاكرة طالب العلم`
+  يتضمن:
+  - `فوائد من كتب متنوعة`
+  - `Flashcards`
+- إضافة وثيقة تخطيط مستقلة لهذا المسار داخل:
+  - `project-docs/study-section-plan.md`
+- تضمنت الوثيقة:
+  - التوصية المعمارية
+  - البنية المقترحة للمسارات والروابط
+  - اقتراح أنواع المحتوى الجديدة
+  - ترتيب الأولويات
+  - نقطة البداية العملية في `فوائد الرسالة`
+  - نقطة البداية العملية في `Flashcards` لكتاب `أخصر المختصرات`
+- تحديث `project-docs/project-plan.md` و`project-docs/current-status.md` لربط هذا المسار الجديد بالخطة العامة للموقع حتى يبقى الاستئناف سهلًا إذا انقطع الاتصال.
+
+### تحقق تنظيمي
+- هذه الجولة تخطيطية/توثيقية، وهدفها تثبيت الهيكل والقرار قبل البدء في التنفيذ البرمجي أو التحريري التفصيلي.
+
+### الحالة الحالية
+- صار لدينا الآن مسار موثق وقابل للاستئناف لقسم يخدم طالب العلم مباشرة، لا على مستوى العرض العام فقط بل على مستوى المذاكرة والمراجعة والتدريب.
+
+## 2026-04-12
+### ما أُنجز
 - استكمال جولة SEO التحريرية لتشمل البوابات العليا وصفحات المجالات العلمية، عبر:
   - `src/pages/en/index.astro`
   - `src/pages/ar/index.astro`

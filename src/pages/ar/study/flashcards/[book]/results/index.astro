@@ -1,0 +1,45 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import '../../../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../../../utils/seo';
+
+export async function getStaticPaths() {
+  const decks = await getCollection('flashcardDecks');
+
+  return decks
+    .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+    .map((entry) => ({
+      params: { book: entry.slug.replace(/-(ar|en)$/, '') },
+      props: { deck: entry },
+    }));
+}
+
+const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
+const seoTitle = buildSeoTitle(`نتائج ${deck.data.bookTitle}`, {
+  lang: 'ar',
+  section: 'بطاقات المذاكرة',
+});
+const seoDescription = buildSeoDescription(deck.data.summary, ['صفحة النتائج وإعادة الخطأ']);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">النتائج</p>
+      <h1 class="hero__title">صفحة نتائج {deck.data.bookTitle}</h1>
+      <p class="hero__lead">
+        هذه الصفحة هي موضع الربط القادم بين وضع الاختبار، وتتبع الإجابات، وإعادة عرض
+        الأسئلة التي أخطأ فيها الطالب ليكررها حتى تثبت.
+      </p>
+    </section>
+
+    <section class="shell notice-card">
+      <h2 class="section-title">الخطوة التطبيقية التالية في هذا المسار</h2>
+      <p>
+        بعد إدخال أول دفعات الأسئلة، سنضيف طبقة حالة في المتصفح تحفظ نتيجة الطالب محليًا،
+        ثم تجمع مواضع الخطأ وتعيد تقديمها له في جولة مراجعة جديدة.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

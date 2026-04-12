@@ -1,5 +1,13 @@
 export type Locale = 'ar' | 'en';
-export type CollectionKey = 'articles' | 'books' | 'editions' | 'projects' | 'media' | 'externalLinks';
+export type CollectionKey =
+  | 'articles'
+  | 'books'
+  | 'editions'
+  | 'projects'
+  | 'media'
+  | 'externalLinks'
+  | 'studyBenefits'
+  | 'flashcardDecks';
 
 const localeSuffixPattern = /-(ar|en)$/;
 
@@ -33,6 +41,14 @@ export function getCollectionBasePath(collection: CollectionKey, lang: Locale) {
       ar: '/ar/external-links/',
       en: '/en/external-links/',
     },
+    studyBenefits: {
+      ar: '/ar/study/benefits/',
+      en: '/en/study/benefits/',
+    },
+    flashcardDecks: {
+      ar: '/ar/study/flashcards/',
+      en: '/en/study/flashcards/',
+    },
   };
 
   return basePaths[collection][lang];
@@ -46,4 +62,8 @@ export function getArticleSeriesPath(lang: Locale, seriesSlug: string) {
   const basePath = lang === 'ar' ? '/ar/articles/series/' : '/en/articles/series/';
 
   return `${basePath}${seriesSlug}/`;
+}
+
+export function getFlashcardModePath(lang: Locale, deckSlug: string, mode: 'review' | 'training' | 'test' | 'results') {
+  return `${getEntryPath('flashcardDecks', lang, deckSlug)}${mode}/`;
 }

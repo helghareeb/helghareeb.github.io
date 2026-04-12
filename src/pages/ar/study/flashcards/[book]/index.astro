@@ -1,0 +1,106 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import '../../../../../styles/global.css';
+import { getFlashcardModePath } from '../../../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../../../utils/seo';
+
+export async function getStaticPaths() {
+  const decks = await getCollection('flashcardDecks');
+
+  return decks
+    .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+    .map((entry) => ({
+      params: { book: entry.slug.replace(/-(ar|en)$/, '') },
+      props: { deck: entry },
+    }));
+}
+
+const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
+const cards = (await getCollection('flashcards')).filter(
+  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.deckSlug === deck.slug.replace(/-(ar|en)$/, ''),
+);
+const counts = {
+  review: cards.filter((card) => card.data.mode === 'review').length,
+  training: cards.filter((card) => card.data.mode === 'training').length,
+  test: cards.filter((card) => card.data.mode === 'test').length,
+};
+const seoTitle = buildSeoTitle(deck.data.title, {
+  lang: 'ar',
+  section: 'بطاقات المذاكرة',
+});
+const seoDescription = buildSeoDescription(deck.data.summary, [
+  deck.data.field,
+  deck.data.bookTitle,
+  `${cards.length} سؤال منشور`,
+]);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">بطاقات المذاكرة</p>
+      <h1 class="hero__title">{deck.data.bookTitle}</h1>
+      <p class="hero__lead">{deck.data.summary}</p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">{deck.data.field}</span>
+        <span class="hero__badge">{cards.length} سؤال منشور</span>
+        <span class="hero__badge">{deck.data.status ?? 'حزمة دراسة'}</span>
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">بنية الحزمة</p>
+        <h2 class="section-title">مسارات المراجعة داخل هذا الكتاب</h2>
+        <p class="section-copy">
+          تفتح هذه الصفحة ثلاثة أوضاع للمذاكرة: المراجعة، والتدريب، والاختبار، ثم صفحة
+          للنتائج تمهيدًا لمسار إعادة الخطأ وتكرار ما يحتاج إليه الطالب.
+        </p>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">أرقام سريعة</p>
+        <ul class="entity-list">
+          <li><strong>بطاقات المراجعة:</strong> {counts.review}</li>
+          <li><strong>أسئلة التدريب:</strong> {counts.training}</li>
+          <li><strong>أسئلة الاختبار:</strong> {counts.test}</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        <a class="card-link" href={getFlashcardModePath('ar', deck.slug, 'review')}>
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Review</p>
+            <h3>المراجعة</h3>
+            <p>عرض السؤال مع جوابه لتثبيت الأصل العلمي قبل الانتقال للمحاولة الذاتية.</p>
+          </article>
+        </a>
+        <a class="card-link" href={getFlashcardModePath('ar', deck.slug, 'training')}>
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Training</p>
+            <h3>التدريب</h3>
+            <p>إخفاء الجواب أولًا ثم كشفه بعد المحاولة، لبناء الاستدعاء النشط.</p>
+          </article>
+        </a>
+        <a class="card-link" href={getFlashcardModePath('ar', deck.slug, 'test')}>
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Test</p>
+            <h3>الاختبار</h3>
+            <p>عرض الأسئلة في صورة اختبارية مستقلة تقيس مقدار التمكن من المادة.</p>
+          </article>
+        </a>
+        <a class="card-link" href={getFlashcardModePath('ar', deck.slug, 'results')}>
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Results</p>
+            <h3>النتائج</h3>
+            <p>صفحة مهيأة لتجميع الأخطاء وإعادة ما يحتاجه الطالب من الأسئلة لاحقًا.</p>
+          </article>
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

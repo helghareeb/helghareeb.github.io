@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const decks = (await getCollection('flashcardDecks')).filter(
+  (entry) => entry.data.lang === 'en' && !entry.data.draft,
+);
+
+const seoTitle = buildSeoTitle('Flashcards', {
+  lang: 'en',
+  section: 'Study Hub',
+});
+const seoDescription = buildSeoDescription(
+  'Flashcard decks for review, training, and testing inside the study section.',
+  [`${decks.length} published decks`, 'Starting with Akhsar al-Mukhtasarat'],
+);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Flashcards</p>
+      <h1 class="hero__title">Questions for review, training, and testing</h1>
+      <p class="hero__lead">
+        This track is built around practical study decks that begin with guided review, then move
+        into self-training and testing, with a later retry path for missed answers.
+      </p>
+    </section>
+
+    <section class="shell entity-meta-grid">
+      <article class="content-card entity-card">
+        <p class="content-card__meta">Stage one</p>
+        <h3>Review</h3>
+        <p>See the question together with its answer to stabilize the core material.</p>
+      </article>
+      <article class="content-card entity-card">
+        <p class="content-card__meta">Stage two</p>
+        <h3>Training</h3>
+        <p>See the question first, then reveal the answer after personal recall.</p>
+      </article>
+      <article class="content-card entity-card">
+        <p class="content-card__meta">Stage three</p>
+        <h3>Test</h3>
+        <p>Work through the questions as an assessment, with a later retry layer for mistakes.</p>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Current decks</p>
+        <h2 class="section-title">Where this track begins</h2>
+      </div>
+
+      <div class="grid-two">
+        {decks.map((deck) => (
+          <a class="card-link" href={getEntryPath('flashcardDecks', 'en', deck.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{deck.data.field}</p>
+              <h3>{deck.data.bookTitle}</h3>
+              <p>{deck.data.summary}</p>
+              <p class="content-card__meta">{deck.data.status ?? 'Published study deck'}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

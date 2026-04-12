@@ -1,0 +1,64 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import '../../../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../../../utils/seo';
+
+export async function getStaticPaths() {
+  const decks = await getCollection('flashcardDecks');
+
+  return decks
+    .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+    .map((entry) => ({
+      params: { book: entry.slug.replace(/-(ar|en)$/, '') },
+      props: { deck: entry },
+    }));
+}
+
+const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
+const cards = (await getCollection('flashcards'))
+  .filter(
+    (entry) =>
+      entry.data.lang === 'ar' &&
+      !entry.data.draft &&
+      entry.data.deckSlug === deck.slug.replace(/-(ar|en)$/, '') &&
+      entry.data.mode === 'test',
+  )
+  .sort((a, b) => a.data.order - b.data.order);
+const seoTitle = buildSeoTitle(`اختبار ${deck.data.bookTitle}`, {
+  lang: 'ar',
+  section: 'بطاقات المذاكرة',
+});
+const seoDescription = buildSeoDescription(deck.data.summary, [`${cards.length} أسئلة اختبار`]);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">الاختبار</p>
+      <h1 class="hero__title">اختبار {deck.data.bookTitle}</h1>
+      <p class="hero__lead">
+        هذا الوضع مخصص لعرض الأسئلة في صورة اختبارية مجردة، ليقيس الطالب مقدار ما ضبطه
+        من المادة قبل الرجوع إلى صفحة النتائج والمراجعة.
+      </p>
+    </section>
+
+    <section class="shell section">
+      {cards.length === 0 ? (
+        <article class="notice-card">
+          <h2 class="section-title">لم تُنشر أسئلة الاختبار بعد</h2>
+          <p>هذه الصفحة جاهزة لاستقبال دفعات الأسئلة الاختبارية، ثم ربطها بمسار النتائج وإعادة الخطأ.</p>
+        </article>
+      ) : (
+        <div class="grid-two">
+          {cards.map((card) => (
+            <article class="content-card entity-card">
+              <p class="content-card__meta">السؤال {card.data.order}</p>
+              <h3>{card.data.question}</h3>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+  </main>
+</BaseLayout>

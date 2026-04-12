@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+
+const tracks = [
+  {
+    eyebrow: 'المسار الأول',
+    title: 'فوائد من كتب متنوعة',
+    href: '/ar/study/benefits/',
+    summary: 'أرشيف منظم للفوائد العلمية، مرتب أولًا بالفن ثم بالكتاب، مع إظهار الشرح أو الشيخ عند الحاجة.',
+  },
+  {
+    eyebrow: 'المسار الثاني',
+    title: 'بطاقات المذاكرة',
+    href: '/ar/study/flashcards/',
+    summary: 'أسئلة للمراجعة والتدريب والاختبار، مع تمهيد لمسار يعيد عرض الأسئلة التي أخطأ فيها الطالب.',
+  },
+];
+
+const startingSources = [
+  'فوائد من شرح د. أحمد النقيب لكتاب الرسالة للشافعي',
+  'فوائد من شرح الشيخ سامي العربي لكتاب الرسالة',
+  'فوائد من شرح الشيخ حسين عبدالرازق لكتاب الرسالة',
+  'فوائد من التعليق على الفاتحة والبقرة من تفسير الطبري للشيخ حسين',
+];
+
+const seoTitle = buildSeoTitle('مذاكرة طالب العلم', {
+  lang: 'ar',
+  section: 'الدراسة والمراجعة',
+});
+const seoDescription = buildSeoDescription(
+  'قسم عملي يخدم طالب العلم الشرعي عبر مسارين: فوائد منظمة من الكتب، وبطاقات مذاكرة للمراجعة والتدريب والاختبار.',
+  ['مساران رئيسان', 'بداية العمل من الرسالة وأخصر المختصرات'],
+);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--portal">
+      <p class="hero__eyebrow">مذاكرة طالب العلم</p>
+      <h1 class="hero__title">قسم عملي للمراجعة والبناء المنهجي</h1>
+      <p class="hero__lead">
+        يجمع هذا القسم بين أرشفة الفوائد العلمية المنظمة، وبناء بطاقات مذاكرة تعين الطالب
+        على التكرار، والمراجعة، والتدريب، والاختبار بصورة متدرجة.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">فوائد منظمة</span>
+        <span class="hero__badge">بطاقات مراجعة</span>
+        <span class="hero__badge">بداية من أخصر المختصرات</span>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">المساران</p>
+        <h2 class="section-title">بنية القسم المعتمدة</h2>
+      </div>
+
+      <div class="grid-two">
+        {tracks.map((track) => (
+          <a class="card-link" href={track.href}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{track.eyebrow}</p>
+              <h3>{track.title}</h3>
+              <p>{track.summary}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">البداية المعتمدة</p>
+        <h2 class="section-title">مواد العمل الأولى</h2>
+        <p class="section-copy">
+          الانطلاقة التحريرية في مسار الفوائد ستكون من مادة الرسالة وتفسير الطبري، أما
+          مسار البطاقات فسيبدأ بكتاب أخصر المختصرات، ثم يتوسع على دفعات صغيرة مضبوطة.
+        </p>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">المصادر الأولى</p>
+        <ul class="entity-list">
+          {startingSources.map((source) => (
+            <li>{source}</li>
+          ))}
+        </ul>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

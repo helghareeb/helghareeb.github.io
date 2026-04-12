@@ -1,0 +1,66 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import '../../../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../../../utils/seo';
+
+export async function getStaticPaths() {
+  const decks = await getCollection('flashcardDecks');
+
+  return decks
+    .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
+    .map((entry) => ({
+      params: { book: entry.slug.replace(/-(ar|en)$/, '') },
+      props: { deck: entry },
+    }));
+}
+
+const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
+const cards = (await getCollection('flashcards'))
+  .filter(
+    (entry) =>
+      entry.data.lang === 'en' &&
+      !entry.data.draft &&
+      entry.data.deckSlug === deck.slug.replace(/-(ar|en)$/, '') &&
+      entry.data.mode === 'training',
+  )
+  .sort((a, b) => a.data.order - b.data.order);
+const seoTitle = buildSeoTitle(`Training ${deck.data.bookTitle}`, {
+  lang: 'en',
+  section: 'Flashcards',
+});
+const seoDescription = buildSeoDescription(deck.data.summary, [`${cards.length} training questions`]);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Training</p>
+      <h1 class="hero__title">Training for {deck.data.bookTitle}</h1>
+      <p class="hero__lead">
+        In this mode the answer stays hidden at first, then appears after the learner attempts to
+        recall it independently.
+      </p>
+    </section>
+
+    <section class="shell section">
+      {cards.length === 0 ? (
+        <article class="notice-card">
+          <h2 class="section-title">No training questions have been published yet</h2>
+          <p>Once the first real batches are added, this mode will support answer-first recall and self-checking.</p>
+        </article>
+      ) : (
+        <div class="grid-two">
+          {cards.map((card) => (
+            <details class="content-card entity-card">
+              <summary>
+                <strong>Question {card.data.order}:</strong> {card.data.question}
+              </summary>
+              <p>{card.data.answer}</p>
+            </details>
+          ))}
+        </div>
+      )}
+    </section>
+  </main>
+</BaseLayout>

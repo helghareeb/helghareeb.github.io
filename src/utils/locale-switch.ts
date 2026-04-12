@@ -12,6 +12,9 @@ const localePairs: Record<string, string> = {
   '/ar/articles/': '/en/articles/',
   '/ar/articles/series/': '/en/articles/series/',
   '/ar/fields/': '/en/scholarly-fields/',
+  '/ar/study/': '/en/study/',
+  '/ar/study/benefits/': '/en/study/benefits/',
+  '/ar/study/flashcards/': '/en/study/flashcards/',
   '/ar/projects/': '/en/projects/',
   '/ar/media/': '/en/media/',
   '/ar/external-links/': '/en/external-links/',
@@ -34,6 +37,9 @@ const localePairs: Record<string, string> = {
   '/en/articles/': '/ar/articles/',
   '/en/articles/series/': '/ar/articles/series/',
   '/en/scholarly-fields/': '/ar/fields/',
+  '/en/study/': '/ar/study/',
+  '/en/study/benefits/': '/ar/study/benefits/',
+  '/en/study/flashcards/': '/ar/study/flashcards/',
   '/en/projects/': '/ar/projects/',
   '/en/media/': '/ar/media/',
   '/en/external-links/': '/ar/external-links/',
@@ -137,6 +143,10 @@ export async function getAlternateLocalePath(currentPath: string, lang: Locale) 
     { pattern: /^\/en\/media\/([^/]+)\/$/, getPath: (match) => `/ar/media/${match[1]}/` },
     { pattern: /^\/ar\/external-links\/([^/]+)\/$/, getPath: (match) => `/en/external-links/${match[1]}/` },
     { pattern: /^\/en\/external-links\/([^/]+)\/$/, getPath: (match) => `/ar/external-links/${match[1]}/` },
+    { pattern: /^\/ar\/study\/flashcards\/([^/]+)\/$/, getPath: (match) => `/en/study/flashcards/${match[1]}/` },
+    { pattern: /^\/en\/study\/flashcards\/([^/]+)\/$/, getPath: (match) => `/ar/study/flashcards/${match[1]}/` },
+    { pattern: /^\/ar\/study\/flashcards\/([^/]+)\/(review|training|test|results)\/$/, getPath: (match) => `/en/study/flashcards/${match[1]}/${match[2]}/` },
+    { pattern: /^\/en\/study\/flashcards\/([^/]+)\/(review|training|test|results)\/$/, getPath: (match) => `/ar/study/flashcards/${match[1]}/${match[2]}/` },
   ];
 
   const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;

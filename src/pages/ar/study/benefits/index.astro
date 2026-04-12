@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const publishedBenefits = (await getCollection('studyBenefits')).filter(
+  (entry) => entry.data.lang === 'ar' && !entry.data.draft,
+);
+
+const startingBooks = [
+  {
+    field: 'أصول الفقه',
+    book: 'الرسالة للشافعي',
+    teacher: 'د. أحمد النقيب',
+  },
+  {
+    field: 'أصول الفقه',
+    book: 'الرسالة للشافعي',
+    teacher: 'الشيخ سامي العربي',
+  },
+  {
+    field: 'أصول الفقه',
+    book: 'الرسالة للشافعي',
+    teacher: 'الشيخ حسين عبدالرازق',
+  },
+  {
+    field: 'التفسير وعلوم القرآن',
+    book: 'التعليق على الفاتحة والبقرة من تفسير الطبري',
+    teacher: 'الشيخ حسين',
+  },
+];
+
+const seoTitle = buildSeoTitle('فوائد من كتب متنوعة', {
+  lang: 'ar',
+  section: 'مذاكرة طالب العلم',
+});
+const seoDescription = buildSeoDescription(
+  'مسار يجمع الفوائد العلمية المنشورة في الموقع مرتبًا بالفن ثم بالكتاب، مع إبراز الشرح أو الشيخ عند الحاجة.',
+  [
+    `${publishedBenefits.length} فوائد منشورة حاليًا`,
+    'البداية من الرسالة وتفسير الطبري',
+  ],
+);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">فوائد من كتب متنوعة</p>
+      <h1 class="hero__title">أرشيف فوائد علمية مرتب بالفن والكتاب</h1>
+      <p class="hero__lead">
+        سيجمع هذا المسار الفوائد العلمية المختارة من الشروح والدروس، مع تنظيم ييسر على
+        الطالب الوصول إلى الفن، ثم الكتاب، ثم المادة النافعة نفسها.
+      </p>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">طريقة التنظيم</p>
+        <h2 class="section-title">من الفن إلى الكتاب إلى الفائدة</h2>
+        <p class="section-copy">
+          الهيكل المعتمد يبدأ بالفن العلمي، ثم يجمع المواد تحت الكتاب، مع إظهار الشرح أو
+          اسم الشيخ عندما تكون الفائدة مستخرجة من درس أو سلسلة صوتية أو مرئية.
+        </p>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">الحالة الحالية</p>
+        <ul class="entity-list">
+          <li><strong>الفوائد المنشورة:</strong> {publishedBenefits.length}</li>
+          <li><strong>الانطلاقة المعتمدة:</strong> الرسالة للشافعي وتفسير الطبري</li>
+          <li><strong>الترتيب القادم:</strong> إدخال أول دفعات الفوائد بصياغة قصيرة قابلة للمراجعة</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">مصادر البداية</p>
+        <h2 class="section-title">الكتب والشروح المعتمدة لأول دفعة</h2>
+      </div>
+
+      <div class="grid-two">
+        {startingBooks.map((item) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{item.field}</p>
+            <h3>{item.book}</h3>
+            <p>{item.teacher}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

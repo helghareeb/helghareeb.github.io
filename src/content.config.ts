@@ -93,6 +93,56 @@ const fields = defineCollection({
   }),
 });
 
+const studyBenefits = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    lang: z.enum(['ar', 'en']),
+    summary: z.string().optional(),
+    field: z.string(),
+    bookTitle: z.string(),
+    bookSlug: z.string(),
+    teacher: z.string().optional(),
+    sourceSeries: z.string().optional(),
+    lessonTitle: z.string().optional(),
+    lessonOrder: z.number().int().positive().optional(),
+    tags: z.array(z.string()).default([]),
+    translationKey: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+const flashcardDecks = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    lang: z.enum(['ar', 'en']),
+    summary: z.string().optional(),
+    field: z.string(),
+    bookTitle: z.string(),
+    questionCount: z.number().int().nonnegative().default(0),
+    reviewCount: z.number().int().nonnegative().default(0),
+    trainingCount: z.number().int().nonnegative().default(0),
+    testCount: z.number().int().nonnegative().default(0),
+    status: z.string().optional(),
+    translationKey: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+const flashcards = defineCollection({
+  schema: z.object({
+    question: z.string(),
+    answer: z.string(),
+    lang: z.enum(['ar', 'en']),
+    deckSlug: z.string(),
+    mode: z.enum(['review', 'training', 'test']).default('review'),
+    order: z.number().int().positive(),
+    tags: z.array(z.string()).default([]),
+    sourceRef: z.string().optional(),
+    translationKey: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 export const collections = {
   articles,
   books,
@@ -101,4 +151,7 @@ export const collections = {
   media,
   externalLinks,
   fields,
+  studyBenefits,
+  flashcardDecks,
+  flashcards,
 };

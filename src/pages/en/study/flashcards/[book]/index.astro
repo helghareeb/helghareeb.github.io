@@ -1,0 +1,106 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import '../../../../../styles/global.css';
+import { getFlashcardModePath } from '../../../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../../../utils/seo';
+
+export async function getStaticPaths() {
+  const decks = await getCollection('flashcardDecks');
+
+  return decks
+    .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
+    .map((entry) => ({
+      params: { book: entry.slug.replace(/-(ar|en)$/, '') },
+      props: { deck: entry },
+    }));
+}
+
+const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
+const cards = (await getCollection('flashcards')).filter(
+  (entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.deckSlug === deck.slug.replace(/-(ar|en)$/, ''),
+);
+const counts = {
+  review: cards.filter((card) => card.data.mode === 'review').length,
+  training: cards.filter((card) => card.data.mode === 'training').length,
+  test: cards.filter((card) => card.data.mode === 'test').length,
+};
+const seoTitle = buildSeoTitle(deck.data.title, {
+  lang: 'en',
+  section: 'Flashcards',
+});
+const seoDescription = buildSeoDescription(deck.data.summary, [
+  deck.data.field,
+  deck.data.bookTitle,
+  `${cards.length} published questions`,
+]);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Flashcards</p>
+      <h1 class="hero__title">{deck.data.bookTitle}</h1>
+      <p class="hero__lead">{deck.data.summary}</p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">{deck.data.field}</span>
+        <span class="hero__badge">{cards.length} published questions</span>
+        <span class="hero__badge">{deck.data.status ?? 'Study deck'}</span>
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Deck structure</p>
+        <h2 class="section-title">Study modes inside this book</h2>
+        <p class="section-copy">
+          This page opens three modes for the same deck: review, training, and test, followed by
+          a results page that prepares the later retry flow for missed answers.
+        </p>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Quick numbers</p>
+        <ul class="entity-list">
+          <li><strong>Review cards:</strong> {counts.review}</li>
+          <li><strong>Training questions:</strong> {counts.training}</li>
+          <li><strong>Test questions:</strong> {counts.test}</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        <a class="card-link" href={getFlashcardModePath('en', deck.slug, 'review')}>
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Review</p>
+            <h3>Review</h3>
+            <p>See the question together with its answer before moving into active recall.</p>
+          </article>
+        </a>
+        <a class="card-link" href={getFlashcardModePath('en', deck.slug, 'training')}>
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Training</p>
+            <h3>Training</h3>
+            <p>Hide the answer at first, then reveal it after trying to recall it yourself.</p>
+          </article>
+        </a>
+        <a class="card-link" href={getFlashcardModePath('en', deck.slug, 'test')}>
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Test</p>
+            <h3>Test</h3>
+            <p>Work through the questions in assessment form to measure retention more directly.</p>
+          </article>
+        </a>
+        <a class="card-link" href={getFlashcardModePath('en', deck.slug, 'results')}>
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Results</p>
+            <h3>Results</h3>
+            <p>A prepared page for collecting mistakes and repeating the questions that need work.</p>
+          </article>
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

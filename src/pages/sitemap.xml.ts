@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { navigation } from '../../config/navigation';
 import { siteConfig } from '../../config/site';
-import { getArticleSeriesPath, getEntryPath } from '../utils/content-routing';
+import { getArticleSeriesPath, getEntryPath, getFlashcardModePath } from '../utils/content-routing';
 
 const staticPaths = [
   '/',
@@ -22,6 +22,12 @@ const staticPaths = [
   '/en/articles/series/',
   '/ar/projects/',
   '/en/projects/',
+  '/ar/study/',
+  '/en/study/',
+  '/ar/study/benefits/',
+  '/en/study/benefits/',
+  '/ar/study/flashcards/',
+  '/en/study/flashcards/',
   '/ar/media/',
   '/en/media/',
   '/ar/external-links/',
@@ -68,13 +74,14 @@ const toSitemapUrl = (path: string, lastmod?: string) => {
 };
 
 export const GET: APIRoute = async () => {
-  const [articles, books, editions, projects, media, externalLinks] = await Promise.all([
+  const [articles, books, editions, projects, media, externalLinks, flashcardDecks] = await Promise.all([
     getCollection('articles'),
     getCollection('books'),
     getCollection('editions'),
     getCollection('projects'),
     getCollection('media'),
     getCollection('externalLinks'),
+    getCollection('flashcardDecks'),
   ]);
 
   const urls = new Map<string, string | undefined>();
@@ -113,6 +120,15 @@ export const GET: APIRoute = async () => {
 
   for (const entry of externalLinks) {
     urls.set(getEntryPath('externalLinks', entry.data.lang, entry.slug), undefined);
+  }
+
+  for (const entry of flashcardDecks.filter((item) => !item.data.draft)) {
+    const deckPath = getEntryPath('flashcardDecks', entry.data.lang, entry.slug);
+    urls.set(deckPath, undefined);
+    urls.set(getFlashcardModePath(entry.data.lang, entry.slug, 'review'), undefined);
+    urls.set(getFlashcardModePath(entry.data.lang, entry.slug, 'training'), undefined);
+    urls.set(getFlashcardModePath(entry.data.lang, entry.slug, 'test'), undefined);
+    urls.set(getFlashcardModePath(entry.data.lang, entry.slug, 'results'), undefined);
   }
 
   for (const locale of Object.keys(navigation) as Array<keyof typeof navigation>) {

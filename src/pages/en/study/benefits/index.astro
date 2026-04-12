@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const publishedBenefits = (await getCollection('studyBenefits')).filter(
+  (entry) => entry.data.lang === 'en' && !entry.data.draft,
+);
+
+const startingBooks = [
+  {
+    field: 'Usul al-Fiqh',
+    book: "al-Risalah by al-Shafi'i",
+    teacher: 'Dr. Ahmad al-Naqeeb',
+  },
+  {
+    field: 'Usul al-Fiqh',
+    book: "al-Risalah by al-Shafi'i",
+    teacher: "Shaykh Samy al-'Arabi",
+  },
+  {
+    field: 'Usul al-Fiqh',
+    book: "al-Risalah by al-Shafi'i",
+    teacher: 'Shaykh Husayn Abd al-Raziq',
+  },
+  {
+    field: 'Tafsir and Qur\'anic Studies',
+    book: "Commentary on al-Fatihah and al-Baqarah from al-Tabari's Tafsir",
+    teacher: 'Shaykh Husayn',
+  },
+];
+
+const seoTitle = buildSeoTitle('Benefits from Books', {
+  lang: 'en',
+  section: 'Study Hub',
+});
+const seoDescription = buildSeoDescription(
+  'A study-notes track that will organize selected benefits by field and book, with lesson-source context where needed.',
+  [
+    `${publishedBenefits.length} published notes at present`,
+    'Starting from al-Risalah and al-Tabari-related material',
+  ],
+);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Benefits from Books</p>
+      <h1 class="hero__title">An archive ordered by field and book</h1>
+      <p class="hero__lead">
+        This track is designed to gather concise study benefits drawn from lessons and book-based
+        teaching, with a structure that takes the student from discipline to book to note.
+      </p>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Organization</p>
+        <h2 class="section-title">From discipline to book to benefit</h2>
+        <p class="section-copy">
+          The working structure begins with the discipline, then gathers notes under the book,
+          while still preserving teacher or lesson-source context when that matters for study use.
+        </p>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Current state</p>
+        <ul class="entity-list">
+          <li><strong>Published notes:</strong> {publishedBenefits.length}</li>
+          <li><strong>Approved starting point:</strong> al-Risalah and al-Tabari-related study material</li>
+          <li><strong>Next editorial step:</strong> first short reviewed batches of notes</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Initial sources</p>
+        <h2 class="section-title">Books and lesson sources chosen for the first batch</h2>
+      </div>
+
+      <div class="grid-two">
+        {startingBooks.map((item) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{item.field}</p>
+            <h3>{item.book}</h3>
+            <p>{item.teacher}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

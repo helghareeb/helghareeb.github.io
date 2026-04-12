@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const decks = (await getCollection('flashcardDecks')).filter(
+  (entry) => entry.data.lang === 'ar' && !entry.data.draft,
+);
+
+const seoTitle = buildSeoTitle('بطاقات المذاكرة', {
+  lang: 'ar',
+  section: 'مذاكرة طالب العلم',
+});
+const seoDescription = buildSeoDescription(
+  'مسار بطاقات المذاكرة داخل الموقع، ويجمع حزم الأسئلة المخصصة للمراجعة والتدريب والاختبار.',
+  [`${decks.length} حزم منشورة`, 'البداية من أخصر المختصرات'],
+);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">بطاقات المذاكرة</p>
+      <h1 class="hero__title">أسئلة للمراجعة والتدريب والاختبار</h1>
+      <p class="hero__lead">
+        هذا المسار مخصص لبناء حزم مذاكرة عملية تبدأ بالمراجعة، ثم التدريب، ثم الاختبار،
+        مع تمهيد لمسار يعيد عرض الأسئلة التي أخطأ فيها الطالب.
+      </p>
+    </section>
+
+    <section class="shell entity-meta-grid">
+      <article class="content-card entity-card">
+        <p class="content-card__meta">المرحلة الأولى</p>
+        <h3>مراجعة</h3>
+        <p>عرض السؤال مع الجواب لتثبيت الأصل العلمي قبل الانتقال إلى التمرين.</p>
+      </article>
+      <article class="content-card entity-card">
+        <p class="content-card__meta">المرحلة الثانية</p>
+        <h3>تدريب</h3>
+        <p>إظهار السؤال أولًا، ثم كشف الجواب بعد المحاولة الذاتية.</p>
+      </article>
+      <article class="content-card entity-card">
+        <p class="content-card__meta">المرحلة الثالثة</p>
+        <h3>اختبار</h3>
+        <p>عرض الأسئلة مجردة مع تجهيز مسار لاحق لمراجعة الأخطاء وتكرارها.</p>
+      </article>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">الحزم الحالية</p>
+        <h2 class="section-title">ما نبدأ به في هذا المسار</h2>
+      </div>
+
+      <div class="grid-two">
+        {decks.map((deck) => (
+          <a class="card-link" href={getEntryPath('flashcardDecks', 'ar', deck.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{deck.data.field}</p>
+              <h3>{deck.data.bookTitle}</h3>
+              <p>{deck.data.summary}</p>
+              <p class="content-card__meta">{deck.data.status ?? 'حزمة دراسة منشورة'}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

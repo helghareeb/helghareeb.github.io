@@ -1,0 +1,45 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import '../../../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../../../utils/seo';
+
+export async function getStaticPaths() {
+  const decks = await getCollection('flashcardDecks');
+
+  return decks
+    .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
+    .map((entry) => ({
+      params: { book: entry.slug.replace(/-(ar|en)$/, '') },
+      props: { deck: entry },
+    }));
+}
+
+const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
+const seoTitle = buildSeoTitle(`Results ${deck.data.bookTitle}`, {
+  lang: 'en',
+  section: 'Flashcards',
+});
+const seoDescription = buildSeoDescription(deck.data.summary, ['Results page and retry workflow']);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Results</p>
+      <h1 class="hero__title">Results page for {deck.data.bookTitle}</h1>
+      <p class="hero__lead">
+        This page is the planned connection point between test mode, score tracking, and the later
+        retry flow for missed answers.
+      </p>
+    </section>
+
+    <section class="shell notice-card">
+      <h2 class="section-title">Next practical implementation step</h2>
+      <p>
+        After the first batches of real questions are entered, we will add browser-side state to
+        track answers locally, collect mistakes, and send the learner back through the weak points.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

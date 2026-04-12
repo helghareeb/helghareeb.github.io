@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+
+const tracks = [
+  {
+    eyebrow: 'Track One',
+    title: 'Benefits from Books',
+    href: '/en/study/benefits/',
+    summary: 'An organized archive of study notes arranged first by field, then by book, with commentary source and teacher context when needed.',
+  },
+  {
+    eyebrow: 'Track Two',
+    title: 'Flashcards',
+    href: '/en/study/flashcards/',
+    summary: 'A study flow built around review, training, and test questions, with a later retry path for missed answers.',
+  },
+];
+
+const startingSources = [
+  "Benefits from Dr. Ahmad al-Naqeeb's lessons on al-Risalah",
+  "Benefits from Shaykh Samy al-'Arabi's lessons on al-Risalah",
+  "Benefits from Shaykh Husayn Abd al-Raziq's lessons on al-Risalah",
+  "Benefits from Shaykh Husayn's commentary on al-Fatihah and al-Baqarah from al-Tabari",
+];
+
+const seoTitle = buildSeoTitle('Study Hub', {
+  lang: 'en',
+  section: 'Study and Revision',
+});
+const seoDescription = buildSeoDescription(
+  'A practical study section built for students of Islamic knowledge, combining organized book-based benefits with structured flashcards.',
+  ['Two tracks', 'Starting from al-Risalah and Akhsar al-Mukhtasarat'],
+);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--portal">
+      <p class="hero__eyebrow">Study Hub</p>
+      <h1 class="hero__title">A practical section for revision and ordered growth</h1>
+      <p class="hero__lead">
+        This section combines organized scholarly benefits from books with a growing flashcards
+        workflow designed for repetition, review, training, and testing.
+      </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">Structured benefits</span>
+        <span class="hero__badge">Study flashcards</span>
+        <span class="hero__badge">Starting with Akhsar al-Mukhtasarat</span>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">The two tracks</p>
+        <h2 class="section-title">Approved structure for the section</h2>
+      </div>
+
+      <div class="grid-two">
+        {tracks.map((track) => (
+          <a class="card-link" href={track.href}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{track.eyebrow}</p>
+              <h3>{track.title}</h3>
+              <p>{track.summary}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell entity-grid">
+      <article class="entity-summary">
+        <p class="entity-kicker">Starting point</p>
+        <h2 class="section-title">First material selected for publication</h2>
+        <p class="section-copy">
+          The benefits track begins from al-Risalah and al-Tabari-related study material, while
+          the flashcards track begins with Akhsar al-Mukhtasarat and grows in small reviewed batches.
+        </p>
+      </article>
+
+      <article class="entity-panel">
+        <p class="entity-kicker">Initial sources</p>
+        <ul class="entity-list">
+          {startingSources.map((source) => (
+            <li>{source}</li>
+          ))}
+        </ul>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

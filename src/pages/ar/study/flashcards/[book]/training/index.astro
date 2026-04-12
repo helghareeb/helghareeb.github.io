@@ -1,0 +1,66 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import '../../../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../../../utils/seo';
+
+export async function getStaticPaths() {
+  const decks = await getCollection('flashcardDecks');
+
+  return decks
+    .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+    .map((entry) => ({
+      params: { book: entry.slug.replace(/-(ar|en)$/, '') },
+      props: { deck: entry },
+    }));
+}
+
+const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
+const cards = (await getCollection('flashcards'))
+  .filter(
+    (entry) =>
+      entry.data.lang === 'ar' &&
+      !entry.data.draft &&
+      entry.data.deckSlug === deck.slug.replace(/-(ar|en)$/, '') &&
+      entry.data.mode === 'training',
+  )
+  .sort((a, b) => a.data.order - b.data.order);
+const seoTitle = buildSeoTitle(`تدريب ${deck.data.bookTitle}`, {
+  lang: 'ar',
+  section: 'بطاقات المذاكرة',
+});
+const seoDescription = buildSeoDescription(deck.data.summary, [`${cards.length} أسئلة تدريب`]);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">التدريب</p>
+      <h1 class="hero__title">تدريب {deck.data.bookTitle}</h1>
+      <p class="hero__lead">
+        في هذا الوضع يظهر السؤال أولًا، ثم يكشف الجواب بعد المحاولة الذاتية، ليقوى
+        الاستدعاء ويتضح موضع الضعف قبل الانتقال إلى الاختبار.
+      </p>
+    </section>
+
+    <section class="shell section">
+      {cards.length === 0 ? (
+        <article class="notice-card">
+          <h2 class="section-title">لم تُنشر أسئلة التدريب بعد</h2>
+          <p>حين تبدأ دفعات الأسئلة الفعلية، سيعمل هذا الوضع على إخفاء الجواب حتى يحاول الطالب استدعاءه بنفسه.</p>
+        </article>
+      ) : (
+        <div class="grid-two">
+          {cards.map((card) => (
+            <details class="content-card entity-card">
+              <summary>
+                <strong>السؤال {card.data.order}:</strong> {card.data.question}
+              </summary>
+              <p>{card.data.answer}</p>
+            </details>
+          ))}
+        </div>
+      )}
+    </section>
+  </main>
+</BaseLayout>
