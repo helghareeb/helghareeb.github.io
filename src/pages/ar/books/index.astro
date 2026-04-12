@@ -3,17 +3,29 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const books = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'ar')
   .slice(0, 6);
+const seoTitle = buildSeoTitle('قسم المؤلفات والكتب المنشورة', {
+  lang: 'ar',
+  section: 'الكتب',
+});
+const seoDescription = buildSeoDescription(
+  'قسم الكتب العربي الذي يجمع المؤلفات المنشورة وبياناتها وروابطها داخل الموقع.',
+  [
+    `${books.length} أعمال ظاهرة`,
+    books[0]?.data.year ? `أحدث سنة ظاهرة ${books[0].data.year}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="الكتب | د. هيثم الغريب"
-  description="قسم الكتب والمؤلفات ضمن الموقع الشخصي العلمي"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">

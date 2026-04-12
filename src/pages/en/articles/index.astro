@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getArticleSeriesPath, getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const allArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
@@ -43,21 +44,33 @@ for (const article of allArticles) {
 const featuredSeries = Array.from(seriesMap.values())
   .sort((a, b) => b.count - a.count)
   .slice(0, 3);
+const seoTitle = buildSeoTitle('Articles, essays, and thematic series', {
+  lang: 'en',
+  section: 'Articles',
+});
+const seoDescription = buildSeoDescription(
+  'English articles archive gathering original writing, translated materials, and organized series.',
+  [
+    `${allArticles.length} published entries`,
+    featuredSeries.length ? `${featuredSeries.length} featured series` : undefined,
+    articles[0]?.data.date ? `Latest update ${articles[0].data.date}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Articles | Dr. Haitham A. El-Ghareeb"
-  description="Articles and thematic series section of the personal scholarly website"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Articles</p>
       <h1 class="hero__title">Articles, essays, and thematic series</h1>
       <p class="hero__lead">
-        This section is designed as the website's ongoing publishing space, gathering original
-        articles, selected externally published pieces, and future thematic series in a clear archive.
+        This section serves as the website's publishing space, gathering original articles,
+        selected externally published pieces, and thematic series in a clear archive.
       </p>
 
       <div class="hero__badge-row">
@@ -72,8 +85,8 @@ const featuredSeries = Array.from(seriesMap.values())
         <p class="entity-kicker">Purpose</p>
         <h2 class="section-title">A living archive for ongoing publication</h2>
         <p class="section-copy">
-          This archive is prepared for original articles, linked external writing, and thematic
-          series, with structured metadata that supports both browsing and long-term reference.
+          This archive brings together original articles, linked external writing, and thematic
+          series with structured metadata that supports both browsing and long-term reference.
         </p>
         <ul class="entity-tags">
           <li>Date</li>
@@ -87,7 +100,7 @@ const featuredSeries = Array.from(seriesMap.values())
         <p class="entity-kicker">Display readiness</p>
         <ul class="entity-list">
           <li><strong>Current state:</strong> article cards and standalone item pages are active.</li>
-          <li><strong>Next step:</strong> more entries, tags, and deeper classification as needed.</li>
+          <li><strong>Current scope:</strong> entries, series, and source-aware metadata are already in place.</li>
           <li><strong>Goal:</strong> preserve a coherent scholarly archive as the site grows.</li>
         </ul>
       </article>
@@ -167,8 +180,8 @@ const featuredSeries = Array.from(seriesMap.values())
         <article class="notice-card">
           <h2>No English articles are published yet</h2>
           <p>
-            The archive is ready for translated and original English entries. Once article files are
-            added, they will appear here automatically.
+            This archive will display translated and original English entries automatically as soon
+            as article files are added.
           </p>
         </article>
       )}

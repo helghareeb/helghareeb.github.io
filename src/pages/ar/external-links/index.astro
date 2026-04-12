@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const links = (await getCollection('externalLinks'))
   .filter((entry) => entry.data.lang === 'ar')
@@ -11,13 +12,24 @@ const links = (await getCollection('externalLinks'))
 
     return a.data.title.localeCompare(b.data.title, 'ar');
   });
+const seoTitle = buildSeoTitle('روابط تعليمية ومهنية وأعمال منشورة خارج الموقع', {
+  lang: 'ar',
+  section: 'الروابط الخارجية',
+});
+const seoDescription = buildSeoDescription(
+  'أرشيف الروابط الخارجية العربي الذي يجمع الملفات الأكاديمية وصفحات النشر والمراجع التعليمية.',
+  [
+    `${links.length} رابطًا موصوفًا`,
+    links[0]?.data.category,
+  ],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="الروابط الخارجية | د. هيثم الغريب"
-  description="قسم الروابط التعليمية والخارجية المرتبطة بالأعمال والمنشورات"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">

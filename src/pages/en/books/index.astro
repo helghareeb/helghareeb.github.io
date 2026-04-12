@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const books = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'en')
@@ -17,13 +18,24 @@ const books = (await getCollection('books'))
     return a.data.title.localeCompare(b.data.title, 'en');
   })
   .slice(0, 6);
+const seoTitle = buildSeoTitle('Authored and published works', {
+  lang: 'en',
+  section: 'Books',
+});
+const seoDescription = buildSeoDescription(
+  'English books archive for authored works, course books, and publication-ready manuscripts.',
+  [
+    `${books.length} featured entries`,
+    books[0]?.data.year ? `Latest listed year ${books[0].data.year}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Books | Dr. Haitham A. El-Ghareeb"
-  description="Books and authored works section of the personal scholarly website"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
@@ -73,7 +85,7 @@ const books = (await getCollection('books'))
         <article class="content-card entity-card">
           <p class="content-card__meta">Identity</p>
           <h3>What the title is</h3>
-          <p>Each entry can later foreground the book's title and role within the wider scholarly profile.</p>
+          <p>Each entry foregrounds the book's title and role within the wider scholarly profile.</p>
         </article>
         <article class="content-card entity-card">
           <p class="content-card__meta">Publication</p>

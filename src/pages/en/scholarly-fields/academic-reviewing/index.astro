@@ -1,20 +1,30 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('Academic reviewing and assessment experience', {
+  lang: 'en',
+  section: 'Academic Reviewing',
+});
+const seoDescription = buildSeoDescription(
+  'A concise public-facing presentation of academic reviewing and assessment experience within the scholarly website.',
+  ['Reviewing experience', 'Selective presentation'],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Academic Reviewing | Dr. Haitham A. El-Ghareeb"
-  description="A concise presentation of academic reviewing experience"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Academic Reviewing</p>
       <h1 class="hero__title">A concise view of reviewing and assessment experience</h1>
       <p class="hero__lead">
-        This section is intended to present reviewing experience in a concise public-facing form
+        This section presents reviewing experience in a concise public-facing form
         while keeping the emphasis on the nature of the work rather than unnecessary detail.
       </p>
 
@@ -25,9 +35,9 @@ import '../../../../styles/global.css';
     </section>
 
     <section class="shell notice-card">
-      <h2 class="section-title">Planned presentation style</h2>
+      <h2 class="section-title">Presentation style</h2>
       <p>
-        In line with the project documentation, this area is expected to remain brief and selective,
+        In line with the project documentation, this area remains brief and selective,
         highlighting expertise without overloading the page with detail.
       </p>
     </section>

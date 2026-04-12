@@ -1,13 +1,23 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('الدراسات الإسلامية', {
+  lang: 'ar',
+  section: 'المجالات العلمية',
+});
+const seoDescription = buildSeoDescription(
+  'المظلة الأوسع للمحتوى المتصل بالدراسات الإسلامية داخل الموقع، مع ربط بالمقالات والكتب والتحقيقات والأقسام المتخصصة.',
+  ['مرتبط بالمقالات', 'ربط بالأقسام'],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="الدراسات الإسلامية | د. هيثم الغريب"
-  description="القسم المعني بالدراسات الإسلامية ضمن المجالات العلمية"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
@@ -21,7 +31,7 @@ import '../../../../styles/global.css';
       <div class="hero__badge-row">
         <span class="hero__badge">قسم تخصصي</span>
         <span class="hero__badge">مرتبط بالمقالات</span>
-        <span class="hero__badge">مرشح للأرشفة الموضوعية</span>
+        <span class="hero__badge">مدخل للأرشفة الموضوعية</span>
       </div>
     </section>
 

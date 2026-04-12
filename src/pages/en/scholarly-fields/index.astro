@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const fieldCards = [
   {
@@ -35,25 +36,33 @@ const fieldCards = [
   },
   {
     title: 'E-Learning in Islamic Studies',
-    copy: 'A section reserved for educational initiatives and digital approaches to structured Islamic learning.',
+    copy: 'A section for educational initiatives and digital approaches to structured Islamic learning.',
     href: '/en/scholarly-fields/e-learning/',
   },
 ];
+const seoTitle = buildSeoTitle('Specialized scholarly fields', {
+  lang: 'en',
+  section: 'Scholarly Fields',
+});
+const seoDescription = buildSeoDescription(
+  'English gateway to the site’s specialized scholarly fields, including Islamic Studies, Defense of Sunnah, Alukah, manuscripts, AI and Islamic heritage, reviewing, and e-learning.',
+  [`${fieldCards.length} specialized areas`],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Scholarly Fields | Dr. Haitham A. El-Ghareeb"
-  description="A gateway to the main scholarly fields of the website"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--portal">
       <p class="hero__eyebrow">Scholarly Fields</p>
       <h1 class="hero__title">A gateway to the site's specialized scholarly areas</h1>
       <p class="hero__lead">
-        This page introduces the major scholarly fields adopted in the project documentation and
-        prepares the structure for future detailed pages, archives, and topic-linked content.
+        This page introduces the major scholarly fields represented across the site and
+        gathers the main areas through which articles, archives, and related scholarly work are organized.
       </p>
 
       <div class="hero__badge-row">
@@ -73,8 +82,8 @@ const fieldCards = [
         <p class="section-kicker">Project structure</p>
         <h2 class="section-title">Fields anchored in the current site plan</h2>
         <p class="section-copy">
-          The current implementation establishes a clear entry point for these areas while leaving
-          room for later expansion into dedicated pages, series, and richer internal navigation.
+          The current implementation provides a clear entry point for these areas, with
+          dedicated pages and a structure that supports deeper series and internal navigation.
         </p>
       </div>
 

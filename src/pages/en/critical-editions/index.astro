@@ -3,17 +3,29 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const editions = (await getCollection('editions'))
   .filter((entry) => entry.data.lang === 'en')
   .slice(0, 6);
+const seoTitle = buildSeoTitle('Scholarly editorial work and manuscript-related projects', {
+  lang: 'en',
+  section: 'Critical Editions',
+});
+const seoDescription = buildSeoDescription(
+  'English archive for critical editions and manuscript-related scholarly work.',
+  [
+    `${editions.length} featured entries`,
+    editions[0]?.data.year ? `Latest listed year ${editions[0].data.year}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Critical Editions | Dr. Haitham A. El-Ghareeb"
-  description="Critical editions and manuscript-related work section"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
@@ -37,7 +49,7 @@ const editions = (await getCollection('editions'))
         <h2 class="section-title">A distinct editorial track within the site</h2>
         <p class="section-copy">
           Critical editions are represented here as an independent scholarly area with their own
-          metadata, status labels, and future potential for dedicated item pages.
+          metadata, status labels, and dedicated item pages inside the archive.
         </p>
 
         <ul class="entity-tags">
@@ -53,7 +65,7 @@ const editions = (await getCollection('editions'))
         <ul class="entity-list">
           <li><strong>Published work:</strong> shown with concise reference information.</li>
           <li><strong>Work in progress:</strong> presented with its current stage.</li>
-          <li><strong>Future path:</strong> larger editions can later receive dedicated pages.</li>
+          <li><strong>Current presentation:</strong> entries already appear as standalone records with structured metadata.</li>
         </ul>
       </article>
     </section>
@@ -67,13 +79,13 @@ const editions = (await getCollection('editions'))
         </article>
         <article class="content-card entity-card">
           <p class="content-card__meta">Progress state</p>
-          <h3>Published or underway</h3>
-          <p>The status line helps visitors distinguish completed editions from ongoing work.</p>
+          <h3>Published or in progress</h3>
+          <p>The status line helps visitors distinguish completed editions from ongoing editorial work.</p>
         </article>
         <article class="content-card entity-card">
           <p class="content-card__meta">Related paths</p>
           <h3>Linked to manuscripts</h3>
-          <p>Later references can connect these entries to the manuscripts field and related articles.</p>
+          <p>These entries can be read alongside the manuscripts field and related articles.</p>
         </article>
       </div>
     </section>

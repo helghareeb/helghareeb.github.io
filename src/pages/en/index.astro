@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
 import { getEntryPath } from '../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../utils/seo';
 
 const featuredBooks = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'en')
@@ -42,13 +43,25 @@ const featuredMedia = (await getCollection('media'))
 const featuredLinks = (await getCollection('externalLinks'))
   .filter((entry) => entry.data.lang === 'en' && entry.data.featured)
   .slice(0, 3);
+const seoTitle = buildSeoTitle('Dr. Haitham A. El-Ghareeb', {
+  lang: 'en',
+  section: 'Personal Scholarly Website',
+});
+const seoDescription = buildSeoDescription(
+  'English gateway to a bilingual scholarly website featuring books, critical editions, articles, projects, media, and scholarly fields.',
+  [
+    `${featuredArticles.length} recent articles highlighted`,
+    `${featuredBooks.length} books highlighted`,
+    `${featuredFields.length} featured scholarly fields`,
+  ],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Dr. Haitham A. El-Ghareeb | Personal Scholarly Website"
-  description="English interface of the personal scholarly website of Dr. Haitham A. El-Ghareeb"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--home">
     <section class="shell hero hero--home">
@@ -62,7 +75,7 @@ const featuredLinks = (await getCollection('externalLinks'))
       <div class="hero__badge-row">
         <span class="hero__badge">Arabic-first structure</span>
         <span class="hero__badge">Bilingual experience</span>
-        <span class="hero__badge">Built for gradual growth</span>
+        <span class="hero__badge">Structured scholarly archive</span>
       </div>
 
       <div class="hero__actions">
@@ -158,7 +171,7 @@ const featuredLinks = (await getCollection('externalLinks'))
     <section class="shell section">
       <div class="section-heading">
         <p class="section-kicker">Projects, media, and links</p>
-        <h2 class="section-title">Tracks ready for gradual activation</h2>
+        <h2 class="section-title">Additional tracks within the site structure</h2>
       </div>
 
       <div class="grid-three">
@@ -210,10 +223,10 @@ const featuredLinks = (await getCollection('externalLinks'))
     <section class="shell cta-panel">
       <div>
         <p class="section-kicker">Organized foundation</p>
-        <h2 class="section-title">The site is now prepared for structured growth</h2>
+        <h2 class="section-title">The site now supports structured publication and expansion</h2>
         <p class="section-copy">
-          Future work can now focus on approved content and refinement rather than restructuring
-          the architecture each time a new section is activated.
+          Work can now focus on approved content and refinement rather than repeated structural
+          rebuilding each time a section gains new material.
         </p>
       </div>
       <div class="hero__actions">

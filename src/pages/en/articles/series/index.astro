@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { getArticleSeriesPath } from '../../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
 const articles = (await getCollection('articles')).filter((entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.series);
 
@@ -52,13 +53,24 @@ const seriesEntries = Array.from(seriesMap.values()).sort((a, b) => {
 
   return bTime - aTime;
 });
+const seoTitle = buildSeoTitle('Article series archive', {
+  lang: 'en',
+  section: 'Article Series',
+});
+const seoDescription = buildSeoDescription(
+  'Index of English article series published inside the site archive.',
+  [
+    `${seriesEntries.length} series`,
+    seriesEntries[0]?.latestDate ? `Latest update ${seriesEntries[0].latestDate}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Article Series | Dr. Haitham A. El-Ghareeb"
-  description="Index of article series inside the English section of the scholarly website"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--portal">
@@ -105,8 +117,8 @@ const seriesEntries = Array.from(seriesMap.values()).sort((a, b) => {
         <article class="notice-card">
           <h2>No English article series are published yet</h2>
           <p>
-            The route is now ready for translated or originally English series as they are added to
-            the archive.
+            This page will list translated or originally English series automatically as they are
+            added to the archive.
           </p>
         </article>
       )}

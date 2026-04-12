@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const links = (await getCollection('externalLinks'))
   .filter((entry) => entry.data.lang === 'en')
@@ -11,20 +12,31 @@ const links = (await getCollection('externalLinks'))
 
     return a.data.title.localeCompare(b.data.title, 'en');
   });
+const seoTitle = buildSeoTitle('Educational resources and externally hosted work', {
+  lang: 'en',
+  section: 'External Links',
+});
+const seoDescription = buildSeoDescription(
+  'English archive of external links covering academic profiles, publications, and educational resources.',
+  [
+    `${links.length} documented links`,
+    links[0]?.data.category,
+  ],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="External Links | Dr. Haitham A. El-Ghareeb"
-  description="Educational, professional, and publication-related external links"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">External Links</p>
       <h1 class="hero__title">Educational resources and externally hosted work</h1>
       <p class="hero__lead">
-        This section is intended to gather useful external resources, professional links, and pages
+        This section gathers useful external resources, professional links, and pages
         where books, articles, or related scholarly work are published outside the website itself.
       </p>
 
@@ -40,7 +52,7 @@ const links = (await getCollection('externalLinks'))
         <p class="entity-kicker">Section character</p>
         <h2 class="section-title">Documented links rather than a raw list</h2>
         <p class="section-copy">
-          This area is intended to collect external links with concise descriptions, type labels,
+          This area collects external links with concise descriptions, type labels,
           and source context so links remain meaningful within the logic of the website.
         </p>
         <ul class="entity-tags">

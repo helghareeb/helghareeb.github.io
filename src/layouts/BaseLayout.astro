@@ -26,6 +26,9 @@ const currentPath = Astro.url.pathname;
 const canonicalUrl = new URL(currentPath, siteConfig.siteUrl).toString();
 const alternatePath = await getAlternateLocalePath(currentPath, lang);
 const alternateUrl = new URL(alternatePath, siteConfig.siteUrl).toString();
+const socialImageUrl = new URL('/og-image.svg', siteConfig.siteUrl);
+socialImageUrl.searchParams.set('title', title);
+socialImageUrl.searchParams.set('lang', lang);
 const robotsContent = noindex
   ? 'noindex,nofollow'
   : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
@@ -57,6 +60,7 @@ const structuredData = {
       '@id': `${canonicalUrl}#webpage`,
       url: canonicalUrl,
       name: title,
+      image: socialImageUrl.toString(),
       isPartOf: { '@id': `${siteConfig.siteUrl}/#website` },
       about: { '@id': `${siteConfig.siteUrl}/#person` },
       inLanguage: lang,
@@ -81,9 +85,15 @@ const structuredData = {
     <meta property="og:description" content={normalizedDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:locale" content={lang === 'ar' ? 'ar_AR' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'ar' ? 'en_US' : 'ar_AR'} />
+    <meta property="og:image" content={socialImageUrl.toString()} />
+    <meta property="og:image:alt" content={title} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={normalizedDescription} />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:image" content={socialImageUrl.toString()} />
+    <meta name="twitter:image:alt" content={title} />
     <meta name="theme-color" content="#f5efe3" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang={lang} href={canonicalUrl} />

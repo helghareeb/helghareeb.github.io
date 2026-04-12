@@ -1,20 +1,30 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('Alukah publications gateway', {
+  lang: 'en',
+  section: 'Alukah',
+});
+const seoDescription = buildSeoDescription(
+  'Gateway to Alukah-related content inside the site, including article lists, summaries, and source links.',
+  ['External publications', 'Connected article archive'],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Alukah | Dr. Haitham A. El-Ghareeb"
-  description="A dedicated area for Alukah articles, summaries, and external references"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Alukah</p>
       <h1 class="hero__title">An internal gateway to Alukah publications</h1>
       <p class="hero__lead">
-        This section prepares the site to collect Alukah articles in one place and present them
+        This section gathers Alukah articles in one place and presents them
         as part of the broader scholarly archive rather than as isolated external links.
       </p>
 
@@ -35,7 +45,7 @@ import '../../../../styles/global.css';
           <p class="content-card__meta">Structure</p>
           <h2 class="section-title">Summaries and source links</h2>
           <p>
-            Future entries can include the article title, summary, original source link, category,
+            Entries can include the article title, summary, original source link, category,
             and whether a local site version also exists.
           </p>
         </article>

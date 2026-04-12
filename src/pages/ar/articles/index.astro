@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getArticleSeriesPath, getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const allArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
@@ -44,13 +45,25 @@ for (const article of allArticles) {
 const featuredSeries = Array.from(seriesMap.values())
   .sort((a, b) => b.count - a.count)
   .slice(0, 3);
+const seoTitle = buildSeoTitle('أرشفة المقالات والسلاسل العلمية', {
+  lang: 'ar',
+  section: 'المقالات',
+});
+const seoDescription = buildSeoDescription(
+  'أرشيف المقالات العربي الذي يجمع المقالات الأصلية والمنشورة خارجيًا والسلاسل العلمية داخل الموقع.',
+  [
+    `${allArticles.length} مادة منشورة`,
+    featuredSeries.length ? `${featuredSeries.length} سلاسل بارزة` : undefined,
+    articles[0]?.data.date ? `آخر تحديث ${articles[0].data.date}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="المقالات | د. هيثم الغريب"
-  description="قسم المقالات والسلاسل العلمية ضمن الموقع الشخصي العلمي"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
@@ -73,7 +86,7 @@ const featuredSeries = Array.from(seriesMap.values())
         <p class="entity-kicker">وظيفة القسم</p>
         <h2 class="section-title">مساحة للنشر والتوثيق المستمر</h2>
         <p class="section-copy">
-          سيجمع هذا الأرشيف المقالات الأصلية، والكتابات المرتبطة بسلاسل علمية، والمواد ذات
+          يجمع هذا الأرشيف المقالات الأصلية، والكتابات المرتبطة بسلاسل علمية، والمواد ذات
           الصلة بالنشر الخارجي، ضمن بنية تسهل الرجوع والربط بين الموضوعات.
         </p>
         <ul class="entity-tags">
@@ -88,7 +101,7 @@ const featuredSeries = Array.from(seriesMap.values())
         <p class="entity-kicker">جاهزية العرض</p>
         <ul class="entity-list">
           <li><strong>الحالة الحالية:</strong> بطاقات وصفحات مفردة للمقالات، مع سلسلة مستوردة ومنظمة داخل الموقع.</li>
-          <li><strong>التطوير القادم:</strong> مزيد من المقالات والوسوم والتصنيفات عند الحاجة.</li>
+          <li><strong>النطاق الحالي:</strong> مقالات منشورة وسلاسل مرتبة وبيانات مصدر وتصنيف وزمن قراءة.</li>
           <li><strong>الهدف:</strong> جعل القسم مرجعًا حيًا للنشر العلمي والمعرفي.</li>
         </ul>
       </article>

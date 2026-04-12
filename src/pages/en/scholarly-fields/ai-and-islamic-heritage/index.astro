@@ -1,13 +1,23 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('AI and Islamic Heritage', {
+  lang: 'en',
+  section: 'Scholarly Field',
+});
+const seoDescription = buildSeoDescription(
+  'A field page connecting AI, digital tools, and the service of Islamic heritage through projects, analytical articles, and conceptual framing.',
+  ['Digital vision', 'Applied scholarly projects'],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="AI and Islamic Heritage | Dr. Haitham A. El-Ghareeb"
-  description="A section for ideas and projects linking AI with Islamic heritage"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
@@ -15,7 +25,7 @@ import '../../../../styles/global.css';
       <h1 class="hero__title">A space for digital vision in the service of heritage</h1>
       <p class="hero__lead">
         This section highlights the relationship between contemporary digital tools and the service
-        of Islamic heritage, including organization, archival thinking, and future-facing projects.
+        of Islamic heritage, including organization, archival thinking, and applied scholarly projects.
       </p>
 
       <div class="hero__badge-row">
@@ -32,7 +42,7 @@ import '../../../../styles/global.css';
         </article>
         <article class="feature-card">
           <h3>Applied projects</h3>
-          <p>Preparing space for initiatives that work with data, texts, and research workflows.</p>
+          <p>Highlighting initiatives that work with data, texts, and research workflows.</p>
         </article>
         <article class="feature-card">
           <h3>Analytical articles</h3>

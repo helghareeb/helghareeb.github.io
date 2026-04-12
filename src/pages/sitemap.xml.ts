@@ -52,6 +52,21 @@ const staticPaths = [
   '/en/scholarly-fields/e-learning/',
 ];
 
+const xmlEscape = (value: string) =>
+  value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&apos;');
+
+const toSitemapUrl = (path: string, lastmod?: string) => {
+  const loc = xmlEscape(new URL(path, siteConfig.siteUrl).toString());
+  const lastmodTag = lastmod ? `<lastmod>${lastmod}</lastmod>` : '';
+
+  return `  <url><loc>${loc}</loc>${lastmodTag}</url>`;
+};
+
 export const GET: APIRoute = async () => {
   const [articles, books, editions, projects, media, externalLinks] = await Promise.all([
     getCollection('articles'),
@@ -62,46 +77,57 @@ export const GET: APIRoute = async () => {
     getCollection('externalLinks'),
   ]);
 
-  const urls = new Set<string>(staticPaths);
+  const urls = new Map<string, string | undefined>();
+
+  for (const path of staticPaths) {
+    urls.set(path, undefined);
+  }
 
   for (const entry of articles.filter((item) => !item.data.draft)) {
-    urls.add(getEntryPath('articles', entry.data.lang, entry.slug));
+    urls.set(getEntryPath('articles', entry.data.lang, entry.slug), entry.data.date);
     if (entry.data.seriesSlug) {
-      urls.add(getArticleSeriesPath(entry.data.lang, entry.data.seriesSlug));
+      const seriesPath = getArticleSeriesPath(entry.data.lang, entry.data.seriesSlug);
+      const existingLastmod = urls.get(seriesPath);
+
+      if (!existingLastmod || new Date(entry.data.date).getTime() >= new Date(existingLastmod).getTime()) {
+        urls.set(seriesPath, entry.data.date);
+      }
     }
   }
 
   for (const entry of books) {
-    urls.add(getEntryPath('books', entry.data.lang, entry.slug));
+    urls.set(getEntryPath('books', entry.data.lang, entry.slug), entry.data.year ? `${entry.data.year}-01-01` : undefined);
   }
 
   for (const entry of editions) {
-    urls.add(getEntryPath('editions', entry.data.lang, entry.slug));
+    urls.set(getEntryPath('editions', entry.data.lang, entry.slug), entry.data.year ? `${entry.data.year}-01-01` : undefined);
   }
 
   for (const entry of projects) {
-    urls.add(getEntryPath('projects', entry.data.lang, entry.slug));
+    urls.set(getEntryPath('projects', entry.data.lang, entry.slug), entry.data.startYear ? `${entry.data.startYear}-01-01` : undefined);
   }
 
   for (const entry of media) {
-    urls.add(getEntryPath('media', entry.data.lang, entry.slug));
+    urls.set(getEntryPath('media', entry.data.lang, entry.slug), undefined);
   }
 
   for (const entry of externalLinks) {
-    urls.add(getEntryPath('externalLinks', entry.data.lang, entry.slug));
+    urls.set(getEntryPath('externalLinks', entry.data.lang, entry.slug), undefined);
   }
 
   for (const locale of Object.keys(navigation) as Array<keyof typeof navigation>) {
     for (const link of navigation[locale]) {
-      urls.add(link.href);
+      if (!urls.has(link.href)) {
+        urls.set(link.href, undefined);
+      }
     }
   }
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${Array.from(urls)
-  .sort()
-  .map((path) => `  <url><loc>${new URL(path, siteConfig.siteUrl).toString()}</loc></url>`)
+${Array.from(urls.entries())
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([path, lastmod]) => toSitemapUrl(path, lastmod))
   .join('\n')}
 </urlset>`;
 

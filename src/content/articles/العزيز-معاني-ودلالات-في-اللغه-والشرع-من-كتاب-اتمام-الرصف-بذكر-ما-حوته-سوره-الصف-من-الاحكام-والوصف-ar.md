@@ -4,6 +4,7 @@ lang: "ar"
 date: "2025-04-08"
 summary: "العزيز: معاني ودلالات في اللغة والشرع"
 category: "عقيدة وتوحيد"
+translationKey: "alukah-al-aziz-meanings-and-implications"
 series: "إتمام الرصف بذكر ما حوته سورة الصف من الأحكام والوصف"
 seriesSlug: "اتمام-الرصف-بذكر-ما-حوته-سوره-الصف-من-الاحكام-والوصف"
 seriesOrder: 5

@@ -2,6 +2,551 @@
 
 ## 2026-04-12
 ### ما أُنجز
+- استكمال جولة SEO التحريرية لتشمل البوابات العليا وصفحات المجالات العلمية، عبر:
+  - `src/pages/en/index.astro`
+  - `src/pages/ar/index.astro`
+  - `src/pages/en/scholarly-fields/index.astro`
+  - `src/pages/ar/fields/index.astro`
+  - جميع صفحات المجالات العلمية الفرعية الظاهرة في اللغتين ضمن:
+    - `src/pages/en/scholarly-fields/*/index.astro`
+    - `src/pages/ar/fields/*/index.astro`
+- أصبحت هذه الصفحات تولد `title` و`description` عبر helper الـ SEO بدل الصيغ العامة الثابتة.
+- جرى أيضًا تخفيف آخر بقايا الصياغة التمهيدية الظاهرة في بعض الـ badges والنصوص القصيرة داخل الواجهة.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- صار مسار SEO التحريري ممتدًا الآن من القالب العام إلى المداخل المفردة، ثم الأرشيفات، ثم البوابات العليا والمجالات العلمية.
+
+## 2026-04-12
+### ما أُنجز
+- استكمال جولة SEO التحريرية على بقية الأرشيفات الأساسية عبر تطبيق helper الـ SEO على:
+  - `src/pages/en/critical-editions/index.astro`
+  - `src/pages/ar/editions/index.astro`
+  - `src/pages/en/projects/index.astro`
+  - `src/pages/ar/projects/index.astro`
+  - `src/pages/en/media/index.astro`
+  - `src/pages/ar/media/index.astro`
+  - `src/pages/en/external-links/index.astro`
+  - `src/pages/ar/external-links/index.astro`
+- أصبحت هذه الصفحات تولد `title` و`description` اعتمادًا على عدد العناصر الظاهرة وبعض المؤشرات السياقية بدل الصيغ العامة الثابتة.
+- أُزيلت خلال هذه الجولة أيضًا عبارة `نماذج أولية` من صفحة الوسائط العربية الظاهرة.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- صار تحسين SEO التحريري ممتدًا الآن عبر معظم المداخل المفردة والأرشيفات الأساسية في الموقع العربي والإنجليزي.
+
+## 2026-04-12
+### ما أُنجز
+- استكمال جولة SEO التحريرية لتشمل صفحات الأرشيفات والسلاسل الأساسية، عبر تطبيق helper الـ SEO على:
+  - `src/pages/en/articles/index.astro`
+  - `src/pages/ar/articles/index.astro`
+  - `src/pages/en/articles/series/index.astro`
+  - `src/pages/ar/articles/series/index.astro`
+  - `src/pages/en/articles/series/[series].astro`
+  - `src/pages/ar/articles/series/[series].astro`
+  - `src/pages/en/books/index.astro`
+  - `src/pages/ar/books/index.astro`
+- أصبحت هذه الصفحات تولد عناوين وأوصاف أكثر دقة اعتمادًا على:
+  - عدد المواد
+  - عدد السلاسل
+  - أحدث تاريخ ظاهر
+  - اسم السلسلة أو طبيعة الأرشيف
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- صار تحسين SEO التحريري ممتدًا الآن بين المداخل المفردة والصفحات الجامعة معًا، لا مقتصرًا على أحدهما دون الآخر.
+
+## 2026-04-12
+### ما أُنجز
+- تنفيذ جولة SEO تحريرية على المداخل المفردة الأساسية عبر إضافة helper جديد داخل:
+  - `src/utils/seo.ts`
+- استخدام هذا helper في القوالب المفردة للأنواع الآتية بالعربية والإنجليزية:
+  - المقالات
+  - الكتب
+  - التحقيقات
+  - المشروعات
+  - الوسائط
+- أصبح بناء `title` أكثر اتزانًا بحسب طول العنوان، مع تقليل الإطالة غير الضرورية.
+- أصبح بناء `description` يستفيد من `summary` مع ضم معلومات سياقية مفيدة عند توفرها مثل:
+  - التصنيف
+  - المصدر
+  - السلسلة
+  - نوع العمل
+  - الناشر
+  - السنة
+  - الحالة
+  - المنصة
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- لم يعد تحسين SEO مقتصرًا على القالب العام والخرائط والميتاداتا، بل صار يشمل أيضًا العناوين والأوصاف الفعلية للصفحات المفردة نفسها.
+
+## 2026-04-12
+### ما أُنجز
+- إضافة checklist مختصرة للنشر والمراجعة السريعة داخل:
+  - `project-docs/release-deploy-checklist.md`
+- جمعت هذه القائمة النقاط التنفيذية الأهم قبل النشر وبعده، مثل:
+  - تشغيل `npm run check`
+  - تحديث ملفات التوثيق
+  - مراجعة الصفحات الأساسية بعد النشر
+  - التحقق من `robots.txt` و`sitemap.xml`
+  - مراجعة عداد GoatCounter عند تفعيله
+
+### تحقق تقني
+- هذه الجولة توثيقية تشغيلية ولا تتطلب تعديلًا برمجيًا في التطبيق نفسه.
+
+### الحالة الحالية
+- صار للمشروع الآن مرجعان عمليان متكاملان:
+  - مذكرة تفعيل SEO والعداد
+  - وقائمة نشر ومراجعة سريعة قابلة لإعادة الاستخدام
+
+## 2026-04-12
+### ما أُنجز
+- إضافة مذكرة تشغيل مختصرة للخطوات اليدوية المطلوبة بعد النشر داخل:
+  - `project-docs/seo-analytics-activation.md`
+- جمعت المذكرة في مكان واحد خطوات:
+  - ضبط `PUBLIC_GOATCOUNTER_CODE`
+  - إعادة النشر
+  - إضافة الموقع إلى Google Search Console
+  - إرسال `sitemap.xml`
+  - طلب فهرسة الصفحات الأساسية
+  - مراقبة الأرشفة والزيارات بعد التفعيل
+
+### تحقق تقني
+- لم تتطلب هذه الجولة تعديلًا بنيويًا في التطبيق نفسه؛ هي جولة توثيق تشغيلي تربط الجاهزية البرمجية بخطوات التفعيل الفعلية.
+
+### الحالة الحالية
+- صار الانتقال من "الكود جاهز" إلى "القياس والفهرسة يعملان" موثقًا بخطوات قصيرة قابلة للتنفيذ مباشرة.
+
+## 2026-04-12
+### ما أُنجز
+- تنفيذ جولة SEO تقنية إضافية داخل المستودع عبر:
+  - `src/layouts/BaseLayout.astro`
+  - `src/pages/og-image.svg.ts`
+  - `src/pages/robots.txt.ts`
+  - `src/pages/sitemap.xml.ts`
+- إضافة صورة اجتماعية افتراضية ديناميكية للموقع تُستخدم في `Open Graph` و`Twitter Cards` اعتمادًا على عنوان الصفحة واللغة.
+- توسيع الميتاداتا لتشمل:
+  - `og:image`
+  - `og:image:alt`
+  - `og:locale:alternate`
+  - `twitter:url`
+  - `twitter:image`
+  - `twitter:image:alt`
+- تحسين `structured data` بربط الصفحة الحالية بصورة المشاركة نفسها.
+- تحسين `robots.txt` بإضافة سطر `Host`.
+- تحسين `sitemap.xml` بإضافة `lastmod` للروابط التي تملك تاريخًا أو سنة مناسبة داخل المحتوى.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- صار التنفيذ المحلي لـ SEO أكثر اكتمالًا من جهة الإشارات الاجتماعية وبيانات الخريطة، ولم يبقَ للتفعيل الكامل إلا الخطوات اليدوية الخارجية مثل Search Console ومتغيرات النشر.
+
+## 2026-04-12
+### ما أُنجز
+- توسيع الجولة التحريرية الخاصة بتقليل لغة "التمهيد" و"المستقبل" لتشمل صفحات إنجليزية إضافية ظاهرة، عبر:
+  - `src/pages/en/index.astro`
+  - `src/pages/en/about/index.astro`
+  - `src/pages/en/contact/index.astro`
+  - `src/pages/en/books/index.astro`
+  - `src/pages/en/projects/index.astro`
+  - `src/pages/en/media/index.astro`
+  - `src/pages/en/site-map/index.astro`
+  - `src/pages/en/articles/series/index.astro`
+  - `src/pages/en/scholarly-fields/defense-of-sunnah/index.astro`
+  - `src/pages/en/scholarly-fields/islamic-studies/index.astro`
+  - `src/pages/en/scholarly-fields/e-learning/index.astro`
+  - `src/pages/en/scholarly-fields/ai-and-islamic-heritage/index.astro`
+  - مع لمسات إضافية في `src/pages/ar/index.astro` و`src/pages/en/scholarly-fields/index.astro`.
+- استبدال عبارات مثل `reserved`, `ready`, `later`, `planned`, و`قيد التنظيم` بصياغة أدق تعكس الحالة الحالية للموقع ومساراته المنشورة.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ما عادت الصفحات الظاهرة المستهدفة تعتمد على لغة تمهيدية بارزة، وأصبح الخطاب التحريري العام أوضح وأكثر نضجًا في الواجهة العربية والإنجليزية.
+
+## 2026-04-12
+### ما أُنجز
+- تنفيذ جولة تحريرية إضافية لتقليل الصياغات التي توحي بأن الأقسام "تمهيدية" أو "مستقبلية" في عدد من الصفحات الظاهرة، عبر:
+  - `src/pages/ar/index.astro`
+  - `src/pages/en/articles/index.astro`
+  - `src/pages/en/critical-editions/index.astro`
+  - `src/pages/en/scholarly-fields/index.astro`
+- تحويل الوصف التحريري في هذه الصفحات من لغة الإعداد والانتظار إلى لغة تعكس الحالة الحالية للموقع بوصفه أرشيفًا منشورًا ومتسعًا.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- لم تتغير أعداد المحتوى في هذه الجولة، لكن الخطاب الظاهر للزائر صار أكثر اتساقًا مع واقع الموقع الفعلي.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الثامنة والثلاثين والأخيرة من ترجمة مقالات الألوكة الحالية إلى الإنجليزية عبر:
+  - `src/content/articles/the-prophetic-sunnah-is-revelation-sermon-en.md`
+  - `src/content/articles/friday-sermon-on-the-day-of-arafah-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثامنة والثلاثين لضمان اكتمال الربط الصحيح بين النسختين.
+- إغلاق قائمة المقالات العربية المتبقية من الألوكة، بحيث لم يعد داخل المحتوى الحالي أي مقال ألوكة عربي بلا `translationKey`.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `151`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `149` مقالة عبر أول ثمانٍ وثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة السابعة والثلاثين من ترجمة مقالات الألوكة إلى الإنجليزية عبر:
+  - `src/content/articles/role-of-youth-in-building-the-ummah-sermon-en.md`
+  - `src/content/articles/al-wala-and-al-bara-sermon-en.md`
+  - `src/content/articles/the-best-deeds-in-the-first-ten-days-of-dhu-al-hijjah-en.md`
+  - `src/content/articles/the-authority-of-the-prophetic-sunnah-and-some-of-its-proofs-from-the-quran-and-the-purified-sunnah-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة السابعة والثلاثين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع المحتوى الإنجليزي بمواد جديدة في:
+  - مواضيع عامة
+  - العقيدة والتوحيد
+  - خطب المناسبات
+  - الحديث وعلومه
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `149`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `147` مقالة عبر أول سبعٍ وثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة السادسة والثلاثين من ترجمة مقالات الألوكة إلى الإنجليزية عبر:
+  - `src/content/articles/if-they-are-sincere-to-allah-and-his-messenger-en.md`
+  - `src/content/articles/summary-of-al-mujmalat-al-nafiat-2-knowledge-en.md`
+  - `src/content/articles/how-can-my-heart-be-sound-en.md`
+  - `src/content/articles/an-enduring-challenge-for-more-than-fourteen-centuries-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة السادسة والثلاثين لضمان استمرار الربط الصحيح بين النسختين.
+- استكمال السلسلة الإنجليزية:
+  - `Summary of Al-Mujmalat al-Nafi'at fi Masa'il al-Ilm wa-al-Taqlid wa-al-Ifta' wa-al-Ikhtilafat`
+  بإضافة الحلقة `2`، ليكتمل تسلسلها من `1` إلى `5`.
+- ملاحظة بنيوية: ارتفع عدد ترجمات الألوكة الإنجليزية بمقدار `4`، لكن إجمالي عدد المقالات الإنجليزية ارتفع بمقدار `3` فقط؛ لأن:
+  - `src/content/articles/if-they-are-sincere-to-allah-and-his-messenger-en.md`
+  كان مدخلًا إنجليزيًا قائمًا مسبقًا، ثم أُعيدت صياغته وربطه هنا بوصفه ترجمة ألوكة مع `translationKey`.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `145`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `143` مقالة عبر أول ستٍّ وثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الخامسة والثلاثين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/summary-of-al-mujmalat-al-nafiat-5-difference-en.md`
+  - `src/content/articles/summary-of-al-mujmalat-al-nafiat-4-ijtihad-and-following-en.md`
+  - `src/content/articles/summary-of-al-mujmalat-al-nafiat-3-taqlid-en.md`
+  - `src/content/articles/summary-of-al-mujmalat-al-nafiat-1-introduction-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الخامسة والثلاثين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع السلسلة الإنجليزية:
+  - `Summary of Al-Mujmalat al-Nafi'at fi Masa'il al-Ilm wa-al-Taqlid wa-al-Ifta' wa-al-Ikhtilafat`
+  بإضافة الحلقات `1` و`3` و`4` و`5`.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `142`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `139` مقالة عبر أول خمسٍ وثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الرابعة والثلاثون من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/summary-of-why-i-did-not-become-shia-1-introduction-en.md`
+  - `src/content/articles/sermon-on-forms-of-vicegerency-on-earth-en.md`
+  - `src/content/articles/are-all-of-abu-dawuds-shaykhs-trustworthy-en.md`
+  - `src/content/articles/summary-of-why-we-fell-behind-and-others-advanced-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الرابعة والثلاثين لضمان استمرار الربط الصحيح بين النسختين.
+- استكمال السلسلة الإنجليزية:
+  - `Summary of Why I Did Not Become Shia`
+  بإضافة الحلقة `1`، ليكتمل تسلسلها من `1` إلى `7`.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `138`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `135` مقالة عبر أول أربعٍ وثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الثالثة والثلاثين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/summary-of-why-i-did-not-become-shia-5-takfir-of-the-companions-en.md`
+  - `src/content/articles/summary-of-why-i-did-not-become-shia-4-the-bloody-mahdi-en.md`
+  - `src/content/articles/summary-of-why-i-did-not-become-shia-3-doctrinal-foundations-en.md`
+  - `src/content/articles/summary-of-why-i-did-not-become-shia-2-lordship-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثالثة والثلاثين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع السلسلة الإنجليزية:
+  - `Summary of Why I Did Not Become Shia`
+  بإضافة الحلقات `2` و`3` و`4` و`5`.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `134`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `131` مقالة عبر أول ثلاثٍ وثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الثانية والثلاثين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/fiqh-rulings-related-to-khutbat-al-hajah-en.md`
+  - `src/content/articles/sermon-reflections-on-surat-al-ankabut-en.md`
+  - `src/content/articles/summary-of-why-i-did-not-become-shia-7-the-imami-position-toward-muslims-en.md`
+  - `src/content/articles/summary-of-why-i-did-not-become-shia-6-imami-belief-in-taqiyyah-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثانية والثلاثين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع السلسلة الإنجليزية:
+  - `Summary of Why I Did Not Become Shia`
+  بإضافة الحلقتين `6` و`7`.
+- توسيع المحتوى الإنجليزي بمواد جديدة في:
+  - الفقه وأصوله
+  - تفسير القرآن
+  - العقيدة والتوحيد
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `130`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `127` مقالة عبر أول اثنتين وثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الحادية والثلاثين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/imam-al-bukharis-precision-in-reporting-hadith-wording-en.md`
+  - `src/content/articles/sermon-on-the-virtue-of-the-muslim-ummah-over-all-other-nations-en.md`
+  - `src/content/articles/tashif-and-tahrif-their-nature-and-explanation-en.md`
+  - `src/content/articles/on-the-muallaqat-in-sahih-al-bukhari-an-introduction-to-taghliq-al-taliq-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الحادية والثلاثين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع المحتوى الإنجليزي بمواد جديدة في:
+  - الحديث وعلومه
+  - مواضيع عامة
+  - مناهج تحقيق النصوص
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `126`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `123` مقالة عبر أول إحدى وثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الثلاثون من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/harmony-between-word-and-deed-a-quranic-reading-in-light-of-surat-al-saff-en.md`
+  - `src/content/articles/advanced-analysis-of-relationships-between-hadith-narrators-in-sahih-al-bukhari-en.md`
+  - `src/content/articles/the-profitable-trade-in-the-cause-of-allah-reflections-on-surat-al-saff-en.md`
+  - `src/content/articles/of-the-meanings-and-benefits-of-khutbat-al-hajah-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثلاثون لضمان استمرار الربط الصحيح بين النسختين.
+- استكمال السلسلة الإنجليزية:
+  - `Itmam al-Rasf bi-Dhikr ma Hawat-hu Surat al-Saff min al-Ahkam wa-al-Wasf`
+  بإضافة الحلقتين `3` و`4` مع تثبيت اتساق الترتيب داخل السلسلة.
+- توسيع المحتوى الإنجليزي بمواد جديدة في:
+  - التفسير وعلوم القرآن
+  - الحديث وعلومه
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `122`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `119` مقالة عبر أول ثلاثين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة التاسعة والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/be-supporters-of-allah-a-lasting-call-to-aid-and-establishment-en.md`
+  - `src/content/articles/on-the-prohibition-of-greeting-nonmuslims-on-their-religious-festivals-with-evidences-and-categories-en.md`
+  - `src/content/articles/summary-of-itmam-al-rasf-on-surat-al-saff-2-en.md`
+  - `src/content/articles/summary-of-itmam-al-rasf-on-surat-al-saff-1-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة التاسعة والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع السلسلة الإنجليزية:
+  - `Itmam al-Rasf bi-Dhikr ma Hawat-hu Surat al-Saff min al-Ahkam wa-al-Wasf`
+  بإضافة الحلقات `1` و`2` و`9` مع الحفاظ على الترتيب داخل السلسلة.
+- توسيع المحتوى الإنجليزي بمواد جديدة في:
+  - التفسير وعلوم القرآن
+  - العقيدة والتوحيد
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `118`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `115` مقالة عبر أول تسعٍ وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- إضافة `3` كتب منشورة على أمازون داخل الموقع بالعربية والإنجليزية، عبر:
+  - `src/content/books/evaluation-of-service-oriented-architecture-in-elearning-en.md`
+  - `src/content/books/optimizing-service-oriented-architecture-to-support-elearning-en.md`
+  - `src/content/books/enterprise-integration-opportunities-and-challenges-en.md`
+  - `src/content/books/تقييم-المعمارية-الموجهة-للخدمات-في-التعليم-الإلكتروني-ar.md`
+  - `src/content/books/تحسين-المعمارية-الموجهة-للخدمات-لدعم-التعليم-الإلكتروني-ar.md`
+  - `src/content/books/تكامل-المؤسسات-الفرص-والتحديات-ar.md`
+- نشر الدفعة الثامنة والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/misreading-or-bad-faith-refuting-the-objection-to-the-hadith-of-abraham-in-sahih-al-bukhari-en.md`
+  - `src/content/articles/cohesion-and-organization-in-the-ranks-of-fighting-in-the-cause-of-allah-en.md`
+  - `src/content/articles/prophet-jesus-in-surat-al-saff-en.md`
+  - `src/content/articles/al-aziz-meanings-and-implications-in-language-and-revelation-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثامنة والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع المحتوى الإنجليزي بمواد جديدة في:
+  - الحديث وعلومه
+  - التفسير وعلوم القرآن
+  - العقيدة والتوحيد
+- تثبيت حضور الكتب الثلاثة المنشورة على أمازون داخل القسمين العربي والإنجليزي مع روابط مباشرة إلى صفحاتها.
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد الكتب الإنجليزية في `src/content/books/` إلى `10`.
+- ارتفع عدد الكتب العربية في `src/content/books/` إلى `14`.
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `114`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `111` مقالة عبر أول ثمانٍ وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة السابعة والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/glorification-of-inanimate-things-and-non-rational-creatures-en.md`
+  - `src/content/articles/the-greatness-of-islam-and-the-challenges-of-its-enemies-en.md`
+  - `src/content/articles/what-they-said-about-sahih-al-bukhari-en.md`
+  - `src/content/articles/an-overview-of-the-transmissions-and-transmitters-of-sahih-al-bukhari-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة السابعة والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع الترجمة الإنجليزية بمواد جديدة في:
+  - الحديث وعلومه
+  - التفسير وعلوم القرآن
+  - الخواطر الإيمانية والدعوية
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `110`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `107` مقالة عبر أول سبع وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة السادسة والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/criticisms-of-the-two-sahihs-do-not-undermine-them-en.md`
+  - `src/content/articles/method-of-hadith-scholars-in-criticizing-historical-reports-en.md`
+  - `src/content/articles/al-saghanis-baghdadi-copy-of-sahih-al-bukhari-en.md`
+  - `src/content/articles/harming-moses-a-tafsir-and-analytical-reading-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة السادسة والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع الترجمة الإنجليزية بمواد جديدة في:
+  - الحديث وعلومه
+  - نقد الصحيحين
+  - التاريخ والسير
+  - التأملات التفسيرية
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `106`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `103` مقالة عبر أول ست وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الخامسة والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/critique-of-contemporary-methods-for-weakening-sound-hadiths-en.md`
+  - `src/content/articles/equating-sahih-al-bukhari-with-the-quran-en.md`
+  - `src/content/articles/the-falsity-of-measuring-sunnah-against-the-quran-en.md`
+  - `src/content/articles/sermon-on-jizyah-and-the-rulings-of-dhimmah-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الخامسة والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع الترجمة الإنجليزية بمواد جديدة في:
+  - الحديث وعلومه
+  - العلاقة بين السنة والقرآن
+  - قضايا المجتمع
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `102`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `99` مقالة عبر أول خمس وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الرابعة والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/woman-created-from-a-rib-between-revelation-and-modern-doubts-en.md`
+  - `src/content/articles/solitary-reports-and-certainty-en.md`
+  - `src/content/articles/refuting-the-claim-that-bukhari-is-just-a-fallible-man-en.md`
+  - `src/content/articles/deficiency-of-womans-intellect-and-religion-hadith-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الرابعة والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع الترجمة الإنجليزية بمواد جديدة في:
+  - شبهات فكرية وعقدية
+  - الحديث وعلومه
+  - الرد المنهجي على الطعون في صحيح البخاري
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `98`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `95` مقالة عبر أول أربع وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الثالثة والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/insight-in-times-of-tribulation-en.md`
+  - `src/content/articles/mixed-education-and-the-consequences-of-emotional-attachment-en.md`
+  - `src/content/articles/al-bukhari-and-the-ummahs-consensus-on-sahih-al-bukhari-en.md`
+  - `src/content/articles/abu-bakra-and-the-hadith-on-female-rule-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثالثة والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع الترجمة الإنجليزية بمواد جديدة في:
+  - النصائح والمواعظ
+  - الدراسات التربوية
+  - الحديث وعلومه
+  - الدفاع عن المرويات الحديثية
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `94`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `91` مقالة عبر أول ثلاث وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الثانية والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/benefits-from-ibn-rajabs-commentary-on-al-tirmidhis-ilal-1-en.md`
+  - `src/content/articles/tawhid-is-the-root-of-salvation-and-the-key-to-paradise-en.md`
+  - `src/content/articles/heedlessness-its-effects-and-harms-sermon-en.md`
+  - `src/content/articles/choice-statements-from-the-salaf-on-what-is-necessarily-known-of-the-religion-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثانية والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع الترجمة الإنجليزية بمواد جديدة في:
+  - الحديث وعلومه
+  - التوحيد
+  - الرقائق والأخلاق
+  - مسائل المعلوم من الدين بالضرورة
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `90`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `87` مقالة عبر أول اثنتين وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
 - تنفيذ جولة تحسينات SEO بنيوية شملت:
   - توسيع `BaseLayout` بإضافة `canonical`
   - روابط `hreflang`

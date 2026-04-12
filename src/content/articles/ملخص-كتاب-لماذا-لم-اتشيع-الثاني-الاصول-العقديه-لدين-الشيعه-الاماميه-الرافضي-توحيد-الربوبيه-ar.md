@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-11-19"
 summary: "ملخص كتاب: لماذا لم أتشيع"
 category: "عقيدة وتوحيد"
+translationKey: "alukah-why-i-did-not-become-shia-2"
 series: "ملخص كتاب: لماذا لم أتشيع"
 seriesSlug: "ملخص-كتاب-لماذا-لم-اتشيع"
 seriesOrder: 2

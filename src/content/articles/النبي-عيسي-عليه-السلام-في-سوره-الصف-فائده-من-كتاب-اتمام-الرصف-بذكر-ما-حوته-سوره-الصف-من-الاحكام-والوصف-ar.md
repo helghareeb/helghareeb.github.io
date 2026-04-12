@@ -4,6 +4,7 @@ lang: "ar"
 date: "2025-05-10"
 summary: "النبي عيسى عليه السلام في سورة الصف"
 category: "التفسير وعلوم القرآن"
+translationKey: "alukah-prophet-jesus-in-surat-al-saff"
 series: "إتمام الرصف بذكر ما حوته سورة الصف من الأحكام والوصف"
 seriesSlug: "اتمام-الرصف-بذكر-ما-حوته-سوره-الصف-من-الاحكام-والوصف"
 seriesOrder: 8

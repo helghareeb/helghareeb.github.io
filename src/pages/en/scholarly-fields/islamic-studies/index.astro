@@ -1,20 +1,30 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('Islamic Studies', {
+  lang: 'en',
+  section: 'Scholarly Field',
+});
+const seoDescription = buildSeoDescription(
+  'The broadest scholarly field in the site, linking Islamic heritage, Hadith, methodology, and related content across the archive.',
+  ['Linked archives', 'Related scholarly content'],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Islamic Studies | Dr. Haitham A. El-Ghareeb"
-  description="The Islamic Studies section within the scholarly fields structure"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Islamic Studies</p>
       <h1 class="hero__title">The broadest scholarly umbrella of the project</h1>
       <p class="hero__lead">
-        This section is intended to gather the major Islamic studies themes connected to the site,
+        This section gathers the major Islamic studies themes connected to the site,
         and to serve as a conceptual frame linking the more specialized areas.
       </p>
 
@@ -31,7 +41,7 @@ import '../../../../styles/global.css';
           <p class="content-card__meta">Purpose</p>
           <h2 class="section-title">A general entry point</h2>
           <p>
-            It will later gather articles, works, and themes related to Islamic heritage, Hadith,
+            It gathers articles, works, and themes related to Islamic heritage, Hadith,
             method, and neighboring scholarly concerns.
           </p>
         </article>
@@ -39,8 +49,8 @@ import '../../../../styles/global.css';
           <p class="content-card__meta">Expansion</p>
           <h2 class="section-title">Linked archives and related content</h2>
           <p>
-            The section prepares for future internal archives and thematic connections across books,
-            articles, and critical editions.
+            The section supports internal archives and thematic connections across books, articles,
+            and critical editions.
           </p>
         </article>
       </div>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const fieldCards = [
   {
@@ -39,13 +40,21 @@ const fieldCards = [
     href: '/ar/fields/e-learning/',
   },
 ];
+const seoTitle = buildSeoTitle('بوابة المجالات العلمية المتخصصة', {
+  lang: 'ar',
+  section: 'المجالات العلمية',
+});
+const seoDescription = buildSeoDescription(
+  'بوابة عربية للمجالات العلمية المتخصصة في الموقع، وتشمل الدراسات الإسلامية، والدفاع عن السنة، والألوكة، والمخطوطات، والذكاء الاصطناعي، والتحكيم، والتعليم الإلكتروني.',
+  [`${fieldCards.length} مجالات متخصصة`],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="المجالات العلمية | د. هيثم الغريب"
-  description="بوابة المجالات العلمية المتخصصة ضمن الموقع الشخصي العلمي"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--portal">

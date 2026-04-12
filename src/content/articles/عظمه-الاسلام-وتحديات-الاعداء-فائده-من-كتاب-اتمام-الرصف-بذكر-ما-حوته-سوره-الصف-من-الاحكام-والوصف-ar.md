@@ -4,6 +4,7 @@ lang: "ar"
 date: "2025-06-03"
 summary: "عظمة الإسلام وتحديات الأعداء"
 category: "التفسير وعلوم القرآن"
+translationKey: "alukah-the-greatness-of-islam-and-the-challenges-of-its-enemies"
 series: "إتمام الرصف بذكر ما حوته سورة الصف من الأحكام والوصف"
 seriesSlug: "اتمام-الرصف-بذكر-ما-حوته-سوره-الصف-من-الاحكام-والوصف"
 seriesOrder: 9

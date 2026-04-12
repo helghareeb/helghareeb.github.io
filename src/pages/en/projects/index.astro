@@ -3,22 +3,34 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const projects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'en').slice(0, 6);
+const seoTitle = buildSeoTitle('Scholarly and digital initiatives', {
+  lang: 'en',
+  section: 'Projects',
+});
+const seoDescription = buildSeoDescription(
+  'English archive for scholarly and digital projects connected to the site.',
+  [
+    `${projects.length} featured entries`,
+    projects[0]?.data.startYear ? `Earliest visible year ${projects[0].data.startYear}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Projects | Dr. Haitham A. El-Ghareeb"
-  description="Current and planned scholarly projects"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Projects</p>
       <h1 class="hero__title">A space for scholarly and digital initiatives</h1>
       <p class="hero__lead">
-        This section is designed to document current and planned projects, clarify their scope and
+        This section documents current and planned projects, clarifies their scope and
         status, and connect them to the broader scholarly structure of the website.
       </p>
 
@@ -34,8 +46,8 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
         <p class="entity-kicker">Purpose</p>
         <h2 class="section-title">A single place to document ongoing work</h2>
         <p class="section-copy">
-          Projects can appear here as distinct entries with summaries, status, scope, and later
-          links to outputs, related articles, or supporting pages.
+          Projects appear here as distinct entries with summaries, status, scope, and links to
+          outputs, related articles, or supporting pages when available.
         </p>
 
         <ul class="entity-tags">
@@ -50,7 +62,7 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
         <p class="entity-kicker">Expansion logic</p>
         <ul class="entity-list">
           <li><strong>Current view:</strong> concise project cards for fast orientation.</li>
-          <li><strong>Next stage:</strong> standalone project pages for larger initiatives.</li>
+          <li><strong>Current structure:</strong> standalone project pages can support larger initiatives.</li>
           <li><strong>Value:</strong> the site can track scholarly work as it evolves.</li>
         </ul>
       </article>
@@ -66,12 +78,12 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
         <article class="content-card entity-card">
           <p class="content-card__meta">State</p>
           <h3>Active or planned</h3>
-          <p>Status labels make it easier to understand what is underway and what is still intended.</p>
+          <p>Status labels make it easier to distinguish active initiatives from planned ones.</p>
         </article>
         <article class="content-card entity-card">
           <p class="content-card__meta">Connections</p>
           <h3>Links and outputs</h3>
-          <p>The template is ready to connect each project with related pages or public outputs later.</p>
+          <p>Each project can connect to related pages or public outputs as those links become available.</p>
         </article>
       </div>
     </section>
@@ -96,10 +108,10 @@ const projects = (await getCollection('projects')).filter((entry) => entry.data.
           ))
         ) : (
           <article class="notice-card">
-            <h2 class="section-title">Ready for project entries</h2>
+            <h2 class="section-title">No English project entries are published yet</h2>
             <p>
-              No English project items have been entered yet, but the site structure is now ready
-              to surface them as soon as they are added.
+              This section will display English project records automatically once they are added
+              to the collection.
             </p>
           </article>
         )}

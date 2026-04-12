@@ -3,15 +3,27 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const projects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'ar').slice(0, 6);
+const seoTitle = buildSeoTitle('المشروعات العلمية والرقمية', {
+  lang: 'ar',
+  section: 'المشروعات',
+});
+const seoDescription = buildSeoDescription(
+  'أرشيف المشروعات العربي الذي يعرض المبادرات العلمية والرقمية مع حالتها ووصفها المختصر.',
+  [
+    `${projects.length} مشروعات ظاهرة`,
+    projects[0]?.data.startYear ? `أقدم سنة ظاهرة ${projects[0].data.startYear}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="المشروعات العلمية | د. هيثم الغريب"
-  description="قسم المشروعات العلمية الحالية وما يتصل بها من وصف وروابط"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">

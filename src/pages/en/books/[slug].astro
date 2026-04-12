@@ -4,6 +4,7 @@ import EntityEntryPage from '../../../components/EntityEntryPage.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryRouteSlug } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 export async function getStaticPaths() {
   const entries = (await getCollection('books')).filter((entry) => entry.data.lang === 'en');
@@ -16,9 +17,15 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const seoTitle = buildSeoTitle(entry.data.title, { lang: 'en', section: 'Books' });
+const seoDescription = buildSeoDescription(entry.data.summary, [
+  entry.data.workType,
+  entry.data.publisher,
+  entry.data.year ? `Published ${entry.data.year}` : undefined,
+]);
 ---
 
-<BaseLayout lang="en" dir="ltr" title={`${entry.data.title} | Books`} description={entry.data.summary}>
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
   <EntityEntryPage
     lang="en"
     eyebrow="Book"

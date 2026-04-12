@@ -1,13 +1,23 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('المخطوطات', {
+  lang: 'ar',
+  section: 'المجالات العلمية',
+});
+const seoDescription = buildSeoDescription(
+  'قسم للمخطوطات يجمع الوصف والتحقيق والمنهج والقضايا المتصلة بدراسة النصوص التراثية وخدمتها.',
+  ['مخطوطات', 'وصف وتحقيق'],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="المخطوطات | د. هيثم الغريب"
-  description="قسم المخطوطات وما يتصل بها من وصف وتحقيق ومنهج"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">

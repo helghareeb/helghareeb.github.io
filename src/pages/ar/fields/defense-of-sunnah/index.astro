@@ -1,13 +1,23 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('الدفاع عن السنة والشبهات', {
+  lang: 'ar',
+  section: 'المجالات العلمية',
+});
+const seoDescription = buildSeoDescription(
+  'قسم متخصص للردود العلمية والسلاسل المرتبطة بالدفاع عن السنة ومعالجة الشبهات بمنهج واضح.',
+  ['سلاسل وردود علمية', 'قسم تخصصي'],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="الدفاع عن السنة والشبهات | د. هيثم الغريب"
-  description="قسم الردود العلمية والدفاع عن السنة والشبهات"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">

@@ -1,20 +1,30 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('E-Learning in Islamic Studies', {
+  lang: 'en',
+  section: 'Scholarly Field',
+});
+const seoDescription = buildSeoDescription(
+  'A field page for digital Islamic learning, educational experiments, pedagogical structure, and media-supported teaching.',
+  ['Digital learning', 'Pedagogy and media'],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="E-Learning in Islamic Studies | Dr. Haitham A. El-Ghareeb"
-  description="A section for initiatives and ideas in digital Islamic learning"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">E-Learning in Islamic Studies</p>
       <h1 class="hero__title">Islamic learning in a structured digital setting</h1>
       <p class="hero__lead">
-        This section is reserved for ideas, initiatives, and materials that connect Islamic learning
+        This section presents ideas, initiatives, and materials that connect Islamic learning
         with digital delivery, pedagogical structure, and educational media.
       </p>
 
@@ -25,9 +35,9 @@ import '../../../../styles/global.css';
     </section>
 
     <section class="shell notice-card">
-      <h2 class="section-title">Expected content directions</h2>
+      <h2 class="section-title">Section directions</h2>
       <p>
-        It can later host course-related material, educational experiments, and essays on how digital
+        It can host course-related material, educational experiments, and essays on how digital
         structure can serve the communication of Islamic knowledge.
       </p>
     </section>

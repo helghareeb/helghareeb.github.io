@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { getArticleSeriesPath } from '../../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
 const articles = (await getCollection('articles')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.series);
 
@@ -52,13 +53,24 @@ const seriesEntries = Array.from(seriesMap.values()).sort((a, b) => {
 
   return bTime - aTime;
 });
+const seoTitle = buildSeoTitle('فهرس السلاسل العلمية داخل قسم المقالات', {
+  lang: 'ar',
+  section: 'السلاسل المقالية',
+});
+const seoDescription = buildSeoDescription(
+  'فهرس السلاسل المقالية العربية داخل الموقع مع ترتيب المواد بحسب تسلسلها وتواريخها.',
+  [
+    `${seriesEntries.length} سلسلة`,
+    seriesEntries[0]?.latestDate ? `آخر تحديث ${seriesEntries[0].latestDate}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="السلاسل المقالية | د. هيثم الغريب"
-  description="فهرس السلاسل المقالية داخل الموقع الشخصي العلمي"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--portal">

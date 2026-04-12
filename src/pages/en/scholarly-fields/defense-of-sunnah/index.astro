@@ -1,20 +1,30 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('Defense of Sunnah', {
+  lang: 'en',
+  section: 'Scholarly Field',
+});
+const seoDescription = buildSeoDescription(
+  'A specialized field page for responses to objections, structured clarification, and connected series in defense of the Sunnah.',
+  ['Responses and series', 'Methodical scholarly treatment'],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Defense of Sunnah | Dr. Haitham A. El-Ghareeb"
-  description="A dedicated section for responses, clarification, and defense of Sunnah"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Defense of Sunnah</p>
       <h1 class="hero__title">A section for structured scholarly response</h1>
       <p class="hero__lead">
-        This area is reserved for writing that addresses objections, misunderstandings, and
+        This area gathers writing that addresses objections, misunderstandings, and
         thematic defenses of Sunnah in a methodical and organized way.
       </p>
 
@@ -25,10 +35,10 @@ import '../../../../styles/global.css';
     </section>
 
     <section class="shell notice-card">
-      <h2 class="section-title">Planned content</h2>
+      <h2 class="section-title">Section focus</h2>
       <p>
-        The section is prepared for standalone essays, connected series, and topic-based grouping
-        that will help readers navigate questions and responses coherently.
+        The section brings together standalone essays, connected series, and topic-based grouping
+        to help readers navigate questions and responses coherently.
       </p>
     </section>
   </main>

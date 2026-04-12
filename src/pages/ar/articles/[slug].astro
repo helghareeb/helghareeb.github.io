@@ -4,6 +4,7 @@ import EntityEntryPage from '../../../components/EntityEntryPage.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getArticleSeriesPath, getEntryPath, getEntryRouteSlug } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 export async function getStaticPaths() {
   const entries = (await getCollection('articles')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
@@ -30,9 +31,15 @@ const currentSeriesIndex = seriesEntries.findIndex((item) => item.id === entry.i
 const previousSeriesEntry = currentSeriesIndex > 0 ? seriesEntries[currentSeriesIndex - 1] : undefined;
 const nextSeriesEntry =
   currentSeriesIndex >= 0 && currentSeriesIndex < seriesEntries.length - 1 ? seriesEntries[currentSeriesIndex + 1] : undefined;
+const seoTitle = buildSeoTitle(entry.data.title, { lang: 'ar', section: 'المقالات' });
+const seoDescription = buildSeoDescription(entry.data.summary, [
+  entry.data.category,
+  entry.data.sourceName,
+  entry.data.series,
+]);
 ---
 
-<BaseLayout lang="ar" dir="rtl" title={`${entry.data.title} | المقالات`} description={entry.data.summary}>
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
   <EntityEntryPage
     lang="ar"
     eyebrow="مقال"

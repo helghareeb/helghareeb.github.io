@@ -1,13 +1,23 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('بوابة مقالات الألوكة داخل الموقع', {
+  lang: 'ar',
+  section: 'الألوكة',
+});
+const seoDescription = buildSeoDescription(
+  'بوابة عربية لمحتوى الألوكة داخل الموقع، تضم المقالات والملخصات والروابط الأصلية والربط بالأرشيف العام.',
+  ['منشورات خارجية', 'صلة بالأرشيف العام'],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="الألوكة | د. هيثم الغريب"
-  description="قسم مستقل لمقالات الألوكة وروابطها وملخصاتها"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">

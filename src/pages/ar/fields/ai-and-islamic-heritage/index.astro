@@ -1,13 +1,23 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const seoTitle = buildSeoTitle('الذكاء الاصطناعي والتراث الإسلامي', {
+  lang: 'ar',
+  section: 'المجالات العلمية',
+});
+const seoDescription = buildSeoDescription(
+  'قسم يربط الأدوات الرقمية الحديثة بخدمة التراث الإسلامي عبر الرؤية الفكرية والمشروعات التطبيقية والمقالات التحليلية.',
+  ['رؤية رقمية', 'مشروعات تطبيقية'],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="الذكاء الاصطناعي والتراث الإسلامي | د. هيثم الغريب"
-  description="قسم الرؤى والمشروعات المتعلقة بخدمة التراث الإسلامي بالذكاء الاصطناعي"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">

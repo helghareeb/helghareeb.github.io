@@ -3,15 +3,27 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const media = (await getCollection('media')).filter((entry) => entry.data.lang === 'ar').slice(0, 6);
+const seoTitle = buildSeoTitle('المواد الصوتية والمرئية والمحتوى التعليمي', {
+  lang: 'ar',
+  section: 'الوسائط',
+});
+const seoDescription = buildSeoDescription(
+  'أرشيف الوسائط العربي الذي يجمع المواد الصوتية والمرئية والسلاسل التعليمية وروابطها.',
+  [
+    `${media.length} عناصر ظاهرة`,
+    media[0]?.data.platform,
+  ],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="الوسائط | د. هيثم الغريب"
-  description="قسم المواد الصوتية والمرئية والوسائط العلمية"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
@@ -75,8 +87,8 @@ const media = (await getCollection('media')).filter((entry) => entry.data.lang =
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">نماذج أولية</p>
-        <h2 class="section-title">عناصر وسائط قابلة للتوسعة</h2>
+        <p class="section-kicker">مواد ظاهرة</p>
+        <h2 class="section-title">عناصر الوسائط المدرجة في الأرشيف</h2>
       </div>
 
       <div class="grid-two">

@@ -3,17 +3,29 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const editions = (await getCollection('editions'))
   .filter((entry) => entry.data.lang === 'ar')
   .slice(0, 6);
+const seoTitle = buildSeoTitle('أعمال التحقيق العلمي والمخطوطات', {
+  lang: 'ar',
+  section: 'التحقيقات',
+});
+const seoDescription = buildSeoDescription(
+  'أرشيف التحقيقات العربي الذي يجمع أعمال التحقيق العلمي والمخطوطات وبياناتها الأساسية.',
+  [
+    `${editions.length} أعمال ظاهرة`,
+    editions[0]?.data.year ? `أحدث سنة ظاهرة ${editions[0].data.year}` : undefined,
+  ],
+);
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="التحقيقات | د. هيثم الغريب"
-  description="قسم التحقيقات والمخطوطات ضمن الموقع الشخصي العلمي"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">

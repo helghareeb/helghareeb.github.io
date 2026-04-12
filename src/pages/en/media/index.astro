@@ -3,22 +3,34 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const media = (await getCollection('media')).filter((entry) => entry.data.lang === 'en').slice(0, 6);
+const seoTitle = buildSeoTitle('Audio, video, and educational media materials', {
+  lang: 'en',
+  section: 'Media',
+});
+const seoDescription = buildSeoDescription(
+  'English media archive for recorded lectures, audiovisual materials, and educational series.',
+  [
+    `${media.length} featured entries`,
+    media[0]?.data.platform,
+  ],
+);
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Media | Dr. Haitham A. El-Ghareeb"
-  description="Audio, video, and media-facing scholarly materials"
+  title={seoTitle}
+  description={seoDescription}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Media</p>
       <h1 class="hero__title">Audio, video, and educational media materials</h1>
       <p class="hero__lead">
-        This section is reserved for recorded lectures, audiovisual materials, explanatory series,
+        This section gathers recorded lectures, audiovisual materials, explanatory series,
         and media-linked learning resources, with the option to host large files externally.
       </p>
 
@@ -32,7 +44,7 @@ const media = (await getCollection('media')).filter((entry) => entry.data.lang =
     <section class="shell entity-grid">
       <article class="entity-summary">
         <p class="entity-kicker">Presentation model</p>
-        <h2 class="section-title">Prepared for light metadata and external delivery</h2>
+        <h2 class="section-title">Light metadata with external delivery when needed</h2>
         <p class="section-copy">
           Media records can appear here as compact entries with type, summary, status, and external
           links, while heavier assets remain hosted elsewhere when that is more practical.
@@ -68,7 +80,7 @@ const media = (await getCollection('media')).filter((entry) => entry.data.lang =
         </article>
         <article class="feature-card feature-card--field">
           <h3>Learning series</h3>
-          <p>For structured educational sequences that may later be grouped by topic or audience.</p>
+          <p>For structured educational sequences grouped by topic, audience, or teaching purpose.</p>
         </article>
       </div>
     </section>

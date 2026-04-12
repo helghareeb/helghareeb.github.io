@@ -4,6 +4,7 @@ import EntityEntryPage from '../../../components/EntityEntryPage.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { getEntryRouteSlug } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 export async function getStaticPaths() {
   const entries = (await getCollection('projects')).filter((entry) => entry.data.lang === 'ar');
@@ -16,9 +17,15 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const seoTitle = buildSeoTitle(entry.data.title, { lang: 'ar', section: 'المشروعات' });
+const seoDescription = buildSeoDescription(entry.data.summary, [
+  entry.data.area,
+  entry.data.status,
+  entry.data.startYear ? `بدأ في ${entry.data.startYear}` : undefined,
+]);
 ---
 
-<BaseLayout lang="ar" dir="rtl" title={`${entry.data.title} | المشروعات`} description={entry.data.summary}>
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
   <EntityEntryPage
     lang="ar"
     eyebrow="مشروع"

@@ -4,6 +4,7 @@ lang: "ar"
 date: "2025-02-08"
 summary: "التجارة الرابحة في سبيل الله: تأملات في تفسير سورة الصف من كتاب"
 category: "التفسير وعلوم القرآن"
+translationKey: "alukah-profitable-trade-in-the-cause-of-allah"
 series: "إتمام الرصف بذكر ما حوته سورة الصف من الأحكام والوصف"
 seriesSlug: "اتمام-الرصف-بذكر-ما-حوته-سوره-الصف-من-الاحكام-والوصف"
 seriesOrder: 3

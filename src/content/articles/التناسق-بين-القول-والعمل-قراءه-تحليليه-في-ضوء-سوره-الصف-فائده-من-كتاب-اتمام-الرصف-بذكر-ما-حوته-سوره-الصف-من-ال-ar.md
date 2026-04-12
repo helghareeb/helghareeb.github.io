@@ -4,6 +4,7 @@ lang: "ar"
 date: "2025-02-25"
 summary: "التناسق بين القول والعمل"
 category: "التفسير وعلوم القرآن"
+translationKey: "alukah-harmony-between-word-and-deed"
 series: "إتمام الرصف بذكر ما حوته سورة الصف من الأحكام والوصف"
 seriesSlug: "اتمام-الرصف-بذكر-ما-حوته-سوره-الصف-من-الاحكام-والوصف"
 seriesOrder: 4
