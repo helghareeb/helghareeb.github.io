@@ -7,4 +7,4 @@ order: 1
 featured: true
 ---
 
-Provisional entry enabling the English scholarly fields collection.
+An English field entry gathering work related to Islamic studies and its connected disciplines.

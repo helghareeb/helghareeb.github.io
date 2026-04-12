@@ -4,6 +4,7 @@ lang: "ar"
 date: "2026-02-03"
 summary: "طريق المسلم إلى الله قبل رمضان"
 category: "النصائح والمواعظ"
+translationKey: "alukah-struggling-against-weak-aspiration-and-conceit"
 series: "طريق المسلم إلى الله قبل رمضان"
 seriesSlug: "طريق-المسلم-الي-الله-قبل-رمضان"
 seriesOrder: 4

@@ -421,18 +421,51 @@ def write_article(
     return path
 
 
+def collect_existing_external_urls(output_dir: Path) -> set[str]:
+    urls: set[str] = set()
+    if not output_dir.exists():
+        return urls
+
+    for path in output_dir.glob("*.md"):
+        try:
+            content = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+
+        match = re.search(r'^externalUrl:\s*"([^"]+)"\s*$', content, flags=re.MULTILINE)
+        if match:
+            urls.add(match.group(1).strip())
+
+    return urls
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Import an Alukah author archive into Astro article files.")
     parser.add_argument("--author-url", default="https://www.alukah.net/authors/view/home/16869/")
     parser.add_argument("--output-dir", type=Path, default=Path("src/content/articles"))
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument(
+        "--only-new",
+        action="store_true",
+        help="Skip articles whose externalUrl already exists in the output directory.",
+    )
     args = parser.parse_args()
 
     opener = build_opener()
     entries = fetch_author_listing(opener, args.author_url)
     if args.limit is not None:
         entries = entries[: args.limit]
-    print(f"Found {len(entries)} author entries.", flush=True)
+    print(f"Found {len(entries)} author entr{'y' if len(entries) == 1 else 'ies'}.", flush=True)
+
+    if args.only_new:
+        existing_urls = collect_existing_external_urls(args.output_dir)
+        original_count = len(entries)
+        entries = [entry for entry in entries if entry.url not in existing_urls]
+        skipped_count = original_count - len(entries)
+        print(
+            f"Filtered existing entries via externalUrl: {len(entries)} remaining, {skipped_count} skipped.",
+            flush=True,
+        )
 
     metadata_by_title: dict[str, dict[str, object]] = {}
     skipped: list[tuple[str, str, str]] = []

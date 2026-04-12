@@ -24,7 +24,7 @@ const { Content } = await render(entry);
     eyebrow="Media"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['Media page', entry.data.type ?? 'Media', entry.data.status ?? 'Provisional']}
+    badges={['Media page', entry.data.type ?? 'Media', entry.data.status ?? 'Available record']}
     metaItems={[
       { label: 'Section', value: 'Media' },
       { label: 'Type', value: entry.data.type ?? 'Unspecified' },

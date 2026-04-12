@@ -1,10 +1,10 @@
 ---
 title: "About"
 lang: "en"
-summary: "An initial placeholder for the About page of the rebuilt bilingual scholarly website."
+summary: "A concise English about-page record for the bilingual scholarly website."
 ---
 
-This is an initial About page placeholder for the rebuilt personal scholarly website.
+This page introduces the English-facing scholarly profile and the purpose of the bilingual website.
 
 This page will later present:
 - a concise academic and scholarly profile

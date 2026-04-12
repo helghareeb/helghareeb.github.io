@@ -4,6 +4,7 @@ lang: "ar"
 date: "2026-01-24"
 summary: "طريق المسلم إلى الله قبل رمضان: قراءة تقديمية"
 category: "النصائح والمواعظ"
+translationKey: "alukah-preliminary-reading-before-ramadan"
 series: "طريق المسلم إلى الله قبل رمضان"
 seriesSlug: "طريق-المسلم-الي-الله-قبل-رمضان"
 seriesOrder: 1

@@ -144,8 +144,8 @@ const featuredLinks = (await getCollection('externalLinks'))
         <p class="section-kicker">بوابة الموقع</p>
         <h2 class="section-title">المسارات الكبرى في النسخة الحالية</h2>
         <p class="section-copy">
-          قبل إدخال المحتوى التفصيلي، صارت البنية الحالية أوضح في عرض المسارات الرئيسة التي
-          سيتوسع عبرها الموقع خلال المراحل القادمة.
+          صارت البنية الحالية أوضح في عرض المسارات الرئيسة التي يتوسع عبرها الموقع، مع
+          استمرار إدخال المحتوى العلمي الفعلي تدريجيًا.
         </p>
       </div>
 
@@ -204,7 +204,7 @@ const featuredLinks = (await getCollection('externalLinks'))
       <div class="grid-three">
         {featuredProjects.map((project) => (
           <article class="content-card">
-            <p class="content-card__meta">{project.data.status ?? 'قيد التنظيم'}</p>
+        <p class="content-card__meta">{project.data.status ?? 'قيد التنظيم'}</p>
             <h3>{project.data.title}</h3>
             <p>{project.data.summary}</p>
           </article>

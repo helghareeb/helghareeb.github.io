@@ -4,6 +4,7 @@ lang: "ar"
 date: "2026-02-07"
 summary: "منزلة التوبة"
 category: "النصائح والمواعظ"
+translationKey: "alukah-station-of-repentance"
 series: "طريق المسلم إلى الله قبل رمضان"
 seriesSlug: "طريق-المسلم-الي-الله-قبل-رمضان"
 seriesOrder: 5

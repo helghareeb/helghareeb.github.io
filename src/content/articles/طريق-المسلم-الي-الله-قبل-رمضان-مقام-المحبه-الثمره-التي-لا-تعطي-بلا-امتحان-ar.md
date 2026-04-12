@@ -4,6 +4,7 @@ lang: "ar"
 date: "2026-02-15"
 summary: "طريق المسلم إلى الله قبل رمضان"
 category: "مقالات"
+translationKey: "alukah-station-of-love-fruit-not-given-without-trial"
 series: "طريق المسلم إلى الله قبل رمضان"
 seriesSlug: "طريق-المسلم-الي-الله-قبل-رمضان"
 seriesOrder: 7

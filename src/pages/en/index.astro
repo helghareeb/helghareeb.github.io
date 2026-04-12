@@ -55,8 +55,8 @@ const featuredLinks = (await getCollection('externalLinks'))
       <p class="hero__eyebrow">English Interface</p>
       <h1 class="hero__title">Dr. Haitham A. El-Ghareeb</h1>
       <p class="hero__lead">
-        A bilingual scholarly website designed to present academic identity, books, critical
-        editions, articles, and future research-facing digital sections in a clear and modern structure.
+        A bilingual scholarly website presenting academic profile, books, critical editions,
+        articles, and research-facing digital work in a clear and organized structure.
       </p>
 
       <div class="hero__badge-row">
@@ -83,7 +83,7 @@ const featuredLinks = (await getCollection('externalLinks'))
         </article>
         <article class="stat-card">
           <strong>Structured Expansion</strong>
-          <span>The home page now reflects the expanded architecture of the site.</span>
+          <span>The site structure is now active and continues to grow with real content.</span>
         </article>
       </div>
     </section>
@@ -93,8 +93,8 @@ const featuredLinks = (await getCollection('externalLinks'))
         <p class="section-kicker">Overview</p>
         <h2 class="section-title">A structured foundation for a growing scholarly archive</h2>
         <p class="section-copy">
-          This edition establishes the core public-facing structure of the website and prepares
-          the ground for richer biography, publication records, article archives, and specialized sections.
+          The current edition now provides a stable public structure for biography, publications,
+          article archives, and specialized scholarly sections.
         </p>
       </div>
     </section>
@@ -104,8 +104,8 @@ const featuredLinks = (await getCollection('externalLinks'))
         <p class="section-kicker">Site gateway</p>
         <h2 class="section-title">Major tracks in the current edition</h2>
         <p class="section-copy">
-          Before detailed content is filled in, the home page now exposes the main paths through
-          which the site is meant to grow over time.
+          The home page exposes the main scholarly paths through which the site is currently organized
+          and continues to expand.
         </p>
       </div>
 
@@ -147,7 +147,7 @@ const featuredLinks = (await getCollection('externalLinks'))
       <div class="grid-two">
         {featuredEditions.map((edition) => (
           <article class="content-card">
-            <p class="content-card__meta">{edition.data.status ?? 'Provisional'}</p>
+            <p class="content-card__meta">{edition.data.status ?? 'Available record'}</p>
             <h3>{edition.data.title}</h3>
             <p>{edition.data.summary}</p>
           </article>

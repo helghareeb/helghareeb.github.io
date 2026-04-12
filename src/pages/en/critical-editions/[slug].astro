@@ -24,7 +24,7 @@ const { Content } = await render(entry);
     eyebrow="Critical Edition"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['Edition page', 'Scholarly note', entry.data.status ?? 'Provisional']}
+    badges={['Edition page', 'Scholarly note', entry.data.status ?? 'Available record']}
     metaItems={[
       { label: 'Section', value: 'Critical Editions' },
       { label: 'Status', value: entry.data.status ?? 'Unspecified' },

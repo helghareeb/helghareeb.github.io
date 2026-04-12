@@ -4,6 +4,7 @@ lang: "ar"
 date: "2026-02-16"
 summary: "المقال السابع: المحبة في زمن الغفلة"
 category: "مقالات"
+translationKey: "alukah-love-in-a-time-of-heedlessness"
 series: "طريق المسلم إلى الله قبل رمضان"
 seriesSlug: "طريق-المسلم-الي-الله-قبل-رمضان"
 seriesOrder: 8

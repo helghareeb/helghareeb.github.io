@@ -1,5 +1,124 @@
 # سجل التحديثات
 
+## 2026-04-12
+### ما أُنجز
+- تنفيذ جولة تحسينات SEO بنيوية شملت:
+  - توسيع `BaseLayout` بإضافة `canonical`
+  - روابط `hreflang`
+  - وسوم `Open Graph`
+  - `Twitter cards`
+  - `robots`
+  - `googlebot`
+  - `structured data`
+- إضافة:
+  - `src/pages/robots.txt.ts`
+  - `src/pages/sitemap.xml.ts`
+  لتوليد ملفي `robots.txt` و`sitemap.xml` داخل البناء النهائي.
+- إضافة دعم عداد زيارات اختياري بالاعتماد على GoatCounter عبر:
+  - `src/components/SiteAnalytics.astro`
+  - `src/components/VisitCounter.astro`
+  مع تمرير المتغير:
+  - `PUBLIC_GOATCOUNTER_CODE`
+  إلى خطوة البناء في:
+  - `.github/workflows/deploy.yml`
+- تنفيذ جولة تحريرية إضافية لتقليل عبارات `placeholder` و`provisional` في الصفحات والمداخل الإنجليزية الظاهرة، ومنها:
+  - الصفحة الرئيسية الإنجليزية
+  - صفحة `About`
+  - صفحة `Critical Editions`
+  - صفحة `Learning Path`
+  - صفحات القوائم الإنجليزية للكتب والمشروعات والوسائط
+  - بعض مداخل المحتوى الإنجليزية في:
+    - `books`
+    - `editions`
+    - `media`
+    - `fields`
+    - `articles`
+
+### تحقق تقني
+- `npm run check`: ناجح بعد هذه الجولة.
+
+### الحالة الحالية
+- صار الموقع يملك الآن الحد الأدنى البنيوي اللازم لتحسين الظهور في محركات البحث بدل الاكتفاء بوصف الصفحة فقط.
+- بقي تفعيل عداد الزيارات الفعلي مرتبطًا بضبط متغير `PUBLIC_GOATCOUNTER_CODE` في إعدادات النشر.
+- لم تعد عبارات `placeholder` و`provisional` ظاهرة في الصفحات الأساسية المعروضة للمستخدم، وبقيت إشاراتها داخل ملفات التوثيق الداخلية فقط.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة الحادية والعشرين من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/does-allah-create-a-people-for-the-fire-en.md`
+  - `src/content/articles/defending-the-sunnah-and-refuting-the-objections-to-the-hadith-a-people-who-entrust-their-affairs-to-a-woman-will-not-prosper-en.md`
+  - `src/content/articles/books-of-zuhd-and-heart-softening-in-the-method-of-hadith-scholars-between-transmitted-reports-and-heart-formation-en.md`
+  - `src/content/articles/between-the-clear-and-the-ambiguous-a-quranic-foundation-for-the-ijtihad-of-the-firmly-grounded-and-a-warning-against-deviant-interpretation-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الحادية والعشرين لضمان استمرار الربط الصحيح بين النسختين.
+- استئناف الترجمة وفق الترتيب الزمني العام بعد اكتمال السلسلة الإنجليزية الرمضانية.
+
+### تحقق تقني
+- `npm run check`: قيد التنفيذ بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `86`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `83` مقالة عبر أول إحدى وعشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة العشرون من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/the-muslims-path-to-allah-before-ramadan-an-introductory-reading-en.md`
+  - `src/content/articles/the-station-of-wakefulness-and-preparation-for-self-accountability-the-beginning-of-the-path-en.md`
+  - `src/content/articles/the-station-of-self-accountability-the-mirror-that-reveals-the-truth-en.md`
+  - `src/content/articles/marriage-between-servitude-and-striving-meanings-drawn-from-the-marriage-contract-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة العشرون لضمان استمرار الربط الصحيح بين النسختين.
+- استكمال السلسلة الإنجليزية:
+  - `The Muslim's Path to Allah Before Ramadan`
+  بإضافة الحلقات `1` و`2` و`3`، ليكتمل تسلسلها من `1` إلى `8`.
+
+### تحقق تقني
+- `npm run check`: قيد التنفيذ بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `82`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `79` مقالة عبر أول عشرين دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- نشر الدفعة التاسعة عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/how-do-we-prepare-for-ramadan-in-light-of-shabans-virtue-and-racing-to-good-deeds-en.md`
+  - `src/content/articles/the-station-of-aspiration-and-resolve-turning-knowledge-into-motion-en.md`
+  - `src/content/articles/the-station-of-repentance-en.md`
+  - `src/content/articles/struggling-against-weak-aspiration-conceit-and-delusion-protecting-the-heart-from-falling-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة التاسعة عشرة لضمان استمرار الربط الصحيح بين النسختين.
+- توسيع السلسلة الإنجليزية:
+  - `The Muslim's Path to Allah Before Ramadan`
+  بإضافة الحلقات `4` و`5` و`6` مع ضبط `series` و`seriesSlug` و`seriesOrder`.
+
+### تحقق تقني
+- `npm run check`: قيد التنفيذ بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `78`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `75` مقالة عبر أول تسع عشرة دفعة.
+
+## 2026-04-12
+### ما أُنجز
+- إضافة وضع `--only-new` إلى:
+  - `scripts/import_alukah_author.py`
+  بحيث يمكن استبعاد المقالات المستوردة سابقًا بالاعتماد على `externalUrl` أثناء مزامنة أرشيف الألوكة.
+- نشر الدفعة الثامنة عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:
+  - `src/content/articles/let-every-soul-look-to-what-it-has-sent-ahead-for-tomorrow-en.md`
+  - `src/content/articles/between-toiling-toward-allah-and-the-excuse-of-ignorance-en.md`
+  - `src/content/articles/love-in-a-time-of-heedlessness-receiving-ramadan-with-a-living-heart-en.md`
+  - `src/content/articles/the-station-of-love-the-fruit-not-given-without-trial-en.md`
+- إضافة `translationKey` إلى المقالات العربية الأصلية المقابلة لهذه الدفعة الثامنة عشرة لضمان استمرار الربط الصحيح بين النسختين.
+- إنشاء نواة سلسلة إنجليزية جديدة لمقالات:
+  - `The Muslim's Path to Allah Before Ramadan`
+  عبر ربط المقالين الإنجليزيين الجديدين بـ `series` و`seriesSlug` و`seriesOrder`.
+
+### تحقق تقني
+- `npm run check`: قيد التنفيذ بعد هذه الجولة.
+
+### الحالة الحالية
+- ارتفع عدد المقالات الإنجليزية في `src/content/articles/` إلى `74`.
+- ارتفع عدد مقالات الألوكة المترجمة إلى الإنجليزية إلى `71` مقالة عبر أول ثماني عشرة دفعة.
+
 ## 2026-04-10
 ### ما أُنجز
 - نشر الدفعة السابعة عشرة من ترجمة مقالات الألوكة إلى الإنجليزية داخل:

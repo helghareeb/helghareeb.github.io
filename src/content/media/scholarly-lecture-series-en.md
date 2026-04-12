@@ -1,11 +1,11 @@
 ---
-title: "Introductory Scholarly Lecture Series"
+title: "Scholarly Lecture Series"
 lang: "en"
-summary: "A provisional media entry demonstrating how recorded lectures or media series can be organized."
+summary: "A media entry for a scholarly lecture series presented through recorded educational sessions."
 type: "Video"
 status: "In preparation"
 platform: "External platform"
 externalUrl: "https://example.com/en/media/lecture-series"
 ---
 
-This is a provisional entry used to activate the English media collection.
+An English media record for a scholarly lecture series hosted on an external platform.

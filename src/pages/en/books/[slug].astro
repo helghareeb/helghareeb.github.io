@@ -24,7 +24,7 @@ const { Content } = await render(entry);
     eyebrow="Book"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['Book page', 'Standalone entry', entry.data.status ?? 'Provisional']}
+    badges={['Book page', 'Standalone entry', entry.data.status ?? 'Available record']}
     metaItems={[
       { label: 'Section', value: 'Books' },
       { label: 'Status', value: entry.data.status ?? 'Unspecified' },

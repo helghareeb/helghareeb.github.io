@@ -4,6 +4,7 @@ lang: "ar"
 date: "2026-01-31"
 summary: "منزلة المحاسبة"
 category: "النصائح والمواعظ"
+translationKey: "alukah-station-of-self-accountability"
 series: "طريق المسلم إلى الله قبل رمضان"
 seriesSlug: "طريق-المسلم-الي-الله-قبل-رمضان"
 seriesOrder: 3

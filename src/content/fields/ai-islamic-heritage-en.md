@@ -7,4 +7,4 @@ order: 3
 featured: true
 ---
 
-Third provisional English scholarly field entry.
+An English field entry linking digital tools with the service of Islamic heritage and organized scholarship.

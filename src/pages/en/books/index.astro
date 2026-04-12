@@ -98,7 +98,7 @@ const books = (await getCollection('books'))
         {books.map((book) => (
           <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
             <article class="content-card entity-card">
-              <p class="content-card__meta">{book.data.status ?? 'Provisional'}</p>
+              <p class="content-card__meta">{book.data.status ?? 'Available record'}</p>
               <h3>{book.data.title}</h3>
               <p>{book.data.summary}</p>
               <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>

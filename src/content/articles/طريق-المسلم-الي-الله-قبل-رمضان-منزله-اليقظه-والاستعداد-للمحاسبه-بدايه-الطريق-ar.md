@@ -4,6 +4,7 @@ lang: "ar"
 date: "2026-01-27"
 summary: "منزلة اليقظة والاستعداد للمحاسبة: بداية الطريق"
 category: "الرقائق والأخلاق والآداب"
+translationKey: "alukah-station-of-wakefulness-and-preparation"
 series: "طريق المسلم إلى الله قبل رمضان"
 seriesSlug: "طريق-المسلم-الي-الله-قبل-رمضان"
 seriesOrder: 2

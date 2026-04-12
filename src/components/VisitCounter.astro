@@ -1,0 +1,60 @@
+---
+interface Props {
+  lang: 'ar' | 'en';
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const goatcounterCode = import.meta.env.PUBLIC_GOATCOUNTER_CODE?.trim();
+const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+const currentPageLabel = lang === 'ar' ? 'زيارات هذه الصفحة' : 'This page visits';
+const homePageLabel = lang === 'ar' ? 'زيارات الصفحة الرئيسية' : 'Homepage visits';
+---
+
+{goatcounterCode && (
+  <div class="visit-counter" data-goatcounter-code={goatcounterCode} data-goatcounter-path={normalizedPath} data-lang={lang}>
+    <span class="visit-counter__item">
+      <strong>{homePageLabel}:</strong>
+      <span data-counter-slot="home">{lang === 'ar' ? 'جاري التحميل...' : 'Loading...'}</span>
+    </span>
+    <span class="visit-counter__item">
+      <strong>{currentPageLabel}:</strong>
+      <span data-counter-slot="page">{lang === 'ar' ? 'جاري التحميل...' : 'Loading...'}</span>
+    </span>
+  </div>
+)}
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('.visit-counter[data-goatcounter-code]');
+    if (!root) return;
+
+    const code = root.getAttribute('data-goatcounter-code');
+    const path = root.getAttribute('data-goatcounter-path') || '/';
+    const lang = root.getAttribute('data-lang') || 'en';
+    const homeSlot = root.querySelector('[data-counter-slot="home"]');
+    const pageSlot = root.querySelector('[data-counter-slot="page"]');
+    const loadingText = lang === 'ar' ? 'غير متاح الآن' : 'Unavailable';
+
+    const render = async (slot, counterPath) => {
+      if (!slot || !code) return;
+
+      try {
+        const response = await fetch(`https://${code}.goatcounter.com/counter/${counterPath}.json`, {
+          headers: { Accept: 'application/json' },
+        });
+
+        if (!response.ok) throw new Error('Counter request failed');
+
+        const data = await response.json();
+        const count = typeof data.count === 'number' ? data.count : 0;
+        slot.textContent = new Intl.NumberFormat(lang === 'ar' ? 'ar-EG' : 'en-US').format(count);
+      } catch {
+        slot.textContent = loadingText;
+      }
+    };
+
+    render(homeSlot, '/');
+    render(pageSlot, path);
+  })();
+</script>

@@ -1,0 +1,12 @@
+---
+const goatcounterCode = import.meta.env.PUBLIC_GOATCOUNTER_CODE?.trim();
+---
+
+{goatcounterCode && (
+  <script
+    is:inline
+    data-goatcounter={`https://${goatcounterCode}.goatcounter.com/count`}
+    async
+    src="//gc.zgo.at/count.js"
+  ></script>
+)}

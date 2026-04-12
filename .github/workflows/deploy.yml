@@ -35,6 +35,8 @@ jobs:
         run: npm ci
 
       - name: Build site
+        env:
+          PUBLIC_GOATCOUNTER_CODE: ${{ vars.PUBLIC_GOATCOUNTER_CODE }}
         run: ASTRO_TELEMETRY_DISABLED=1 npm run build
 
       - name: Upload Pages artifact

@@ -80,15 +80,15 @@ const editions = (await getCollection('editions'))
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Initial sample entries</p>
-        <h2 class="section-title">Editorial items prepared for later refinement</h2>
+        <p class="section-kicker">Current entries</p>
+        <h2 class="section-title">Editorial items currently presented in the archive</h2>
       </div>
 
       <div class="grid-two">
         {editions.map((edition) => (
           <a class="card-link" href={getEntryPath('editions', 'en', edition.slug)}>
             <article class="content-card entity-card">
-              <p class="content-card__meta">{edition.data.status ?? 'Provisional'}</p>
+              <p class="content-card__meta">{edition.data.status ?? 'Available record'}</p>
               <h3>{edition.data.title}</h3>
               <p>{edition.data.summary}</p>
               <p class="content-card__meta">{[edition.data.workType, edition.data.year].filter(Boolean).join(' | ')}</p>

@@ -2,7 +2,7 @@
 title: "On Building a Structured Scholarly Digital Presence"
 lang: "en"
 date: "2026-04-05"
-summary: "A provisional article entry about the importance of a personal scholarly website as a durable academic archive."
+summary: "An article about the importance of a personal scholarly website as a durable academic archive and organized scholarly home."
 category: "Digital Scholarly Publishing"
 series: "Building the Scholarly Project"
 sourceName: "Personal Scholarly Website"
@@ -12,4 +12,4 @@ externalUrl: "https://example.com/en/articles/scholarly-digital-presence"
 draft: false
 ---
 
-This entry is intentionally provisional and can later be replaced by a verified article record.
+This article reflects on the value of building a structured scholarly website as a stable archive for academic identity, publications, and long-term intellectual organization.

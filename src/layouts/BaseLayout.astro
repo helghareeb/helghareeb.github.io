@@ -1,13 +1,17 @@
 ---
+import { siteConfig } from '../../config/site';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteBreadcrumbs from '../components/SiteBreadcrumbs.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import SiteAnalytics from '../components/SiteAnalytics.astro';
+import { getAlternateLocalePath } from '../utils/locale-switch';
 
 export interface Props {
   title?: string;
   description?: string;
   lang?: 'ar' | 'en';
   dir?: 'rtl' | 'ltr';
+  noindex?: boolean;
 }
 
 const {
@@ -15,9 +19,51 @@ const {
   description = 'Personal scholarly website of Dr. Haitham A. El-Ghareeb',
   lang = 'ar',
   dir = lang === 'ar' ? 'rtl' : 'ltr',
+  noindex = false,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+const canonicalUrl = new URL(currentPath, siteConfig.siteUrl).toString();
+const alternatePath = await getAlternateLocalePath(currentPath, lang);
+const alternateUrl = new URL(alternatePath, siteConfig.siteUrl).toString();
+const robotsContent = noindex
+  ? 'noindex,nofollow'
+  : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
+const siteName = lang === 'ar' ? siteConfig.nameAr : siteConfig.nameEn;
+const author = lang === 'ar' ? siteConfig.authorAr : siteConfig.authorEn;
+const baseDescription = lang === 'ar' ? siteConfig.descriptionAr : siteConfig.descriptionEn;
+const normalizedDescription = description || baseDescription;
+const alternateLang = lang === 'ar' ? 'en' : 'ar';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteConfig.siteUrl}/#website`,
+      url: siteConfig.siteUrl,
+      name: siteName,
+      inLanguage: lang,
+      description: baseDescription,
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteConfig.siteUrl}/#person`,
+      name: author,
+      url: siteConfig.siteUrl,
+      jobTitle: lang === 'ar' ? 'باحث وأكاديمي' : 'Scholar and Academic',
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: title,
+      isPartOf: { '@id': `${siteConfig.siteUrl}/#website` },
+      about: { '@id': `${siteConfig.siteUrl}/#person` },
+      inLanguage: lang,
+      description: normalizedDescription,
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -25,15 +71,35 @@ const currentPath = Astro.url.pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    <meta name="description" content={normalizedDescription} />
+    <meta name="author" content={author} />
+    <meta name="robots" content={robotsContent} />
+    <meta name="googlebot" content={robotsContent} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={normalizedDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={lang === 'ar' ? 'ar_AR' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={normalizedDescription} />
+    <meta name="theme-color" content="#f5efe3" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={lang} href={canonicalUrl} />
+    <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/', siteConfig.siteUrl).toString()} />
+    <link rel="sitemap" href={new URL('/sitemap.xml', siteConfig.siteUrl).toString()} />
     <title>{title}</title>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+    <SiteAnalytics />
   </head>
   <body>
     <div class="site-frame">
       <SiteHeader lang={lang} currentPath={currentPath} />
       <SiteBreadcrumbs lang={lang} currentPath={currentPath} />
       <slot />
-      <SiteFooter lang={lang} />
+      <SiteFooter lang={lang} currentPath={currentPath} />
     </div>
   </body>
 </html>

@@ -4,6 +4,7 @@ lang: "ar"
 date: "2026-02-10"
 summary: "طريق المسلم إلى الله قبل رمضان"
 category: "الدعوة وطلب العلم"
+translationKey: "alukah-aspiration-and-resolve-turning-knowledge-into-motion"
 series: "طريق المسلم إلى الله قبل رمضان"
 seriesSlug: "طريق-المسلم-الي-الله-قبل-رمضان"
 seriesOrder: 6

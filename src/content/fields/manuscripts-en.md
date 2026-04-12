@@ -7,4 +7,4 @@ order: 2
 featured: true
 ---
 
-Second provisional English scholarly field entry.
+An English field entry dedicated to manuscripts, editing practice, and related scholarly work.

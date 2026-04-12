@@ -1,18 +1,20 @@
 ---
 import { navigation } from '../../config/navigation';
 import { siteConfig } from '../../config/site';
+import VisitCounter from './VisitCounter.astro';
 
 interface Props {
   lang: 'ar' | 'en';
+  currentPath: string;
 }
 
-const { lang } = Astro.props;
+const { lang, currentPath } = Astro.props;
 const links = navigation[lang];
 const siteName = lang === 'ar' ? siteConfig.nameAr : siteConfig.nameEn;
 const description =
   lang === 'ar'
-    ? 'نسخة إطلاق أولية لموقع علمي ثنائي اللغة مخصص للتعريف بالأعمال العلمية والبحثية والمنشورات.'
-    : 'An initial launch edition of a bilingual scholarly website presenting academic work, publications, and research directions.';
+    ? 'موقع علمي ثنائي اللغة يجمع السيرة العلمية والكتب والتحقيقات والمقالات والمشروعات والروابط في بنية منظمة قابلة للنمو.'
+    : 'A bilingual scholarly website bringing together academic profile, books, critical editions, articles, projects, and curated links in an organized structure.';
 const quickLinks = links.slice(0, 6);
 const extendedLinks = links.slice(6);
 const siteIndexLink = lang === 'ar' ? '/ar/site-map/' : '/en/site-map/';
@@ -50,14 +52,15 @@ const year = new Date().getFullYear();
       <p class="footer-kicker">{lang === 'ar' ? 'الحالة الحالية' : 'Current status'}</p>
       <p class="footer-copy">
         {lang === 'ar'
-          ? 'الواجهة الحالية أصبحت أقرب إلى خريطة المشروع المعتمدة، مع جاهزية أكبر لإدخال المحتوى المعتمد تدريجيًا.'
-          : 'The current release now reflects the broader site map more closely and is better prepared for gradual content entry.'}
+          ? 'الموقع تجاوز مرحلة الصياغات التأسيسية في كثير من أقسامه، وتستمر فيه الآن إضافة المحتوى العلمي الفعلي والتحسينات التقنية.'
+          : 'The site has moved beyond its earliest scaffold stage in many sections, and current work now focuses on real scholarly content and technical refinement.'}
       </p>
     </section>
   </div>
 
   <div class="shell site-footer__bottom">
     <p>{siteName}</p>
+    <VisitCounter lang={lang} currentPath={currentPath} />
     <p>{year}</p>
   </div>
 </footer>
