@@ -1,0 +1,369 @@
+---
+interface FlashcardItem {
+  id: string;
+  order: number;
+  question: string;
+  answer: string;
+  mode: 'training' | 'test' | 'review';
+}
+
+interface Props {
+  lang: 'ar' | 'en';
+  deckSlug: string;
+  mode: 'training' | 'test' | 'results';
+  cards: FlashcardItem[];
+}
+
+const { lang, deckSlug, mode, cards } = Astro.props;
+const instanceId = `flashcards-${deckSlug}-${mode}`;
+
+const copy =
+  lang === 'ar'
+    ? {
+        reveal: 'إظهار الجواب',
+        hide: 'إخفاء الجواب',
+        markCorrect: 'أجبت صحيحًا',
+        markWrong: 'أخطأت',
+        notes: 'ملاحظتك أو جوابك المختصر',
+        resultsTitle: 'ملخص الأداء الحالي',
+        answered: 'المجاب عليه',
+        correct: 'الصحيح',
+        wrong: 'الخطأ',
+        unanswered: 'غير المراجع بعد',
+        clear: 'مسح النتائج المحفوظة',
+        retryTitle: 'الأسئلة التي تحتاج مراجعة',
+        noWrong: 'لا توجد أخطاء محفوظة الآن. يمكنك العودة إلى التدريب أو الاختبار وتسجيل أدائك.',
+        noCards: 'لا توجد أسئلة منشورة في هذا الوضع بعد.',
+        reviewAgain: 'راجعها مرة أخرى',
+        mastered: 'راجعتها وأتقنتها',
+        stillWrong: 'ما زالت تحتاج مراجعة',
+        testPrompt: 'حاول أولًا، ثم أظهر الجواب، ثم قيّم نفسك.',
+        trainingPrompt: 'أظهر الجواب بعد المحاولة، ثم سجل نتيجتك ليُبنى عليها مسار النتائج.',
+        saved: 'تم حفظ النتيجة محليًا على هذا الجهاز.',
+        sourceMode: 'الوضع',
+        attempts: 'المحاولات',
+        lastStatus: 'آخر نتيجة',
+        correctStatus: 'صحيح',
+        wrongStatus: 'خطأ',
+      }
+    : {
+        reveal: 'Reveal answer',
+        hide: 'Hide answer',
+        markCorrect: 'I got it right',
+        markWrong: 'I missed it',
+        notes: 'Your short note or answer',
+        resultsTitle: 'Current performance summary',
+        answered: 'Answered',
+        correct: 'Correct',
+        wrong: 'Wrong',
+        unanswered: 'Not reviewed yet',
+        clear: 'Clear saved results',
+        retryTitle: 'Questions needing review',
+        noWrong: 'No saved mistakes right now. Return to training or test and record your performance.',
+        noCards: 'No questions have been published in this mode yet.',
+        reviewAgain: 'Review again',
+        mastered: 'Reviewed and mastered',
+        stillWrong: 'Still needs review',
+        testPrompt: 'Try first, then reveal the answer, then score yourself.',
+        trainingPrompt: 'Reveal the answer after trying, then save your result for the results flow.',
+        saved: 'Result saved locally on this device.',
+        sourceMode: 'Mode',
+        attempts: 'Attempts',
+        lastStatus: 'Last result',
+        correctStatus: 'Correct',
+        wrongStatus: 'Wrong',
+      };
+---
+
+<section
+  class="shell section flashcards-session"
+  data-flashcards-app
+  data-mode={mode}
+  data-lang={lang}
+  data-deck-slug={deckSlug}
+  data-instance={instanceId}
+>
+  <article class="notice-card flashcards-session__summary">
+    <h2 class="section-title">{copy.resultsTitle}</h2>
+    <p>{mode === 'test' ? copy.testPrompt : mode === 'training' ? copy.trainingPrompt : copy.saved}</p>
+    <div class="flashcards-session__stats">
+      <span class="hero__badge"><strong>{copy.answered}:</strong> <span data-stat="answered">0</span></span>
+      <span class="hero__badge"><strong>{copy.correct}:</strong> <span data-stat="correct">0</span></span>
+      <span class="hero__badge"><strong>{copy.wrong}:</strong> <span data-stat="wrong">0</span></span>
+      <span class="hero__badge"><strong>{copy.unanswered}:</strong> <span data-stat="unanswered">0</span></span>
+    </div>
+    <button type="button" class="button-secondary flashcards-session__clear" data-action="clear-results">
+      {copy.clear}
+    </button>
+  </article>
+
+  {mode === 'results' ? (
+    <div class="flashcards-session__results">
+      <article class="notice-card">
+        <h2 class="section-title">{copy.retryTitle}</h2>
+        <p data-empty-state>{copy.noWrong}</p>
+      </article>
+      <div class="grid-two" data-results-list></div>
+    </div>
+  ) : cards.length === 0 ? (
+    <article class="notice-card">
+      <h2 class="section-title">{copy.noCards}</h2>
+    </article>
+  ) : (
+    <div class="grid-two" data-cards-list>
+      {cards.map((card) => (
+        <article
+          class="content-card entity-card flashcard-item"
+          data-card-id={card.id}
+          data-card-mode={card.mode}
+          data-card-order={card.order}
+        >
+          <p class="content-card__meta">
+            {lang === 'ar' ? `السؤال ${card.order}` : `Question ${card.order}`}
+          </p>
+          <h3>{card.question}</h3>
+          {mode === 'test' && (
+            <textarea
+              class="flashcard-item__notes"
+              rows={4}
+              placeholder={copy.notes}
+              data-role="notes"
+            ></textarea>
+          )}
+          <div class="flashcard-item__answer" data-role="answer" hidden>
+            <p>{card.answer}</p>
+          </div>
+          <div class="flashcard-item__actions">
+            <button type="button" class="button-secondary" data-action="toggle-answer">
+              {copy.reveal}
+            </button>
+            <button type="button" class="button" data-action="mark-correct" disabled>
+              {copy.markCorrect}
+            </button>
+            <button type="button" class="button-secondary" data-action="mark-wrong" disabled>
+              {copy.markWrong}
+            </button>
+          </div>
+          <p class="flashcard-item__feedback" data-role="feedback"></p>
+        </article>
+      ))}
+    </div>
+  )}
+</section>
+
+<script
+  is:inline
+  type="application/json"
+  id={`${instanceId}-data`}
+  set:html={JSON.stringify({ lang, deckSlug, mode, cards, copy })}
+></script>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector(`[data-flashcards-app][data-instance="${instanceId}"]`);
+    const dataEl = document.getElementById(`${instanceId}-data`);
+    if (!root || !dataEl) return;
+
+    const payload = JSON.parse(dataEl.textContent || '{}');
+    const { deckSlug, mode, cards = [], copy = {}, lang } = payload;
+    const storageKey = `flashcards:${deckSlug}:session`;
+    const answeredSlot = root.querySelector('[data-stat="answered"]');
+    const correctSlot = root.querySelector('[data-stat="correct"]');
+    const wrongSlot = root.querySelector('[data-stat="wrong"]');
+    const unansweredSlot = root.querySelector('[data-stat="unanswered"]');
+    const resultsList = root.querySelector('[data-results-list]');
+    const emptyState = root.querySelector('[data-empty-state]');
+
+    const readState = () => {
+      try {
+        return JSON.parse(localStorage.getItem(storageKey) || '{"cards":{}}');
+      } catch {
+        return { cards: {} };
+      }
+    };
+
+    const writeState = (state) => {
+      localStorage.setItem(storageKey, JSON.stringify(state));
+    };
+
+    const upsertCardState = (card, status, notes = '') => {
+      const state = readState();
+      const previous = state.cards?.[card.id] || {
+        attempts: 0,
+        correctCount: 0,
+        wrongCount: 0,
+      };
+      const next = {
+        ...previous,
+        id: card.id,
+        question: card.question,
+        answer: card.answer,
+        order: card.order,
+        mode: card.mode,
+        status,
+        attempts: previous.attempts + 1,
+        correctCount: previous.correctCount + (status === 'correct' ? 1 : 0),
+        wrongCount: previous.wrongCount + (status === 'wrong' ? 1 : 0),
+        notes,
+        updatedAt: new Date().toISOString(),
+      };
+      state.cards = state.cards || {};
+      state.cards[card.id] = next;
+      writeState(state);
+      return next;
+    };
+
+    const markMastered = (cardId) => {
+      const state = readState();
+      if (!state.cards?.[cardId]) return;
+      state.cards[cardId].status = 'correct';
+      state.cards[cardId].updatedAt = new Date().toISOString();
+      state.cards[cardId].correctCount = (state.cards[cardId].correctCount || 0) + 1;
+      state.cards[cardId].attempts = (state.cards[cardId].attempts || 0) + 1;
+      writeState(state);
+    };
+
+    const updateStats = () => {
+      const state = readState();
+      const stateCards = Object.values(state.cards || {});
+      const answered = stateCards.length;
+      const correct = stateCards.filter((item) => item.status === 'correct').length;
+      const wrong = stateCards.filter((item) => item.status === 'wrong').length;
+      const totalKnown = cards.length || stateCards.length;
+      const unanswered = Math.max(totalKnown - answered, 0);
+
+      if (answeredSlot) answeredSlot.textContent = String(answered);
+      if (correctSlot) correctSlot.textContent = String(correct);
+      if (wrongSlot) wrongSlot.textContent = String(wrong);
+      if (unansweredSlot) unansweredSlot.textContent = String(unanswered);
+    };
+
+    const renderResults = () => {
+      if (mode !== 'results' || !resultsList) return;
+      const state = readState();
+      const wrongCards = Object.values(state.cards || {})
+        .filter((item) => item.status === 'wrong')
+        .sort((a, b) => a.order - b.order);
+
+      resultsList.innerHTML = '';
+
+      if (!wrongCards.length) {
+        if (emptyState) emptyState.removeAttribute('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.setAttribute('hidden', 'hidden');
+
+      for (const card of wrongCards) {
+        const article = document.createElement('article');
+        article.className = 'content-card entity-card flashcard-item';
+        article.innerHTML = `
+          <p class="content-card__meta">${lang === 'ar' ? `السؤال ${card.order}` : `Question ${card.order}`}</p>
+          <h3>${card.question}</h3>
+          <div class="flashcard-item__answer flashcard-item__answer--visible">
+            <p>${card.answer}</p>
+          </div>
+          <p class="flashcard-item__meta">
+            <strong>${copy.sourceMode}:</strong> ${card.mode}
+            <span>•</span>
+            <strong>${copy.attempts}:</strong> ${card.attempts || 0}
+            <span>•</span>
+            <strong>${copy.lastStatus}:</strong> ${card.status === 'correct' ? copy.correctStatus : copy.wrongStatus}
+          </p>
+          <div class="flashcard-item__actions">
+            <button type="button" class="button" data-retry-mastered="${card.id}">${copy.mastered}</button>
+            <button type="button" class="button-secondary" data-retry-wrong="${card.id}">${copy.stillWrong}</button>
+          </div>
+        `;
+        resultsList.append(article);
+      }
+    };
+
+    root.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      const clearButton = target.closest('[data-action="clear-results"]');
+      if (clearButton) {
+        localStorage.removeItem(storageKey);
+        updateStats();
+        renderResults();
+        root.querySelectorAll('[data-role="feedback"]').forEach((node) => {
+          node.textContent = '';
+        });
+        return;
+      }
+
+      const masteredButton = target.closest('[data-retry-mastered]');
+      if (masteredButton instanceof HTMLElement) {
+        const cardId = masteredButton.getAttribute('data-retry-mastered');
+        if (!cardId) return;
+        markMastered(cardId);
+        updateStats();
+        renderResults();
+        return;
+      }
+
+      const stillWrongButton = target.closest('[data-retry-wrong]');
+      if (stillWrongButton instanceof HTMLElement) {
+        const cardId = stillWrongButton.getAttribute('data-retry-wrong');
+        const state = readState();
+        if (cardId && state.cards?.[cardId]) {
+          state.cards[cardId].status = 'wrong';
+          state.cards[cardId].attempts = (state.cards[cardId].attempts || 0) + 1;
+          state.cards[cardId].wrongCount = (state.cards[cardId].wrongCount || 0) + 1;
+          state.cards[cardId].updatedAt = new Date().toISOString();
+          writeState(state);
+        }
+        updateStats();
+        renderResults();
+        return;
+      }
+
+      const cardElement = target.closest('[data-card-id]');
+      if (!(cardElement instanceof HTMLElement)) return;
+
+      const cardId = cardElement.getAttribute('data-card-id');
+      const card = cards.find((item) => item.id === cardId);
+      if (!card) return;
+
+      const answer = cardElement.querySelector('[data-role="answer"]');
+      const feedback = cardElement.querySelector('[data-role="feedback"]');
+      const notesField = cardElement.querySelector('[data-role="notes"]');
+      const revealButton = cardElement.querySelector('[data-action="toggle-answer"]');
+      const correctButton = cardElement.querySelector('[data-action="mark-correct"]');
+      const wrongButton = cardElement.querySelector('[data-action="mark-wrong"]');
+
+      const toggleAnswerButton = target.closest('[data-action="toggle-answer"]');
+      if (toggleAnswerButton) {
+        const isHidden = answer?.hasAttribute('hidden');
+        if (isHidden) {
+          answer?.removeAttribute('hidden');
+          if (revealButton) revealButton.textContent = copy.hide;
+          if (correctButton instanceof HTMLButtonElement) correctButton.disabled = false;
+          if (wrongButton instanceof HTMLButtonElement) wrongButton.disabled = false;
+        } else {
+          answer?.setAttribute('hidden', 'hidden');
+          if (revealButton) revealButton.textContent = copy.reveal;
+        }
+        return;
+      }
+
+      const correctMarkButton = target.closest('[data-action="mark-correct"]');
+      const wrongMarkButton = target.closest('[data-action="mark-wrong"]');
+      if (!correctMarkButton && !wrongMarkButton) return;
+
+      const status = correctMarkButton ? 'correct' : 'wrong';
+      const notes =
+        notesField instanceof HTMLTextAreaElement ? notesField.value.trim() : '';
+      upsertCardState(card, status, notes);
+      if (feedback) {
+        feedback.textContent = copy.saved;
+      }
+      updateStats();
+    });
+
+    updateStats();
+    renderResults();
+  })();
+</script>

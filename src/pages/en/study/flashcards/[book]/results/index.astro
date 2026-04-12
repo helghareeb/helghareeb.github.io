@@ -1,8 +1,10 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import FlashcardSession from '../../../../../../components/FlashcardSession.astro';
 import '../../../../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../../../../utils/seo';
+import { getDeckRouteSlug, serializeFlashcards } from '../../../../../../utils/flashcards';
 
 export async function getStaticPaths() {
   const decks = await getCollection('flashcardDecks');
@@ -16,6 +18,15 @@ export async function getStaticPaths() {
 }
 
 const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
+const cards = (await getCollection('flashcards'))
+  .filter(
+    (entry) =>
+      entry.data.lang === 'en' &&
+      !entry.data.draft &&
+      entry.data.deckSlug === getDeckRouteSlug(deck.slug) &&
+      (entry.data.mode === 'training' || entry.data.mode === 'test'),
+  )
+  .sort((a, b) => a.data.order - b.data.order);
 const seoTitle = buildSeoTitle(`Results ${deck.data.bookTitle}`, {
   lang: 'en',
   section: 'Flashcards',
@@ -34,12 +45,11 @@ const seoDescription = buildSeoDescription(deck.data.summary, ['Results page and
       </p>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Next practical implementation step</h2>
-      <p>
-        After the first batches of real questions are entered, we will add browser-side state to
-        track answers locally, collect mistakes, and send the learner back through the weak points.
-      </p>
-    </section>
+    <FlashcardSession
+      lang="en"
+      deckSlug={getDeckRouteSlug(deck.slug)}
+      mode="results"
+      cards={serializeFlashcards(cards)}
+    />
   </main>
 </BaseLayout>

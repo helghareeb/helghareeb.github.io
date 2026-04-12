@@ -1,8 +1,10 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
+import FlashcardSession from '../../../../../../components/FlashcardSession.astro';
 import '../../../../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../../../../utils/seo';
+import { getDeckRouteSlug, serializeFlashcards } from '../../../../../../utils/flashcards';
 
 export async function getStaticPaths() {
   const decks = await getCollection('flashcardDecks');
@@ -21,7 +23,7 @@ const cards = (await getCollection('flashcards'))
     (entry) =>
       entry.data.lang === 'en' &&
       !entry.data.draft &&
-      entry.data.deckSlug === deck.slug.replace(/-(ar|en)$/, '') &&
+      entry.data.deckSlug === getDeckRouteSlug(deck.slug) &&
       entry.data.mode === 'training',
   )
   .sort((a, b) => a.data.order - b.data.order);
@@ -50,16 +52,12 @@ const seoDescription = buildSeoDescription(deck.data.summary, [`${cards.length} 
           <p>Once the first real batches are added, this mode will support answer-first recall and self-checking.</p>
         </article>
       ) : (
-        <div class="grid-two">
-          {cards.map((card) => (
-            <details class="content-card entity-card">
-              <summary>
-                <strong>Question {card.data.order}:</strong> {card.data.question}
-              </summary>
-              <p>{card.data.answer}</p>
-            </details>
-          ))}
-        </div>
+        <FlashcardSession
+          lang="en"
+          deckSlug={getDeckRouteSlug(deck.slug)}
+          mode="training"
+          cards={serializeFlashcards(cards)}
+        />
       )}
     </section>
   </main>

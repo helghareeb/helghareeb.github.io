@@ -2,6 +2,103 @@
 
 ## 2026-04-13
 ### ما أُنجز
+- تنفيذ طبقة تفاعلية فعلية لمسار `Flashcards` عبر مكوّن جديد:
+  - `src/components/FlashcardSession.astro`
+- إضافة helper مساعد لربط slugs وتسلسل البطاقات:
+  - `src/utils/flashcards.ts`
+- تحويل الصفحات التالية من عرض ثابت إلى مسار تفاعلي يعتمد على `localStorage`:
+  - `src/pages/ar/study/flashcards/[book]/training/index.astro`
+  - `src/pages/ar/study/flashcards/[book]/test/index.astro`
+  - `src/pages/ar/study/flashcards/[book]/results/index.astro`
+  - `src/pages/en/study/flashcards/[book]/training/index.astro`
+  - `src/pages/en/study/flashcards/[book]/test/index.astro`
+  - `src/pages/en/study/flashcards/[book]/results/index.astro`
+- إضافة واجهات تفاعلية تدعم:
+  - إظهار الجواب ثم تسجيل `صحيح` أو `خطأ`
+  - حفظ النتيجة محليًا على الجهاز
+  - عرض عدد المجاب عليه والصحيح والخطأ
+  - صفحة نتائج تعرض الأسئلة التي أخطأ فيها الطالب
+  - إعادة تعليم السؤال بأنه أُتقن أو أنه ما زال يحتاج مراجعة
+- توسيع التنسيق البصري للمسار الجديد داخل:
+  - `src/styles/global.css`
+- تحديث:
+  - `project-docs/current-status.md`
+  - `project-docs/project-plan.md`
+
+### تحقق تقني
+- `npm run check`: سيجري بعد هذه الجولة مباشرة
+
+### الحالة الحالية
+- لم يعد مسار `Flashcards` مجرد صفحات عرض، بل صار أول نواة عملية حقيقية للمراجعة والتدريب والاختبار وتتبع الخطأ.
+- والخطوة الطبيعية التالية: إدخال الدفعة الثانية من أسئلة `أخصر المختصرات` في `كتاب الصلاة`.
+
+## 2026-04-13
+### ما أُنجز
+- بدء أول دفعة عربية حقيقية من `Flashcards` كتاب:
+  - `أخصر المختصرات`
+- قصر هذه الجولة على:
+  - `المقدمة`
+  - `كتاب الطهارة`
+- تحديث deck العربي في:
+  - `src/content/flashcardDecks/akhsar-al-mukhtasarat-ar.md`
+  ليعكس الأرقام الجديدة:
+  - `36` سؤالًا إجمالًا
+  - `12` مراجعة
+  - `16` تدريب
+  - `8` اختبار
+- إضافة `36` بطاقة عربية منشورة داخل:
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-01-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-02-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-03-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-04-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-05-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-06-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-07-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-08-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-09-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-10-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-11-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-review-12-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-01-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-02-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-03-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-04-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-05-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-06-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-07-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-08-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-09-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-10-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-11-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-12-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-13-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-14-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-15-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-training-16-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-test-01-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-test-02-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-test-03-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-test-04-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-test-05-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-test-06-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-test-07-ar.md`
+  - `src/content/flashcards/akhsar-al-mukhtasarat-test-08-ar.md`
+- تحديث:
+  - `project-docs/current-status.md`
+  - `project-docs/project-plan.md`
+  - `project-docs/study-section-plan.md`
+
+### تحقق تقني
+- `npm run check`: سيجري بعد هذه الجولة مباشرة
+
+### الحالة الحالية
+- صار مسار `Flashcards` يحتوي الآن على أول مادة منشورة فعلية قابلة للمراجعة والتدريب والاختبار.
+- والخطوة الطبيعية التالية صارت أحد مسارين:
+  - إضافة طبقة النتائج وتتبع الخطأ
+  - أو بدء الدفعة الثانية من أسئلة `أخصر المختصرات` في `كتاب الصلاة`
+
+## 2026-04-13
+### ما أُنجز
 - بدء مسار جديد منشور داخل `فوائد من كتب متنوعة` من:
   - `تفسير الطبري: الفاتحة والبقرة`
   من تعليق الشيخ حسين عبدالرازق

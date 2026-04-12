@@ -617,6 +617,71 @@ img {
   margin-top: 2rem;
 }
 
+.flashcards-session__summary {
+  display: grid;
+  gap: 1rem;
+}
+
+.flashcards-session__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.flashcards-session__clear {
+  justify-self: flex-start;
+}
+
+.flashcards-session__results {
+  display: grid;
+  gap: 1rem;
+}
+
+.flashcard-item {
+  display: grid;
+  gap: 1rem;
+}
+
+.flashcard-item__notes {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 253, 248, 0.92);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+
+.flashcard-item__answer {
+  padding: 0.9rem 1rem;
+  border: 1px dashed rgba(38, 73, 59, 0.22);
+  border-radius: var(--radius-sm);
+  background: rgba(247, 243, 236, 0.95);
+}
+
+.flashcard-item__answer--visible {
+  display: block;
+}
+
+.flashcard-item__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.flashcard-item__actions .button,
+.flashcard-item__actions .button-secondary {
+  min-height: 2.75rem;
+}
+
+.flashcard-item__feedback,
+.flashcard-item__meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .list-clean {
   margin: 0;
   padding: 0;
