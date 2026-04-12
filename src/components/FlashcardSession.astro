@@ -160,8 +160,20 @@ const copy =
 
 <script is:inline>
   (() => {
-    const root = document.querySelector(`[data-flashcards-app][data-instance="${instanceId}"]`);
-    const dataEl = document.getElementById(`${instanceId}-data`);
+    const currentScript = document.currentScript;
+    if (!(currentScript instanceof HTMLScriptElement)) return;
+
+    const dataEl = currentScript.previousElementSibling;
+    const root = dataEl?.previousElementSibling;
+
+    if (
+      !(dataEl instanceof HTMLScriptElement) ||
+      !(root instanceof HTMLElement) ||
+      !root.hasAttribute('data-flashcards-app')
+    ) {
+      return;
+    }
+
     if (!root || !dataEl) return;
 
     const payload = JSON.parse(dataEl.textContent || '{}');
