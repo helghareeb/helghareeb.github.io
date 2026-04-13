@@ -4,7 +4,7 @@ answer: "ما يجوز التطهر به هنا هو:\n- ماء البحر\n- م
 lang: "ar"
 deckSlug: "akhsar-al-mukhtasarat"
 mode: "training"
-order: 16
+order: 63
 tags:
   - "الطهارة"
   - "متوسط"
@@ -13,4 +13,3 @@ tags:
 sourceRef: "سؤال تدريبي مضاف من المستخدم - بصياغة مذكر"
 draft: false
 ---
-

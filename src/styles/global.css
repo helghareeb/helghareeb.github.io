@@ -32,7 +32,8 @@ body {
     radial-gradient(circle at top right, rgba(38, 73, 59, 0.16), transparent 28%),
     linear-gradient(180deg, #f7f2e8 0%, #f3ebdc 100%);
   font-family: "Baskerville Old Face", "Amiri", "Iowan Old Style", Georgia, serif;
-  line-height: 1.75;
+  font-size: 1.06rem;
+  line-height: 1.85;
 }
 
 a {
@@ -637,27 +638,85 @@ img {
   gap: 1rem;
 }
 
+.flashcards-session__cards {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 58rem;
+  margin: 1.5rem auto 0;
+}
+
 .flashcard-item {
   display: grid;
+  gap: 1.1rem;
+  padding: 1.6rem;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 247, 0.98), rgba(247, 241, 232, 0.94)),
+    var(--surface);
+}
+
+.flashcard-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
+}
+
+.flashcard-item__eyebrow {
+  margin: 0;
+}
+
+.flashcard-item__panel {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(38, 73, 59, 0.12);
+  border-radius: 1.1rem;
+  background: rgba(255, 252, 246, 0.92);
+}
+
+.flashcard-item__panel--question {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 246, 0.98), rgba(250, 245, 236, 0.95));
+}
+
+.flashcard-item__panel-label {
+  margin: 0;
+  color: var(--brand-strong);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.flashcard-item__rich-text {
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 2;
+}
+
+.flashcard-item__rich-text p {
+  margin: 0;
+  white-space: pre-line;
 }
 
 .flashcard-item__notes {
   width: 100%;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  background: rgba(255, 253, 248, 0.92);
+  min-height: 10rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(38, 73, 59, 0.14);
+  border-radius: 1rem;
+  background: rgba(255, 253, 248, 0.96);
   color: var(--text);
   font: inherit;
+  line-height: 1.9;
   resize: vertical;
 }
 
 .flashcard-item__answer {
-  padding: 0.9rem 1rem;
-  border: 1px dashed rgba(38, 73, 59, 0.22);
-  border-radius: var(--radius-sm);
-  background: rgba(247, 243, 236, 0.95);
+  border-style: dashed;
+  border-color: rgba(38, 73, 59, 0.24);
+  background:
+    linear-gradient(180deg, rgba(241, 248, 243, 0.95), rgba(247, 251, 248, 0.92));
 }
 
 .flashcard-item__answer--visible {
@@ -668,11 +727,13 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  justify-content: flex-start;
 }
 
 .flashcard-item__actions .button,
 .flashcard-item__actions .button-secondary {
   min-height: 2.75rem;
+  min-width: 10rem;
 }
 
 .flashcard-item__feedback,
@@ -793,6 +854,10 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .flashcards-session__cards {
+    max-width: none;
+  }
+
   .hero {
     padding: 1.6rem;
   }
@@ -829,5 +894,23 @@ img {
   .site-index-link,
   .locale-switch {
     width: 100%;
+  }
+
+  .flashcard-item {
+    padding: 1.1rem;
+  }
+
+  .flashcard-item__panel {
+    padding: 0.95rem;
+  }
+
+  .flashcard-item__rich-text {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .flashcard-item__actions .button,
+  .flashcard-item__actions .button-secondary {
+    min-width: 0;
   }
 }

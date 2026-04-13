@@ -4,9 +4,9 @@ lang: "ar"
 summary: "الدفعة الأولى المعتمدة لقسم بطاقات المذاكرة، وتبدأ بكتاب أخصر المختصرات في الفقه الحنبلي."
 field: "الفقه"
 bookTitle: "أخصر المختصرات"
-questionCount: 36
+questionCount: 83
 reviewCount: 12
-trainingCount: 16
+trainingCount: 63
 testCount: 8
 status: "نُشرت الآن الدفعة الأولى الموسعة: المقدمة وكتاب الطهارة"
 translationKey: "flashcards-akhsar-al-mukhtasarat"
