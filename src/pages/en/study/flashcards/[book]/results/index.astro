@@ -31,25 +31,36 @@ const seoTitle = buildSeoTitle(`Results ${deck.data.bookTitle}`, {
   lang: 'en',
   section: 'Flashcards',
 });
-const seoDescription = buildSeoDescription(deck.data.summary, ['Results page and retry workflow']);
+const seoDescription = buildSeoDescription(deck.data.summary, ['Results and missed questions']);
 ---
 
 <BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Results</p>
-      <h1 class="hero__title">Results page for {deck.data.bookTitle}</h1>
+      <h1 class="hero__title">Results for {deck.data.bookTitle}</h1>
       <p class="hero__lead">
-        This page is the planned connection point between test mode, score tracking, and the later
-        retry flow for missed answers.
+        Your score in training and test mode, and the questions you missed, saved in your browser.
       </p>
     </section>
 
-    <FlashcardSession
-      lang="en"
-      deckSlug={getDeckRouteSlug(deck.slug)}
-      mode="results"
-      cards={serializeFlashcards(cards)}
-    />
+    {cards.length === 0 ? (
+      <section class="shell section">
+        <article class="notice-card">
+          <h2 class="section-title">These flashcards are in Arabic</h2>
+          <p>
+            The questions and answers for {deck.data.bookTitle} are written in Arabic.
+            <a href={`/ar/study/flashcards/${deck.slug.replace(/-(ar|en)$/, '')}/results/`}>Open the results page in Arabic</a>.
+          </p>
+        </article>
+      </section>
+    ) : (
+      <FlashcardSession
+        lang="en"
+        deckSlug={getDeckRouteSlug(deck.slug)}
+        mode="results"
+        cards={serializeFlashcards(cards)}
+      />
+    )}
   </main>
 </BaseLayout>

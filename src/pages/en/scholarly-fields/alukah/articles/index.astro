@@ -42,26 +42,26 @@ const topSeries = Array.from(seriesMap.entries())
   lang="en"
   dir="ltr"
   title="Alukah Articles | Dr. Haitham A. El-Ghareeb"
-  description="An internal list of English Alukah articles published on the website"
+  description={`${articles.length} articles by Dr. Haitham A. El-Ghareeb first published in Arabic on the Alukah Network, in English, newest first.`}
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Alukah Articles</p>
-      <h1 class="hero__title">English Alukah articles inside the site archive</h1>
+      <h1 class="hero__title">Alukah Articles</h1>
       <p class="hero__lead">
-        This page gathers the English Alukah entries published inside the site so they can be found
-        from one place as translation batches continue.
+        English versions of articles first published in Arabic on the Alukah Network, newest first,
+        each linked to its Arabic original.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">{articles.length} entries</span>
-        <span class="hero__badge">{seriesMap.size} visible series</span>
+        <span class="hero__badge">{articles.length} articles</span>
+        <span class="hero__badge">{seriesMap.size} series</span>
         <span class="hero__badge">{categoryMap.size} categories</span>
       </div>
 
       <div class="hero__actions">
-        <a class="button" href="/en/scholarly-fields/alukah/">Alukah gateway</a>
-        <a class="button-secondary" href="/en/external-links/alukah-author-page/">Author page on Alukah</a>
+        <a class="button" href="/en/scholarly-fields/alukah/">Alukah</a>
+        <a class="button-secondary" href="https://www.alukah.net/authors/view/home/16869/">Author page on Alukah</a>
       </div>
     </section>
 
@@ -69,16 +69,16 @@ const topSeries = Array.from(seriesMap.entries())
       <>
         <section class="shell entity-grid">
           <article class="entity-summary">
-            <p class="entity-kicker">Archive snapshot</p>
-            <h2 class="section-title">Translated Alukah presence on the website</h2>
+            <p class="entity-kicker">Subjects</p>
+            <h2 class="section-title">What the articles cover</h2>
             <p class="section-copy">
-              These entries are English in-site versions of articles originally published on Alukah,
-              preserved with source context, categories, dates, and direct access to the original publication.
+              The articles range over hadith and its sciences, counsel and admonition, creed, Qur'anic
+              exegesis, da'wah and the pursuit of knowledge, with several multi-part series.
             </p>
           </article>
 
           <article class="entity-panel">
-            <p class="entity-kicker">Top categories</p>
+            <p class="entity-kicker">Largest categories</p>
             <ul class="entity-list">
               {topCategories.map(([name, count]) => (
                 <li><strong>{name}:</strong> {count}</li>
@@ -91,16 +91,15 @@ const topSeries = Array.from(seriesMap.entries())
           <section class="shell section">
             <div class="section-heading">
               <p class="section-kicker">Series</p>
-              <h2 class="section-title">Translated Alukah series</h2>
+              <h2 class="section-title">Alukah series</h2>
             </div>
 
             <div class="grid-two">
               {topSeries.map((series) => (
                 <a class="card-link" href={getArticleSeriesPath('en', series.slug)}>
                   <article class="content-card entity-card">
-                    <p class="content-card__meta">Article series | {series.count} entries</p>
+                    <p class="content-card__meta">{series.count} parts</p>
                     <h3>{series.title}</h3>
-                    <p>Open the series page to browse translated entries in order.</p>
                   </article>
                 </a>
               ))}
@@ -110,8 +109,8 @@ const topSeries = Array.from(seriesMap.entries())
 
         <section class="shell section">
           <div class="section-heading">
-            <p class="section-kicker">Published entries</p>
-            <h2 class="section-title">English Alukah list</h2>
+            <p class="section-kicker">All articles</p>
+            <h2 class="section-title">Newest first</h2>
           </div>
 
           <div class="grid-two">
@@ -134,10 +133,9 @@ const topSeries = Array.from(seriesMap.entries())
       </>
     ) : (
       <section class="shell notice-card">
-        <h2>No English Alukah articles are published yet</h2>
         <p>
-          The page is ready. As each translation batch is added, the entries will appear here
-          automatically.
+          Dr. El-Ghareeb's Arabic articles can be read on his
+          <a href="https://www.alukah.net/authors/view/home/16869/">author page on Alukah</a>.
         </p>
       </section>
     )}

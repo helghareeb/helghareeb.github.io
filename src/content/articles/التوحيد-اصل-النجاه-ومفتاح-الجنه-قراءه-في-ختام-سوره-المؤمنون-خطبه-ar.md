@@ -3,7 +3,7 @@ title: "التوحيد أصل النجاة ومفتاح الجنة: قراءة �
 lang: "ar"
 date: "2025-12-06"
 summary: "التوحيد أصل النجاة ومفتاح الجنة:"
-category: "التوحيد"
+category: "عقيدة وتوحيد"
 translationKey: "alukah-tawhid-is-the-root-of-salvation-and-the-key-to-paradise"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"

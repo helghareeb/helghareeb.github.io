@@ -31,6 +31,8 @@ const currentSeriesIndex = seriesEntries.findIndex((item) => item.id === entry.i
 const previousSeriesEntry = currentSeriesIndex > 0 ? seriesEntries[currentSeriesIndex - 1] : undefined;
 const nextSeriesEntry =
   currentSeriesIndex >= 0 && currentSeriesIndex < seriesEntries.length - 1 ? seriesEntries[currentSeriesIndex + 1] : undefined;
+const sourceLabel =
+  entry.data.sourceName === 'فاعلم أنه لا إله إلا الله' ? 'مدونة «فاعلم أنه لا إله إلا الله»' : entry.data.sourceName;
 const seoTitle = buildSeoTitle(entry.data.title, { lang: 'ar', section: 'المقالات' });
 const seoDescription = buildSeoDescription(entry.data.summary, [
   entry.data.category,
@@ -45,16 +47,15 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     eyebrow="مقال"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['صفحة مقال', entry.data.articleType ?? 'مقال', entry.data.category ?? 'تصنيف عام']}
+    badges={entry.data.category ? [entry.data.category] : []}
     metaItems={[
-      { label: 'القسم', value: 'المقالات' },
       ...(entry.data.date ? [{ label: 'التاريخ', value: entry.data.date }] : []),
       ...(entry.data.series ? [{ label: 'السلسلة', value: entry.data.series }] : []),
       ...(entry.data.sourceName ? [{ label: 'المصدر', value: entry.data.sourceName }] : []),
       ...(entry.data.readingTime ? [{ label: 'زمن القراءة', value: entry.data.readingTime }] : []),
     ]}
     backHref="/ar/articles/"
-    backLabel="العودة إلى قسم المقالات"
+    backLabel="كل المقالات"
     externalUrl={entry.data.externalUrl}
     externalLabel="رابط المقال"
   >
@@ -63,13 +64,9 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     {entry.data.sourceName && entry.data.externalUrl && (
       <section class="notice-card">
         <p class="entity-kicker">النشر الأصلي</p>
-        <h2 class="section-title">المقال منشور أيضًا على {entry.data.sourceName}</h2>
         <p>
-          هذه الصفحة تُظهر نسخة داخلية منظمة من المقال ضمن أرشيف الموقع، بينما يظل النشر
-          الأصلي متاحًا على {entry.data.sourceName}.
-        </p>
-        <p>
-          <a href={entry.data.externalUrl}>الانتقال إلى المقال على {entry.data.sourceName}</a>
+          نُشر هذا المقال أولًا في {sourceLabel}:{' '}
+          <a href={entry.data.externalUrl}>قراءة المقال في مصدره</a>
         </p>
         {entry.data.alternateLinks.length > 0 && (
           <p>
@@ -89,10 +86,8 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
       <div class="section section--soft">
         <p class="entity-kicker">داخل السلسلة</p>
         <div class="section-heading">
-          <h2 class="section-title">متابعة قراءة السلسلة</h2>
           <p class="section-copy">
-            تنتمي هذه المقالة إلى سلسلة منظمة داخل الموقع، ويمكن الرجوع إلى فهرس السلسلة
-            أو الانتقال إلى الحلقة السابقة أو التالية عند توفرها.
+            هذا المقال من سلسلة «{entry.data.series}»{currentSeriesIndex >= 0 && ` (الحلقة ${currentSeriesIndex + 1} من ${seriesEntries.length})`}.
           </p>
         </div>
 

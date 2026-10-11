@@ -1,7 +1,7 @@
 ---
 title: "Books page on Noor Library"
 lang: "en"
-summary: "An external author-oriented page on Noor Library gathering book records associated with the name on an open cataloging platform."
+summary: "The Noor Library page listing books by Haitham Abdelmonem El-Ghareeb."
 category: "Published Books"
 linkType: "Author Page"
 sourceName: "Noor Library"
@@ -9,4 +9,4 @@ externalUrl: "https://www.noor-book.com/%D9%83%D8%AA%D8%A8-%D9%87%D9%8A%D8%AB%D9
 featured: true
 ---
 
-This link leads to the Noor Library page that gathers book records associated with the author's name on an open-access cataloging platform.
+Noor Library is an open online book catalogue; this page lists the books recorded there under his name.

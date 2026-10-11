@@ -23,6 +23,8 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
   entry.data.sourceName,
   entry.data.series,
 ]);
+const isSummary = /^summary/i.test(entry.data.articleType ?? '');
+const sourceNotice = `This is an English ${isSummary ? 'summary' : 'version'} of an article first published in Arabic on ${entry.data.sourceName}.`;
 ---
 
 <BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
@@ -31,10 +33,10 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     eyebrow="Article"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['Article page', entry.data.articleType ?? 'Article', entry.data.category ?? 'General category']}
+    badges={[entry.data.category, entry.data.date].filter((value): value is string => Boolean(value))}
     metaItems={[
-      { label: 'Section', value: 'Articles' },
       ...(entry.data.date ? [{ label: 'Date', value: entry.data.date }] : []),
+      ...(entry.data.category ? [{ label: 'Category', value: entry.data.category }] : []),
       ...(entry.data.series ? [{ label: 'Series', value: entry.data.series }] : []),
       ...(entry.data.sourceName ? [{ label: 'Source', value: entry.data.sourceName }] : []),
       ...(entry.data.readingTime ? [{ label: 'Reading time', value: entry.data.readingTime }] : []),
@@ -42,20 +44,25 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     backHref="/en/articles/"
     backLabel="Back to articles"
     externalUrl={entry.data.externalUrl}
-    externalLabel="Article link"
+    externalLabel={entry.data.sourceName ? `Original on ${entry.data.sourceName}` : 'Original article'}
   >
     <Content />
+
+    {entry.data.seriesSlug && (
+      <p>
+        <a href={`/en/articles/series/${entry.data.seriesSlug}/`}>All parts of {entry.data.series}</a>
+      </p>
+    )}
 
     {entry.data.sourceName && entry.data.externalUrl && (
       <section class="notice-card">
         <p class="entity-kicker">Original publication</p>
-        <h2 class="section-title">This article is also published on {entry.data.sourceName}</h2>
+        <h2 class="section-title">Originally published on {entry.data.sourceName}</h2>
         <p>
-          This page presents an organized in-site version of the article within the website archive,
-          while the original publication remains available on {entry.data.sourceName}.
+          {sourceNotice}
         </p>
         <p>
-          <a href={entry.data.externalUrl}>Go to the article on {entry.data.sourceName}</a>
+          <a href={entry.data.externalUrl}>Read the original article on {entry.data.sourceName}</a>
         </p>
         {entry.data.alternateLinks.length > 0 && (
           <p>

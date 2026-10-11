@@ -11,23 +11,35 @@ const books = (await getCollection('books'))
     const yearDiff = Number(b.data.year ?? 0) - Number(a.data.year ?? 0);
     if (yearDiff !== 0) return yearDiff;
 
-    const publishedA = /published/i.test(a.data.status ?? '');
-    const publishedB = /published/i.test(b.data.status ?? '');
-    if (publishedA !== publishedB) return publishedB ? 1 : -1;
-
     return a.data.title.localeCompare(b.data.title, 'en');
-  })
-  .slice(0, 6);
-const seoTitle = buildSeoTitle('Authored and published works', {
+  });
+
+const groupOrder = ['Book', 'E-Book'];
+const groupLabels: Record<string, string> = {
+  Book: 'Books',
+  'E-Book': 'E-books: edited lesson transcriptions',
+};
+const groupMap = new Map<string, typeof books>();
+
+for (const book of books) {
+  const key = book.data.workType ?? 'Other works';
+  groupMap.set(key, [...(groupMap.get(key) ?? []), book]);
+}
+
+const groups = Array.from(groupMap.entries()).sort((a, b) => {
+  const aIndex = groupOrder.indexOf(a[0]);
+  const bIndex = groupOrder.indexOf(b[0]);
+
+  return (aIndex === -1 ? groupOrder.length : aIndex) - (bIndex === -1 ? groupOrder.length : bIndex);
+});
+
+const seoTitle = buildSeoTitle('Books', {
   lang: 'en',
-  section: 'Books',
+  section: 'Dr. Haitham A. El-Ghareeb',
 });
 const seoDescription = buildSeoDescription(
-  'English books archive for authored works, course books, and publication-ready manuscripts.',
-  [
-    `${books.length} featured entries`,
-    books[0]?.data.year ? `Latest listed year ${books[0].data.year}` : undefined,
-  ],
+  'Books by Dr. Haitham A. El-Ghareeb: academic monographs on service-oriented architecture and enterprise integration, information systems textbooks, and Islamic studies titles.',
+  [`${books.length} titles`, books[0]?.data.year ? `Latest ${books[0].data.year}` : undefined],
 );
 ---
 
@@ -40,84 +52,37 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Books</p>
-      <h1 class="hero__title">Authored and published works</h1>
+      <h1 class="hero__title">Books</h1>
       <p class="hero__lead">
-        This section gathers authored books, course books, and publication-ready manuscripts
-        that represent the scholarly and academic profile of Dr. Haitham A. El-Ghareeb.
+        Monographs on service-oriented architecture, e-learning and enterprise integration, course
+        textbooks in information systems, a collection of Arabic short stories, and edited transcriptions
+        of lessons on al-Shafi'i's al-Risalah and al-Tabari's Tafsir, listed newest first.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">Books and authored works</span>
-        <span class="hero__badge">Bibliographic metadata</span>
-        <span class="hero__badge">Direct access links</span>
+        <span class="hero__badge">{books.length} titles</span>
       </div>
     </section>
 
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">Section purpose</p>
-        <h2 class="section-title">A clearer bibliography-facing archive</h2>
-        <p class="section-copy">
-          The page presents books in a consistent format that combines title, summary,
-          publication context, and outward access links where available.
-        </p>
+    {groups.map(([workType, entries]) => (
+      <section class="shell section">
+        <div class="section-heading">
+          <h2 class="section-title">{groupLabels[workType] ?? workType} ({entries.length})</h2>
+        </div>
 
-        <ul class="entity-tags">
-          <li>Approved titles</li>
-          <li>Short summary</li>
-          <li>Publication details</li>
-          <li>External links</li>
-        </ul>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">Template readiness</p>
-        <ul class="entity-list">
-          <li><strong>Current form:</strong> compact cards with title, summary, year, and access point.</li>
-          <li><strong>Ordering:</strong> newer and more publication-ready entries appear first.</li>
-          <li><strong>Long-term use:</strong> the same layout can absorb more titles without redesign.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="shell section">
-      <div class="entity-meta-grid">
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Identity</p>
-          <h3>What the title is</h3>
-          <p>Each entry foregrounds the book's title and role within the wider scholarly profile.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Publication</p>
-          <h3>Clear reference details</h3>
-          <p>Publication year, publisher, or other useful bibliographic reference points.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Access</p>
-          <h3>Links and references</h3>
-          <p>Space for outward links, listings, or external access points when appropriate.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Current entries</p>
-        <h2 class="section-title">Books shown with the latest items first</h2>
-      </div>
-
-      <div class="grid-two">
-        {books.map((book) => (
-          <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
-            <article class="content-card entity-card">
-              <p class="content-card__meta">{book.data.status ?? 'Available record'}</p>
-              <h3>{book.data.title}</h3>
-              <p>{book.data.summary}</p>
-              <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
-            </article>
-          </a>
-        ))}
-      </div>
-    </section>
+        <div class="grid-two">
+          {entries.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.year, book.data.publisher].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+                {book.data.status && <p class="content-card__meta">{book.data.status}</p>}
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
   </main>
 </BaseLayout>

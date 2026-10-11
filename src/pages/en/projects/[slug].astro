@@ -23,6 +23,15 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
   entry.data.status,
   entry.data.startYear ? `Started ${entry.data.startYear}` : undefined,
 ]);
+const hostLabels: Record<string, string> = {
+  'github.com': 'View on GitHub',
+  'www.amazon.com': 'View on Amazon',
+  'www.alukah.net': 'View on Alukah',
+  'helghareeb.github.io': 'Read online (Arabic)',
+};
+const externalLabel = entry.data.externalUrl
+  ? hostLabels[new URL(entry.data.externalUrl).hostname] ?? 'Open link'
+  : undefined;
 ---
 
 <BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
@@ -31,17 +40,16 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     eyebrow="Project"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['Project page', 'Standalone entry', entry.data.status ?? 'Available record']}
+    badges={[entry.data.area, entry.data.status].filter((value): value is string => Boolean(value))}
     metaItems={[
-      { label: 'Section', value: 'Projects' },
-      { label: 'Status', value: entry.data.status ?? 'Unspecified' },
+      { label: 'Status', value: entry.data.status ?? '' },
       ...(entry.data.area ? [{ label: 'Area', value: entry.data.area }] : []),
       ...(entry.data.startYear ? [{ label: 'Start year', value: entry.data.startYear }] : []),
     ]}
     backHref="/en/projects/"
     backLabel="Back to projects"
     externalUrl={entry.data.externalUrl}
-    externalLabel="Project link"
+    externalLabel={externalLabel}
   >
     <Content />
   </EntityEntryPage>

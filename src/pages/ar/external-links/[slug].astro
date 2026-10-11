@@ -24,15 +24,13 @@ const { Content } = await render(entry);
     eyebrow="رابط خارجي"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['رابط موصوف', entry.data.linkType ?? 'رابط', entry.data.category ?? 'تصنيف عام']}
+    badges={[entry.data.category, entry.data.sourceName].filter((value): value is string => Boolean(value))}
     metaItems={[
-      { label: 'القسم', value: 'الروابط الخارجية' },
       ...(entry.data.sourceName ? [{ label: 'الجهة', value: entry.data.sourceName }] : []),
       ...(entry.data.linkType ? [{ label: 'النوع', value: entry.data.linkType }] : []),
-      { label: 'مميز', value: entry.data.featured ? 'نعم' : 'لا' },
     ]}
     backHref="/ar/external-links/"
-    backLabel="العودة إلى قسم الروابط الخارجية"
+    backLabel="كل الروابط الخارجية"
     externalUrl={entry.data.externalUrl}
     externalLabel="فتح الرابط"
   >

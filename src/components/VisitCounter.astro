@@ -7,7 +7,7 @@ interface Props {
 const { lang, currentPath } = Astro.props;
 const goatcounterCode = import.meta.env.PUBLIC_GOATCOUNTER_CODE?.trim();
 const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
-const currentPageLabel = lang === 'ar' ? 'زيارات هذه الصفحة' : 'This page visits';
+const currentPageLabel = lang === 'ar' ? 'زيارات هذه الصفحة' : 'Visits to this page';
 const homePageLabel = lang === 'ar' ? 'زيارات الصفحة الرئيسية' : 'Homepage visits';
 ---
 
@@ -34,7 +34,6 @@ const homePageLabel = lang === 'ar' ? 'زيارات الصفحة الرئيسي�
     const lang = root.getAttribute('data-lang') || 'en';
     const homeSlot = root.querySelector('[data-counter-slot="home"]');
     const pageSlot = root.querySelector('[data-counter-slot="page"]');
-    const loadingText = lang === 'ar' ? 'غير متاح الآن' : 'Unavailable';
 
     const render = async (slot, counterPath) => {
       if (!slot || !code) return;
@@ -50,7 +49,8 @@ const homePageLabel = lang === 'ar' ? 'زيارات الصفحة الرئيسي�
         const count = typeof data.count === 'number' ? data.count : 0;
         slot.textContent = new Intl.NumberFormat(lang === 'ar' ? 'ar-EG' : 'en-US').format(count);
       } catch {
-        slot.textContent = loadingText;
+        // Hide an item whose count could not be loaded rather than showing an error.
+        slot.closest('.visit-counter__item')?.remove();
       }
     };
 

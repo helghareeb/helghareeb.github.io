@@ -1,7 +1,7 @@
 ---
 title: "Scholar page on Midad"
 lang: "en"
-summary: "An external page on Midad, a platform that organizes scholarly and da'wah-related material under dedicated scholar pages."
+summary: "Dr. Haitham A. El-Ghareeb's scholar page on Midad, a platform for scholarly and da'wah material."
 category: "Scholarly and Da'wah Publishing"
 linkType: "Scholar Page"
 sourceName: "Midad"
@@ -9,4 +9,4 @@ externalUrl: "https://midad.com/scholar/53262"
 featured: true
 ---
 
-This entry points to an external page on Midad, a platform that organizes scholarly and da'wah-oriented content under individual scholar pages and related archives.
+Midad gathers scholarly and da'wah material under individual scholar pages; this is the page listing his material on the platform.

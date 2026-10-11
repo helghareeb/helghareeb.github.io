@@ -1,15 +1,40 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const seoTitle = buildSeoTitle('E-Learning in Islamic Studies', {
+const books = (await getCollection('books')).filter((entry) => entry.data.lang === 'en');
+const byYear = (a: (typeof books)[number], b: (typeof books)[number]) =>
+  Number(a.data.year ?? 0) - Number(b.data.year ?? 0) || a.data.title.localeCompare(b.data.title, 'en');
+
+const elearningBooks = books.filter((entry) => /e-learning/i.test(entry.data.title)).sort(byYear);
+const courseBooks = books
+  .filter((entry) => /course/i.test(entry.data.summary ?? ''))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'));
+const courseProjects = (await getCollection('projects')).filter(
+  (entry) => entry.data.lang === 'en' && /course/i.test(entry.data.title),
+);
+
+const educationArticles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'en' && !entry.data.draft && /islamic education/i.test(entry.data.title))
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const benefitCount = (await getCollection('studyBenefits')).filter(
+  (entry) => entry.data.lang === 'en' && !entry.data.draft,
+).length;
+const flashcardCount = (await getCollection('flashcards')).filter(
+  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
+).length;
+
+const seoTitle = buildSeoTitle('E-Learning', {
   lang: 'en',
-  section: 'Scholarly Field',
+  section: 'Scholarly Fields',
 });
 const seoDescription = buildSeoDescription(
-  'A field page for digital Islamic learning, educational experiments, pedagogical structure, and media-supported teaching.',
-  ['Digital learning', 'Pedagogy and media'],
+  'Books on service-oriented architecture for e-learning, open course textbooks in information systems, and online study tools for Islamic learning.',
+  [`${elearningBooks.length + courseBooks.length} books`],
 );
 ---
 
@@ -21,25 +46,115 @@ const seoDescription = buildSeoDescription(
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
-      <p class="hero__eyebrow">E-Learning in Islamic Studies</p>
-      <h1 class="hero__title">Islamic learning in a structured digital setting</h1>
+      <p class="hero__eyebrow">E-Learning</p>
+      <h1 class="hero__title">E-Learning</h1>
       <p class="hero__lead">
-        This section presents ideas, initiatives, and materials that connect Islamic learning
-        with digital delivery, pedagogical structure, and educational media.
+        Research on service-oriented architecture for e-learning, open textbooks and course repositories
+        for university students, and online study tools for students of Islamic knowledge.
       </p>
+    </section>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">Digital learning</span>
-        <span class="hero__badge">Pedagogy and media</span>
+    {elearningBooks.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Research</p>
+          <h2 class="section-title">Service-oriented architecture for e-learning</h2>
+        </div>
+
+        <div class="grid-two">
+          {elearningBooks.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.year, book.data.publisher].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {(courseBooks.length > 0 || courseProjects.length > 0) && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Teaching</p>
+          <h2 class="section-title">Open course textbooks and repositories</h2>
+        </div>
+
+        <div class="grid-two">
+          {courseBooks.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+              </article>
+            </a>
+          ))}
+          {courseProjects.map((project) => (
+            <a class="card-link" href={getEntryPath('projects', 'en', project.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
+                <h3>{project.data.title}</h3>
+                <p>{project.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Islamic learning</p>
+        <h2 class="section-title">Online study tools</h2>
+      </div>
+
+      <div class="grid-two">
+        <a class="card-link" href="/en/study/benefits/">
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{benefitCount} notebooks</p>
+            <h3>Benefits from Books</h3>
+            <p>Edited study notes from lessons on al-Shafi'i's al-Risalah and al-Tabari's Tafsir, arranged by subject.</p>
+          </article>
+        </a>
+        <a class="card-link" href="/en/study/flashcards/">
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{flashcardCount} questions · Arabic</p>
+            <h3>Flashcards</h3>
+            <p>Review, training and test questions on Akhsar al-Mukhtasarat in Hanbali fiqh.</p>
+          </article>
+        </a>
+        <a class="card-link" href="/en/learning-path/">
+          <article class="content-card entity-card">
+            <p class="content-card__meta">Four stages</p>
+            <h3>Learning Path</h3>
+            <p>A suggested sequence from a fiqh primer to legal theory, tafsir and manuscript studies.</p>
+          </article>
+        </a>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Section directions</h2>
-      <p>
-        It can host course-related material, educational experiments, and essays on how digital
-        structure can serve the communication of Islamic knowledge.
-      </p>
-    </section>
+    {educationArticles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Articles</p>
+          <h2 class="section-title">Islamic education in the digital age</h2>
+        </div>
+
+        <div class="grid-two">
+          {educationArticles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

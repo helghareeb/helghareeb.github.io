@@ -9,5 +9,4 @@ workType: "E-Book"
 externalUrl: "https://github.com/helghareeb/tabary-01"
 ---
 
-This work presents transcribed lessons on al-Tabari's Tafsir in a professionally formatted
-LaTeX edition designed for organized reading, printing, and reuse.
+Transcribed lessons by Shaykh Husayn ibn Abd al-Razzaq al-Misri on al-Tabari's *Jami' al-Bayan*, typeset in LaTeX for reading and printing. Study notes from the lessons on al-Fatihah and al-Baqarah are available in the [Benefits from Books](/en/study/benefits/) section.

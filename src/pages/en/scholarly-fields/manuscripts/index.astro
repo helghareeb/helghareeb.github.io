@@ -1,15 +1,48 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const allArticles = await getCollection('articles');
+
+const editions = (await getCollection('editions')).filter((entry) => entry.data.lang === 'en');
+
+const englishArticles = allArticles
+  .filter(
+    (entry) =>
+      entry.data.lang === 'en' &&
+      !entry.data.draft &&
+      (/manuscript|tashif|al-tawdih/i.test(entry.data.title) || entry.data.category === 'Textual Scholarship Methodologies'),
+  )
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const arabicSeriesCount = (slug: string) =>
+  allArticles.filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.seriesSlug === slug).length;
+
+const courses = [
+  { slug: 'manuscript-skills-course', title: 'Course 1: Skills and tools for reading the Arabic manuscript' },
+  { slug: 'manuscript-atiq-course', title: 'Course 2: Reading early manuscripts' },
+  { slug: 'manuscript-waqf-course', title: 'Course 3: Endowment, ownership and reading notes in the Arabic manuscript' },
+  { slug: 'manuscript-samaat-course', title: "Course 4: Audition certificates (sama'at) recorded on manuscripts" },
+  { slug: 'manuscript-nafisa-samaat-course', title: 'Course 5: Audition certificates in rare manuscripts' },
+  { slug: 'manuscript-copyist-course', title: 'Course 6: Identifying the copyist and the date of copying' },
+  { slug: 'manuscript-handwriting-course', title: 'Course 7: Studying manuscript copies: paths and skills' },
+  { slug: 'manuscript-mastery-course', title: 'Course 8: Mastering manuscript studies' },
+]
+  .map((course) => ({ ...course, count: arabicSeriesCount(course.slug) }))
+  .filter((course) => course.count > 0);
+
+const courseParts = courses.reduce((sum, course) => sum + course.count, 0);
 
 const seoTitle = buildSeoTitle('Manuscripts', {
   lang: 'en',
-  section: 'Scholarly Field',
+  section: 'Scholarly Fields',
 });
 const seoDescription = buildSeoDescription(
-  'A field page for manuscript studies, description, editorial method, and broader methodological questions tied to textual heritage.',
-  ['Manuscripts', 'Description and editing'],
+  "A critical edition of al-Tawdih lil-Awham, articles on variants in the copies of Sahih al-Bukhari, and notes from Shaykh Salih al-Azhari's courses in manuscript studies.",
+  [`${courses.length} courses`, `${englishArticles.length} English articles`],
 );
 ---
 
@@ -22,24 +55,74 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Manuscripts</p>
-      <h1 class="hero__title">Manuscripts between description, editing, and method</h1>
+      <h1 class="hero__title">Manuscripts</h1>
       <p class="hero__lead">
-        This section gathers manuscript-related scholarly interests, including description,
-        editorial method, and the broader questions tied to textual heritage work.
-      </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">Manuscripts</span>
-        <span class="hero__badge">Description and editing</span>
-      </div>
-    </section>
-
-    <section class="shell notice-card">
-      <h2 class="section-title">Directly related to critical editions</h2>
-      <p>
-        It works alongside the critical editions section while also hosting broader
-        methodological or reflective material about manuscript scholarship.
+        Reading, describing and editing Arabic manuscripts: a published critical edition, articles on
+        variants and scribal errors in the copies of Sahih al-Bukhari, and notes from the manuscript
+        courses of Shaykh Salih al-Azhari.
       </p>
     </section>
+
+    {editions.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Critical edition</p>
+          <h2 class="section-title">Published edition</h2>
+        </div>
+
+        <div class="grid-two">
+          {editions.map((edition) => (
+            <a class="card-link" href={getEntryPath('editions', 'en', edition.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[edition.data.workType, edition.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{edition.data.title}</h3>
+                <p>{edition.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {englishArticles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Articles</p>
+          <h2 class="section-title">Manuscripts and textual criticism</h2>
+        </div>
+
+        <div class="grid-two">
+          {englishArticles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {courses.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Courses · in Arabic</p>
+          <h2 class="section-title">Shaykh Salih al-Azhari's manuscript courses</h2>
+          <p class="section-copy">
+            Lesson summaries from {courses.length} courses ({courseParts} parts), from basic reading skills
+            to audition certificates, endowment and ownership notes, and identifying copyists. These
+            summaries are available in Arabic only.
+          </p>
+        </div>
+
+        <ul class="list-clean">
+          {courses.map((course) => (
+            <li><a href={`/ar/articles/series/${course.slug}/`}>{course.title}</a> ({course.count} parts)</li>
+          ))}
+        </ul>
+      </section>
+    )}
   </main>
 </BaseLayout>

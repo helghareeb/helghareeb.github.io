@@ -3,7 +3,7 @@ title: "The Severity of Divine Abhorrence: A Linguistic and Legal Reading of 'Ka
 lang: "en"
 date: "2025-06-14"
 summary: "A focused explanation of the Qur'anic warning against saying what one does not do, with attention to the meaning of maqt and the ugliness of contradiction between word and deed."
-category: "Quranic Exegesis and Quranic Sciences"
+category: "Qur'anic Exegesis and Sciences"
 translationKey: "alukah-severity-of-divine-hatred"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"

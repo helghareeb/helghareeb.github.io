@@ -13,8 +13,8 @@ const links = navigation[lang];
 const siteName = lang === 'ar' ? siteConfig.nameAr : siteConfig.nameEn;
 const description =
   lang === 'ar'
-    ? 'موقع علمي ثنائي اللغة يجمع السيرة العلمية والكتب والتحقيقات والمقالات والمشروعات والروابط في بنية منظمة قابلة للنمو.'
-    : 'A bilingual scholarly website bringing together academic profile, books, critical editions, articles, projects, and curated links in an organized structure.';
+    ? 'مؤلفات الدكتور هيثم عبدالمنعم الغريب ومقالاته وتحقيقاته ومواد المذاكرة لطالب العلم، إلى جانب سيرته العلمية في نظم المعلومات بجامعة المنصورة.'
+    : 'Books, articles, critical editions and study materials by Dr. Haitham A. El-Ghareeb, Associate Professor of Information Systems at Mansoura University.';
 const quickLinks = links.slice(0, 6);
 const extendedLinks = links.slice(6);
 const siteIndexLink = lang === 'ar' ? '/ar/site-map/' : '/en/site-map/';
@@ -24,7 +24,7 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="shell site-footer__grid">
     <section>
-      <p class="footer-kicker">{lang === 'ar' ? 'عن الموقع' : 'About the site'}</p>
+      <p class="footer-kicker">{lang === 'ar' ? 'عن الموقع' : 'About'}</p>
       <h2 class="footer-title">{siteName}</h2>
       <p class="footer-copy">{description}</p>
     </section>
@@ -39,7 +39,7 @@ const year = new Date().getFullYear();
     </section>
 
     <section>
-      <p class="footer-kicker">{lang === 'ar' ? 'أقسام التوسع' : 'Expansion Areas'}</p>
+      <p class="footer-kicker">{lang === 'ar' ? 'أقسام أخرى' : 'More sections'}</p>
       <div class="footer-links">
         {extendedLinks.map((link) => (
           <a href={link.href}>{link.label}</a>
@@ -49,12 +49,13 @@ const year = new Date().getFullYear();
     </section>
 
     <section>
-      <p class="footer-kicker">{lang === 'ar' ? 'الحالة الحالية' : 'Current status'}</p>
-      <p class="footer-copy">
-        {lang === 'ar'
-          ? 'الموقع تجاوز مرحلة الصياغات التأسيسية في كثير من أقسامه، وتستمر فيه الآن إضافة المحتوى العلمي الفعلي والتحسينات التقنية.'
-          : 'The site has moved beyond its earliest scaffold stage in many sections, and current work now focuses on real scholarly content and technical refinement.'}
-      </p>
+      <p class="footer-kicker">{lang === 'ar' ? 'تواصل' : 'Contact'}</p>
+      <div class="footer-links">
+        <a href="mailto:helghareeb@mans.edu.eg">helghareeb@mans.edu.eg</a>
+        <a href="https://scholar.google.com/citations?user=f66uaewAAAAJ">Google Scholar</a>
+        <a href="https://orcid.org/0000-0003-1875-6706">ORCID</a>
+        <a href="https://github.com/helghareeb">GitHub</a>
+      </div>
     </section>
   </div>
 

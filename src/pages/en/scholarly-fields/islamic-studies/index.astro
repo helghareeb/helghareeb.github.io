@@ -1,15 +1,43 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { getStudyBenefitBookPath, groupStudyBenefits } from '../../../../utils/study';
+
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const categoryMap = new Map<string, typeof articles>();
+
+for (const article of articles) {
+  const category = article.data.category ?? 'Other';
+  categoryMap.set(category, [...(categoryMap.get(category) ?? []), article]);
+}
+
+const categories = Array.from(categoryMap.entries()).sort(
+  (a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], 'en'),
+);
+const majorCategories = categories.filter(([, entries]) => entries.length >= 3);
+const minorCategories = categories.filter(([, entries]) => entries.length < 3);
+
+const benefitGroups = groupStudyBenefits(
+  (await getCollection('studyBenefits')).filter((entry) => entry.data.lang === 'en' && !entry.data.draft),
+);
+
+const islamicBooks = (await getCollection('books'))
+  .filter((entry) => entry.data.lang === 'en' && entry.data.workType === 'E-Book')
+  .sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'));
 
 const seoTitle = buildSeoTitle('Islamic Studies', {
   lang: 'en',
-  section: 'Scholarly Field',
+  section: 'Scholarly Fields',
 });
 const seoDescription = buildSeoDescription(
-  'The broadest scholarly field in the site, linking Islamic heritage, Hadith, methodology, and related content across the archive.',
-  ['Linked archives', 'Related scholarly content'],
+  "Articles on hadith, creed, Qur'anic exegesis, legal theory and counsel, with study notes and edited lessons on al-Shafi'i's al-Risalah and al-Tabari's Tafsir.",
+  [`${articles.length} articles`, `${categories.length} categories`],
 );
 ---
 
@@ -22,38 +50,111 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Islamic Studies</p>
-      <h1 class="hero__title">The broadest scholarly umbrella of the project</h1>
+      <h1 class="hero__title">Islamic Studies</h1>
       <p class="hero__lead">
-        This section gathers the major Islamic studies themes connected to the site,
-        and to serve as a conceptual frame linking the more specialized areas.
+        Articles on hadith and its sciences, creed, Qur'anic exegesis, legal theory, counsel and da'wah,
+        alongside edited lessons and study notes on al-Shafi'i's al-Risalah and al-Tabari's Tafsir.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">Specialized section</span>
-        <span class="hero__badge">Article-linked</span>
-        <span class="hero__badge">Archive-ready</span>
+        <span class="hero__badge">{articles.length} articles</span>
+        <span class="hero__badge">{categories.length} categories</span>
+      </div>
+
+      <div class="hero__actions">
+        <a class="button" href="/en/articles/">All articles</a>
+        <a class="button-secondary" href="/en/study/">Study Hub</a>
       </div>
     </section>
 
     <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Articles by subject</p>
+        <h2 class="section-title">Main subjects</h2>
+      </div>
+
       <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">Purpose</p>
-          <h2 class="section-title">A general entry point</h2>
-          <p>
-            It gathers articles, works, and themes related to Islamic heritage, Hadith,
-            method, and neighboring scholarly concerns.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">Expansion</p>
-          <h2 class="section-title">Linked archives and related content</h2>
-          <p>
-            The section supports internal archives and thematic connections across books, articles,
-            and critical editions.
-          </p>
-        </article>
+        {majorCategories.map(([category, entries]) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{entries.length} articles</p>
+            <h3>{category}</h3>
+            <ul class="list-clean">
+              {entries.slice(0, 3).map((article) => (
+                <li><a href={getEntryPath('articles', 'en', article.slug)}>{article.data.title}</a></li>
+              ))}
+            </ul>
+            {entries.length > 3 && (
+              <details>
+                <summary>{entries.length - 3} more</summary>
+                <ul class="list-clean">
+                  {entries.slice(3).map((article) => (
+                    <li><a href={getEntryPath('articles', 'en', article.slug)}>{article.data.title}</a></li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </article>
+        ))}
+      </div>
+
+      {minorCategories.length > 0 && (
+        <details class="content-card">
+          <summary>Other subjects ({minorCategories.length})</summary>
+          <ul class="list-clean">
+            {minorCategories.map(([category, entries]) => (
+              <li>
+                <strong>{category}:</strong>{' '}
+                {entries.map((article, index) => (
+                  <>
+                    {index > 0 && ' · '}
+                    <a href={getEntryPath('articles', 'en', article.slug)}>{article.data.title}</a>
+                  </>
+                ))}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Study Hub</p>
+        <h2 class="section-title">Study notes from the lessons</h2>
+      </div>
+
+      <div class="grid-two">
+        {benefitGroups.map((group) => (
+          <a class="card-link" href={getStudyBenefitBookPath('en', group.fieldSlug, group.bookSlug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{group.field}</p>
+              <h3>{group.bookTitle}</h3>
+              <p>{[group.teacher, `${group.entries.length} ${group.entries.length === 1 ? 'notebook' : 'notebooks'}`].filter(Boolean).join(' · ')}</p>
+            </article>
+          </a>
+        ))}
       </div>
     </section>
+
+    {islamicBooks.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Books</p>
+          <h2 class="section-title">Edited lesson transcriptions</h2>
+        </div>
+
+        <div class="grid-two">
+          {islamicBooks.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

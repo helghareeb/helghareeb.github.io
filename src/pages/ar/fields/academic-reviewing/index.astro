@@ -1,15 +1,59 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const seoTitle = buildSeoTitle('التحكيم العلمي والمراجعة الأكاديمية', {
+const links = (await getCollection('externalLinks')).filter((entry) => entry.data.lang === 'ar');
+const linkPath = (slug: string) => {
+  const entry = links.find((item) => item.slug === `${slug}-ar`);
+
+  return entry ? getEntryPath('externalLinks', 'ar', entry.slug) : undefined;
+};
+
+const editorialRoles: { period: string; title: string; copy?: string; href?: string }[] = [
+  {
+    period: 'منذ 24 سبتمبر 2026م',
+    title: 'مدير تحرير مجلة المنصورة لعلوم الحاسبات والمعلومات (MJCIS)',
+    copy: 'المجلة العلمية لكلية الحاسبات والمعلومات بجامعة المنصورة.',
+    href: linkPath('mjcis-journal'),
+  },
+  {
+    period: 'منذ أبريل 2023م',
+    title: 'عضو هيئة تحرير مجلة المنصورة لعلوم الحاسبات والمعلومات (MJCIS)',
+    href: linkPath('mjcis-journal'),
+  },
+  {
+    period: '2009م – 2013م',
+    title: 'محرر فني ومحكّم في دورية Advances in Information Sciences and Service Sciences (AISS)',
+  },
+  {
+    period: 'منصة MERLOT',
+    title: 'عضو هيئة التحرير في مجال تقنية المعلومات ومحكّم تربوي في MERLOT',
+  },
+];
+
+const committees = [
+  {
+    period: '15 سبتمبر 2022م',
+    title: 'لجنة مناقشة رسالة دكتوراه: Knowledge Discovery Technique for Medical Big Data',
+    href: linkPath('faculty-facebook-post'),
+  },
+  {
+    period: '4 يوليو 2023م',
+    title: 'لجنة الحكم والمناقشة لرسالة دكتوراه: A proposed Framework for Outlier Detection of Stream Data',
+    href: linkPath('mansoura-phd-defense-committee'),
+  },
+];
+
+const seoTitle = buildSeoTitle('التحرير والتحكيم العلمي', {
   lang: 'ar',
   section: 'المجالات العلمية',
 });
 const seoDescription = buildSeoDescription(
-  'عرض موجز لخبرة التحكيم العلمي والمراجعة الأكاديمية داخل الموقع، مع إبراز طبيعة المشاركة والخبرة.',
-  ['خبرة تحكيم', 'عرض موجز'],
+  'مدير تحرير مجلة المنصورة لعلوم الحاسبات والمعلومات، ومحرر فني ومحكّم في دورية AISS، وعضو هيئة تحرير MERLOT في تقنية المعلومات، وعضو لجان مناقشة رسائل الدكتوراه.',
+  [],
 );
 ---
 
@@ -22,24 +66,44 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">التحكيم العلمي</p>
-      <h1 class="hero__title">عرض عام لخبرة التحكيم والمراجعة العلمية</h1>
+      <h1 class="hero__title">التحرير والتحكيم العلمي</h1>
       <p class="hero__lead">
-        هذا القسم يقدم عرضًا عامًا ومنظمًا لخبرة التحكيم العلمي، دون الدخول في تفاصيل
-        لا يراد نشرها، مع الإشارة إلى طبيعة الأعمال أو الرسائل التي جرت مراجعتها.
+        خبرة في إدارة تحرير الدوريات العلمية وتحكيم البحوث في نظم المعلومات وتقنية المعلومات،
+        والمشاركة في لجان مناقشة رسائل الدكتوراه بجامعة المنصورة.
       </p>
+    </section>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">خبرة تحكيم</span>
-        <span class="hero__badge">عرض موجز</span>
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">الدوريات العلمية</p>
+        <h2 class="section-title">مهام التحرير والتحكيم</h2>
+      </div>
+
+      <div class="grid-two">
+        {editorialRoles.map((role) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{role.period}</p>
+            <h3>{role.href ? <a href={role.href}>{role.title}</a> : role.title}</h3>
+            {role.copy && <p>{role.copy}</p>}
+          </article>
+        ))}
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">أسلوب العرض المعتمد</h2>
-      <p>
-        بحسب وثائق المشروع، سيكون العرض هنا مختصرًا وعامًا، يبرز الخبرة وطبيعة المشاركة
-        العلمية مع الحفاظ على الاقتصاد في التفاصيل.
-      </p>
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">الرسائل العلمية</p>
+        <h2 class="section-title">لجان مناقشة رسائل الدكتوراه بجامعة المنصورة</h2>
+      </div>
+
+      <div class="grid-two">
+        {committees.map((item) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{item.period}</p>
+            <h3>{item.href ? <a href={item.href}>{item.title}</a> : item.title}</h3>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

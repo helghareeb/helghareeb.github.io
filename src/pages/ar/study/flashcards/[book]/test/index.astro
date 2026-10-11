@@ -40,16 +40,15 @@ const seoDescription = buildSeoDescription(deck.data.summary, [`${cards.length} 
       <p class="hero__eyebrow">الاختبار</p>
       <h1 class="hero__title">اختبار {deck.data.bookTitle}</h1>
       <p class="hero__lead">
-        هذا الوضع مخصص لعرض الأسئلة في صورة اختبارية مجردة، ليقيس الطالب مقدار ما ضبطه
-        من المادة قبل الرجوع إلى صفحة النتائج والمراجعة.
+        تظهر الأسئلة هنا مجردة من أجوبتها لتقيس مقدار ما ضبطته من المادة، ثم تجد إجاباتك
+        محفوظة في صفحة النتائج.
       </p>
     </section>
 
     <section class="shell section">
       {cards.length === 0 ? (
         <article class="notice-card">
-          <h2 class="section-title">لم تُنشر أسئلة الاختبار بعد</h2>
-          <p>هذه الصفحة جاهزة لاستقبال دفعات الأسئلة الاختبارية، ثم ربطها بمسار النتائج وإعادة الخطأ.</p>
+          <p>لا توجد أسئلة منشورة في هذا الوضع حاليًا.</p>
         </article>
       ) : (
         <FlashcardSession

@@ -5,94 +5,96 @@ import '../../styles/global.css';
 import { getArticleSeriesPath, getEntryPath } from '../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../utils/seo';
 
-const featuredBooks = (await getCollection('books'))
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const partForms: [string, string, string, string, string] = ['حلقة واحدة', 'حلقتان', 'حلقات', 'حلقةً', 'حلقة'];
+
+const byDateDesc = (a: { data: { date?: string } }, b: { data: { date?: string } }) => {
+  const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+  return bTime - aTime;
+};
+
+const allBooks = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'ar')
-  .slice(0, 2);
+  .sort((a, b) => {
+    const yearCompare = Number(b.data.year ?? 0) - Number(a.data.year ?? 0);
+    if (yearCompare !== 0) return yearCompare;
+
+    return a.data.title.localeCompare(b.data.title, 'ar');
+  });
+const qatra = allBooks.find((entry) => entry.slug === 'qatra-min-al-hayah-ar');
+const featuredBooks = [
+  ...(qatra ? [qatra] : []),
+  ...allBooks.filter((entry) => entry !== qatra && entry.data.workType !== 'شرائح عرض'),
+].slice(0, 4);
 
 const featuredEditions = (await getCollection('editions'))
   .filter((entry) => entry.data.lang === 'ar')
+  .sort((a, b) => Number(b.data.year ?? 0) - Number(a.data.year ?? 0))
   .slice(0, 2);
 
-const featuredArticles = (await getCollection('articles'))
+const allArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
-  .sort((a, b) => {
-    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
-    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+  .sort(byDateDesc);
+const featuredArticles = allArticles.slice(0, 6);
 
-    return bTime - aTime;
-  })
-  .slice(0, 3);
+const articleSeriesMap = new Map<string, { title: string; slug: string; count: number }>();
 
-const articleSeriesMap = new Map<
-  string,
-  {
-    title: string;
-    slug: string;
-    count: number;
-    latestDate?: string;
-  }
->();
-
-for (const article of await getCollection('articles')) {
-  if (article.data.lang !== 'ar' || article.data.draft || !article.data.series || !article.data.seriesSlug) continue;
+for (const article of allArticles) {
+  if (!article.data.series || !article.data.seriesSlug) continue;
 
   const existing = articleSeriesMap.get(article.data.seriesSlug);
 
   if (existing) {
     existing.count += 1;
-
-    const existingTime = existing.latestDate ? new Date(existing.latestDate).getTime() : 0;
-    const articleTime = article.data.date ? new Date(article.data.date).getTime() : 0;
-
-    if (articleTime >= existingTime) {
-      existing.latestDate = article.data.date;
-    }
   } else {
     articleSeriesMap.set(article.data.seriesSlug, {
       title: article.data.series,
       slug: article.data.seriesSlug,
       count: 1,
-      latestDate: article.data.date,
     });
   }
 }
 
 const featuredSeries = Array.from(articleSeriesMap.values())
-  .sort((a, b) => {
-    const aTime = a.latestDate ? new Date(a.latestDate).getTime() : 0;
-    const bTime = b.latestDate ? new Date(b.latestDate).getTime() : 0;
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 4);
 
-    return bTime - aTime;
-  })
-  .slice(0, 2);
+const featuredProjects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'ar');
 
-const featuredProjects = (await getCollection('projects'))
-  .filter((entry) => entry.data.lang === 'ar')
-  .slice(0, 2);
+const featuredFields = [
+  {
+    title: 'الدراسات الإسلامية',
+    copy: 'أصول الفقه والحديث والعقيدة والتفسير، وفي مقدمتها ملخصات شروح «الرسالة» للإمام الشافعي.',
+    href: '/ar/fields/islamic-studies/',
+  },
+  {
+    title: 'علوم المخطوطات',
+    copy: 'ملخصات دورات الشيخ صالح الأزهري في علوم المخطوطات، وتحقيق النصوص التراثية.',
+    href: '/ar/fields/manuscripts/',
+  },
+  {
+    title: 'مذاكرة طالب العلم',
+    copy: 'دفاتر فوائد من شروح أهل العلم، وبطاقات للمراجعة والتدريب والاختبار.',
+    href: '/ar/study/',
+  },
+];
 
-const featuredFields = (await getCollection('fields'))
-  .filter((entry) => entry.data.lang === 'ar' && entry.data.featured)
-  .sort((a, b) => a.data.order - b.data.order)
-  .slice(0, 3);
-
-const featuredMedia = (await getCollection('media'))
-  .filter((entry) => entry.data.lang === 'ar')
-  .slice(0, 1);
-
-const featuredLinks = (await getCollection('externalLinks'))
-  .filter((entry) => entry.data.lang === 'ar' && entry.data.featured)
-  .slice(0, 3);
-const seoTitle = buildSeoTitle('الموقع الشخصي العلمي للدكتور هيثم الغريب', {
+const seoTitle = buildSeoTitle('د. هيثم عبدالمنعم الغريب', {
   lang: 'ar',
   section: 'الموقع الشخصي العلمي',
 });
 const seoDescription = buildSeoDescription(
-  'الواجهة العربية لموقع علمي شخصي ثنائي اللغة يضم الكتب والتحقيقات والمقالات والمشروعات والوسائط والمجالات العلمية.',
-  [
-    `${featuredArticles.length} مقالات حديثة`,
-    `${featuredBooks.length} كتب بارزة`,
-    `${featuredFields.length} مجالات علمية ظاهرة`,
-  ],
+  'أستاذ نظم المعلومات المساعد بجامعة المنصورة ومدير تحرير مجلة المنصورة لعلوم الحاسبات والمعلومات: كتب وتحقيقات ومقالات في أصول الفقه والحديث وعلوم المخطوطات، وأدوات مذاكرة لطالب العلم.',
+  [],
 );
 ---
 
@@ -104,17 +106,19 @@ const seoDescription = buildSeoDescription(
 >
   <main class="page-main page-main--home">
     <section class="shell hero hero--home">
-      <p class="hero__eyebrow">الواجهة العربية</p>
-      <h1 class="hero__title">الموقع الشخصي العلمي للدكتور هيثم الغريب</h1>
+      <p class="hero__eyebrow">أستاذ نظم المعلومات المساعد – جامعة المنصورة</p>
+      <h1 class="hero__title">د. هيثم عبدالمنعم الغريب</h1>
       <p class="hero__lead">
-        موقع علمي شخصي ثنائي اللغة يهدف إلى عرض السيرة العلمية، والكتب، والتحقيقات،
-        والمقالات، ومسارات العمل الأكاديمي والمعرفي في صورة حديثة واضحة ومنظمة.
+        أستاذ نظم المعلومات المساعد بكلية الحاسبات والمعلومات بجامعة المنصورة، ومدير تحرير
+        مجلة المنصورة لعلوم الحاسبات والمعلومات، يجمع بين البحث في نظم المعلومات وطلب العلم
+        الشرعي وخدمته تأليفًا وتلخيصًا وتحقيقًا.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">واجهة عربية أساسية</span>
-        <span class="hero__badge">بنية ثنائية اللغة</span>
-        <span class="hero__badge">أرشيف علمي منظم</span>
+        <span class="hero__badge">نظم المعلومات</span>
+        <span class="hero__badge">أصول الفقه</span>
+        <span class="hero__badge">علوم المخطوطات والتحقيق</span>
+        <span class="hero__badge">التعليم الإلكتروني</span>
       </div>
 
       <div class="hero__actions">
@@ -125,188 +129,175 @@ const seoDescription = buildSeoDescription(
       </div>
 
       <div class="grid-three hero__stats">
-        <article class="stat-card">
-          <strong>ثنائي اللغة</strong>
-          <span>بنية عربية وإنجليزية داخل مستودع واحد.</span>
-        </article>
-        <article class="stat-card">
-          <strong>أقسام أساسية</strong>
-          <span>أقسام رئيسية ومجالات علمية ومشروعات وروابط ووسائط.</span>
-        </article>
-        <article class="stat-card">
-          <strong>بنية قابلة للتوسع</strong>
-          <span>الواجهة الرئيسية تعرض الآن أقسام الموقع الموسعة ومداخله المنظمة.</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell section section--soft">
-      <div class="section-heading">
-        <p class="section-kicker">نبذة موجزة</p>
-        <h2 class="section-title">هوية علمية تجمع بين البحث والتنظيم الرقمي</h2>
-        <p class="section-copy">
-          تعرض هذه الواجهة موقعًا علميًا حديثًا يجمع الأعمال والاهتمامات البحثية في صورة
-          رصينة ومنظمة، مع عناية خاصة بالكتب، والتحقيق العلمي، والدراسات الإسلامية،
-          والمجالات المتصلة بالمحتوى العلمي الرقمي.
-        </p>
+        <a class="card-link" href="/ar/articles/">
+          <article class="stat-card">
+            <strong>{allArticles.length}</strong>
+            <span>مقالًا وملخصًا في العلوم الشرعية والفكر والدعوة</span>
+          </article>
+        </a>
+        <a class="card-link" href="/ar/books/">
+          <article class="stat-card">
+            <strong>{allBooks.length}</strong>
+            <span>كتابًا وعملًا منشورًا، ورقيًا وإلكترونيًا</span>
+          </article>
+        </a>
+        <a class="card-link" href="/ar/articles/series/">
+          <article class="stat-card">
+            <strong>{articleSeriesMap.size}</strong>
+            <span>سلسلة مقالات تُقرأ حلقاتها متتابعة</span>
+          </article>
+        </a>
       </div>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">بوابة الموقع</p>
-        <h2 class="section-title">المسارات الكبرى في النسخة الحالية</h2>
-        <p class="section-copy">
-          تعرض البنية الحالية المسارات الرئيسة للموقع بصورة أوضح، مع تزايد المحتوى العلمي
-          المنشور واتساع الأرشيف العربي والإنجليزي.
-        </p>
+        <p class="section-kicker">المجالات</p>
+        <h2 class="section-title">من مجالات الموقع</h2>
       </div>
 
       <div class="grid-three">
         {featuredFields.map((field) => (
-          <a class="card-link" href={field.data.href}>
+          <a class="card-link" href={field.href}>
             <article class="feature-card feature-card--field">
-              <h3>{field.data.title}</h3>
-              <p>{field.data.summary}</p>
+              <h3>{field.title}</h3>
+              <p>{field.copy}</p>
             </article>
           </a>
         ))}
+      </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/ar/fields/">كل المجالات العلمية</a>
       </div>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
         <p class="section-kicker">الكتب</p>
-        <h2 class="section-title">نماذج من المؤلفات</h2>
+        <h2 class="section-title">من أحدث الكتب</h2>
       </div>
 
       <div class="grid-two">
         {featuredBooks.map((book) => (
-          <article class="content-card">
-            <p class="content-card__meta">{book.data.status ?? 'بيانات أولية'}</p>
-            <h3>{book.data.title}</h3>
-            <p>{book.data.summary}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">التحقيقات</p>
-        <h2 class="section-title">نماذج من أعمال التحقيق</h2>
-      </div>
-
-      <div class="grid-two">
-        {featuredEditions.map((edition) => (
-          <article class="content-card">
-            <p class="content-card__meta">{edition.data.status ?? 'بيانات أولية'}</p>
-            <h3>{edition.data.title}</h3>
-            <p>{edition.data.summary}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">المشروعات والوسائط والروابط</p>
-        <h2 class="section-title">مسارات حاضرة داخل البنية العامة للموقع</h2>
-      </div>
-
-      <div class="grid-three">
-        {featuredProjects.map((project) => (
-          <article class="content-card">
-            <p class="content-card__meta">{project.data.status ?? 'بيانات مشروع'}</p>
-            <h3>{project.data.title}</h3>
-            <p>{project.data.summary}</p>
-          </article>
-        ))}
-        {featuredMedia.map((item) => (
-          <article class="content-card">
-            <p class="content-card__meta">{item.data.type ?? 'وسائط'}</p>
-            <h3>{item.data.title}</h3>
-            <p>{item.data.summary}</p>
-          </article>
-        ))}
-        {featuredLinks.map((link) => (
-          <a class="card-link" href={getEntryPath('externalLinks', 'ar', link.slug)}>
+          <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
             <article class="content-card">
-              <p class="content-card__meta">{link.data.category ?? 'روابط خارجية'}</p>
-              <h3>{link.data.title}</h3>
-              <p>{link.data.summary}</p>
+              <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+              <h3>{book.data.title}</h3>
+              <p>{book.data.summary}</p>
             </article>
           </a>
         ))}
       </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/ar/books/">كل الكتب</a>
+      </div>
     </section>
 
-    <section class="shell section">
-      {featuredSeries.length > 0 && (
+    {featuredEditions.length > 0 && (
+      <section class="shell section">
         <div class="section-heading">
-          <p class="section-kicker">سلاسل بارزة</p>
-          <h2 class="section-title">سلاسل مقالية نشطة داخل الأرشيف</h2>
-          <p class="section-copy">
-            لم يعد قسم المقالات يقتصر على المواد المفردة، بل صار يضم سلاسل كاملة
-            منظَّمة داخل الموقع مع صفحات مستقلة لكل سلسلة.
-          </p>
+          <p class="section-kicker">التحقيقات</p>
+          <h2 class="section-title">تحقيق التراث</h2>
         </div>
-      )}
 
-      {featuredSeries.length > 0 && (
         <div class="grid-two">
-          {featuredSeries.map((series) => (
-            <article class="cta-panel">
-              <div>
-                <p class="section-kicker">ضمن قسم المقالات</p>
-                <h2 class="section-title">{series.title}</h2>
-                <p class="section-copy">
-                  تحتوي هذه السلسلة الآن على {series.count} مادة مرتبة، ويمكن الدخول إليها
-                  من فهرس مستقل داخل الموقع.
-                </p>
-              </div>
-              <div class="hero__actions">
-                <a class="button" href={getArticleSeriesPath('ar', series.slug)}>عرض السلسلة</a>
-                <a class="button-secondary" href="/ar/articles/">قسم المقالات</a>
-              </div>
-            </article>
+          {featuredEditions.map((edition) => (
+            <a class="card-link" href={getEntryPath('editions', 'ar', edition.slug)}>
+              <article class="content-card">
+                <p class="content-card__meta">{[edition.data.workType, edition.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{edition.data.title}</h3>
+                <p>{edition.data.summary}</p>
+              </article>
+            </a>
           ))}
         </div>
-      )}
-    </section>
+      </section>
+    )}
 
     <section class="shell section">
       <div class="section-heading">
         <p class="section-kicker">المقالات</p>
-        <h2 class="section-title">أحدث المداخل المقالية</h2>
+        <h2 class="section-title">أحدث المقالات</h2>
       </div>
 
       <div class="grid-three">
         {featuredArticles.map((article) => (
-          <article class="content-card">
-            <p class="content-card__meta">
-              {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
-            </p>
-            <h3>{article.data.title}</h3>
-            <p>{article.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+            <article class="content-card">
+              <p class="content-card__meta">
+                {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+              </p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+            </article>
+          </a>
         ))}
+      </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/ar/articles/">كل المقالات</a>
       </div>
     </section>
 
+    {featuredSeries.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">السلاسل</p>
+          <h2 class="section-title">سلاسل المقالات</h2>
+        </div>
+
+        <div class="grid-two">
+          {featuredSeries.map((series) => (
+            <a class="card-link" href={getArticleSeriesPath('ar', series.slug)}>
+              <article class="content-card">
+                <p class="content-card__meta">{countAr(series.count, partForms)}</p>
+                <h3>{series.title}</h3>
+              </article>
+            </a>
+          ))}
+        </div>
+
+        <div class="hero__actions">
+          <a class="button-secondary" href="/ar/articles/series/">كل السلاسل</a>
+        </div>
+      </section>
+    )}
+
+    {featuredProjects.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">المشروعات</p>
+          <h2 class="section-title">مشروعات مفتوحة المصدر</h2>
+        </div>
+
+        <div class="grid-two">
+          {featuredProjects.map((project) => (
+            <a class="card-link" href={getEntryPath('projects', 'ar', project.slug)}>
+              <article class="content-card">
+                <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
+                <h3>{project.data.title}</h3>
+                <p>{project.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
     <section class="shell cta-panel">
       <div>
-        <p class="section-kicker">جاهزية تنظيمية</p>
-        <h2 class="section-title">الموقع يتسع للنمو المنظم</h2>
+        <p class="section-kicker">لطالب العلم</p>
+        <h2 class="section-title">مسار متدرج من المتون إلى المخطوطات</h2>
         <p class="section-copy">
-          يتيح الهيكل الحالي متابعة إدخال المحتوى المعتمد وتطوير البوابات الحالية دون
-          الحاجة إلى إعادة ترتيب البنية العامة من جديد.
+          من «أخصر المختصرات» في الفقه، إلى «الرسالة» للإمام الشافعي، فتفسير الطبري، ثم علوم
+          المخطوطات، مع ملخصات وفوائد وبطاقات مذاكرة لكل مرحلة.
         </p>
       </div>
       <div class="hero__actions">
-        <a class="button" href="/ar/fields/">المجالات العلمية</a>
-        <a class="button-secondary" href="/ar/projects/">المشروعات</a>
-        <a class="button-secondary" href="/ar/learning-path/">المسار التعليمي</a>
+        <a class="button" href="/ar/learning-path/">المسار التعليمي</a>
+        <a class="button-secondary" href="/ar/study/">مذاكرة طالب العلم</a>
       </div>
     </section>
   </main>

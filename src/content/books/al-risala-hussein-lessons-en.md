@@ -9,5 +9,4 @@ workType: "E-Book"
 externalUrl: "https://github.com/helghareeb/resala-shafi-huessein"
 ---
 
-This volume turns the lesson series on al-Risala into an organized textual edition with
-useful appendices and a professional scholarly layout.
+An edited transcription of Shaykh Husayn ibn Abd al-Razzaq al-Misri's lessons on al-Shafi'i's *al-Risala*, with appendices gathering the methodological, creedal, linguistic and usuli benefits of the lessons, typeset for reading and printing. Study notes from the same lessons are available in the [Benefits from Books](/en/study/benefits/) section.

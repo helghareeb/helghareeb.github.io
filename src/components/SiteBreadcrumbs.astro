@@ -4,26 +4,28 @@ import { breadcrumbLabels } from '../../config/breadcrumbs';
 interface Props {
   lang: 'ar' | 'en';
   currentPath: string;
+  currentTitle?: string;
 }
 
-const { lang, currentPath } = Astro.props;
+const { lang, currentPath, currentTitle } = Astro.props;
 const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
 const localeHome = lang === 'ar' ? '/ar/' : '/en/';
 const homeLabel = lang === 'ar' ? 'الرئيسية' : 'Home';
 const segments = normalizedPath.split('/').filter(Boolean);
 
+// Labelled paths link normally; the last crumb falls back to the page title.
+// Unlabelled intermediate paths are skipped, since some (such as /ar/study/benefits/<field>/) have no page.
 const breadcrumbItems =
   normalizedPath === '/' || normalizedPath === localeHome
     ? []
-    : segments.map((_, index) => {
-        const path = `/${segments.slice(0, index + 1).join('/')}/`;
-        const label = breadcrumbLabels[path]?.[lang];
-
-        return {
-          href: path,
-          label: label ?? segments[index].replace(/-/g, ' '),
-        };
-      });
+    : segments
+        .map((_, index) => {
+          const path = `/${segments.slice(0, index + 1).join('/')}/`;
+          const isLast = index === segments.length - 1;
+          const label = breadcrumbLabels[path]?.[lang] ?? (isLast ? currentTitle : undefined);
+          return label ? { href: path, label } : undefined;
+        })
+        .filter((item): item is { href: string; label: string } => Boolean(item) && item!.href !== localeHome);
 ---
 
 {

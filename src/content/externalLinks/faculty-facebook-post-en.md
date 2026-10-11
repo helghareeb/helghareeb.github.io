@@ -1,7 +1,7 @@
 ---
-title: "Faculty Facebook post"
+title: "Invitation to a PhD defense in Information Systems (2022)"
 lang: "en"
-summary: "A link to a post from the official Facebook page of the Faculty of Computers and Information at Mansoura University, included here as part of the wider public-facing external presence."
+summary: "The official Facebook page of the Faculty of Computers and Information, Mansoura University, invites the public to the PhD defense of a thesis titled Knowledge Discovery Technique for Medical Big Data on 15 September 2022, with Dr. Haitham A. El-Ghareeb on the examination committee."
 category: "External Mentions"
 linkType: "Social Media Post"
 sourceName: "Facebook"
@@ -9,4 +9,8 @@ externalUrl: "https://www.facebook.com/fcismans/posts/%D9%8A%D8%AA%D8%B4%D8%B1%D
 featured: false
 ---
 
-This is an external social media reference from the official faculty Facebook page and is included here as part of the broader public-facing web presence.
+The Postgraduate Studies Sector of the Faculty of Computers and Information at Mansoura University announced, on the faculty's official Facebook page, the public defense of the PhD thesis submitted by Heba Ali Ibrahim Ahmed El-Zoheiry, Assistant Lecturer in the Department of Information Systems, titled:
+
+*Knowledge Discovery Technique for Medical Big Data*
+
+The defense took place on Thursday, 15 September 2022, in the faculty's defense hall, with Dr. Haitham A. El-Ghareeb as a member of the examination committee.

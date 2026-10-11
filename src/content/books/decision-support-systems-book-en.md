@@ -1,7 +1,7 @@
 ---
 title: "Decision Support Systems Book"
 lang: "en"
-summary: "A book-first repository for a Decision Support Systems course, combining a structured textbook manuscript with matching lecture slides and academic support material."
+summary: "A textbook for a Decision Support Systems course, with matching lecture slides."
 status: "Published on GitHub"
 year: "2026"
 publisher: "GitHub"
@@ -9,6 +9,4 @@ workType: "Book"
 externalUrl: "https://github.com/helghareeb/DSS"
 ---
 
-This repository presents the LaTeX source for a Decision Support Systems book together
-with companion slide decks, covering core DSS concepts, machine learning, business
-intelligence, recommender systems, and decision analysis.
+The book covers core decision support concepts, machine learning, business intelligence, recommender systems and decision analysis. Its LaTeX source is published on GitHub together with the companion slide decks.

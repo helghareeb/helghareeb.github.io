@@ -1,37 +1,51 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { getStudyBenefitBookPath, groupStudyBenefits } from '../../../utils/study';
+
+const benefits = (await getCollection('studyBenefits')).filter(
+  (entry) => entry.data.lang === 'en' && !entry.data.draft,
+);
+const benefitGroups = groupStudyBenefits(benefits);
+
+const books = new Map<string, { title: string; teachers: Map<string, string> }>();
+
+for (const group of benefitGroups) {
+  const book = books.get(group.bookTitle) ?? { title: group.bookTitle, teachers: new Map<string, string>() };
+  if (group.teacher && !book.teachers.has(group.teacher)) {
+    book.teachers.set(group.teacher, getStudyBenefitBookPath('en', group.fieldSlug, group.bookSlug));
+  }
+  books.set(group.bookTitle, book);
+}
+
+const flashcardCount = (await getCollection('flashcards')).filter(
+  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
+).length;
 
 const tracks = [
   {
-    eyebrow: 'Track One',
+    eyebrow: `${benefits.length} notebooks`,
     title: 'Benefits from Books',
     href: '/en/study/benefits/',
-    summary: 'An organized archive of study notes arranged first by field, then by book, with commentary source and teacher context when needed.',
+    summary: "Edited notes from lessons on al-Shafi'i's al-Risalah and al-Tabari's commentary on al-Fatihah and al-Baqarah, arranged by subject and teacher.",
   },
   {
-    eyebrow: 'Track Two',
+    eyebrow: `${flashcardCount} questions · Arabic`,
     title: 'Flashcards',
     href: '/en/study/flashcards/',
-    summary: 'A study flow built around review, training, and test questions, with a later retry path for missed answers.',
+    summary: 'Review, training and test questions on Akhsar al-Mukhtasarat in Hanbali fiqh, with a results page for the questions you missed.',
   },
-];
-
-const startingSources = [
-  "Benefits from Dr. Ahmad al-Naqeeb's lessons on al-Risalah",
-  "Benefits from Shaykh Samy al-'Arabi's lessons on al-Risalah",
-  "Benefits from Shaykh Husayn Abd al-Raziq's lessons on al-Risalah",
-  "Benefits from Shaykh Husayn's commentary on al-Fatihah and al-Baqarah from al-Tabari",
 ];
 
 const seoTitle = buildSeoTitle('Study Hub', {
   lang: 'en',
-  section: 'Study and Revision',
+  section: 'Dr. Haitham A. El-Ghareeb',
 });
 const seoDescription = buildSeoDescription(
-  'A practical study section built for students of Islamic knowledge, combining organized book-based benefits with structured flashcards.',
-  ['Two tracks', 'Starting from al-Risalah and Akhsar al-Mukhtasarat'],
+  "Study notes on al-Shafi'i's al-Risalah and al-Tabari's Tafsir, and flashcards on Akhsar al-Mukhtasarat, for students of Islamic knowledge.",
+  [`${benefits.length} notebooks`, `${flashcardCount} flashcards in Arabic`],
 );
 ---
 
@@ -39,25 +53,18 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--portal">
       <p class="hero__eyebrow">Study Hub</p>
-      <h1 class="hero__title">A practical section for revision and ordered growth</h1>
+      <h1 class="hero__title">Study Hub</h1>
       <p class="hero__lead">
-        This section combines organized scholarly benefits from books with a growing flashcards
-        workflow designed for repetition, review, training, and testing.
+        Notes and revision questions for students of Islamic knowledge, drawn from lessons on
+        al-Shafi'i's al-Risalah, al-Tabari's Tafsir and Akhsar al-Mukhtasarat.
       </p>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">Structured benefits</span>
-        <span class="hero__badge">Study flashcards</span>
-        <span class="hero__badge">Starting with Akhsar al-Mukhtasarat</span>
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/learning-path/">Suggested learning path</a>
       </div>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">The two tracks</p>
-        <h2 class="section-title">Approved structure for the section</h2>
-      </div>
-
       <div class="grid-two">
         {tracks.map((track) => (
           <a class="card-link" href={track.href}>
@@ -71,24 +78,30 @@ const seoDescription = buildSeoDescription(
       </div>
     </section>
 
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">Starting point</p>
-        <h2 class="section-title">First material selected for publication</h2>
-        <p class="section-copy">
-          The benefits track begins from al-Risalah and al-Tabari-related study material, while
-          the flashcards track begins with Akhsar al-Mukhtasarat and grows in small reviewed batches.
-        </p>
-      </article>
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Books covered</p>
+        <h2 class="section-title">Books and teachers</h2>
+      </div>
 
-      <article class="entity-panel">
-        <p class="entity-kicker">Initial sources</p>
-        <ul class="entity-list">
-          {startingSources.map((source) => (
-            <li>{source}</li>
-          ))}
-        </ul>
-      </article>
+      <div class="grid-two">
+        {Array.from(books.values()).map((book) => (
+          <article class="content-card entity-card">
+            <h3>{book.title}</h3>
+            <ul class="list-clean">
+              {Array.from(book.teachers.entries()).map(([teacher, href]) => (
+                <li><a href={href}>{teacher}</a></li>
+              ))}
+            </ul>
+          </article>
+        ))}
+        <a class="card-link" href="/en/study/flashcards/">
+          <article class="content-card entity-card">
+            <h3>Akhsar al-Mukhtasarat</h3>
+            <p>Flashcards in Arabic on this concise primer of Hanbali fiqh.</p>
+          </article>
+        </a>
+      </div>
     </section>
   </main>
 </BaseLayout>

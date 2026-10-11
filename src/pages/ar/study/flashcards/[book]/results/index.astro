@@ -31,17 +31,16 @@ const seoTitle = buildSeoTitle(`نتائج ${deck.data.bookTitle}`, {
   lang: 'ar',
   section: 'بطاقات المذاكرة',
 });
-const seoDescription = buildSeoDescription(deck.data.summary, ['صفحة النتائج وإعادة الخطأ']);
+const seoDescription = buildSeoDescription(deck.data.summary, ['نتائج التدريب والاختبار']);
 ---
 
 <BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">النتائج</p>
-      <h1 class="hero__title">صفحة نتائج {deck.data.bookTitle}</h1>
+      <h1 class="hero__title">نتائج {deck.data.bookTitle}</h1>
       <p class="hero__lead">
-        هذه الصفحة هي موضع الربط القادم بين وضع الاختبار، وتتبع الإجابات، وإعادة عرض
-        الأسئلة التي أخطأ فيها الطالب ليكررها حتى تثبت.
+        ملخص إجاباتك المحفوظة على هذا الجهاز في التدريب والاختبار، مع الأسئلة التي أخطأت فيها لتعيد مراجعتها.
       </p>
     </section>
 

@@ -31,15 +31,14 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     eyebrow="مشروع"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['صفحة مشروع', 'وحدة مستقلة', entry.data.status ?? 'بيانات أولية']}
+    badges={[entry.data.area, entry.data.status].filter((value): value is string => Boolean(value))}
     metaItems={[
-      { label: 'القسم', value: 'المشروعات' },
-      { label: 'الحالة', value: entry.data.status ?? 'غير محددة' },
+      { label: 'الحالة', value: entry.data.status ?? '' },
       ...(entry.data.area ? [{ label: 'المجال', value: entry.data.area }] : []),
       ...(entry.data.startYear ? [{ label: 'سنة البدء', value: entry.data.startYear }] : []),
     ]}
     backHref="/ar/projects/"
-    backLabel="العودة إلى قسم المشروعات"
+    backLabel="كل المشروعات"
     externalUrl={entry.data.externalUrl}
     externalLabel="رابط المشروع"
   >

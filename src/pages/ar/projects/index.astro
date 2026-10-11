@@ -5,17 +5,16 @@ import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
-const projects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'ar').slice(0, 6);
-const seoTitle = buildSeoTitle('المشروعات العلمية والرقمية', {
+const projects = (await getCollection('projects'))
+  .filter((entry) => entry.data.lang === 'ar')
+  .sort((a, b) => Number(b.data.startYear ?? 0) - Number(a.data.startYear ?? 0));
+const seoTitle = buildSeoTitle('المشروعات', {
   lang: 'ar',
   section: 'المشروعات',
 });
 const seoDescription = buildSeoDescription(
-  'أرشيف المشروعات العربي الذي يعرض المبادرات العلمية والرقمية مع حالتها ووصفها المختصر.',
-  [
-    `${projects.length} مشروعات ظاهرة`,
-    projects[0]?.data.startYear ? `أقدم سنة ظاهرة ${projects[0].data.startYear}` : undefined,
-  ],
+  'مشروعات رقمية وتعليمية مفتوحة المصدر على GitHub، منها هذا الموقع ومواد مقرر التصور المعلوماتي.',
+  projects.map((project) => project.data.title),
 );
 ---
 
@@ -27,94 +26,26 @@ const seoDescription = buildSeoDescription(
 >
   <main class="page-main">
     <section class="shell hero hero--detail">
-      <p class="hero__eyebrow">المشروعات العلمية</p>
-      <h1 class="hero__title">مساحة لتتبع المبادرات العلمية والرقمية</h1>
+      <p class="hero__eyebrow">المشروعات</p>
+      <h1 class="hero__title">المشروعات الرقمية والتعليمية</h1>
       <p class="hero__lead">
-        هذا القسم مخصص لعرض المشروعات القائمة، مع بيان مجال كل مشروع،
-        ووصفه المختصر، وحالته، وعلاقته بالأقسام العلمية الأخرى في الموقع.
+        مشروعات مفتوحة المصدر منشورة على GitHub، تجمع بين النشر العلمي الرقمي ومواد
+        المقررات الجامعية.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">مبادرات علمية</span>
-        <span class="hero__badge">مشروعات رقمية</span>
-        <span class="hero__badge">حالة التنفيذ</span>
-      </div>
-    </section>
-
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">وظيفة القسم</p>
-        <h2 class="section-title">توثيق مسار العمل الجاري</h2>
-        <p class="section-copy">
-          يعرض هذا القسم المشروعات بوصفها وحدات مستقلة لها عنوان، ووصف، وحالة، وروابط،
-          مع ربطها بالمقالات والكتب والتحقيقات ذات الصلة متى وُجدت.
-        </p>
-
-        <ul class="entity-tags">
-          <li>عنوان المشروع</li>
-          <li>مجال العمل</li>
-          <li>حالة التنفيذ</li>
-          <li>مخرجات مرتبطة</li>
-        </ul>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">آلية التوسع</p>
-        <ul class="entity-list">
-          <li><strong>المدخل الحالي:</strong> بطاقة مختصرة تعرض جوهر المشروع.</li>
-          <li><strong>العناصر الظاهرة:</strong> مجال العمل، والحالة، والوصف، والروابط المرتبطة.</li>
-          <li><strong>القيمة العملية:</strong> متابعة العمل المعرفي والرقمي من موضع واحد.</li>
-        </ul>
-      </article>
     </section>
 
     <section class="shell section">
-      <div class="entity-meta-grid">
-        <article class="content-card entity-card">
-          <p class="content-card__meta">الوصف</p>
-          <h3>ما الذي يفعله المشروع؟</h3>
-          <p>شرح مختصر للوظيفة العلمية أو الرقمية أو التعليمية لكل مبادرة.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">الحالة</p>
-          <h3>نشط أو جارٍ</h3>
-          <p>إظهار المرحلة الحالية ليساعد الزائر على فهم ما هو قائم وما هو في طور التنفيذ.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">الروابط</p>
-          <h3>مخرجات وإحالات</h3>
-          <p>ربط المشروع بمقال أو صفحة أو مورد ذي صلة متى كان ذلك متاحًا داخل الموقع.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">مشروعات ظاهرة</p>
-        <h2 class="section-title">نماذج من محتوى المشروعات</h2>
-      </div>
-
       <div class="grid-two">
-        {projects.length > 0 ? (
-          projects.map((project) => (
-            <a class="card-link" href={getEntryPath('projects', 'ar', project.slug)}>
-              <article class="content-card entity-card">
-                <p class="content-card__meta">{project.data.status ?? 'نشط'}</p>
-                <h3>{project.data.title}</h3>
-                <p>{project.data.summary}</p>
-                <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
-              </article>
-            </a>
-          ))
-        ) : (
-          <article class="notice-card">
-            <h2 class="section-title">لا توجد عناصر ظاهرة بعد</h2>
-            <p>
-              لا توجد حاليًا عناصر مشروع عربية مدخلة في مجموعات المحتوى، وسيظهر هذا القسم
-              تلقائيًا متى أضيفت المشروعات إلى الأرشيف.
-            </p>
-          </article>
-        )}
+        {projects.map((project) => (
+          <a class="card-link" href={getEntryPath('projects', 'ar', project.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
+              <h3>{project.data.title}</h3>
+              <p>{project.data.summary}</p>
+              {project.data.status && <p class="content-card__meta">{project.data.status}</p>}
+            </article>
+          </a>
+        ))}
       </div>
     </section>
   </main>

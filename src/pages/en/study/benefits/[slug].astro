@@ -34,24 +34,21 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     eyebrow="Study notebook"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['Structured benefits', entry.data.field, entry.data.bookTitle]}
+    badges={[entry.data.field, entry.data.bookTitle, entry.data.teacher].filter((value): value is string => Boolean(value))}
     metaItems={[
-      { label: 'Section', value: 'Study Hub' },
-      { label: 'Track', value: 'Benefits from Books' },
-      { label: 'Field', value: entry.data.field },
+      { label: 'Subject', value: entry.data.field },
       { label: 'Book', value: entry.data.bookTitle },
-      ...(entry.data.teacher ? [{ label: 'Lesson source', value: entry.data.teacher }] : []),
-      ...(entry.data.sourceSeries ? [{ label: 'Study source', value: entry.data.sourceSeries }] : []),
+      ...(entry.data.teacher ? [{ label: 'Teacher', value: entry.data.teacher }] : []),
+      ...(entry.data.sourceSeries ? [{ label: 'Lessons', value: entry.data.sourceSeries }] : []),
     ]}
     backHref={getStudyBenefitBookPath('en', entry.data.fieldSlug, entry.data.bookSlug)}
-    backLabel="Back to the book page"
+    backLabel={`All notes on ${entry.data.bookTitle}`}
   >
     <section class="notice-card">
       <p class="entity-kicker">Editorial note</p>
-      <h2 class="section-title">These notes were prepared for the site</h2>
       <p>
-        These published notes were organized and edited for study use on the site. The teacher did
-        not review this published version and it was not submitted to him for checking.
+        These notes were compiled and edited from the lessons; they have not been reviewed by the
+        teacher, and any error is the compiler's.
       </p>
     </section>
 

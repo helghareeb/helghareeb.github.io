@@ -16,11 +16,8 @@ const seoTitle = buildSeoTitle('Benefits from Books', {
   section: 'Study Hub',
 });
 const seoDescription = buildSeoDescription(
-  'A study-notes track that will organize selected benefits by field and book, with lesson-source context where needed.',
-  [
-    `${publishedBenefits.length} published notes at present`,
-    'Starting from al-Risalah and al-Tabari-related material',
-  ],
+  "Edited study notes from lessons on al-Shafi'i's al-Risalah and al-Tabari's commentary on al-Fatihah and al-Baqarah, arranged by subject and teacher.",
+  [`${publishedBenefits.length} notebooks`, `${groupedBenefits.length} subject and teacher groups`],
 );
 ---
 
@@ -28,45 +25,32 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Benefits from Books</p>
-      <h1 class="hero__title">An archive ordered by field and book</h1>
+      <h1 class="hero__title">Benefits from Books</h1>
       <p class="hero__lead">
-        This track is designed to gather concise study benefits drawn from lessons and book-based
-        teaching, with a structure that takes the student from discipline to book to note.
+        Notes from lessons on al-Shafi'i's al-Risalah by Dr. Ahmad al-Naqeeb, Shaykh Samy al-'Arabi and
+        Shaykh Husayn Abd al-Raziq, and on al-Tabari's commentary on al-Fatihah and al-Baqarah by Shaykh
+        Husayn Abd al-Raziq, arranged by subject.
       </p>
+
+      <div class="hero__badge-row">
+        <span class="hero__badge">{publishedBenefits.length} notebooks</span>
+      </div>
     </section>
 
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">Organization</p>
-        <h2 class="section-title">From discipline to book to benefit</h2>
-        <p class="section-copy">
-          The working structure begins with the discipline, then gathers notes under the book,
-          while still preserving teacher or lesson-source context when that matters for study use.
-        </p>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">Current state</p>
-        <ul class="entity-list">
-          <li><strong>Published notes:</strong> {publishedBenefits.length}</li>
-          <li><strong>Books currently shown:</strong> {groupedBenefits.length}</li>
-          <li><strong>Current starting point:</strong> al-Risalah through Dr. Ahmad al-Naqeeb's lessons</li>
-        </ul>
-      </article>
+    <section class="shell notice-card">
+      <p>
+        These notes were compiled and edited from the lessons; they have not been reviewed by the
+        teacher, and any error is the compiler's.
+      </p>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Published books</p>
-        <h2 class="section-title">Benefits arranged by field and then by book</h2>
+        <p class="section-kicker">By subject</p>
+        <h2 class="section-title">Notebooks by subject, book and teacher</h2>
       </div>
 
-      {groupedBenefits.length === 0 ? (
-        <article class="notice-card">
-          <h2 class="section-title">No study notebooks have been published yet</h2>
-          <p>The structure is ready, and the first visible material here begins with al-Risalah and later related study notebooks.</p>
-        </article>
-      ) : (
+      {groupedBenefits.length > 0 && (
         <div class="grid-two">
           {groupedBenefits.map((group) => (
             <article class="content-card entity-card">
@@ -74,8 +58,8 @@ const seoDescription = buildSeoDescription(
               <h3>
                 <a href={getStudyBenefitBookPath('en', group.fieldSlug, group.bookSlug)}>{group.bookTitle}</a>
               </h3>
-              <p>{group.teacher ?? 'Organized study material inside the site'}</p>
-              <p class="content-card__meta">{group.entries.length} study notebooks</p>
+              {group.teacher && <p>{group.teacher}</p>}
+              <p class="content-card__meta">{group.entries.length} {group.entries.length === 1 ? 'notebook' : 'notebooks'}</p>
               <ul class="entity-list">
                 {group.entries.map((entry) => (
                   <li>

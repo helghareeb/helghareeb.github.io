@@ -1,15 +1,28 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const seoTitle = buildSeoTitle('Alukah publications gateway', {
+const toTime = (value?: string) => (value ? new Date(value).getTime() : 0);
+
+const alukahArticles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.sourceName === 'Alukah Network')
+  .sort((a, b) => toTime(b.data.date) - toTime(a.data.date));
+const latest = alukahArticles.slice(0, 6);
+
+const alukahBooks = (await getCollection('books')).filter(
+  (entry) => entry.data.lang === 'en' && (entry.data.externalUrl ?? '').includes('alukah.net'),
+);
+
+const seoTitle = buildSeoTitle('Alukah', {
   lang: 'en',
-  section: 'Alukah',
+  section: 'Scholarly Fields',
 });
 const seoDescription = buildSeoDescription(
-  'Gateway to Alukah-related content inside the site, including article lists, summaries, and source links.',
-  ['External publications', 'Connected article archive'],
+  'Articles and books by Dr. Haitham A. El-Ghareeb published on the Alukah Network, with English versions on this site.',
+  [`${alukahArticles.length} articles`, alukahArticles[0]?.data.date ? `Latest ${alukahArticles[0].data.date}` : undefined],
 );
 ---
 
@@ -22,50 +35,65 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Alukah</p>
-      <h1 class="hero__title">An internal gateway to Alukah publications</h1>
+      <h1 class="hero__title">Writing on the Alukah Network</h1>
       <p class="hero__lead">
-        This section gathers Alukah articles in one place and presents them
-        as part of the broader scholarly archive rather than as isolated external links.
+        Dr. Haitham A. El-Ghareeb publishes articles and books in Arabic on the Alukah Network.
+        {alukahArticles.length} of these articles are available here in English, each linked to its
+        Arabic original.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">External publications</span>
-        <span class="hero__badge">Summaries and links</span>
+        <span class="hero__badge">{alukahArticles.length} articles in English</span>
       </div>
 
       <div class="hero__actions">
-        <a class="button" href="/en/scholarly-fields/alukah/articles/">English Alukah list</a>
-        <a class="button-secondary" href="/en/external-links/alukah-author-page/">Author page on Alukah</a>
+        <a class="button" href="/en/scholarly-fields/alukah/articles/">All Alukah articles</a>
+        <a class="button-secondary" href="https://www.alukah.net/authors/view/home/16869/">Author page on Alukah</a>
       </div>
     </section>
 
     <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Latest</p>
+        <h2 class="section-title">Latest Alukah articles</h2>
+      </div>
+
       <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">Structure</p>
-          <h2 class="section-title">Summaries and source links</h2>
-          <p>
-            Entries can include the article title, summary, original source link, category,
-            and whether a local site version also exists.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">Integration</p>
-          <h2 class="section-title">Connected to the article archive</h2>
-          <p>
-            Alukah content can also surface through the general articles section wherever thematic
-            overlap or archive logic makes that useful.
-          </p>
-        </article>
+        {latest.map((article) => (
+          <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/scholarly-fields/alukah/articles/">Full list of {alukahArticles.length} articles</a>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Direct archive access</h2>
-      <p>
-        A dedicated list of English Alukah articles is available here:
-        <a href="/en/scholarly-fields/alukah/articles/">English Alukah articles inside the site</a>.
-      </p>
-    </section>
+    {alukahBooks.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Books</p>
+          <h2 class="section-title">Books in the Alukah library</h2>
+        </div>
+
+        <div class="grid-two">
+          {alukahBooks.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

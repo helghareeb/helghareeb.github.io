@@ -23,6 +23,15 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
   entry.data.sourceType,
   entry.data.year ? `Edition year ${entry.data.year}` : undefined,
 ]);
+const hostLabels: Record<string, string> = {
+  'github.com': 'View on GitHub',
+  'www.amazon.com': 'View on Amazon',
+  'www.alukah.net': 'View on Alukah',
+  'helghareeb.github.io': 'Read online (Arabic)',
+};
+const externalLabel = entry.data.externalUrl
+  ? hostLabels[new URL(entry.data.externalUrl).hostname] ?? 'Open link'
+  : undefined;
 ---
 
 <BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
@@ -31,10 +40,9 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     eyebrow="Critical Edition"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['Edition page', 'Scholarly note', entry.data.status ?? 'Available record']}
+    badges={[entry.data.workType, entry.data.year].filter((value): value is string => Boolean(value))}
     metaItems={[
-      { label: 'Section', value: 'Critical Editions' },
-      { label: 'Status', value: entry.data.status ?? 'Unspecified' },
+      { label: 'Status', value: entry.data.status ?? '' },
       ...(entry.data.workType ? [{ label: 'Work type', value: entry.data.workType }] : []),
       ...(entry.data.sourceType ? [{ label: 'Source type', value: entry.data.sourceType }] : []),
       ...(entry.data.year ? [{ label: 'Year', value: entry.data.year }] : []),
@@ -42,7 +50,7 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     backHref="/en/critical-editions/"
     backLabel="Back to critical editions"
     externalUrl={entry.data.externalUrl}
-    externalLabel="Edition link"
+    externalLabel={externalLabel}
   >
     <Content />
   </EntityEntryPage>

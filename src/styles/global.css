@@ -357,8 +357,20 @@ img {
 }
 
 .entity-grid {
-  grid-template-columns: 1.35fr 0.95fr;
+  grid-template-columns: minmax(0, 2.4fr) minmax(15rem, 1fr);
+  align-items: start;
   margin-top: 2rem;
+}
+
+aside.entity-panel {
+  position: sticky;
+  top: 1rem;
+}
+
+@media (max-width: 860px) {
+  aside.entity-panel {
+    position: static;
+  }
 }
 
 .entity-meta-grid {

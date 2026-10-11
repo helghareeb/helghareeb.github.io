@@ -1,28 +1,53 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { getStudyBenefitBookPath, groupStudyBenefits } from '../../../utils/study';
+
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+
+const benefits = (await getCollection('studyBenefits')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
+const benefitGroups = groupStudyBenefits(benefits);
+const decks = (await getCollection('flashcardDecks')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
+const cards = (await getCollection('flashcards')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
+
+const sourceMap = new Map<string, { title: string; teacher?: string; fields: { name: string; href: string }[] }>();
+for (const group of benefitGroups) {
+  const field = { name: group.field, href: getStudyBenefitBookPath('ar', group.fieldSlug, group.bookSlug) };
+  const existing = sourceMap.get(group.bookSlug);
+  if (existing) {
+    existing.fields.push(field);
+    continue;
+  }
+  sourceMap.set(group.bookSlug, { title: group.bookTitle, teacher: group.teacher, fields: [field] });
+}
+const sources = Array.from(sourceMap.values());
+
+const notebookForms: [string, string, string, string, string] = ['دفتر واحد', 'دفتران', 'دفاتر', 'دفترًا', 'دفتر'];
+const questionForms: [string, string, string, string, string] = ['سؤال واحد', 'سؤالان', 'أسئلة', 'سؤالًا', 'سؤال'];
 
 const tracks = [
   {
-    eyebrow: 'المسار الأول',
+    eyebrow: countAr(benefits.length, notebookForms),
     title: 'فوائد من كتب متنوعة',
     href: '/ar/study/benefits/',
-    summary: 'أرشيف منظم للفوائد العلمية، مرتب أولًا بالفن ثم بالكتاب، مع إظهار الشرح أو الشيخ عند الحاجة.',
+    summary: 'فوائد مختارة من شروح «الرسالة» للإمام الشافعي ودروس تفسير الطبري، مرتبة بالفن ثم بالكتاب مع ذكر الشارح.',
   },
   {
-    eyebrow: 'المسار الثاني',
+    eyebrow: countAr(cards.length, questionForms),
     title: 'بطاقات المذاكرة',
     href: '/ar/study/flashcards/',
-    summary: 'أسئلة للمراجعة والتدريب والاختبار، مع تمهيد لمسار يعيد عرض الأسئلة التي أخطأ فيها الطالب.',
+    summary: `أسئلة للمراجعة والتدريب والاختبار على ${decks.map((deck) => `«${deck.data.bookTitle}»`).join('، ')}، مع حفظ نتائجك والعودة إلى ما أخطأت فيه.`,
   },
-];
-
-const startingSources = [
-  'فوائد من شرح د. أحمد النقيب لكتاب الرسالة للشافعي',
-  'فوائد من شرح الشيخ سامي العربي لكتاب الرسالة',
-  'فوائد من شرح الشيخ حسين عبدالرازق لكتاب الرسالة',
-  'فوائد من التعليق على الفاتحة والبقرة من تفسير الطبري للشيخ حسين',
 ];
 
 const seoTitle = buildSeoTitle('مذاكرة طالب العلم', {
@@ -30,8 +55,8 @@ const seoTitle = buildSeoTitle('مذاكرة طالب العلم', {
   section: 'الدراسة والمراجعة',
 });
 const seoDescription = buildSeoDescription(
-  'قسم عملي يخدم طالب العلم الشرعي عبر مسارين: فوائد منظمة من الكتب، وبطاقات مذاكرة للمراجعة والتدريب والاختبار.',
-  ['مساران رئيسان', 'بداية العمل من الرسالة وأخصر المختصرات'],
+  'فوائد منظمة من شروح الرسالة للشافعي وتفسير الطبري، وبطاقات مذاكرة للمراجعة والتدريب والاختبار على أخصر المختصرات.',
+  [countAr(benefits.length, notebookForms), countAr(cards.length, questionForms)],
 );
 ---
 
@@ -39,25 +64,14 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--portal">
       <p class="hero__eyebrow">مذاكرة طالب العلم</p>
-      <h1 class="hero__title">قسم عملي للمراجعة والبناء المنهجي</h1>
+      <h1 class="hero__title">فوائد وبطاقات لمراجعة ما تدرسه</h1>
       <p class="hero__lead">
-        يجمع هذا القسم بين أرشفة الفوائد العلمية المنظمة، وبناء بطاقات مذاكرة تعين الطالب
-        على التكرار، والمراجعة، والتدريب، والاختبار بصورة متدرجة.
+        دفاتر فوائد مستخلصة من دروس أهل العلم، وبطاقات أسئلة تعين على التكرار والمراجعة
+        والتدريب والاختبار.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">فوائد منظمة</span>
-        <span class="hero__badge">بطاقات مراجعة</span>
-        <span class="hero__badge">بداية من أخصر المختصرات</span>
-      </div>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">المساران</p>
-        <h2 class="section-title">بنية القسم المعتمدة</h2>
-      </div>
-
       <div class="grid-two">
         {tracks.map((track) => (
           <a class="card-link" href={track.href}>
@@ -71,24 +85,35 @@ const seoDescription = buildSeoDescription(
       </div>
     </section>
 
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">البداية المعتمدة</p>
-        <h2 class="section-title">مواد العمل الأولى</h2>
-        <p class="section-copy">
-          الانطلاقة التحريرية في مسار الفوائد ستكون من مادة الرسالة وتفسير الطبري، أما
-          مسار البطاقات فسيبدأ بكتاب أخصر المختصرات، ثم يتوسع على دفعات صغيرة مضبوطة.
-        </p>
-      </article>
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">المصادر</p>
+        <h2 class="section-title">الكتب والشروح التي استُخلصت منها المادة</h2>
+      </div>
 
-      <article class="entity-panel">
-        <p class="entity-kicker">المصادر الأولى</p>
-        <ul class="entity-list">
-          {startingSources.map((source) => (
-            <li>{source}</li>
-          ))}
-        </ul>
-      </article>
+      <div class="grid-two">
+        {sources.map((source) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">دفاتر الفوائد</p>
+            <h3>{source.title}</h3>
+            {source.teacher && <p>{source.teacher}</p>}
+            <ul class="entity-tags">
+              {source.fields.map((field) => (
+                <li><a href={field.href}>{field.name}</a></li>
+              ))}
+            </ul>
+          </article>
+        ))}
+        {decks.map((deck) => (
+          <a class="card-link" href={getEntryPath('flashcardDecks', 'ar', deck.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">بطاقات المذاكرة · {deck.data.field}</p>
+              <h3>{deck.data.bookTitle}</h3>
+              {deck.data.status && <p>{deck.data.status}</p>}
+            </article>
+          </a>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

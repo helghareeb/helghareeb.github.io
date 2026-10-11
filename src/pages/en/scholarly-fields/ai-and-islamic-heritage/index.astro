@@ -1,15 +1,30 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const articles = (await getCollection('articles'))
+  .filter(
+    (entry) =>
+      entry.data.lang === 'en' &&
+      !entry.data.draft &&
+      /artificial intelligence|\bAI\b|technology|digital/i.test(entry.data.title),
+  )
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const siteProject = (await getCollection('projects')).find(
+  (entry) => entry.data.lang === 'en' && entry.slug === 'scholarly-site-project-en',
+);
 
 const seoTitle = buildSeoTitle('AI and Islamic Heritage', {
   lang: 'en',
-  section: 'Scholarly Field',
+  section: 'Scholarly Fields',
 });
 const seoDescription = buildSeoDescription(
-  'A field page connecting AI, digital tools, and the service of Islamic heritage through projects, analytical articles, and conceptual framing.',
-  ['Digital vision', 'Applied scholarly projects'],
+  'Articles on artificial intelligence and technology in the service of the Islamic sciences, hadith and Islamic education, with online study tools.',
+  [`${articles.length} articles`],
 );
 ---
 
@@ -22,32 +37,61 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">AI and Islamic Heritage</p>
-      <h1 class="hero__title">A space for digital vision in the service of heritage</h1>
+      <h1 class="hero__title">AI and Islamic Heritage</h1>
       <p class="hero__lead">
-        This section highlights the relationship between contemporary digital tools and the service
-        of Islamic heritage, including organization, archival thinking, and applied scholarly projects.
+        How artificial intelligence and digital tools can serve the Islamic sciences: hadith
+        scholarship, Islamic education, and the preservation of the mind in the age of digital platforms.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">Digital vision</span>
-        <span class="hero__badge">Applied projects</span>
-      </div>
     </section>
 
+    {articles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Articles</p>
+          <h2 class="section-title">Technology and the Islamic sciences</h2>
+        </div>
+
+        <div class="grid-two">
+          {articles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
     <section class="shell section">
-      <div class="grid-three">
-        <article class="feature-card">
-          <h3>Conceptual framing</h3>
-          <p>Clarifying how modern tools can serve scholarship responsibly and fruitfully.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Applied projects</h3>
-          <p>Highlighting initiatives that work with data, texts, and research workflows.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Analytical articles</h3>
-          <p>Collecting essays that examine the field from methodological and scholarly angles.</p>
-        </article>
+      <div class="section-heading">
+        <p class="section-kicker">Tools</p>
+        <h2 class="section-title">Digital study tools on this site</h2>
+      </div>
+
+      <div class="grid-two">
+        <a class="card-link" href="/en/study/benefits/">
+          <article class="content-card entity-card">
+            <h3>Benefits from Books</h3>
+            <p>Lesson notes on al-Risalah and al-Tabari's Tafsir, arranged by subject, teacher and book.</p>
+          </article>
+        </a>
+        <a class="card-link" href="/en/study/flashcards/">
+          <article class="content-card entity-card">
+            <h3>Flashcards</h3>
+            <p>Interactive review, training and test questions on Akhsar al-Mukhtasarat (in Arabic).</p>
+          </article>
+        </a>
+        {siteProject && (
+          <a class="card-link" href={getEntryPath('projects', 'en', siteProject.slug)}>
+            <article class="content-card entity-card">
+              <h3>{siteProject.data.title}</h3>
+              <p>{siteProject.data.summary}</p>
+            </article>
+          </a>
+        )}
       </div>
     </section>
   </main>

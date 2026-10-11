@@ -1,15 +1,55 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getArticleSeriesPath, getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const seoTitle = buildSeoTitle('المخطوطات', {
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const partForms: [string, string, string, string, string] = ['حلقة واحدة', 'حلقتان', 'حلقات', 'حلقةً', 'حلقة'];
+
+const articles = (await getCollection('articles')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
+
+// Saleh al-Azhari's manuscript courses are stored as series whose slug starts with "manuscript-".
+const courseMap = new Map<string, { slug: string; title: string; count: number; firstDate?: string }>();
+for (const article of articles) {
+  const slug = article.data.seriesSlug;
+  if (!slug || !slug.startsWith('manuscript-') || !article.data.series) continue;
+
+  const existing = courseMap.get(slug);
+  if (existing) {
+    existing.count += 1;
+    if (article.data.date && (!existing.firstDate || article.data.date < existing.firstDate)) existing.firstDate = article.data.date;
+  } else {
+    courseMap.set(slug, { slug, title: article.data.series, count: 1, firstDate: article.data.date });
+  }
+}
+const courses = Array.from(courseMap.values()).sort((a, b) => (a.firstDate ?? '').localeCompare(b.firstDate ?? ''));
+const courseLessonCount = courses.reduce((sum, course) => sum + course.count, 0);
+
+const relatedArticles = articles
+  .filter((entry) => !entry.data.seriesSlug && ['مناهج تحقيق النصوص', 'عالم الكتب', 'علوم المخطوطات'].includes(entry.data.category ?? ''))
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const editions = (await getCollection('editions')).filter((entry) => entry.data.lang === 'ar');
+
+const seoTitle = buildSeoTitle('علوم المخطوطات', {
   lang: 'ar',
   section: 'المجالات العلمية',
 });
 const seoDescription = buildSeoDescription(
-  'قسم للمخطوطات يجمع الوصف والتحقيق والمنهج والقضايا المتصلة بدراسة النصوص التراثية وخدمتها.',
-  ['مخطوطات', 'وصف وتحقيق'],
+  'ملخصات دورات الشيخ صالح الأزهري في علوم المخطوطات، ومقالات في التحقيق والتصحيف، وتحقيق كتاب التوضيح للأوهام الواقعة في الصحيح.',
+  [
+    countAr(courses.length, ['دورة واحدة', 'دورتان', 'دورات', 'دورةً', 'دورة']),
+    countAr(courseLessonCount, ['درس واحد', 'درسان', 'دروس', 'درسًا', 'درس']),
+  ],
 );
 ---
 
@@ -22,24 +62,76 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">المخطوطات</p>
-      <h1 class="hero__title">المخطوطات بين الوصف والتحقيق والمنهج</h1>
+      <h1 class="hero__title">علوم المخطوطات والتحقيق</h1>
       <p class="hero__lead">
-        يجمع هذا القسم الاهتمام العلمي بالمخطوطات من جهة الفهرسة والوصف والتحقيق والقضايا
-        المنهجية المتصلة بدراسة النصوص التراثية وخدمتها.
+        ملخصات دروس الشيخ صالح الأزهري في علوم المخطوطات، من مهارات قراءة المخطوط العربي إلى
+        السماعات وقيود الوقف والتملك ومعرفة الناسخ، ومعها تحقيق نص تراثي عن نسخته الخطية.
       </p>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">مخطوطات</span>
-        <span class="hero__badge">وصف وتحقيق</span>
+      <div class="hero__actions">
+        <a class="button" href="/ar/editions/">التحقيقات</a>
+        <a class="button-secondary" href="/ar/articles/series/">كل السلاسل</a>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">صلة مباشرة بقسم التحقيقات</h2>
-      <p>
-        يعمل هذا القسم بالتوازي مع قسم التحقيقات، مع إبراز الموضوعات المنهجية أو المقالات
-        التي تتناول المخطوطات من زاوية علمية عامة.
-      </p>
+    {editions.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">تحقيق</p>
+          <h2 class="section-title">من أعمال التحقيق</h2>
+        </div>
+
+        <div class="grid-two">
+          {editions.map((edition) => (
+            <a class="card-link" href={getEntryPath('editions', 'ar', edition.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[edition.data.workType, edition.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{edition.data.title}</h3>
+                <p>{edition.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">دورات الشيخ صالح الأزهري</p>
+        <h2 class="section-title">ملخصات دورات علوم المخطوطات</h2>
+      </div>
+
+      <div class="grid-two">
+        {courses.map((course) => (
+          <a class="card-link" href={getArticleSeriesPath('ar', course.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{countAr(course.count, partForms)}</p>
+              <h3>{course.title}</h3>
+            </article>
+          </a>
+        ))}
+      </div>
     </section>
+
+    {relatedArticles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">مقالات</p>
+          <h2 class="section-title">في التحقيق ونقد النصوص</h2>
+        </div>
+
+        <div class="grid-two">
+          {relatedArticles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

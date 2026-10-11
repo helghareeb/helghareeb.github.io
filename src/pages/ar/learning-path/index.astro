@@ -3,51 +3,78 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 
 const pathStages = [
-  'مرحلة تأسيسية تعنى بضبط الأصول والمداخل العامة.',
-  'مرحلة بناء منهجي في العلوم المركزية ومساراتها.',
-  'مرحلة توسع قرائي وبحثي مرتبطة بالتخصص والاهتمام.',
-  'مرحلة إنتاج علمي وتحريري وربط بالوسائط والمشروعات.',
+  {
+    stage: 'التأسيس',
+    title: 'الفقه الحنبلي: «أخصر المختصرات»',
+    copy: 'ابدأ بمتن مختصر في الفقه، فراجع مسائله ثم تدرّب عليها واختبر نفسك في المقدمة وكتاب الطهارة.',
+    links: [
+      { label: 'بطاقات أخصر المختصرات', href: '/ar/study/flashcards/akhsar-al-mukhtasarat/' },
+    ],
+  },
+  {
+    stage: 'أصول الفقه',
+    title: '«الرسالة» للإمام الشافعي',
+    copy: 'كتاب الإمام الشافعي في أصول الفقه، تقرؤه مع ملخصات شروحه دروسًا متتابعة، ودفاتر الفوائد المستخلصة منها.',
+    links: [
+      { label: 'ملخص شرح د. أحمد النقيب', href: '/ar/articles/series/al-risala-ahmad-naqeeb/' },
+      { label: 'مختصر شرح د. ياسر برهامي', href: '/ar/articles/series/al-risala/' },
+      { label: 'فوائد أصول الفقه من الرسالة', href: '/ar/study/benefits/usul-al-fiqh/al-risala-ahmad-al-naqeeb/' },
+      { label: 'شرح الشيخ حسين بن عبدالرزاق (كتاب)', href: '/ar/books/al-risala-hussein-lessons/' },
+    ],
+  },
+  {
+    stage: 'التفسير',
+    title: 'تفسير الطبري: الفاتحة والبقرة',
+    copy: 'قراءة في تفسير الإمام الطبري من خلال دروس الشيخ حسين بن عبدالرزاق، وما استُخلص منها من فوائد في التفسير واللغة والعقيدة.',
+    links: [
+      { label: 'فوائد تفسير الطبري', href: '/ar/study/benefits/tafsir-and-ulum-al-quran/tafsir-al-tabari-husayn-abd-al-raziq/' },
+      { label: 'تفريغ دروس تفسير الطبري (كتاب)', href: '/ar/books/tabari-tafsir-lessons/' },
+    ],
+  },
+  {
+    stage: 'التخصص',
+    title: 'علوم المخطوطات',
+    copy: 'دورات الشيخ صالح الأزهري من مهارات قراءة المخطوط العربي إلى السماعات والقيود ومعرفة الناسخ، ثم نموذج تطبيقي في تحقيق نص عن نسخته الخطية.',
+    links: [
+      { label: 'الدورة الأولى: مهارات قراءة المخطوط العربي', href: '/ar/articles/series/manuscript-skills-course/' },
+      { label: 'كل دورات علوم المخطوطات', href: '/ar/fields/manuscripts/' },
+      { label: 'التوضيح للأوهام الواقعة في الصحيح', href: '/ar/editions/al-tawdih-lil-awham/' },
+    ],
+  },
 ];
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
-  title="المسار التعليمي المقترح | د. هيثم الغريب"
-  description="تصور أولي للمسار التعليمي المقترح لطالب العلم"
+  title="المسار التعليمي | د. هيثم الغريب"
+  description="مسار متدرج لطالب العلم: أخصر المختصرات في الفقه، ثم الرسالة للإمام الشافعي في أصول الفقه، ثم تفسير الطبري، ثم علوم المخطوطات."
 >
   <main class="page-main">
     <section class="shell hero">
-      <p class="hero__eyebrow">المسار التعليمي المقترح</p>
-      <h1 class="hero__title">تصور منظم للتدرج العلمي</h1>
+      <p class="hero__eyebrow">المسار التعليمي</p>
+      <h1 class="hero__title">مسار متدرج لطالب العلم</h1>
       <p class="hero__lead">
-        يعرض هذا القسم تصورًا تربويًا وعلميًا موجزًا لطالب العلم، من حيث التدرج، وترتيب
-        المراحل، وربط القراءة بالتكوين المنهجي والقدرة على الإفادة والتحرير.
+        أربع مراحل تنتقل فيها من متن فقهي مختصر إلى أصول الفقه ثم التفسير ثم علوم المخطوطات،
+        ولكل مرحلة موادها في الموقع من ملخصات وفوائد وبطاقات مذاكرة.
       </p>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">المنهج</p>
-        <h2 class="section-title">مراحل مقترحة للتدرج</h2>
-      </div>
-
       <div class="grid-two">
-        {pathStages.map((stage, index) => (
-          <article class="content-card">
-            <p class="content-card__meta">المرحلة {index + 1}</p>
-            <p>{stage}</p>
+        {pathStages.map((item, index) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">المرحلة {index + 1}: {item.stage}</p>
+            <h3>{item.title}</h3>
+            <p>{item.copy}</p>
+            <ul class="list-clean">
+              {item.links.map((link) => (
+                <li><a href={link.href}>{link.label}</a></li>
+              ))}
+            </ul>
           </article>
         ))}
       </div>
-    </section>
-
-    <section class="shell notice-card">
-      <h2 class="section-title">ملامح المسار</h2>
-      <p>
-        يعرض هذا المدخل صورة مركزة للمسار المقترح، على أن يُستفاد منه بوصفه إطارًا عامًا
-        يربط بين التأسيس والتوسع والإنتاج العلمي.
-      </p>
     </section>
   </main>
 </BaseLayout>

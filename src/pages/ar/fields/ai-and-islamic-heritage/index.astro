@@ -1,15 +1,40 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const techPattern = /الذكاء الاصطناعي|التقنية|خوارزمية|الاحتمالي|المنصات الرقمية|العصر الرقمي/;
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && techPattern.test(entry.data.title))
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const tools = [
+  {
+    title: 'بطاقات المذاكرة',
+    href: '/ar/study/flashcards/',
+    summary: 'أسئلة مراجعة وتدريب واختبار تفاعلية تحفظ نتائجك على جهازك وتعيد عليك ما أخطأت فيه.',
+  },
+  {
+    title: 'فوائد من كتب متنوعة',
+    href: '/ar/study/benefits/',
+    summary: 'فوائد مستخلصة من شروح «الرسالة» وتفسير الطبري، مرتبة بالفن ثم بالكتاب.',
+  },
+  {
+    title: 'كتب منسقة مفتوحة المصدر',
+    href: '/ar/external-links/github-books/',
+    summary: 'تفريغات منقحة لشروح أهل العلم، منشورة بصيغة PDF مع ملفاتها المصدرية على GitHub.',
+  },
+];
 
 const seoTitle = buildSeoTitle('الذكاء الاصطناعي والتراث الإسلامي', {
   lang: 'ar',
   section: 'المجالات العلمية',
 });
 const seoDescription = buildSeoDescription(
-  'قسم يربط الأدوات الرقمية الحديثة بخدمة التراث الإسلامي عبر الرؤية الفكرية والمشروعات التطبيقية والمقالات التحليلية.',
-  ['رؤية رقمية', 'مشروعات تطبيقية'],
+  'مقالات في الذكاء الاصطناعي والعلوم الشرعية، وتحليل أسانيد الصحيحين بالخوارزميات، والتعليم الشرعي في العصر الرقمي، مع أدوات مذاكرة رقمية لطالب العلم.',
+  [],
 );
 ---
 
@@ -22,32 +47,49 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الذكاء الاصطناعي والتراث الإسلامي</p>
-      <h1 class="hero__title">مساحة للرؤية الرقمية وخدمة التراث</h1>
+      <h1 class="hero__title">التقنية في خدمة العلم الشرعي</h1>
       <p class="hero__lead">
-        خصص هذا القسم لإبراز الرؤية التي تصل بين الأدوات الرقمية الحديثة وخدمة التراث الإسلامي،
-        سواء في الفهرسة أو الترتيب المعرفي أو بناء المشروعات العلمية المعاصرة.
+        مقالات تجمع بين نظم المعلومات والعلوم الشرعية: من الذكاء الاصطناعي في التعليم الشرعي،
+        إلى تحليل العلاقات بين رواة الصحيح بالخوارزميات، ومعها أدوات رقمية لطالب العلم.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">رؤية رقمية</span>
-        <span class="hero__badge">مشروعات تطبيقية</span>
-      </div>
     </section>
 
+    {articles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">مقالات</p>
+          <h2 class="section-title">التقنية والعلوم الشرعية</h2>
+        </div>
+
+        <div class="grid-two">
+          {articles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
     <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">أدوات</p>
+        <h2 class="section-title">أدوات رقمية لطالب العلم</h2>
+      </div>
+
       <div class="grid-three">
-        <article class="feature-card">
-          <h3>رؤية فكرية</h3>
-          <p>تأطير العلاقة بين التقنية الحديثة والعمل على التراث الإسلامي.</p>
-        </article>
-        <article class="feature-card">
-          <h3>مشروعات تطبيقية</h3>
-          <p>إبراز المبادرات التي يمكن أن تخدم النصوص والبيانات والبحث العلمي.</p>
-        </article>
-        <article class="feature-card">
-          <h3>مقالات تحليلية</h3>
-          <p>جمع المقالات التي تناقش هذا المجال من زاوية علمية ومنهجية.</p>
-        </article>
+        {tools.map((tool) => (
+          <a class="card-link" href={tool.href}>
+            <article class="feature-card">
+              <h3>{tool.title}</h3>
+              <p>{tool.summary}</p>
+            </article>
+          </a>
+        ))}
       </div>
     </section>
   </main>

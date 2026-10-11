@@ -2,20 +2,23 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
-import { getEntryPath } from '../../../../utils/content-routing';
+import { getEntryPath, getEntryRouteSlug } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
 const decks = (await getCollection('flashcardDecks')).filter(
   (entry) => entry.data.lang === 'en' && !entry.data.draft,
 );
+const arabicCards = (await getCollection('flashcards')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
+const countFor = (deckSlug: string) => arabicCards.filter((card) => card.data.deckSlug === deckSlug).length;
+const totalQuestions = decks.reduce((sum, deck) => sum + countFor(getEntryRouteSlug(deck.slug)), 0);
 
 const seoTitle = buildSeoTitle('Flashcards', {
   lang: 'en',
   section: 'Study Hub',
 });
 const seoDescription = buildSeoDescription(
-  'Flashcard decks for review, training, and testing inside the study section.',
-  [`${decks.length} published decks`, 'Starting with Akhsar al-Mukhtasarat'],
+  'Flashcards in Arabic for review, training and testing on Akhsar al-Mukhtasarat, the concise Hanbali fiqh primer.',
+  [`${totalQuestions} questions`],
 );
 ---
 
@@ -23,45 +26,48 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Flashcards</p>
-      <h1 class="hero__title">Questions for review, training, and testing</h1>
+      <h1 class="hero__title">Flashcards</h1>
       <p class="hero__lead">
-        This track is built around practical study decks that begin with guided review, then move
-        into self-training and testing, with a later retry path for missed answers.
+        Revision questions on Akhsar al-Mukhtasarat, the concise primer of Hanbali fiqh. The questions
+        and answers are in Arabic.
       </p>
+
+      <div class="hero__actions">
+        <a class="button" href="/ar/study/flashcards/">Open the flashcards (Arabic)</a>
+      </div>
     </section>
 
     <section class="shell entity-meta-grid">
       <article class="content-card entity-card">
-        <p class="content-card__meta">Stage one</p>
+        <p class="content-card__meta">Mode one</p>
         <h3>Review</h3>
-        <p>See the question together with its answer to stabilize the core material.</p>
+        <p>Read each question together with its answer to fix the core material.</p>
       </article>
       <article class="content-card entity-card">
-        <p class="content-card__meta">Stage two</p>
+        <p class="content-card__meta">Mode two</p>
         <h3>Training</h3>
-        <p>See the question first, then reveal the answer after personal recall.</p>
+        <p>See the question first, try to recall the answer, then reveal it and mark yourself.</p>
       </article>
       <article class="content-card entity-card">
-        <p class="content-card__meta">Stage three</p>
+        <p class="content-card__meta">Mode three</p>
         <h3>Test</h3>
-        <p>Work through the questions as an assessment, with a later retry layer for mistakes.</p>
+        <p>Answer as an assessment; the results page then lists the questions you missed.</p>
       </article>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Current decks</p>
-        <h2 class="section-title">Where this track begins</h2>
+        <p class="section-kicker">Decks</p>
+        <h2 class="section-title">Available decks</h2>
       </div>
 
       <div class="grid-two">
         {decks.map((deck) => (
           <a class="card-link" href={getEntryPath('flashcardDecks', 'en', deck.slug)}>
             <article class="content-card entity-card">
-              <p class="content-card__meta">{deck.data.field}</p>
+              <p class="content-card__meta">{deck.data.field} · {countFor(getEntryRouteSlug(deck.slug))} questions in Arabic</p>
               <h3>{deck.data.bookTitle}</h3>
               <p>{deck.data.summary}</p>
-              <p class="content-card__meta">{deck.data.status ?? 'Published study deck'}</p>
             </article>
           </a>
         ))}

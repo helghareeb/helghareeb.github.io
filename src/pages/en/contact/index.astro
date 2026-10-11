@@ -1,37 +1,67 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+
+const emailChannels = [
+  { label: 'University email', value: 'helghareeb@mans.edu.eg', href: 'mailto:helghareeb@mans.edu.eg' },
+  { label: 'Personal email', value: 'helghareeb@gmail.com', href: 'mailto:helghareeb@gmail.com' },
+];
+
+const researchProfiles = [
+  { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=f66uaewAAAAJ&hl=en' },
+  { label: 'ORCID', href: 'https://orcid.org/0000-0003-1875-6706' },
+  { label: 'IEEE Xplore', href: 'https://ieeexplore.ieee.org/author/37086352024' },
+  { label: 'ScholarGPS', href: 'https://scholargps.com/scholars/54142940845340/haitham-a-el-ghareeb' },
+];
+
+const otherProfiles = [
+  { label: 'GitHub', href: 'https://github.com/helghareeb' },
+  { label: 'LinkedIn', href: 'https://eg.linkedin.com/in/helghareeb' },
+  { label: 'Author page on Alukah', href: 'https://www.alukah.net/authors/view/home/16869/' },
+];
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
   title="Contact | Dr. Haitham A. El-Ghareeb"
-  description="Contact and professional links"
+  description="Email addresses and research, code and publishing profiles of Dr. Haitham A. El-Ghareeb, Mansoura University."
 >
   <main class="page-main">
     <section class="shell hero">
       <p class="hero__eyebrow">Contact</p>
-      <h1 class="hero__title">Contact and professional presence</h1>
+      <h1 class="hero__title">Contact</h1>
       <p class="hero__lead">
-        This page presents the approved contact channels and selected academic or professional
-        links intended for public visitors.
+        Dr. Haitham A. El-Ghareeb can be reached by email at the Faculty of Computers and Information,
+        Mansoura University, or through the profiles listed below.
       </p>
     </section>
 
     <section class="shell section">
       <div class="grid-three">
         <article class="feature-card">
-          <h3>Professional contact</h3>
-          <p>For the preferred public method of scholarly correspondence or inquiries.</p>
+          <h3>Email</h3>
+          <ul class="list-clean">
+            {emailChannels.map((channel) => (
+              <li>{channel.label}: <a href={channel.href}>{channel.value}</a></li>
+            ))}
+          </ul>
         </article>
         <article class="feature-card">
-          <h3>Academic links</h3>
-          <p>For institutional, professional, or academic profiles connected to the site owner.</p>
+          <h3>Research profiles</h3>
+          <ul class="list-clean">
+            {researchProfiles.map((profile) => (
+              <li><a href={profile.href}>{profile.label}</a></li>
+            ))}
+          </ul>
         </article>
         <article class="feature-card">
-          <h3>Public visibility</h3>
-          <p>Only the channels explicitly approved for visitors will be surfaced here.</p>
+          <h3>Other profiles</h3>
+          <ul class="list-clean">
+            {otherProfiles.map((profile) => (
+              <li><a href={profile.href}>{profile.label}</a></li>
+            ))}
+          </ul>
         </article>
       </div>
     </section>

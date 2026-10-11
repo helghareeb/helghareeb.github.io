@@ -1,15 +1,56 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const seoTitle = buildSeoTitle('Academic reviewing and assessment experience', {
+const links = (await getCollection('externalLinks')).filter((entry) => entry.data.lang === 'en');
+const findLink = (routeSlug: string) => links.find((entry) => entry.slug === `${routeSlug}-en`);
+const journalLink = findLink('mjcis-journal');
+const defenseLink = findLink('mansoura-phd-defense-committee');
+
+const roles = [
+  {
+    period: 'Since 24 September 2026',
+    title: 'Managing Editor',
+    venue: 'Mansoura Journal for Computer and Information Sciences (MJCIS), Mansoura University',
+    href: journalLink ? getEntryPath('externalLinks', 'en', journalLink.slug) : undefined,
+  },
+  {
+    period: 'Since April 2023',
+    title: 'Editorial Board Member',
+    venue: 'Mansoura Journal for Computer and Information Sciences (MJCIS)',
+    href: journalLink ? getEntryPath('externalLinks', 'en', journalLink.slug) : undefined,
+  },
+  {
+    period: '2009–2013',
+    title: 'Technical Editor and Reviewer',
+    venue: 'Advances in Information Sciences and Service Sciences (AISS)',
+  },
+  {
+    title: 'IT Editorial Board Member and Educational Reviewer',
+    venue: 'MERLOT (Multimedia Educational Resource for Learning and Online Teaching)',
+  },
+  ...(defenseLink
+    ? [
+        {
+          period: 'July 2023',
+          title: 'Member of a Ph.D. examination committee',
+          venue: 'Information Systems, Faculty of Computers and Information, Mansoura University',
+          href: getEntryPath('externalLinks', 'en', defenseLink.slug),
+        },
+      ]
+    : []),
+];
+
+const seoTitle = buildSeoTitle('Academic Reviewing', {
   lang: 'en',
-  section: 'Academic Reviewing',
+  section: 'Scholarly Fields',
 });
 const seoDescription = buildSeoDescription(
-  'A concise public-facing presentation of academic reviewing and assessment experience within the scholarly website.',
-  ['Reviewing experience', 'Selective presentation'],
+  'Editorial and reviewing roles of Dr. Haitham A. El-Ghareeb: Managing Editor of MJCIS, AISS technical editor and reviewer, MERLOT educational reviewer, and Ph.D. examination committee member.',
+  [],
 );
 ---
 
@@ -22,24 +63,23 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Academic Reviewing</p>
-      <h1 class="hero__title">A concise view of reviewing and assessment experience</h1>
+      <h1 class="hero__title">Academic Reviewing</h1>
       <p class="hero__lead">
-        This section presents reviewing experience in a concise public-facing form
-        while keeping the emphasis on the nature of the work rather than unnecessary detail.
+        Editorial and reviewing work for journals in computer and information sciences and for
+        educational resources, together with doctoral examination in information systems.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">Reviewing experience</span>
-        <span class="hero__badge">Concise presentation</span>
-      </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Presentation style</h2>
-      <p>
-        In line with the project documentation, this area remains brief and selective,
-        highlighting expertise without overloading the page with detail.
-      </p>
+    <section class="shell section">
+      <div class="grid-two">
+        {roles.map((role) => (
+          <article class="content-card entity-card">
+            {role.period && <p class="content-card__meta">{role.period}</p>}
+            <h3>{role.href ? <a href={role.href}>{role.title}</a> : role.title}</h3>
+            <p>{role.venue}</p>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

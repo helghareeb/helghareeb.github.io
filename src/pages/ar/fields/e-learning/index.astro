@@ -1,15 +1,26 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const learningPattern = /التعليم الإلكتروني|العصر الرقمي|العملية التعليمية/;
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && learningPattern.test(entry.data.title))
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const books = (await getCollection('books'))
+  .filter((entry) => entry.data.lang === 'ar' && /التعليم الإلكتروني/.test(entry.data.title))
+  .sort((a, b) => Number(b.data.year ?? 0) - Number(a.data.year ?? 0));
 
 const seoTitle = buildSeoTitle('التعليم الإلكتروني للعلوم الإسلامية', {
   lang: 'ar',
   section: 'المجالات العلمية',
 });
 const seoDescription = buildSeoDescription(
-  'قسم يعرض المبادرات والرؤى المتعلقة بالتعليم الإلكتروني للعلوم الإسلامية والوسائط والمنهجيات الرقمية.',
-  ['تعليم رقمي', 'وسائط ومنهج'],
+  'كتب في المعمارية الموجهة للخدمات لدعم التعليم الإلكتروني، ومقالات في أنماط التعليم الشرعي الإلكتروني والهجين، وأدوات مذاكرة رقمية.',
+  [],
 );
 ---
 
@@ -22,24 +33,75 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">التعليم الإلكتروني للعلوم الإسلامية</p>
-      <h1 class="hero__title">التعليم الشرعي في بيئة رقمية منظمة</h1>
+      <h1 class="hero__title">التعليم الإلكتروني والتعليم الشرعي</h1>
       <p class="hero__lead">
-        يعرض هذا القسم المبادرات والرؤى التي تربط التعليم الإسلامي بالبناء الرقمي،
-        وطرائق العرض، وتنظيم المعرفة، والانتفاع بالوسائط التعليمية الحديثة.
+        من كتب في المعمارية الموجهة للخدمات لدعم التعليم الإلكتروني، إلى مقالات
+        في أنماط التعليم الشرعي المباشر والإلكتروني والهجين، وأدوات مذاكرة رقمية لطالب العلم.
       </p>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">تعليم رقمي</span>
-        <span class="hero__badge">وسائط ومنهج</span>
+      <div class="hero__actions">
+        <a class="button" href="/ar/study/">مذاكرة طالب العلم</a>
+        <a class="button-secondary" href="/ar/study/flashcards/">بطاقات المذاكرة</a>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">اتجاهات هذا المسار</h2>
-      <p>
-        يضم هذا المسار المواد المرتبطة بالمقررات، والتجارب التعليمية، والمقالات التي تناقش
-        البناء الإلكتروني للمعرفة في العلوم الإسلامية.
-      </p>
+    {books.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">كتب</p>
+          <h2 class="section-title">المعمارية الموجهة للخدمات في التعليم الإلكتروني</h2>
+        </div>
+
+        <div class="grid-two">
+          {books.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.year, book.data.publisher].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {articles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">مقالات</p>
+          <h2 class="section-title">التعليم الشرعي في العصر الرقمي</h2>
+        </div>
+
+        <div class="grid-two">
+          {articles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="shell section">
+      <div class="grid-two">
+        <a class="card-link" href="/ar/study/flashcards/">
+          <article class="feature-card">
+            <h3>بطاقات المذاكرة</h3>
+            <p>مراجعة وتدريب واختبار تفاعلي على متن «أخصر المختصرات»، مع حفظ النتائج وإعادة الأسئلة التي أخطأت فيها.</p>
+          </article>
+        </a>
+        <a class="card-link" href="/ar/study/benefits/">
+          <article class="feature-card">
+            <h3>فوائد من كتب متنوعة</h3>
+            <p>دفاتر فوائد من شروح «الرسالة» للإمام الشافعي ودروس تفسير الطبري، مرتبة بالفن ثم بالكتاب.</p>
+          </article>
+        </a>
+      </div>
     </section>
   </main>
 </BaseLayout>

@@ -25,7 +25,7 @@ export const GET: APIRoute = ({ url }) => {
       : 'Books, critical editions, articles, and scholarly fields',
   );
   const siteLabel = escapeXml(
-    lang === 'ar' ? 'موقع علمي ثنائي اللغة' : 'Bilingual scholarly website',
+    lang === 'ar' ? 'أستاذ نظم المعلومات المساعد · جامعة المنصورة' : 'Associate Professor of Information Systems · Mansoura University',
   );
   const direction = lang === 'ar' ? 'rtl' : 'ltr';
   const textAnchor = lang === 'ar' ? 'end' : 'start';

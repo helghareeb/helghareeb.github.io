@@ -1,15 +1,50 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getArticleSeriesPath, getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const seoTitle = buildSeoTitle('Defense of Sunnah', {
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const featuredSeriesSlugs = ['the-mizan-series-how-to-weigh-doubts', 'summary-of-why-i-did-not-become-shia'];
+const seriesGroups = featuredSeriesSlugs
+  .map((slug) => {
+    const entries = articles
+      .filter((entry) => entry.data.seriesSlug === slug)
+      .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
+
+    return { slug, title: entries[0]?.data.series ?? '', entries };
+  })
+  .filter((group) => group.entries.length > 0);
+
+const inSeries = new Set(seriesGroups.flatMap((group) => group.entries.map((entry) => entry.slug)));
+
+const doubtsArticles = articles.filter(
+  (entry) => entry.data.category === 'Intellectual and Creedal Doubts' && !inSeries.has(entry.slug),
+);
+const shown = new Set([...inSeries, ...doubtsArticles.map((entry) => entry.slug)]);
+
+const responseArticles = articles.filter(
+  (entry) =>
+    !shown.has(entry.slug) &&
+    !/taqlid/i.test(entry.data.title) &&
+    /refut|the claim|objection|doubts|defending the sunnah|measuring the sunnah|authority of the prophetic sunnah|sunnah is revelation/i.test(
+      entry.data.title,
+    ),
+);
+
+const total = shown.size + responseArticles.length;
+
+const seoTitle = buildSeoTitle('Defense of the Sunnah', {
   lang: 'en',
-  section: 'Scholarly Field',
+  section: 'Scholarly Fields',
 });
 const seoDescription = buildSeoDescription(
-  'A specialized field page for responses to objections, structured clarification, and connected series in defense of the Sunnah.',
-  ['Responses and series', 'Methodical scholarly treatment'],
+  'The Mizan Series on how to weigh doubts, a summary of "Why I Did Not Become Shia", and articles answering objections to the Sunnah, Sahih al-Bukhari and its transmitters.',
+  [`${total} articles`],
 );
 ---
 
@@ -21,25 +56,80 @@ const seoDescription = buildSeoDescription(
 >
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
-      <p class="hero__eyebrow">Defense of Sunnah</p>
-      <h1 class="hero__title">A section for structured scholarly response</h1>
+      <p class="hero__eyebrow">Defense of the Sunnah</p>
+      <h1 class="hero__title">Defense of the Sunnah</h1>
       <p class="hero__lead">
-        This area gathers writing that addresses objections, misunderstandings, and
-        thematic defenses of Sunnah in a methodical and organized way.
+        Articles that weigh doubts raised against the Prophetic Sunnah, Sahih al-Bukhari and its
+        transmitters by the standards of hadith criticism, and series that answer them in order.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">Specialized section</span>
-        <span class="hero__badge">Responses and series</span>
+        <span class="hero__badge">{total} articles</span>
+        <span class="hero__badge">{seriesGroups.length} series</span>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">Section focus</h2>
-      <p>
-        The section brings together standalone essays, connected series, and topic-based grouping
-        to help readers navigate questions and responses coherently.
-      </p>
-    </section>
+    {seriesGroups.map((group) => (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Series · {group.entries.length} parts</p>
+          <h2 class="section-title"><a href={getArticleSeriesPath('en', group.slug)}>{group.title}</a></h2>
+        </div>
+
+        <div class="grid-two">
+          {group.entries.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.seriesOrder ? `Part ${article.data.seriesOrder}` : undefined, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    {doubtsArticles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Intellectual and Creedal Doubts</p>
+          <h2 class="section-title">Hadith questioned in modern debate</h2>
+        </div>
+
+        <div class="grid-two">
+          {doubtsArticles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{article.data.date}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {responseArticles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Responses</p>
+          <h2 class="section-title">The authority of the Sunnah and replies to objections</h2>
+        </div>
+
+        <div class="grid-two">
+          {responseArticles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

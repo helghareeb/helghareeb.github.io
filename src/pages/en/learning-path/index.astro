@@ -1,42 +1,105 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 
-const pathStages = [
-  'A foundational stage focused on essentials, orientation, and core points of entry.',
-  'A method-building stage centered on primary disciplines and their internal order.',
-  'A broader reading and research stage shaped by specialization and sustained study.',
-  'A productive stage linking scholarship to writing, teaching, and project-based work.',
+const arabicArticles = (await getCollection('articles')).filter(
+  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.seriesSlug,
+);
+const countSeries = (slug: string) => arabicArticles.filter((entry) => entry.data.seriesSlug === slug).length;
+
+const akhsarCards = (await getCollection('flashcards')).filter(
+  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
+).length;
+
+const manuscriptCourses = [
+  { slug: 'manuscript-skills-course', title: 'Course 1: Skills and tools for reading the Arabic manuscript' },
+  { slug: 'manuscript-atiq-course', title: 'Course 2: Reading early manuscripts' },
+  { slug: 'manuscript-waqf-course', title: 'Course 3: Endowment, ownership and reading notes in the Arabic manuscript' },
+  { slug: 'manuscript-samaat-course', title: "Course 4: Audition certificates (sama'at) recorded on manuscripts" },
+  { slug: 'manuscript-nafisa-samaat-course', title: 'Course 5: Audition certificates in rare manuscripts' },
+  { slug: 'manuscript-copyist-course', title: "Course 6: Identifying the copyist and the date of copying" },
+  { slug: 'manuscript-handwriting-course', title: 'Course 7: Studying manuscript copies: paths and skills' },
+  { slug: 'manuscript-mastery-course', title: 'Course 8: Mastering manuscript studies' },
+]
+  .map((course) => ({ ...course, count: countSeries(course.slug) }))
+  .filter((course) => course.count > 0);
+
+const stages = [
+  {
+    label: 'Stage 1 · Foundations',
+    title: 'Hanbali fiqh with Akhsar al-Mukhtasarat',
+    copy: `Begin with a concise primer in fiqh and fix its rulings through ${akhsarCards} review, training and test questions (in Arabic).`,
+    links: [{ label: 'Akhsar al-Mukhtasarat flashcards (Arabic)', href: '/ar/study/flashcards/akhsar-al-mukhtasarat/' }],
+  },
+  {
+    label: 'Stage 2 · Legal theory',
+    title: "Al-Shafi'i's al-Risalah",
+    copy: 'Read the founding work of usul al-fiqh with edited lessons from several teachers and study notes on its principles.',
+    links: [
+      { label: 'Study notes: usul al-fiqh from al-Risalah', href: '/en/study/benefits/usul-al-fiqh/al-risala-ahmad-al-naqeeb/' },
+      { label: "Lessons of Shaykh Husayn Abd al-Raziq (e-book)", href: '/en/books/al-risala-hussein-lessons/' },
+      { label: "Lessons of Shaykh Sami (e-book)", href: '/en/books/al-risala-samy-lessons/' },
+      ...(countSeries('al-risala-ahmad-naqeeb') > 0
+        ? [{ label: `Lesson summaries of Dr. Ahmad al-Naqeeb (${countSeries('al-risala-ahmad-naqeeb')} parts, Arabic)`, href: '/ar/articles/series/al-risala-ahmad-naqeeb/' }]
+        : []),
+      ...(countSeries('al-risala') > 0
+        ? [{ label: `Lesson summaries of Dr. Yasir Burhami (${countSeries('al-risala')} parts, Arabic)`, href: '/ar/articles/series/al-risala/' }]
+        : []),
+    ],
+  },
+  {
+    label: 'Stage 3 · Tafsir',
+    title: 'Al-Tabari on al-Fatihah and al-Baqarah',
+    copy: "Move to Qur'anic exegesis through al-Tabari's commentary, with transcribed lessons and notes on language, creed and rulings.",
+    links: [
+      { label: "Study notes: tafsir and Qur'anic sciences", href: '/en/study/benefits/tafsir-and-ulum-al-quran/tafsir-al-tabari-husayn-abd-al-raziq/' },
+      { label: "Transcribed lessons on al-Tabari's Tafsir (e-book)", href: '/en/books/tabari-tafsir-lessons/' },
+    ],
+  },
+  {
+    label: 'Stage 4 · Specialization',
+    title: 'Manuscript studies',
+    copy: "Specialize in reading and editing Arabic manuscripts through the courses of Shaykh Salih al-Azhari, then see the method applied in a published critical edition.",
+    links: [
+      ...manuscriptCourses.map((course) => ({
+        label: `${course.title} (${course.count} parts, Arabic)`,
+        href: `/ar/articles/series/${course.slug}/`,
+      })),
+      { label: "Critical edition: al-Tawdih lil-Awham al-Waqi'a fi al-Sahih", href: '/en/critical-editions/al-tawdih-lil-awham/' },
+    ],
+  },
 ];
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
-  title="Suggested Learning Path | Dr. Haitham A. El-Ghareeb"
-  description="A structured learning path for students interested in ordered scholarly progression"
+  title="Learning Path | Dr. Haitham A. El-Ghareeb"
+  description="A four-stage reading path for students of Islamic knowledge: Akhsar al-Mukhtasarat, al-Shafi'i's al-Risalah, al-Tabari's Tafsir, and manuscript studies."
 >
   <main class="page-main">
     <section class="shell hero">
-      <p class="hero__eyebrow">Suggested Learning Path</p>
-      <h1 class="hero__title">A structured view of scholarly progression</h1>
+      <p class="hero__eyebrow">Learning Path</p>
+      <h1 class="hero__title">A suggested path for students of Islamic knowledge</h1>
       <p class="hero__lead">
-        This section is intended to present an organized learning path for students, with attention
-        to sequencing, methodological development, and the relationship between reading and formation.
+        Four stages, from a fiqh primer to manuscript studies, each linked to the notes, lessons and
+        questions available on this site.
       </p>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Framework</p>
-        <h2 class="section-title">Core stages for ordered growth</h2>
-      </div>
-
       <div class="grid-two">
-        {pathStages.map((stage, index) => (
+        {stages.map((stage) => (
           <article class="content-card">
-            <p class="content-card__meta">Stage {index + 1}</p>
-            <p>{stage}</p>
+            <p class="content-card__meta">{stage.label}</p>
+            <h3>{stage.title}</h3>
+            <p>{stage.copy}</p>
+            <ul class="list-clean">
+              {stage.links.map((link) => (
+                <li><a href={link.href}>{link.label}</a></li>
+              ))}
+            </ul>
           </article>
         ))}
       </div>

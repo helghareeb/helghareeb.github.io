@@ -5,17 +5,16 @@ import '../../../styles/global.css';
 import { getEntryPath } from '../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
-const projects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'en').slice(0, 6);
-const seoTitle = buildSeoTitle('Scholarly and digital initiatives', {
+const projects = (await getCollection('projects'))
+  .filter((entry) => entry.data.lang === 'en')
+  .sort((a, b) => Number(b.data.startYear ?? 0) - Number(a.data.startYear ?? 0));
+const seoTitle = buildSeoTitle('Projects', {
   lang: 'en',
-  section: 'Projects',
+  section: 'Dr. Haitham A. El-Ghareeb',
 });
 const seoDescription = buildSeoDescription(
-  'English archive for scholarly and digital projects connected to the site.',
-  [
-    `${projects.length} featured entries`,
-    projects[0]?.data.startYear ? `Earliest visible year ${projects[0].data.startYear}` : undefined,
-  ],
+  'Open-source projects by Dr. Haitham A. El-Ghareeb, including this bilingual website and public course repositories.',
+  [`${projects.length} projects`],
 );
 ---
 
@@ -28,93 +27,29 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Projects</p>
-      <h1 class="hero__title">A space for scholarly and digital initiatives</h1>
+      <h1 class="hero__title">Projects</h1>
       <p class="hero__lead">
-        This section documents current and planned projects, clarifies their scope and
-        status, and connect them to the broader scholarly structure of the website.
+        Open-source work published on GitHub: the source of this bilingual website and public
+        repositories for university courses.
       </p>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">Scholarly initiatives</span>
-        <span class="hero__badge">Digital projects</span>
-        <span class="hero__badge">Status tracking</span>
-      </div>
-    </section>
-
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">Purpose</p>
-        <h2 class="section-title">A single place to document ongoing work</h2>
-        <p class="section-copy">
-          Projects appear here as distinct entries with summaries, status, scope, and links to
-          outputs, related articles, or supporting pages when available.
-        </p>
-
-        <ul class="entity-tags">
-          <li>Project title</li>
-          <li>Scope</li>
-          <li>Status</li>
-          <li>Related outputs</li>
-        </ul>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">Expansion logic</p>
-        <ul class="entity-list">
-          <li><strong>Current view:</strong> concise project cards for fast orientation.</li>
-          <li><strong>Current structure:</strong> standalone project pages can support larger initiatives.</li>
-          <li><strong>Value:</strong> the site can track scholarly work as it evolves.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="shell section">
-      <div class="entity-meta-grid">
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Description</p>
-          <h3>What the project does</h3>
-          <p>A clear short explanation of the scholarly, digital, or educational purpose.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">State</p>
-          <h3>Active or planned</h3>
-          <p>Status labels make it easier to distinguish active initiatives from planned ones.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Connections</p>
-          <h3>Links and outputs</h3>
-          <p>Each project can connect to related pages or public outputs as those links become available.</p>
-        </article>
+      <div class="hero__actions">
+        <a class="button-secondary" href="https://github.com/helghareeb">GitHub profile</a>
       </div>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Current entries</p>
-        <h2 class="section-title">Project records currently shown in the archive</h2>
-      </div>
-
       <div class="grid-two">
-        {projects.length > 0 ? (
-          projects.map((project) => (
-            <a class="card-link" href={getEntryPath('projects', 'en', project.slug)}>
-              <article class="content-card entity-card">
-                <p class="content-card__meta">{project.data.status ?? 'In preparation'}</p>
-                <h3>{project.data.title}</h3>
-                <p>{project.data.summary}</p>
-                <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
-              </article>
-            </a>
-          ))
-        ) : (
-          <article class="notice-card">
-            <h2 class="section-title">No English project entries are published yet</h2>
-            <p>
-              This section will display English project records automatically once they are added
-              to the collection.
-            </p>
-          </article>
-        )}
+        {projects.map((project) => (
+          <a class="card-link" href={getEntryPath('projects', 'en', project.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
+              <h3>{project.data.title}</h3>
+              <p>{project.data.summary}</p>
+              {project.data.status && <p class="content-card__meta">{project.data.status}</p>}
+            </article>
+          </a>
+        ))}
       </div>
     </section>
   </main>

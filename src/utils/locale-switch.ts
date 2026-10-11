@@ -17,7 +17,6 @@ const localePairs: Record<string, string> = {
   '/ar/study/benefits/': '/en/study/benefits/',
   '/ar/study/flashcards/': '/en/study/flashcards/',
   '/ar/projects/': '/en/projects/',
-  '/ar/media/': '/en/media/',
   '/ar/external-links/': '/en/external-links/',
   '/ar/contact/': '/en/contact/',
   '/ar/learning-path/': '/en/learning-path/',
@@ -42,7 +41,6 @@ const localePairs: Record<string, string> = {
   '/en/study/benefits/': '/ar/study/benefits/',
   '/en/study/flashcards/': '/ar/study/flashcards/',
   '/en/projects/': '/ar/projects/',
-  '/en/media/': '/ar/media/',
   '/en/external-links/': '/ar/external-links/',
   '/en/contact/': '/ar/contact/',
   '/en/learning-path/': '/ar/learning-path/',
@@ -98,6 +96,20 @@ export async function getAlternateLocalePath(currentPath: string, lang: Locale) 
     ),
   };
 
+  // Books, editions, projects and links may exist in one language only; fall back to the section index.
+  const entrySlugs = {
+    books: await getCollection('books'),
+    editions: await getCollection('editions'),
+    projects: await getCollection('projects'),
+    externalLinks: await getCollection('externalLinks'),
+  };
+  const counterpart = (collection: keyof typeof entrySlugs, targetLang: Locale, slug: string, fallback: string) => {
+    const exists = entrySlugs[collection].some(
+      (entry) => entry.data.lang === targetLang && entry.slug.replace(/-(ar|en)$/, '') === slug,
+    );
+    return exists ? `${fallback}${slug}/` : fallback;
+  };
+
   const dynamicLocaleMatchers: Array<{
     pattern: RegExp;
     getPath: (match: RegExpMatchArray) => string;
@@ -134,16 +146,14 @@ export async function getAlternateLocalePath(currentPath: string, lang: Locale) 
       pattern: /^\/en\/articles\/series\/([^/]+)\/$/,
       getPath: (match) => (articleSeriesSlugs.ar.has(match[1]) ? `/ar/articles/series/${match[1]}/` : '/ar/articles/series/'),
     },
-    { pattern: /^\/ar\/books\/([^/]+)\/$/, getPath: (match) => `/en/books/${match[1]}/` },
-    { pattern: /^\/en\/books\/([^/]+)\/$/, getPath: (match) => `/ar/books/${match[1]}/` },
-    { pattern: /^\/ar\/editions\/([^/]+)\/$/, getPath: (match) => `/en/critical-editions/${match[1]}/` },
-    { pattern: /^\/en\/critical-editions\/([^/]+)\/$/, getPath: (match) => `/ar/editions/${match[1]}/` },
-    { pattern: /^\/ar\/projects\/([^/]+)\/$/, getPath: (match) => `/en/projects/${match[1]}/` },
-    { pattern: /^\/en\/projects\/([^/]+)\/$/, getPath: (match) => `/ar/projects/${match[1]}/` },
-    { pattern: /^\/ar\/media\/([^/]+)\/$/, getPath: (match) => `/en/media/${match[1]}/` },
-    { pattern: /^\/en\/media\/([^/]+)\/$/, getPath: (match) => `/ar/media/${match[1]}/` },
-    { pattern: /^\/ar\/external-links\/([^/]+)\/$/, getPath: (match) => `/en/external-links/${match[1]}/` },
-    { pattern: /^\/en\/external-links\/([^/]+)\/$/, getPath: (match) => `/ar/external-links/${match[1]}/` },
+    { pattern: /^\/ar\/books\/([^/]+)\/$/, getPath: (match) => counterpart('books', 'en', match[1], '/en/books/') },
+    { pattern: /^\/en\/books\/([^/]+)\/$/, getPath: (match) => counterpart('books', 'ar', match[1], '/ar/books/') },
+    { pattern: /^\/ar\/editions\/([^/]+)\/$/, getPath: (match) => counterpart('editions', 'en', match[1], '/en/critical-editions/') },
+    { pattern: /^\/en\/critical-editions\/([^/]+)\/$/, getPath: (match) => counterpart('editions', 'ar', match[1], '/ar/editions/') },
+    { pattern: /^\/ar\/projects\/([^/]+)\/$/, getPath: (match) => counterpart('projects', 'en', match[1], '/en/projects/') },
+    { pattern: /^\/en\/projects\/([^/]+)\/$/, getPath: (match) => counterpart('projects', 'ar', match[1], '/ar/projects/') },
+    { pattern: /^\/ar\/external-links\/([^/]+)\/$/, getPath: (match) => counterpart('externalLinks', 'en', match[1], '/en/external-links/') },
+    { pattern: /^\/en\/external-links\/([^/]+)\/$/, getPath: (match) => counterpart('externalLinks', 'ar', match[1], '/ar/external-links/') },
     { pattern: /^\/ar\/study\/flashcards\/([^/]+)\/$/, getPath: (match) => `/en/study/flashcards/${match[1]}/` },
     { pattern: /^\/en\/study\/flashcards\/([^/]+)\/$/, getPath: (match) => `/ar/study/flashcards/${match[1]}/` },
     { pattern: /^\/ar\/study\/flashcards\/([^/]+)\/(review|training|test|results)\/$/, getPath: (match) => `/en/study/flashcards/${match[1]}/${match[2]}/` },

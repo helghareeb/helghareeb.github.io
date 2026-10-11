@@ -9,5 +9,4 @@ externalUrl: "https://github.com/helghareeb"
 featured: true
 ---
 
-This page gives direct access to the public GitHub profile, including repositories for books,
-course materials, digital projects, and related scholarly outputs.
+His GitHub profile holds the repositories for his books, course materials, and the source of this website.

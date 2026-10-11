@@ -9,6 +9,6 @@ externalUrl: "https://csifac.mans.edu.eg/index.php/2024-08-15-06-51-22/2024-08-1
 featured: true
 ---
 
-This page documents the official faculty journal, including its publication background, core metadata, and the current journal website.
+The faculty's page on the journal gives its publication background, basic data and a link to the current journal website.
 
 Dr. El-Ghareeb has served as the journal's Managing Editor since 24 September 2026, and as a member of its editorial board since April 2023.

@@ -3,7 +3,7 @@ title: "A Benefit on the Superiority of the Companions of the Prophet over the C
 lang: "en"
 date: "2025-01-11"
 summary: "A reflective comparison highlighting the steadfastness, loyalty, and certainty of the Prophet's Companions in contrast with responses reported from earlier communities."
-category: "Biography"
+category: "Biography and Scholarly Profiles"
 translationKey: "alukah-superiority-of-prophets-companions"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"

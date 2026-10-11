@@ -1,15 +1,51 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getArticleSeriesPath, getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const seoTitle = buildSeoTitle('الدفاع عن السنة والشبهات', {
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const partForms: [string, string, string, string, string] = ['حلقة واحدة', 'حلقتان', 'حلقات', 'حلقةً', 'حلقة'];
+
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const seriesSlugs = ['سلسله-الميزان-كيف-نزن-الشبهات', 'ملخص-كتاب-لماذا-لم-اتشيع'];
+const series = seriesSlugs
+  .map((slug) => {
+    const entries = articles.filter((entry) => entry.data.seriesSlug === slug);
+
+    return { slug, title: entries[0]?.data.series ?? '', count: entries.length };
+  })
+  .filter((item) => item.count > 0);
+
+const doubtPattern = /(^|[\s"«])(شبهة|شبهات|شبه)(?=[\s"»]|$)|تفنيد|نصرة السنة/;
+const refutations = articles.filter(
+  (entry) =>
+    !seriesSlugs.includes(entry.data.seriesSlug ?? '') &&
+    (entry.data.category === 'شبهات فكرية وعقدية' || doubtPattern.test(entry.data.title)),
+);
+
+const books = (await getCollection('books')).filter(
+  (entry) => entry.data.lang === 'ar' && entry.slug.startsWith('duty-toward-burning-the-quran'),
+);
+
+const seoTitle = buildSeoTitle('الدفاع عن السنة والرد على الشبهات', {
   lang: 'ar',
   section: 'المجالات العلمية',
 });
 const seoDescription = buildSeoDescription(
-  'قسم متخصص للردود العلمية والسلاسل المرتبطة بالدفاع عن السنة ومعالجة الشبهات بمنهج واضح.',
-  ['سلاسل وردود علمية', 'قسم تخصصي'],
+  'سلسلة الميزان: كيف نزن الشبهات، وملخص كتاب لماذا لم أتشيع، ومقالات في الذب عن صحيح البخاري والرد على شبهات الحداثة، وكتاب واجبنا تجاه جريمة حرق المصحف.',
+  [],
 );
 ---
 
@@ -22,24 +58,73 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الدفاع عن السنة والشبهات</p>
-      <h1 class="hero__title">قسم للمعالجة العلمية المنهجية</h1>
+      <h1 class="hero__title">الدفاع عن السنة والرد على الشبهات</h1>
       <p class="hero__lead">
-        يجمع هذا القسم المواد التي تتناول الشبهات، والردود، والسلاسل
-        العلمية المرتبطة بالدفاع عن السنة بمنهج واضح وحجج مرتبة.
-      </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">قسم تخصصي</span>
-        <span class="hero__badge">سلاسل وردود علمية</span>
-      </div>
-    </section>
-
-    <section class="shell notice-card">
-      <h2 class="section-title">مواد هذا المسار</h2>
-      <p>
-        مقالات مستقلة، وسلاسل مترابطة، وتصنيفات موضوعية تساعد الزائر على تتبع المسائل
-        والاعتراضات والردود ضمن هيكل واضح سهل الرجوع إليه.
+        مقالات وسلاسل في الذب عن السنة النبوية و«صحيح البخاري»، ووزن الشبهات المعاصرة
+        بميزان أهل العلم، والرد على قراءات الحداثة لنصوص الوحي.
       </p>
     </section>
+
+    {series.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">سلاسل</p>
+          <h2 class="section-title">سلاسل في الرد على الشبهات</h2>
+        </div>
+
+        <div class="grid-two">
+          {series.map((item) => (
+            <a class="card-link" href={getArticleSeriesPath('ar', item.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{countAr(item.count, partForms)}</p>
+                <h3>{item.title}</h3>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {refutations.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">مقالات</p>
+          <h2 class="section-title">ردود ودراسات</h2>
+        </div>
+
+        <div class="grid-two">
+          {refutations.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {books.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">كتاب</p>
+          <h2 class="section-title">في تعظيم القرآن الكريم</h2>
+        </div>
+
+        <div class="grid-two">
+          {books.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

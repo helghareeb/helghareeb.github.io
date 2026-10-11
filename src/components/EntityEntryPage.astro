@@ -48,20 +48,13 @@ const {
 
   <section class="shell entity-grid">
     <article class="entity-summary">
-      <p class="entity-kicker">{lang === 'ar' ? 'نبذة' : 'Overview'}</p>
-      <h2 class="section-title">{lang === 'ar' ? 'مدخل موجز للعمل' : 'A concise entry for this item'}</h2>
-      <p class="section-copy">
-        {summary ??
-          (lang === 'ar'
-            ? 'هذه صفحة عنصر مفرد ضمن الموقع، مهيأة لعرض وصفه وبياناته وروابطه بشكل مستقل.'
-            : 'This is a standalone item page prepared to present the work, its metadata, and related links in an independent format.')}
-      </p>
+      <slot />
     </article>
 
-    <article class="entity-panel">
-      <p class="entity-kicker">{lang === 'ar' ? 'بيانات موجزة' : 'Quick metadata'}</p>
+    <aside class="entity-panel">
+      <p class="entity-kicker">{lang === 'ar' ? 'بيانات العمل' : 'Details'}</p>
       <ul class="entity-list">
-        {metaItems.map((item) => (
+        {metaItems.filter((item) => item.value).map((item) => (
           <li><strong>{item.label}:</strong> {item.value}</li>
         ))}
         {externalUrl && (
@@ -70,16 +63,9 @@ const {
           </li>
         )}
         <li>
-          <strong>{lang === 'ar' ? 'الرجوع' : 'Back'}:</strong> <a href={backHref}>{backLabel}</a>
+          <a href={backHref}>{backLabel}</a>
         </li>
       </ul>
-    </article>
-  </section>
-
-  <section class="shell section">
-    <div class="entity-panel">
-      <p class="entity-kicker">{lang === 'ar' ? 'التفاصيل' : 'Details'}</p>
-      <slot />
-    </div>
+    </aside>
   </section>
 </main>

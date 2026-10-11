@@ -1,15 +1,43 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const seoTitle = buildSeoTitle('بوابة مقالات الألوكة داخل الموقع', {
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const articleForms: [string, string, string, string, string] = ['مقال واحد', 'مقالان', 'مقالات', 'مقالًا', 'مقال'];
+
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.sourceName === 'شبكة الألوكة')
+  .sort((a, b) => {
+    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+    return bTime - aTime;
+  });
+const latestArticles = articles.slice(0, 6);
+
+const books = (await getCollection('books')).filter(
+  (entry) =>
+    entry.data.lang === 'ar' &&
+    (entry.data.externalUrl?.includes('alukah.net') || entry.slug === 'muslim-not-humiliated-book-ar'),
+);
+
+const seoTitle = buildSeoTitle('مقالات الألوكة', {
   lang: 'ar',
   section: 'الألوكة',
 });
 const seoDescription = buildSeoDescription(
-  'بوابة عربية لمحتوى الألوكة داخل الموقع، تضم المقالات والملخصات والروابط الأصلية والربط بالأرشيف العام.',
-  ['منشورات خارجية', 'صلة بالأرشيف العام'],
+  'مقالات د. هيثم الغريب وكتبه المنشورة في شبكة الألوكة، في الحديث وعلومه والعقيدة والمواعظ والدعوة والتفسير.',
+  [countAr(articles.length, articleForms)],
 );
 ---
 
@@ -22,50 +50,60 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الألوكة</p>
-      <h1 class="hero__title">بوابة لمقالات الألوكة داخل الموقع</h1>
+      <h1 class="hero__title">المنشور في شبكة الألوكة</h1>
       <p class="hero__lead">
-        هذا القسم مخصص لتجميع المقالات المنشورة في الألوكة وربطها بسياقها داخل الموقع،
-        بحيث لا تبقى مجرد روابط متناثرة بل تدخل ضمن أرشفة علمية أوضح.
+        نشر د. هيثم الغريب في شبكة الألوكة {countAr(articles.length, articleForms)} في الحديث وعلومه
+        والعقيدة والمواعظ والدعوة والتفسير، تجدها هنا مع روابطها الأصلية، ومعها كتب في مكتبة الألوكة.
       </p>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">منشورات خارجية</span>
-        <span class="hero__badge">ملخصات وروابط</span>
-      </div>
-
       <div class="hero__actions">
-        <a class="button" href="/ar/fields/alukah/articles/">قائمة مقالات الألوكة</a>
+        <a class="button" href="/ar/fields/alukah/articles/">كل مقالات الألوكة</a>
         <a class="button-secondary" href="/ar/external-links/alukah-author-page/">صفحة الكاتب في الألوكة</a>
       </div>
     </section>
 
     <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">الأحدث</p>
+        <h2 class="section-title">أحدث مقالات الألوكة</h2>
+      </div>
+
       <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">التنظيم</p>
-          <h2 class="section-title">ملخصات وروابط أصلية</h2>
-          <p>
-            يجمع هذا القسم عنوان كل مقال، وملخصه، ورابطه الأصلي، وتصنيفه، مع الإشارة إلى
-            وجود نسخة مستقلة داخل الموقع عند توفرها.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">الربط الداخلي</p>
-          <h2 class="section-title">صلة بالأرشيف العام</h2>
-          <p>
-            تظهر مقالات الألوكة أيضًا في الأرشيف المقالي العام بحسب ما يناسب التصنيف والسلسلة
-            والعلاقة بالمجال العلمي.
-          </p>
-        </article>
+        {latestArticles.map((article) => (
+          <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/ar/fields/alukah/articles/">كل مقالات الألوكة</a>
       </div>
     </section>
 
-    <section class="shell notice-card">
-      <h2 class="section-title">مدخل مباشر للأرشيف</h2>
-      <p>
-        إذا أردت قائمة مجمعة لكل مقالات الألوكة التي أُضيفت إلى الموقع، فستجدها هنا:
-        <a href="/ar/fields/alukah/articles/">مقالات الألوكة داخل الموقع</a>.
-      </p>
-    </section>
+    {books.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">مكتبة الألوكة</p>
+          <h2 class="section-title">كتب منشورة في الألوكة</h2>
+        </div>
+
+        <div class="grid-two">
+          {books.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

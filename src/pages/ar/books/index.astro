@@ -7,17 +7,42 @@ import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const books = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'ar')
-  .slice(0, 6);
-const seoTitle = buildSeoTitle('قسم المؤلفات والكتب المنشورة', {
+  .sort((a, b) => {
+    const yearCompare = Number(b.data.year ?? 0) - Number(a.data.year ?? 0);
+    if (yearCompare !== 0) return yearCompare;
+
+    return a.data.title.localeCompare(b.data.title, 'ar');
+  });
+
+const groupLabels: Record<string, string> = {
+  'كتاب': 'الكتب',
+  'كتاب إلكتروني': 'الكتب الإلكترونية',
+  'شرائح عرض': 'شرائح العرض',
+};
+const groupOrder = ['كتاب', 'كتاب إلكتروني', 'شرائح عرض'];
+
+const groupMap = new Map<string, typeof books>();
+for (const book of books) {
+  const key = book.data.workType ?? 'كتاب';
+  groupMap.set(key, [...(groupMap.get(key) ?? []), book]);
+}
+
+const groups = Array.from(groupMap.entries())
+  .sort((a, b) => {
+    const aIndex = groupOrder.indexOf(a[0]);
+    const bIndex = groupOrder.indexOf(b[0]);
+
+    return (aIndex === -1 ? groupOrder.length : aIndex) - (bIndex === -1 ? groupOrder.length : bIndex);
+  })
+  .map(([workType, entries]) => ({ title: groupLabels[workType] ?? workType, entries }));
+
+const seoTitle = buildSeoTitle('الكتب', {
   lang: 'ar',
   section: 'الكتب',
 });
 const seoDescription = buildSeoDescription(
-  'قسم الكتب العربي الذي يجمع المؤلفات المنشورة وبياناتها وروابطها داخل الموقع.',
-  [
-    `${books.length} أعمال ظاهرة`,
-    books[0]?.data.year ? `أحدث سنة ظاهرة ${books[0].data.year}` : undefined,
-  ],
+  'كتب ومؤلفات د. هيثم الغريب في العلوم الشرعية والقصة الاجتماعية ونظم المعلومات والتعليم الإلكتروني، مع بيانات النشر وروابط القراءة والتحميل.',
+  [books[0]?.data.year ? `أحدثها ${books[0].data.year}` : undefined],
 );
 ---
 
@@ -30,84 +55,31 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الكتب</p>
-      <h1 class="hero__title">قسم المؤلفات والكتب المنشورة</h1>
+      <h1 class="hero__title">الكتب والمؤلفات</h1>
       <p class="hero__lead">
-        يجمع هذا القسم المؤلفات المنشورة وما يتصل بها من بيانات تعريفية وروابط وملاحظات
-        ببليوجرافية مختصرة، مع تنظيم يسهل الرجوع إلى كل عمل.
+        مؤلفات في العلوم الشرعية والقصة الاجتماعية، وتفريغات منقحة لشروح أهل العلم، وكتب
+        أكاديمية في المعمارية الموجهة للخدمات والتعليم الإلكتروني وتكامل المؤسسات.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">كتب ومؤلفات</span>
-        <span class="hero__badge">بيانات ببليوجرافية</span>
-        <span class="hero__badge">روابط وإحالات</span>
-      </div>
     </section>
 
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">وصف القسم</p>
-        <h2 class="section-title">مساحة ببليوجرافية منظمة</h2>
-        <p class="section-copy">
-          تعرض هذه الصفحة الكتب بصيغة منظمة تجمع العنوان، والوصف، وبيانات النشر، والروابط
-          المفيدة، بما يمنح القارئ مدخلًا واضحًا إلى الأعمال المنشورة.
-        </p>
+    {groups.map((group) => (
+      <section class="shell section">
+        <div class="section-heading">
+          <h2 class="section-title">{group.title}</h2>
+        </div>
 
-        <ul class="entity-tags">
-          <li>عناوين معتمدة</li>
-          <li>وصف مختصر</li>
-          <li>بيانات نشر</li>
-          <li>روابط خارجية</li>
-        </ul>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">جاهزية القالب</p>
-        <ul class="entity-list">
-          <li><strong>الصيغة الحالية:</strong> بطاقات عرض موجزة تعرّف بكل عمل.</li>
-          <li><strong>البيانات المعروضة:</strong> العنوان والوصف وبيانات النشر والرابط عند التوفر.</li>
-          <li><strong>الفائدة:</strong> جمع الأعمال في موضع واحد يسهل الرجوع إليه ومتابعته.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="shell section">
-      <div class="entity-meta-grid">
-        <article class="content-card entity-card">
-          <p class="content-card__meta">نوع البيانات</p>
-          <h3>تعريف بالكتاب</h3>
-          <p>العنوان الكامل، وملخص وجيز، وما يحدد موقع العمل داخل المسار العلمي العام.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">بيانات النشر</p>
-          <h3>معلومة مرجعية واضحة</h3>
-          <p>سنة الإصدار، الجهة الناشرة، أو أي بيانات ببليوجرافية نافعة للقارئ والباحث.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">صلة رقمية</p>
-          <h3>روابط وإحالات</h3>
-          <p>رابط خارجي، صفحة بيع، أو موضع ظهور العمل في منصات أخرى عند الحاجة.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">كتب ظاهرة</p>
-        <h2 class="section-title">نماذج من الأعمال المدرجة</h2>
-      </div>
-
-      <div class="grid-two">
-        {books.map((book) => (
-          <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
-            <article class="content-card entity-card">
-              <p class="content-card__meta">{book.data.status ?? 'بيانات متاحة'}</p>
-              <h3>{book.data.title}</h3>
-              <p>{book.data.summary}</p>
-              <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
-            </article>
-          </a>
-        ))}
-      </div>
-    </section>
+        <div class="grid-two">
+          {group.entries.map((book) => (
+            <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[book.data.year, book.data.publisher].filter(Boolean).join(' | ')}</p>
+                <h3>{book.data.title}</h3>
+                <p>{book.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
   </main>
 </BaseLayout>

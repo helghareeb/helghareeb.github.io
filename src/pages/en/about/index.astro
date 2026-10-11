@@ -1,41 +1,112 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+
+const articleCount = (await getCollection('articles')).filter(
+  (entry) => entry.data.lang === 'en' && !entry.data.draft,
+).length;
+
+const interests = [
+  {
+    title: 'Information systems',
+    copy: 'Enterprise integration, service-oriented architecture, intelligent and adaptive information systems, and data quality at the network edge.',
+    href: '/en/books/',
+  },
+  {
+    title: 'E-learning',
+    copy: 'Service-oriented architecture for e-learning, the subject of his 2010 and 2011 books, and open course textbooks for his students.',
+    href: '/en/scholarly-fields/e-learning/',
+  },
+  {
+    title: 'Hadith and the Sunnah',
+    copy: 'Articles on hadith and its sciences, and series answering doubts raised about the Sunnah and its transmitters.',
+    href: '/en/scholarly-fields/defense-of-sunnah/',
+  },
+  {
+    title: 'Islamic legal theory',
+    copy: "Edited lessons and study notes on al-Shafi'i's al-Risalah from several teachers.",
+    href: '/en/study/benefits/',
+  },
+  {
+    title: 'Manuscripts and critical editions',
+    copy: "A critical edition of Sibt Ibn al-'Ajami's al-Tawdih lil-Awham, prepared under the supervision of Shaykh Salih al-Azhari.",
+    href: '/en/critical-editions/',
+  },
+  {
+    title: 'AI and Islamic heritage',
+    copy: 'Articles on artificial intelligence and technology in the service of the Islamic sciences and Islamic education.',
+    href: '/en/scholarly-fields/ai-and-islamic-heritage/',
+  },
+];
 ---
 
 <BaseLayout
   lang="en"
   dir="ltr"
   title="About | Dr. Haitham A. El-Ghareeb"
-  description="A concise scholarly profile for Dr. Haitham A. El-Ghareeb and the purpose of this bilingual academic website"
+  description="Biography of Dr. Haitham A. El-Ghareeb, Associate Professor of Information Systems at Mansoura University and Managing Editor of the Mansoura Journal for Computer and Information Sciences."
 >
   <main class="page-main">
     <section class="shell hero">
       <p class="hero__eyebrow">About</p>
       <h1 class="hero__title">Dr. Haitham A. El-Ghareeb</h1>
       <p class="hero__lead">
-        A scholar and academic building a structured digital presence around scholarly identity,
-        publications, critical editions, articles, and research-facing intellectual work, with a
-        strong emphasis on Islamic studies and organized knowledge presentation.
+        Associate Professor of Information Systems at the Faculty of Computers and Information,
+        Mansoura University, Egypt, and Managing Editor of the Mansoura Journal for Computer and
+        Information Sciences.
       </p>
+
+      <div class="hero__actions">
+        <a class="button" href="/en/cv/">Full CV</a>
+        <a class="button-secondary" href="/en/contact/">Contact</a>
+      </div>
     </section>
 
     <section class="shell section">
       <div class="grid-two">
         <article class="content-card">
-          <p class="content-card__meta">Profile</p>
-          <h2 class="section-title">A scholarly website with a clear purpose</h2>
+          <p class="content-card__meta">Academic career</p>
+          <h2 class="section-title">Information systems at Mansoura University</h2>
           <p>
-            This website serves as a central reference point for biography, books,
-            critical editions, articles, and scholarly projects in a unified bilingual format.
+            He received his B.Sc. (2004), M.Sc. (2008) and Ph.D. (2011) in Information Systems from
+            Mansoura University. He joined the Information Systems Department as a Teaching Assistant
+            in 2005, became an Assistant Lecturer in 2008 and a Lecturer in 2012, and has been an
+            Associate Professor since 2019. From 2015 to 2017 he was seconded to Zulfi University,
+            Saudi Arabia, as Associate Professor of Information Systems in its Computer Science Department.
           </p>
         </article>
         <article class="content-card">
-          <p class="content-card__meta">Aim</p>
-          <h2 class="section-title">Why this platform exists</h2>
+          <p class="content-card__meta">Editorial service</p>
+          <h2 class="section-title">Journals and reviewing</h2>
           <p>
-            Its purpose is to gather academic and intellectual work in one place and present it
-            in an orderly, modern, and scalable digital structure.
+            He has been Managing Editor of the Mansoura Journal for Computer and Information Sciences
+            (MJCIS) since 24 September 2026, after serving on its editorial board from April 2023. He
+            was a technical editor and reviewer for Advances in Information Sciences and Service Sciences
+            (AISS) from 2009 to 2013, and has served on the IT editorial board of MERLOT as an educational reviewer.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">Research</p>
+          <h2 class="section-title">From enterprise integration to edge data quality</h2>
+          <p>
+            His research spans enterprise integration, service-oriented architecture, e-learning and
+            intelligent systems. His recent work addresses data quality and data cleaning in mobile edge
+            computing, published in IEEE Access (2026), Scientific Reports (2025) and the Journal of Big
+            Data (2025). He is an EMC Featured Proven Professional (2015) and won the Global Final Grand
+            Prize, Cloud Track, of the Huawei ICT Competition 2019–2020.
+          </p>
+        </article>
+        <article class="content-card">
+          <p class="content-card__meta">Islamic studies</p>
+          <h2 class="section-title">Study with scholars</h2>
+          <p>
+            Alongside his academic work he studies the Islamic sciences. He attended the lessons of
+            Prof. Dr. Ahmad Abdelrahman al-Naqeeb, Shaykh Mustafa al-Adawi, Shaykh Abu Hafs Sami ibn
+            al-Arabi and others; completed studies at Zad Academy and the core track of Tafsir Academy;
+            is in the second year at Murtaqa Academy for Islamic Sciences; and is in the final stage of a
+            Hanbali fiqh qualification program. {articleCount} of his articles are available in English
+            on this site.
           </p>
         </article>
       </div>
@@ -43,35 +114,19 @@ import '../../../styles/global.css';
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Current research-facing themes</p>
-        <h2 class="section-title">Interests reflected in the current project plan</h2>
+        <p class="section-kicker">Areas of work</p>
+        <h2 class="section-title">What he writes and teaches about</h2>
       </div>
 
       <div class="grid-three">
-        <article class="feature-card">
-          <h3>Islamic Studies</h3>
-          <p>A central theme in the scholarly direction and published structure of the site.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Critical Editing and Manuscripts</h3>
-          <p>A dedicated area for editorial and manuscript-related scholarly work.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Defense of Sunnah</h3>
-          <p>One of the specialized intellectual areas highlighted in the broader site vision.</p>
-        </article>
-        <article class="feature-card">
-          <h3>AI and Islamic Heritage</h3>
-          <p>A forward-looking theme connecting contemporary tools with heritage scholarship.</p>
-        </article>
-        <article class="feature-card">
-          <h3>E-Learning in Islamic Studies</h3>
-          <p>An interest in structured educational delivery and scholarly digital communication.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Articles and Projects</h3>
-          <p>The site supports ongoing publication and documented scholarly initiatives.</p>
-        </article>
+        {interests.map((interest) => (
+          <a class="card-link" href={interest.href}>
+            <article class="feature-card">
+              <h3>{interest.title}</h3>
+              <p>{interest.copy}</p>
+            </article>
+          </a>
+        ))}
       </div>
     </section>
   </main>

@@ -2,27 +2,76 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+import { getArticleSeriesPath, getEntryPath } from '../../../utils/content-routing';
 
-const fieldLinks = (await getCollection('fields'))
-  .filter((entry) => entry.data.lang === 'en')
-  .sort((a, b) => a.data.order - b.data.order);
+const articles = (await getCollection('articles')).filter((entry) => entry.data.lang === 'en' && !entry.data.draft);
+const seriesMap = new Map<string, { title: string; count: number }>();
 
-const primarySections = [
-  { title: 'About', href: '/en/about/' },
-  { title: 'CV', href: '/en/cv/' },
-  { title: 'Books', href: '/en/books/' },
-  { title: 'Critical Editions', href: '/en/critical-editions/' },
-  { title: 'Articles', href: '/en/articles/' },
-];
+for (const article of articles) {
+  if (!article.data.series || !article.data.seriesSlug) continue;
+  const existing = seriesMap.get(article.data.seriesSlug);
+  if (existing) {
+    existing.count += 1;
+  } else {
+    seriesMap.set(article.data.seriesSlug, { title: article.data.series, count: 1 });
+  }
+}
 
-const expansionSections = [
-  { title: 'Scholarly Fields', href: '/en/scholarly-fields/' },
-  { title: 'Study Hub', href: '/en/study/' },
-  { title: 'Projects', href: '/en/projects/' },
-  { title: 'Media', href: '/en/media/' },
-  { title: 'External Links', href: '/en/external-links/' },
-  { title: 'Learning Path', href: '/en/learning-path/' },
-  { title: 'Contact', href: '/en/contact/' },
+const books = (await getCollection('books')).filter((entry) => entry.data.lang === 'en');
+const editions = (await getCollection('editions')).filter((entry) => entry.data.lang === 'en');
+const projects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'en');
+const links = (await getCollection('externalLinks')).filter((entry) => entry.data.lang === 'en');
+const benefits = (await getCollection('studyBenefits')).filter((entry) => entry.data.lang === 'en' && !entry.data.draft);
+const alukahCount = articles.filter((entry) => entry.data.sourceName === 'Alukah Network').length;
+
+const groups = [
+  {
+    title: 'Profile',
+    items: [
+      { title: 'About', href: '/en/about/' },
+      { title: 'CV', href: '/en/cv/' },
+      { title: 'Contact', href: '/en/contact/' },
+    ],
+  },
+  {
+    title: 'Publications',
+    items: [
+      { title: `Books (${books.length})`, href: '/en/books/' },
+      { title: `Critical Editions (${editions.length})`, href: '/en/critical-editions/' },
+      { title: `Articles (${articles.length})`, href: '/en/articles/' },
+      { title: `Article Series (${seriesMap.size})`, href: '/en/articles/series/' },
+      { title: `Alukah Articles (${alukahCount})`, href: '/en/scholarly-fields/alukah/articles/' },
+    ],
+  },
+  {
+    title: 'Study',
+    items: [
+      { title: 'Study Hub', href: '/en/study/' },
+      { title: `Benefits from Books (${benefits.length} notebooks)`, href: '/en/study/benefits/' },
+      { title: 'Flashcards (Arabic)', href: '/en/study/flashcards/' },
+      { title: 'Learning Path', href: '/en/learning-path/' },
+    ],
+  },
+  {
+    title: 'Scholarly fields',
+    items: [
+      { title: 'All Scholarly Fields', href: '/en/scholarly-fields/' },
+      { title: 'Islamic Studies', href: '/en/scholarly-fields/islamic-studies/' },
+      { title: 'Defense of the Sunnah', href: '/en/scholarly-fields/defense-of-sunnah/' },
+      { title: 'Alukah', href: '/en/scholarly-fields/alukah/' },
+      { title: 'Manuscripts', href: '/en/scholarly-fields/manuscripts/' },
+      { title: 'AI and Islamic Heritage', href: '/en/scholarly-fields/ai-and-islamic-heritage/' },
+      { title: 'Academic Reviewing', href: '/en/scholarly-fields/academic-reviewing/' },
+      { title: 'E-Learning', href: '/en/scholarly-fields/e-learning/' },
+    ],
+  },
+  {
+    title: 'Work and links',
+    items: [
+      { title: `Projects (${projects.length})`, href: '/en/projects/' },
+      { title: `External Links (${links.length})`, href: '/en/external-links/' },
+    ],
+  },
 ];
 ---
 
@@ -30,68 +79,61 @@ const expansionSections = [
   lang="en"
   dir="ltr"
   title="Site Index | Dr. Haitham A. El-Ghareeb"
-  description="A general index of the current site structure"
+  description="Index of every section of the English site of Dr. Haitham A. El-Ghareeb: profile, publications, study materials, scholarly fields, projects and links."
 >
   <main class="page-main">
     <section class="shell hero hero--portal">
       <p class="hero__eyebrow">Site Index</p>
-      <h1 class="hero__title">A structured guide to the current site</h1>
+      <h1 class="hero__title">Site Index</h1>
       <p class="hero__lead">
-        This page provides a practical overview of the current architecture so visitors can move
-        quickly across the main sections, expansion paths, and specialized scholarly field pages.
+        Every section of the English site, with the number of entries in each.
       </p>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Core sections</p>
-        <h2 class="section-title">Profile and foundational content areas</h2>
-      </div>
-
       <div class="grid-two">
-        {primarySections.map((section) => (
-          <a class="card-link" href={section.href}>
-            <article class="content-card">
-              <h3>{section.title}</h3>
-            </article>
-          </a>
+        {groups.map((group) => (
+          <article class="content-card">
+            <h2 class="section-title">{group.title}</h2>
+            <ul class="list-clean">
+              {group.items.map((item) => (
+                <li><a href={item.href}>{item.title}</a></li>
+              ))}
+            </ul>
+          </article>
         ))}
       </div>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Expansion paths</p>
-        <h2 class="section-title">Additional sections in the current structure</h2>
+        <p class="section-kicker">Series</p>
+        <h2 class="section-title">Article series</h2>
       </div>
 
-      <div class="grid-two">
-        {expansionSections.map((section) => (
-          <a class="card-link" href={section.href}>
-            <article class="content-card">
-              <h3>{section.title}</h3>
-            </article>
-          </a>
+      <ul class="list-clean">
+        {Array.from(seriesMap.entries()).map(([slug, series]) => (
+          <li><a href={getArticleSeriesPath('en', slug)}>{series.title}</a> ({series.count} parts)</li>
         ))}
-      </div>
+      </ul>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Scholarly fields</p>
-        <h2 class="section-title">Current specialized field pages</h2>
+        <p class="section-kicker">Books and editions</p>
+        <h2 class="section-title">Titles</h2>
       </div>
 
-      <div class="grid-three">
-        {fieldLinks.map((field) => (
-          <a class="card-link" href={field.data.href}>
-            <article class="feature-card feature-card--field">
-              <h3>{field.data.title}</h3>
-              <p>{field.data.summary}</p>
-            </article>
-          </a>
+      <ul class="list-clean">
+        {books
+          .sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'))
+          .map((book) => (
+            <li><a href={getEntryPath('books', 'en', book.slug)}>{book.data.title}</a>{book.data.year && ` (${book.data.year})`}</li>
+          ))}
+        {editions.map((edition) => (
+          <li><a href={getEntryPath('editions', 'en', edition.slug)}>{edition.data.title}</a> (critical edition{edition.data.year && `, ${edition.data.year}`})</li>
         ))}
-      </div>
+      </ul>
     </section>
   </main>
 </BaseLayout>

@@ -1,13 +1,11 @@
 ---
-title: "Personal Scholarly Website Project"
+title: "This Website"
 lang: "en"
-summary: "A digital project designed to gather biography, books, critical editions, and articles within an expandable bilingual structure."
+summary: "The open-source, bilingual Arabic and English website you are reading, built with Astro and published on GitHub Pages."
 status: "Active"
 area: "Digital Scholarly Publishing"
 startYear: "2026"
 externalUrl: "https://github.com/helghareeb/helghareeb.github.io"
 ---
 
-This project is the bilingual digital home of the wider scholarly archive, bringing together
-biography, books, articles, critical editions, external links, and research-facing sections
-within a single structured website.
+The site brings together Dr. El-Ghareeb's biography and CV, books, critical edition, articles and article series, study notes and flashcards in Arabic and English. Every article, book and study note is a plain text file in the [public repository](https://github.com/helghareeb/helghareeb.github.io), from which the site is built with Astro and published on GitHub Pages.

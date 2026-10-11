@@ -32,8 +32,8 @@ const seoTitle = buildSeoTitle(referenceEntry.data.bookTitle, {
   section: 'Benefits from Books',
 });
 const seoDescription = buildSeoDescription(
-  `A grouped study page for notebooks related to ${referenceEntry.data.bookTitle} inside the Study Hub.`,
-  [referenceEntry.data.field, referenceEntry.data.teacher, `${entries.length} published notebooks`],
+  `Study notes on ${referenceEntry.data.bookTitle}${referenceEntry.data.teacher ? ` from the lessons of ${referenceEntry.data.teacher}` : ''}: ${referenceEntry.data.field}.`,
+  [`${entries.length} ${entries.length === 1 ? 'notebook' : 'notebooks'}`],
 );
 ---
 
@@ -43,22 +43,24 @@ const seoDescription = buildSeoDescription(
       <p class="hero__eyebrow">Benefits from Books</p>
       <h1 class="hero__title">{referenceEntry.data.bookTitle}</h1>
       <p class="hero__lead">
-        This page gathers the published study notebooks for this book inside the site, with field,
-        lesson-source, and subject structure kept visible for easier review.
+        {referenceEntry.data.field} notes on {referenceEntry.data.bookTitle}{referenceEntry.data.teacher ? `, from the lessons of ${referenceEntry.data.teacher}` : ''}.
       </p>
 
       <div class="hero__badge-row">
         <span class="hero__badge">{referenceEntry.data.field}</span>
         {referenceEntry.data.teacher && <span class="hero__badge">{referenceEntry.data.teacher}</span>}
-        <span class="hero__badge">{entries.length} study notebooks</span>
+        <span class="hero__badge">{entries.length} {entries.length === 1 ? 'notebook' : 'notebooks'}</span>
+      </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/study/benefits/">All study notes</a>
       </div>
     </section>
 
     <section class="shell notice-card">
-      <h2 class="section-title">Editorial note</h2>
       <p>
-        These notes were organized and published on the site for study use. The teacher did not
-        review this published version.
+        These notes were compiled and edited from the lessons; they have not been reviewed by the
+        teacher, and any error is the compiler's.
       </p>
     </section>
 

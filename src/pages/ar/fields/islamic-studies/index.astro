@@ -1,15 +1,63 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
+import { getArticleSeriesPath, getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const articleForms: [string, string, string, string, string] = ['مقال واحد', 'مقالان', 'مقالات', 'مقالًا', 'مقال'];
+const partForms: [string, string, string, string, string] = ['حلقة واحدة', 'حلقتان', 'حلقات', 'حلقةً', 'حلقة'];
+
+const byDateDesc = (a: { data: { date?: string } }, b: { data: { date?: string } }) => {
+  const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+  return bTime - aTime;
+};
+
+const articles = (await getCollection('articles'))
+  .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
+  .sort(byDateDesc);
+
+const topicGroups = [
+  { title: 'أصول الفقه', categories: ['أصول الفقه', 'فقه وأصوله'] },
+  { title: 'الحديث وعلومه', categories: ['الحديث وعلومه'] },
+  { title: 'العقيدة والتوحيد', categories: ['عقيدة وتوحيد', 'التوحيد'] },
+  { title: 'التفسير وعلوم القرآن', categories: ['التفسير وعلوم القرآن', 'تفسير القرآن'] },
+  { title: 'السيرة والتراجم', categories: ['سيرة نبوية', 'سيرة', 'سير وتراجم'] },
+  { title: 'الدعوة وطلب العلم', categories: ['الدعوة وطلب العلم', 'العلم والدعوة'] },
+  { title: 'الرقائق والمواعظ', categories: ['النصائح والمواعظ', 'الرقائق والأخلاق والآداب', 'خواطر إيمانية ودعوية', 'الذكر والدعاء'] },
+]
+  .map((group) => ({
+    ...group,
+    anchor: `/ar/articles/#category-${group.categories[0].replace(/\s+/g, '-')}`,
+    entries: articles.filter((entry) => entry.data.category && group.categories.includes(entry.data.category)),
+  }))
+  .filter((group) => group.entries.length > 0);
+
+const risalaSeries = ['al-risala-ahmad-naqeeb', 'al-risala']
+  .map((slug) => {
+    const entries = articles.filter((entry) => entry.data.seriesSlug === slug);
+
+    return { slug, title: entries[0]?.data.series ?? '', count: entries.length };
+  })
+  .filter((series) => series.count > 0);
 
 const seoTitle = buildSeoTitle('الدراسات الإسلامية', {
   lang: 'ar',
   section: 'المجالات العلمية',
 });
 const seoDescription = buildSeoDescription(
-  'المظلة الأوسع للمحتوى المتصل بالدراسات الإسلامية داخل الموقع، مع ربط بالمقالات والكتب والتحقيقات والأقسام المتخصصة.',
-  ['مرتبط بالمقالات', 'ربط بالأقسام'],
+  'مقالات وشروح في أصول الفقه والحديث وعلومه والعقيدة والتفسير والسيرة والدعوة، وملخصات شروح الرسالة للإمام الشافعي.',
+  topicGroups.slice(0, 4).map((group) => `${group.title}: ${group.entries.length}`),
 );
 ---
 
@@ -22,37 +70,57 @@ const seoDescription = buildSeoDescription(
   <main class="page-main page-main--detail">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الدراسات الإسلامية</p>
-      <h1 class="hero__title">المظلة الأوسع للمشروع العلمي</h1>
+      <h1 class="hero__title">أصول الفقه والحديث والعقيدة والتفسير</h1>
       <p class="hero__lead">
-        يمثل هذا القسم الإطار الأوسع للمحتوى المتصل بالدراسات الإسلامية، من حيث الاهتمامات
-        العلمية، والمقالات، والصلات المنهجية التي تجمع بقية الأقسام المتخصصة داخل الموقع.
+        مقالات وشروح في العلوم الشرعية، أوفرها نصيبًا أصول الفقه من خلال ملخصات شروح «الرسالة»
+        للإمام الشافعي، ومعها دفاتر فوائد وبطاقات مذاكرة لطالب العلم.
       </p>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">قسم تخصصي</span>
-        <span class="hero__badge">مرتبط بالمقالات</span>
-        <span class="hero__badge">مدخل للأرشفة الموضوعية</span>
+      <div class="hero__actions">
+        <a class="button" href="/ar/study/">مذاكرة طالب العلم</a>
+        <a class="button-secondary" href="/ar/learning-path/">المسار التعليمي</a>
       </div>
     </section>
 
+    {risalaSeries.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">الرسالة للإمام الشافعي</p>
+          <h2 class="section-title">ملخصات شروح «الرسالة»</h2>
+        </div>
+
+        <div class="grid-two">
+          {risalaSeries.map((series) => (
+            <a class="card-link" href={getArticleSeriesPath('ar', series.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{countAr(series.count, partForms)}</p>
+                <h3>{series.title}</h3>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
     <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">الموضوعات</p>
+        <h2 class="section-title">المقالات بحسب العلم</h2>
+      </div>
+
       <div class="grid-two">
-        <article class="content-card">
-          <p class="content-card__meta">وظيفة القسم</p>
-          <h2 class="section-title">جمع المحاور الكلية</h2>
-          <p>
-            يعمل هذا القسم بوصفه مدخلًا عامًا للمحتوى المرتبط بالتراث الإسلامي، والحديث،
-            والمناهج، والقضايا العلمية القريبة من هذه الدوائر.
-          </p>
-        </article>
-        <article class="content-card">
-          <p class="content-card__meta">اتجاه التوسع</p>
-          <h2 class="section-title">ربط بالمقالات والأقسام</h2>
-          <p>
-            يتصل هذا المسار بالمقالات والكتب والتحقيقات، مع إمكان إضافة أرشفة داخلية
-            بحسب الموضوع أو النوع أو السلسلة.
-          </p>
-        </article>
+        {topicGroups.map((group) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{countAr(group.entries.length, articleForms)}</p>
+            <h3>{group.title}</h3>
+            <ul class="list-clean" style="margin-top: 0.9rem;">
+              {group.entries.slice(0, 4).map((article) => (
+                <li><a href={getEntryPath('articles', 'ar', article.slug)}>{article.data.title}</a></li>
+              ))}
+            </ul>
+            <p><a href={group.anchor}>تصفح التصنيف في أرشيف المقالات</a></p>
+          </article>
+        ))}
       </div>
     </section>
   </main>

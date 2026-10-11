@@ -5,55 +5,47 @@ import '../../styles/global.css';
 import { getEntryPath } from '../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../utils/seo';
 
-const featuredBooks = (await getCollection('books'))
+const toTime = (value?: string) => (value ? new Date(value).getTime() : 0);
+
+const allBooks = (await getCollection('books'))
   .filter((entry) => entry.data.lang === 'en')
   .sort((a, b) => {
     const yearDiff = Number(b.data.year ?? 0) - Number(a.data.year ?? 0);
     if (yearDiff !== 0) return yearDiff;
 
-    const publishedA = /published/i.test(a.data.status ?? '');
-    const publishedB = /published/i.test(b.data.status ?? '');
-    if (publishedA !== publishedB) return publishedB ? 1 : -1;
-
     return a.data.title.localeCompare(b.data.title, 'en');
-  })
-  .slice(0, 2);
+  });
+const featuredBooks = allBooks.slice(0, 4);
 
-const featuredEditions = (await getCollection('editions'))
-  .filter((entry) => entry.data.lang === 'en')
-  .slice(0, 2);
+const featuredEditions = (await getCollection('editions')).filter((entry) => entry.data.lang === 'en');
 
-const featuredArticles = (await getCollection('articles'))
+const allArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'en' && !entry.data.draft)
-  .slice(0, 3);
+  .sort((a, b) => toTime(b.data.date) - toTime(a.data.date));
+const latestArticles = allArticles.slice(0, 3);
+const seriesCount = new Set(
+  allArticles.map((entry) => entry.data.seriesSlug).filter((slug): slug is string => Boolean(slug)),
+).size;
 
-const featuredProjects = (await getCollection('projects'))
-  .filter((entry) => entry.data.lang === 'en')
-  .slice(0, 2);
+const featuredProjects = (await getCollection('projects')).filter((entry) => entry.data.lang === 'en');
 
 const featuredFields = (await getCollection('fields'))
   .filter((entry) => entry.data.lang === 'en' && entry.data.featured)
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, 3);
 
-const featuredMedia = (await getCollection('media'))
-  .filter((entry) => entry.data.lang === 'en')
-  .slice(0, 1);
-
 const featuredLinks = (await getCollection('externalLinks'))
-  .filter((entry) => entry.data.lang === 'en' && entry.data.featured)
+  .filter((entry) => entry.data.lang === 'en' && entry.data.featured && entry.data.category === 'Research Profiles')
+  .sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'))
   .slice(0, 3);
+
 const seoTitle = buildSeoTitle('Dr. Haitham A. El-Ghareeb', {
   lang: 'en',
-  section: 'Personal Scholarly Website',
+  section: 'Associate Professor of Information Systems',
 });
 const seoDescription = buildSeoDescription(
-  'English gateway to a bilingual scholarly website featuring books, critical editions, articles, projects, media, and scholarly fields.',
-  [
-    `${featuredArticles.length} recent articles highlighted`,
-    `${featuredBooks.length} books highlighted`,
-    `${featuredFields.length} featured scholarly fields`,
-  ],
+  'Dr. Haitham A. El-Ghareeb, Associate Professor of Information Systems at Mansoura University: books, a critical edition, and articles on the Sunnah, Islamic legal theory and manuscript heritage.',
+  [`${allArticles.length} English articles`, `${allBooks.length} books`],
 );
 ---
 
@@ -65,17 +57,19 @@ const seoDescription = buildSeoDescription(
 >
   <main class="page-main page-main--home">
     <section class="shell hero hero--home">
-      <p class="hero__eyebrow">English Interface</p>
+      <p class="hero__eyebrow">Associate Professor of Information Systems · Mansoura University</p>
       <h1 class="hero__title">Dr. Haitham A. El-Ghareeb</h1>
       <p class="hero__lead">
-        A bilingual scholarly website presenting academic profile, books, critical editions,
-        articles, and research-facing digital work in a clear and organized structure.
+        Associate Professor of Information Systems at Mansoura University and Managing Editor of the
+        Mansoura Journal for Computer and Information Sciences. He writes on the Sunnah, Islamic legal
+        theory and manuscript heritage, and authors course textbooks in information systems.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">Arabic-first structure</span>
-        <span class="hero__badge">Bilingual experience</span>
-        <span class="hero__badge">Structured scholarly archive</span>
+        <span class="hero__badge">Information Systems</span>
+        <span class="hero__badge">Hadith and the Sunnah</span>
+        <span class="hero__badge">Islamic Legal Theory</span>
+        <span class="hero__badge">Manuscripts and Critical Editions</span>
       </div>
 
       <div class="hero__actions">
@@ -86,40 +80,57 @@ const seoDescription = buildSeoDescription(
       </div>
 
       <div class="grid-three hero__stats">
-        <article class="stat-card">
-          <strong>Bilingual</strong>
-          <span>Arabic-first structure with a parallel English experience.</span>
-        </article>
-        <article class="stat-card">
-          <strong>Scholarly Focus</strong>
-          <span>Profile, publications, scholarly fields, projects, links, and media growth.</span>
-        </article>
-        <article class="stat-card">
-          <strong>Structured Expansion</strong>
-          <span>The site structure is now active and continues to grow with real content.</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell section section--soft">
-      <div class="section-heading">
-        <p class="section-kicker">Overview</p>
-        <h2 class="section-title">A structured foundation for a growing scholarly archive</h2>
-        <p class="section-copy">
-          The current edition now provides a stable public structure for biography, publications,
-          article archives, and specialized scholarly sections.
-        </p>
+        <a class="card-link" href="/en/articles/">
+          <article class="stat-card">
+            <strong>{allArticles.length}</strong>
+            <span>English articles, most first published in Arabic on the Alukah Network.</span>
+          </article>
+        </a>
+        <a class="card-link" href="/en/books/">
+          <article class="stat-card">
+            <strong>{allBooks.length}</strong>
+            <span>Books, from academic monographs and course textbooks to edited lesson transcriptions.</span>
+          </article>
+        </a>
+        <a class="card-link" href="/en/articles/series/">
+          <article class="stat-card">
+            <strong>{seriesCount}</strong>
+            <span>Article series that can be read in order from first part to last.</span>
+          </article>
+        </a>
       </div>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Site gateway</p>
-        <h2 class="section-title">Major tracks in the current edition</h2>
-        <p class="section-copy">
-          The home page exposes the main scholarly paths through which the site is currently organized
-          and continues to expand.
-        </p>
+        <p class="section-kicker">Articles</p>
+        <h2 class="section-title">Latest articles</h2>
+      </div>
+
+      <div class="grid-three">
+        {latestArticles.map((article) => (
+          <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+            <article class="content-card">
+              <p class="content-card__meta">
+                {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
+              </p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/articles/">All articles</a>
+        <a class="button-secondary" href="/en/articles/series/">Article series</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Scholarly fields</p>
+        <h2 class="section-title">Areas of work</h2>
       </div>
 
       <div class="grid-three">
@@ -132,67 +143,76 @@ const seoDescription = buildSeoDescription(
           </a>
         ))}
       </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/scholarly-fields/">All scholarly fields</a>
+      </div>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
         <p class="section-kicker">Books</p>
-        <h2 class="section-title">Recent and publication-ready titles</h2>
+        <h2 class="section-title">Recent books</h2>
       </div>
 
       <div class="grid-two">
         {featuredBooks.map((book) => (
-          <article class="content-card">
-            <p class="content-card__meta">{book.data.status ?? 'Available'}</p>
-            <h3>{book.data.title}</h3>
-            <p>{book.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
+            <article class="content-card">
+              <p class="content-card__meta">{[book.data.workType, book.data.year].filter(Boolean).join(' | ')}</p>
+              <h3>{book.data.title}</h3>
+              <p>{book.data.summary}</p>
+            </article>
+          </a>
         ))}
+      </div>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/books/">All books</a>
       </div>
     </section>
 
+    {featuredEditions.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Critical Editions</p>
+          <h2 class="section-title">Critical edition</h2>
+        </div>
+
+        <div class="grid-two">
+          {featuredEditions.map((edition) => (
+            <a class="card-link" href={getEntryPath('editions', 'en', edition.slug)}>
+              <article class="content-card">
+                <p class="content-card__meta">{[edition.data.workType, edition.data.year].filter(Boolean).join(' | ')}</p>
+                <h3>{edition.data.title}</h3>
+                <p>{edition.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">Critical Editions</p>
-        <h2 class="section-title">Featured editorial entries</h2>
-      </div>
-
-      <div class="grid-two">
-        {featuredEditions.map((edition) => (
-          <article class="content-card">
-            <p class="content-card__meta">{edition.data.status ?? 'Available record'}</p>
-            <h3>{edition.data.title}</h3>
-            <p>{edition.data.summary}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Projects, media, and links</p>
-        <h2 class="section-title">Additional tracks within the site structure</h2>
+        <p class="section-kicker">Projects and research profiles</p>
+        <h2 class="section-title">Open-source work and research profiles</h2>
       </div>
 
       <div class="grid-three">
         {featuredProjects.map((project) => (
-          <article class="content-card">
-            <p class="content-card__meta">{project.data.status ?? 'In preparation'}</p>
-            <h3>{project.data.title}</h3>
-            <p>{project.data.summary}</p>
-          </article>
-        ))}
-        {featuredMedia.map((item) => (
-          <article class="content-card">
-            <p class="content-card__meta">{item.data.type ?? 'Media'}</p>
-            <h3>{item.data.title}</h3>
-            <p>{item.data.summary}</p>
-          </article>
+          <a class="card-link" href={getEntryPath('projects', 'en', project.slug)}>
+            <article class="content-card">
+              <p class="content-card__meta">{[project.data.area, project.data.startYear].filter(Boolean).join(' | ')}</p>
+              <h3>{project.data.title}</h3>
+              <p>{project.data.summary}</p>
+            </article>
+          </a>
         ))}
         {featuredLinks.map((link) => (
           <a class="card-link" href={getEntryPath('externalLinks', 'en', link.slug)}>
             <article class="content-card">
-              <p class="content-card__meta">{link.data.category ?? 'External Links'}</p>
+              <p class="content-card__meta">{link.data.sourceName ?? link.data.category}</p>
               <h3>{link.data.title}</h3>
               <p>{link.data.summary}</p>
             </article>
@@ -201,38 +221,19 @@ const seoDescription = buildSeoDescription(
       </div>
     </section>
 
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Articles</p>
-        <h2 class="section-title">Recent article entries</h2>
-      </div>
-
-      <div class="grid-three">
-        {featuredArticles.map((article) => (
-          <article class="content-card">
-            <p class="content-card__meta">
-              {[article.data.category, article.data.date].filter(Boolean).join(' | ')}
-            </p>
-            <h3>{article.data.title}</h3>
-            <p>{article.data.summary}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
     <section class="shell cta-panel">
       <div>
-        <p class="section-kicker">Organized foundation</p>
-        <h2 class="section-title">The site now supports structured publication and expansion</h2>
+        <p class="section-kicker">Study Hub</p>
+        <h2 class="section-title">Notes from the study circles</h2>
         <p class="section-copy">
-          Work can now focus on approved content and refinement rather than repeated structural
-          rebuilding each time a section gains new material.
+          Edited study notes from lessons on al-Shafi'i's al-Risalah and on al-Tabari's commentary on
+          al-Fatihah and al-Baqarah, together with a suggested sequence for students of Islamic knowledge.
         </p>
       </div>
       <div class="hero__actions">
-        <a class="button" href="/en/scholarly-fields/">Scholarly Fields</a>
-        <a class="button-secondary" href="/en/projects/">Projects</a>
+        <a class="button" href="/en/study/">Study Hub</a>
         <a class="button-secondary" href="/en/learning-path/">Learning Path</a>
+        <a class="button-secondary" href="/en/projects/">Projects</a>
       </div>
     </section>
   </main>

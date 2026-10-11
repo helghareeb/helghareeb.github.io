@@ -29,8 +29,6 @@ const staticPaths = [
   '/en/study/benefits/',
   '/ar/study/flashcards/',
   '/en/study/flashcards/',
-  '/ar/media/',
-  '/en/media/',
   '/ar/external-links/',
   '/en/external-links/',
   '/ar/contact/',
@@ -75,12 +73,11 @@ const toSitemapUrl = (path: string, lastmod?: string) => {
 };
 
 export const GET: APIRoute = async () => {
-  const [articles, books, editions, projects, media, externalLinks, flashcardDecks, studyBenefits] = await Promise.all([
+  const [articles, books, editions, projects, externalLinks, flashcardDecks, studyBenefits] = await Promise.all([
     getCollection('articles'),
     getCollection('books'),
     getCollection('editions'),
     getCollection('projects'),
-    getCollection('media'),
     getCollection('externalLinks'),
     getCollection('flashcardDecks'),
     getCollection('studyBenefits'),
@@ -114,10 +111,6 @@ export const GET: APIRoute = async () => {
 
   for (const entry of projects) {
     urls.set(getEntryPath('projects', entry.data.lang, entry.slug), entry.data.startYear ? `${entry.data.startYear}-01-01` : undefined);
-  }
-
-  for (const entry of media) {
-    urls.set(getEntryPath('media', entry.data.lang, entry.slug), undefined);
   }
 
   for (const entry of externalLinks) {

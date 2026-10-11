@@ -1,28 +1,57 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 
-const fieldLinks = (await getCollection('fields'))
-  .filter((entry) => entry.data.lang === 'ar')
-  .sort((a, b) => a.data.order - b.data.order);
-
-const primarySections = [
-  { title: 'نبذة', href: '/ar/about/' },
-  { title: 'السيرة الذاتية', href: '/ar/cv/' },
-  { title: 'الكتب', href: '/ar/books/' },
-  { title: 'التحقيقات', href: '/ar/editions/' },
-  { title: 'المقالات', href: '/ar/articles/' },
+const fieldLinks = [
+  { title: 'الدراسات الإسلامية', href: '/ar/fields/islamic-studies/' },
+  { title: 'الدفاع عن السنة والشبهات', href: '/ar/fields/defense-of-sunnah/' },
+  { title: 'الألوكة', href: '/ar/fields/alukah/' },
+  { title: 'المخطوطات', href: '/ar/fields/manuscripts/' },
+  { title: 'الذكاء الاصطناعي والتراث الإسلامي', href: '/ar/fields/ai-and-islamic-heritage/' },
+  { title: 'التحكيم العلمي', href: '/ar/fields/academic-reviewing/' },
+  { title: 'التعليم الإلكتروني للعلوم الإسلامية', href: '/ar/fields/e-learning/' },
 ];
 
-const expansionSections = [
-  { title: 'المجالات العلمية', href: '/ar/fields/' },
-  { title: 'مذاكرة طالب العلم', href: '/ar/study/' },
-  { title: 'المشروعات', href: '/ar/projects/' },
-  { title: 'الوسائط', href: '/ar/media/' },
-  { title: 'الروابط الخارجية', href: '/ar/external-links/' },
-  { title: 'المسار التعليمي', href: '/ar/learning-path/' },
-  { title: 'تواصل', href: '/ar/contact/' },
+const sectionGroups = [
+  {
+    kicker: 'التعريف',
+    title: 'عن د. هيثم الغريب',
+    links: [
+      { title: 'نبذة', href: '/ar/about/' },
+      { title: 'السيرة الذاتية', href: '/ar/cv/' },
+      { title: 'تواصل', href: '/ar/contact/' },
+      { title: 'الروابط الخارجية', href: '/ar/external-links/' },
+    ],
+  },
+  {
+    kicker: 'الأعمال',
+    title: 'الكتب والتحقيقات والمشروعات',
+    links: [
+      { title: 'الكتب', href: '/ar/books/' },
+      { title: 'قطرة من الحياة: قراءة الكتاب', href: '/ar/books/qatra-min-al-hayah/read/' },
+      { title: 'التحقيقات', href: '/ar/editions/' },
+      { title: 'المشروعات', href: '/ar/projects/' },
+    ],
+  },
+  {
+    kicker: 'المقالات',
+    title: 'المقالات والسلاسل',
+    links: [
+      { title: 'كل المقالات', href: '/ar/articles/' },
+      { title: 'سلاسل المقالات', href: '/ar/articles/series/' },
+      { title: 'مقالات الألوكة', href: '/ar/fields/alukah/articles/' },
+    ],
+  },
+  {
+    kicker: 'طالب العلم',
+    title: 'المذاكرة والتعلم',
+    links: [
+      { title: 'مذاكرة طالب العلم', href: '/ar/study/' },
+      { title: 'فوائد من كتب متنوعة', href: '/ar/study/benefits/' },
+      { title: 'بطاقات المذاكرة', href: '/ar/study/flashcards/' },
+      { title: 'المسار التعليمي', href: '/ar/learning-path/' },
+    ],
+  },
 ];
 ---
 
@@ -30,48 +59,30 @@ const expansionSections = [
   lang="ar"
   dir="rtl"
   title="دليل الموقع | د. هيثم الغريب"
-  description="فهرس عام للمسارات والصفحات الحالية في الموقع"
+  description="كل أقسام الموقع: السيرة، والكتب والتحقيقات، والمقالات وسلاسلها، ومقالات الألوكة، والفوائد وبطاقات المذاكرة، والمجالات العلمية."
 >
   <main class="page-main">
     <section class="shell hero hero--portal">
       <p class="hero__eyebrow">دليل الموقع</p>
-      <h1 class="hero__title">فهرس عام للمسارات الحالية</h1>
+      <h1 class="hero__title">دليل الموقع</h1>
       <p class="hero__lead">
-        هذه الصفحة تقدم نظرة منظمة على البنية الحالية للموقع، لتسهيل الوصول السريع إلى
-        الأقسام الرئيسة، ومسارات التوسع، والصفحات الفرعية للمجالات العلمية.
+        كل أقسام الموقع في صفحة واحدة: التعريف والسيرة، والكتب والتحقيقات، والمقالات وسلاسلها،
+        ومواد المذاكرة، والمجالات العلمية.
       </p>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">الأقسام الأساسية</p>
-        <h2 class="section-title">صفحات التعريف والمادة الأساسية</h2>
-      </div>
-
       <div class="grid-two">
-        {primarySections.map((section) => (
-          <a class="card-link" href={section.href}>
-            <article class="content-card">
-              <h3>{section.title}</h3>
-            </article>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">مسارات التوسع</p>
-        <h2 class="section-title">الأقسام الجديدة المجهزة للنمو</h2>
-      </div>
-
-      <div class="grid-two">
-        {expansionSections.map((section) => (
-          <a class="card-link" href={section.href}>
-            <article class="content-card">
-              <h3>{section.title}</h3>
-            </article>
-          </a>
+        {sectionGroups.map((group) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{group.kicker}</p>
+            <h3>{group.title}</h3>
+            <ul class="list-clean" style="margin-top: 0.9rem;">
+              {group.links.map((link) => (
+                <li><a href={link.href}>{link.title}</a></li>
+              ))}
+            </ul>
+          </article>
         ))}
       </div>
     </section>
@@ -79,15 +90,14 @@ const expansionSections = [
     <section class="shell section">
       <div class="section-heading">
         <p class="section-kicker">المجالات العلمية</p>
-        <h2 class="section-title">الصفحات الفرعية المتخصصة</h2>
+        <h2 class="section-title"><a href="/ar/fields/">المجالات العلمية</a></h2>
       </div>
 
       <div class="grid-three">
         {fieldLinks.map((field) => (
-          <a class="card-link" href={field.data.href}>
+          <a class="card-link" href={field.href}>
             <article class="feature-card feature-card--field">
-              <h3>{field.data.title}</h3>
-              <p>{field.data.summary}</p>
+              <h3>{field.title}</h3>
             </article>
           </a>
         ))}

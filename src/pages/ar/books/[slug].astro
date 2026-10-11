@@ -31,16 +31,15 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     eyebrow="كتاب"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['صفحة كتاب', 'عرض مستقل', entry.data.status ?? 'بيانات أولية']}
+    badges={[entry.data.workType, entry.data.year, entry.data.publisher].filter((value): value is string => Boolean(value))}
     metaItems={[
-      { label: 'القسم', value: 'الكتب' },
-      { label: 'الحالة', value: entry.data.status ?? 'غير محددة' },
+      { label: 'الحالة', value: entry.data.status ?? '' },
       ...(entry.data.workType ? [{ label: 'نوع العمل', value: entry.data.workType }] : []),
       ...(entry.data.year ? [{ label: 'السنة', value: entry.data.year }] : []),
       ...(entry.data.publisher ? [{ label: 'الناشر', value: entry.data.publisher }] : []),
     ]}
     backHref="/ar/books/"
-    backLabel="العودة إلى قسم الكتب"
+    backLabel="كل الكتب"
     externalUrl={entry.data.externalUrl}
     externalLabel="رابط العمل"
   >

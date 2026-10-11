@@ -11,16 +11,22 @@ const publishedBenefits = (await getCollection('studyBenefits')).filter(
 );
 const groupedBenefits = groupStudyBenefits(publishedBenefits);
 
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const notebookForms: [string, string, string, string, string] = ['دفتر واحد', 'دفتران', 'دفاتر', 'دفترًا', 'دفتر'];
 const seoTitle = buildSeoTitle('فوائد من كتب متنوعة', {
   lang: 'ar',
   section: 'مذاكرة طالب العلم',
 });
 const seoDescription = buildSeoDescription(
-  'مسار يجمع الفوائد العلمية المنشورة في الموقع مرتبًا بالفن ثم بالكتاب، مع إبراز الشرح أو الشيخ عند الحاجة.',
-  [
-    `${publishedBenefits.length} فوائد منشورة حاليًا`,
-    'البداية من الرسالة وتفسير الطبري',
-  ],
+  'دفاتر فوائد علمية مستخلصة من شروح الرسالة للإمام الشافعي وتفسير الطبري، مرتبة بالفن ثم بالكتاب.',
+  [countAr(publishedBenefits.length, notebookForms)],
 );
 ---
 
@@ -28,65 +34,39 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">فوائد من كتب متنوعة</p>
-      <h1 class="hero__title">أرشيف فوائد علمية مرتب بالفن والكتاب</h1>
+      <h1 class="hero__title">فوائد علمية مرتبة بالفن والكتاب</h1>
       <p class="hero__lead">
-        سيجمع هذا المسار الفوائد العلمية المختارة من الشروح والدروس، مع تنظيم ييسر على
-        الطالب الوصول إلى الفن، ثم الكتاب، ثم المادة النافعة نفسها.
+        فوائد مختارة من شروح «الرسالة» للإمام الشافعي ودروس تفسير الطبري، في
+        {countAr(publishedBenefits.length, notebookForms)} موزعة على أصول الفقه والفقه والعقيدة
+        والتفسير واللغة والتزكية، مع ذكر الشارح في كل دفتر.
       </p>
-    </section>
-
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">طريقة التنظيم</p>
-        <h2 class="section-title">من الفن إلى الكتاب إلى الفائدة</h2>
-        <p class="section-copy">
-          الهيكل المعتمد يبدأ بالفن العلمي، ثم يجمع المواد تحت الكتاب، مع إظهار الشرح أو
-          اسم الشيخ عندما تكون الفائدة مستخرجة من درس أو سلسلة صوتية أو مرئية.
-        </p>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">الحالة الحالية</p>
-        <ul class="entity-list">
-          <li><strong>الفوائد المنشورة:</strong> {publishedBenefits.length}</li>
-          <li><strong>الكتب الظاهرة:</strong> {groupedBenefits.length}</li>
-          <li><strong>الانطلاقة المعتمدة:</strong> الرسالة للشافعي ضمن شرح د. أحمد النقيب</li>
-        </ul>
-      </article>
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">الكتب المنشورة</p>
+        <p class="section-kicker">الدفاتر المنشورة</p>
         <h2 class="section-title">الفوائد مرتبة بالفن ثم بالكتاب</h2>
       </div>
 
-      {groupedBenefits.length === 0 ? (
-        <article class="notice-card">
-          <h2 class="section-title">لم تُنشر دفاتر الفوائد بعد</h2>
-          <p>البنية جاهزة، وأول ما سيظهر هنا سيكون دفاتر فوائد الرسالة وتفسير الطبري بحسب الخطة المعتمدة.</p>
-        </article>
-      ) : (
-        <div class="grid-two">
-          {groupedBenefits.map((group) => (
-            <article class="content-card entity-card">
-              <p class="content-card__meta">{group.field}</p>
-              <h3>
-                <a href={getStudyBenefitBookPath('ar', group.fieldSlug, group.bookSlug)}>{group.bookTitle}</a>
-              </h3>
-              <p>{group.teacher ?? 'مادة دراسة منظمة داخل الموقع'}</p>
-              <p class="content-card__meta">{group.entries.length} دفاتر فوائد</p>
-              <ul class="entity-list">
-                {group.entries.map((entry) => (
-                  <li>
-                    <a href={getEntryPath('studyBenefits', 'ar', getStudyBenefitRouteSlug(entry.slug))}>{entry.data.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      )}
+      <div class="grid-two">
+        {groupedBenefits.map((group) => (
+          <article class="content-card entity-card">
+            <p class="content-card__meta">{group.field}</p>
+            <h3>
+              <a href={getStudyBenefitBookPath('ar', group.fieldSlug, group.bookSlug)}>{group.bookTitle}</a>
+            </h3>
+            {group.teacher && <p>{group.teacher}</p>}
+            <p class="content-card__meta">{countAr(group.entries.length, notebookForms)}</p>
+            <ul class="entity-list">
+              {group.entries.map((entry) => (
+                <li>
+                  <a href={getEntryPath('studyBenefits', 'ar', getStudyBenefitRouteSlug(entry.slug))}>{entry.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
     </section>
   </main>
 </BaseLayout>

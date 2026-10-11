@@ -27,13 +27,22 @@ export async function getStaticPaths() {
 
 const { entries } = Astro.props as { entries: CollectionEntry<'studyBenefits'>[] };
 const referenceEntry = entries[0];
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const notebookForms: [string, string, string, string, string] = ['دفتر واحد', 'دفتران', 'دفاتر', 'دفترًا', 'دفتر'];
 const seoTitle = buildSeoTitle(referenceEntry.data.bookTitle, {
   lang: 'ar',
   section: 'فوائد من كتب متنوعة',
 });
 const seoDescription = buildSeoDescription(
-  `دفتر فوائد منظم تحت كتاب ${referenceEntry.data.bookTitle} ضمن قسم مذاكرة طالب العلم.`,
-  [referenceEntry.data.field, referenceEntry.data.teacher, `${entries.length} دفاتر منشورة`],
+  `فوائد من ${referenceEntry.data.bookTitle} في باب ${referenceEntry.data.field}.`,
+  [referenceEntry.data.field, referenceEntry.data.teacher, countAr(entries.length, notebookForms)],
 );
 ---
 
@@ -43,22 +52,21 @@ const seoDescription = buildSeoDescription(
       <p class="hero__eyebrow">فوائد من كتب متنوعة</p>
       <h1 class="hero__title">{referenceEntry.data.bookTitle}</h1>
       <p class="hero__lead">
-        هذه الصفحة تجمع دفاتر الفوائد المنشورة لهذا الكتاب داخل الموقع، مع إبراز الفن
-        والشرح والموضوعات التي جرى ترتيبها لخدمة المراجعة العلمية.
+        فوائد في باب {referenceEntry.data.field} مستخلصة من {referenceEntry.data.bookTitle}{referenceEntry.data.teacher ? `، من شرح ${referenceEntry.data.teacher}` : ''}.
       </p>
 
       <div class="hero__badge-row">
         <span class="hero__badge">{referenceEntry.data.field}</span>
         {referenceEntry.data.teacher && <span class="hero__badge">{referenceEntry.data.teacher}</span>}
-        <span class="hero__badge">{entries.length} دفاتر فوائد</span>
+        <span class="hero__badge">{countAr(entries.length, notebookForms)}</span>
       </div>
     </section>
 
     <section class="shell notice-card">
       <h2 class="section-title">تنبيه تحريري</h2>
       <p>
-        هذه الفوائد مرتبة ومنشورة داخل الموقع لخدمة الطالب، مع التأكيد أن الشيخ لم يطّلع
-        على هذه الصياغة المنشورة هنا.
+        صياغة هذه الفوائد وترتيبها من عمل الموقع لخدمة الطالب، ولم يطّلع عليها الشيخ ولم
+        تُعرض عليه للمراجعة.
       </p>
     </section>
 

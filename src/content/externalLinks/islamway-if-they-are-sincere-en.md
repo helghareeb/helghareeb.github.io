@@ -1,7 +1,7 @@
 ---
 title: "Article: If They Are Sincere to Allah and His Messenger"
 lang: "en"
-summary: "An Islamway article discussing the breadth of sincere counsel and moral responsibility. A short internal summary is also available on this site."
+summary: "An Islamway article discussing the breadth of sincere counsel and moral responsibility. An English summary is available on this site."
 category: "Islamic Articles"
 linkType: "Article"
 sourceName: "Islamway"
@@ -9,7 +9,5 @@ externalUrl: "https://ar.islamway.net/article/94571/%D8%A5%D8%B0%D8%A7-%D9%86%D8
 featured: true
 ---
 
-This is an externally hosted Islamway article.
-
-A short summary is available on this site:
-[View the internal summary](/en/articles/if-they-are-sincere-to-allah-and-his-messenger/)
+The article was published in Arabic on Islamway. An English summary is available on this site:
+[If They Are Sincere to Allah and His Messenger](/en/articles/if-they-are-sincere-to-allah-and-his-messenger/).

@@ -58,18 +58,6 @@ const projects = defineCollection({
   }),
 });
 
-const media = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    lang: z.enum(['ar', 'en']),
-    summary: z.string().optional(),
-    type: z.string().optional(),
-    status: z.string().optional(),
-    platform: z.string().optional(),
-    externalUrl: z.string().url().optional(),
-  }),
-});
-
 const externalLinks = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -150,7 +138,6 @@ export const collections = {
   books,
   editions,
   projects,
-  media,
   externalLinks,
   fields,
   studyBenefits,

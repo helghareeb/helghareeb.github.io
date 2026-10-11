@@ -12,16 +12,13 @@ const links = (await getCollection('externalLinks'))
 
     return a.data.title.localeCompare(b.data.title, 'ar');
   });
-const seoTitle = buildSeoTitle('روابط تعليمية ومهنية وأعمال منشورة خارج الموقع', {
+const seoTitle = buildSeoTitle('الروابط الخارجية', {
   lang: 'ar',
   section: 'الروابط الخارجية',
 });
 const seoDescription = buildSeoDescription(
-  'أرشيف الروابط الخارجية العربي الذي يجمع الملفات الأكاديمية وصفحات النشر والمراجع التعليمية.',
-  [
-    `${links.length} رابطًا موصوفًا`,
-    links[0]?.data.category,
-  ],
+  'الملفات البحثية والمهنية لد. هيثم الغريب، وصفحاته في منصات النشر، وكتب ومقالات وأخبار أكاديمية منشورة خارج الموقع.',
+  [],
 );
 ---
 
@@ -34,63 +31,21 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">الروابط الخارجية</p>
-      <h1 class="hero__title">روابط تعليمية ومهنية وأعمال منشورة خارج الموقع</h1>
+      <h1 class="hero__title">الروابط الخارجية</h1>
       <p class="hero__lead">
-        يجمع هذا القسم الروابط التعليمية المفيدة، والروابط المهنية والأكاديمية،
-        والصفحات الخارجية التي نُشرت فيها كتب أو مقالات أو مواد ذات صلة بالمشروع العلمي.
+        الملفات البحثية والمهنية على Google Scholar وORCID وIEEE Xplore وGitHub، وصفحات
+        المؤلف في الألوكة ومداد ومكتبة نور، وكتب ومقالات وأخبار أكاديمية منشورة خارج الموقع.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">روابط موصوفة</span>
-        <span class="hero__badge">روابط مهنية وتعليمية</span>
-        <span class="hero__badge">وصول إلى نشر خارجي</span>
-      </div>
-    </section>
-
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">طبيعة القسم</p>
-        <h2 class="section-title">روابط موثقة لا مجرد قائمة خام</h2>
-        <p class="section-copy">
-          صُمم هذا القسم ليجمع الروابط الخارجية مع وصف موجز ونوع الرابط والجهة المرتبطة به،
-          بحيث تكون الروابط مفهومة ومفيدة داخل سياق الموقع لا معزولة عنه.
-        </p>
-        <ul class="entity-tags">
-          <li>تصنيف الرابط</li>
-          <li>نوعه</li>
-          <li>الجهة</li>
-          <li>الرابط الخارجي</li>
-        </ul>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">استعمالات القسم</p>
-        <ul class="entity-list">
-          <li><strong>روابط تعليمية:</strong> مواد نافعة أو مراجع أو منصات ذات صلة.</li>
-          <li><strong>روابط مهنية:</strong> ملفات شخصية أو حضور أكاديمي خارجي.</li>
-          <li><strong>روابط نشر:</strong> نقاط وصول إلى أعمال منشورة خارج الموقع.</li>
-        </ul>
-      </article>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">روابط منشورة</p>
-        <h2 class="section-title">أرشيف الروابط الخارجية الموصوفة</h2>
-        <p class="section-copy">
-          يضم هذا القسم الآن {links.length} رابطًا خارجيًا موصوفًا، تشمل ملفات أكاديمية،
-          وصفحات نشر، ومقالات، ومراجع مؤسسية، وإشارات خارجية ذات صلة.
-        </p>
-      </div>
-
       <div class="grid-two">
         {links.map((link) => (
           <a class="card-link" href={getEntryPath('externalLinks', 'ar', link.slug)}>
             <article class="content-card entity-card">
-              <p class="content-card__meta">{[link.data.category, link.data.linkType].filter(Boolean).join(' | ')}</p>
+              <p class="content-card__meta">{[link.data.category, link.data.sourceName].filter(Boolean).join(' | ')}</p>
               <h3>{link.data.title}</h3>
               <p>{link.data.summary}</p>
-              <p class="content-card__meta">{link.data.sourceName}</p>
             </article>
           </a>
         ))}

@@ -31,16 +31,15 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
     eyebrow="تحقيق"
     title={entry.data.title}
     summary={entry.data.summary}
-    badges={['صفحة تحقيق', 'وصف علمي', entry.data.status ?? 'بيانات أولية']}
+    badges={[entry.data.workType, entry.data.sourceType, entry.data.year].filter((value): value is string => Boolean(value))}
     metaItems={[
-      { label: 'القسم', value: 'التحقيقات' },
-      { label: 'الحالة', value: entry.data.status ?? 'غير محددة' },
+      { label: 'الحالة', value: entry.data.status ?? '' },
       ...(entry.data.workType ? [{ label: 'نوع العمل', value: entry.data.workType }] : []),
       ...(entry.data.sourceType ? [{ label: 'نوع المصدر', value: entry.data.sourceType }] : []),
       ...(entry.data.year ? [{ label: 'السنة', value: entry.data.year }] : []),
     ]}
     backHref="/ar/editions/"
-    backLabel="العودة إلى قسم التحقيقات"
+    backLabel="كل التحقيقات"
     externalUrl={entry.data.externalUrl}
     externalLabel="رابط العمل"
   >

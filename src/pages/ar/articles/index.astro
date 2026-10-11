@@ -5,26 +5,33 @@ import '../../../styles/global.css';
 import { getArticleSeriesPath, getEntryPath } from '../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const articleForms: [string, string, string, string, string] = ['مقال واحد', 'مقالان', 'مقالات', 'مقالًا', 'مقال'];
+const seriesForms: [string, string, string, string, string] = ['سلسلة واحدة', 'سلسلتان', 'سلاسل', 'سلسلةً', 'سلسلة'];
+const partForms: [string, string, string, string, string] = ['حلقة واحدة', 'حلقتان', 'حلقات', 'حلقةً', 'حلقة'];
+
+const byDateDesc = (a: { data: { date?: string } }, b: { data: { date?: string } }) => {
+  const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+
+  return bTime - aTime;
+};
+
 const allArticles = (await getCollection('articles'))
   .filter((entry) => entry.data.lang === 'ar' && !entry.data.draft)
-  .sort((a, b) => {
-    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
-    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+  .sort(byDateDesc);
 
-    return bTime - aTime;
-  });
+const latestArticles = allArticles.slice(0, 12);
+const alukahCount = allArticles.filter((entry) => entry.data.sourceName === 'شبكة الألوكة').length;
 
-const articles = allArticles
-  .slice(0, 6);
-
-const seriesMap = new Map<
-  string,
-  {
-    title: string;
-    slug: string;
-    count: number;
-  }
->();
+const seriesMap = new Map<string, { title: string; slug: string; count: number }>();
 
 for (const article of allArticles) {
   if (!article.data.series || !article.data.seriesSlug) continue;
@@ -42,19 +49,29 @@ for (const article of allArticles) {
   }
 }
 
-const featuredSeries = Array.from(seriesMap.values())
+const largestSeries = Array.from(seriesMap.values())
   .sort((a, b) => b.count - a.count)
-  .slice(0, 3);
-const seoTitle = buildSeoTitle('أرشفة المقالات والسلاسل العلمية', {
+  .slice(0, 4);
+
+const categoryMap = new Map<string, typeof allArticles>();
+
+for (const article of allArticles) {
+  const category = article.data.category ?? 'مقالات متنوعة';
+  categoryMap.set(category, [...(categoryMap.get(category) ?? []), article]);
+}
+
+const categories = Array.from(categoryMap.entries()).sort((a, b) => b[1].length - a[1].length);
+
+const seoTitle = buildSeoTitle('المقالات', {
   lang: 'ar',
   section: 'المقالات',
 });
 const seoDescription = buildSeoDescription(
-  'أرشيف المقالات العربي الذي يجمع المقالات الأصلية والمنشورة خارجيًا والسلاسل العلمية داخل الموقع.',
+  'مقالات في أصول الفقه والحديث والعقيدة والتفسير وعلوم المخطوطات والدعوة، وشروح وملخصات منشورة في الألوكة ومنصات أخرى.',
   [
-    `${allArticles.length} مادة منشورة`,
-    featuredSeries.length ? `${featuredSeries.length} سلاسل بارزة` : undefined,
-    articles[0]?.data.date ? `آخر تحديث ${articles[0].data.date}` : undefined,
+    countAr(allArticles.length, articleForms),
+    countAr(seriesMap.size, seriesForms),
+    latestArticles[0]?.data.date ? `آخر مقال ${latestArticles[0].data.date}` : undefined,
   ],
 );
 ---
@@ -68,100 +85,27 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">المقالات</p>
-      <h1 class="hero__title">أرشفة المقالات والسلاسل العلمية</h1>
+      <h1 class="hero__title">المقالات</h1>
       <p class="hero__lead">
-        خُصص هذا القسم ليكون واجهة النشر المتجدد في الموقع، وليجمع المقالات الأصلية
-        والمقالات المنشورة خارجيًا والسلاسل الموضوعية في بنية منظمة سهلة التصفح والرجوع.
+        {countAr(allArticles.length, articleForms)} في أصول الفقه والحديث والعقيدة والتفسير وعلوم
+        المخطوطات والدعوة، منها {countAr(alukahCount, articleForms)} في شبكة الألوكة، و{countAr(seriesMap.size, seriesForms)}
+        تُقرأ حلقاتها متتابعة.
       </p>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">مقالات أصلية</span>
-        <span class="hero__badge">سلاسل علمية</span>
-        <span class="hero__badge">أرشفة منظمة</span>
+      <div class="hero__actions">
+        <a class="button" href="/ar/articles/series/">سلاسل المقالات</a>
+        <a class="button-secondary" href="/ar/fields/alukah/articles/">مقالات الألوكة</a>
       </div>
-    </section>
-
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">وظيفة القسم</p>
-        <h2 class="section-title">مساحة للنشر والتوثيق المستمر</h2>
-        <p class="section-copy">
-          يجمع هذا الأرشيف المقالات الأصلية، والكتابات المرتبطة بسلاسل علمية، والمواد ذات
-          الصلة بالنشر الخارجي، ضمن بنية تسهل الرجوع والربط بين الموضوعات.
-        </p>
-        <ul class="entity-tags">
-          <li>تاريخ النشر</li>
-          <li>التصنيف</li>
-          <li>السلسلة</li>
-          <li>المصدر</li>
-        </ul>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">جاهزية العرض</p>
-        <ul class="entity-list">
-          <li><strong>الحالة الحالية:</strong> بطاقات وصفحات مفردة للمقالات، مع سلسلة مستوردة ومنظمة داخل الموقع.</li>
-          <li><strong>النطاق الحالي:</strong> مقالات منشورة وسلاسل مرتبة وبيانات مصدر وتصنيف وزمن قراءة.</li>
-          <li><strong>الهدف:</strong> جعل القسم مرجعًا حيًا للنشر العلمي والمعرفي.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="shell section">
-      <div class="entity-meta-grid">
-        <article class="content-card entity-card">
-          <p class="content-card__meta">نوع المقال</p>
-          <h3>أصلي أو خارجي</h3>
-          <p>يمكن تمييز المقالات الأصلية عن المقالات المرتبطة بمنصات نشر خارجية.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">تنظيم داخلي</p>
-          <h3>سلسلة وتصنيف</h3>
-          <p>كل بطاقة يمكن ربطها بسلسلة علمية أو بتصنيف موضوعي واضح.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">تجربة القراءة</p>
-          <h3>زمن ومصدر</h3>
-          <p>تظهر بيانات مختصرة مثل زمن القراءة والمصدر حين تكون متوفرة.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell section">
-      {featuredSeries.length > 0 && (
-        <div class="section-heading">
-          <p class="section-kicker">سلاسل بارزة</p>
-          <h2 class="section-title">سلاسل منظمة داخل الأرشيف</h2>
-          <p class="section-copy">
-            أصبح قسم المقالات لا يضم موادًا مفردة فقط، بل يضم أيضًا سلاسل مرتبة يمكن
-            متابعتها من خلال فهرس مستقل لكل سلسلة.
-          </p>
-        </div>
-      )}
-
-      {featuredSeries.length > 0 && (
-        <div class="grid-two">
-          {featuredSeries.map((series) => (
-            <a class="card-link" href={getArticleSeriesPath('ar', series.slug)}>
-              <article class="content-card entity-card">
-                <p class="content-card__meta">سلسلة مقالية | {series.count} مادة</p>
-                <h3>{series.title}</h3>
-                <p>الانتقال إلى صفحة السلسلة لمتابعة موادها مرتبة داخل الأرشيف.</p>
-              </article>
-            </a>
-          ))}
-        </div>
-      )}
     </section>
 
     <section class="shell section">
       <div class="section-heading">
-        <p class="section-kicker">أحدث المواد</p>
-        <h2 class="section-title">مقالات منشورة داخل الأرشيف</h2>
+        <p class="section-kicker">الأحدث</p>
+        <h2 class="section-title">أحدث المقالات</h2>
       </div>
 
       <div class="grid-two">
-        {articles.map((article) => (
+        {latestArticles.map((article) => (
           <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
             <article class="content-card entity-card">
               <p class="content-card__meta">
@@ -170,10 +114,57 @@ const seoDescription = buildSeoDescription(
               <h3>{article.data.title}</h3>
               <p>{article.data.summary}</p>
               <p class="content-card__meta">
-                {[article.data.series, article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
+                {[article.data.series, article.data.readingTime].filter(Boolean).join(' | ')}
               </p>
             </article>
           </a>
+        ))}
+      </div>
+    </section>
+
+    {largestSeries.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">السلاسل</p>
+          <h2 class="section-title">أكبر السلاسل</h2>
+        </div>
+
+        <div class="grid-two">
+          {largestSeries.map((series) => (
+            <a class="card-link" href={getArticleSeriesPath('ar', series.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{countAr(series.count, partForms)}</p>
+                <h3>{series.title}</h3>
+              </article>
+            </a>
+          ))}
+        </div>
+
+        <div class="hero__actions">
+          <a class="button-secondary" href="/ar/articles/series/">كل السلاسل</a>
+        </div>
+      </section>
+    )}
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">الأرشيف</p>
+        <h2 class="section-title">كل المقالات بحسب التصنيف</h2>
+      </div>
+
+      <div class="grid-two">
+        {categories.map(([category, entries]) => (
+          <details class="content-card entity-card" id={`category-${category.replace(/\s+/g, '-')}`}>
+            <summary><strong>{category}</strong> ({entries.length})</summary>
+            <ul class="list-clean" style="margin-top: 0.9rem;">
+              {entries.map((article) => (
+                <li>
+                  <a href={getEntryPath('articles', 'ar', article.slug)}>{article.data.title}</a>
+                  {article.data.date && <span class="content-card__meta"> · {article.data.date}</span>}
+                </li>
+              ))}
+            </ul>
+          </details>
         ))}
       </div>
     </section>

@@ -7,17 +7,24 @@ import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
 const editions = (await getCollection('editions'))
   .filter((entry) => entry.data.lang === 'en')
-  .slice(0, 6);
-const seoTitle = buildSeoTitle('Scholarly editorial work and manuscript-related projects', {
+  .sort((a, b) => Number(b.data.year ?? 0) - Number(a.data.year ?? 0));
+
+const manuscriptArticles = (await getCollection('articles'))
+  .filter(
+    (entry) =>
+      entry.data.lang === 'en' &&
+      !entry.data.draft &&
+      (/manuscript|tashif|al-tawdih/i.test(entry.data.title) || entry.data.category === 'Textual Scholarship Methodologies'),
+  )
+  .sort((a, b) => (b.data.date ?? '').localeCompare(a.data.date ?? ''));
+
+const seoTitle = buildSeoTitle('Critical Editions', {
   lang: 'en',
-  section: 'Critical Editions',
+  section: 'Dr. Haitham A. El-Ghareeb',
 });
 const seoDescription = buildSeoDescription(
-  'English archive for critical editions and manuscript-related scholarly work.',
-  [
-    `${editions.length} featured entries`,
-    editions[0]?.data.year ? `Latest listed year ${editions[0].data.year}` : undefined,
-  ],
+  'Critical editions of Arabic manuscripts by Dr. Haitham A. El-Ghareeb, including al-Tawdih lil-Awham al-Waqi\'a fi al-Sahih by Sibt Ibn al-\'Ajami.',
+  [`${editions.length} ${editions.length === 1 ? 'edition' : 'editions'}`],
 );
 ---
 
@@ -30,84 +37,51 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">Critical Editions</p>
-      <h1 class="hero__title">Scholarly editorial work and manuscript-related projects</h1>
+      <h1 class="hero__title">Critical Editions</h1>
       <p class="hero__lead">
-        This section presents the editorial and manuscript-oriented side of the scholarly profile,
-        with space for published editions, works in progress, and concise academic notes on each item.
+        A critical edition, from a rare manuscript, of a ninth-century AH study of the transmissions
+        and copies of Sahih al-Bukhari, edited under the supervision and review of Shaykh Salih ibn
+        Muhammad al-Azhari.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">Critical editions</span>
-        <span class="hero__badge">Status-aware entries</span>
-        <span class="hero__badge">Short academic notes</span>
-      </div>
-    </section>
-
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">Identity of the section</p>
-        <h2 class="section-title">A distinct editorial track within the site</h2>
-        <p class="section-copy">
-          Critical editions are represented here as an independent scholarly area with their own
-          metadata, status labels, and dedicated item pages inside the archive.
-        </p>
-
-        <ul class="entity-tags">
-          <li>Edition title</li>
-          <li>Status</li>
-          <li>Academic description</li>
-          <li>References</li>
-        </ul>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">Presentation logic</p>
-        <ul class="entity-list">
-          <li><strong>Published work:</strong> shown with concise reference information.</li>
-          <li><strong>Work in progress:</strong> presented with its current stage.</li>
-          <li><strong>Current presentation:</strong> entries already appear as standalone records with structured metadata.</li>
-        </ul>
-      </article>
     </section>
 
     <section class="shell section">
-      <div class="entity-meta-grid">
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Scholarly angle</p>
-          <h3>Brief academic framing</h3>
-          <p>A short note can explain the edition's scholarly importance or manuscript scope.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Progress state</p>
-          <h3>Published or in progress</h3>
-          <p>The status line helps visitors distinguish completed editions from ongoing editorial work.</p>
-        </article>
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Related paths</p>
-          <h3>Linked to manuscripts</h3>
-          <p>These entries can be read alongside the manuscripts field and related articles.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Current entries</p>
-        <h2 class="section-title">Editorial items currently presented in the archive</h2>
-      </div>
-
       <div class="grid-two">
         {editions.map((edition) => (
           <a class="card-link" href={getEntryPath('editions', 'en', edition.slug)}>
             <article class="content-card entity-card">
-              <p class="content-card__meta">{edition.data.status ?? 'Available record'}</p>
+              <p class="content-card__meta">{[edition.data.workType, edition.data.year, edition.data.status].filter(Boolean).join(' | ')}</p>
               <h3>{edition.data.title}</h3>
               <p>{edition.data.summary}</p>
-              <p class="content-card__meta">{[edition.data.workType, edition.data.year].filter(Boolean).join(' | ')}</p>
             </article>
           </a>
         ))}
       </div>
     </section>
+
+    {manuscriptArticles.length > 0 && (
+      <section class="shell section">
+        <div class="section-heading">
+          <p class="section-kicker">Related reading</p>
+          <h2 class="section-title">Articles on manuscripts and textual criticism</h2>
+        </div>
+
+        <div class="grid-two">
+          {manuscriptArticles.map((article) => (
+            <a class="card-link" href={getEntryPath('articles', 'en', article.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[article.data.category, article.data.date].filter(Boolean).join(' | ')}</p>
+                <h3>{article.data.title}</h3>
+                <p>{article.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+
+        <div class="hero__actions">
+          <a class="button-secondary" href="/en/scholarly-fields/manuscripts/">Manuscripts field</a>
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

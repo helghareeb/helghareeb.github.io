@@ -1,52 +1,57 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 
+const articles = (await getCollection('articles')).filter((entry) => entry.data.lang === 'en' && !entry.data.draft);
+const alukahCount = articles.filter((entry) => entry.data.sourceName === 'Alukah Network').length;
+const hadithCount = articles.filter((entry) => entry.data.category === 'Hadith and Hadith Sciences').length;
+
 const fieldCards = [
   {
     title: 'Islamic Studies',
-    copy: 'The broad umbrella for scholarship related to Islamic heritage, Hadith studies, methodology, and connected fields.',
+    copy: `Articles on hadith, creed, Qur'anic exegesis, legal theory and counsel, including ${hadithCount} on hadith and its sciences, with study notes from the lessons.`,
     href: '/en/scholarly-fields/islamic-studies/',
   },
   {
-    title: 'Defense of Sunnah',
-    copy: 'A dedicated space for structured responses, thematic series, and reasoned scholarly clarification.',
+    title: 'Defense of the Sunnah',
+    copy: 'The Mizan Series on how to weigh doubts, a summary of "Why I Did Not Become Shia", and articles answering objections to the Sunnah and its transmitters.',
     href: '/en/scholarly-fields/defense-of-sunnah/',
   },
   {
     title: 'Alukah',
-    copy: 'A distinct area for collecting Alukah articles and connecting them to summaries and internal site organization.',
+    copy: `${alukahCount} articles first published in Arabic on the Alukah Network, available here in English.`,
     href: '/en/scholarly-fields/alukah/',
   },
   {
     title: 'Manuscripts',
-    copy: 'A section for manuscript-related interests, including description, editing, method, and editorial practice.',
+    copy: "A critical edition of al-Tawdih lil-Awham, articles on variants in the copies of Sahih al-Bukhari, and notes (in Arabic) from Shaykh Salih al-Azhari's manuscript courses.",
     href: '/en/scholarly-fields/manuscripts/',
   },
   {
     title: 'AI and Islamic Heritage',
-    copy: 'A forward-looking area focused on applying digital tools to the service of Islamic heritage and knowledge.',
+    copy: 'Articles on artificial intelligence and technology in the service of the Islamic sciences and Islamic education.',
     href: '/en/scholarly-fields/ai-and-islamic-heritage/',
   },
   {
     title: 'Academic Reviewing',
-    copy: 'A concise public-facing presentation of reviewing experience and the general nature of assessed academic work.',
+    copy: 'Editorial and reviewing roles with MJCIS, AISS and MERLOT, and membership of a doctoral examination committee.',
     href: '/en/scholarly-fields/academic-reviewing/',
   },
   {
-    title: 'E-Learning in Islamic Studies',
-    copy: 'A section for educational initiatives and digital approaches to structured Islamic learning.',
+    title: 'E-Learning',
+    copy: 'Books on service-oriented architecture for e-learning, open course textbooks, and digital study tools for Islamic learning.',
     href: '/en/scholarly-fields/e-learning/',
   },
 ];
-const seoTitle = buildSeoTitle('Specialized scholarly fields', {
+const seoTitle = buildSeoTitle('Scholarly Fields', {
   lang: 'en',
-  section: 'Scholarly Fields',
+  section: 'Dr. Haitham A. El-Ghareeb',
 });
 const seoDescription = buildSeoDescription(
-  'English gateway to the site’s specialized scholarly fields, including Islamic Studies, Defense of Sunnah, Alukah, manuscripts, AI and Islamic heritage, reviewing, and e-learning.',
-  [`${fieldCards.length} specialized areas`],
+  'Islamic studies, defense of the Sunnah, Alukah articles, manuscripts, AI and Islamic heritage, academic reviewing and e-learning.',
+  [`${fieldCards.length} fields`],
 );
 ---
 
@@ -59,17 +64,11 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--portal">
       <p class="hero__eyebrow">Scholarly Fields</p>
-      <h1 class="hero__title">A gateway to the site's specialized scholarly areas</h1>
+      <h1 class="hero__title">Scholarly Fields</h1>
       <p class="hero__lead">
-        This page introduces the major scholarly fields represented across the site and
-        gathers the main areas through which articles, archives, and related scholarly work are organized.
+        The areas in which Dr. Haitham A. El-Ghareeb writes, edits and teaches, from hadith and
+        manuscripts to e-learning and academic reviewing.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">Gateway page</span>
-        <span class="hero__badge">Specialized fields</span>
-        <span class="hero__badge">Connected growth paths</span>
-      </div>
 
       <div class="hero__actions">
         <a class="button" href="/en/articles/">Browse articles</a>
@@ -78,22 +77,13 @@ const seoDescription = buildSeoDescription(
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Project structure</p>
-        <h2 class="section-title">Fields anchored in the current site plan</h2>
-        <p class="section-copy">
-          The current implementation provides a clear entry point for these areas, with
-          dedicated pages and a structure that supports deeper series and internal navigation.
-        </p>
-      </div>
-
       <div class="grid-three">
         {fieldCards.map((field) => (
           <a class="card-link" href={field.href}>
-          <article class="feature-card feature-card--field">
-            <h3>{field.title}</h3>
-            <p>{field.copy}</p>
-          </article>
+            <article class="feature-card feature-card--field">
+              <h3>{field.title}</h3>
+              <p>{field.copy}</p>
+            </article>
           </a>
         ))}
       </div>

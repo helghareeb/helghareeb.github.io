@@ -5,7 +5,9 @@ import '../../../../styles/global.css';
 import { getArticleSeriesPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 
-const articles = (await getCollection('articles')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.series);
+const articles = (await getCollection('articles')).filter(
+  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.series && entry.data.seriesSlug,
+);
 
 const seriesMap = new Map<
   string,
@@ -20,7 +22,7 @@ const seriesMap = new Map<
 >();
 
 for (const article of articles) {
-  const slug = article.data.seriesSlug ?? article.slug;
+  const slug = article.data.seriesSlug!;
   const existing = seriesMap.get(slug);
 
   if (!existing) {
@@ -53,14 +55,24 @@ const seriesEntries = Array.from(seriesMap.values()).sort((a, b) => {
 
   return bTime - aTime;
 });
-const seoTitle = buildSeoTitle('فهرس السلاسل العلمية داخل قسم المقالات', {
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const partForms: [string, string, string, string, string] = ['حلقة واحدة', 'حلقتان', 'حلقات', 'حلقةً', 'حلقة'];
+const seriesForms: [string, string, string, string, string] = ['سلسلة واحدة', 'سلسلتان', 'سلاسل', 'سلسلةً', 'سلسلة'];
+const seoTitle = buildSeoTitle('سلاسل المقالات', {
   lang: 'ar',
   section: 'السلاسل المقالية',
 });
 const seoDescription = buildSeoDescription(
-  'فهرس السلاسل المقالية العربية داخل الموقع مع ترتيب المواد بحسب تسلسلها وتواريخها.',
+  'سلاسل مقالات في شروح الرسالة للإمام الشافعي، ودورات علوم المخطوطات للشيخ صالح الأزهري، وملخصات الكتب، والرد على الشبهات.',
   [
-    `${seriesEntries.length} سلسلة`,
+    countAr(seriesEntries.length, seriesForms),
     seriesEntries[0]?.latestDate ? `آخر تحديث ${seriesEntries[0].latestDate}` : undefined,
   ],
 );
@@ -74,40 +86,29 @@ const seoDescription = buildSeoDescription(
 >
   <main class="page-main">
     <section class="shell hero hero--portal">
-      <p class="hero__eyebrow">السلاسل المقالية</p>
-      <h1 class="hero__title">فهرس السلاسل العلمية داخل قسم المقالات</h1>
+      <p class="hero__eyebrow">سلاسل المقالات</p>
+      <h1 class="hero__title">سلاسل المقالات</h1>
       <p class="hero__lead">
-        يجمع هذا المسار السلاسل الموضوعية المرتبة داخل الأرشيف، بحيث يسهل الانتقال إلى
-        كل سلسلة بصفتها وحدة متكاملة لا مجرد مقالات متفرقة.
+        {countAr(seriesEntries.length, seriesForms)} تُقرأ حلقاتها متتابعة: شروح «الرسالة» للإمام الشافعي،
+        ودورات الشيخ صالح الأزهري في علوم المخطوطات، وملخصات كتب، وسلاسل في التفسير والتزكية والرد على الشبهات.
       </p>
 
-      <div class="hero__badge-row">
-        <span class="hero__badge">فهرس موحد</span>
-        <span class="hero__badge">ترتيب حلقي</span>
-        <span class="hero__badge">تنقل أوضح</span>
+      <div class="hero__actions">
+        <a class="button-secondary" href="/ar/articles/">كل المقالات</a>
       </div>
     </section>
 
     <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">السلاسل المتاحة</p>
-        <h2 class="section-title">مداخل السلاسل الحالية</h2>
-      </div>
-
       <div class="grid-two">
         {seriesEntries.map((series) => (
           <a class="card-link" href={getArticleSeriesPath('ar', series.slug)}>
             <article class="content-card entity-card">
               <p class="content-card__meta">
-                {[series.category, `${series.count} مادة`].filter(Boolean).join(' | ')}
+                {[series.category, countAr(series.count, partForms)].filter(Boolean).join(' | ')}
               </p>
               <h3>{series.title}</h3>
-              <p>
-                {series.latestTitle
-                  ? `آخر مادة مضافة في هذه السلسلة: ${series.latestTitle}`
-                  : 'سلسلة مقالية منظمة داخل الأرشيف.'}
-              </p>
-              <p class="content-card__meta">{series.latestDate ?? 'بدون تاريخ'}</p>
+              {series.latestTitle && <p>أحدث حلقة: {series.latestTitle}</p>}
+              {series.latestDate && <p class="content-card__meta">{series.latestDate}</p>}
             </article>
           </a>
         ))}

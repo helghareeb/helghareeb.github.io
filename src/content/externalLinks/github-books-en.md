@@ -1,7 +1,7 @@
 ---
 title: "Published Book Repositories on GitHub"
 lang: "en"
-summary: "A set of public repositories on the personal GitHub account that host books or carefully prepared book projects."
+summary: "Public GitHub repositories holding the LaTeX sources and PDFs of his books, from course textbooks to edited lesson transcriptions."
 category: "Scholarly Publishing"
 linkType: "Book Repositories"
 sourceName: "GitHub"
@@ -9,5 +9,6 @@ externalUrl: "https://github.com/helghareeb?tab=repositories"
 featured: true
 ---
 
-This link points to the public repositories that host books or book-length scholarly projects,
-including formatted LaTeX and PDF-based publication workflows.
+The repositories hold the LaTeX source and compiled PDF of each book, including the course textbooks
+for Data Structures and Algorithms, Decision Support Systems, Introduction to Information Systems and
+Information Storage and Retrieval, and edited transcriptions of lessons on al-Risala and al-Tabari's Tafsir.

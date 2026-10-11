@@ -25,6 +25,15 @@ const counts = {
   training: cards.filter((card) => card.data.mode === 'training').length,
   test: cards.filter((card) => card.data.mode === 'test').length,
 };
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const questionForms: [string, string, string, string, string] = ['سؤال واحد', 'سؤالان', 'أسئلة', 'سؤالًا', 'سؤال'];
 const seoTitle = buildSeoTitle(deck.data.title, {
   lang: 'ar',
   section: 'بطاقات المذاكرة',
@@ -32,7 +41,7 @@ const seoTitle = buildSeoTitle(deck.data.title, {
 const seoDescription = buildSeoDescription(deck.data.summary, [
   deck.data.field,
   deck.data.bookTitle,
-  `${cards.length} سؤال منشور`,
+  countAr(cards.length, questionForms),
 ]);
 ---
 
@@ -45,59 +54,39 @@ const seoDescription = buildSeoDescription(deck.data.summary, [
 
       <div class="hero__badge-row">
         <span class="hero__badge">{deck.data.field}</span>
-        <span class="hero__badge">{cards.length} سؤال منشور</span>
-        <span class="hero__badge">{deck.data.status ?? 'حزمة دراسة'}</span>
+        <span class="hero__badge">{countAr(cards.length, questionForms)}</span>
+        {deck.data.status && <span class="hero__badge">{deck.data.status}</span>}
       </div>
-    </section>
-
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">بنية الحزمة</p>
-        <h2 class="section-title">مسارات المراجعة داخل هذا الكتاب</h2>
-        <p class="section-copy">
-          تفتح هذه الصفحة ثلاثة أوضاع للمذاكرة: المراجعة، والتدريب، والاختبار، ثم صفحة
-          للنتائج تمهيدًا لمسار إعادة الخطأ وتكرار ما يحتاج إليه الطالب.
-        </p>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">أرقام سريعة</p>
-        <ul class="entity-list">
-          <li><strong>بطاقات المراجعة:</strong> {counts.review}</li>
-          <li><strong>أسئلة التدريب:</strong> {counts.training}</li>
-          <li><strong>أسئلة الاختبار:</strong> {counts.test}</li>
-        </ul>
-      </article>
     </section>
 
     <section class="shell section">
       <div class="grid-two">
         <a class="card-link" href={getFlashcardModePath('ar', deck.slug, 'review')}>
           <article class="content-card entity-card">
-            <p class="content-card__meta">Review</p>
+            <p class="content-card__meta">الخطوة ١ · {countAr(counts.review, ['بطاقة واحدة', 'بطاقتان', 'بطاقات', 'بطاقةً', 'بطاقة'])}</p>
             <h3>المراجعة</h3>
-            <p>عرض السؤال مع جوابه لتثبيت الأصل العلمي قبل الانتقال للمحاولة الذاتية.</p>
+            <p>اقرأ السؤال مع جوابه لتثبيت المادة قبل أن تختبر نفسك.</p>
           </article>
         </a>
         <a class="card-link" href={getFlashcardModePath('ar', deck.slug, 'training')}>
           <article class="content-card entity-card">
-            <p class="content-card__meta">Training</p>
+            <p class="content-card__meta">الخطوة ٢ · {countAr(counts.training, questionForms)}</p>
             <h3>التدريب</h3>
-            <p>إخفاء الجواب أولًا ثم كشفه بعد المحاولة، لبناء الاستدعاء النشط.</p>
+            <p>يظهر السؤال وحده، فتحاول الإجابة ثم تكشف الجواب وتقيّم نفسك.</p>
           </article>
         </a>
         <a class="card-link" href={getFlashcardModePath('ar', deck.slug, 'test')}>
           <article class="content-card entity-card">
-            <p class="content-card__meta">Test</p>
+            <p class="content-card__meta">الخطوة ٣ · {countAr(counts.test, questionForms)}</p>
             <h3>الاختبار</h3>
-            <p>عرض الأسئلة في صورة اختبارية مستقلة تقيس مقدار التمكن من المادة.</p>
+            <p>أسئلة بلا أجوبة ظاهرة تقيس مقدار تمكنك من المادة.</p>
           </article>
         </a>
         <a class="card-link" href={getFlashcardModePath('ar', deck.slug, 'results')}>
           <article class="content-card entity-card">
-            <p class="content-card__meta">Results</p>
+            <p class="content-card__meta">الخطوة ٤</p>
             <h3>النتائج</h3>
-            <p>صفحة مهيأة لتجميع الأخطاء وإعادة ما يحتاجه الطالب من الأسئلة لاحقًا.</p>
+            <p>ملخص إجاباتك المحفوظة على هذا الجهاز، مع الأسئلة التي أخطأت فيها لتعيد مراجعتها.</p>
           </article>
         </a>
       </div>

@@ -12,16 +12,24 @@ const links = (await getCollection('externalLinks'))
 
     return a.data.title.localeCompare(b.data.title, 'en');
   });
-const seoTitle = buildSeoTitle('Educational resources and externally hosted work', {
+
+const categoryMap = new Map<string, typeof links>();
+
+for (const link of links) {
+  const category = link.data.category ?? 'Other links';
+  categoryMap.set(category, [...(categoryMap.get(category) ?? []), link]);
+}
+
+const categories = Array.from(categoryMap.entries()).sort(
+  (a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], 'en'),
+);
+const seoTitle = buildSeoTitle('External Links', {
   lang: 'en',
-  section: 'External Links',
+  section: 'Dr. Haitham A. El-Ghareeb',
 });
 const seoDescription = buildSeoDescription(
-  'English archive of external links covering academic profiles, publications, and educational resources.',
-  [
-    `${links.length} documented links`,
-    links[0]?.data.category,
-  ],
+  'Research profiles, publishing platforms, journal and university pages, and external publications of Dr. Haitham A. El-Ghareeb.',
+  [`${links.length} links`],
 );
 ---
 
@@ -34,67 +42,31 @@ const seoDescription = buildSeoDescription(
   <main class="page-main">
     <section class="shell hero hero--detail">
       <p class="hero__eyebrow">External Links</p>
-      <h1 class="hero__title">Educational resources and externally hosted work</h1>
+      <h1 class="hero__title">External Links</h1>
       <p class="hero__lead">
-        This section gathers useful external resources, professional links, and pages
-        where books, articles, or related scholarly work are published outside the website itself.
+        Research profiles, author pages on publishing platforms, university and journal pages, and
+        articles and books published on other websites.
       </p>
-
-      <div class="hero__badge-row">
-        <span class="hero__badge">Described links</span>
-        <span class="hero__badge">Professional and educational</span>
-        <span class="hero__badge">External publication access</span>
-      </div>
     </section>
 
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">Section character</p>
-        <h2 class="section-title">Documented links rather than a raw list</h2>
-        <p class="section-copy">
-          This area collects external links with concise descriptions, type labels,
-          and source context so links remain meaningful within the logic of the website.
-        </p>
-        <ul class="entity-tags">
-          <li>Category</li>
-          <li>Type</li>
-          <li>Source</li>
-          <li>External URL</li>
-        </ul>
-      </article>
+    {categories.map(([category, entries]) => (
+      <section class="shell section">
+        <div class="section-heading">
+          <h2 class="section-title">{category}</h2>
+        </div>
 
-      <article class="entity-panel">
-        <p class="entity-kicker">Uses</p>
-        <ul class="entity-list">
-          <li><strong>Educational links:</strong> useful resources, references, or platforms.</li>
-          <li><strong>Professional links:</strong> profiles or public academic presence.</li>
-          <li><strong>Publication links:</strong> access points to work published elsewhere.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="shell section">
-      <div class="section-heading">
-        <p class="section-kicker">Published references</p>
-        <h2 class="section-title">Archive of documented external links</h2>
-        <p class="section-copy">
-          This section now includes {links.length} described external entries covering academic
-          profiles, published writing, institutional references, and selected public mentions.
-        </p>
-      </div>
-
-      <div class="grid-two">
-        {links.map((link) => (
-          <a class="card-link" href={getEntryPath('externalLinks', 'en', link.slug)}>
-            <article class="content-card entity-card">
-              <p class="content-card__meta">{[link.data.category, link.data.linkType].filter(Boolean).join(' | ')}</p>
-              <h3>{link.data.title}</h3>
-              <p>{link.data.summary}</p>
-              <p class="content-card__meta">{link.data.sourceName}</p>
-            </article>
-          </a>
-        ))}
-      </div>
-    </section>
+        <div class="grid-two">
+          {entries.map((link) => (
+            <a class="card-link" href={getEntryPath('externalLinks', 'en', link.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{[link.data.sourceName, link.data.linkType].filter(Boolean).join(' | ')}</p>
+                <h3>{link.data.title}</h3>
+                <p>{link.data.summary}</p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
   </main>
 </BaseLayout>

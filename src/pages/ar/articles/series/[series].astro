@@ -36,14 +36,29 @@ const seriesArticles = (await getCollection('articles'))
   .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
 
 const firstArticle = seriesArticles[0];
-const lastArticle = seriesArticles[seriesArticles.length - 1];
+const seriesDates = seriesArticles.map((article) => article.data.date).filter((date): date is string => Boolean(date)).sort();
+const firstDate = seriesDates[0];
+const lastDate = seriesDates[seriesDates.length - 1];
+const countAr = (n: number, [one, two, few, many, single]: [string, string, string, string, string]) => {
+  if (n === 1) return one;
+  if (n === 2) return two;
+  const r = n % 100;
+  if (r >= 3 && r <= 10) return `${n} ${few}`;
+  if (r >= 11) return `${n} ${many}`;
+  return `${n} ${single}`;
+};
+const partForms: [string, string, string, string, string] = ['حلقة واحدة', 'حلقتان', 'حلقات', 'حلقةً', 'حلقة'];
+const sourceLabel =
+  firstArticle?.data.sourceName === 'فاعلم أنه لا إله إلا الله'
+    ? 'مدونة «فاعلم أنه لا إله إلا الله»'
+    : firstArticle?.data.sourceName;
 const seoTitle = buildSeoTitle(seriesTitle, { lang: 'ar', section: 'السلاسل المقالية' });
 const seoDescription = buildSeoDescription(
-  `فهرس سلسلة ${seriesTitle} داخل أرشيف المقالات العربي.`,
+  `حلقات سلسلة «${seriesTitle}» مرتبة بحسب تسلسلها.`,
   [
-    `${seriesArticles.length} مادة`,
+    countAr(seriesArticles.length, partForms),
     firstArticle?.data.category,
-    lastArticle?.data.date ? `آخر مادة ${lastArticle.data.date}` : undefined,
+    lastDate ? `آخر حلقة ${lastDate}` : undefined,
   ],
 );
 ---
@@ -56,53 +71,28 @@ const seoDescription = buildSeoDescription(
 >
   <main class="page-main">
     <section class="shell hero hero--portal">
-      <p class="hero__eyebrow">سلسلة مقالية</p>
+      <p class="hero__eyebrow">سلسلة مقالات</p>
       <h1 class="hero__title">{seriesTitle}</h1>
       <p class="hero__lead">
-        صفحة جامعة لترتيب مواد هذه السلسلة والتنقل بينها بحسب تسلسلها داخل الأرشيف.
+        {countAr(seriesArticles.length, partForms)}{firstArticle?.data.category && ` في ${firstArticle.data.category}`}{sourceLabel && `، نُشرت أولًا في ${sourceLabel}`}، مرتبة بحسب تسلسلها.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">{seriesArticles.length} مادة</span>
-        {firstArticle?.data.date && <span class="hero__badge">البداية: {firstArticle.data.date}</span>}
-        {lastArticle?.data.date && <span class="hero__badge">الآخر: {lastArticle.data.date}</span>}
+        {firstArticle?.data.category && <span class="hero__badge">{firstArticle.data.category}</span>}
+        {firstDate && <span class="hero__badge">من {firstDate}</span>}
+        {lastDate && lastDate !== firstDate && <span class="hero__badge">إلى {lastDate}</span>}
       </div>
-    </section>
-
-    <section class="shell entity-grid">
-      <article class="entity-summary">
-        <p class="entity-kicker">وصف السلسلة</p>
-        <h2 class="section-title">مسار واحد بمواد مرتبة</h2>
-        <p class="section-copy">
-          جُمعت هذه المواد داخل صفحة مستقلة حتى يسهل تتبع السلسلة على نحو متسلسل،
-          مع الاحتفاظ بكل مقالة في صفحتها المفردة داخل الأرشيف العام.
-        </p>
-      </article>
-
-      <article class="entity-panel">
-        <p class="entity-kicker">بيانات موجزة</p>
-        <ul class="entity-list">
-          <li><strong>عدد المواد:</strong> {seriesArticles.length}</li>
-          {firstArticle?.data.category && <li><strong>التصنيف:</strong> {firstArticle.data.category}</li>}
-          {firstArticle?.data.sourceName && <li><strong>المصدر:</strong> {firstArticle.data.sourceName}</li>}
-          <li><strong>الرجوع:</strong> <a href="/ar/articles/">قسم المقالات</a></li>
-        </ul>
-      </article>
     </section>
 
     <section class="shell section">
       {seriesSlug === 'al-risala-ahmad-naqeeb' && (
         <article class="notice-card">
-          <h2>تنبيه تنظيمي</h2>
-          <p>
-            هذه السلسلة مستوردة من مصدر خارجي، وقد تبيّن أثناء الجمع أن رابط الدرس
-            `63` غير متاح في المصدر الأصلي، ولذلك لا تظهر له مادة داخل الأرشيف الحالي.
-          </p>
+          <p>الدرس الثالث والستون غير متاح في مصدره الأصلي، فلم يُلخَّص.</p>
         </article>
       )}
 
       <div class="section-heading">
-        <p class="section-kicker">مواد السلسلة</p>
+        <p class="section-kicker">حلقات السلسلة</p>
         <h2 class="section-title">الترتيب الكامل</h2>
       </div>
 
@@ -111,13 +101,10 @@ const seoDescription = buildSeoDescription(
           <a class="card-link" href={getEntryPath('articles', 'ar', article.slug)}>
             <article class="content-card entity-card">
               <p class="content-card__meta">
-                {[article.data.date, article.data.articleType].filter(Boolean).join(' | ')}
+                {[article.data.date, article.data.readingTime].filter(Boolean).join(' | ')}
               </p>
               <h3>{article.data.title}</h3>
               <p>{article.data.summary}</p>
-              <p class="content-card__meta">
-                {[article.data.articleType, article.data.readingTime].filter(Boolean).join(' | ')}
-              </p>
             </article>
           </a>
         ))}

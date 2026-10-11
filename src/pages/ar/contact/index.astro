@@ -1,37 +1,67 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
+
+const emails = [
+  { label: 'البريد الجامعي', address: 'helghareeb@mans.edu.eg' },
+  { label: 'البريد الشخصي', address: 'helghareeb@gmail.com' },
+];
+
+const researchProfiles = [
+  { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=f66uaewAAAAJ&hl=en' },
+  { label: 'ORCID', href: 'https://orcid.org/0000-0003-1875-6706' },
+  { label: 'IEEE Xplore', href: 'https://ieeexplore.ieee.org/author/37086352024' },
+  { label: 'ScholarGPS', href: 'https://scholargps.com/scholars/54142940845340/haitham-a-el-ghareeb' },
+];
+
+const otherProfiles = [
+  { label: 'GitHub', href: 'https://github.com/helghareeb' },
+  { label: 'LinkedIn', href: 'https://eg.linkedin.com/in/helghareeb' },
+  { label: 'صفحة الكاتب في شبكة الألوكة', href: 'https://www.alukah.net/authors/view/home/16869/' },
+];
 ---
 
 <BaseLayout
   lang="ar"
   dir="rtl"
   title="تواصل | د. هيثم الغريب"
-  description="صفحة التواصل والروابط المهنية والأكاديمية"
+  description="البريد الإلكتروني للدكتور هيثم الغريب، وملفاته البحثية على Google Scholar وORCID وIEEE Xplore وScholarGPS، وحساباته على GitHub وLinkedIn وشبكة الألوكة."
 >
   <main class="page-main">
     <section class="shell hero">
       <p class="hero__eyebrow">تواصل</p>
-      <h1 class="hero__title">التواصل والروابط المهنية</h1>
+      <h1 class="hero__title">التواصل</h1>
       <p class="hero__lead">
-        تجمع هذه الصفحة وسائل التواصل المناسبة للزوار، إلى جانب الروابط المهنية
-        والأكاديمية التي تعين على الوصول إلى الحضور العلمي والرقمي الخارجي.
+        للمراسلات العلمية والأكاديمية يمكن التواصل مع د. هيثم الغريب عبر البريد الإلكتروني،
+        ومتابعة أعماله المنشورة عبر الملفات البحثية والحسابات أدناه.
       </p>
     </section>
 
     <section class="shell section">
       <div class="grid-three">
         <article class="feature-card">
-          <h3>تواصل مهني</h3>
-          <p>قنوات التواصل المناسبة للمراسلات العلمية أو المهنية بحسب ما هو ظاهر في الموقع.</p>
+          <h3>البريد الإلكتروني</h3>
+          <ul class="list-clean">
+            {emails.map((email) => (
+              <li>{email.label}: <a href={`mailto:${email.address}`} dir="ltr">{email.address}</a></li>
+            ))}
+          </ul>
         </article>
         <article class="feature-card">
-          <h3>روابط أكاديمية</h3>
-          <p>تظهر هنا الروابط الأكاديمية أو المهنية ذات الصلة بالحضور العلمي الرقمي.</p>
+          <h3>الملفات البحثية</h3>
+          <ul class="list-clean">
+            {researchProfiles.map((profile) => (
+              <li><a href={profile.href}>{profile.label}</a></li>
+            ))}
+          </ul>
         </article>
         <article class="feature-card">
-          <h3>سياسة العرض</h3>
-          <p>يعتمد هذا القسم على إظهار القنوات المعتمدة فقط بما يحقق الوضوح والخصوصية المناسبة.</p>
+          <h3>حسابات أخرى</h3>
+          <ul class="list-clean">
+            {otherProfiles.map((profile) => (
+              <li><a href={profile.href}>{profile.label}</a></li>
+            ))}
+          </ul>
         </article>
       </div>
     </section>

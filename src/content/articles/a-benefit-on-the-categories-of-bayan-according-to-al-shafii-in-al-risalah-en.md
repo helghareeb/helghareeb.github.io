@@ -3,7 +3,7 @@ title: "A Benefit on the Categories of Bayan According to al-Shafi'i in al-Risal
 lang: "en"
 date: "2024-11-28"
 summary: "A concise presentation of al-Shafi'i's division of bayan, showing how revelation, Prophetic explanation, and analogy work together in legal reasoning."
-category: "Jurisprudence and Legal Theory"
+category: "Fiqh and Legal Theory"
 translationKey: "alukah-categories-of-bayan-shafii"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
