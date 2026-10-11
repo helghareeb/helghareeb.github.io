@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان المحاضرة: التمرُّس في معرفة خطوط الأعلام في المخطوطات العربيّة"
 category: "علوم المخطوطات"
+translationKey: "manuscript-mastery-course-019"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 19

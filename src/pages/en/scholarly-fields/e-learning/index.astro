@@ -25,7 +25,7 @@ const benefitCount = (await getCollection('studyBenefits')).filter(
   (entry) => entry.data.lang === 'en' && !entry.data.draft,
 ).length;
 const flashcardCount = (await getCollection('flashcards')).filter(
-  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
+  (entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
 ).length;
 
 const seoTitle = buildSeoTitle('E-Learning', {
@@ -121,7 +121,7 @@ const seoDescription = buildSeoDescription(
         </a>
         <a class="card-link" href="/en/study/flashcards/">
           <article class="content-card entity-card">
-            <p class="content-card__meta">{flashcardCount} questions · Arabic</p>
+            <p class="content-card__meta">{flashcardCount} questions</p>
             <h3>Flashcards</h3>
             <p>Review, training and test questions on Akhsar al-Mukhtasarat in Hanbali fiqh.</p>
           </article>

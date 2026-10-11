@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "منهج الطلب"
 sourceRef: "شرح ابن جبرين 001 - تعريف الفقه والفهم"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-02"
 draft: false
 ---
 

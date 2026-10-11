@@ -10,6 +10,7 @@ tags:
   - "متوسط"
   - "منهج الطلب"
 sourceRef: "شرح ابن جبرين 001 - مقدمة الشرح"
+translationKey: "flashcard-akhsar-al-mukhtasarat-test-01"
 draft: false
 ---
 

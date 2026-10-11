@@ -21,7 +21,7 @@ for (const group of benefitGroups) {
 }
 
 const flashcardCount = (await getCollection('flashcards')).filter(
-  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
+  (entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
 ).length;
 
 const tracks = [
@@ -32,7 +32,7 @@ const tracks = [
     summary: "Edited notes from lessons on al-Shafi'i's al-Risalah and al-Tabari's commentary on al-Fatihah and al-Baqarah, arranged by subject and teacher.",
   },
   {
-    eyebrow: `${flashcardCount} questions · Arabic`,
+    eyebrow: `${flashcardCount} questions`,
     title: 'Flashcards',
     href: '/en/study/flashcards/',
     summary: 'Review, training and test questions on Akhsar al-Mukhtasarat in Hanbali fiqh, with a results page for the questions you missed.',
@@ -45,7 +45,7 @@ const seoTitle = buildSeoTitle('Study Hub', {
 });
 const seoDescription = buildSeoDescription(
   "Study notes on al-Shafi'i's al-Risalah and al-Tabari's Tafsir, and flashcards on Akhsar al-Mukhtasarat, for students of Islamic knowledge.",
-  [`${benefits.length} notebooks`, `${flashcardCount} flashcards in Arabic`],
+  [`${benefits.length} notebooks`, `${flashcardCount} flashcards`],
 );
 ---
 
@@ -98,7 +98,7 @@ const seoDescription = buildSeoDescription(
         <a class="card-link" href="/en/study/flashcards/">
           <article class="content-card entity-card">
             <h3>Akhsar al-Mukhtasarat</h3>
-            <p>Flashcards in Arabic on this concise primer of Hanbali fiqh.</p>
+            <p>Flashcards on this concise primer of Hanbali fiqh.</p>
           </article>
         </a>
       </div>

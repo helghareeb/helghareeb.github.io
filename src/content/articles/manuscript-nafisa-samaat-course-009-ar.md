@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "يتميز هذا الدرس بالعمق والتحليل التفصيلي لمخطوط “جزء محمد بن مخلد العطار” وربطه بسياق تاريخي وعلمي، مع تسليط الضوء على أهمية القراءة المدققة للنصوص وتحليلها ضمن إطار التحقيق العلمي."
 category: "علوم المخطوطات"
+translationKey: "manuscript-nafisa-samaat-course-009"
 series: "الدورة الخامسة: قراءة في سماعات مخطوطات نفيسة - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-nafisa-samaat-course"
 seriesOrder: 9

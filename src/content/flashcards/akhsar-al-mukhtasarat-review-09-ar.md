@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "الاستنجاء"
 sourceRef: "شرح ابن جبرين 001 - أحكام الاستنجاء"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-09"
 draft: false
 ---
 

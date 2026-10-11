@@ -10,5 +10,6 @@ tags:
   - "السواك"
   - "استحباب"
 sourceRef: "تفكيك السؤال المركب 12 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-12-13"
 draft: false
 ---

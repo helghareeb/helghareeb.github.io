@@ -8,8 +8,8 @@ import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 const decks = (await getCollection('flashcardDecks')).filter(
   (entry) => entry.data.lang === 'en' && !entry.data.draft,
 );
-const arabicCards = (await getCollection('flashcards')).filter((entry) => entry.data.lang === 'ar' && !entry.data.draft);
-const countFor = (deckSlug: string) => arabicCards.filter((card) => card.data.deckSlug === deckSlug).length;
+const englishCards = (await getCollection('flashcards')).filter((entry) => entry.data.lang === 'en' && !entry.data.draft);
+const countFor = (deckSlug: string) => englishCards.filter((card) => card.data.deckSlug === deckSlug).length;
 const totalQuestions = decks.reduce((sum, deck) => sum + countFor(getEntryRouteSlug(deck.slug)), 0);
 
 const seoTitle = buildSeoTitle('Flashcards', {
@@ -17,7 +17,7 @@ const seoTitle = buildSeoTitle('Flashcards', {
   section: 'Study Hub',
 });
 const seoDescription = buildSeoDescription(
-  'Flashcards in Arabic for review, training and testing on Akhsar al-Mukhtasarat, the concise Hanbali fiqh primer.',
+  'Flashcards for review, training and testing on Akhsar al-Mukhtasarat, the concise Hanbali fiqh primer.',
   [`${totalQuestions} questions`],
 );
 ---
@@ -29,12 +29,8 @@ const seoDescription = buildSeoDescription(
       <h1 class="hero__title">Flashcards</h1>
       <p class="hero__lead">
         Revision questions on Akhsar al-Mukhtasarat, the concise primer of Hanbali fiqh. The questions
-        and answers are in Arabic.
+        and answers are also available in the <a href="/ar/study/flashcards/">original Arabic</a>.
       </p>
-
-      <div class="hero__actions">
-        <a class="button" href="/ar/study/flashcards/">Open the flashcards (Arabic)</a>
-      </div>
     </section>
 
     <section class="shell entity-meta-grid">
@@ -65,7 +61,7 @@ const seoDescription = buildSeoDescription(
         {decks.map((deck) => (
           <a class="card-link" href={getEntryPath('flashcardDecks', 'en', deck.slug)}>
             <article class="content-card entity-card">
-              <p class="content-card__meta">{deck.data.field} · {countFor(getEntryRouteSlug(deck.slug))} questions in Arabic</p>
+              <p class="content-card__meta">{deck.data.field} · {countFor(getEntryRouteSlug(deck.slug))} questions</p>
               <h3>{deck.data.bookTitle}</h3>
               <p>{deck.data.summary}</p>
             </article>

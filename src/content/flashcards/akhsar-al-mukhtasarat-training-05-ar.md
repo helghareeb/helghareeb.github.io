@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "سنن الفطرة"
 sourceRef: "شرح ابن جبرين 001 - السواك"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-05"
 draft: false
 ---
 

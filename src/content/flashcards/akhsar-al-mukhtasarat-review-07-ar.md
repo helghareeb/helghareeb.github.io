@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "المياه"
 sourceRef: "شرح ابن جبرين 001 - أقسام المياه"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-07"
 draft: false
 ---
 

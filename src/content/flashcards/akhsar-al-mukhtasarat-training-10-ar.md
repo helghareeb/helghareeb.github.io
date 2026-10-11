@@ -10,6 +10,7 @@ tags:
   - "متوسط"
   - "الغسل"
 sourceRef: "شرح ابن جبرين 001 - موجبات الغسل"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-10"
 draft: false
 ---
 

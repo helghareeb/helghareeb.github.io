@@ -10,5 +10,6 @@ tags:
   - "اختيار"
   - "نواقض الوضوء"
 sourceRef: "تفكيك السؤال المركب 14 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-14-15"
 draft: false
 ---

@@ -16,6 +16,8 @@ const switchLocalePath = await getAlternateLocalePath(currentPath, lang);
 
 const homeHref = lang === 'ar' ? '/ar/' : '/en/';
 const siteIndexHref = lang === 'ar' ? '/ar/site-map/' : '/en/site-map/';
+const searchHref = lang === 'ar' ? '/ar/search/' : '/en/search/';
+const isSearchActive = currentPath === searchHref || currentPath === searchHref.slice(0, -1);
 const siteName = lang === 'ar' ? siteConfig.nameAr : siteConfig.nameEn;
 const languageLabel = lang === 'ar' ? 'English' : 'العربية';
 const languageAria = lang === 'ar' ? 'الانتقال إلى النسخة الإنجليزية' : 'Switch to Arabic version';
@@ -63,9 +65,24 @@ const languageAria = lang === 'ar' ? 'الانتقال إلى النسخة ال�
         </nav>
 
         <div class="site-header__utilities">
-          <a class="site-index-link" href={siteIndexHref}>
-            {lang === 'ar' ? 'دليل الموقع' : 'Site Index'}
-          </a>
+          <div class="site-header__utility-row">
+            <a
+              class:list={['site-index-link', 'site-search-link', { 'is-active': isSearchActive }]}
+              href={searchHref}
+              aria-current={isSearchActive ? 'page' : undefined}
+              title={lang === 'ar' ? 'البحث في الموقع' : 'Search the site'}
+            >
+              <svg class="site-search-link__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M15.5 15.5 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span class="site-search-link__label">{lang === 'ar' ? 'البحث' : 'Search'}</span>
+            </a>
+
+            <a class="site-index-link" href={siteIndexHref}>
+              {lang === 'ar' ? 'دليل الموقع' : 'Site Index'}
+            </a>
+          </div>
 
           <a class="locale-switch" href={switchLocalePath} aria-label={languageAria}>
             {languageLabel}

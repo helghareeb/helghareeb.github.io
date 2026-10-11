@@ -10,5 +10,6 @@ tags:
   - "آداب الخلاء"
   - "نواهي"
 sourceRef: "تفكيك السؤال المركب 12 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-12-12"
 draft: false
 ---

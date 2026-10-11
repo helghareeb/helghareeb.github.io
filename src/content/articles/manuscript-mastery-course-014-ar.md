@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "“منهجية تحليل ودراسة المخطوطات العربيّة: بين النماذج والمفاهيم الأكاديمية”"
 category: "علوم المخطوطات"
+translationKey: "manuscript-mastery-course-014"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 14

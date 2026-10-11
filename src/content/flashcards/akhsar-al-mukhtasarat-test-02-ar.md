@@ -10,6 +10,7 @@ tags:
   - "متوسط"
   - "المياه"
 sourceRef: "شرح ابن جبرين 001 - أقسام المياه"
+translationKey: "flashcard-akhsar-al-mukhtasarat-test-02"
 draft: false
 ---
 

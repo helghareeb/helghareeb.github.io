@@ -1,0 +1,43 @@
+---
+import type { Publication } from '../data/publications';
+
+interface Props {
+  items: Publication[];
+}
+
+const { items } = Astro.props;
+const self = 'H. A. El-Ghareeb';
+---
+
+<ol class="pub-list" dir="ltr" lang="en">
+  {items.map((pub) => {
+    const [before, after] = pub.authors.includes(self) ? pub.authors.split(self) : [pub.authors, undefined];
+    return (
+      <li class="pub-item">
+        <p class="pub-item__title">
+          {pub.doi ? <a href={`https://doi.org/${pub.doi}`}>{pub.title}</a> : pub.title}
+        </p>
+        <p class="pub-item__authors">
+          {before}
+          {after !== undefined && <strong>{self}</strong>}
+          {after}
+        </p>
+        <p class="pub-item__venue">
+          {[pub.venue && <em>{pub.venue}</em>, pub.year].filter(Boolean).map((part, index) => (
+            <>
+              {index > 0 && ', '}
+              {part}
+            </>
+          ))}
+          {pub.note && <span class="pub-item__note"> · {pub.note}</span>}
+          {pub.doi && (
+            <span class="pub-item__doi">
+              {' · DOI: '}
+              <a href={`https://doi.org/${pub.doi}`}>{pub.doi}</a>
+            </span>
+          )}
+        </p>
+      </li>
+    );
+  })}
+</ol>

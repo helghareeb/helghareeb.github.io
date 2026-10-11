@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "منهجيات تحقيق عناوين المخطوطات: الأهمية والوسائل المنهجية"
 category: "علوم المخطوطات"
+translationKey: "manuscript-mastery-course-023"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 23

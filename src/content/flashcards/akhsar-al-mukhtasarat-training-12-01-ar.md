@@ -10,5 +10,6 @@ tags:
   - "الوضوء"
   - "أركان"
 sourceRef: "تفكيك السؤال المركب 12 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-12-01"
 draft: false
 ---

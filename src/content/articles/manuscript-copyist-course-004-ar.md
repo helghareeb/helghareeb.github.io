@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان الدرس: تمييز قيود النسخ والتأليف في المخطوطات العربية"
 category: "علوم المخطوطات"
+translationKey: "manuscript-copyist-course-004"
 series: "الدورة السادسة: ضوابط وقرائن التعرف على اسم الناسخ وتاريخ النسخ في المخطوطات العربية - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-copyist-course"
 seriesOrder: 4

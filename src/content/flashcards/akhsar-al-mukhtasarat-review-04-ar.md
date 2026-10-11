@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "المتن"
 sourceRef: "شرح ابن جبرين 001 - ترجمة مؤلف أخصر المختصرات وكتابه"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-04"
 draft: false
 ---
 

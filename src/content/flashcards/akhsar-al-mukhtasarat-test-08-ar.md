@@ -10,6 +10,7 @@ tags:
   - "متقدم"
   - "المسح على الخفين"
 sourceRef: "شرح ابن جبرين 001 - شروط المسح على الخفين وصفته"
+translationKey: "flashcard-akhsar-al-mukhtasarat-test-08"
 draft: false
 ---
 

@@ -10,6 +10,7 @@ tags:
   - "متقدم"
   - "المسح على الخفين"
 sourceRef: "شرح ابن جبرين 001 - المدة التي يمسح فيها على الخفين"
+translationKey: "flashcard-akhsar-al-mukhtasarat-test-07"
 draft: false
 ---
 

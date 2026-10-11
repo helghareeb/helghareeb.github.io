@@ -4,6 +4,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { seriesIntroLead, seriesIntrosAr } from '../../../../../config/series-intros';
 
 export async function getStaticPaths() {
   const articles = (await getCollection('articles')).filter(
@@ -52,9 +53,10 @@ const sourceLabel =
   firstArticle?.data.sourceName === 'فاعلم أنه لا إله إلا الله'
     ? 'مدونة «فاعلم أنه لا إله إلا الله»'
     : firstArticle?.data.sourceName;
+const seriesIntro = seriesIntrosAr[seriesSlug];
 const seoTitle = buildSeoTitle(seriesTitle, { lang: 'ar', section: 'السلاسل المقالية' });
 const seoDescription = buildSeoDescription(
-  `حلقات سلسلة «${seriesTitle}» مرتبة بحسب تسلسلها.`,
+  seriesIntroLead(seriesIntro) ?? `حلقات سلسلة «${seriesTitle}» مرتبة بحسب تسلسلها.`,
   [
     countAr(seriesArticles.length, partForms),
     firstArticle?.data.category,
@@ -73,11 +75,17 @@ const seoDescription = buildSeoDescription(
     <section class="shell hero hero--portal">
       <p class="hero__eyebrow">سلسلة مقالات</p>
       <h1 class="hero__title">{seriesTitle}</h1>
-      <p class="hero__lead">
-        {countAr(seriesArticles.length, partForms)}{firstArticle?.data.category && ` في ${firstArticle.data.category}`}{sourceLabel && `، نُشرت أولًا في ${sourceLabel}`}، مرتبة بحسب تسلسلها.
-      </p>
+      {seriesIntro ? (
+        <p class="hero__lead">{seriesIntro}</p>
+      ) : (
+        <p class="hero__lead">
+          {countAr(seriesArticles.length, partForms)}{firstArticle?.data.category && ` في ${firstArticle.data.category}`}{sourceLabel && `، نُشرت أولًا في ${sourceLabel}`}، مرتبة بحسب تسلسلها.
+        </p>
+      )}
 
       <div class="hero__badge-row">
+        {seriesIntro && <span class="hero__badge">{countAr(seriesArticles.length, partForms)}</span>}
+        {seriesIntro && sourceLabel && <span class="hero__badge">{sourceLabel}</span>}
         {firstArticle?.data.category && <span class="hero__badge">{firstArticle.data.category}</span>}
         {firstDate && <span class="hero__badge">من {firstDate}</span>}
         {lastDate && lastDate !== firstDate && <span class="hero__badge">إلى {lastDate}</span>}

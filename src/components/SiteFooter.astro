@@ -45,6 +45,7 @@ const year = new Date().getFullYear();
           <a href={link.href}>{link.label}</a>
         ))}
         <a href={siteIndexLink}>{lang === 'ar' ? 'دليل الموقع' : 'Site Index'}</a>
+        <a href={`/${lang}/rss.xml`} type="application/rss+xml">{lang === 'ar' ? 'خلاصة المقالات (RSS)' : 'Articles RSS feed'}</a>
       </div>
     </section>
 

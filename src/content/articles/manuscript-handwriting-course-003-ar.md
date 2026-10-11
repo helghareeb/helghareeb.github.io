@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "المراحل المختلفة لتطور النصوص في المخطوطات العربية: المسودات والمبيضات والإبرازات"
 category: "علوم المخطوطات"
+translationKey: "manuscript-handwriting-course-003"
 series: "الدورة السابعة: دورة دراسة النسخ الخطية مسارات ومهارات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-handwriting-course"
 seriesOrder: 3

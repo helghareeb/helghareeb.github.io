@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان الدرس: مناهج العلماء والنساخ في كتابة وضبط المخطوطات العربيّة"
 category: "علوم المخطوطات"
+translationKey: "manuscript-mastery-course-005"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 5

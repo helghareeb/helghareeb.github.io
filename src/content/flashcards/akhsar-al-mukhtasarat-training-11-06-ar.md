@@ -10,5 +10,6 @@ tags:
   - "الغسل"
   - "الإسلام"
 sourceRef: "تفكيك السؤال المركب 11 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-11-06"
 draft: false
 ---

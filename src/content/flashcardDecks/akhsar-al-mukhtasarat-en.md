@@ -1,15 +1,19 @@
 ---
 title: "Akhsar al-Mukhtasarat Flashcards"
 lang: "en"
-summary: "Questions on Akhsar al-Mukhtasarat, the concise Hanbali fiqh primer (in Arabic)."
+summary: "Review, training and test questions on Akhsar al-Mukhtasarat in Hanbali fiqh, covering the introduction and the Book of Purification."
 field: "Fiqh"
 bookTitle: "Akhsar al-Mukhtasarat"
-questionCount: 0
-reviewCount: 0
-trainingCount: 0
-testCount: 0
+questionCount: 83
+reviewCount: 12
+trainingCount: 63
+testCount: 8
+status: "Introduction and the Book of Purification"
 translationKey: "flashcards-akhsar-al-mukhtasarat"
 draft: false
 ---
 
-Review, training and test questions on *Akhsar al-Mukhtasarat*, the concise primer of Hanbali fiqh. The questions and answers are in Arabic and can be studied in the [Arabic version of the deck](/ar/study/flashcards/akhsar-al-mukhtasarat/).
+Questions on *Akhsar al-Mukhtasarat*, the concise primer of Hanbali fiqh, drawn from Shaykh Ibn Jibrin's commentary. They cover:
+
+- The introduction: what fiqh is, and an introduction to the author and his book.
+- The Book of Purification: the categories of water, vessels, istinja', the siwak and the practices of the fitrah, ablution (wudu') and its sunnahs, wiping over khuffs, turbans and splints, and what necessitates the ritual bath (ghusl).

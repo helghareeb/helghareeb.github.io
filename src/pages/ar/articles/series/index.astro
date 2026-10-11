@@ -4,6 +4,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { getArticleSeriesPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { seriesIntroLead, seriesIntrosAr } from '../../../../../config/series-intros';
 
 const articles = (await getCollection('articles')).filter(
   (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.series && entry.data.seriesSlug,
@@ -107,8 +108,12 @@ const seoDescription = buildSeoDescription(
                 {[series.category, countAr(series.count, partForms)].filter(Boolean).join(' | ')}
               </p>
               <h3>{series.title}</h3>
-              {series.latestTitle && <p>أحدث حلقة: {series.latestTitle}</p>}
-              {series.latestDate && <p class="content-card__meta">{series.latestDate}</p>}
+              {seriesIntrosAr[series.slug] ? (
+                <p>{seriesIntroLead(seriesIntrosAr[series.slug])}</p>
+              ) : (
+                series.latestTitle && <p>أحدث حلقة: {series.latestTitle}</p>
+              )}
+              {series.latestDate && <p class="content-card__meta">آخر حلقة {series.latestDate}</p>}
             </article>
           </a>
         ))}

@@ -4,6 +4,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { getEntryPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { seriesIntroLead, seriesIntrosEn } from '../../../../../config/series-intros';
 
 export async function getStaticPaths() {
   const articles = (await getCollection('articles')).filter(
@@ -37,9 +38,10 @@ const seriesArticles = (await getCollection('articles'))
 
 const firstArticle = seriesArticles[0];
 const lastArticle = seriesArticles[seriesArticles.length - 1];
+const seriesIntro = seriesIntrosEn[seriesSlug];
 const seoTitle = buildSeoTitle(seriesTitle, { lang: 'en', section: 'Article Series' });
 const seoDescription = buildSeoDescription(
-  `${seriesTitle}: a ${seriesArticles.length}-part series by Dr. Haitham A. El-Ghareeb.`,
+  seriesIntroLead(seriesIntro) ?? `${seriesTitle}: a ${seriesArticles.length}-part series by Dr. Haitham A. El-Ghareeb.`,
   [
     firstArticle?.data.category,
     lastArticle?.data.date ? `Latest part ${lastArticle.data.date}` : undefined,
@@ -58,10 +60,11 @@ const seoDescription = buildSeoDescription(
       <p class="hero__eyebrow">Article Series</p>
       <h1 class="hero__title">{seriesTitle}</h1>
       <p class="hero__lead">
-        A {seriesArticles.length}-part series{firstArticle?.data.category ? ` in ${firstArticle.data.category}` : ''}, listed in reading order.
+        {seriesIntro ?? `A ${seriesArticles.length}-part series${firstArticle?.data.category ? ` in ${firstArticle.data.category}` : ''}, listed in reading order.`}
       </p>
 
       <div class="hero__badge-row">
+        {seriesIntro && firstArticle?.data.category && <span class="hero__badge">{firstArticle.data.category}</span>}
         <span class="hero__badge">{seriesArticles.length} parts</span>
         {firstArticle?.data.date && <span class="hero__badge">First: {firstArticle.data.date}</span>}
         {lastArticle?.data.date && <span class="hero__badge">Latest: {lastArticle.data.date}</span>}

@@ -4,6 +4,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { getArticleSeriesPath } from '../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { seriesIntroLead, seriesIntrosEn } from '../../../../../config/series-intros';
 
 const articles = (await getCollection('articles')).filter(
   (entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.series && entry.data.seriesSlug,
@@ -60,7 +61,7 @@ const seoTitle = buildSeoTitle('Article Series', {
   section: 'Dr. Haitham A. El-Ghareeb',
 });
 const seoDescription = buildSeoDescription(
-  `${seriesEntries.length} multi-part article series by Dr. Haitham A. El-Ghareeb, from The Mizan Series on weighing doubts to book summaries and a study of Surat al-Saff.`,
+  `${seriesEntries.length} article series: summaries of explanations of al-Shafi'i's al-Risala, Shaykh Salih al-Azhari's manuscript-studies courses, book summaries, and studies in tafsir, spiritual counsel and answering doubts.`,
   [seriesEntries[0]?.latestDate ? `Latest part ${seriesEntries[0].latestDate}` : undefined],
 );
 ---
@@ -76,7 +77,9 @@ const seoDescription = buildSeoDescription(
       <p class="hero__eyebrow">Article Series</p>
       <h1 class="hero__title">Article Series</h1>
       <p class="hero__lead">
-        Multi-part studies and book summaries, each readable in order from the first part to the last.
+        Summaries of two explanations of al-Shafi'i's al-Risala and of Shaykh Salih al-Azhari's courses in manuscript
+        studies; summaries of books by Shaykh Professor Ahmad Abd al-Rahman al-Naqeeb, including his study of Surat al-Saff; and series on
+        preparing the heart for Ramadan and on weighing doubts about the Sunnah.
       </p>
 
       <div class="hero__actions">
@@ -93,8 +96,12 @@ const seoDescription = buildSeoDescription(
                 {[series.category, `${series.count} parts`].filter(Boolean).join(' | ')}
               </p>
               <h3>{series.title}</h3>
-              {series.latestTitle && <p>Latest part: {series.latestTitle}</p>}
-              {series.latestDate && <p class="content-card__meta">{series.latestDate}</p>}
+              {seriesIntrosEn[series.slug] ? (
+                <p>{seriesIntroLead(seriesIntrosEn[series.slug])}</p>
+              ) : (
+                series.latestTitle && <p>Latest part: {series.latestTitle}</p>
+              )}
+              {series.latestDate && <p class="content-card__meta">Latest part {series.latestDate}</p>}
             </article>
           </a>
         ))}

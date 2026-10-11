@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان الدرس: القواعد المنهجية المتقدمة في تحقيق النصوص الخطية"
 category: "علوم المخطوطات"
+translationKey: "manuscript-mastery-course-012"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 12

@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان المحاضرة: دراسة خطوط العلماء ومهارات التمييز بين النصوص والمخطوطات"
 category: "علوم المخطوطات"
+translationKey: "manuscript-mastery-course-018"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 18

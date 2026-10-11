@@ -10,5 +10,6 @@ tags:
   - "تعليل"
   - "السواك"
 sourceRef: "تفكيك السؤال المركب 13 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-13-08"
 draft: false
 ---

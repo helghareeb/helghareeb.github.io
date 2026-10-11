@@ -10,5 +10,6 @@ tags:
   - "التيمم"
   - "شروط"
 sourceRef: "تفكيك السؤال المركب 12 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-12-09"
 draft: false
 ---

@@ -10,5 +10,6 @@ tags:
   - "اختيار"
   - "الاستحاضة"
 sourceRef: "تفكيك السؤال المركب 14 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-14-12"
 draft: false
 ---

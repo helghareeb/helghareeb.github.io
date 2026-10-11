@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان الدرس: التحليل النقدي لقيود النسخ في المخطوط العربي"
 category: "علوم المخطوطات"
+translationKey: "manuscript-copyist-course-002"
 series: "الدورة السادسة: ضوابط وقرائن التعرف على اسم الناسخ وتاريخ النسخ في المخطوطات العربية - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-copyist-course"
 seriesOrder: 2

@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: ""
 category: "علوم المخطوطات"
+translationKey: "manuscript-nafisa-samaat-course-003"
 series: "الدورة الخامسة: قراءة في سماعات مخطوطات نفيسة - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-nafisa-samaat-course"
 seriesOrder: 3

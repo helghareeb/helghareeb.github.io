@@ -11,6 +11,7 @@ tags:
   - "الاستنجاء"
   - "تصحيح أوهام"
 sourceRef: "شرح ابن جبرين 001 - أحكام الاستنجاء"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-02"
 draft: false
 ---
 

@@ -10,5 +10,6 @@ tags:
   - "الغسل"
   - "سنن"
 sourceRef: "تفكيك السؤال المركب 12 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-12-06"
 draft: false
 ---

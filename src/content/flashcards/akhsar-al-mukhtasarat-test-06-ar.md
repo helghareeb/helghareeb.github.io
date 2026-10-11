@@ -10,6 +10,7 @@ tags:
   - "متوسط"
   - "المسح"
 sourceRef: "شرح ابن جبرين 001 - جواز المسح على العمامة والجبيرة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-test-06"
 draft: false
 ---
 

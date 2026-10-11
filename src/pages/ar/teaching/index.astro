@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+
+type Course = {
+  name: string;
+  englishName: string;
+  level?: string;
+  description: string;
+  materialLabel: string;
+  materialHref: string;
+  repoHref: string;
+};
+
+const courses: Course[] = [
+  {
+    name: 'هياكل البيانات والخوارزميات',
+    englishName: 'Data Structures and Algorithms',
+    level: 'CS2101 / IS122',
+    description:
+      'مقرر يقوم على الكتاب، يبني فيه الطلاب كل هيكل بيانات بأنفسهم. يجمع كتاب الطالب المحاضرات الخمس عشرة وبنك الأسئلة بإجاباته، ويضيف المستودع الشيفرة المصدرية للمقرر بلغة Python والمعامل والدفاتر التفاعلية والشروح المصوّرة.',
+    materialLabel: 'كتاب المقرر (بالإنجليزية)',
+    materialHref: getEntryPath('books', 'en', 'data-structures-and-algorithms-dsa27-book-en'),
+    repoHref: 'https://github.com/helghareeb/DSA27',
+  },
+  {
+    name: 'مقدمة في نظم المعلومات',
+    englishName: 'Introduction to Information Systems',
+    description:
+      'كتاب المقرر «أساسيات نظم المعلومات» مكتوبًا بنظام LaTeX مع نسخته المجمّعة بصيغة PDF، وبنك أسئلة، والشرائح المستخدمة في المحاضرات الأسبوعية.',
+    materialLabel: 'كتاب المقرر (بالإنجليزية)',
+    materialHref: getEntryPath('books', 'en', 'fundamentals-of-information-systems-book-en'),
+    repoHref: 'https://github.com/helghareeb/IIS',
+  },
+  {
+    name: 'تخزين المعلومات واسترجاعها',
+    englishName: 'Information Storage and Retrieval',
+    level: 'مقرر للدراسات العليا',
+    description:
+      'كتاب يتدرّج من الاسترجاع البولياني إلى الترتيب والتقييم والتوليد المعزَّز بالاسترجاع ونظم البحث الموزعة، تُختم فصوله بأسئلة اختيار من متعدد، وتضم ملاحقه بنك أسئلة مقالية ومعامل تطبيقية على Linux وPython.',
+    materialLabel: 'الكتاب (بالإنجليزية)',
+    materialHref: getEntryPath('books', 'en', 'information-storage-and-retrieval-book-en'),
+    repoHref: 'https://github.com/helghareeb/ISR',
+  },
+  {
+    name: 'نظم دعم القرار',
+    englishName: 'Decision Support Systems',
+    description:
+      'كتاب يتناول مفاهيم دعم القرار، وتعلّم الآلة، وذكاء الأعمال، ونظم التوصية، وتحليل القرار، منشور مع مجموعات الشرائح المصاحبة له.',
+    materialLabel: 'الكتاب (بالإنجليزية)',
+    materialHref: getEntryPath('books', 'en', 'decision-support-systems-book-en'),
+    repoHref: 'https://github.com/helghareeb/DSS',
+  },
+  {
+    name: 'التصور المعلوماتي',
+    englishName: 'Information Visualization',
+    description: 'خطة المقرر على اثني عشر أسبوعًا، تبيّن موضوع كل أسبوع ومحوره التطبيقي.',
+    materialLabel: 'صفحة المستودع',
+    materialHref: getEntryPath('projects', 'ar', 'information-visualization-course-repo-ar'),
+    repoHref: 'https://github.com/helghareeb/iv',
+  },
+  {
+    name: 'التجارة الإلكترونية',
+    englishName: 'E-Commerce',
+    description:
+      'كتاب «نظم التجارة الإلكترونية المدعومة بالذكاء الاصطناعي» في أربعة عشر فصلًا، تتناول استراتيجية المنصات، وهندسة المؤسسات، وأسس البيانات، وتطبيقات الذكاء الاصطناعي، والتكامل، والحوكمة، والتشغيل.',
+    materialLabel: 'الكتاب (بالإنجليزية)',
+    materialHref: getEntryPath('books', 'en', 'ai-driven-ecommerce-systems-en'),
+    repoHref: 'https://github.com/helghareeb/e-Commerce',
+  },
+];
+
+const advancedCourses = [
+  'هندسة المؤسسات',
+  'تكامل المؤسسات',
+  'موضوعات مختارة ومتقدمة في نظم المعلومات',
+  'قواعد البيانات الموزعة',
+  'قواعد البيانات المتقدمة',
+];
+
+const coreCourses = [
+  'هياكل البيانات والخوارزميات',
+  'رسوميات الحاسب',
+  'تصميم نظم المعلومات',
+  'لغات البرمجة المتقدمة',
+  'تحليل النظم',
+  'تصميم النظم',
+  'شبكات الحاسب',
+  'قواعد البيانات',
+  'تنظيم الملفات',
+  'هندسة البرمجيات',
+  'مقدمة في نظم المعلومات',
+];
+
+const seoTitle = buildSeoTitle('التدريس', {
+  lang: 'ar',
+  section: 'التدريس',
+});
+const seoDescription = buildSeoDescription(
+  'المقررات التي درّسها د. هيثم الغريب بكلية الحاسبات والمعلومات، جامعة المنصورة، مع كتبها ومستودعاتها المفتوحة، وسجله في الإشراف على رسائل الدراسات العليا ومناقشتها.',
+  courses.map((course) => course.name),
+);
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title={seoTitle}
+  description={seoDescription}
+>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">التدريس</p>
+      <h1 class="hero__title">التدريس</h1>
+      <p class="hero__lead">
+        مقررات في نظم المعلومات وعلوم الحاسب لمرحلتي البكالوريوس والدراسات العليا بكلية
+        الحاسبات والمعلومات، جامعة المنصورة، منذ عام 2005، ولعدد منها كتب مفتوحة منشورة على
+        GitHub.
+      </p>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/ar/books/">الكتب</a>
+        <a class="button-secondary" href="https://github.com/helghareeb">حساب GitHub</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">مواد مفتوحة</p>
+        <h2 class="section-title">مقررات لها كتب مفتوحة</h2>
+      </div>
+
+      <div class="grid-two">
+        {courses.map((course) => (
+          <article class="content-card">
+            {course.level && <p class="content-card__meta"><span dir="auto">{course.level}</span></p>}
+            <h3>{course.name}</h3>
+            <p class="content-card__meta"><span dir="ltr" lang="en">{course.englishName}</span></p>
+            <p>{course.description}</p>
+            <div class="hero__actions">
+              <a class="button-secondary" href={course.materialHref}>{course.materialLabel}</a>
+              <a class="button-secondary" href={course.repoHref}>مستودع GitHub</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">السجل التدريسي</p>
+        <h2 class="section-title">المقررات التي درّسها</h2>
+      </div>
+
+      <div class="grid-two">
+        <article class="feature-card">
+          <h3>مقررات عليا ومتقدمة</h3>
+          <ul class="list-clean">
+            {advancedCourses.map((course) => <li>{course}</li>)}
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>مقررات أساسية في الحاسب ونظم المعلومات</h3>
+          <ul class="list-clean">
+            {coreCourses.map((course) => <li>{course}</li>)}
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">الدراسات العليا</p>
+        <h2 class="section-title">الإشراف على الرسائل ومناقشتها</h2>
+      </div>
+
+      <div class="grid-two">
+        <article class="stat-card">
+          <strong>28</strong>
+          <span>رسالة ماجستير ودكتوراه أشرف عليها.</span>
+        </article>
+        <article class="stat-card">
+          <strong>45</strong>
+          <span>رسالة ماجستير ودكتوراه شارك في مناقشتها ممتحنًا داخليًا أو خارجيًا.</span>
+        </article>
+      </div>
+
+      <article class="notice-card">
+        <p>
+          نوقشت هذه الرسائل في كلية الحاسبات والمعلومات بجامعة المنصورة والكليات الشريكة،
+          وتتناول موضوعات منها: نظم المعلومات الذكية، وعلم البيانات والبيانات الضخمة، والتشخيص
+          الطبي القائم على تعلّم الآلة والتعلّم العميق، واتخاذ القرار النيوتروسوفيكي، ونظم
+          التوصية، والتعليم الإلكتروني، وكشف الاحتيال والاختراق، وتحليل المشاعر.
+        </p>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

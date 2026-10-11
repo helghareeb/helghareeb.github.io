@@ -9,6 +9,7 @@ const links = (await getCollection('externalLinks')).filter((entry) => entry.dat
 const findLink = (routeSlug: string) => links.find((entry) => entry.slug === `${routeSlug}-en`);
 const journalLink = findLink('mjcis-journal');
 const defenseLink = findLink('mansoura-phd-defense-committee');
+const facultyPostLink = findLink('faculty-facebook-post');
 
 const roles = [
   {
@@ -29,14 +30,25 @@ const roles = [
     venue: 'Advances in Information Sciences and Service Sciences (AISS)',
   },
   {
+    period: 'Former',
     title: 'IT Editorial Board Member and Educational Reviewer',
     venue: 'MERLOT (Multimedia Educational Resource for Learning and Online Teaching)',
   },
+  ...(facultyPostLink
+    ? [
+        {
+          period: '15 September 2022',
+          title: 'Member of a Ph.D. examination committee: Knowledge Discovery Technique for Medical Big Data',
+          venue: 'Faculty of Computers and Information, Mansoura University',
+          href: getEntryPath('externalLinks', 'en', facultyPostLink.slug),
+        },
+      ]
+    : []),
   ...(defenseLink
     ? [
         {
           period: 'July 2023',
-          title: 'Member of a Ph.D. examination committee',
+          title: 'Member of a Ph.D. examination committee: A Proposed Framework for Outlier Detection of Stream Data',
           venue: 'Information Systems, Faculty of Computers and Information, Mansoura University',
           href: getEntryPath('externalLinks', 'en', defenseLink.slug),
         },
@@ -49,7 +61,7 @@ const seoTitle = buildSeoTitle('Academic Reviewing', {
   section: 'Scholarly Fields',
 });
 const seoDescription = buildSeoDescription(
-  'Editorial and reviewing roles of Dr. Haitham A. El-Ghareeb: Managing Editor of MJCIS, AISS technical editor and reviewer, MERLOT educational reviewer, and Ph.D. examination committee member.',
+  'Editorial and reviewing roles of Dr. Haitham A. El-Ghareeb: Managing Editor of MJCIS, AISS technical editor and reviewer, former MERLOT educational reviewer, and Ph.D. examination committee member.',
   [],
 );
 ---

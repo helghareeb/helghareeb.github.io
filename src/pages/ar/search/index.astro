@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+
+const translations = {
+  placeholder: 'اكتب كلمة أو عبارة',
+  clear_search: 'مسح',
+  load_more: 'عرض مزيد من النتائج',
+  search_label: 'البحث في الموقع',
+  filters_label: 'التصفية',
+  zero_results: 'لا نتائج لـ «[SEARCH_TERM]»',
+  many_results: 'عدد النتائج لـ «[SEARCH_TERM]»: [COUNT]',
+  one_result: 'نتيجة واحدة لـ «[SEARCH_TERM]»',
+  alt_search: 'لا نتائج لـ «[SEARCH_TERM]»، وهذه نتائج «[DIFFERENT_TERM]»',
+  search_suggestion: 'لا نتائج لـ «[SEARCH_TERM]». جرّب كلمة أخرى:',
+  searching: 'جارٍ البحث عن «[SEARCH_TERM]»...',
+};
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="البحث في الموقع | د. هيثم الغريب"
+  description="البحث في مقالات الموقع العربية وكتبه وتحقيقاته وفوائد المذاكرة."
+  searchable={false}
+>
+  <link slot="head" rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">البحث</p>
+      <h1 class="hero__title">البحث في الموقع</h1>
+      <p class="hero__lead">
+        يشمل البحث صفحات النسخة العربية: المقالات والكتب والتحقيقات والمشروعات وفوائد المذاكرة.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="site-search" id="site-search" data-translations={JSON.stringify(translations)}>
+        <noscript>
+          <p class="site-search__noscript">
+            يعمل البحث بتفعيل JavaScript في المتصفح، ويمكن تصفح الأقسام من <a href="/ar/site-map/">دليل الموقع</a>.
+          </p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    (function () {
+      var element = document.getElementById('site-search');
+      if (!element || typeof PagefindUI === 'undefined') return;
+      var translations = JSON.parse(element.dataset.translations || '{}');
+      var input = new URLSearchParams(window.location.search).get('q');
+      var ui = new PagefindUI({
+        element: '#site-search',
+        showImages: false,
+        showSubResults: true,
+        translations: translations,
+      });
+      if (input) ui.triggerSearch(input);
+    })();
+  </script>
+</BaseLayout>

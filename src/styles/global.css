@@ -926,3 +926,124 @@ aside.entity-panel {
     min-width: 0;
   }
 }
+
+.pub-list {
+  margin: 0;
+  padding-inline-start: 1.6rem;
+  display: grid;
+  gap: 1rem;
+  text-align: start;
+}
+
+.pub-item p {
+  margin: 0;
+}
+
+.pub-item__title {
+  font-weight: 600;
+}
+
+.pub-item__authors,
+.pub-item__venue {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.pub-item__authors strong {
+  color: var(--text, inherit);
+}
+
+.pub-item__doi a {
+  overflow-wrap: anywhere;
+}
+
+/* Wrapper around each page's content; carries data-pagefind-body without affecting layout. */
+.site-content {
+  display: contents;
+}
+
+.site-header__utility-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.site-search-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.site-search-link.is-active {
+  color: var(--text);
+  background: rgba(138, 106, 47, 0.1);
+}
+
+.site-search-link__icon {
+  flex: none;
+}
+
+/* Site search page (Pagefind UI) */
+.site-search {
+  --pagefind-ui-scale: 0.9;
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--text);
+  --pagefind-ui-background: var(--surface-strong);
+  --pagefind-ui-border: rgba(38, 73, 59, 0.16);
+  --pagefind-ui-tag: rgba(138, 106, 47, 0.12);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: var(--radius-sm);
+  --pagefind-ui-font: "Baskerville Old Face", "Amiri", "Iowan Old Style", Georgia, serif;
+  padding: 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.site-search .pagefind-ui__search-input {
+  font-family: inherit;
+}
+
+.site-search .pagefind-ui__result-link {
+  color: var(--accent);
+}
+
+.site-search .pagefind-ui__result-excerpt mark {
+  background: rgba(138, 106, 47, 0.2);
+  color: inherit;
+}
+
+/* Pagefind UI positions its icon and clear button for LTR only; mirror them for Arabic. */
+[dir="rtl"] .site-search .pagefind-ui__search-input {
+  padding: 0 calc(54px * var(--pagefind-ui-scale)) 0 calc(70px * var(--pagefind-ui-scale));
+}
+
+[dir="rtl"] .site-search .pagefind-ui__form::before {
+  left: auto;
+  right: calc(20px * var(--pagefind-ui-scale));
+}
+
+[dir="rtl"] .site-search .pagefind-ui__search-clear {
+  right: auto;
+  left: calc(3px * var(--pagefind-ui-scale));
+  padding: 0 calc(2px * var(--pagefind-ui-scale)) 0 calc(15px * var(--pagefind-ui-scale));
+}
+
+.site-search__noscript {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .site-header__utility-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-search {
+    padding: 1rem;
+  }
+}

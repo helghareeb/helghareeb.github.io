@@ -10,6 +10,7 @@ tags:
   - "متقدم"
   - "الجبيرة"
 sourceRef: "شرح ابن جبرين 001 - جواز المسح على العمامة والجبيرة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-09"
 draft: false
 ---
 

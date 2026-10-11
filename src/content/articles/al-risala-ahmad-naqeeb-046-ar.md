@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-28"
 summary: "بسم الله الرحمن الرحيم، والصلاة والسلام على أشرف الأنبياء والمرسلين، نبينا محمد وعلى آله وصحبه أجمعين."
 category: "أصول الفقه"
+translationKey: "al-risala-naqeeb-046"
 series: "ملخص شرح كتاب الرسالة - الشيخ د. أحمد النقيب"
 seriesSlug: "al-risala-ahmad-naqeeb"
 seriesOrder: 46

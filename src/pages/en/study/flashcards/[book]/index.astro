@@ -2,6 +2,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../../../../layouts/BaseLayout.astro';
 import '../../../../../styles/global.css';
+import { getFlashcardModePath } from '../../../../../utils/content-routing';
 import { buildSeoDescription, buildSeoTitle } from '../../../../../utils/seo';
 
 export async function getStaticPaths() {
@@ -18,22 +19,21 @@ export async function getStaticPaths() {
 const { deck } = Astro.props as { deck: CollectionEntry<'flashcardDecks'> };
 const deckRouteSlug = deck.slug.replace(/-(ar|en)$/, '');
 const cards = (await getCollection('flashcards')).filter(
-  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.deckSlug === deckRouteSlug,
+  (entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.deckSlug === deckRouteSlug,
 );
 const counts = {
   review: cards.filter((card) => card.data.mode === 'review').length,
   training: cards.filter((card) => card.data.mode === 'training').length,
   test: cards.filter((card) => card.data.mode === 'test').length,
 };
-const arabicPath = (mode?: 'review' | 'training' | 'test' | 'results') =>
-  `/ar/study/flashcards/${deckRouteSlug}/${mode ? `${mode}/` : ''}`;
+const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
 const seoTitle = buildSeoTitle(deck.data.title, {
   lang: 'en',
   section: 'Flashcards',
 });
 const seoDescription = buildSeoDescription(deck.data.summary, [
   deck.data.field,
-  `${cards.length} questions in Arabic`,
+  plural(cards.length, 'question', 'questions'),
 ]);
 ---
 
@@ -46,47 +46,37 @@ const seoDescription = buildSeoDescription(deck.data.summary, [
 
       <div class="hero__badge-row">
         <span class="hero__badge">{deck.data.field}</span>
-        <span class="hero__badge">{cards.length} questions in Arabic</span>
+        <span class="hero__badge">{plural(cards.length, 'question', 'questions')}</span>
+        {deck.data.status && <span class="hero__badge">{deck.data.status}</span>}
       </div>
-
-      <div class="hero__actions">
-        <a class="button" href={arabicPath()}>Open the deck (Arabic)</a>
-      </div>
-    </section>
-
-    <section class="shell notice-card">
-      <p>
-        The questions and answers in this deck are in Arabic. Each mode below opens the Arabic version
-        of the deck.
-      </p>
     </section>
 
     <section class="shell section">
       <div class="grid-two">
-        <a class="card-link" href={arabicPath('review')}>
+        <a class="card-link" href={getFlashcardModePath('en', deck.slug, 'review')}>
           <article class="content-card entity-card">
-            <p class="content-card__meta">{counts.review} cards</p>
+            <p class="content-card__meta">Step 1 · {plural(counts.review, 'card', 'cards')}</p>
             <h3>Review</h3>
             <p>See each question together with its answer before moving on to active recall.</p>
           </article>
         </a>
-        <a class="card-link" href={arabicPath('training')}>
+        <a class="card-link" href={getFlashcardModePath('en', deck.slug, 'training')}>
           <article class="content-card entity-card">
-            <p class="content-card__meta">{counts.training} questions</p>
+            <p class="content-card__meta">Step 2 · {plural(counts.training, 'question', 'questions')}</p>
             <h3>Training</h3>
             <p>Try to recall the answer first, then reveal it and mark whether you knew it.</p>
           </article>
         </a>
-        <a class="card-link" href={arabicPath('test')}>
+        <a class="card-link" href={getFlashcardModePath('en', deck.slug, 'test')}>
           <article class="content-card entity-card">
-            <p class="content-card__meta">{counts.test} questions</p>
+            <p class="content-card__meta">Step 3 · {plural(counts.test, 'question', 'questions')}</p>
             <h3>Test</h3>
             <p>Work through the questions as an assessment to measure what you have retained.</p>
           </article>
         </a>
-        <a class="card-link" href={arabicPath('results')}>
+        <a class="card-link" href={getFlashcardModePath('en', deck.slug, 'results')}>
           <article class="content-card entity-card">
-            <p class="content-card__meta">Saved in your browser</p>
+            <p class="content-card__meta">Step 4 · Saved in your browser</p>
             <h3>Results</h3>
             <p>Your score so far and the list of questions you missed, ready to repeat.</p>
           </article>

@@ -12,6 +12,8 @@ export interface Props {
   lang?: 'ar' | 'en';
   dir?: 'rtl' | 'ltr';
   noindex?: boolean;
+  /** Include this page's main content in the Pagefind search index. Defaults to !noindex. */
+  searchable?: boolean;
 }
 
 const {
@@ -20,6 +22,7 @@ const {
   lang = 'ar',
   dir = lang === 'ar' ? 'rtl' : 'ltr',
   noindex = false,
+  searchable = !noindex,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -37,6 +40,8 @@ const author = lang === 'ar' ? siteConfig.authorAr : siteConfig.authorEn;
 const baseDescription = lang === 'ar' ? siteConfig.descriptionAr : siteConfig.descriptionEn;
 const normalizedDescription = description || baseDescription;
 const alternateLang = lang === 'ar' ? 'en' : 'ar';
+const rssUrl = new URL(`/${lang}/rss.xml`, siteConfig.siteUrl).toString();
+const rssTitle = lang === 'ar' ? `${author}: المقالات` : `${author}: Articles`;
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -106,16 +111,20 @@ const structuredData = {
     <link rel="alternate" hreflang={lang} href={canonicalUrl} />
     <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
     <link rel="alternate" hreflang="x-default" href={new URL('/', siteConfig.siteUrl).toString()} />
+    <link rel="alternate" type="application/rss+xml" title={rssTitle} href={rssUrl} />
     <link rel="sitemap" href={new URL('/sitemap.xml', siteConfig.siteUrl).toString()} />
     <title>{title}</title>
     <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
     <SiteAnalytics />
+    <slot name="head" />
   </head>
   <body>
     <div class="site-frame">
       <SiteHeader lang={lang} currentPath={currentPath} />
       <SiteBreadcrumbs lang={lang} currentPath={currentPath} currentTitle={title.split(' | ')[0]} />
-      <slot />
+      <div class="site-content" data-pagefind-body={searchable ? '' : undefined}>
+        <slot />
+      </div>
       <SiteFooter lang={lang} currentPath={currentPath} />
     </div>
   </body>

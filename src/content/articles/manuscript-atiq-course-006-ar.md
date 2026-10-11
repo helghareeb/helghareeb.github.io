@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "المحاضرة ركزت على التفاعل مع الإشكالات العملية في قراءة وتحليل المخطوطات، وقدمت توجيهات منهجية مهمة يمكن أن تفيد المحققين في أعمالهم المستقبلية."
 category: "علوم المخطوطات"
+translationKey: "manuscript-atiq-course-006"
 series: "الدورة الثانية: قراءة في مخطوطات عتاق - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-atiq-course"
 seriesOrder: 6

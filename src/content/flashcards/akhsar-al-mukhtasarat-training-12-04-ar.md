@@ -10,5 +10,6 @@ tags:
   - "الوضوء"
   - "استحباب"
 sourceRef: "تفكيك السؤال المركب 12 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-12-04"
 draft: false
 ---

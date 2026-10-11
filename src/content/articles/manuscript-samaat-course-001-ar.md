@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان الدرس: السَّماعات المثبتة على المخطوطات – البناء والإفادة ومهارات التحليل"
 category: "علوم المخطوطات"
+translationKey: "manuscript-samaat-course-001"
 series: "الدورة الرابعة: السماعات المثبتة على المخطوطات - البناء، والإفادة، ومهارات التحليل - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-samaat-course"
 seriesOrder: 1

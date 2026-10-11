@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان الدرس: تحليل آليات التوثيق في المخطوطات العربية: دراسة نقدية متقدمة"
 category: "علوم المخطوطات"
+translationKey: "manuscript-mastery-course-011"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 11

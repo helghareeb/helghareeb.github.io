@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "هل ترغب في مزيد من التفصيل حول أحد العناصر أو التوسع في موضوع معين؟"
 category: "علوم المخطوطات"
+translationKey: "manuscript-nafisa-samaat-course-002"
 series: "الدورة الخامسة: قراءة في سماعات مخطوطات نفيسة - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-nafisa-samaat-course"
 seriesOrder: 2

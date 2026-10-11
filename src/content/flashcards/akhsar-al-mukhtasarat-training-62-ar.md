@@ -11,5 +11,6 @@ tags:
   - "النجاسات"
   - "تمييز"
 sourceRef: "سؤال تدريبي مضاف من المستخدم - بصياغة مذكر"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-62"
 draft: false
 ---

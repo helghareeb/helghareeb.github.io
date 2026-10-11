@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "تعريفات"
 sourceRef: "شرح ابن جبرين 001 - تعريف الفقه والفهم"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-01"
 draft: false
 ---
 

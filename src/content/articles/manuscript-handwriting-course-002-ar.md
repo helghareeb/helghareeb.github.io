@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان المحاضرة: الدراسة النقدية للنسخ الخطية والمفهرسات"
 category: "علوم المخطوطات"
+translationKey: "manuscript-handwriting-course-002"
 series: "الدورة السابعة: دورة دراسة النسخ الخطية مسارات ومهارات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-handwriting-course"
 seriesOrder: 2

@@ -10,5 +10,6 @@ tags:
   - "تعليل"
   - "مكة"
 sourceRef: "تفكيك السؤال المركب 13 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-13-04"
 draft: false
 ---

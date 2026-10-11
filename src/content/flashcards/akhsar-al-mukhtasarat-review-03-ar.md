@@ -10,6 +10,7 @@ tags:
   - "متوسط"
   - "تقسيمات"
 sourceRef: "شرح ابن جبرين 001 - أقسام العلماء بالنسبة للحفظ والفهم"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-03"
 draft: false
 ---
 

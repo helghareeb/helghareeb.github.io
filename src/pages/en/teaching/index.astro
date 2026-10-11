@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { getEntryPath } from '../../../utils/content-routing';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+
+type Course = {
+  name: string;
+  level?: string;
+  description: string;
+  materialLabel: string;
+  materialHref: string;
+  repoHref: string;
+};
+
+const courses: Course[] = [
+  {
+    name: 'Data Structures and Algorithms',
+    level: 'CS2101 / IS122',
+    description:
+      'A book-first course in which students implement every data structure themselves. The students\' book collects the fifteen lectures and the question bank with its answers, and the repository adds the Python codebase, labs, notebooks and visual walkthroughs.',
+    materialLabel: 'Course book',
+    materialHref: getEntryPath('books', 'en', 'data-structures-and-algorithms-dsa27-book-en'),
+    repoHref: 'https://github.com/helghareeb/DSA27',
+  },
+  {
+    name: 'Introduction to Information Systems',
+    description:
+      'The course book Fundamentals of Information Systems, written in LaTeX with a compiled PDF, a question bank and the slides used in the weekly lectures.',
+    materialLabel: 'Course book',
+    materialHref: getEntryPath('books', 'en', 'fundamentals-of-information-systems-book-en'),
+    repoHref: 'https://github.com/helghareeb/IIS',
+  },
+  {
+    name: 'Information Storage and Retrieval',
+    level: 'Graduate course',
+    description:
+      'A textbook running from Boolean retrieval through ranking, evaluation, retrieval-augmented generation and distributed search, with chapter MCQs, an essay question bank and Linux and Python labs.',
+    materialLabel: 'Textbook',
+    materialHref: getEntryPath('books', 'en', 'information-storage-and-retrieval-book-en'),
+    repoHref: 'https://github.com/helghareeb/ISR',
+  },
+  {
+    name: 'Decision Support Systems',
+    description:
+      'A textbook covering decision support concepts, machine learning, business intelligence, recommender systems and decision analysis, published with its companion slide decks.',
+    materialLabel: 'Textbook',
+    materialHref: getEntryPath('books', 'en', 'decision-support-systems-book-en'),
+    repoHref: 'https://github.com/helghareeb/DSS',
+  },
+  {
+    name: 'Information Visualization',
+    description:
+      'A twelve-week course plan setting out the topic and lab focus of each week.',
+    materialLabel: 'Course repository page',
+    materialHref: getEntryPath('projects', 'en', 'information-visualization-course-repo-en'),
+    repoHref: 'https://github.com/helghareeb/iv',
+  },
+  {
+    name: 'E-Commerce',
+    description:
+      'The book AI-Driven E-Commerce Systems, in fourteen chapters on platform strategy, enterprise architecture, data foundations, applied AI, integration, governance and operations.',
+    materialLabel: 'Book',
+    materialHref: getEntryPath('books', 'en', 'ai-driven-ecommerce-systems-en'),
+    repoHref: 'https://github.com/helghareeb/e-Commerce',
+  },
+];
+
+const advancedCourses = [
+  'Enterprise Architecture',
+  'Enterprise Integration',
+  'Selected / Advanced Topics in Information Systems',
+  'Distributed Database Systems',
+  'Advanced Database Systems',
+];
+
+const coreCourses = [
+  'Data Structures and Algorithms',
+  'Computer Graphics',
+  'Information Systems Design',
+  'Advanced Programming Languages',
+  'Systems Analysis',
+  'Systems Design',
+  'Computer Networks',
+  'Database Systems',
+  'File Organization',
+  'Software Engineering',
+  'Introduction to Information Systems',
+];
+
+const seoTitle = buildSeoTitle('Teaching', {
+  lang: 'en',
+  section: 'Dr. Haitham A. El-Ghareeb',
+});
+const seoDescription = buildSeoDescription(
+  'Courses taught by Dr. Haitham A. El-Ghareeb at the Faculty of Computers and Information, Mansoura University, with their open textbooks and repositories, and his graduate supervision record.',
+  courses.map((course) => course.name),
+);
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title={seoTitle}
+  description={seoDescription}
+>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Teaching</p>
+      <h1 class="hero__title">Teaching</h1>
+      <p class="hero__lead">
+        Undergraduate and graduate courses in information systems and computer science at the
+        Faculty of Computers and Information, Mansoura University, taught since 2005, several of
+        them with open textbooks published on GitHub.
+      </p>
+
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/books/">Books</a>
+        <a class="button-secondary" href="https://github.com/helghareeb">GitHub profile</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Open Course Materials</p>
+        <h2 class="section-title">Courses with open textbooks</h2>
+      </div>
+
+      <div class="grid-two">
+        {courses.map((course) => (
+          <article class="content-card">
+            {course.level && <p class="content-card__meta">{course.level}</p>}
+            <h3>{course.name}</h3>
+            <p>{course.description}</p>
+            <div class="hero__actions">
+              <a class="button-secondary" href={course.materialHref}>{course.materialLabel}</a>
+              <a class="button-secondary" href={course.repoHref}>GitHub repository</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Teaching Record</p>
+        <h2 class="section-title">Courses taught</h2>
+      </div>
+
+      <div class="grid-two">
+        <article class="feature-card">
+          <h3>Graduate and upper-division</h3>
+          <ul class="list-clean">
+            {advancedCourses.map((course) => <li>{course}</li>)}
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Core computer science and information systems</h3>
+          <ul class="list-clean">
+            {coreCourses.map((course) => <li>{course}</li>)}
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Graduate Supervision</p>
+        <h2 class="section-title">Theses supervised and examined</h2>
+      </div>
+
+      <div class="grid-two">
+        <article class="stat-card">
+          <strong>28</strong>
+          <span>M.Sc. and Ph.D. theses supervised.</span>
+        </article>
+        <article class="stat-card">
+          <strong>45</strong>
+          <span>M.Sc. and Ph.D. theses examined as internal or external examiner.</span>
+        </article>
+      </div>
+
+      <article class="notice-card">
+        <p>
+          The theses were defended at the Faculty of Computers and Information, Mansoura
+          University, and partner faculties. Their subjects include intelligent information
+          systems, data science and big data, machine and deep learning for medical diagnosis,
+          neutrosophic decision-making, recommender systems, e-learning, fraud and intrusion
+          detection, and sentiment analysis.
+        </p>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

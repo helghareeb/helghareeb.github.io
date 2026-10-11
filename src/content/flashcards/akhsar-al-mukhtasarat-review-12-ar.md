@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "خريطة الباب"
 sourceRef: "شرح ابن جبرين 001 - افتتاح كتاب الطهارة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-12"
 draft: false
 ---
 

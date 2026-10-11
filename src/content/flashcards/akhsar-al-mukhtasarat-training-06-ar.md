@@ -10,6 +10,7 @@ tags:
   - "متوسط"
   - "الوضوء"
 sourceRef: "شرح ابن جبرين 001 - سنن الوضوء"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-06"
 draft: false
 ---
 

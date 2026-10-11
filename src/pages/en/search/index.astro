@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title="Search | Dr. Haitham A. El-Ghareeb"
+  description="Search the English articles, books, critical editions and study notes on the site."
+  searchable={false}
+>
+  <link slot="head" rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Search</p>
+      <h1 class="hero__title">Search</h1>
+      <p class="hero__lead">
+        Searches the English pages of the site: articles, books, critical editions, projects and study notes.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="site-search" id="site-search">
+        <noscript>
+          <p class="site-search__noscript">
+            Search needs JavaScript enabled in the browser. All sections are listed on the
+            <a href="/en/site-map/">Site Index</a>.
+          </p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    (function () {
+      if (!document.getElementById('site-search') || typeof PagefindUI === 'undefined') return;
+      var input = new URLSearchParams(window.location.search).get('q');
+      var ui = new PagefindUI({
+        element: '#site-search',
+        showImages: false,
+        showSubResults: true,
+      });
+      if (input) ui.triggerSearch(input);
+    })();
+  </script>
+</BaseLayout>

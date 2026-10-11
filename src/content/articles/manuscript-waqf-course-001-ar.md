@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "قيود الوقف والتملك والمطالعة في المخطوط العربي: دراسة العناصر ومهارات التحليل"
 category: "علوم المخطوطات"
+translationKey: "manuscript-waqf-course-001"
 series: "الدورة الثالثة: قيود الوقف والتملك والمطالعة في المخطوط العربي، عناصر البناء ومهارات التحليل - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-waqf-course"
 seriesOrder: 1

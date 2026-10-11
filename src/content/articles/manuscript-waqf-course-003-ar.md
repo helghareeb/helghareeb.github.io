@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان الدرس: الفوائد العملية من قيود التملُّك والمطالعة والوقف في المخطوط العربي"
 category: "علوم المخطوطات"
+translationKey: "manuscript-waqf-course-003"
 series: "الدورة الثالثة: قيود الوقف والتملك والمطالعة في المخطوط العربي، عناصر البناء ومهارات التحليل - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-waqf-course"
 seriesOrder: 3

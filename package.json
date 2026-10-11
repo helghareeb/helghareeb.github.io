@@ -6,15 +6,18 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist",
+    "build:astro": "astro build",
     "preview": "astro preview",
     "check": "astro check"
   },
   "dependencies": {
+    "@astrojs/rss": "4.0.19",
     "astro": "^5.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
+    "pagefind": "1.5.2",
     "typescript": "^5.9.3"
   }
 }

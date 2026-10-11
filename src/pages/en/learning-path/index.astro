@@ -9,7 +9,7 @@ const arabicArticles = (await getCollection('articles')).filter(
 const countSeries = (slug: string) => arabicArticles.filter((entry) => entry.data.seriesSlug === slug).length;
 
 const akhsarCards = (await getCollection('flashcards')).filter(
-  (entry) => entry.data.lang === 'ar' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
+  (entry) => entry.data.lang === 'en' && !entry.data.draft && entry.data.deckSlug === 'akhsar-al-mukhtasarat',
 ).length;
 
 const manuscriptCourses = [
@@ -29,8 +29,8 @@ const stages = [
   {
     label: 'Stage 1 · Foundations',
     title: 'Hanbali fiqh with Akhsar al-Mukhtasarat',
-    copy: `Begin with a concise primer in fiqh and fix its rulings through ${akhsarCards} review, training and test questions (in Arabic).`,
-    links: [{ label: 'Akhsar al-Mukhtasarat flashcards (Arabic)', href: '/ar/study/flashcards/akhsar-al-mukhtasarat/' }],
+    copy: `Begin with a concise primer in fiqh and fix its rulings through ${akhsarCards} review, training and test questions.`,
+    links: [{ label: 'Akhsar al-Mukhtasarat flashcards', href: '/en/study/flashcards/akhsar-al-mukhtasarat/' }],
   },
   {
     label: 'Stage 2 · Legal theory',

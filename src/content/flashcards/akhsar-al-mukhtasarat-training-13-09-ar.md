@@ -10,5 +10,6 @@ tags:
   - "تعليل"
   - "الحيض"
 sourceRef: "تفكيك السؤال المركب 13 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-13-09"
 draft: false
 ---

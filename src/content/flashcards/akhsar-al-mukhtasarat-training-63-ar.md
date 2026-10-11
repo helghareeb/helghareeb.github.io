@@ -11,5 +11,6 @@ tags:
   - "المياه"
   - "تطبيق"
 sourceRef: "سؤال تدريبي مضاف من المستخدم - بصياغة مذكر"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-63"
 draft: false
 ---

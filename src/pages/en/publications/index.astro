@@ -1,0 +1,77 @@
+---
+import PublicationList from '../../../components/PublicationList.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { publications, scholarMetrics } from '../../../data/publications';
+
+const groups = [
+  { type: 'journal', title: 'Journal articles' },
+  { type: 'conference', title: 'Conference papers' },
+  { type: 'chapter', title: 'Book chapters' },
+  { type: 'book', title: 'Books' },
+] as const;
+const highlighted = publications.filter((pub) => pub.highlight);
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title="Publications | Dr. Haitham Abdelmonem El-Ghareeb"
+  description="Peer-reviewed journal articles, conference papers, book chapters and books by Dr. Haitham Abdelmonem El-Ghareeb, with DOIs."
+>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Research</p>
+      <h1 class="hero__title">Publications</h1>
+      <p class="hero__lead">
+        {publications.length} works in information systems, neutrosophic decision-making, e-learning,
+        service-oriented and cloud architectures, and edge data processing. Titles with a DOI link
+        to the published version.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-three">
+        <article class="stat-card">
+          <strong>{scholarMetrics.citations}</strong>
+          <span>Citations</span>
+        </article>
+        <article class="stat-card">
+          <strong>{scholarMetrics.hIndex}</strong>
+          <span>h-index</span>
+        </article>
+        <article class="stat-card">
+          <strong>{scholarMetrics.i10Index}</strong>
+          <span>i10-index</span>
+        </article>
+      </div>
+      <p class="content-card__meta">
+        Google Scholar, {scholarMetrics.asOf}. Current figures:
+        <a href="https://scholar.google.com/citations?user=f66uaewAAAAJ&hl=en">Google Scholar</a> ·
+        <a href="https://orcid.org/0000-0003-1875-6706">ORCID</a> ·
+        <a href="https://scholargps.com/scholars/54142940845340/haitham-a-el-ghareeb">ScholarGPS</a> ·
+        <a href="https://ieeexplore.ieee.org/author/37086352024">IEEE Xplore</a>
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">Recent</p>
+        <h2 class="section-title">Highlighted recent journal articles</h2>
+      </div>
+      <PublicationList items={highlighted} />
+    </section>
+
+    {groups.map((group) => {
+      const items = publications.filter((pub) => pub.type === group.type && !pub.highlight);
+      return (
+        <section class="shell section">
+          <div class="section-heading">
+            <h2 class="section-title">{group.title}</h2>
+          </div>
+          <PublicationList items={items} />
+        </section>
+      );
+    })}
+  </main>
+</BaseLayout>

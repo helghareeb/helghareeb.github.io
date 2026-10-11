@@ -10,5 +10,6 @@ tags:
   - "تعليل"
   - "الغسل"
 sourceRef: "تفكيك السؤال المركب 13 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-13-03"
 draft: false
 ---

@@ -10,5 +10,6 @@ tags:
   - "اختيار"
   - "الآنية"
 sourceRef: "تفكيك السؤال المركب 14 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-14-08"
 draft: false
 ---

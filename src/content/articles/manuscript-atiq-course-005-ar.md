@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان الدرس: منهجية القراءة والتحليل في مخطوطات العتاق: تطبيقات على النسخ الخطية"
 category: "علوم المخطوطات"
+translationKey: "manuscript-atiq-course-005"
 series: "الدورة الثانية: قراءة في مخطوطات عتاق - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-atiq-course"
 seriesOrder: 5

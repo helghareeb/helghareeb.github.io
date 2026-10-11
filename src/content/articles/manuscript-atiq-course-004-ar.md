@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "المحاضرة الرابعة: نماذج في قراءة المخطوطات الفقهية – تحليل الأخطاء التصويرية والممارسات التطبيقية"
 category: "علوم المخطوطات"
+translationKey: "manuscript-atiq-course-004"
 series: "الدورة الثانية: قراءة في مخطوطات عتاق - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-atiq-course"
 seriesOrder: 4

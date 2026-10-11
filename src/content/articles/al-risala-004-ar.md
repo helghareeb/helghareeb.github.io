@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-26"
 summary: "مقدمة:"
 category: "أصول الفقه"
+translationKey: "al-risala-004"
 series: "مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي"
 seriesSlug: "al-risala"
 seriesOrder: 4

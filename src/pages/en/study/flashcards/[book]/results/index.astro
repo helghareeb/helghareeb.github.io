@@ -47,11 +47,7 @@ const seoDescription = buildSeoDescription(deck.data.summary, ['Results and miss
     {cards.length === 0 ? (
       <section class="shell section">
         <article class="notice-card">
-          <h2 class="section-title">These flashcards are in Arabic</h2>
-          <p>
-            The questions and answers for {deck.data.bookTitle} are written in Arabic.
-            <a href={`/ar/study/flashcards/${deck.slug.replace(/-(ar|en)$/, '')}/results/`}>Open the results page in Arabic</a>.
-          </p>
+          <p>No questions have been published for this deck yet.</p>
         </article>
       </section>
     ) : (

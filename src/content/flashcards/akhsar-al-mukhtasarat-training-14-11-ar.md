@@ -10,5 +10,6 @@ tags:
   - "اختيار"
   - "الغسل"
 sourceRef: "تفكيك السؤال المركب 14 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-14-11"
 draft: false
 ---

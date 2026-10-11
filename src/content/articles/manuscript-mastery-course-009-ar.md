@@ -4,6 +4,7 @@ lang: "ar"
 date: "2024-12-29"
 summary: "عنوان المحاضرة: “التحقيق في اختلاف النسخ وتحليل منهج العلماء”"
 category: "علوم المخطوطات"
+translationKey: "manuscript-mastery-course-009"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 9

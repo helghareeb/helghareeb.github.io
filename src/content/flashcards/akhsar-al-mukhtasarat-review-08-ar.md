@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "الآنية"
 sourceRef: "شرح ابن جبرين 001 - أحكام الآنية"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-08"
 draft: false
 ---
 

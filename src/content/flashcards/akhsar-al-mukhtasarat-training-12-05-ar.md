@@ -10,5 +10,6 @@ tags:
   - "الغسل"
   - "أركان"
 sourceRef: "تفكيك السؤال المركب 12 إلى بطاقات مستقلة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-training-12-05"
 draft: false
 ---

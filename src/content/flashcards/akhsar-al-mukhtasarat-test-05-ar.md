@@ -10,6 +10,7 @@ tags:
   - "متقدم"
   - "الوضوء"
 sourceRef: "شرح ابن جبرين 001 - سنن الوضوء"
+translationKey: "flashcard-akhsar-al-mukhtasarat-test-05"
 draft: false
 ---
 

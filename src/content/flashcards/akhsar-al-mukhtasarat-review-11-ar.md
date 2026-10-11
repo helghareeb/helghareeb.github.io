@@ -10,6 +10,7 @@ tags:
   - "مبتدئ"
   - "سنن الفطرة"
 sourceRef: "شرح ابن جبرين 001 - سنن الفطرة"
+translationKey: "flashcard-akhsar-al-mukhtasarat-review-11"
 draft: false
 ---
 
