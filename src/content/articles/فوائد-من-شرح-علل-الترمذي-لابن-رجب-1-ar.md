@@ -8,7 +8,7 @@ translationKey: "alukah-benefits-from-ibn-rajabs-commentary-on-al-tirmidhis-ilal
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "6 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/179746/%d9%81%d9%88%d8%a7%d8%a6%d8%af-%d9%85%d9%86-%d8%b4%d8%b1%d8%ad-%d8%b9%d9%84%d9%84-%d8%a7%d9%84%d8%aa%d8%b1%d9%85%d8%b0%d9%8a-%d9%84%d8%a7%d8%a8%d9%86-%d8%b1%d8%ac%d8%a8-1/"
+externalUrl: "https://www.alukah.net/sharia/0/179746/"
 draft: false
 ---
 

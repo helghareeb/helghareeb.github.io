@@ -8,7 +8,7 @@ translationKey: "alukah-where-are-we-driving-our-children"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "3 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/178730/%d8%a5%d9%84%d9%89-%d9%85%d8%a7%d8%b0%d8%a7-%d9%86%d8%af%d9%81%d8%b9-%d8%a3%d8%a8%d9%86%d8%a7%d8%a1%d9%86%d8%a7%d8%9f-%d9%82%d8%b5%d8%a9-%d9%88%d8%a7%d9%82%d8%b9%d9%8a%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/178730/"
 draft: false
 ---
 

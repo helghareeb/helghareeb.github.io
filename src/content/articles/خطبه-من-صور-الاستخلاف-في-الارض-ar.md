@@ -8,7 +8,7 @@ translationKey: "alukah-sermon-forms-of-vicegerency-on-earth"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "19 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/172658/%d8%ae%d8%b7%d8%a8%d8%a9-%d9%85%d9%86-%d8%b5%d9%88%d8%b1-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%ae%d9%84%d8%a7%d9%81-%d9%81%d9%8a-%d8%a7%d9%84%d8%a3%d8%b1%d8%b6/"
+externalUrl: "https://www.alukah.net/sharia/0/172658/"
 draft: false
 ---
 

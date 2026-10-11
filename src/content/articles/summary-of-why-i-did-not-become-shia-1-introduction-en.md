@@ -11,7 +11,7 @@ seriesOrder: 1
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "17 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/172788/%d9%85%d9%84%d8%ae%d8%b5-%d9%83%d8%aa%d8%a7%d8%a8-%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%84%d9%85-%d8%a3%d8%aa%d8%b4%d9%8a%d8%b9-%d8%a7%d9%84%d8%a3%d9%88%d9%84-%d8%a7%d9%84%d9%85%d9%82%d8%af%d9%85%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/172788/"
 draft: false
 ---
 

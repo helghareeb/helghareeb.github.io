@@ -8,7 +8,7 @@ translationKey: "alukah-sermon-on-jizyah-and-the-rulings-of-dhimmah"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "24 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/177161/%d8%ae%d8%b7%d8%a8%d8%a9-%d9%81%d9%8a-%d9%81%d9%82%d9%87-%d8%a7%d9%84%d8%ac%d8%b2%d9%8a%d8%a9-%d9%88%d8%a3%d8%ad%d9%83%d8%a7%d9%85-%d8%a3%d9%87%d9%84-%d8%a7%d9%84%d8%b0%d9%85%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/177161/"
 draft: false
 ---
 

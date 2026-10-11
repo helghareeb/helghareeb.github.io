@@ -8,7 +8,7 @@ translationKey: "alukah-substituting-one-companion-for-another"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "5 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/173681/%d9%81%d8%a7%d8%a6%d8%af%d8%a9-%d9%81%d9%8a-%d9%82%d8%a7%d8%b9%d8%af%d8%a9-%d8%a5%d8%a8%d8%af%d8%a7%d9%84-%d8%a7%d9%84%d8%b5%d8%ad%d8%a7%d8%a8%d9%8a-%d8%a8%d8%b5%d8%ad%d8%a7%d8%a8%d9%8a-%d8%a2%d8%ae%d8%b1-%d9%84%d8%a7-%d9%8a%d8%b6%d8%b1-%d8%a7%d9%84%d8%b1%d9%88%d8%a7%d9%8a%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/173681/"
 draft: false
 ---
 

@@ -11,7 +11,7 @@ seriesOrder: 1
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "6 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/175723/%d9%85%d9%84%d8%ae%d8%b5-%d9%83%d8%aa%d8%a7%d8%a8-%d8%a5%d8%aa%d9%85%d8%a7%d9%85-%d8%a7%d9%84%d8%b1%d8%b5%d9%81-%d8%a8%d8%b0%d9%83%d8%b1-%d9%85%d8%a7-%d8%ad%d9%88%d8%aa%d9%87-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b5%d9%81-%d9%85%d9%86-%d8%a7%d9%84%d8%a3%d8%ad%d9%83%d8%a7%d9%85-%d9%88%d8%a7%d9%84%d9%88%d8%b5%d9%81-1/"
+externalUrl: "https://www.alukah.net/sharia/0/175723/"
 draft: false
 ---
 

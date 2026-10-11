@@ -8,6 +8,7 @@ const localePairs: Record<string, string> = {
   '/ar/about/': '/en/about/',
   '/ar/cv/': '/en/cv/',
   '/ar/books/': '/en/books/',
+  '/ar/books/qatra-min-al-hayah/read/': '/en/books/qatra-min-al-hayah/',
   '/ar/editions/': '/en/critical-editions/',
   '/ar/articles/': '/en/articles/',
   '/ar/articles/series/': '/en/articles/series/',

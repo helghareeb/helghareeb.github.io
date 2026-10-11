@@ -8,7 +8,7 @@ translationKey: "alukah-does-allah-create-a-people-for-the-fire"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "11 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/180351/%d9%87%d9%84-%d8%a7%d9%84%d9%86%d8%a7%d8%b1-%d9%8a%d9%86%d8%b4%d8%a6-%d8%a7%d9%84%d9%84%d9%87-%d8%ac%d9%84-%d8%ac%d9%84%d8%a7%d9%84%d9%87-%d9%84%d9%87%d8%a7-%d8%ae%d9%84%d9%82%d8%a7%d8%9f/"
+externalUrl: "https://www.alukah.net/sharia/0/180351/"
 draft: false
 ---
 

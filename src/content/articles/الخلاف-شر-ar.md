@@ -8,7 +8,7 @@ translationKey: "alukah-disagreement-is-evil"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "3 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/178796/%d8%a7%d9%84%d8%ae%d9%84%d8%a7%d9%81-%d8%b4%d8%b1/"
+externalUrl: "https://www.alukah.net/sharia/0/178796/"
 draft: false
 ---
 

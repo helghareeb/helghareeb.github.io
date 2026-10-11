@@ -8,7 +8,7 @@ translationKey: "alukah-will-you-forgive-him"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "3 minutes"
-externalUrl: "https://www.alukah.net/literature_language/0/180399/%d9%87%d9%84-%d8%aa%d8%b9%d9%81%d9%88-%d8%b9%d9%86%d9%87-%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d9%82%d9%8a%d8%a7%d9%85%d8%a9%d8%9f-%d9%82%d8%b5%d8%a9-%d9%82%d8%b5%d9%8a%d8%b1%d8%a9/"
+externalUrl: "https://www.alukah.net/literature_language/0/180399/"
 draft: false
 ---
 

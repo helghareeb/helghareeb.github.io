@@ -8,7 +8,7 @@ translationKey: "alukah-the-falsity-of-measuring-sunnah-against-the-quran"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "9 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/177235/%d8%a8%d8%b7%d9%84%d8%a7%d9%86-%d8%a7%d9%84%d9%82%d9%88%d9%84-%d8%a8%d8%b9%d8%b1%d8%b6-%d8%a7%d9%84%d8%b3%d9%86%d8%a9-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d9%82%d8%b1%d8%a2%d9%86/"
+externalUrl: "https://www.alukah.net/sharia/0/177235/"
 draft: false
 ---
 

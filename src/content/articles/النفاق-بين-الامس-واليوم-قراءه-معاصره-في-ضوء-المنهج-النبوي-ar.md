@@ -8,7 +8,7 @@ translationKey: "alukah-hypocrisy-then-and-now"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "6 دقيقة"
-externalUrl: "https://www.alukah.net/social/0/180769/%d8%a7%d9%84%d9%86%d9%81%d8%a7%d9%82-%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%a3%d9%85%d8%b3-%d9%88%d8%a7%d9%84%d9%8a%d9%88%d9%85-%d9%82%d8%b1%d8%a7%d8%a1%d8%a9-%d9%85%d8%b9%d8%a7%d8%b5%d8%b1%d8%a9-%d9%81%d9%8a-%d8%b6%d9%88%d8%a1-%d8%a7%d9%84%d9%85%d9%86%d9%87%d8%ac-%d8%a7%d9%84%d9%86%d8%a8%d9%88%d9%8a/"
+externalUrl: "https://www.alukah.net/social/0/180769/"
 draft: false
 ---
 

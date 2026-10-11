@@ -8,7 +8,7 @@ translationKey: "alukah-half-of-ramadan-has-passed"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "7 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/175032/%d8%a7%d9%86%d8%aa%d8%b5%d9%81-%d8%b1%d9%85%d8%b6%d8%a7%d9%86-%d9%8a%d8%a7-%d8%b9%d8%a8%d8%af%d8%a7%d9%84%d9%84%d9%87/"
+externalUrl: "https://www.alukah.net/sharia/0/175032/"
 draft: false
 ---
 

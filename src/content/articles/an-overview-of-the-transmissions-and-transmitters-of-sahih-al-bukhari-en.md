@@ -8,7 +8,7 @@ translationKey: "alukah-an-overview-of-the-transmissions-and-transmitters-of-sah
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "10 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/176298/%d9%86%d8%a8%d8%b0%d8%a9-%d8%b9%d9%86-%d8%b1%d9%88%d8%a7%d9%8a%d8%a7%d8%aa-%d9%88%d8%b1%d9%88%d8%a7%d8%a9-%d8%b5%d8%ad%d9%8a%d8%ad-%d8%a7%d9%84%d8%a8%d8%ae%d8%a7%d8%b1%d9%8a/"
+externalUrl: "https://www.alukah.net/sharia/0/176298/"
 draft: false
 ---
 

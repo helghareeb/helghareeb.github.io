@@ -8,7 +8,7 @@ translationKey: "alukah-role-of-youth-in-building-the-ummah-sermon"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "15 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/171206/%d8%af%d9%88%d8%b1-%d8%a7%d9%84%d8%b4%d8%a8%d8%a7%d8%a8-%d9%81%d9%8a-%d8%a8%d9%86%d8%a7%d8%a1-%d8%a7%d9%84%d8%a3%d9%85%d8%a9-%d8%ae%d8%b7%d8%a8%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/171206/"
 draft: false
 ---
 

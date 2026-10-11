@@ -8,7 +8,7 @@ translationKey: "alukah-salvation-from-wandering"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "4 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/179467/%d8%a7%d9%84%d9%86%d8%ac%d8%a7%d8%a9-%d9%85%d9%86-%d8%a7%d9%84%d8%aa%d9%8a%d9%87-%d9%84%d8%b2%d9%88%d9%85-%d8%a7%d9%84%d9%85%d8%ad%d9%83%d9%85-%d9%88%d8%a7%d8%aa%d8%ae%d8%a7%d8%b0-%d8%a7%d9%84%d8%b4%d9%8a%d8%b7%d8%a7%d9%86-%d8%b9%d8%af%d9%88%d8%a7/"
+externalUrl: "https://www.alukah.net/sharia/0/179467/"
 draft: false
 ---
 

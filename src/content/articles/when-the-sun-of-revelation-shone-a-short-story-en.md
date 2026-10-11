@@ -8,7 +8,7 @@ translationKey: "alukah-when-the-sun-of-revelation-shone"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "3 minutes"
-externalUrl: "https://www.alukah.net/literature_language/0/178498/%d8%ad%d9%8a%d9%86-%d8%a3%d8%b4%d8%b1%d9%82%d8%aa-%d8%b4%d9%85%d8%b3-%d8%a7%d9%84%d9%88%d8%ad%d9%8a-%d9%82%d8%b5%d8%a9-%d9%82%d8%b5%d9%8a%d8%b1%d8%a9/"
+externalUrl: "https://www.alukah.net/literature_language/0/178498/"
 draft: false
 ---
 

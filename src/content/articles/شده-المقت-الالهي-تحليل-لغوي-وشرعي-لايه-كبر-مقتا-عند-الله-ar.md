@@ -8,7 +8,7 @@ translationKey: "alukah-severity-of-divine-hatred"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "5 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/176563/%d8%b4%d8%af%d8%a9-%d8%a7%d9%84%d9%85%d9%82%d8%aa-%d8%a7%d9%84%d8%a5%d9%84%d9%87%d9%8a-%d8%aa%d8%ad%d9%84%d9%8a%d9%84-%d9%84%d8%ba%d9%88%d9%8a-%d9%88%d8%b4%d8%b1%d8%b9%d9%8a-%d9%84%d8%a2%d9%8a%d8%a9-%d9%83%d8%a8%d8%b1-%d9%85%d9%82%d8%aa%d8%a7-%d8%b9%d9%86%d8%af-%d8%a7%d9%84%d9%84%d9%87/"
+externalUrl: "https://www.alukah.net/sharia/0/176563/"
 draft: false
 ---
 

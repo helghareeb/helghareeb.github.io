@@ -8,7 +8,7 @@ translationKey: "alukah-sins-and-inner-weakness-of-the-ummah"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "11 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/183790/%d8%a7%d9%84%d8%b0%d9%86%d9%88%d8%a8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b5%d9%8a-%d9%88%d8%a3%d8%ab%d8%b1%d9%87%d8%a7-%d9%81%d9%8a-%d9%88%d9%87%d9%86-%d8%a7%d9%84%d8%a3%d9%85%d8%a9-%d8%a7%d9%84%d8%af%d8%a7%d8%ae%d9%84%d9%8a/"
+externalUrl: "https://www.alukah.net/sharia/0/183790/"
 draft: false
 ---
 

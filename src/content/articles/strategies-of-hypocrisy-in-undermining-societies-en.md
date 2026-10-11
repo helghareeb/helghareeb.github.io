@@ -8,7 +8,7 @@ translationKey: "alukah-strategies-of-hypocrisy"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "3 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/180453/%d8%a5%d8%b3%d8%aa%d8%b1%d8%a7%d8%aa%d9%8a%d8%ac%d9%8a%d8%a7%d8%aa-%d8%a7%d9%84%d9%86%d9%81%d8%a7%d9%82-%d9%81%d9%8a-%d8%aa%d9%82%d9%88%d9%8a%d8%b6-%d8%a7%d9%84%d9%85%d8%ac%d8%aa%d9%85%d8%b9%d8%a7%d8%aa-%d8%af%d8%b1%d8%a7%d8%b3%d8%a9-%d8%aa%d8%ad%d9%84%d9%8a%d9%84%d9%8a%d8%a9-%d8%af%d8%b9%d9%88%d9%8a%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/180453/"
 draft: false
 ---
 

@@ -8,7 +8,7 @@ translationKey: "alukah-seasons-of-mercy-muharram-sermon"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "15 دقيقة"
-externalUrl: "https://www.alukah.net/spotlight/0/183512/%d8%ae%d8%b7%d8%a8%d8%a9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d8%a7%d9%84%d8%b1%d8%ad%d9%85%d8%a9-%d9%88%d9%8a%d9%82%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d9%88%d8%ad%d8%af-%d9%85%d9%86-%d8%b4%d9%87%d8%b1-%d8%a7%d9%84%d9%84%d9%87-%d8%a7%d9%84%d9%85%d8%ad%d8%b1%d9%85-%d8%a5%d9%84%d9%89-%d8%a8%d8%ad%d8%b1-%d9%85%d9%88%d8%b3%d9%89/"
+externalUrl: "https://www.alukah.net/spotlight/0/183512/"
 draft: false
 ---
 

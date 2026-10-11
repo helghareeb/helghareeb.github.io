@@ -8,7 +8,7 @@ translationKey: "alukah-the-white-hair-story"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "3 دقيقة"
-externalUrl: "https://www.alukah.net/literature_language/0/178142/%d8%a7%d9%84%d8%b4%d8%b9%d8%b1%d8%a9-%d8%a7%d9%84%d8%a8%d9%8a%d8%b6%d8%a7%d8%a1-%d9%82%d8%b5%d8%a9-%d9%82%d8%b5%d9%8a%d8%b1%d8%a9/"
+externalUrl: "https://www.alukah.net/literature_language/0/178142/"
 draft: false
 ---
 

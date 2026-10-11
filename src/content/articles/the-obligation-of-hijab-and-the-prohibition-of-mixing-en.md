@@ -8,7 +8,7 @@ translationKey: "alukah-obligation-of-hijab-and-prohibition-of-mixing"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "19 minutes"
-externalUrl: "https://www.alukah.net/spotlight/0/182378/%d9%81%d8%b1%d8%b6-%d8%a7%d9%84%d8%ad%d8%ac%d8%a7%d8%a8-%d9%88%d8%aa%d8%ad%d8%b1%d9%8a%d9%85-%d8%a7%d9%84%d8%a7%d8%ae%d8%aa%d9%84%d8%a7%d8%b7-%d8%aa%d8%a3%d8%b5%d9%8a%d9%84-%d8%b4%d8%b1%d8%b9%d9%8a-%d9%88%d8%a8%d9%8a%d8%a7%d9%86-%d9%84%d9%85%d9%88%d8%a7%d8%b6%d8%b9-%d8%a7%d9%84%d8%a7%d8%aa%d9%81%d8%a7%d9%82-%d9%88%d8%a7%d9%84%d8%ae%d9%84%d8%a7%d9%81/"
+externalUrl: "https://www.alukah.net/spotlight/0/182378/"
 draft: false
 ---
 
@@ -36,7 +36,7 @@ Sound method requires distinguishing the core ruling from disputed details. It i
 
 **The verse of elderly women.** Allah says: "And women of post-menstrual age who have no desire for marriage - there is no blame upon them for putting aside their outer garments [but] not displaying adornment. But to modestly refrain [from that] is better for them. And Allah is Hearing and Knowing" (an-Nur 24:60). The concession granted to women in whom the likelihood of temptation has ceased indicates that the rule for others is otherwise, and the verse's ending, that refraining is better for them, confirms that covering and chastity retain their purifying value even where some relief is granted.
 
-**The verses on lowering the gaze.** Allah says: "Tell the believing men to reduce [some] of their vision and guard their private parts. That is purer for them. Indeed, Allah is Acquainted with what they do" (an-Nur 24:30), and "And tell the believing women to reduce [some] of their vision and guard their private parts" (an-Nur 24:31). These verses do not by themselves establish the details of hijab, but they lay down the principle that governs the whole subject: if the gaze itself must be restrained, then the Shari'ah establishes rulings that reduce what invites it and narrow the causes of temptation.
+**The verses on lowering the gaze.** Allah says: "Tell the believing men to reduce [some] of their vision and guard their private parts. That is purer for them. Indeed, Allah is [fully] Aware of what they do" (an-Nur 24:30), and "And tell the believing women to reduce [some] of their vision and guard their private parts" (an-Nur 24:31). These verses do not by themselves establish the details of hijab, but they lay down the principle that governs the whole subject: if the gaze itself must be restrained, then the Shari'ah establishes rulings that reduce what invites it and narrow the causes of temptation.
 
 ## Evidence from the Sunnah and the Jurists' Views on Covering the Face and Hands
 

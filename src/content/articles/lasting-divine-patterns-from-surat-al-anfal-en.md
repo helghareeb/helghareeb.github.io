@@ -8,7 +8,7 @@ translationKey: "alukah-lasting-sunan-from-anfal"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "4 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/179878/%d8%b3%d9%86%d9%86-%d8%a8%d8%a7%d9%82%d9%8a%d8%a9-%d9%85%d9%86-%d8%b3%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%a3%d9%86%d9%81%d8%a7%d9%84/"
+externalUrl: "https://www.alukah.net/sharia/0/179878/"
 draft: false
 ---
 

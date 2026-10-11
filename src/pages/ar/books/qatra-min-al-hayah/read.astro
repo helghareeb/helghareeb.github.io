@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+
+const pageCount = 226;
+const base = '/books/qatra-min-al-hayah';
+const pdfUrl = `${base}/qatra-min-al-hayah.pdf`;
+const pages = Array.from({ length: pageCount }, (_, i) => ({
+  n: i + 1,
+  src: `${base}/pages/${String(i + 1).padStart(3, '0')}.webp`,
+}));
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="قراءة كتاب «قطرة من الحياة» | د. هيثم عبدالمنعم الغريب صقر"
+  description="اقرأ كتاب «قطرة من الحياة: ديوان قصصي اجتماعي» كاملًا على الموقع، أو حمِّله بصيغة PDF."
+>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">قراءة الكتاب</p>
+      <h1 class="hero__title">قطرة من الحياة: ديوان قصصي اجتماعي</h1>
+      <p class="hero__lead">
+        الكتاب كاملًا ({pageCount} صفحة)، صفحةً بعد صفحة. ويمكنك تحميله بصيغة PDF للقراءة دون اتصال.
+      </p>
+      <p class="reader-actions">
+        <a class="button" href={pdfUrl} download="قطرة من الحياة.pdf">تحميل الكتاب (PDF، 23 م.ب)</a>
+        <a class="button-secondary" href="/ar/books/qatra-min-al-hayah/">صفحة الكتاب</a>
+      </p>
+    </section>
+
+    <nav class="reader-bar shell" aria-label="التنقل في الكتاب">
+      <button type="button" class="button-secondary" data-step="-1" aria-label="الصفحة السابقة">السابقة</button>
+      <label class="reader-bar__jump">
+        صفحة
+        <input type="number" min="1" max={pageCount} value="1" inputmode="numeric" data-jump />
+        من {pageCount}
+      </label>
+      <button type="button" class="button-secondary" data-step="1" aria-label="الصفحة التالية">التالية</button>
+    </nav>
+
+    <section class="shell reader" aria-label="صفحات الكتاب">
+      {pages.map((p) => (
+        <figure class="reader__page" id={`p-${p.n}`} data-page={p.n}>
+          <img
+            src={p.src}
+            alt={`صفحة ${p.n} من كتاب قطرة من الحياة`}
+            width="910"
+            height="1365"
+            loading={p.n <= 2 ? 'eager' : 'lazy'}
+            decoding="async"
+          />
+          <figcaption>{p.n}</figcaption>
+        </figure>
+      ))}
+    </section>
+
+    <section class="shell reader-actions reader-actions--end">
+      <a class="button" href={pdfUrl} download="قطرة من الحياة.pdf">تحميل الكتاب (PDF)</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .reader-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  .reader-actions--end {
+    justify-content: center;
+    margin: 2rem auto 3rem;
+  }
+  .reader-bar {
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0.5rem;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    margin-block: 1rem;
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+  }
+  .reader-bar__jump {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .reader-bar__jump input {
+    width: 4.5rem;
+    padding: 0.35rem 0.5rem;
+    font: inherit;
+    text-align: center;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--bg-soft);
+    color: var(--text);
+  }
+  .reader {
+    display: grid;
+    gap: 1.25rem;
+    justify-items: center;
+  }
+  .reader__page {
+    margin: 0;
+    width: min(100%, 640px);
+    scroll-margin-top: 5rem;
+  }
+  .reader__page img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+  }
+  .reader__page figcaption {
+    margin-top: 0.35rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>
+
+<script>
+  const total = Number(document.querySelector<HTMLInputElement>('[data-jump]')?.max ?? 0);
+  const input = document.querySelector<HTMLInputElement>('[data-jump]');
+  let current = 1;
+
+  const go = (n: number) => {
+    const page = Math.min(Math.max(1, n), total);
+    document.getElementById(`p-${page}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.replaceState(null, '', `#p-${page}`);
+  };
+
+  document.querySelectorAll<HTMLButtonElement>('[data-step]').forEach((btn) =>
+    btn.addEventListener('click', () => go(current + Number(btn.dataset.step))),
+  );
+  input?.addEventListener('change', () => go(Number(input.value)));
+  document.addEventListener('keydown', (e) => {
+    if (e.target instanceof HTMLInputElement) return;
+    // Arabic book: the next page is to the left.
+    if (e.key === 'ArrowLeft') go(current + 1);
+    if (e.key === 'ArrowRight') go(current - 1);
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          current = Number((entry.target as HTMLElement).dataset.page);
+          if (input && document.activeElement !== input) input.value = String(current);
+        }
+      }
+    },
+    { rootMargin: '-45% 0px -45% 0px' },
+  );
+  document.querySelectorAll('.reader__page').forEach((el) => observer.observe(el));
+
+  const start = Number(location.hash.match(/^#p-(\d+)$/)?.[1] ?? 0);
+  if (start > 1) go(start);
+</script>

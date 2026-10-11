@@ -8,7 +8,7 @@ translationKey: "alukah-an-enduring-challenge-for-fourteen-centuries"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "17 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/171265/%d8%aa%d8%ad%d8%af-%d9%82%d8%a7%d8%a6%d9%85-%d9%85%d9%86%d8%b0-%d8%a3%d9%83%d8%ab%d8%b1-%d9%85%d9%86-%d8%a3%d8%b1%d8%a8%d8%b9%d8%a9-%d8%b9%d8%b4%d8%b1-%d9%82%d8%b1%d9%86%d8%a7-%d9%85%d9%86-%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%86/"
+externalUrl: "https://www.alukah.net/sharia/0/171265/"
 draft: false
 ---
 

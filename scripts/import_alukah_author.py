@@ -410,7 +410,7 @@ def write_article(
         summary=summary,
         category=category,
         reading_time=reading_time,
-        external_url=entry.url,
+        external_url=short_alukah_url(entry.url),
         series_name=series_name,
         series_slug=series_slug,
         series_order=series_order,
@@ -419,6 +419,12 @@ def write_article(
     path = output_dir / f"{title_slug}-ar.md"
     path.write_text(f"{frontmatter}\n\n{body}\n", encoding="utf-8")
     return path
+
+
+def short_alukah_url(url: str) -> str:
+    """Alukah article URLs work without the title slug: keep them as /<section>/0/<id>/."""
+    match = re.match(r"(https?://www\.alukah\.net/[^/]+/\d+/\d+/)", url)
+    return match.group(1) if match else url
 
 
 def collect_existing_external_urls(output_dir: Path) -> set[str]:
@@ -434,7 +440,7 @@ def collect_existing_external_urls(output_dir: Path) -> set[str]:
 
         match = re.search(r'^externalUrl:\s*"([^"]+)"\s*$', content, flags=re.MULTILINE)
         if match:
-            urls.add(match.group(1).strip())
+            urls.add(short_alukah_url(match.group(1).strip()))
 
     return urls
 
@@ -460,7 +466,7 @@ def main() -> None:
     if args.only_new:
         existing_urls = collect_existing_external_urls(args.output_dir)
         original_count = len(entries)
-        entries = [entry for entry in entries if entry.url not in existing_urls]
+        entries = [entry for entry in entries if short_alukah_url(entry.url) not in existing_urls]
         skipped_count = original_count - len(entries)
         print(
             f"Filtered existing entries via externalUrl: {len(entries)} remaining, {skipped_count} skipped.",

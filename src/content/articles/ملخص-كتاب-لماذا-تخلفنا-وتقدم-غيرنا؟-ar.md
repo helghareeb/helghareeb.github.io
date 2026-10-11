@@ -8,7 +8,7 @@ translationKey: "alukah-why-did-we-fall-behind-and-others-advance"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "13 دقيقة"
-externalUrl: "https://www.alukah.net/culture/0/172371/%d9%85%d9%84%d8%ae%d8%b5-%d9%83%d8%aa%d8%a7%d8%a8-%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d8%aa%d8%ae%d9%84%d9%81%d9%86%d8%a7-%d9%88%d8%aa%d9%82%d8%af%d9%85-%d8%ba%d9%8a%d8%b1%d9%86%d8%a7%d8%9f/"
+externalUrl: "https://www.alukah.net/culture/0/172371/"
 draft: false
 ---
 

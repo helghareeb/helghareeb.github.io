@@ -8,7 +8,7 @@ translationKey: "alukah-criticisms-of-the-two-sahihs-do-not-undermine-them"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "8 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/177106/%d9%85%d8%a7-%d8%a7%d9%86%d8%aa%d9%82%d8%af-%d8%b9%d9%84%d9%89-%c2%ab%d8%a7%d9%84%d8%b5%d8%ad%d9%8a%d8%ad%d9%8a%d9%86%c2%bb-%d9%88%d8%b1%d8%ac%d8%a7%d9%84%d9%87%d9%85%d8%a7%d8%8c-%d9%84%d8%a7-%d9%8a%d9%82%d8%af%d8%ad-%d9%81%d9%8a%d9%87%d9%85%d8%a7%d8%8c-%d9%88%d9%84%d8%a7-%d9%8a%d9%82%d9%84%d9%84-%d9%85%d9%86-%d8%b4%d8%a3%d9%86%d9%87%d9%85%d8%a7/"
+externalUrl: "https://www.alukah.net/sharia/0/177106/"
 draft: false
 ---
 

@@ -8,7 +8,7 @@ translationKey: "alukah-revelation-and-desire"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "5 minutes"
-externalUrl: "https://www.alukah.net/culture/0/180606/%d8%a7%d9%84%d9%88%d8%ad%d9%8a-%d9%88%d8%a7%d9%84%d9%87%d9%88%d9%89/"
+externalUrl: "https://www.alukah.net/culture/0/180606/"
 draft: false
 ---
 

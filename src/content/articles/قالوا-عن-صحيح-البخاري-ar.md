@@ -8,7 +8,7 @@ translationKey: "alukah-what-they-said-about-sahih-al-bukhari"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "13 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/176357/%d9%82%d8%a7%d9%84%d9%88%d8%a7-%d8%b9%d9%86-%d8%b5%d8%ad%d9%8a%d8%ad-%d8%a7%d9%84%d8%a8%d8%ae%d8%a7%d8%b1%d9%8a/"
+externalUrl: "https://www.alukah.net/sharia/0/176357/"
 draft: false
 ---
 

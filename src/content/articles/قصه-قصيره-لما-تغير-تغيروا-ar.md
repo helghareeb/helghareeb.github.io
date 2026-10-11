@@ -8,7 +8,7 @@ translationKey: "alukah-when-he-changed-they-changed"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "2 دقيقة"
-externalUrl: "https://www.alukah.net/literature_language/0/178417/%d9%82%d8%b5%d8%a9-%d9%82%d8%b5%d9%8a%d8%b1%d8%a9-%d9%84%d9%85%d8%a7-%d8%aa%d8%ba%d9%8a%d8%b1...-%d8%aa%d8%ba%d9%8a%d8%b1%d9%88%d8%a7/"
+externalUrl: "https://www.alukah.net/literature_language/0/178417/"
 draft: false
 ---
 

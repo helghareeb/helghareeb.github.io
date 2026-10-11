@@ -8,7 +8,7 @@ translationKey: "alukah-categories-of-bayan-shafii"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "5 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/173036/%d9%81%d8%a7%d8%a6%d8%af%d8%a9-%d8%a3%d9%82%d8%b3%d8%a7%d9%85-%d8%a7%d9%84%d8%a8%d9%8a%d8%a7%d9%86-%d8%b9%d9%86%d8%af-%d8%a7%d9%84%d8%b4%d8%a7%d9%81%d8%b9%d9%8a-%d9%81%d9%8a-%d8%a7%d9%84%d8%b1%d8%b3%d8%a7%d9%84%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/173036/"
 draft: false
 ---
 

@@ -8,7 +8,7 @@ translationKey: "alukah-meanings-and-benefits-of-khutbat-al-hajah"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "11 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/174010/%d9%85%d9%86-%d9%85%d8%b9%d8%a7%d9%86%d9%8a-%d8%ae%d8%b7%d8%a8%d8%a9-%d8%a7%d9%84%d8%ad%d8%a7%d8%ac%d8%a9-%d9%88%d9%81%d9%88%d8%a7%d8%a6%d8%af%d9%87%d8%a7/"
+externalUrl: "https://www.alukah.net/sharia/0/174010/"
 draft: false
 ---
 

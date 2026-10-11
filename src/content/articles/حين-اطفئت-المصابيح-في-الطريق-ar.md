@@ -8,7 +8,7 @@ translationKey: "alukah-when-the-lamps-were-put-out"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "2 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/182553/%d8%ad%d9%8a%d9%86-%d8%a3%d8%b7%d9%81%d8%a6%d8%aa-%d8%a7%d9%84%d9%85%d8%b5%d8%a7%d8%a8%d9%8a%d8%ad-%d9%81%d9%8a-%d8%a7%d9%84%d8%b7%d8%b1%d9%8a%d9%82/"
+externalUrl: "https://www.alukah.net/sharia/0/182553/"
 draft: false
 ---
 

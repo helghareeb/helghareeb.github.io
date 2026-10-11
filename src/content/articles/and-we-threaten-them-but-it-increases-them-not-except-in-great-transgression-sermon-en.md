@@ -8,7 +8,7 @@ translationKey: "alukah-we-threaten-them-sermon"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "17 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/184369/%d9%88%d9%86%d8%ae%d9%88%d9%81%d9%87%d9%85-%d9%81%d9%85%d8%a7-%d9%8a%d8%b2%d9%8a%d8%af%d9%87%d9%85-%d8%a5%d9%84%d8%a7-%d8%b7%d8%ba%d9%8a%d8%a7%d9%86%d8%a7-%d9%83%d8%a8%d9%8a%d8%b1%d8%a7-%d8%ae%d8%b7%d8%a8%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/184369/"
 draft: false
 ---
 
@@ -16,7 +16,7 @@ draft: false
 
 ## The First Sermon
 
-After the opening praise, the sermon begins from the fact that Allah commanded His Prophet ﷺ to remind and warn by the Qur'an, and made the stories of past nations a lesson for reminder, not entertainment or mere historical knowledge: "But remind by the Qur'an whoever fears My threat" (Qaf 50:45); "There was certainly in their stories a lesson for those of understanding" (Yusuf 12:111); "And will any be destroyed except the defiantly disobedient people?" (al-Ahqaf 46:35).
+After the opening praise, the sermon begins from the fact that Allah commanded His Prophet ﷺ to remind and warn by the Qur'an, and made the stories of past nations a lesson for reminder, not entertainment or mere historical knowledge: "But remind by the Qur'an whoever fears My threat" (Qaf 50:45); "There was certainly in their stories a lesson for those of understanding" (Yusuf 12:111); "And will [any] be destroyed except the defiantly disobedient people?" (al-Ahqaf 46:35).
 
 ### No punishment without prior warning
 
@@ -31,7 +31,7 @@ The sermon then walks through the Qur'anic record of nations that were warned an
 - **Thamud, the people of Salih**, were even given a fixed term they could count themselves: "Enjoy yourselves in your homes for three days. That is a promise not to be denied" (Hud 11:65). They did not repent, because "they preferred blindness over guidance" (Fussilat 41:17; see also al-Naml 27:46).
 - **The people of Lot** are the most striking case: after being warned, their eyes were obliterated that very night, a physical sign that fell upon themselves, yet they were not deterred until the punishment overtook them in the morning (al-Qamar 54:36–38; al-Hijr 15:72–73; al-'Ankabut 29:29). The problem, the preacher stresses, is never a shortage of evidence but persistence.
 - **Pharaoh and his chiefs** were first addressed with "gentle speech" (Ta-Ha 20:44), then afflicted with years of drought and shortage of fruit (al-A'raf 7:130), then with successive "distinct signs" (al-A'raf 7:133); each time affliction struck they made promises and broke them. When drowning overtook Pharaoh he declared faith, and it was not accepted: "Now? And you had disobeyed [Him] before and were of the corrupters?" (Yunus 10:90–91), because faith at the moment of beholding the punishment is not accepted.
-- **Midian, the people of Shu'ayb**, were not only warned; Shu'ayb reminded them of the fate of nations close to them in time and place, "And the people of Lot are not from you far away" (Hud 11:88–90), so that they might learn from others before becoming a lesson for others.
+- **Midian, the people of Shu'ayb**, were not only warned; Shu'ayb reminded them of the fate of nations close to them in time and place, "And the people of Lot are not from you far away" (Hud 11:89), so that they might learn from others before becoming a lesson for others.
 - **Abraham** shows the utmost gentleness in warning: he called his father four times with "O my father," declared that he feared for him rather than feared him (Maryam 19:43, 45), and when threatened with stoning replied with peace and a promise to seek forgiveness (Maryam 19:47). There was no shortcoming in conveying the message or in its manner.
 
 This is not a matter of one or two nations but a general divine law illustrated by many parables: the people of the Sabbath, the people of the town, Qarun, the owner of the two gardens and the secure, contented town (al-Nahl 16:112). "And for how many a city did I prolong enjoyment while it was committing wrong. Then I seized it, and to Me is the [final] destination" (al-Hajj 22:48; see also al-Furqan 25:39). "For indeed, it is not eyes that are blinded, but blinded are the hearts which are within the breasts" (al-Hajj 22:46).
@@ -54,7 +54,7 @@ When the seizure finally comes after all this, it involves no injustice: a warni
 
 ### Afflictions and cosmic signs are warnings
 
-Calamities and cosmic signs are neither random nor pointless; they are a nearer punishment before the greater one, sent in the hope of return. If they do not produce return, they become evidence against the servant rather than for him. "And We send not the signs except as a warning" (al-Isra 17:59); "And We will surely let them taste the nearer punishment short of the greater punishment that perhaps they will repent" (al-Sajdah 32:21; see also al-Rum 30:41; al-Tawbah 9:126; al-Shura 42:30).
+Calamities and cosmic signs are neither random nor pointless; they are a nearer punishment before the greater one, sent in the hope of return. If they do not produce return, they become evidence against the servant rather than for him. "And We send not the signs except as a warning" (al-Isra 17:59); "And We will surely let them taste the nearer punishment short of the greater punishment that perhaps they will return [i.e., repent]" (al-Sajdah 32:21; see also al-Rum 30:41; al-Tawbah 9:126; al-Shura 42:30).
 
 ### The exception: the people of Jonah
 

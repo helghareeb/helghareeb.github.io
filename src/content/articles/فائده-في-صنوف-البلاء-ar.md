@@ -8,7 +8,7 @@ translationKey: "alukah-types-of-trial"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "3 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/173431/%d9%81%d8%a7%d8%a6%d8%af%d8%a9-%d9%81%d9%8a-%d8%b5%d9%86%d9%88%d9%81-%d8%a7%d9%84%d8%a8%d9%84%d8%a7%d8%a1/"
+externalUrl: "https://www.alukah.net/sharia/0/173431/"
 draft: false
 ---
 

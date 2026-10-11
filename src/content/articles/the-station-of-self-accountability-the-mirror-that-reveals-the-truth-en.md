@@ -11,7 +11,7 @@ seriesOrder: 3
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "6 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/180705/%d8%b7%d8%b1%d9%8a%d9%82-%d8%a7%d9%84%d9%85%d8%b3%d9%84%d9%85-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d9%84%d9%87-%d9%82%d8%a8%d9%84-%d8%b1%d9%85%d8%b6%d8%a7%d9%86-%d9%85%d9%86%d8%b2%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%b3%d8%a8%d8%a9-%d8%a7%d9%84%d9%85%d8%b1%d8%a2%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%83%d8%b4%d9%81-%d8%a7%d9%84%d8%ad%d9%82%d9%8a%d9%82%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/180705/"
 draft: false
 ---
 

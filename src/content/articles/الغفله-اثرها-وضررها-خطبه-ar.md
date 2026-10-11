@@ -8,7 +8,7 @@ translationKey: "alukah-heedlessness-its-effects-and-harms-sermon"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "22 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/179562/%d8%a7%d9%84%d8%ba%d9%81%d9%84%d8%a9-%d8%a3%d8%ab%d8%b1%d9%87%d8%a7-%d9%88%d8%b6%d8%b1%d8%b1%d9%87%d8%a7-%d8%ae%d8%b7%d8%a8%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/179562/"
 draft: false
 ---
 

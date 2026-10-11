@@ -8,7 +8,7 @@ translationKey: "alukah-ai-and-islamic-sciences"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "5 minutes"
-externalUrl: "https://www.alukah.net/culture/0/174211/%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%88%d8%b9%d9%84%d8%a7%d9%82%d8%aa%d9%87-%d8%a8%d8%a7%d9%84%d8%b9%d9%84%d9%88%d9%85-%d8%a7%d9%84%d8%b4%d8%b1%d8%b9%d9%8a%d8%a9-%d8%b1%d8%a4%d9%8a%d8%a9-%d8%a3%d9%83%d8%a7%d8%af%d9%8a%d9%85%d9%8a%d8%a9-%d9%85%d8%aa%d9%82%d8%af%d9%85%d8%a9/"
+externalUrl: "https://www.alukah.net/culture/0/174211/"
 draft: false
 ---
 

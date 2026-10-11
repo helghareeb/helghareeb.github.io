@@ -8,7 +8,7 @@ translationKey: "alukah-behind-the-walls-story"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "2 minutes"
-externalUrl: "https://www.alukah.net/literature_language/0/178309/%d9%88%d8%b1%d8%a7%d8%a1-%d8%a7%d9%84%d8%ac%d8%af%d8%b1%d8%a7%d9%86-%d9%82%d8%b5%d8%a9-%d9%82%d8%b5%d9%8a%d8%b1%d8%a9/"
+externalUrl: "https://www.alukah.net/literature_language/0/178309/"
 draft: false
 ---
 

@@ -8,7 +8,7 @@ translationKey: "alukah-between-small-and-large-ilal"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "4 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/179417/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%b9%d9%84%d9%84-%d8%a7%d9%84%d8%b5%d8%ba%d9%8a%d8%b1-%d9%88%d8%a7%d9%84%d8%b9%d9%84%d9%84-%d8%a7%d9%84%d9%83%d8%a8%d9%8a%d8%b1-%d9%84%d9%84%d8%a5%d9%85%d8%a7%d9%85-%d8%a7%d9%84%d8%aa%d8%b1%d9%85%d8%b0%d9%8a/"
+externalUrl: "https://www.alukah.net/sharia/0/179417/"
 draft: false
 ---
 

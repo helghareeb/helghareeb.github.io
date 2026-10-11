@@ -8,7 +8,7 @@ translationKey: "alukah-defending-sunnah-woman-ruler-hadith"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "11 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/180200/%d9%86%d8%b5%d8%b1%d8%a9-%d8%a7%d9%84%d8%b3%d9%86%d8%a9-%d9%88%d8%b1%d8%af-%d8%b4%d8%a8%d9%87%d8%a7%d8%aa-%d8%a7%d9%84%d9%85%d8%ba%d8%b1%d8%b6%d9%8a%d9%86-%d8%ad%d9%88%d9%84-%d8%ad%d8%af%d9%8a%d8%ab-%c2%ab%d9%84%d9%86-%d9%8a%d9%81%d9%84%d8%ad-%d9%82%d9%88%d9%85-%d9%88%d9%84%d9%91%d9%88%d8%a7-%d8%a3%d9%85%d8%b1%d9%87%d9%85-%d8%a7%d9%85%d8%b1%d8%a3%d8%a9%c2%bb/"
+externalUrl: "https://www.alukah.net/sharia/0/180200/"
 draft: false
 ---
 

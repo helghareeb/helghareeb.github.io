@@ -8,7 +8,7 @@ translationKey: "alukah-battle-of-the-heart-and-secret-of-salvation"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "6 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/183850/%d9%85%d8%b9%d8%b1%d9%83%d8%a9-%d8%a7%d9%84%d9%82%d9%84%d8%a8-%d9%88%d8%b3%d8%b1-%d8%a7%d9%84%d9%86%d8%ac%d8%a7%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/183850/"
 draft: false
 ---
 

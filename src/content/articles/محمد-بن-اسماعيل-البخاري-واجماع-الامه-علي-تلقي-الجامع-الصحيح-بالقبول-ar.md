@@ -8,7 +8,7 @@ translationKey: "alukah-al-bukhari-and-the-ummahs-consensus-on-sahih-al-bukhari"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "10 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/178619/%d9%85%d8%ad%d9%85%d8%af-%d8%a8%d9%86-%d8%a5%d8%b3%d9%85%d8%a7%d8%b9%d9%8a%d9%84-%d8%a7%d9%84%d8%a8%d8%ae%d8%a7%d8%b1%d9%8a-%d9%88%d8%a5%d8%ac%d9%85%d8%a7%d8%b9-%d8%a7%d9%84%d8%a3%d9%85%d8%a9-%d8%b9%d9%84%d9%89-%d8%aa%d9%84%d9%82%d9%8a-%d8%a7%d9%84%d8%ac%d8%a7%d9%85%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d9%8a%d8%ad-%d8%a8%d8%a7%d9%84%d9%82%d8%a8%d9%88%d9%84/"
+externalUrl: "https://www.alukah.net/sharia/0/178619/"
 draft: false
 ---
 

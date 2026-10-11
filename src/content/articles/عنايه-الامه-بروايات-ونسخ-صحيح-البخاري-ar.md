@@ -8,7 +8,7 @@ translationKey: "alukah-ummah-care-bukhari-transmissions"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "3 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/176995/%d8%b9%d9%86%d8%a7%d9%8a%d8%a9-%d8%a7%d9%84%d8%a3%d9%85%d8%a9-%d8%a8%d8%b1%d9%88%d8%a7%d9%8a%d8%a7%d8%aa-%d9%88%d9%86%d8%b3%d8%ae-%c2%ab%d8%b5%d8%ad%d9%8a%d8%ad-%d8%a7%d9%84%d8%a8%d8%ae%d8%a7%d8%b1%d9%8a%c2%bb/"
+externalUrl: "https://www.alukah.net/sharia/0/176995/"
 draft: false
 ---
 

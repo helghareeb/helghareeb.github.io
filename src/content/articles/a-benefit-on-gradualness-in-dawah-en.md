@@ -8,7 +8,7 @@ translationKey: "alukah-gradualness-in-dawah"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "8 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/172732/%d9%81%d8%a7%d8%a6%d8%af%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%aa%d8%af%d8%b1%d8%ac-%d9%81%d9%8a-%d8%a7%d9%84%d8%af%d8%b9%d9%88%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/172732/"
 draft: false
 ---
 

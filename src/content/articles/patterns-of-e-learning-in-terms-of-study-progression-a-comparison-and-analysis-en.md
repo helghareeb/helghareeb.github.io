@@ -8,7 +8,7 @@ translationKey: "alukah-e-learning-patterns-progression"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "5 minutes"
-externalUrl: "https://www.alukah.net/social/0/175851/%d8%a3%d9%86%d9%85%d8%a7%d8%b7-%d8%a7%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%85-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a-%d9%85%d9%86-%d8%ad%d9%8a%d8%ab-%d8%a7%d9%84%d8%aa%d8%af%d8%b1%d8%ac-%d9%81%d9%8a-%d8%a7%d9%84%d8%af%d8%b1%d8%a7%d8%b3%d8%a9-%d9%85%d9%82%d8%a7%d8%b1%d9%86%d8%a9-%d9%88%d8%aa%d8%ad%d9%84%d9%8a%d9%84/"
+externalUrl: "https://www.alukah.net/social/0/175851/"
 draft: false
 ---
 

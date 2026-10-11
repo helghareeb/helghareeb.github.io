@@ -8,7 +8,7 @@ translationKey: "alukah-do-not-be-less-aware-than-heavens"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "4 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/176884/%d9%8a%d8%a7-%d8%a7%d8%a8%d9%86-%d8%a2%d8%af%d9%85%d8%8c-%d9%84%d8%a7-%d8%aa%d9%83%d9%86-%d8%a3%d9%82%d9%84-%d9%81%d9%82%d9%87%d8%a7-%d9%85%d9%86-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d9%88%d8%a7%d8%aa-%d9%88%d8%a7%d9%84%d8%a3%d8%b1%d8%b6-%d9%88%d8%a7%d9%84%d8%ac%d8%a8%d8%a7%d9%84/"
+externalUrl: "https://www.alukah.net/sharia/0/176884/"
 draft: false
 ---
 

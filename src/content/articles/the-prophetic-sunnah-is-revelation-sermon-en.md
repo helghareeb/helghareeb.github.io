@@ -8,7 +8,7 @@ translationKey: "alukah-the-prophetic-sunnah-is-revelation-sermon"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "35 minutes"
-externalUrl: "https://www.alukah.net/sharia/0/170762/%d8%a7%d9%84%d8%b3%d9%86%d8%a9-%d8%a7%d9%84%d9%86%d8%a8%d9%88%d9%8a%d8%a9-%d9%88%d8%ad%d9%8a-%d8%ae%d8%b7%d8%a8%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/170762/"
 draft: false
 ---
 

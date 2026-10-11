@@ -8,7 +8,7 @@ translationKey: "alukah-tashif-and-tahrif-nature-and-explanation"
 sourceName: "Alukah Network"
 articleType: "Translated in-site version of an externally hosted article"
 readingTime: "8 minutes"
-externalUrl: "https://www.alukah.net/library/0/173912/%d8%a7%d9%84%d8%aa%d8%b5%d8%ad%d9%8a%d9%81-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d9%81-%d8%a7%d9%84%d9%85%d8%a7%d9%87%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%84/"
+externalUrl: "https://www.alukah.net/library/0/173912/"
 draft: false
 ---
 

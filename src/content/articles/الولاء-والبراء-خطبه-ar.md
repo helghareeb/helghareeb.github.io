@@ -8,7 +8,7 @@ translationKey: "alukah-al-wala-and-al-bara-sermon"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "24 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/171083/%d8%a7%d9%84%d9%88%d9%84%d8%a7%d8%a1-%d9%88%d8%a7%d9%84%d8%a8%d8%b1%d8%a7%d8%a1-%d8%ae%d8%b7%d8%a8%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/171083/"
 draft: false
 ---
 

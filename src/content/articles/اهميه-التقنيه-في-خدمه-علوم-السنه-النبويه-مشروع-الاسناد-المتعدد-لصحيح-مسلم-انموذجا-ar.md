@@ -8,7 +8,7 @@ translationKey: "alukah-technology-serving-hadith-sciences"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "5 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/174276/%d8%a3%d9%87%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d8%aa%d9%82%d9%86%d9%8a%d8%a9-%d9%81%d9%8a-%d8%ae%d8%af%d9%85%d8%a9-%d8%b9%d9%84%d9%88%d9%85-%d8%a7%d9%84%d8%b3%d9%86%d8%a9-%d8%a7%d9%84%d9%86%d8%a8%d9%88%d9%8a%d8%a9-%d9%85%d8%b4%d8%b1%d9%88%d8%b9-%d8%a7%d9%84%d8%a5%d8%b3%d9%86%d8%a7%d8%af-%d8%a7%d9%84%d9%85%d8%aa%d8%b9%d8%af%d8%af-%d9%84%d8%b5%d8%ad%d9%8a%d8%ad-%d9%85%d8%b3%d9%84%d9%85-%d8%a3%d9%86%d9%85%d9%88%d8%b0%d8%ac%d8%a7/"
+externalUrl: "https://www.alukah.net/sharia/0/174276/"
 draft: false
 ---
 

@@ -8,7 +8,7 @@ translationKey: "alukah-how-can-my-heart-be-sound"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "16 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/171481/%d9%85%d9%84%d8%ae%d8%b5-%d9%83%d8%aa%d8%a7%d8%a8-%d9%83%d9%8a%d9%81-%d9%8a%d9%83%d9%88%d9%86-%d9%82%d9%84%d8%a8%d9%8a-%d8%b3%d9%84%d9%8a%d9%85%d8%a7%d8%9f/"
+externalUrl: "https://www.alukah.net/sharia/0/171481/"
 alternateLinks:
   - name: "طريق الإسلام"
     url: "https://ar.islamway.net/article/94301/%D9%85%D9%84%D8%AE%D8%B5-%D9%83%D8%AA%D8%A7%D8%A8-%D9%83%D9%8A%D9%81-%D9%8A%D9%83%D9%88%D9%86-%D9%82%D9%84%D8%A8%D9%8A-%D8%B3%D9%84%D9%8A%D9%85%D8%A7"

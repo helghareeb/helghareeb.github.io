@@ -8,7 +8,7 @@ translationKey: "alukah-self-accountability-renewing-journey-to-allah"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "5 دقيقة"
-externalUrl: "https://www.alukah.net/sharia/0/181763/-%d9%88%d9%84%d8%aa%d9%86%d8%b8%d8%b1-%d9%86%d9%81%d8%b3-%d9%85%d8%a7-%d9%82%d8%af%d9%85%d8%aa-%d9%84%d8%ba%d8%af-%d9%85%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%b3%d8%a8%d8%a9-%d9%88%d8%aa%d8%ac%d8%af%d9%8a%d8%af-%d8%a7%d9%84%d8%b3%d9%8a%d8%b1-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d9%84%d9%87-%d8%ae%d8%b7%d8%a8%d8%a9/"
+externalUrl: "https://www.alukah.net/sharia/0/181763/"
 draft: false
 ---
 

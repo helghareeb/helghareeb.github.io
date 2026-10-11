@@ -8,7 +8,7 @@ translationKey: "alukah-accepting-reports-book-note"
 sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "2 دقيقة"
-externalUrl: "https://www.alukah.net/culture/0/173764/%d9%81%d8%a7%d8%a6%d8%af%d8%a9-%d8%ad%d9%88%d9%84-%d9%83%d8%aa%d8%a7%d8%a8-%d9%82%d8%a8%d9%88%d9%84-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%88%d9%85%d8%b9%d8%b1%d9%81%d8%a9-%d8%a7%d9%84%d8%b1%d8%ac%d8%a7%d9%84-%d9%84%d8%a3%d8%a8%d9%8a-%d8%a7%d9%84%d9%82%d8%a7%d8%b3%d9%85-%d8%a7%d9%84%d9%83%d8%b9%d8%a8%d9%8a-%d8%a7%d9%84%d9%85%d8%b9%d8%aa%d8%b2%d9%84%d9%8a/"
+externalUrl: "https://www.alukah.net/culture/0/173764/"
 draft: false
 ---
 
