@@ -8,10 +8,8 @@ translationKey: "al-risala-naqeeb-020"
 series: "Summary of the Explanation of al-Risala by Shaykh Dr. Ahmad al-Naqeeb"
 seriesSlug: "al-risala-ahmad-naqeeb"
 seriesOrder: 20
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "5 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/28/19"
 draft: false
 ---
 

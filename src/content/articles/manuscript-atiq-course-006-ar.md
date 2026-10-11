@@ -8,10 +8,8 @@ translationKey: "manuscript-atiq-course-006"
 series: "الدورة الثانية: قراءة في مخطوطات عتاق - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-atiq-course"
 seriesOrder: 6
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "2 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الثانية-قراءة-في-مخطوطات-عتاق-6/"
 draft: false
 ---
 

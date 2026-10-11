@@ -8,10 +8,8 @@ translationKey: "al-risala-064"
 series: "مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي"
 seriesSlug: "al-risala"
 seriesOrder: 64
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "3 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/28/أقاويل-الصحابة/"
 draft: false
 ---
 

@@ -49,10 +49,7 @@ const countAr = (n: number, [one, two, few, many, single]: [string, string, stri
   return `${n} ${single}`;
 };
 const partForms: [string, string, string, string, string] = ['حلقة واحدة', 'حلقتان', 'حلقات', 'حلقةً', 'حلقة'];
-const sourceLabel =
-  firstArticle?.data.sourceName === 'فاعلم أنه لا إله إلا الله'
-    ? 'مدونة «فاعلم أنه لا إله إلا الله»'
-    : firstArticle?.data.sourceName;
+const sourceLabel = firstArticle?.data.sourceName;
 const seriesIntro = seriesIntrosAr[seriesSlug];
 const seoTitle = buildSeoTitle(seriesTitle, { lang: 'ar', section: 'السلاسل المقالية' });
 const seoDescription = buildSeoDescription(

@@ -8,10 +8,8 @@ translationKey: "manuscript-samaat-course-002"
 series: "الدورة الرابعة: السماعات المثبتة على المخطوطات - البناء، والإفادة، ومهارات التحليل - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-samaat-course"
 seriesOrder: 2
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "4 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الرابعة-السماعات-المثبتة-على-ا-2/"
 draft: false
 ---
 

@@ -54,3 +54,26 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    # Tell IndexNow search engines (Bing, Yandex, Seznam, Naver) which pages exist after each deploy.
+    runs-on: ubuntu-latest
+    needs: deploy
+    continue-on-error: true
+    steps:
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          INDEXNOW_KEY: 00fca127afbcbf77b18a3a954e2a84fd
+        run: |
+          curl -fsSL https://helghareeb.github.io/sitemap.xml -o sitemap.xml
+          python3 - <<'PY'
+          import json, os, re, urllib.request
+          urls = re.findall(r'<loc>([^<]+)</loc>', open('sitemap.xml', encoding='utf-8').read())
+          key = os.environ['INDEXNOW_KEY']
+          body = {'host': 'helghareeb.github.io', 'key': key,
+                  'keyLocation': f'https://helghareeb.github.io/{key}.txt', 'urlList': urls[:10000]}
+          req = urllib.request.Request('https://api.indexnow.org/indexnow', data=json.dumps(body).encode(),
+                                       headers={'Content-Type': 'application/json; charset=utf-8'})
+          with urllib.request.urlopen(req, timeout=60) as r:
+              print('IndexNow', r.status, 'for', len(urls), 'URLs')
+          PY

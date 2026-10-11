@@ -8,10 +8,8 @@ translationKey: "al-risala-006"
 series: "مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي"
 seriesSlug: "al-risala"
 seriesOrder: 6
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "3 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/26/باب-كيف-البيان/"
 draft: false
 ---
 

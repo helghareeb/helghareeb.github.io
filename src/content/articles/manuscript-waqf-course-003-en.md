@@ -8,10 +8,8 @@ translationKey: "manuscript-waqf-course-003"
 series: "Course 3: Endowment, Ownership and Reading Notes in the Arabic Manuscript - Shaykh Salih al-Azhari"
 seriesSlug: "manuscript-waqf-course"
 seriesOrder: 3
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "6 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الثالثة-قيود-الوقف-والتملك-وال-3/"
 draft: false
 ---
 

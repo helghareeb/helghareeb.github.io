@@ -31,8 +31,7 @@ const currentSeriesIndex = seriesEntries.findIndex((item) => item.id === entry.i
 const previousSeriesEntry = currentSeriesIndex > 0 ? seriesEntries[currentSeriesIndex - 1] : undefined;
 const nextSeriesEntry =
   currentSeriesIndex >= 0 && currentSeriesIndex < seriesEntries.length - 1 ? seriesEntries[currentSeriesIndex + 1] : undefined;
-const sourceLabel =
-  entry.data.sourceName === 'فاعلم أنه لا إله إلا الله' ? 'مدونة «فاعلم أنه لا إله إلا الله»' : entry.data.sourceName;
+const sourceLabel = entry.data.sourceName;
 const seoTitle = buildSeoTitle(entry.data.title, { lang: 'ar', section: 'المقالات' });
 const seoDescription = buildSeoDescription(entry.data.summary, [
   entry.data.category,
@@ -41,7 +40,13 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
 ]);
 ---
 
-<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title={seoTitle}
+  description={seoDescription}
+  article={{ published: entry.data.date, section: entry.data.category, series: entry.data.series }}
+>
   <EntityEntryPage
     lang="ar"
     eyebrow="مقال"

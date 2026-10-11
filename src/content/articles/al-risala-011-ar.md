@@ -8,10 +8,8 @@ translationKey: "al-risala-011"
 series: "مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي"
 seriesSlug: "al-risala"
 seriesOrder: 11
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "3 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/26/تابع-باب-البيان-الخامس-2/"
 draft: false
 ---
 

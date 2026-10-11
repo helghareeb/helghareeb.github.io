@@ -8,10 +8,8 @@ translationKey: "al-risala-008"
 series: "Summary of the Explanation of al-Shafi'i's al-Risala by Dr. Yasir Burhami"
 seriesSlug: "al-risala"
 seriesOrder: 8
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "7 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/26/باب-ما-نزل-عاما-دلت-السنة-خاصة-على-أنه-ي/"
 draft: false
 ---
 

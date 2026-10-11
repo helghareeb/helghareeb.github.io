@@ -8,10 +8,8 @@ translationKey: "manuscript-mastery-course-005"
 series: "Course 8: Mastering Manuscript Studies - Shaykh Salih al-Azhari"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 5
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "4 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الثامنة-إتقان-علم-المخطوطات-05/"
 draft: false
 ---
 

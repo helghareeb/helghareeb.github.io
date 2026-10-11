@@ -8,21 +8,52 @@ translationKey: "al-risala-052"
 series: "Summary of the Explanation of al-Shafi'i's al-Risala by Dr. Yasir Burhami"
 seriesSlug: "al-risala"
 seriesOrder: 52
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
-readingTime: "2 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/28/تابع-باب-الاستحسان/"
+articleType: "Translation"
+readingTime: "6 minutes"
 draft: false
 ---
 
-*This is a short English overview of the Arabic summary of this session in Dr. Yasir Burhami's explanation of Imam al-Shafi'i's al-Risalah. For the full text, see the Arabic version on this site or the original post.*
+In the name of Allah, the Most Gracious, the Most Merciful. All praise is due to Allah. I bear witness that there is no god but Allah, alone, without partner, and I bear witness that Muhammad is His servant and Messenger ﷺ.
 
-The commentary spells out the mujtahid's tools in more detail. He must be able to find the relevant Qur'anic verses, though he need not have memorised the whole Qur'an. He may rely on the leading hadith experts' judgements of authenticity. He must also know how earlier scholars reasoned, know Arabic well, and think carefully before speaking.
+**The conditions of ijtihad and analogy:**
 
-Analogy comes in several forms:
+In this section Imam al-Shafi'i explains the conditions of ijtihad and analogy (*qiyas*). He affirms that ijtihad belongs only to someone who has gathered its tools, which are knowledge of the Book, the Sunnah, consensus, the sayings of the early generations (*Salaf*), and the language of the Arabs, together with soundness of intellect; that analogy takes several forms, among them the a fortiori analogy (*qiyas al-awla*); and that whoever rejects obvious analogy (*al-qiyas al-jali*) departs from what is correct.
 
-- **A fortiori analogy.** The case is even stronger than the text. Forbidding a child to say "uff" to a parent clearly forbids hitting them.
-- **Analogy of cause.** A case is joined to another through a shared cause. Rice, for example, is joined to wheat in the rules of usury.
-- **Analogy of resemblance.** This rests on similarity alone and may be weak.
+**The main points Imam al-Shafi'i addressed in this section:**
 
-Al-Shafi'i holds that rejecting obvious analogy is a mistake. Whatever matches a text in meaning falls under its ruling, whatever name it is given. The session also warns that memorising without understanding is not enough. It notes that earlier scholars cautioned against learning only from books without teachers. It concludes that every opinion must rest on a revealed text or an analogy drawn from one.
+- **The conditions of the mujtahid:** Imam al-Shafi'i explains that the mujtahid must be knowledgeable of the following:
+  - **The Book:** knowledge of its obligations, its manners, what is abrogating and abrogated in it, what is general and specific, and its guidance; and he must be able to bring the verses to mind when needed. Memorising the whole Qur'an is not a condition.
+  - **The Sunnah:** knowledge of what is authentic and weak in it, what is connected and broken in its chains, what is abrogating and abrogated, and what is general and specific. It is sufficient for him to rely on the authentication of the specialists, such as the two Shaykhs (al-Bukhari and Muslim) in their *Sahih* collections, and al-Tirmidhi and others in what no one else has contradicted them on.
+  - **The sayings of the people of knowledge, early and later:** in order to understand the methods of inference and the effective causes (*'ilal*) and attributes that the Shariah takes into account.
+  - **The language of the Arabs:** in order to understand the texts of the Book and the Sunnah.
+  - **The intellect:** in order to distinguish between matters that resemble one another and to construct analogy.
+  - **Verification and not hastening to speak:** along with listening to the one who disagrees and being fair with oneself.
+- **What is meant by "reports" (*al-athar*):** He clarifies that what is meant by "*al-athar*" in his statement "the Book, the Sunnah, consensus, and *al-athar*" admits two meanings:
+  - The Prophetic hadiths, in which case it is a conjunction of explanation (*'atf tafsir*).
+  - The sayings of the Companions, which are used as proof when nothing else is available.
+- **Analogy and its kinds:** Imam al-Shafi'i explains that analogy takes several forms, among them:
+  - **The a fortiori analogy (*qiyas al-awla*, also called *qiyas al-ajall*, "the weightier analogy"):** where the derivative case is more deserving of the ruling than the original case, such as the prohibition of striking [one's parents] following from the prohibition of saying "uff" to them.
+  - **The analogy of indication (*qiyas al-dalalah*, the analogy of the effective cause, *qiyas al-'illah*):** joining the derivative case to the original case because of an effective cause common to both, such as the analogy of rice to wheat in the prohibition of usury (*riba*) because of the presence of the effective cause of measure by volume, weight, and edibility.
+  - **The analogy of resemblance (*qiyas al-shabah*):** joining the derivative case to the original case because of a resemblance between them; it may be weak if there is no recognised effective cause.
+- **Refuting those who reject obvious analogy:** Imam al-Shafi'i explains that whoever rejects obvious (clear) analogy departs from what is correct, and that whatever agrees with a text in its meaning is analogy, whether some call it analogy or call it acting on the generality of the text.
+- **Examples of analogy:** Imam al-Shafi'i gives examples of analogy:
+  - The prohibition of openly speaking ill [of a believer] following from the prohibition of thinking ill of him.
+  - The greater reward for doing much good than for doing a little of it, and the greater sin for doing much evil than for doing a little of it.
+  - The permissibility of taking part of the wealth of hostile disbelievers (*harbis*) following from the permissibility of taking all of it.
+- **The illustration of valuation once more:** Imam al-Shafi'i repeats the illustration of valuation to affirm that whoever lacks experience may not value things; likewise, whoever lacks knowledge of the Book, the Sunnah, consensus, the sayings of the Salaf, and the language of the Arabs may not exercise ijtihad or use analogy.
+- **The difference between memorisation and understanding:** Imam al-Shafi'i explains the difference between memorising texts and understanding their meanings, and that what counts is understanding and knowledge, not mere memorisation.
+- **The prohibition of taking knowledge from written pages:** Imam al-Shafi'i points out that the early scholars prohibited taking knowledge from written pages (*suhuf*), that is, texts stripped of their explanations, because they may be understood in a way other than what was intended.
+- **The obligation of following the report or analogy based on it:** Imam al-Shafi'i affirms the obligation of following the report (*khabar*), that is, the Book and the Sunnah, or analogy based on it, and that speaking without a report or an analogy is not permissible.
+
+**Additional clarifications:**
+
+- **Al-athar:** the sayings of the Companions, or the Prophetic hadiths.
+- **The abrogating and the abrogated:** the verses and hadiths whose ruling has been lifted.
+- **The general and the specific:** words that include [their referents] generally or specifically.
+- **Guidance and manners (*al-irshad wa al-adab*):** what is recommended to do but is not obligatory.
+- **The sayings of the people of knowledge:** the opinions of earlier scholars.
+- **The language of the Arabs:** the Arabic language and its rules.
+
+**Final summary:**
+
+In this section Imam al-Shafi'i focuses on the conditions of ijtihad and analogy, explaining that ijtihad is permissible only for someone who has gathered its tools: knowledge of the Book, the Sunnah, consensus, the sayings of the Salaf, and the language of the Arabs, together with intellect; that analogy takes several forms, among them the a fortiori analogy and the analogy of indication; and that whoever rejects obvious analogy departs from what is correct. He affirms the obligation of following the report or analogy based on it, and that speaking without knowledge is not permissible.

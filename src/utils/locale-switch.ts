@@ -61,7 +61,9 @@ const localePairs: Record<string, string> = {
   '/en/scholarly-fields/e-learning/': '/ar/fields/e-learning/',
 };
 
-export async function getAlternateLocalePath(currentPath: string, lang: Locale) {
+export async function getAlternateLocalePath(rawPath: string, lang: Locale) {
+  // Astro passes the pathname percent-encoded; content slugs (and the matchers below) are decoded Arabic.
+  const currentPath = decodeURIComponent(rawPath);
   const articleEntries = await getCollection('articles');
   const articleRouteSlugMaps = {
     ar: new Map(
@@ -102,6 +104,20 @@ export async function getAlternateLocalePath(currentPath: string, lang: Locale) 
     ),
   };
 
+  // Series slugs may differ between languages (Arabic-slug series); pair them through translated parts.
+  const seriesCounterpart = { ar: new Map<string, string>(), en: new Map<string, string>() };
+  for (const entry of articleEntries) {
+    if (entry.data.draft || !entry.data.seriesSlug || !entry.data.translationKey) continue;
+    const other = articleEntries.find(
+      (item) =>
+        item.data.lang !== entry.data.lang &&
+        !item.data.draft &&
+        item.data.translationKey === entry.data.translationKey &&
+        item.data.seriesSlug,
+    );
+    if (other) seriesCounterpart[entry.data.lang].set(entry.data.seriesSlug, other.data.seriesSlug!);
+  }
+
   // Books, editions, projects and links may exist in one language only; fall back to the section index.
   const entrySlugs = {
     books: await getCollection('books'),
@@ -134,7 +150,10 @@ export async function getAlternateLocalePath(currentPath: string, lang: Locale) 
     },
     {
       pattern: /^\/ar\/articles\/series\/([^/]+)\/$/,
-      getPath: (match) => (articleSeriesSlugs.en.has(match[1]) ? `/en/articles/series/${match[1]}/` : '/en/articles/series/'),
+      getPath: (match) => {
+        const target = seriesCounterpart.ar.get(match[1]) ?? (articleSeriesSlugs.en.has(match[1]) ? match[1] : undefined);
+        return target ? `/en/articles/series/${target}/` : '/en/articles/series/';
+      },
     },
     {
       pattern: /^\/en\/articles\/([^/]+)\/$/,
@@ -150,7 +169,10 @@ export async function getAlternateLocalePath(currentPath: string, lang: Locale) 
     },
     {
       pattern: /^\/en\/articles\/series\/([^/]+)\/$/,
-      getPath: (match) => (articleSeriesSlugs.ar.has(match[1]) ? `/ar/articles/series/${match[1]}/` : '/ar/articles/series/'),
+      getPath: (match) => {
+        const target = seriesCounterpart.en.get(match[1]) ?? (articleSeriesSlugs.ar.has(match[1]) ? match[1] : undefined);
+        return target ? `/ar/articles/series/${target}/` : '/ar/articles/series/';
+      },
     },
     { pattern: /^\/ar\/books\/([^/]+)\/$/, getPath: (match) => counterpart('books', 'en', match[1], '/en/books/') },
     { pattern: /^\/en\/books\/([^/]+)\/$/, getPath: (match) => counterpart('books', 'ar', match[1], '/ar/books/') },

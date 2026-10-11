@@ -8,10 +8,8 @@ translationKey: "manuscript-handwriting-course-004"
 series: "الدورة السابعة: دورة دراسة النسخ الخطية مسارات ومهارات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-handwriting-course"
 seriesOrder: 4
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "4 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-السابعة-دورة-دراسة-النسخ-الخطي-4/"
 draft: false
 ---
 

@@ -8,10 +8,8 @@ translationKey: "al-risala-025"
 series: "مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي"
 seriesSlug: "al-risala"
 seriesOrder: 25
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "4 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/27/تابع-باب-العلل-في-الحديث-2/"
 draft: false
 ---
 

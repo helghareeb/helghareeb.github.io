@@ -8,10 +8,8 @@ translationKey: "manuscript-handwriting-course-003"
 series: "Course 7: Studying Manuscript Copies - Paths and Skills - Shaykh Salih al-Azhari"
 seriesSlug: "manuscript-handwriting-course"
 seriesOrder: 3
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "6 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-السابعة-دورة-دراسة-النسخ-الخطي-3/"
 draft: false
 ---
 

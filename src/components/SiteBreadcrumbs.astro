@@ -26,6 +26,16 @@ const breadcrumbItems =
           return label ? { href: path, label } : undefined;
         })
         .filter((item): item is { href: string; label: string } => Boolean(item) && item!.href !== localeHome);
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [{ href: localeHome, label: homeLabel }, ...breadcrumbItems].map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: new URL(item.href, Astro.site).toString(),
+  })),
+};
 ---
 
 {
@@ -44,6 +54,7 @@ const breadcrumbItems =
           )}
         </>
       ))}
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     </nav>
   )
 }

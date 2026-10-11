@@ -8,10 +8,8 @@ translationKey: "al-risala-029"
 series: "Summary of the Explanation of al-Shafi'i's al-Risala by Dr. Yasir Burhami"
 seriesSlug: "al-risala"
 seriesOrder: 29
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "5 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/27/تابع-باب-العلل-في-الحديث-6/"
 draft: false
 ---
 

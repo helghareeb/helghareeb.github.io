@@ -8,10 +8,8 @@ translationKey: "manuscript-mastery-course-004"
 series: "الدورة الثامنة - إتقان علم المخطوطات - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-mastery-course"
 seriesOrder: 4
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "4 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الثامنة-إتقان-علم-المخطوطات-04/"
 draft: false
 ---
 

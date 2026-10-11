@@ -8,10 +8,8 @@ translationKey: "al-risala-naqeeb-002"
 series: "ملخص شرح كتاب الرسالة - الشيخ د. أحمد النقيب"
 seriesSlug: "al-risala-ahmad-naqeeb"
 seriesOrder: 2
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "5 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/28/01"
 draft: false
 ---
 

@@ -8,10 +8,8 @@ translationKey: "al-risala-052"
 series: "مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي"
 seriesSlug: "al-risala"
 seriesOrder: 52
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "4 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/28/تابع-باب-الاستحسان/"
 draft: false
 ---
 

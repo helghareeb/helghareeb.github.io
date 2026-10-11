@@ -8,10 +8,8 @@ translationKey: "manuscript-nafisa-samaat-course-002"
 series: "الدورة الخامسة: قراءة في سماعات مخطوطات نفيسة - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-nafisa-samaat-course"
 seriesOrder: 2
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "2 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الخامسة-قراءة-في-سماعات-مخطوطا-2/"
 draft: false
 ---
 

@@ -8,10 +8,8 @@ translationKey: "manuscript-skills-course-002"
 series: "Course 1: Skills and Tools for Reading the Arabic Manuscript - Shaykh Salih al-Azhari"
 seriesSlug: "manuscript-skills-course"
 seriesOrder: 2
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "4 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/28/الدورة-الأولى-مهارات-وأدوات-قراءة-ا/"
 draft: false
 ---
 

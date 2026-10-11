@@ -8,10 +8,8 @@ translationKey: "manuscript-skills-course-001"
 series: "ملخص الدورة الأولى في علوم المخطوطات: مهارات وأدوات قراءة المخطوط العربي - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-skills-course"
 seriesOrder: 1
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "3 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/28/الدورة-الأولى-مهارات-وأدوات-قراءة-الم/"
 draft: false
 ---
 

@@ -8,10 +8,8 @@ translationKey: "manuscript-waqf-course-003"
 series: "الدورة الثالثة: قيود الوقف والتملك والمطالعة في المخطوط العربي، عناصر البناء ومهارات التحليل - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-waqf-course"
 seriesOrder: 3
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "5 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الثالثة-قيود-الوقف-والتملك-وال-3/"
 draft: false
 ---
 

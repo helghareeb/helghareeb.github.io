@@ -8,10 +8,8 @@ translationKey: "manuscript-samaat-course-003"
 series: "Course 4: Audition Certificates (Sama'at) on Manuscripts - Structure, Use and Analysis - Shaykh Salih al-Azhari"
 seriesSlug: "manuscript-samaat-course"
 seriesOrder: 3
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "5 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الرابعة-السماعات-المثبتة-على-ا-3/"
 draft: false
 ---
 

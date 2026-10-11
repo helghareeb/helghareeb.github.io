@@ -14,6 +14,12 @@ export interface Props {
   noindex?: boolean;
   /** Include this page's main content in the Pagefind search index. Defaults to !noindex. */
   searchable?: boolean;
+  /** Marks the page as an article: sets og:type and adds Article structured data. */
+  article?: {
+    published?: string;
+    section?: string;
+    series?: string;
+  };
 }
 
 const {
@@ -23,15 +29,20 @@ const {
   dir = lang === 'ar' ? 'rtl' : 'ltr',
   noindex = false,
   searchable = !noindex,
+  article,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
 const canonicalUrl = new URL(currentPath, siteConfig.siteUrl).toString();
 const alternatePath = await getAlternateLocalePath(currentPath, lang);
 const alternateUrl = new URL(alternatePath, siteConfig.siteUrl).toString();
-const socialImageUrl = new URL('/og-image.svg', siteConfig.siteUrl);
-socialImageUrl.searchParams.set('title', title);
-socialImageUrl.searchParams.set('lang', lang);
+// The locale switch falls back to a section index when a page has no translation; such a
+// fallback is always shallower than the page itself and must not be declared as an hreflang pair.
+const depth = (path: string) => path.split('/').filter(Boolean).length;
+const hasTranslation = currentPath !== '/' && depth(alternatePath) === depth(currentPath);
+const arabicUrl = lang === 'ar' ? canonicalUrl : alternateUrl;
+// Social networks do not render SVG previews, so link the static PNG card for the page language.
+const socialImageUrl = new URL(`/og/default-${lang}.png`, siteConfig.siteUrl);
 const robotsContent = noindex
   ? 'noindex,nofollow'
   : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
@@ -57,11 +68,29 @@ const structuredData = {
       '@type': 'Person',
       '@id': `${siteConfig.siteUrl}/#person`,
       name: author,
+      alternateName: [
+        'Haitham A. El-Ghareeb',
+        'Haitham Abdelmonem El-Ghareeb',
+        'Haitham El-Ghareeb',
+        'هيثم عبدالمنعم الغريب',
+        'هيثم الغريب',
+      ],
       url: siteConfig.siteUrl,
       jobTitle: lang === 'ar' ? 'أستاذ نظم المعلومات المساعد بجامعة المنصورة' : 'Associate Professor of Information Systems, Mansoura University',
+      worksFor: {
+        '@type': 'CollegeOrUniversity',
+        name: lang === 'ar' ? 'جامعة المنصورة' : 'Mansoura University',
+        url: 'https://www.mans.edu.eg/',
+      },
+      knowsAbout:
+        lang === 'ar'
+          ? ['نظم المعلومات', 'نظم دعم القرار', 'المنطق النيوتروسوفي', 'التعليم الإلكتروني', 'أصول الفقه', 'علوم المخطوطات', 'تحقيق التراث']
+          : ['Information systems', 'Decision support systems', 'Neutrosophic logic', 'E-learning', 'Usul al-fiqh', 'Manuscript studies', 'Critical editions of Arabic texts'],
       sameAs: [
         'https://orcid.org/0000-0003-1875-6706',
         'https://scholar.google.com/citations?user=f66uaewAAAAJ',
+        'https://ieeexplore.ieee.org/author/37086352024',
+        'https://scholargps.com/scholars/54142940845340/haitham-a-el-ghareeb',
         'https://github.com/helghareeb',
         'https://eg.linkedin.com/in/helghareeb',
         'https://www.alukah.net/authors/view/home/16869/',
@@ -78,6 +107,28 @@ const structuredData = {
       inLanguage: lang,
       description: normalizedDescription,
     },
+    ...(article
+      ? [
+          {
+            '@type': 'Article',
+            '@id': `${canonicalUrl}#article`,
+            headline: title.split(' | ')[0].slice(0, 110),
+            description: normalizedDescription,
+            url: canonicalUrl,
+            mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` },
+            image: socialImageUrl.toString(),
+            inLanguage: lang,
+            author: { '@id': `${siteConfig.siteUrl}/#person` },
+            publisher: { '@id': `${siteConfig.siteUrl}/#person` },
+            ...(article.published ? { datePublished: article.published } : {}),
+            ...(article.section ? { articleSection: article.section } : {}),
+            ...(article.series ? { isPartOf: { '@type': 'CreativeWorkSeries', name: article.series } } : {}),
+            ...(hasTranslation
+              ? { [lang === 'ar' ? 'workTranslation' : 'translationOfWork']: { '@id': `${alternateUrl}#article` } }
+              : {}),
+          },
+        ]
+      : []),
   ],
 };
 ---
@@ -91,14 +142,21 @@ const structuredData = {
     <meta name="author" content={author} />
     <meta name="robots" content={robotsContent} />
     <meta name="googlebot" content={robotsContent} />
-    <meta property="og:type" content="website" />
+    {siteConfig.googleSiteVerification && <meta name="google-site-verification" content={siteConfig.googleSiteVerification} />}
+    {siteConfig.bingSiteVerification && <meta name="msvalidate.01" content={siteConfig.bingSiteVerification} />}
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    {article?.published && <meta property="article:published_time" content={article.published} />}
+    {article?.section && <meta property="article:section" content={article.section} />}
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={normalizedDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:locale" content={lang === 'ar' ? 'ar_AR' : 'en_US'} />
-    <meta property="og:locale:alternate" content={lang === 'ar' ? 'en_US' : 'ar_AR'} />
+    {hasTranslation && <meta property="og:locale:alternate" content={lang === 'ar' ? 'en_US' : 'ar_AR'} />}
     <meta property="og:image" content={socialImageUrl.toString()} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content={title} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
@@ -108,9 +166,13 @@ const structuredData = {
     <meta name="twitter:image:alt" content={title} />
     <meta name="theme-color" content="#f5efe3" />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang={lang} href={canonicalUrl} />
-    <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
-    <link rel="alternate" hreflang="x-default" href={new URL('/', siteConfig.siteUrl).toString()} />
+    {hasTranslation && (
+      <>
+        <link rel="alternate" hreflang={lang} href={canonicalUrl} />
+        <link rel="alternate" hreflang={alternateLang} href={alternateUrl} />
+        <link rel="alternate" hreflang="x-default" href={arabicUrl} />
+      </>
+    )}
     <link rel="alternate" type="application/rss+xml" title={rssTitle} href={rssUrl} />
     <link rel="sitemap" href={new URL('/sitemap.xml', siteConfig.siteUrl).toString()} />
     <title>{title}</title>

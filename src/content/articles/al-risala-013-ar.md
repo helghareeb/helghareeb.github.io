@@ -8,10 +8,8 @@ translationKey: "al-risala-013"
 series: "مختصر شرح  كتاب الرسالة للشافعي - شرح د. ياسر برهامي"
 seriesSlug: "al-risala"
 seriesOrder: 13
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "5 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/27/باب-ما-أبان-لخلقه-من-فرضه-على-رسوله-ﷺ/"
 draft: false
 ---
 

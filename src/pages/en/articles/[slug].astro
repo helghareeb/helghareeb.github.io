@@ -27,7 +27,13 @@ const isSummary = /^summary/i.test(entry.data.articleType ?? '');
 const sourceNotice = `This is an English ${isSummary ? 'summary' : 'version'} of an article first published in Arabic on ${entry.data.sourceName}.`;
 ---
 
-<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title={seoTitle}
+  description={seoDescription}
+  article={{ published: entry.data.date, section: entry.data.category, series: entry.data.series }}
+>
   <EntityEntryPage
     lang="en"
     eyebrow="Article"

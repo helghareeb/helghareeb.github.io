@@ -8,10 +8,8 @@ translationKey: "manuscript-atiq-course-006"
 series: "Course 2: Reading Ancient Manuscripts - Shaykh Salih al-Azhari"
 seriesSlug: "manuscript-atiq-course"
 seriesOrder: 6
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "2 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الثانية-قراءة-في-مخطوطات-عتاق-6/"
 draft: false
 ---
 

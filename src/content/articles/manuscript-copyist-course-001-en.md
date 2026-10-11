@@ -8,10 +8,8 @@ translationKey: "manuscript-copyist-course-001"
 series: "Course 6: Identifying the Copyist and the Copying Date in Arabic Manuscripts - Shaykh Salih al-Azhari"
 seriesSlug: "manuscript-copyist-course"
 seriesOrder: 1
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "6 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-السادسة-ضوابط-وقرائن-التعرف-عل/"
 draft: false
 ---
 

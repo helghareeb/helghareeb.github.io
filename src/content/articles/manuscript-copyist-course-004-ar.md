@@ -8,10 +8,8 @@ translationKey: "manuscript-copyist-course-004"
 series: "الدورة السادسة: ضوابط وقرائن التعرف على اسم الناسخ وتاريخ النسخ في المخطوطات العربية - الشيخ صالح الأزهري"
 seriesSlug: "manuscript-copyist-course"
 seriesOrder: 4
-sourceName: "فاعلم أنه لا إله إلا الله"
-articleType: "مقال خارجي"
+articleType: "مقال"
 readingTime: "4 دقيقة"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-السادسة-ضوابط-وقرائن-التعرف-عل-4/"
 draft: false
 ---
 

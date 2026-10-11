@@ -8,10 +8,8 @@ translationKey: "manuscript-nafisa-samaat-course-004"
 series: "Course 5: Reading the Audition Certificates of Precious Manuscripts - Shaykh Salih al-Azhari"
 seriesSlug: "manuscript-nafisa-samaat-course"
 seriesOrder: 4
-sourceName: "Fa'lam Annahu La Ilaha Illa Allah blog"
-articleType: "Translated in-site version of an externally hosted article"
+articleType: "Translation"
 readingTime: "4 minutes"
-externalUrl: "https://f3lam.wordpress.com/2024/12/29/الدورة-الخامسة-قراءة-في-سماعات-مخطوطا-4/"
 draft: false
 ---
 
