@@ -65,6 +65,7 @@ jobs:
         env:
           INDEXNOW_KEY: 00fca127afbcbf77b18a3a954e2a84fd
         run: |
+          sleep 60  # let the Pages CDN serve the new key file and sitemap
           curl -fsSL https://helghareeb.github.io/sitemap.xml -o sitemap.xml
           python3 - <<'PY'
           import json, os, re, urllib.request
