@@ -11,3 +11,6 @@ externalUrl: "https://github.com/helghareeb/muslim-la-yahon"
 
 This repository preserves the book's source files together with a ready-to-publish LaTeX
 edition and generated PDF, showing a complete scholarly publication workflow.
+
+The book is also published in the Alukah Network library in PDF and Word formats:
+https://www.alukah.net/library/0/182452/

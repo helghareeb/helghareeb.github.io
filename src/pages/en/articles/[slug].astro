@@ -57,6 +57,17 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
         <p>
           <a href={entry.data.externalUrl}>Go to the article on {entry.data.sourceName}</a>
         </p>
+        {entry.data.alternateLinks.length > 0 && (
+          <p>
+            Also published on:{' '}
+            {entry.data.alternateLinks.map((link, index) => (
+              <>
+                {index > 0 && ' · '}
+                <a href={link.url}>{link.name}</a>
+              </>
+            ))}
+          </p>
+        )}
       </section>
     )}
   </EntityEntryPage>

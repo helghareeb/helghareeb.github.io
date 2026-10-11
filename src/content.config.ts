@@ -15,6 +15,7 @@ const articles = defineCollection({
     articleType: z.string().optional(),
     readingTime: z.string().optional(),
     externalUrl: z.string().url().optional(),
+    alternateLinks: z.array(z.object({ name: z.string(), url: z.string().url() })).default([]),
     draft: z.boolean().default(false),
   }),
 });

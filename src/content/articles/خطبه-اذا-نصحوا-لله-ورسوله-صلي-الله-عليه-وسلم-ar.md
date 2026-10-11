@@ -9,6 +9,9 @@ sourceName: "شبكة الألوكة"
 articleType: "مقال خارجي"
 readingTime: "22 دقيقة"
 externalUrl: "https://www.alukah.net/sharia/0/172112/%d8%ae%d8%b7%d8%a8%d8%a9-%d8%a5%d8%b0%d8%a7-%d9%86%d8%b5%d8%ad%d9%88%d8%a7-%d9%84%d9%84%d9%87-%d9%88%d8%b1%d8%b3%d9%88%d9%84%d9%87-%d8%b5%d9%84%d9%89-%d8%a7%d9%84%d9%84%d9%87-%d8%b9%d9%84%d9%8a%d9%87-%d9%88%d8%b3%d9%84%d9%85/"
+alternateLinks:
+  - name: "طريق الإسلام"
+    url: "https://ar.islamway.net/article/94571/%D8%A5%D8%B0%D8%A7-%D9%86%D8%B5%D8%AD%D9%88%D8%A7-%D9%84%D9%84%D9%87-%D9%88%D8%B1%D8%B3%D9%88%D9%84%D9%87-%D8%B5%D9%84%D9%89-%D8%A7%D9%84%D9%84%D9%87-%D8%B9%D9%84%D9%8A%D9%87-%D9%88%D8%B3%D9%84%D9%85"
 draft: false
 ---
 

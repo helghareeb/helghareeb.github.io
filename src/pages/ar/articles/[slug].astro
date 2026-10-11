@@ -71,6 +71,17 @@ const seoDescription = buildSeoDescription(entry.data.summary, [
         <p>
           <a href={entry.data.externalUrl}>الانتقال إلى المقال على {entry.data.sourceName}</a>
         </p>
+        {entry.data.alternateLinks.length > 0 && (
+          <p>
+            منشور أيضًا على:{' '}
+            {entry.data.alternateLinks.map((link, index) => (
+              <>
+                {index > 0 && ' · '}
+                <a href={link.url}>{link.name}</a>
+              </>
+            ))}
+          </p>
+        )}
       </section>
     )}
 

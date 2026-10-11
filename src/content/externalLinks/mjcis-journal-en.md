@@ -10,3 +10,5 @@ featured: true
 ---
 
 This page documents the official faculty journal, including its publication background, core metadata, and the current journal website.
+
+Dr. El-Ghareeb has served as the journal's Managing Editor since 24 September 2026, and as a member of its editorial board since April 2023.
