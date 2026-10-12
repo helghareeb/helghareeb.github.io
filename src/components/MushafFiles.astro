@@ -1,0 +1,34 @@
+---
+import { fetchMushafManifest, MUSHAF_REPO, renderMushafFiles } from '../utils/mushaf-files';
+
+interface Props {
+  lang: 'ar' | 'en';
+}
+
+const { lang } = Astro.props;
+const manifest = await fetchMushafManifest();
+const fallback =
+  lang === 'ar'
+    ? `<p>تعذّر تحميل قائمة الملفات. الملفات متاحة في <a href="${MUSHAF_REPO}/tree/main/pdf">مستودع المشروع</a>.</p>`
+    : `<p>The file list could not be loaded. The files are available in the <a href="${MUSHAF_REPO}/tree/main/pdf">project repository</a>.</p>`;
+---
+
+<div data-mushaf-files data-lang={lang} data-commit={manifest?.commit ?? ''} set:html={manifest ? renderMushafFiles(manifest, lang) : fallback} />
+
+<script>
+  import { MUSHAF_BASE, renderMushafFiles, type MushafManifest } from '../utils/mushaf-files';
+
+  // Refresh from the live manifest so a new push to the mushaf repo shows without rebuilding this site.
+  const root = document.querySelector<HTMLElement>('[data-mushaf-files]');
+  if (root) {
+    fetch(`${MUSHAF_BASE}manifest.json`, { cache: 'no-cache' })
+      .then((response) => (response.ok ? (response.json() as Promise<MushafManifest>) : undefined))
+      .then((manifest) => {
+        if (manifest && manifest.commit !== root.dataset.commit) {
+          root.innerHTML = renderMushafFiles(manifest, root.dataset.lang === 'en' ? 'en' : 'ar');
+          root.dataset.commit = manifest.commit;
+        }
+      })
+      .catch(() => {});
+  }
+</script>

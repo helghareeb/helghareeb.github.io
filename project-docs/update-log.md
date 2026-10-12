@@ -2020,3 +2020,8 @@
 - التدوينات العشر الناقصة: «تابع: باب خبر الواحد» حلّت محل النسخة المكررة في `al-risala-040`، وسلسلتان جديدتان بأسماء تصنيفات المدونة: «خرابيش حاسبات» (`computing-notes`، 4) و«شرح علل الترمذي لابن رجب» (`ilal-al-tirmidhi`، 5)، مع ترجمتها ومقدمتي السلسلتين. في `ilal-al-tirmidhi-004` أبقيت النسخة النهائية من المقال وحُذفت ردود المحادثة والنسخة المكررة؛ وأُزيلت روابط الاستشهاد الآلية الميتة (ppl-ai paste.txt).
 - ترجمة كاملة لحلقات برهامي 33–64 بدل النظرات المختصرة.
 - تحسين محركات البحث: صور مشاركة PNG (`public/og/default-{ar,en}.png`) بدل SVG؛ hreflang يُذكر فقط حين توجد ترجمة فعلية (كان يشير إلى صفحات الأقسام)، وفك ترميز المسار في `getAlternateLocalePath` فصار تبديل اللغة يعمل في الصفحات ذات الروابط العربية، وربط السلاسل ذات الروابط المختلفة بين اللغتين؛ بيانات Article وBreadcrumbList المنظمة؛ og:type=article وتاريخ النشر؛ إثراء بيانات Person؛ حقلا `googleSiteVerification` و`bingSiteVerification` في `config/site.ts`؛ إرسال روابط خريطة الموقع إلى IndexNow بعد كل نشر (مفتاح في `public/`).
+
+### تحديث 2026-10-12
+- صفحة «مصحف الغريب» / Mushaf al-Gharib (ع/إ) في `/ar/mushaf-gharib/` و`/en/mushaf-gharib/`، وبطاقة في صفحة الكتب. ملفات PDF تُنشر من المستودع العام `helghareeb/mushaf-gharib` إلى صفحاته (`https://helghareeb.github.io/mushaf-gharib/`) مع `manifest.json` عند كل دفع؛ تعرض الصفحة القائمة وقت البناء ثم تحدّثها في المتصفح من الملف الحي (`src/utils/mushaf-files.ts`)، فيظهر كل تحديث دون إعادة بناء الموقع.
+- رمز التحقق من Google Search Console في `config/site.ts`.
+- تنظيف بقايا المحادثة الآلية: `ilal-al-tirmidhi-001` (المخطط المكرر وعبارات «إليك…» وعلامات الاستشهاد الآلية)، و`manuscript-atiq-course-004` و`manuscript-nafisa-samaat-course-002`/`008` (عبارات «لا تتردد»/«هل ترغب» وملخصان).

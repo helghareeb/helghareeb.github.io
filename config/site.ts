@@ -7,7 +7,7 @@ export const siteConfig = {
   authorAr: 'د. هيثم الغريب',
   authorEn: 'Dr. Haitham A. El-Ghareeb',
   /** Search Console / Bing Webmaster ownership tokens (the content value of their verification meta tags). */
-  googleSiteVerification: '',
+  googleSiteVerification: 'siymBh6gPIiXykiuFC-rum4kdhVVgiP237il1FFQRs8',
   bingSiteVerification: '',
   defaultLocale: 'ar',
   locales: ['ar', 'en'] as const,

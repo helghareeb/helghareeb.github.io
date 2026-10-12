@@ -1,0 +1,77 @@
+---
+import MushafFiles from '../../../components/MushafFiles.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { MUSHAF_REPO } from '../../../utils/mushaf-files';
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title="Mushaf al-Gharib | Dr. Haitham A. El-Ghareeb"
+  description="The Madina mushaf (Hafs) with a facing commentary page for every page: rare Qur'anic words from six classical books, occasions of revelation, and the tafsir hadiths with their grades. Read or download as PDF."
+>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Book</p>
+      <h1 class="hero__title">Mushaf al-Gharib</h1>
+      <p class="hero__lead">
+        The Madina mushaf in the narration of Hafs from 'Asim (1441 AH printing). Each mushaf page is on
+        the right, facing a commentary page with the rare words (<em>gharib</em>) of each line, the
+        occasions of revelation, and the hadiths of the tafsir books with their grades. Every word of the
+        commentary is quoted verbatim from its source with a reference; nothing is generated. The book is
+        in Arabic.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-three">
+        <article class="stat-card">
+          <strong>604</strong>
+          <span>mushaf pages</span>
+        </article>
+        <article class="stat-card">
+          <strong>31</strong>
+          <span>volumes: introductions and thirty juz'</span>
+        </article>
+        <article class="stat-card">
+          <strong>6</strong>
+          <span>books on gharib al-Qur'an</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <MushafFiles lang="en" />
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <h2 class="section-title">Sources of the commentary</h2>
+      </div>
+      <div class="grid-two">
+        <article class="content-card">
+          <h3>Rare words of the Qur'an</h3>
+          <p>
+            Oldest first: Abu 'Ubayda's <em>Majaz al-Qur'an</em>, al-Bukhari's glosses in his
+            <em>Sahih</em>, Ibn Qutayba's <em>Gharib al-Qur'an</em>, al-Raghib's <em>al-Mufradat</em>,
+            Ibn al-Ha'im's <em>al-Tibyan</em> and al-Khudayri's <em>al-Siraj</em>, with the editors' notes.
+          </p>
+        </article>
+        <article class="content-card">
+          <h3>Occasions of revelation and hadith</h3>
+          <p>
+            Al-Wadi'i's <em>al-Sahih al-Musnad min Asbab al-Nuzul</em>, al-Muzayni's <em>Asbab al-Nuzul
+            through the Nine Books</em>, and the tafsir chapters of al-Bukhari, Muslim, al-Tirmidhi and
+            al-Nasa'i's <em>al-Kubra</em>, each hadith followed by its grade, with notes from Ibn Qutayba's
+            <em>Ta'wil Mushkil al-Qur'an</em>.
+          </p>
+        </article>
+      </div>
+      <p class="content-card__meta">
+        The files are published automatically from the <a href={MUSHAF_REPO}>project repository on GitHub</a>
+        whenever it is updated.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

@@ -17,6 +17,8 @@ const staticPaths = [
   '/en/teaching/',
   '/ar/publications/',
   '/en/publications/',
+  '/ar/mushaf-gharib/',
+  '/en/mushaf-gharib/',
   '/ar/books/',
   '/en/books/',
   '/ar/editions/',

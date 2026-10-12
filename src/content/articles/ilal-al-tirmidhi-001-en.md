@@ -9,7 +9,7 @@ series: "Ibn Rajab's Explanation of 'Ilal al-Tirmidhi"
 seriesSlug: "ilal-al-tirmidhi"
 seriesOrder: 1
 articleType: "Translation"
-readingTime: "15 minutes"
+readingTime: "10 minutes"
 draft: false
 ---
 
@@ -18,120 +18,6 @@ Within the sciences of the noble Prophetic hadith, *Sharh 'Ilal al-Tirmidhi* by 
 With his advanced thought and scholarly depth, Ibn Rajab represents a distinctive school that highlights the importance of uncovering the defects of hadith not merely through outward criticism of narrators, but by diving into the secrets of chains of transmission (*asanid*) and texts (*mutun*). He relies on a precise scholarly methodology that clarifies the stages of transmission, reception, and *al-jarh wa al-ta'dil* (the criticism and accreditation of narrators), drawing on the hadiths of al-Tirmidhi's *Jami'* and the comparisons they allow. Studying this commentary is not only a dive into an ancient legal heritage; it is a gateway to understanding hadith criticism through advanced methods, giving students of knowledge and textual editors the best tools for understanding the noble hadith and distinguishing the authentic from the weak.
 
 In this first article of the series explaining the book, we will sail through the book's origins and foundations, then return to understand the scholarly method Ibn Rajab adopted, so that we may build our reading on a solid base served by documented scholarly verification, preparing the reader to explore the details of this precious heritage with full depth and strength.
-
-Here is a proposed outline for the first scholarly article in the series explaining *Sharh 'Ilal al-Tirmidhi* by Ibn Rajab al-Hanbali:
-
-------------------------------------------------------------------------
-
-## Article title:
-
-A Scholarly Introduction to *Sharh 'Ilal al-Tirmidhi*: The Historical and Methodological Context of Ibn Rajab al-Hanbali
-
-------------------------------------------------------------------------
-
-## Introduction:
-
-- The importance of *Sharh 'Ilal al-Tirmidhi* in the hadith sciences and the science of hadith defects
-- Placing the book in its historical context: the loss of the other parts due to turmoil and wars
-- The importance of the book's critical edition and printing in the modern era
-- The article's aim: to focus on establishing a scholarly and methodological understanding of what the first session (*majlis*) of the commentary contains
-
-------------------------------------------------------------------------
-
-## Main sections:
-
-## 1. The Book's Origin and Present State
-
-- Defining *Sharh 'Ilal al-Tirmidhi* and its relationship to al-Tirmidhi's *Jami'*
-- The historical circumstances of the loss of parts, and what remains of the commentary
-- Critical editions and modern printings: the efforts of Prof. Dr. Nur al-Din 'Itr and Dr. Hammam 'Abd al-Rahim
-
-## 2. Between Theory and Practice: Ibn Rajab's Method in the Science of 'Ilal
-
-- Defining the science of *'ilal* and its terminology in the book
-- Examining the earlier critics and their approaches (al-Bukhari, Ibn al-Madini, Abu Hatim, etc.)
-- Focusing on the practical side: tracing the routes of a hadith, evaluating narrations, and uncovering hidden defects
-
-## 3. The Rules of Hadith Criticism and Their Practical Foundations
-
-- Classifying narrators and scholarly generations (*tabaqat*), and their effect on hadith criticism
-- Rules for dealing with differences among routes and copies, and with additions and omissions
-- The importance of practical application and comparison between chains of transmission
-
-## 4. The Book's Place in the Hadith Sciences and the Science of 'Ilal
-
-- How the commentary expands the advanced system of the science of *'ilal*
-- Ibn Rajab's influence on developing the method of hadith criticism
-- The importance of *Sharh 'Ilal al-Tirmidhi* for grasping the major technical terms of hadith
-
-------------------------------------------------------------------------
-
-## Conclusion:
-
-- Summarizing the importance of the first session as a methodological and scholarly introduction
-- The book's role in establishing scholarly rules between theory and practice
-- The role of this article as part of a series toward a complete future commentary
-
-------------------------------------------------------------------------
-
-This outline will help organize the information and acquaint the reader with the fundamentals of the book and its scholarly methods in a clear and systematic way.Here is a proposed outline for the first scholarly article in the series explaining *Sharh 'Ilal al-Tirmidhi* by Ibn Rajab al-Hanbali:
-
-------------------------------------------------------------------------
-
-## Article title:
-
-A Scholarly Introduction to *Sharh 'Ilal al-Tirmidhi*: The Historical and Methodological Context of Ibn Rajab al-Hanbali
-
-------------------------------------------------------------------------
-
-## Introduction:
-
-- The importance of *Sharh 'Ilal al-Tirmidhi* in the hadith sciences and the science of hadith defects
-- Placing the book in its historical context: the loss of the other parts due to turmoil and wars
-- The importance of the book's critical edition and printing in the modern era
-- The article's aim: to focus on establishing a scholarly and methodological understanding of what the first session (*majlis*) of the commentary contains
-
-------------------------------------------------------------------------
-
-## Main sections:
-
-## 1. The Book's Origin and Present State
-
-- Defining *Sharh 'Ilal al-Tirmidhi* and its relationship to al-Tirmidhi's *Jami'*
-- The historical circumstances of the loss of parts, and what remains of the commentary
-- Critical editions and modern printings: the efforts of Prof. Dr. Nur al-Din 'Itr and Dr. Hammam 'Abd al-Rahim
-
-## 2. Between Theory and Practice: Ibn Rajab's Method in the Science of 'Ilal
-
-- Defining the science of *'ilal* and its terminology in the book
-- Examining the earlier critics and their approaches (al-Bukhari, Ibn al-Madini, Abu Hatim, etc.)
-- Focusing on the practical side: tracing the routes of a hadith, evaluating narrations, and uncovering hidden defects
-
-## 3. The Rules of Hadith Criticism and Their Practical Foundations
-
-- Classifying narrators and scholarly generations (*tabaqat*), and their effect on hadith criticism
-- Rules for dealing with differences among routes and copies, and with additions and omissions
-- The importance of practical application and comparison between chains of transmission
-
-## 4. The Book's Place in the Hadith Sciences and the Science of 'Ilal
-
-- How the commentary expands the advanced system of the science of *'ilal*
-- Ibn Rajab's influence on developing the method of hadith criticism
-- The importance of *Sharh 'Ilal al-Tirmidhi* for grasping the major technical terms of hadith
-
-------------------------------------------------------------------------
-
-## Conclusion:
-
-- Summarizing the importance of the first session as a methodological and scholarly introduction
-- The book's role in establishing scholarly rules between theory and practice
-- The role of this article as part of a series toward a complete future commentary
-
-------------------------------------------------------------------------
-
-This outline will help organize the information and acquaint the reader with the fundamentals of the book and its scholarly methods in a clear and systematic way.
-
-Here is a complete scholarly article that will be the first in the series of articles explaining *Sharh 'Ilal al-Tirmidhi* by Ibn Rajab al-Hanbali, based on the first session's content and on scholarly references:
 
 ------------------------------------------------------------------------
 
@@ -169,54 +55,52 @@ Studying this book is a necessity for every student of hadith, as it combines sc
 
 This scholarly article provides a precise methodological introduction to *Sharh 'Ilal al-Tirmidhi*, and prepares the reader for a series of detailed explanations treating the book's many chapters, based on solid documentation and advanced scholarly approaches that bring the greatest benefit to understanding and studying the noble hadith.
 
-The first session of the commentary on *'Ilal al-Tirmidhi* is distinguished by a scholarly and historical grounding regarding the book and its importance in the science of hadith, and it includes several central themes that serve as a methodological introduction to this science and its unique work.[muhibalkutub+2](https://muhibalkutub.com/product/%D8%B4%D8%B1%D8%AD-%D8%B9%D9%84%D9%84-%D8%A7%D9%84%D8%AA%D8%B1%D9%85%D8%B0%D9%8A)
+The first session of the commentary on *'Ilal al-Tirmidhi* is distinguished by a scholarly and historical grounding regarding the book and its importance in the science of hadith, and it includes several central themes that serve as a methodological introduction to this science and its unique work.
 
 ## The Book's Origin and Genesis
 
-The first session begins by explaining that Ibn Rajab's commentary on *'Ilal al-Tirmidhi* is not an independent book; rather, it is the final part of Ibn Rajab's commentary on al-Tirmidhi's great *Jami'*. It sets out the historical reasons for the loss of most of the commentary due to events such as the Tatar invasion and the burning of the manuscripts of Damascus, and highlights the value of what remains of the commentary and its scholarly gems.[usul+1](https://usul.ai/ar/t/sharh-ilal-al-tirmidhi)
+The first session begins by explaining that Ibn Rajab's commentary on *'Ilal al-Tirmidhi* is not an independent book; rather, it is the final part of Ibn Rajab's commentary on al-Tirmidhi's great *Jami'*. It sets out the historical reasons for the loss of most of the commentary due to events such as the Tatar invasion and the burning of the manuscripts of Damascus, and highlights the value of what remains of the commentary and its scholarly gems.
 
 ## Critical Editions and Printings
 
-The material presents the differences between the two most widely circulated editions of the book: the edition of Dr. Nur al-Din 'Itr and the edition of Dr. Hammam 'Abd al-Rahim. It shows the effect of modern critical editions in enriching the explanation of *'ilal*, and highlights the problems of documenting old texts, the need to rely on the original catalogues, and the role of Dar al-Kutub al-Misriyya (the Egyptian National Library) in this.[muhibalkutub+1](https://muhibalkutub.com/product/%D8%B4%D8%B1%D8%AD-%D8%B9%D9%84%D9%84-%D8%A7%D9%84%D8%AA%D8%B1%D9%85%D8%B0%D9%8A)
+The material presents the differences between the two most widely circulated editions of the book: the edition of Dr. Nur al-Din 'Itr and the edition of Dr. Hammam 'Abd al-Rahim. It shows the effect of modern critical editions in enriching the explanation of *'ilal*, and highlights the problems of documenting old texts, the need to rely on the original catalogues, and the role of Dar al-Kutub al-Misriyya (the Egyptian National Library) in this.
 
 ## An Introduction to the Science of 'Ilal
 
-In the first session, Ibn Rajab stresses the importance of the sciences of *'ilal* in hadith criticism, and shows how terms such as *'illa* (defect) and *naskh* (abrogation) are treated in the book in their chain-related, technical sense rather than their surface meaning. He gives examples from the masterpieces of the hadith critics, such as al-Bukhari, Ibn al-Madini and Abu Hatim, and from al-Tirmidhi's references in the *Jami'* to the views of scholars on defects and rulings.[shamela+1](https://shamela.ws/book/9552/24)
+In the first session, Ibn Rajab stresses the importance of the sciences of *'ilal* in hadith criticism, and shows how terms such as *'illa* (defect) and *naskh* (abrogation) are treated in the book in their chain-related, technical sense rather than their surface meaning. He gives examples from the masterpieces of the hadith critics, such as al-Bukhari, Ibn al-Madini and Abu Hatim, and from al-Tirmidhi's references in the *Jami'* to the views of scholars on defects and rulings.
 
 ## Rules of Hadith Criticism and Practical Application
 
-Ibn Rajab presents a set of practical examples on dealing with hadiths that are acted upon, and explains how acting upon a hadith or abandoning it goes back to hidden causes revealed by scholarly criticism. He establishes that defects are not merely outward criticism of narrators but something deeper and subtler, mentions the differences among schools in criticizing reports, and emphasizes his practical applications to al-Tirmidhi's own texts.[majles.alukah+2](https://majles.alukah.net/showthread.php?t=3714)
+Ibn Rajab presents a set of practical examples on dealing with hadiths that are acted upon, and explains how acting upon a hadith or abandoning it goes back to hidden causes revealed by scholarly criticism. He establishes that defects are not merely outward criticism of narrators but something deeper and subtler, mentions the differences among schools in criticizing reports, and emphasizes his practical applications to al-Tirmidhi's own texts.
 
 ## Ibn Rajab's Sources in the Commentary
 
-In the first session, Ibn Rajab cites the major books of *'ilal*, such as Ibn Abi Hatim's *'Ilal*, al-Bukhari's *Tarikh*, and the *Tabaqat* of the critics. He quotes the imams of criticism and accreditation, and focuses on combining purpose-oriented reflection with detailed application to narration.[shamela+1](https://shamela.ws/book/9552/60)
+In the first session, Ibn Rajab cites the major books of *'ilal*, such as Ibn Abi Hatim's *'Ilal*, al-Bukhari's *Tarikh*, and the *Tabaqat* of the critics. He quotes the imams of criticism and accreditation, and focuses on combining purpose-oriented reflection with detailed application to narration.
 
 ## The Book's Place Among the Books of the Sunnah
 
-The session explains that *Sharh 'Ilal al-Tirmidhi* brings together foundational principles and practical experience that Ibn Rajab classified with precision. The book enables the researcher to learn the major technical terms of hadith, such as *mursal*, *munqati'* and *mudallas*, and it is considered one of the foundations of the critical method of the early scholars (*al-mutaqaddimun*).[usul+1](https://usul.ai/ar/t/sharh-ilal-al-tirmidhi)
+The session explains that *Sharh 'Ilal al-Tirmidhi* brings together foundational principles and practical experience that Ibn Rajab classified with precision. The book enables the researcher to learn the major technical terms of hadith, such as *mursal*, *munqati'* and *mudallas*, and it is considered one of the foundations of the critical method of the early scholars (*al-mutaqaddimun*).
 
 ## Summary of the First Session
 
-The first session focuses on a scholarly grounding in the book's history and its value for criticism, documents the development of its printing and critical editing, conveys Ibn Rajab's distinctive critical experience in the science of *'ilal*, and defines the place of this commentary in the history of hadith and its sciences.[shamela+2](https://shamela.ws/book/9552/24)
+The first session focuses on a scholarly grounding in the book's history and its value for criticism, documents the development of its printing and critical editing, conveys Ibn Rajab's distinctive critical experience in the science of *'ilal*, and defines the place of this commentary in the history of hadith and its sciences.
 
-This summary is extensive methodological material that can serve as a starting point for documenting *Sharh 'Ilal al-Tirmidhi* and developing an extended study in the sciences of *'ilal* and hadith terminology.
-
-The practical points and conclusions drawn from the first session of the commentary on *'Ilal al-Tirmidhi* include the method of dealing with the hadith text, the rules for criticizing chains and texts, and the foundations of applied *'ilal* as established by Ibn Rajab.[majles.alukah+3](https://majles.alukah.net/showthread.php?t=3714)
+The practical points and conclusions drawn from the first session of the commentary on *'Ilal al-Tirmidhi* include the method of dealing with the hadith text, the rules for criticizing chains and texts, and the foundations of applied *'ilal* as established by Ibn Rajab.
 
 ## The Method of Scholarly Inference
 
-- Ibn Rajab's commentary is based on gathering the statements of the great hadith masters (*huffaz*) such as al-Bukhari, Ibn al-Madini, Ahmad, Abu Zur'a and Abu Hatim, then summarizing them and setting down practical rules for hadith criticism.[shamela+1](https://shamela.ws/book/9552/30)
-- The first section focuses on the importance of knowing the generations (*tabaqat*) of narrators and their ways of receiving and hearing hadith, so that the critic can distinguish the well-preserved (*mahfuz*) hadith from the anomalous (*shadh*), and the denounced (*munkar*) from the well-known (*ma'ruf*). This is the foundation of practical *'ilal*.[al-maktaba+1](https://al-maktaba.org/book/31615/2178)
+- Ibn Rajab's commentary is based on gathering the statements of the great hadith masters (*huffaz*) such as al-Bukhari, Ibn al-Madini, Ahmad, Abu Zur'a and Abu Hatim, then summarizing them and setting down practical rules for hadith criticism.
+- The first section focuses on the importance of knowing the generations (*tabaqat*) of narrators and their ways of receiving and hearing hadith, so that the critic can distinguish the well-preserved (*mahfuz*) hadith from the anomalous (*shadh*), and the denounced (*munkar*) from the well-known (*ma'ruf*). This is the foundation of practical *'ilal*.
 
 ## Rules of Hadith Criticism and Their Applications
 
-- Dividing narrators into ranks according to precision and mastery: reliable masters (*thiqat al-huffaz*), reliable narrators who make frequent mistakes, eminent scholars prone to error, and the heedless. He explains the effect of error and heedlessness on critical preference.[shamela+1](https://shamela.ws/book/9552/33)
-- Emphasizing the need to know the various routes of a hadith in order to detect a defect, whether through a narrator's being alone in a report, contradiction, or addition and omission, and that criticism does not rely only on apparent weakness but penetrates into the fine details of narrations.[alukah+1](https://www.alukah.net/sharia/0/54997/%D8%A7%D9%84%D9%82%D8%A7%D8%B9%D8%AF%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%84%D8%AD%D9%83%D9%85-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB-%D8%A8%D8%B5%D8%AD%D8%A9-%D8%A3%D9%88-%D8%B6%D8%B9%D9%81/)
+- Dividing narrators into ranks according to precision and mastery: reliable masters (*thiqat al-huffaz*), reliable narrators who make frequent mistakes, eminent scholars prone to error, and the heedless. He explains the effect of error and heedlessness on critical preference.
+- Emphasizing the need to know the various routes of a hadith in order to detect a defect, whether through a narrator's being alone in a report, contradiction, or addition and omission, and that criticism does not rely only on apparent weakness but penetrates into the fine details of narrations.
 
 ## Practical Aspects of the First Session
 
-- Practical application by bringing real examples from al-Tirmidhi's hadiths and the routes of their narration, focusing on the role of the hadith masters in tracing slight differences and scrutinizing wording and chains, such as studying the narrators from Abu Hurayra and comparing those who narrated much from him with those who narrated little.[majles.alukah+1](https://majles.alukah.net/showthread.php?t=3714)
-- The great benefit of the session is that the student of knowledge does not settle for theory, but compares narrations, gathers routes, and discusses the statements of the imams until reaching sound certainty.[al-maktaba+1](https://al-maktaba.org/book/31615/2178)
+- Practical application by bringing real examples from al-Tirmidhi's hadiths and the routes of their narration, focusing on the role of the hadith masters in tracing slight differences and scrutinizing wording and chains, such as studying the narrators from Abu Hurayra and comparing those who narrated much from him with those who narrated little.
+- The great benefit of the session is that the student of knowledge does not settle for theory, but compares narrations, gathers routes, and discusses the statements of the imams until reaching sound certainty.
 
 ## Summary of the Practical Points
 

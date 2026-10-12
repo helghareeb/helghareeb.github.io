@@ -1,0 +1,73 @@
+---
+import MushafFiles from '../../../components/MushafFiles.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { MUSHAF_REPO } from '../../../utils/mushaf-files';
+---
+
+<BaseLayout
+  lang="ar"
+  dir="rtl"
+  title="مصحف الغريب | د. هيثم الغريب"
+  description="مصحف المدينة برواية حفص، تقابل كل صفحة منه صفحة شرح: غريب القرآن من ستة كتب، وأسباب النزول، وأحاديث كتب التفسير مع أحكامها. قراءة وتحميل بصيغة PDF."
+>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">كتاب</p>
+      <h1 class="hero__title">مصحف الغريب</h1>
+      <p class="hero__lead">
+        مصحف المدينة النبوية برواية حفص عن عاصم (طبعة 1441هـ)، صفحة المصحف فيه على اليمين دائمًا،
+        وتقابلها صفحة شرح فيها غريب كل كلمة على ترتيب الأسطر، وأسباب النزول، وأحاديث كتب التفسير
+        بأحكامها. كل كلمة في الشرح منقولة بحروفها من مصدرها مع الإحالة إليه، ولا شيء فيه مولَّد.
+      </p>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-three">
+        <article class="stat-card">
+          <strong>604</strong>
+          <span>صفحات المصحف</span>
+        </article>
+        <article class="stat-card">
+          <strong>31</strong>
+          <span>مجلدًا: المقدمات وثلاثون جزءًا</span>
+        </article>
+        <article class="stat-card">
+          <strong>6</strong>
+          <span>كتب في غريب القرآن</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <MushafFiles lang="ar" />
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <h2 class="section-title">مصادر الشرح</h2>
+      </div>
+      <div class="grid-two">
+        <article class="content-card">
+          <h3>غريب القرآن</h3>
+          <p>
+            مرتبة من الأقدم: «مجاز القرآن» لأبي عبيدة، وتفسيرات البخاري في صحيحه، و«غريب القرآن»
+            لابن قتيبة، و«المفردات» للراغب، و«التبيان في تفسير غريب القرآن» لابن الهائم، و«السراج في
+            بيان غريب القرآن» للخضيري، مع حواشي المحققين.
+          </p>
+        </article>
+        <article class="content-card">
+          <h3>أسباب النزول والحديث</h3>
+          <p>
+            «الصحيح المسند من أسباب النزول» للوادعي، و«أسباب النزول من خلال الكتب التسعة» للمزيني،
+            وأحاديث كتب التفسير في صحيح البخاري وصحيح مسلم وجامع الترمذي وسنن النسائي الكبرى، يتبع كل
+            حديث حكمه، وحواشٍ من «تأويل مشكل القرآن» لابن قتيبة.
+          </p>
+        </article>
+      </div>
+      <p class="content-card__meta">
+        الملفات تُنشر تلقائيًا من <a href={MUSHAF_REPO}>مستودع المشروع على GitHub</a> عند كل تحديث.
+      </p>
+    </section>
+  </main>
+</BaseLayout>
