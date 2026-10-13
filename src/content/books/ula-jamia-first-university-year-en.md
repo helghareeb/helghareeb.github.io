@@ -2,17 +2,17 @@
 title: "First Year at University: A Journey of Awareness and Self-Building in the First University Years"
 lang: "en"
 summary: "An Arabic book for first-year university students, accompanying them through awareness and self-building at the start of university life. Available in two versions: the updated version on this site and the first version on Alukah."
-status: "Updated version on this site (September 2026) · First version in the Alukah library (June 2026)"
+status: "Updated version on this site (July 2026) · First version in the Alukah library (June 2026)"
 year: "2026"
 workType: "Book"
-externalUrl: "https://helghareeb.github.io/books/ula-jamia/ula-jamia-updated-2026-09.pdf"
+externalUrl: "https://helghareeb.github.io/books/ula-jamia/ula-jamia-updated-2026-07.pdf"
 ---
 
-**[Download the updated version (PDF)](/books/ula-jamia/ula-jamia-updated-2026-09.pdf)** (Arabic) · [Alukah version (first)](https://www.alukah.net/library/0/183337/)
+**[Download the updated version (PDF)](/books/ula-jamia/ula-jamia-updated-2026-07.pdf)** (Arabic) · [Alukah version (first)](https://www.alukah.net/library/0/183337/)
 
 ## Two versions of the book
 
-- **Updated version (September 2026):** the latest and authoritative text — [PDF download from this site](/books/ula-jamia/ula-jamia-updated-2026-09.pdf).
+- **Updated version (July 2026):** the latest and authoritative text — [PDF download from this site](/books/ula-jamia/ula-jamia-updated-2026-07.pdf).
 - **Alukah version (24 June 2026):** the first version — [book page in the Alukah library](https://www.alukah.net/library/0/183337/).
 
 The updated version is a revision of this Arabic book (أولى جامعة) made after it was published in the
