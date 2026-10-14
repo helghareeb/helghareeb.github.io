@@ -1,0 +1,292 @@
+{
+  "week": 13,
+  "title": "Hash Tables (Lecture 13)",
+  "questions": [
+    {
+      "id": "W13-M01",
+      "level": "what",
+      "stem": "<p>A hash table finds the slot of a key by computing:</p>",
+      "options": [
+        "<code>key // capacity</code>",
+        "<code>hash(key) % capacity</code>",
+        "a binary search over the slots",
+        "<code>hash(key) * capacity</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>hash</code> turns the key into an integer; <code>% capacity</code> folds it into 0..capacity - 1. (a) only works for integer keys and puts all small keys in slot 0; (c) is searching, which is what hashing avoids.</p>"
+    },
+    {
+      "id": "W13-M02",
+      "level": "how",
+      "stem": "<p>In a table of capacity 8, the index of the key 45 is:</p>",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "45"
+      ],
+      "answer": 0,
+      "explanation": "<p>45 = 5 × 8 + 5.</p>"
+    },
+    {
+      "id": "W13-M03",
+      "level": "what",
+      "stem": "<p>The one rule every hash function <strong>must</strong> obey is:</p>",
+      "options": [
+        "different keys have different hashes",
+        "the hash is a prime number",
+        "equal keys have equal hashes",
+        "the hash is smaller than the capacity"
+      ],
+      "answer": 2,
+      "explanation": "<p>Otherwise two equal keys look in different buckets, and a key that is present is reported missing. (a) is impossible — there are more keys than hash values — and not needed: collisions are handled.</p>"
+    },
+    {
+      "id": "W13-M04",
+      "level": "why",
+      "stem": "<p><code>python -c \"print(hash('abc'))\"</code> prints a different number each time you run it because:</p>",
+      "options": [
+        "it is a bug in Python",
+        "the hash of a string is its address in memory",
+        "the capacity of the table changed",
+        "string hashing uses a random secret key chosen at start-up, on purpose"
+      ],
+      "answer": 3,
+      "explanation": "<p>Hash randomisation, on by default since Python 3.3, so that an attacker cannot predict which strings collide. Within one run the hash never changes. (b) is how objects <strong>without</strong> a <code>__hash__</code> of their own are hashed, not strings.</p>"
+    },
+    {
+      "id": "W13-M05",
+      "level": "how",
+      "stem": "<p>Which of these is the same in every run of Python?</p>",
+      "options": [
+        "<code>hash(12345)</code>",
+        "<code>hash(\"12345\")</code>",
+        "<code>hash(b\"12345\")</code>",
+        "the order in which a <code>set</code> of strings is printed"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>hash(n)</code> is <code>n</code> for every integer of this size. <code>str</code> and <code>bytes</code> hashes are randomised (b, c), and a set's order follows the hashes (d).</p>"
+    },
+    {
+      "id": "W13-M06",
+      "level": "why",
+      "stem": "<p><code>m.put([1, 2], \"x\")</code> raises <code>TypeError: unhashable type: 'list'</code> because:</p>",
+      "options": [
+        "a list can change after it is stored, and then it would be in the wrong bucket",
+        "lists are too long to hash",
+        "<code>put</code> only accepts integers",
+        "the table is full"
+      ],
+      "answer": 0,
+      "explanation": "<p>A mutable key could change after <code>put</code>; its hash would change with it, and it would sit in a bucket no lookup visits. So Python refuses to hash lists, dicts and sets at all.</p>"
+    },
+    {
+      "id": "W13-M07",
+      "level": "how",
+      "stem": "<p>23 keys are placed in 365 slots at random. The probability that at least two share a slot is about:</p>",
+      "options": [
+        "6%",
+        "50%",
+        "23/365",
+        "100%"
+      ],
+      "answer": 1,
+      "explanation": "<p><span class=\"quiz-math\">1 - 365/365·364/365⋯343/365 ≈ 0.507</span> — the birthday paradox. 23/365 (c) is about 6% (a), the chance for one given pair, and ignores the other 252 pairs.</p>"
+    },
+    {
+      "id": "W13-M08",
+      "level": "what",
+      "stem": "<p>The load factor of a hash table is:</p>",
+      "options": [
+        "capacity / size",
+        "the number of collisions so far",
+        "size / capacity",
+        "the length of the longest chain"
+      ],
+      "answer": 2,
+      "explanation": "<p>For chaining it is also the average chain length.</p>"
+    },
+    {
+      "id": "W13-M09",
+      "level": "how",
+      "stem": "<p>A <code>ChainingHashMap()</code> receives <code>put</code> for 5, 13 and 21. Bucket 5 is:</p>",
+      "options": [
+        "5 <span class=\"quiz-math\">→</span> 13 <span class=\"quiz-math\">→</span> 21",
+        "21 <span class=\"quiz-math\">→</span> 13 <span class=\"quiz-math\">→</span> 5",
+        "13 <span class=\"quiz-math\">→</span> 5 <span class=\"quiz-math\">→</span> 21",
+        "5 only; 13 and 21 are in other buckets"
+      ],
+      "answer": 1,
+      "explanation": "<p>All three are 5 mod 8, and each new key is pushed on the <strong>front</strong>: after 5, then 13 <span class=\"quiz-math\">→</span> 5, then 21 <span class=\"quiz-math\">→</span> 13 <span class=\"quiz-math\">→</span> 5. Load 3/8: no resize.</p>"
+    },
+    {
+      "id": "W13-M10",
+      "level": "how",
+      "stem": "<p>In the table of W13-M09, <code>get(29)</code> compares 29 with how many entries before raising <code>KeyError</code>?</p>",
+      "options": [
+        "1",
+        "0",
+        "3",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "<p>29 % 8 = 5: it compares with 21, 13 and 5, reaches the end of the chain, and raises <code>KeyError</code>.</p>"
+    },
+    {
+      "id": "W13-M11",
+      "level": "how",
+      "stem": "<p>A <code>ChainingHashMap()</code> receives distinct keys one at a time. The first resize happens during the put of the:</p>",
+      "options": [
+        "6th key",
+        "8th key",
+        "4th key",
+        "7th key"
+      ],
+      "answer": 3,
+      "explanation": "<p>The check runs after the insert, with <code>&gt;</code>: 6/8 = 0.75 is allowed, 7/8 = 0.875 is not. The table goes from 8 to 16 buckets during the 7th put.</p>"
+    },
+    {
+      "id": "W13-M12",
+      "level": "why",
+      "stem": "<p><code>_resize</code> cannot copy <code>old[i]</code> into <code>new[i]</code> because:</p>",
+      "options": [
+        "an <code>Array</code> cannot be copied",
+        "the index depends on the capacity, so keys would sit where <code>get</code> no longer looks",
+        "the chains would come out reversed",
+        "the load factor would be wrong"
+      ],
+      "answer": 1,
+      "explanation": "<p>A key in bucket 2 of 8 (say 10) belongs in bucket 10 of 16. Copied across, it stays in bucket 2, and <code>get(10)</code> looks in bucket 10: <code>KeyError</code>. Every key must be rehashed.</p>"
+    },
+    {
+      "id": "W13-M13",
+      "level": "how",
+      "stem": "<p>An <code>OpenAddressingHashMap()</code> receives <code>put</code> for 6, 14 and 22. Key 22 is in slot:</p>",
+      "options": [
+        "0",
+        "6",
+        "7",
+        "it is not stored: slot 6 is taken"
+      ],
+      "answer": 0,
+      "explanation": "<p>6 <span class=\"quiz-math\">→</span> slot 6. 14 <span class=\"quiz-math\">→</span> 6 is taken, slot 7. 22 <span class=\"quiz-math\">→</span> 6, 7 taken, wrap to slot 0. Slots: <code>22 _ _ _ _ _ 6 14</code>.</p>"
+    },
+    {
+      "id": "W13-M14",
+      "level": "how",
+      "stem": "<p>In the table of W13-M13, <code>get(30, None)</code> makes how many probes?</p>",
+      "options": [
+        "1",
+        "3",
+        "5",
+        "4"
+      ],
+      "answer": 3,
+      "explanation": "<p>30 % 8 = 6: probes 6 (6), 7 (14), 0 (22), 1 (<code>None</code>) — four probes, then \"not there\".</p>"
+    },
+    {
+      "id": "W13-M15",
+      "level": "why",
+      "stem": "<p>In open addressing, <code>delete</code> leaves a tombstone instead of <code>None</code> because:</p>",
+      "options": [
+        "a tombstone uses less memory",
+        "writing <code>None</code> is slower",
+        "<code>None</code> would cut the probe sequences that pass through the slot, and keys beyond it would become unreachable",
+        "an <code>Array</code> slot cannot hold <code>None</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>A search stops at <code>None</code>, because <code>put</code> would have used that slot. Emptying a slot in the middle of a probe sequence makes every key beyond it unreachable (<code>test_open_addressing_delete_preserves_probe_chain</code>).</p>"
+    },
+    {
+      "id": "W13-M16",
+      "level": "how",
+      "stem": "<p><code>get</code> meets a tombstone while probing. It:</p>",
+      "options": [
+        "keeps probing",
+        "stops: the key is not in the table",
+        "returns the tombstone",
+        "raises <code>KeyError</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>A tombstone means \"a key was here once, and others may have probed past it\". Only <code>None</code> ends a search.</p>"
+    },
+    {
+      "id": "W13-M17",
+      "level": "why",
+      "stem": "<p><code>put</code> counts tombstones in its load check because:</p>",
+      "options": [
+        "tombstones are keys",
+        "otherwise tombstones can take every <code>None</code>, and a probe that stops only at <code>None</code> scans the whole table — or never stops",
+        "<code>len()</code> would be wrong otherwise",
+        "Python requires it"
+      ],
+      "answer": 1,
+      "explanation": "<p>Tombstones are not keys (a, c), but they are not <code>None</code> either. Uncounted, a table under many puts and deletes fills with tombstones: every miss probes the whole table, and a loop that waits for <code>None</code> never ends.</p>"
+    },
+    {
+      "id": "W13-M18",
+      "level": "what",
+      "stem": "<p>Primary clustering is:</p>",
+      "options": [
+        "keys stored in sorted groups",
+        "chains growing long in a chaining table",
+        "runs of occupied slots in linear probing, which grow faster the longer they are",
+        "several hash tables sharing one <code>Array</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>A run of length L is hit by any key whose home is in it or next to it, and the key lands at its end, making it longer. (b) is not clustering in the linear-probing sense.</p>"
+    },
+    {
+      "id": "W13-M19",
+      "level": "how",
+      "stem": "<p>For linear probing with a good hash, Knuth's formula for an <strong>unsuccessful</strong> search is <span class=\"quiz-math\">1/2(1 + 1/(1-α)<sup>2</sup>)</span>. At <span class=\"quiz-math\">α = 0.5</span> it gives:</p>",
+      "options": [
+        "1.5",
+        "2.5",
+        "4",
+        "50.5"
+      ],
+      "answer": 1,
+      "explanation": "<p><span class=\"quiz-math\">1/2(1 + 1/0.25) = 1/2 · 5 = 2.5</span>. (a) is the <strong>successful</strong> search at 0.5; (d) the unsuccessful one at 0.9. Measured in Lecture 13 on 16,384 slots: 2.56.</p>"
+    },
+    {
+      "id": "W13-M20",
+      "level": "why",
+      "stem": "<p>The keys 0, 1024, 2048, 3072, … (n of them) are put into a <code>ChainingHashMap</code>, whose capacity is always a power of two. While the capacity is at most 1,024, one <code>get</code> costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span> — the table resizes",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span> — every key is in bucket 0"
+      ],
+      "answer": 3,
+      "explanation": "<p>Each key is a multiple of 1,024, so <code>key % capacity</code> is 0 for every power-of-two capacity up to 1,024. Resizing does not help (a): the keys collide at every such capacity. One chain of n entries: <span class=\"quiz-math\">O(n)</span> per <code>get</code>, <span class=\"quiz-math\">O(n<sup>2</sup>)</span> to build.</p>"
+    },
+    {
+      "id": "W13-M21",
+      "level": "what",
+      "stem": "<p>Python's <code>dict</code> is:</p>",
+      "options": [
+        "open addressing, with a probe sequence that mixes in the high bits of the hash; it grows at about two-thirds full",
+        "chaining, with a linked list in every bucket",
+        "a balanced binary search tree",
+        "a sorted array searched with <code>bisect</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>CPython's <code>Objects/dictobject.c</code>: open addressing, probe <code>i = (5*i + 1 + perturb) % 2**k</code> with <code>perturb</code> taken from the hash, a resize at about two-thirds, and \"dummy\" entries as tombstones. (b) is Java's <code>HashMap</code>.</p>"
+    },
+    {
+      "id": "W13-M22",
+      "level": "why",
+      "stem": "<p>Which question does a sorted array answer in <span class=\"quiz-math\">O(log n)</span> but a hash table cannot answer faster than <span class=\"quiz-math\">O(n)</span>?</p>",
+      "options": [
+        "is key k present?",
+        "what is the value stored for key k?",
+        "add a new key k",
+        "how many keys lie between a and b?"
+      ],
+      "answer": 3,
+      "explanation": "<p>A range query needs order, and hashing destroys order on purpose: 2027114 and 2027115 land far apart. A sorted array answers it with two <code>lower_bound</code>s (Week 8). (a)–(c) are <span class=\"quiz-math\">O(1)</span> average in a hash table.</p>"
+    }
+  ]
+}

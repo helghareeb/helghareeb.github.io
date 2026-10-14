@@ -1,0 +1,292 @@
+{
+  "week": 14,
+  "title": "Graphs and Graph Searches (Lecture 14)",
+  "questions": [
+    {
+      "id": "W14-M01",
+      "level": "what",
+      "stem": "<p>An adjacency matrix for a graph with V vertices and E edges uses memory:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(V + E)</span>",
+        "<span class=\"quiz-math\">O(E)</span>",
+        "<span class=\"quiz-math\">O(V<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(V log V)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>A V × V grid, whatever E is. <span class=\"quiz-math\">O(V + E)</span> (a) is the adjacency list.</p>"
+    },
+    {
+      "id": "W14-M02",
+      "level": "what",
+      "stem": "<p>Breadth-first search keeps the vertices waiting to be expanded in a:</p>",
+      "options": [
+        "queue",
+        "stack",
+        "priority queue",
+        "sorted array"
+      ],
+      "answer": 0,
+      "explanation": "<p>First discovered, first expanded. A stack (b) gives DFS; a priority queue (c) gives Dijkstra's algorithm, beyond this course.</p>"
+    },
+    {
+      "id": "W14-M03",
+      "level": "how",
+      "stem": "<p>An undirected graph has 7 vertices with degrees 2, 3, 2, 2, 3, 3 and 1. How many edges does it have?</p>",
+      "options": [
+        "16",
+        "7",
+        "14",
+        "8"
+      ],
+      "answer": 3,
+      "explanation": "<p>The degrees add up to <span class=\"quiz-math\">2 + 3 + 2 + 2 + 3 + 3 + 1 = 16</span>, and every edge is counted at both ends: <span class=\"quiz-math\">E = 16 / 2 = 8</span>. 16 (a) forgets to halve. (These are the degrees of H.)</p>"
+    },
+    {
+      "id": "W14-M04",
+      "level": "why",
+      "stem": "<p>BFS from s always reaches a vertex first along a path with the fewest edges because:</p>",
+      "options": [
+        "the queue releases vertices in order of non-decreasing distance from s",
+        "it marks vertices when they are dequeued",
+        "it tries every path and keeps the shortest",
+        "the adjacency lists are sorted"
+      ],
+      "answer": 0,
+      "explanation": "<p>The queue holds all of distance d before any of distance d + 1, so a vertex is discovered while BFS is expanding the layer just before it. It never tries every path (c) — that would be exponential. Marking on dequeue (b) is a bug (W14-B1).</p>"
+    },
+    {
+      "id": "W14-M05",
+      "level": "how",
+      "stem": "<p><code>bfs(H, \"A\")</code> returns:</p>",
+      "options": [
+        "A B C D E F G",
+        "A B D C E F G",
+        "A B C F E D G",
+        "A D B E C F G"
+      ],
+      "answer": 1,
+      "explanation": "<p>A adds B and D; B adds C and E; D adds nothing new; C adds F; F adds G (W14-T1). (a) is alphabetical order, which BFS does not use.</p>"
+    },
+    {
+      "id": "W14-M06",
+      "level": "how",
+      "stem": "<p><code>dfs(H, \"A\")</code> returns:</p>",
+      "options": [
+        "A B D C E F G",
+        "A B C E F D G",
+        "A B C F E D G",
+        "A D E B C F G"
+      ],
+      "answer": 2,
+      "explanation": "<p>A <span class=\"quiz-math\">→</span> B <span class=\"quiz-math\">→</span> C <span class=\"quiz-math\">→</span> F <span class=\"quiz-math\">→</span> E <span class=\"quiz-math\">→</span> D, back up to F, then G (W14-T2). (a) is what you get if you think of BFS layers; (b) goes from C to E, but C and E are not adjacent.</p>"
+    },
+    {
+      "id": "W14-M07",
+      "level": "how",
+      "stem": "<p><code>shortest_path_unweighted(H, \"D\", \"C\")</code> returns:</p>",
+      "options": [
+        "<code>[\"D\", \"E\", \"F\", \"C\"]</code>",
+        "<code>[\"D\", \"A\", \"B\", \"C\"]</code>",
+        "<code>[\"D\", \"E\", \"B\", \"C\"]</code>",
+        "<code>None</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>D's list is A, E, so A is taken first and becomes B's parent; B then discovers C. D–E–B–C (c) and D–E–F–C (a) are also three edges long — equally short — but BFS keeps the first parent it records (W14-T4).</p>"
+    },
+    {
+      "id": "W14-M08",
+      "level": "what",
+      "stem": "<p><code>has_edge(u, v)</code> on an adjacency matrix costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(V)</span>",
+        "<span class=\"quiz-math\">O(deg u)</span>",
+        "<span class=\"quiz-math\">O(E)</span>",
+        "<span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>One cell, <code>matrix[i][j]</code>, after two <span class=\"quiz-math\">O(1)</span> hash-map lookups for i and j. <span class=\"quiz-math\">O(deg u)</span> (b) is the list.</p>"
+    },
+    {
+      "id": "W14-M09",
+      "level": "what",
+      "stem": "<p><code>neighbours(u)</code> on an adjacency matrix costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(V)</span>",
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(deg u)</span>",
+        "<span class=\"quiz-math\">O(E)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>The whole row of V cells must be scanned to find the 1s. That is the matrix's price.</p>"
+    },
+    {
+      "id": "W14-M10",
+      "level": "why",
+      "stem": "<p>A BFS on a <code>MatrixGraph</code> costs <span class=\"quiz-math\">O(V<sup>2</sup>)</span> even when the graph has very few edges, because:</p>",
+      "options": [
+        "the queue has to grow",
+        "finding each vertex's neighbours scans its whole row of V cells",
+        "every cell of the matrix is hashed",
+        "the visited set is a matrix too"
+      ],
+      "answer": 1,
+      "explanation": "<p>V vertices, each costing a V-cell row scan: <span class=\"quiz-math\">V<sup>2</sup></span>. The number of edges does not change the work.</p>"
+    },
+    {
+      "id": "W14-M11",
+      "level": "how",
+      "stem": "<p>An undirected graph with E edges is stored as an adjacency list. How many neighbour entries do the lists hold in total?</p>",
+      "options": [
+        "E",
+        "2E",
+        "<span class=\"quiz-math\">E<sup>2</sup></span>",
+        "<span class=\"quiz-math\">V<sup>2</sup></span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Each undirected edge u–v is stored in u's list and in v's list. The same fact is <span class=\"quiz-math\">Σ deg(v) = 2E</span>.</p>"
+    },
+    {
+      "id": "W14-M12",
+      "level": "why",
+      "stem": "<p>BFS marks a vertex as visited when it is <strong>enqueued</strong>, not when it is dequeued, because otherwise:</p>",
+      "options": [
+        "a vertex can be put in the queue more than once",
+        "BFS would miss some reachable vertices",
+        "the queue would raise <code>IndexError</code>",
+        "the search would no longer find shortest paths"
+      ],
+      "answer": 0,
+      "explanation": "<p>A vertex with two neighbours that are taken before it is enqueued by both, and then appears twice in the order (W14-B1). BFS still finds every vertex (b) — it just repeats some.</p>"
+    },
+    {
+      "id": "W14-M13",
+      "level": "why",
+      "stem": "<p><code>dfs_iterative</code> pushes each vertex's neighbours in <strong>reverse</strong> order because:</p>",
+      "options": [
+        "a stack is first in, first out",
+        "the first neighbour must come off the stack first, to match <code>dfs</code>",
+        "otherwise the search never ends on a cycle",
+        "it saves memory"
+      ],
+      "answer": 1,
+      "explanation": "<p>A stack is <strong>last</strong> in, first out (not a): pushing D then B from A's list B, D puts B on top, so B comes off first — the same choice the recursive <code>for</code> loop makes.</p>"
+    },
+    {
+      "id": "W14-M14",
+      "level": "why",
+      "stem": "<p>The recursive <code>dfs</code> is run on a graph that is one path of 5,000 vertices. In Python, with the default settings, it:</p>",
+      "options": [
+        "returns all 5,000 vertices",
+        "runs out of memory",
+        "raises <code>RecursionError</code>",
+        "loops for ever"
+      ],
+      "answer": 2,
+      "explanation": "<p>One call frame per vertex on the path; Python's default limit is 1,000 frames. The reference <code>dfs</code> already fails on a path of 1,000 edges. <code>dfs_iterative</code> handles it.</p>"
+    },
+    {
+      "id": "W14-M15",
+      "level": "what",
+      "stem": "<p>A DAG is:</p>",
+      "options": [
+        "a connected undirected graph with no cycle",
+        "a graph whose every vertex has the same degree",
+        "a graph stored as a matrix",
+        "a directed graph with no cycle"
+      ],
+      "answer": 3,
+      "explanation": "<p>Directed acyclic graph. (a) describes a tree.</p>"
+    },
+    {
+      "id": "W14-M16",
+      "level": "how",
+      "stem": "<p><code>topological_sort</code> on the directed graph A <span class=\"quiz-math\">→</span> B, B <span class=\"quiz-math\">→</span> C, C <span class=\"quiz-math\">→</span> A returns:</p>",
+      "options": [
+        "<code>[\"A\", \"B\", \"C\"]</code>",
+        "<code>[]</code>",
+        "<code>None</code>",
+        "it raises <code>ValueError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Every vertex keeps in-degree 1, so the ready queue starts empty, nothing is output, and 0 &lt; 3 vertices means a cycle: <code>None</code>. The <code>ValueError</code> (d) is for an <strong>undirected</strong> graph.</p>"
+    },
+    {
+      "id": "W14-M17",
+      "level": "why",
+      "stem": "<p>Undirected cycle detection ignores a visited neighbour that is the vertex's parent, because:</p>",
+      "options": [
+        "every undirected edge is stored in both lists, so the vertex you came from always looks visited",
+        "the parent is always grey",
+        "a parent cannot be part of a cycle",
+        "it makes the search <span class=\"quiz-math\">O(V + E)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>When DFS enters B from A, B's list contains A. Without the check every edge would be reported as a cycle (W14-B3).</p>"
+    },
+    {
+      "id": "W14-M18",
+      "level": "why",
+      "stem": "<p>In the directed diamond A <span class=\"quiz-math\">→</span> B, A <span class=\"quiz-math\">→</span> C, B <span class=\"quiz-math\">→</span> D, C <span class=\"quiz-math\">→</span> D, a DFS from A meets D a second time, from C. That is not a cycle, because at that moment D is:</p>",
+      "options": [
+        "white",
+        "grey",
+        "black",
+        "the start vertex"
+      ],
+      "answer": 2,
+      "explanation": "<p>D was finished when the search backed up from B; it is no longer on the current path A <span class=\"quiz-math\">→</span> C. Only an edge to a <strong>grey</strong> vertex (b) closes a cycle.</p>"
+    },
+    {
+      "id": "W14-M19",
+      "level": "how",
+      "stem": "<p>A graph has vertices A to I and the undirected edges A–B, B–C, D–E, F–G. How many connected components does it have?</p>",
+      "options": [
+        "4",
+        "3",
+        "9",
+        "5"
+      ],
+      "answer": 3,
+      "explanation": "<p>{A, B, C}, {D, E}, {F, G}, and H and I on their own. A vertex with no edges is a component of its own; 4 (a) and 3 (b) forget H and I.</p>"
+    },
+    {
+      "id": "W14-M20",
+      "level": "how",
+      "stem": "<p><code>topological_sort(P)</code> returns:</p>",
+      "options": [
+        "A B C D E F",
+        "B D A C E F",
+        "A C B D E F",
+        "F E D C B A"
+      ],
+      "answer": 0,
+      "explanation": "<p>In-degree 0 at the start: A and B, queued in node order. A releases nothing (C still waits on B); B releases C and D; C, then D, then E, then F (W14-T5). (b) is also a valid topological order — it is the DFS one — but it is not what Kahn's algorithm returns. (c) puts C before B, although B <span class=\"quiz-math\">→</span> C.</p>"
+    },
+    {
+      "id": "W14-M21",
+      "level": "why",
+      "stem": "<p>Which of these can BFS on its own <strong>not</strong> answer correctly?</p>",
+      "options": [
+        "the path with the fewest edges from s to t",
+        "whether t can be reached from s",
+        "the shortest route by kilometres on a road map with different road lengths",
+        "the connected components of an undirected graph"
+      ],
+      "answer": 2,
+      "explanation": "<p>BFS counts edges; with road lengths the fewest roads is not the fewest kilometres. That needs Dijkstra's algorithm, which this course only names.</p>"
+    },
+    {
+      "id": "W14-M22",
+      "level": "how",
+      "stem": "<p>One BFS over an adjacency list costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(V · E)</span>",
+        "<span class=\"quiz-math\">O(V<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(E log V)</span>",
+        "<span class=\"quiz-math\">O(V + E)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Every vertex is enqueued and dequeued once; every list is read once, <span class=\"quiz-math\">Σ deg = 2E</span> entries in total.</p>"
+    }
+  ]
+}

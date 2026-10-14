@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { getPlaylistPath, getThumbnailUrl, playlists, videoLabels } from '../../../utils/videos';
+
+const t = videoLabels.en;
+const seoTitle = buildSeoTitle('Videos', { lang: 'en', section: 'Dr. Haitham A. El-Ghareeb' });
+const seoDescription = buildSeoDescription(
+  'Recorded lectures and labs by Dr. Haitham A. El-Ghareeb, to watch or download, each playlist linked to its course repository.',
+  playlists.map((playlist) => playlist.title.en),
+);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Videos</p>
+      <h1 class="hero__title">Videos</h1>
+      <p class="hero__lead">
+        Recorded lectures and labs, grouped into playlists by course. Every recording can be watched
+        online or downloaded for offline study, and links to its code in the course repository.
+      </p>
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/teaching/">Teaching</a>
+        <a class="button-secondary" href="/en/quizzes/">Quizzes</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        {playlists.map((playlist) => (
+          <a class="card-link" href={getPlaylistPath('en', playlist.slug)}>
+            <article class="content-card entity-card">
+              {playlist.videos[0] && (
+                <img class="video-playlist-cover" src={getThumbnailUrl(playlist.videos[0])} alt="" loading="lazy" referrerpolicy="no-referrer" />
+              )}
+              <p class="content-card__meta">{playlist.year} · {t.videos(playlist.videos.length)}</p>
+              <h3>{playlist.title.en}</h3>
+              <p>{playlist.summary.en}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

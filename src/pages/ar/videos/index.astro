@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { getPlaylistPath, getThumbnailUrl, playlists, videoLabels } from '../../../utils/videos';
+
+const t = videoLabels.ar;
+const seoTitle = buildSeoTitle('المرئيات', { lang: 'ar', section: 'د. هيثم الغريب' });
+const seoDescription = buildSeoDescription(
+  'محاضرات ومعامل مسجلة للدكتور هيثم الغريب، للمشاهدة أو التحميل، وكل قائمة مرتبطة بمستودع مقررها.',
+  playlists.map((playlist) => playlist.title.ar),
+);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">المرئيات</p>
+      <h1 class="hero__title">المرئيات</h1>
+      <p class="hero__lead">
+        محاضرات ومعامل مسجلة، مجموعة في قوائم بحسب المقرر. يمكن مشاهدة كل تسجيل مباشرة أو تحميله
+        للمذاكرة دون اتصال، ولكل تسجيل رابط إلى شيفرته في مستودع المقرر.
+      </p>
+      <div class="hero__actions">
+        <a class="button-secondary" href="/ar/teaching/">التدريس</a>
+        <a class="button-secondary" href="/ar/quizzes/">الاختبارات القصيرة</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="grid-two">
+        {playlists.map((playlist) => (
+          <a class="card-link" href={getPlaylistPath('ar', playlist.slug)}>
+            <article class="content-card entity-card">
+              {playlist.videos[0] && (
+                <img class="video-playlist-cover" src={getThumbnailUrl(playlist.videos[0])} alt="" loading="lazy" referrerpolicy="no-referrer" />
+              )}
+              <p class="content-card__meta">{playlist.year} · {t.videos(playlist.videos.length)}</p>
+              <h3>{playlist.title.ar}</h3>
+              <p>{playlist.summary.ar}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

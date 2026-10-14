@@ -1,0 +1,344 @@
+{
+  "week": 2,
+  "title": "Complexity and the Array · control flow, functions, errors (Lecture 02, Lab 02)",
+  "questions": [
+    {
+      "id": "W2-M01",
+      "level": "how",
+      "stem": "<p><span class=\"quiz-math\">f(n) = 3n<sup>2</sup> + 5n + 2</span> is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">Θ(n)</span>",
+        "<span class=\"quiz-math\">Θ(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">Θ(n<sup>3</sup>)</span>",
+        "<span class=\"quiz-math\">Θ(n log n)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Keep the fastest-growing term, drop its constant: <span class=\"quiz-math\">3n<sup>2</sup> → n<sup>2</sup></span>. It is also <span class=\"quiz-math\">O(n<sup>3</sup>)</span>, but not <span class=\"quiz-math\">Θ(n<sup>3</sup>)</span> (c) — Θ is a tight bound.</p>"
+    },
+    {
+      "id": "W2-M02",
+      "level": "why",
+      "stem": "<p>Which statement is <strong>true</strong>?</p>",
+      "options": [
+        "<span class=\"quiz-math\">n<sup>2</sup> = O(n)</span>",
+        "<span class=\"quiz-math\">n = Ω(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">n = O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">2<sup>n</sup> = O(n<sup>3</sup>)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p><span class=\"quiz-math\">n ≤ 1 · n<sup>2</sup></span> for all <span class=\"quiz-math\">n ≥ 1</span>. O is an <em>upper</em> bound, so a slower-growing function is O of a faster one. (a) and (d) put a faster function under a slower one; (b) claims n grows at least as fast as <span class=\"quiz-math\">n<sup>2</sup></span>.</p>"
+    },
+    {
+      "id": "W2-M03",
+      "level": "what",
+      "stem": "<p><span class=\"quiz-math\">f(n) = O(g(n))</span> means:</p>",
+      "options": [
+        "there are constants <span class=\"quiz-math\">c &gt; 0</span> and <span class=\"quiz-math\">n<sub>0</sub></span> with <span class=\"quiz-math\">f(n) ≤ c · g(n)</span> for all <span class=\"quiz-math\">n ≥ n<sub>0</sub></span>",
+        "<span class=\"quiz-math\">f(n) ≤ g(n)</span> for every <span class=\"quiz-math\">n</span>",
+        "<span class=\"quiz-math\">f(n) = g(n)</span> for all large <span class=\"quiz-math\">n</span>",
+        "there are constants <span class=\"quiz-math\">c &gt; 0</span> and <span class=\"quiz-math\">n<sub>0</sub></span> with <span class=\"quiz-math\">f(n) ≥ c · g(n)</span> for all <span class=\"quiz-math\">n ≥ n<sub>0</sub></span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Constants <strong>you choose</strong>, and only from some <span class=\"quiz-math\">n<sub>0</sub></span> on. (b) has no constant and no <span class=\"quiz-math\">n<sub>0</sub></span>; (c) is equality, not a bound; (d) is the definition of Ω.</p>"
+    },
+    {
+      "id": "W2-M04",
+      "level": "how",
+      "stem": "<p>In the <strong>worst case</strong>, how many comparisons does linear search make on an array of n elements?</p>",
+      "options": [
+        "1",
+        "n / 2",
+        "<span class=\"quiz-math\">log<sub>2</sub> n</span>",
+        "n"
+      ],
+      "answer": 3,
+      "explanation": "<p>Worst case: the target is last or absent, so every element is compared once.</p>"
+    },
+    {
+      "id": "W2-M05",
+      "level": "how",
+      "stem": "<p>The target is present and equally likely to be at any of the n positions. On <strong>average</strong>, how many comparisons does linear search make?</p>",
+      "options": [
+        "<span class=\"quiz-math\">(n + 1) / 2</span>",
+        "<span class=\"quiz-math\">n</span>",
+        "<span class=\"quiz-math\">log<sub>2</sub> n</span>",
+        "<span class=\"quiz-math\">n<sup>2</sup> / 2</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p><span class=\"quiz-math\">(1 + 2 + … + n)/n = (n+1)/2</span>. Still <span class=\"quiz-math\">O(n)</span> — half is a constant.</p>"
+    },
+    {
+      "id": "W2-M06",
+      "level": "how",
+      "stem": "<p>What is the running time of this loop?</p><pre><code>i = n\nwhile i &gt; 1:\n    i = i // 2</code></pre>",
+      "options": [
+        "<span class=\"quiz-math\">Θ(1)</span>",
+        "<span class=\"quiz-math\">Θ(n)</span>",
+        "<span class=\"quiz-math\">Θ(log n)</span>",
+        "<span class=\"quiz-math\">Θ(n / 2)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Halving until 1 takes about <span class=\"quiz-math\">log<sub>2</sub> n</span> steps. <span class=\"quiz-math\">Θ(n/2)</span> (d) would be subtracting, not dividing — and it is just <span class=\"quiz-math\">Θ(n)</span> anyway.</p>"
+    },
+    {
+      "id": "W2-M07",
+      "level": "how",
+      "stem": "<p>What is the running time?</p><pre><code>for i in range(n):\n    for j in range(i):\n        count += 1</code></pre>",
+      "options": [
+        "<span class=\"quiz-math\">Θ(n)</span>",
+        "<span class=\"quiz-math\">Θ(n log n)</span>",
+        "<span class=\"quiz-math\">Θ(i · n)</span>",
+        "<span class=\"quiz-math\">Θ(n<sup>2</sup>)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p><span class=\"quiz-math\">0 + 1 + … + (n-1) = n(n-1)/2</span>. The answer must be a function of n only, so (c) is not an answer.</p>"
+    },
+    {
+      "id": "W2-M08",
+      "level": "how",
+      "stem": "<p>What is the running time?</p><pre><code>for i in range(n):\n    for j in range(5):\n        count += 1</code></pre>",
+      "options": [
+        "<span class=\"quiz-math\">Θ(n)</span>",
+        "<span class=\"quiz-math\">Θ(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">Θ(5<sup>n</sup>)</span>",
+        "<span class=\"quiz-math\">Θ(log n)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>The inner loop is a constant 5: <span class=\"quiz-math\">5n = Θ(n)</span>. Nested loops multiply their <em>iteration counts</em>, not their nesting depth.</p>"
+    },
+    {
+      "id": "W2-M09",
+      "level": "what",
+      "stem": "<p>For a Python <code>list</code> of n items, <code>x in values</code> costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>, because lists are hash tables",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>A list is an array; <code>in</code> checks items one by one. Sets and dicts are the hash tables (a).</p>"
+    },
+    {
+      "id": "W2-M10",
+      "level": "what",
+      "stem": "<p>Which Python <code>list</code> operation is <span class=\"quiz-math\">O(1)</span> (amortised)?</p>",
+      "options": [
+        "<code>values.insert(0, x)</code>",
+        "<code>values.pop(0)</code>",
+        "<code>values.append(x)</code>",
+        "<code>values.remove(x)</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>append</code> writes at the end — nothing moves — and the occasional resize averages out (Week 4). The other three shift or search: <span class=\"quiz-math\">O(n)</span>.</p>"
+    },
+    {
+      "id": "W2-M11",
+      "level": "why",
+      "stem": "<p>Why is reading <code>a[i]</code> from an array <span class=\"quiz-math\">O(1)</span>?</p>",
+      "options": [
+        "The array is sorted",
+        "Python caches the last element read",
+        "The array searches from both ends at once",
+        "The slots are contiguous and equal-sized, so the address is base + i × slot size"
+      ],
+      "answer": 3,
+      "explanation": "<p>Address arithmetic. It has nothing to do with order (a) or caching (b).</p>"
+    },
+    {
+      "id": "W2-M12",
+      "level": "how",
+      "stem": "<p>A partly filled array has <strong>size 6</strong>. How many elements must move to insert a new value at <strong>index 2</strong>?</p>",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "<p>Slots 2, 3, 4, 5 move right: size − index = 6 − 2 = 4.</p>"
+    },
+    {
+      "id": "W2-M13",
+      "level": "how",
+      "stem": "<p>When inserting into an array, the elements after the gap must be shifted right. In which order?</p>",
+      "options": [
+        "From the insertion index towards the end",
+        "From the last used slot back towards the insertion index",
+        "Any order — the result is the same",
+        "Swap each element with its neighbour, from the front"
+      ],
+      "answer": 1,
+      "explanation": "<p>Moving right, start at the right, or you overwrite values before you move them (see W2-S2).</p>"
+    },
+    {
+      "id": "W2-M14",
+      "level": "how",
+      "stem": "<p><code>a = Array(4)</code>, then <code>a[-1]</code>. What happens?</p>",
+      "options": [
+        "returns the last slot, <code>None</code>",
+        "returns <code>a[3]</code>",
+        "raises <code>IndexError</code>",
+        "raises <code>TypeError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>The course <code>Array</code> has no negative indices, like C.</p>"
+    },
+    {
+      "id": "W2-M15",
+      "level": "how",
+      "stem": "<p><code>a = Array(5)</code>, then <code>a[0] = 7</code>. What is <code>len(a)</code>?</p>",
+      "options": [
+        "1",
+        "0",
+        "6",
+        "5"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>len</code> is the capacity, fixed at creation. Tracking how many slots are in use is your job.</p>"
+    },
+    {
+      "id": "W2-M16",
+      "level": "how",
+      "stem": "<p>A 3 × 4 matrix (3 rows, 4 columns) is stored flat in row-major order. At which index is element (2, 1)?</p>",
+      "options": [
+        "7",
+        "9",
+        "6",
+        "11"
+      ],
+      "answer": 1,
+      "explanation": "<p><span class=\"quiz-math\">r × cols + c = 2 × 4 + 1 = 9</span>.</p>"
+    },
+    {
+      "id": "W2-M17",
+      "level": "how",
+      "stem": "<p>What extra space does <code>reverse_in_place(arr)</code> need (swap from both ends, no second array)?</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Two indices and one temporary for the swap, whatever n is.</p>"
+    },
+    {
+      "id": "W2-M18",
+      "level": "why",
+      "stem": "<p>Under the course storage rule (Lecture 02), which of these is <strong>not</strong> allowed?</p>",
+      "options": [
+        "a <code>Stack</code> storing its items in the student's own <code>DynamicArray</code>",
+        "a <code>Graph</code> storing adjacency in the student's own <code>ChainingHashMap</code>",
+        "a queue class storing its items in a Python <code>list</code>",
+        "<code>bfs</code> returning the visit order as a Python <code>list</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>A structure may not store its data in a Python <code>list</code>. (a) and (b) build on the student's own structures — allowed; (d) is a list used as a return value — the interface, allowed.</p>"
+    },
+    {
+      "id": "W2-M19",
+      "level": "what",
+      "stem": "<p>Python's built-in <code>list</code> is best described as:</p>",
+      "options": [
+        "a linked list of values",
+        "a fixed-size C array of integers",
+        "a hash table keyed by position",
+        "a dynamic array of references to objects"
+      ],
+      "answer": 3,
+      "explanation": "<p>A block of references plus a size and a capacity; it grows by copying into a bigger block.</p>"
+    },
+    {
+      "id": "W2-M20",
+      "level": "how",
+      "stem": "<p>An <span class=\"quiz-math\">O(n)</span> loop is followed by an <span class=\"quiz-math\">O(n<sup>2</sup>)</span> loop. The whole is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n<sup>3</sup>)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n + n)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Sequence adds: <span class=\"quiz-math\">O(n + n<sup>2</sup>) = O(n<sup>2</sup>)</span>.</p>"
+    },
+    {
+      "id": "W2-M21",
+      "level": "how",
+      "stem": "<p><code>values</code> is a Python list of n items. The cost of:</p><pre><code>for i in range(len(values)):\n    if values[i] in values[i + 1:]:\n        return True</code></pre>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Each iteration hides <strong>two</strong> <span class=\"quiz-math\">O(n)</span> operations: the slice copies up to n items and <code>in</code> searches them. n iterations of <span class=\"quiz-math\">O(n)</span> work.</p>"
+    },
+    {
+      "id": "W2-M22",
+      "level": "what",
+      "stem": "<p>When does the <code>else</code> block of a <code>for</code> loop run?</p>",
+      "options": [
+        "Whenever the loop body raises an exception",
+        "Only if the loop runs zero times",
+        "When the loop finishes without executing <code>break</code>",
+        "After every iteration"
+      ],
+      "answer": 2,
+      "explanation": "<p>Think of it as \"no break\".</p>"
+    },
+    {
+      "id": "W2-M23",
+      "level": "how",
+      "stem": "<p>Given</p><pre><code>def f(a, L=[]):\n    L.append(a)\n    return L</code></pre><p>what does <code>f(1)</code> then <code>print(f(2))</code> print?</p>",
+      "options": [
+        "<code>[2]</code>",
+        "<code>[1]</code>",
+        "<code>[2, 1]</code>",
+        "<code>[1, 2]</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>The default list is created <strong>once</strong>, when <code>def</code> runs, and shared by every call that uses it.</p>"
+    },
+    {
+      "id": "W2-M24",
+      "level": "how",
+      "stem": "<p>What is the value of <code>0 or 'x' and ''</code>?</p>",
+      "options": [
+        "<code>''</code>",
+        "<code>'x'</code>",
+        "<code>0</code>",
+        "<code>False</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>and</code> binds tighter: <code>0 or ('x' and '')</code>. <code>'x' and ''</code> gives <code>''</code> (the last value looked at); <code>0 or ''</code> gives <code>''</code>.</p>"
+    },
+    {
+      "id": "W2-M25",
+      "level": "how",
+      "stem": "<p><code>list(range(2, 11, 3))</code> is:</p>",
+      "options": [
+        "<code>[2, 5, 8, 11]</code>",
+        "<code>[2, 5, 8]</code>",
+        "<code>[3, 6, 9]</code>",
+        "<code>[2, 3, 4, 5, 6, 7, 8, 9, 10]</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Start 2, step 3, stop <strong>before</strong> 11: 2, 5, 8.</p>"
+    },
+    {
+      "id": "W2-M26",
+      "level": "how",
+      "stem": "<p>What does <code>print(g())</code> print?</p><pre><code>def g():\n    try:\n        return 1\n    finally:\n        print(\"bye\")</code></pre>",
+      "options": [
+        "<code>1</code>",
+        "<code>bye</code>",
+        "<code>bye</code> then <code>1</code>",
+        "<code>1</code> then <code>bye</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>return 1</code> is decided, then <code>finally</code> runs (printing <code>bye</code>) before the function actually returns; then <code>print</code> shows <code>1</code>.</p>"
+    }
+  ]
+}

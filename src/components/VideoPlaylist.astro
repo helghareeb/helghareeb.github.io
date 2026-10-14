@@ -1,0 +1,65 @@
+---
+import { siteConfig } from '../../config/site';
+import {
+  getDownloadUrl,
+  getPlaylistPath,
+  getRepoUrl,
+  getThumbnailUrl,
+  getWatchUrl,
+  getWhatsAppUrl,
+  videoLabels,
+  type Playlist,
+} from '../utils/videos';
+
+interface Props {
+  lang: 'ar' | 'en';
+  playlist: Playlist;
+}
+
+const { lang, playlist } = Astro.props;
+const t = videoLabels[lang];
+const pageUrl = new URL(getPlaylistPath(lang, playlist.slug), siteConfig.siteUrl).toString();
+---
+
+<ol class="video-grid">
+  {playlist.videos.map((video, index) => {
+    const title = lang === 'ar' ? video.titleAr : video.title;
+    const anchor = `v-${index + 1}`;
+
+    return (
+      <li class="content-card video-card" id={anchor}>
+        <a class="video-card__thumb" href={getWatchUrl(video)} target="_blank" rel="noopener">
+          <img src={getThumbnailUrl(video)} alt="" loading="lazy" referrerpolicy="no-referrer" data-video-thumb />
+          <span class="video-card__number">{index + 1}</span>
+        </a>
+        <div class="video-card__body">
+          <h3 dir="auto">{title}</h3>
+          <div class="video-card__actions">
+            <a class="button" href={getWatchUrl(video)} target="_blank" rel="noopener">{t.watch}</a>
+            <a class="button-secondary" href={getDownloadUrl(video)} target="_blank" rel="noopener">{t.download}</a>
+            <a class="button-secondary" href={getRepoUrl(playlist, video)} target="_blank" rel="noopener">{t.code}</a>
+            <a
+              class="video-card__share"
+              href={getWhatsAppUrl(`${title} | ${playlist.course[lang]}`, `${pageUrl}#${anchor}`)}
+              target="_blank"
+              rel="noopener"
+            >
+              {t.share}
+            </a>
+          </div>
+        </div>
+      </li>
+    );
+  })}
+</ol>
+
+<p class="content-card__meta video-grid__note">{t.quotaNote}</p>
+
+<script>
+  // A thumbnail Drive cannot serve falls back to the plain numbered tile.
+  document.querySelectorAll<HTMLImageElement>('[data-video-thumb]').forEach((img) => {
+    const hide = () => img.remove();
+    if (img.complete && img.naturalWidth === 0) hide();
+    else img.addEventListener('error', hide);
+  });
+</script>

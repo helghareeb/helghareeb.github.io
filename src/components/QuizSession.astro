@@ -1,0 +1,212 @@
+---
+import { quizLabels, type QuizQuestion } from '../utils/quizzes';
+
+interface Props {
+  lang: 'ar' | 'en';
+  quizId: string;
+  questions: QuizQuestion[];
+}
+
+const { lang, quizId, questions } = Astro.props;
+const t = quizLabels[lang];
+const letters = ['a', 'b', 'c', 'd'];
+const levels = (['what', 'how', 'why'] as const).filter((level) => questions.some((question) => question.level === level));
+---
+
+<section
+  class="quiz"
+  data-quiz
+  data-quiz-id={quizId}
+  data-done-template={t.done(-1, -2)}
+  data-wrong-label={t.wrong}
+  data-correct-label={t.correct}
+>
+  <div class="notice-card quiz__toolbar">
+    <p class="quiz__score">
+      <strong>{t.score}:</strong> <span data-quiz-score>0</span> / <span data-quiz-total>{questions.length}</span>
+      <span class="quiz__sep">·</span>
+      <strong>{t.answered}:</strong> <span data-quiz-answered>0</span>
+    </p>
+    <p class="quiz__done" data-quiz-done hidden></p>
+    <div class="quiz__controls">
+      {levels.length > 1 && (
+        <label class="quiz__filter">
+          <span>{t.level}</span>
+          <select data-quiz-level>
+            <option value="">{t.all}</option>
+            {levels.map((level) => <option value={level}>{t.levels[level]}</option>)}
+          </select>
+        </label>
+      )}
+      <button type="button" class="button-secondary" data-quiz-action="shuffle">{t.shuffle}</button>
+      <button type="button" class="button-secondary" data-quiz-action="wrong" data-alt-label={t.showAll}>{t.retryWrong}</button>
+      <button type="button" class="button-secondary" data-quiz-action="reset">{t.reset}</button>
+    </div>
+    <p class="quiz__empty" data-quiz-empty hidden>{t.noWrong}</p>
+  </div>
+
+  <ol class="quiz__list" data-quiz-list dir="ltr" lang="en">
+    {questions.map((question) => (
+      <li class="content-card quiz-question" data-question-id={question.id} data-level={question.level} data-answer={question.answer}>
+        <p class="content-card__meta quiz-question__meta">
+          <span>{question.id}</span>
+          {question.level && <span class="quiz-question__level">{t.levels[question.level]}</span>}
+        </p>
+        <div class="quiz-question__stem" set:html={question.stem} />
+        <div class="quiz-question__options" role="group" aria-label={question.id}>
+          {question.options.map((option, optionIndex) => (
+            <button type="button" class="quiz-option" data-option={optionIndex}>
+              <span class="quiz-option__letter">{letters[optionIndex]}</span>
+              <span class="quiz-option__text" set:html={option} />
+            </button>
+          ))}
+        </div>
+        <div class="quiz-question__feedback" data-feedback hidden>
+          <p class="quiz-question__verdict" data-verdict></p>
+          <div class="quiz-question__explanation" set:html={question.explanation} />
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<script>
+  type Saved = Record<string, number>;
+
+  const storage = {
+    read(key: string): Saved {
+      try {
+        return JSON.parse(window.localStorage.getItem(key) || '{}') as Saved;
+      } catch {
+        return {};
+      }
+    },
+    write(key: string, value: Saved) {
+      try {
+        window.localStorage.setItem(key, JSON.stringify(value));
+      } catch {
+        // Private browsing without storage: the quiz still works for this visit.
+      }
+    },
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-quiz]').forEach((root) => {
+    const key = `quiz:${root.dataset.quizId}`;
+    const list = root.querySelector<HTMLElement>('[data-quiz-list]')!;
+    const items = Array.from(list.querySelectorAll<HTMLElement>('[data-question-id]'));
+    const scoreSlot = root.querySelector('[data-quiz-score]')!;
+    const totalSlot = root.querySelector('[data-quiz-total]')!;
+    const answeredSlot = root.querySelector('[data-quiz-answered]')!;
+    const doneSlot = root.querySelector<HTMLElement>('[data-quiz-done]')!;
+    const emptySlot = root.querySelector<HTMLElement>('[data-quiz-empty]')!;
+    const levelSelect = root.querySelector<HTMLSelectElement>('[data-quiz-level]');
+    const wrongButton = root.querySelector<HTMLButtonElement>('[data-quiz-action="wrong"]')!;
+    const wrongLabel = wrongButton.textContent ?? '';
+    let saved = storage.read(key);
+
+    // Retry mode shows only the questions that were wrong when it was switched on, with their answers cleared.
+    let retryIds: Set<string> | null = null;
+
+    const letter = (index: number) => 'abcd'[index];
+
+    const paint = (item: HTMLElement) => {
+      const id = item.dataset.questionId!;
+      const answer = Number(item.dataset.answer);
+      const chosen = saved[id];
+      const answered = chosen !== undefined;
+      item.classList.toggle('is-correct', answered && chosen === answer);
+      item.classList.toggle('is-wrong', answered && chosen !== answer);
+      item.querySelectorAll<HTMLButtonElement>('[data-option]').forEach((button) => {
+        const option = Number(button.dataset.option);
+        button.disabled = answered;
+        button.classList.toggle('is-answer', answered && option === answer);
+        button.classList.toggle('is-chosen', answered && option === chosen);
+      });
+      item.querySelector<HTMLElement>('[data-feedback]')!.hidden = !answered;
+      item.querySelector('[data-verdict]')!.textContent = !answered
+        ? ''
+        : chosen === answer
+          ? `✓ ${root.dataset.correctLabel}`
+          : `✗ ${root.dataset.wrongLabel} (${letter(answer)}).`;
+    };
+
+    const update = () => {
+      const level = levelSelect?.value ?? '';
+      let total = 0;
+      let answered = 0;
+      let correct = 0;
+      for (const item of items) {
+        const id = item.dataset.questionId!;
+        item.hidden = (level !== '' && item.dataset.level !== level) || (retryIds !== null && !retryIds.has(id));
+        if (item.hidden) continue;
+        total += 1;
+        const chosen = saved[id];
+        if (chosen === undefined) continue;
+        answered += 1;
+        if (chosen === Number(item.dataset.answer)) correct += 1;
+      }
+      scoreSlot.textContent = String(correct);
+      totalSlot.textContent = String(total);
+      answeredSlot.textContent = String(answered);
+      doneSlot.hidden = total === 0 || answered < total;
+      doneSlot.textContent = (root.dataset.doneTemplate ?? '').replace('-1', String(correct)).replace('-2', String(total));
+      emptySlot.hidden = !(retryIds !== null && retryIds.size === 0);
+    };
+
+    const refresh = () => {
+      items.forEach(paint);
+      update();
+    };
+
+    refresh();
+
+    list.addEventListener('click', (event) => {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-option]');
+      if (!button || button.disabled) return;
+      const item = button.closest<HTMLElement>('[data-question-id]')!;
+      saved[item.dataset.questionId!] = Number(button.dataset.option);
+      storage.write(key, saved);
+      paint(item);
+      update();
+    });
+
+    levelSelect?.addEventListener('change', update);
+
+    root.querySelector('[data-quiz-action="shuffle"]')!.addEventListener('click', () => {
+      const shuffled = [...items];
+      for (let i = shuffled.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      list.append(...shuffled);
+    });
+
+    wrongButton.addEventListener('click', () => {
+      if (retryIds === null) {
+        retryIds = new Set(
+          items
+            .filter((item) => {
+              const chosen = saved[item.dataset.questionId!];
+              return chosen !== undefined && chosen !== Number(item.dataset.answer);
+            })
+            .map((item) => item.dataset.questionId!),
+        );
+        for (const id of retryIds) delete saved[id];
+        storage.write(key, saved);
+        wrongButton.textContent = wrongButton.dataset.altLabel ?? '';
+      } else {
+        retryIds = null;
+        wrongButton.textContent = wrongLabel;
+      }
+      refresh();
+    });
+
+    root.querySelector('[data-quiz-action="reset"]')!.addEventListener('click', () => {
+      saved = {};
+      storage.write(key, saved);
+      retryIds = null;
+      wrongButton.textContent = wrongLabel;
+      refresh();
+    });
+  });
+</script>

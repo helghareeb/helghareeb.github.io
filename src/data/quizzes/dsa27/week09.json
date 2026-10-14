@@ -1,0 +1,292 @@
+{
+  "week": 9,
+  "title": "Basic sorting (Lecture 09)",
+  "questions": [
+    {
+      "id": "W9-M01",
+      "level": "what",
+      "stem": "<p>A sorting algorithm is <strong>stable</strong> when:</p>",
+      "options": [
+        "it uses no memory besides the array",
+        "it takes the same time on every input of size n",
+        "elements with equal keys keep their original relative order",
+        "it makes at most n - 1 swaps"
+      ],
+      "answer": 2,
+      "explanation": "<p>Stability is about equal keys and their arrival order. (a) is \"in place\"; (d) is a property of selection sort.</p>"
+    },
+    {
+      "id": "W9-M02",
+      "level": "what",
+      "stem": "<p>A sort is <strong>in place</strong> when:</p>",
+      "options": [
+        "it needs only <span class=\"quiz-math\">O(1)</span> extra memory besides the array it sorts",
+        "it returns the same list object it was given",
+        "it is stable",
+        "it runs in <span class=\"quiz-math\">O(n)</span> time"
+      ],
+      "answer": 0,
+      "explanation": "<p>The course sorts return a new list, but they rearrange their working <code>Array</code> with <span class=\"quiz-math\">O(1)</span> extra slots — so they are in place in this sense. (b) is what Python's <code>list.sort</code> does; it is not the definition.</p>"
+    },
+    {
+      "id": "W9-M03",
+      "level": "what",
+      "stem": "<p>Which of these sorts is <strong>not</strong> stable, as written in the course?</p>",
+      "options": [
+        "bubble sort",
+        "insertion sort",
+        "merge sort that takes from the left half on a tie",
+        "selection sort"
+      ],
+      "answer": 3,
+      "explanation": "<p>Its long-distance swap can jump an element over an equal one. Bubble and insertion sort move a value only past <strong>strictly</strong> greater ones; a merge that takes from the left on a tie is stable (Week 10).</p>"
+    },
+    {
+      "id": "W9-M04",
+      "level": "how",
+      "stem": "<p>Bubble sort, with the early exit, on <code>[1, 2, 3, 4, 5, 6]</code> makes how many comparisons?</p>",
+      "options": [
+        "5",
+        "15",
+        "6",
+        "36"
+      ],
+      "answer": 0,
+      "explanation": "<p>The first pass compares the 5 neighbour pairs, swaps nothing, and the early exit stops the sort: <span class=\"quiz-math\">n - 1 = 5</span>.</p>"
+    },
+    {
+      "id": "W9-M05",
+      "level": "how",
+      "stem": "<p>Selection sort on <code>[1, 2, 3, 4, 5, 6]</code> makes how many comparisons?</p>",
+      "options": [
+        "5",
+        "6",
+        "15",
+        "0"
+      ],
+      "answer": 2,
+      "explanation": "<p><span class=\"quiz-math\">5 + 4 + 3 + 2 + 1 = 15 = n(n-1)/2</span>. Selection sort scans the whole rest in every round, sorted or not.</p>"
+    },
+    {
+      "id": "W9-M06",
+      "level": "how",
+      "stem": "<p>The array after the <strong>first pass</strong> of bubble sort on A is:</p>",
+      "options": [
+        "<code>[1, 2, 9, 5, 7, 3]</code>",
+        "<code>[2, 5, 9, 1, 7, 3]</code>",
+        "<code>[2, 1, 5, 3, 7, 9]</code>",
+        "<code>[2, 5, 1, 7, 3, 9]</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>The 9 is carried to the end; the pass swaps 5 and 2, then 9 and 1, 9 and 7, 9 and 3. (a) is the first round of <strong>selection</strong> sort; (c) is after the second pass.</p>"
+    },
+    {
+      "id": "W9-M07",
+      "level": "how",
+      "stem": "<p>The array after the <strong>first round</strong> of selection sort on A is:</p>",
+      "options": [
+        "<code>[2, 5, 1, 7, 3, 9]</code>",
+        "<code>[1, 2, 9, 5, 7, 3]</code>",
+        "<code>[1, 5, 2, 9, 7, 3]</code>",
+        "<code>[1, 2, 3, 5, 7, 9]</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>The minimum, 1 at index 3, is swapped with the 5 at index 0. (a) is bubble sort's first pass.</p>"
+    },
+    {
+      "id": "W9-M08",
+      "level": "how",
+      "stem": "<p>Insertion sort on A. The array after the round that inserts <code>a[3]</code> (the value 1) is:</p>",
+      "options": [
+        "<code>[2, 5, 9, 1, 7, 3]</code>",
+        "<code>[1, 2, 9, 5, 7, 3]</code>",
+        "<code>[2, 1, 5, 9, 7, 3]</code>",
+        "<code>[1, 2, 5, 9, 7, 3]</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Before that round the prefix is <code>[2, 5, 9]</code>; the 1 shifts all three right and lands at index 0.</p>"
+    },
+    {
+      "id": "W9-M09",
+      "level": "how",
+      "stem": "<p>How many <strong>inversions</strong> does <code>[3, 1, 2]</code> have?</p>",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "0"
+      ],
+      "answer": 2,
+      "explanation": "<p>(3, 1) and (3, 2). The pair (1, 2) is in order.</p>"
+    },
+    {
+      "id": "W9-M10",
+      "level": "why",
+      "stem": "<p>The number of shifts insertion sort makes is always equal to:</p>",
+      "options": [
+        "n - 1",
+        "the number of inversions of the input",
+        "<span class=\"quiz-math\">n(n-1)/2</span>",
+        "<span class=\"quiz-math\">⌈ log<sub>2</sub> n! ⌉</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Each shift moves <code>current</code> past one larger value before it — one inverted pair — and changes the order of no other pair (W9-E3).</p>"
+    },
+    {
+      "id": "W9-M11",
+      "level": "what",
+      "stem": "<p>The best case of insertion sort is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>, on sorted input"
+      ],
+      "answer": 3,
+      "explanation": "<p>One comparison per round and no shifts: <span class=\"quiz-math\">n - 1</span> comparisons.</p>"
+    },
+    {
+      "id": "W9-M12",
+      "level": "why",
+      "stem": "<p>Selection sort is the best of the three basic sorts when:</p>",
+      "options": [
+        "the data is nearly sorted",
+        "writing an element costs much more than comparing two",
+        "the sort must be stable",
+        "the values are small integers"
+      ],
+      "answer": 1,
+      "explanation": "<p>At most <span class=\"quiz-math\">n - 1</span> swaps, whatever the input. It is not stable (c), gains nothing from sorted input (a), and (d) is counting sort.</p>"
+    },
+    {
+      "id": "W9-M13",
+      "level": "how",
+      "stem": "<p>The largest number of swaps selection sort makes on 10 values is:</p>",
+      "options": [
+        "9",
+        "45",
+        "10",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "<p>At most one swap per round, and there are <span class=\"quiz-math\">n - 1</span> rounds. 45 (b) is the number of comparisons.</p>"
+    },
+    {
+      "id": "W9-M14",
+      "level": "how",
+      "stem": "<p><code>counting_sort([4, 0, 4, 1])</code> makes a <code>counts</code> array of how many slots?</p>",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "answer": 1,
+      "explanation": "<p>k = max + 1 = 5: one counter for each value 0, 1, 2, 3, 4.</p>"
+    },
+    {
+      "id": "W9-M15",
+      "level": "what",
+      "stem": "<p>Counting sort on n values from the range 0 .. k - 1 takes:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n + k)</span>",
+        "<span class=\"quiz-math\">O(k log n)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>One pass to count (n), one over the counters (k), n writes.</p>"
+    },
+    {
+      "id": "W9-M16",
+      "level": "why",
+      "stem": "<p>Counting sort is a <strong>bad</strong> choice when:</p>",
+      "options": [
+        "the values are small integers",
+        "n is large",
+        "the range of the values is much larger than n",
+        "the input is already sorted"
+      ],
+      "answer": 2,
+      "explanation": "<p>Sorting two values up to a million needs a million counters and a loop over all of them.</p>"
+    },
+    {
+      "id": "W9-M17",
+      "level": "what",
+      "stem": "<p>In the worst case, every comparison sort of n values needs at least:</p>",
+      "options": [
+        "<span class=\"quiz-math\">log<sub>2</sub> n</span> comparisons",
+        "<span class=\"quiz-math\">log<sub>2</sub> n!</span> comparisons",
+        "<span class=\"quiz-math\">n<sup>2</sup></span> comparisons",
+        "<span class=\"quiz-math\">n / 2</span> comparisons"
+      ],
+      "answer": 1,
+      "explanation": "<p>A decision tree with at least <span class=\"quiz-math\">n!</span> leaves has height at least <span class=\"quiz-math\">log<sub>2</sub> n!</span>, which is <span class=\"quiz-math\">Θ(n log n)</span>.</p>"
+    },
+    {
+      "id": "W9-M18",
+      "level": "how",
+      "stem": "<p>The fewest comparisons that can sort <strong>any</strong> 4 values in the worst case, by comparing, is at least:</p>",
+      "options": [
+        "4",
+        "6",
+        "3",
+        "5"
+      ],
+      "answer": 3,
+      "explanation": "<p><span class=\"quiz-math\">4! = 24</span> orders, and <span class=\"quiz-math\">2<sup>4</sup> = 16 &lt; 24 ≤ 32 = 2<sup>5</sup></span>: at least <span class=\"quiz-math\">⌈ log<sub>2</sub> 24 ⌉ = 5</span> comparisons in the worst case.</p>"
+    },
+    {
+      "id": "W9-M19",
+      "level": "why",
+      "stem": "<p>The decision-tree argument for the lower bound uses the fact that:</p>",
+      "options": [
+        "the tree needs at least <span class=\"quiz-math\">n!</span> leaves, and a binary tree of height h has at most <span class=\"quiz-math\">2<sup>h</sup></span> leaves",
+        "every sort is recursive",
+        "every comparison halves the array",
+        "the tree is always balanced"
+      ],
+      "answer": 0,
+      "explanation": "<p>Two different input orders must end at different leaves, and h yes/no answers can tell apart at most <span class=\"quiz-math\">2<sup>h</sup></span> cases.</p>"
+    },
+    {
+      "id": "W9-M20",
+      "level": "why",
+      "stem": "<p>A <code>_steps</code> generator yields its working <strong>list itself</strong> (not a copy) before each comparison. Then <code>frames = list(generator)</code> holds:</p>",
+      "options": [
+        "the final, sorted state in every frame",
+        "a <code>TypeError</code>",
+        "the right frames",
+        "only the first frame"
+      ],
+      "answer": 0,
+      "explanation": "<p>Every frame holds a reference to the <strong>same</strong> list; by the time you look, it is sorted. <code>step_slider</code> hides the bug by copying each frame as it arrives; <code>list(generator)</code> does not.</p>"
+    },
+    {
+      "id": "W9-M21",
+      "level": "why",
+      "stem": "<p>A plain sort runs its <code>_steps</code> generator to the end, and the generator copies the array before each of its about <span class=\"quiz-math\">n<sup>2</sup>/2</span> comparisons. The plain sort costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n<sup>3</sup>)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p><span class=\"quiz-math\">n<sup>2</sup>/2</span> copies of n values each: <span class=\"quiz-math\">Θ(n<sup>3</sup>)</span>. The reference fixes it with <code>snapshot=_live</code> in the plain sort (Lecture 09, \"The price of watching\").</p>"
+    },
+    {
+      "id": "W9-M22",
+      "level": "how",
+      "stem": "<p>Bubble sort on <code>[6, 5, 4, 3, 2, 1]</code> makes how many swaps?</p>",
+      "options": [
+        "5",
+        "6",
+        "15",
+        "36"
+      ],
+      "answer": 2,
+      "explanation": "<p>Reversed input has every pair inverted: <span class=\"quiz-math\">6 × 5 / 2 = 15</span> inversions, and bubble sort makes one swap per inversion.</p>"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "key": "Programming Languages are Not the Same",
+    "title": "Programming Languages Are Not the Same",
+    "titleAr": "لغات البرمجة ليست سواء",
+    "order": 1,
+    "repoPath": "Week-01/Lecture-01",
+    "id": "1MVBZ0rtFlR6lEf2tGm1EbDk5Ge_fVp-s",
+    "fileName": "Programming Languages are Not the Same.mkv",
+    "modified": "2025-09-27"
+  },
+  {
+    "key": "Python Tutorial - Part 01",
+    "title": "Python Tutorial, Part 1",
+    "titleAr": "دروس Python: الجزء الأول",
+    "order": 2,
+    "repoPath": "Week-01/Lecture-02",
+    "id": "19BY1gyEve9x_KdNF-oNKjAwskyJvmo_G",
+    "fileName": "Python Tutorial - Part 01.mkv",
+    "modified": "2025-09-27"
+  },
+  {
+    "key": "Python Basics - Part 02",
+    "title": "Python Basics, Part 2",
+    "titleAr": "أساسيات Python: الجزء الثاني",
+    "order": 3,
+    "repoPath": "Week-01/Lecture-02",
+    "id": "19ztjt8zXNSzFCkwpgEcSiYiLagu_PP62",
+    "fileName": "Python Basics - Part 02.mkv",
+    "modified": "2025-09-27"
+  },
+  {
+    "key": "Python Basics - Part 03",
+    "title": "Python Basics, Part 3",
+    "titleAr": "أساسيات Python: الجزء الثالث",
+    "order": 4,
+    "repoPath": "Week-01/Lecture-03",
+    "id": "1ZGEp1WF2yl_s3EDUza2g0CfBDiq-HeWr",
+    "fileName": "Python Basics - Part 03.mkv",
+    "modified": "2025-09-27"
+  },
+  {
+    "key": "Python Basics - 04",
+    "title": "Python Basics, Part 4",
+    "titleAr": "أساسيات Python: الجزء الرابع",
+    "order": 5,
+    "repoPath": "Week-01/Lecture-03",
+    "id": "1Wvqd0iZY6f_wSoSH97C4IeqrMyQf3HST",
+    "fileName": "Python Basics - 04.mkv",
+    "modified": "2025-09-27"
+  },
+  {
+    "key": "Python - Object Oriented Programming",
+    "title": "Python: Object-Oriented Programming",
+    "titleAr": "البرمجة كائنية التوجه في Python",
+    "order": 6,
+    "repoPath": "Week-01/Lecture-03",
+    "id": "1MkgJzGLQ-QVU3qKBZCuRwp0vfWN4I-6A",
+    "fileName": "Python - Object Oriented Programming.mkv",
+    "modified": "2025-09-27"
+  },
+  {
+    "key": "Python - Lab 02 Solution",
+    "title": "Python: Lab 2 Solution",
+    "titleAr": "حل المعمل الثاني في Python",
+    "order": 7,
+    "repoPath": "Week-02/Week-01-Lab-Solution/Python-Lab-02",
+    "id": "10wOrb_7forQZGWBSBzXAw473eiJs1_Dm",
+    "fileName": "Python - Lab 02 Solution.mkv",
+    "modified": "2025-09-27"
+  },
+  {
+    "key": "Abstract Data Types (ADT)",
+    "title": "Abstract Data Types (ADT)",
+    "titleAr": "أنواع البيانات المجردة (ADT)",
+    "order": 8,
+    "repoPath": "Week-02/Lecture-01",
+    "id": "1sNyyN6rGjSopJiGsCjs_vocyNIK0cIel",
+    "fileName": "Abstract Data Types (ADT).mkv",
+    "modified": "2025-09-27"
+  },
+  {
+    "key": "Array Lecture Teaser Video",
+    "title": "Arrays: Lecture Teaser",
+    "titleAr": "المصفوفات: تمهيد للمحاضرة",
+    "order": 9,
+    "repoPath": "Week-03/Lecture",
+    "id": "16CuG-FOboheqPsbIXxkUqDg1J8EJbyOM",
+    "fileName": "Array Lecture Teaser Video.mp4",
+    "modified": "2020-11-01"
+  },
+  {
+    "key": "Python - Arrays, Sets, Maps, with Code",
+    "title": "Arrays, Sets and Maps in Python, with Code",
+    "titleAr": "المصفوفات والمجموعات والخرائط في Python مع الشيفرة",
+    "order": 10,
+    "repoPath": "Week-03/Lecture",
+    "id": "1y_ACG4suloiCkGLOEH_bDqSM1MzTDpNT",
+    "fileName": "Python - Arrays, Sets, Maps, with Code.mp4",
+    "modified": "2020-11-01"
+  },
+  {
+    "key": "Algorithm Complexity - Searching and Sorting as Examples",
+    "title": "Algorithm Complexity: Searching and Sorting as Examples",
+    "titleAr": "تعقيد الخوارزميات: البحث والترتيب أمثلةً",
+    "order": 11,
+    "repoPath": "Week-06",
+    "id": "1HDDfKf9XJF1a94MTn1J8-pAq19NxzaVC",
+    "fileName": "Algorithm Complexity - Searching and Sorting as Examples.mp4",
+    "modified": "2020-11-01"
+  }
+]

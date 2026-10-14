@@ -1,0 +1,292 @@
+{
+  "week": 5,
+  "title": "Linked lists (Lecture 05)",
+  "questions": [
+    {
+      "id": "W5-M01",
+      "level": "what",
+      "stem": "<p>A node of a singly linked list holds:</p>",
+      "options": [
+        "a value and a reference to the next node",
+        "a value and its index in the list",
+        "a value and references to every later node",
+        "only a value; the list stores the order separately"
+      ],
+      "answer": 0,
+      "explanation": "<p>The order is in the links themselves; there are no indices (b) and no separate order (d).</p>"
+    },
+    {
+      "id": "W5-M02",
+      "level": "what",
+      "stem": "<p>Reading <code>ll[i]</code> on a linked list of n nodes costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "amortised <span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Follow <code>next</code> i times from <code>head</code>: <span class=\"quiz-math\">O(i)</span>, <span class=\"quiz-math\">O(n)</span> in the worst case.</p>"
+    },
+    {
+      "id": "W5-M03",
+      "level": "what",
+      "stem": "<p><code>push_front</code> costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(1)</span>",
+        "amortised <span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Two reference assignments, independent of n. \"Amortised\" (c) describes the dynamic array's append, not this.</p>"
+    },
+    {
+      "id": "W5-M04",
+      "level": "what",
+      "stem": "<p><code>append</code> on a singly linked list <strong>without</strong> a tail reference costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "amortised <span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>It must walk to the last node first. A tail reference makes it <span class=\"quiz-math\">O(1)</span>.</p>"
+    },
+    {
+      "id": "W5-M05",
+      "level": "why",
+      "stem": "<p>Which operation is <span class=\"quiz-math\">O(1)</span> on a linked list but <span class=\"quiz-math\">O(n)</span> on a dynamic array?</p>",
+      "options": [
+        "inserting at the front",
+        "reading element i",
+        "appending at the end",
+        "searching for a value"
+      ],
+      "answer": 0,
+      "explanation": "<p>Front insertion: two references here; every element shifts in an array.</p>"
+    },
+    {
+      "id": "W5-M06",
+      "level": "why",
+      "stem": "<p>Which operation is <span class=\"quiz-math\">O(1)</span> on a dynamic array but <span class=\"quiz-math\">O(n)</span> on a linked list?</p>",
+      "options": [
+        "inserting at the front",
+        "removing the first element",
+        "reading element i",
+        "<code>len</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Indexing: address arithmetic in an array, a walk in a list. <code>len</code> (d) is <span class=\"quiz-math\">O(1)</span> in both — because the list keeps <code>_size</code>.</p>"
+    },
+    {
+      "id": "W5-M07",
+      "level": "why",
+      "stem": "<p>In <code>push_front</code>, why must <code>new.next = self.head</code> come <strong>before</strong> <code>self.head = new</code>?</p>",
+      "options": [
+        "Python evaluates assignments right to left",
+        "Done the other way round, <code>new.next</code> would point to <code>new</code> itself and the rest of the list would be lost",
+        "It is only a style convention",
+        "Otherwise <code>_size</code> would be wrong"
+      ],
+      "answer": 1,
+      "explanation": "<p>After <code>self.head = new</code>, <code>new.next = self.head</code> makes the node point at itself, and the old first node is no longer referenced by anything. Python evaluates each assignment's right-hand side first (a), but that is not the reason for the order of two separate statements.</p>"
+    },
+    {
+      "id": "W5-M08",
+      "level": "why",
+      "stem": "<p>To remove a node from a singly linked list, you need a reference to:</p>",
+      "options": [
+        "the head only",
+        "the node after it",
+        "the last node",
+        "the node before it"
+      ],
+      "answer": 3,
+      "explanation": "<p>Only the predecessor holds the reference that must be redirected around the removed node.</p>"
+    },
+    {
+      "id": "W5-M09",
+      "level": "what",
+      "stem": "<p>Which node is the special case in <code>remove(value)</code> without a sentinel?</p>",
+      "options": [
+        "the head",
+        "the last node",
+        "the middle node",
+        "none — there is no special case"
+      ],
+      "answer": 0,
+      "explanation": "<p>The head has no predecessor, so it is removed by moving <code>head</code> instead.</p>"
+    },
+    {
+      "id": "W5-M10",
+      "level": "how",
+      "stem": "<p>What is the running time of this loop over a linked list of n nodes?</p><pre><code>for i in range(len(ll)):\n    total += ll[i]</code></pre>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Each <code>ll[i]</code> walks i steps from the head: <span class=\"quiz-math\">0 + 1 + … + (n-1)</span>. Use <code>for value in ll:</code> for one <span class=\"quiz-math\">O(n)</span> walk.</p>"
+    },
+    {
+      "id": "W5-M11",
+      "level": "why",
+      "stem": "<p>Why is <code>len(ll)</code> <span class=\"quiz-math\">O(1)</span> in <code>dsa/linked_list.py</code>?</p>",
+      "options": [
+        "Python caches the length of every object",
+        "The list keeps <code>_size</code> up to date in every method that adds or removes",
+        "Linked lists have a fixed size",
+        "It is not — it walks the list"
+      ],
+      "answer": 1,
+      "explanation": "<p>A stored count, updated by <code>push_front</code>, <code>append</code>, <code>insert_at</code>, <code>pop_front</code> and <code>remove</code>. Forget one, and <code>len</code> lies.</p>"
+    },
+    {
+      "id": "W5-M12",
+      "level": "how",
+      "stem": "<p>Reversing a linked list in place needs how much extra space?</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Three references — <code>prev</code>, <code>node</code> and the saved next — whatever n is.</p>"
+    },
+    {
+      "id": "W5-M13",
+      "level": "what",
+      "stem": "<p>On 64-bit CPython, a <code>Node</code> with <code>__slots__</code> takes about 48 bytes. One slot of an array of references takes:</p>",
+      "options": [
+        "8 bytes",
+        "48 bytes",
+        "1 byte",
+        "it depends on the value stored"
+      ],
+      "answer": 0,
+      "explanation": "<p>One 8-byte reference per slot; the node is six times larger.</p>"
+    },
+    {
+      "id": "W5-M14",
+      "level": "why",
+      "stem": "<p>A <strong>doubly</strong> linked list can do in <span class=\"quiz-math\">O(1)</span> what a singly linked one cannot:</p>",
+      "options": [
+        "read element i",
+        "remove a node you already hold a reference to",
+        "search for a value",
+        "sort the list"
+      ],
+      "answer": 1,
+      "explanation": "<p>With <code>prev</code> in each node, the node itself gives you its predecessor. Indexing (a) and search (c) are still <span class=\"quiz-math\">O(n)</span>.</p>"
+    },
+    {
+      "id": "W5-M15",
+      "level": "why",
+      "stem": "<p>What is a sentinel (dummy) node for?</p>",
+      "options": [
+        "to mark the end of the list instead of <code>None</code>",
+        "to store the length",
+        "to give every real node a predecessor, removing the special case for the head",
+        "to make indexing <span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>With a permanent node before the first real one, removing the first real node looks exactly like removing any other.</p>"
+    },
+    {
+      "id": "W5-M16",
+      "level": "why",
+      "stem": "<p>A singly linked list <strong>with</strong> a tail reference. Removing the <strong>last</strong> node costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span> — the tail points at it",
+        "amortised <span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span> — the new last node must be found from the head"
+      ],
+      "answer": 3,
+      "explanation": "<p>After removing the last node, <code>_tail</code> must move to its predecessor, and only a walk from the head finds it in a singly linked list.</p>"
+    },
+    {
+      "id": "W5-M17",
+      "level": "what",
+      "stem": "<p>Python's <code>collections.deque</code> is implemented as:</p>",
+      "options": [
+        "a doubly linked list of fixed-size blocks",
+        "a dynamic array",
+        "a hash table",
+        "a singly linked list of single values"
+      ],
+      "answer": 0,
+      "explanation": "<p>Blocks give array-like memory efficiency; the links give <span class=\"quiz-math\">O(1)</span> at both ends.</p>"
+    },
+    {
+      "id": "W5-M18",
+      "level": "why",
+      "stem": "<p>Why does the traversal loop test <code>while node is not None:</code> rather than <code>while node.next is not None:</code>?</p>",
+      "options": [
+        "It is faster",
+        "The second version stops <strong>on</strong> the last node, so it never visits it — and crashes on an empty list",
+        "<code>node.next</code> is not allowed in a condition",
+        "There is no difference"
+      ],
+      "answer": 1,
+      "explanation": "<p>It is the standard off-by-one: <code>node.next is not None</code> is the right test only when you <em>want</em> to stop on the last node (to append after it).</p>"
+    },
+    {
+      "id": "W5-M19",
+      "level": "how",
+      "stem": "<p>After <code>a = Node(1)</code>, <code>b = Node(2, a)</code>, <code>c = Node(3, b)</code>, what is <code>c.next.next.value</code>?</p>",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "it raises <code>AttributeError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>c.next</code> is <code>b</code>, and <code>b.next</code> is <code>a</code>, whose value is 1.</p>"
+    },
+    {
+      "id": "W5-M20",
+      "level": "what",
+      "stem": "<p>In Python, what happens to a node that nothing refers to any more?</p>",
+      "options": [
+        "it stays in memory until the program ends",
+        "you must call <code>del</code> on it",
+        "it becomes the new head",
+        "the garbage collector reclaims it"
+      ],
+      "answer": 3,
+      "explanation": "<p>Unreachable objects are reclaimed automatically. <code>del</code> (b) only removes a <em>name</em>.</p>"
+    },
+    {
+      "id": "W5-M21",
+      "level": "how",
+      "stem": "<p>To insert a new node at index i ≥ 1, you walk to the node at index:</p>",
+      "options": [
+        "i − 1",
+        "i",
+        "i + 1",
+        "0 only"
+      ],
+      "answer": 0,
+      "explanation": "<p>The node at i − 1 is the one whose <code>next</code> must change. Index 0 is <code>push_front</code>.</p>"
+    },
+    {
+      "id": "W5-M22",
+      "level": "what",
+      "stem": "<p>Where in this course do short linked lists appear inside another structure?</p>",
+      "options": [
+        "in the dynamic array",
+        "as the chains of a hash table",
+        "in the heap",
+        "in the course <code>Array</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>ChainingHashMap</code> (Week 13) stores an <code>Array</code> of chains of <code>Entry</code> nodes.</p>"
+    }
+  ]
+}

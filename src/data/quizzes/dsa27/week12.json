@@ -1,0 +1,292 @@
+{
+  "week": 12,
+  "title": "Heaps and Priority Queues (Lecture 12)",
+  "questions": [
+    {
+      "id": "W12-M01",
+      "level": "what",
+      "stem": "<p>In a <strong>min</strong>-heap, which statement is always true?</p>",
+      "options": [
+        "the array is sorted in ascending order",
+        "every parent is less than or equal to its children",
+        "every left child is less than or equal to its sibling",
+        "the largest value is at the last index"
+      ],
+      "answer": 1,
+      "explanation": "<p>That is the heap property, and it is all a heap promises. The array is not sorted (a): Q itself is <code>[1, 5, 3, …]</code>. Siblings are unordered (c). The largest value is in some leaf, not necessarily the last one (d).</p>"
+    },
+    {
+      "id": "W12-M02",
+      "level": "what",
+      "stem": "<p>With 0-based indices, the <strong>left</strong> child of index i is at:</p>",
+      "options": [
+        "2i",
+        "i + 1",
+        "2i + 1",
+        "2i + 2"
+      ],
+      "answer": 2,
+      "explanation": "<p>2i + 1; the right child is 2i + 2 (d). 2i (a) is the 1-based formula of CLRS.</p>"
+    },
+    {
+      "id": "W12-M03",
+      "level": "how",
+      "stem": "<p>The parent of index 10 is at index:</p>",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "<p>(10 – 1) // 2 = 4. Check: the children of 4 are 9 and 10.</p>"
+    },
+    {
+      "id": "W12-M04",
+      "level": "how",
+      "stem": "<p>The height of a heap holding 1,000 values (a single node has height 0) is:</p>",
+      "options": [
+        "10",
+        "500",
+        "31",
+        "9"
+      ],
+      "answer": 3,
+      "explanation": "<p><span class=\"quiz-math\">⌊ log<sub>2</sub> 1000 ⌋ = 9</span>: levels 0 to 9 hold up to 1,023 nodes. 10 (a) is the number of <strong>levels</strong>.</p>"
+    },
+    {
+      "id": "W12-M05",
+      "level": "how",
+      "stem": "<p>Which array is a valid <strong>min</strong>-heap?</p>",
+      "options": [
+        "<code>[1, 3, 2, 7, 4]</code>",
+        "<code>[1, 3, 2, 2, 4]</code>",
+        "<code>[2, 1, 3]</code>",
+        "<code>[1, 4, 2, 3]</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>3's children are 7 and 4; 2 has none. In (b), 2 at index 3 is below its parent 3; in (c), 1 is below 2; in (d), 3 at index 3 is below 4.</p>"
+    },
+    {
+      "id": "W12-M06",
+      "level": "how",
+      "stem": "<p><code>Q.push(2)</code>: how many swaps does the sift-up make?</p>",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 2,
+      "explanation": "<p>2 is appended at index 9, under 6 (index 4): swap. Now at index 4, under 5 (index 1): swap. Under 1 at the root: stop. The array becomes <code>[1, 2, 3, 8, 5, 4, 9, 11, 10, 6]</code>.</p>"
+    },
+    {
+      "id": "W12-M07",
+      "level": "how",
+      "stem": "<p><code>Q.pop()</code> returns 1. Which value is at the root afterwards?</p>",
+      "options": [
+        "5",
+        "3",
+        "10",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "<p>10, the last item, moves to the root; its children are 5 and 3, so it swaps with 3, then with 4. The array is <code>[3, 5, 4, 8, 6, 10, 9, 11]</code>. The new root is always the smaller of the old root's two children.</p>"
+    },
+    {
+      "id": "W12-M08",
+      "level": "why",
+      "stem": "<p>Sift-down swaps an item with the <strong>better</strong> of its two children, not just any child that beats it, because:</p>",
+      "options": [
+        "it is faster to compare with the better child",
+        "it keeps the tree complete",
+        "the left child might not exist",
+        "the child that moves up becomes the parent of its sibling, so it must beat the sibling too"
+      ],
+      "answer": 3,
+      "explanation": "<p>Swapping with a child that beats the item but not its sibling puts a larger value above a smaller one (W12-B2). (b) is wrong: sift-down never changes the shape.</p>"
+    },
+    {
+      "id": "W12-M09",
+      "level": "what",
+      "stem": "<p><code>heapify</code> on an array of n values sifts down first at index:</p>",
+      "options": [
+        "0",
+        "n – 1",
+        "n // 2 – 1",
+        "n // 2 + 1"
+      ],
+      "answer": 2,
+      "explanation": "<p>n // 2 – 1 is the last index with a child; everything after it is a leaf, already a heap of one.</p>"
+    },
+    {
+      "id": "W12-M10",
+      "level": "what",
+      "stem": "<p>The worst-case cost of <code>heapify</code> on n values is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>At most about n swaps and 2n comparisons (W12-E3).</p>"
+    },
+    {
+      "id": "W12-M11",
+      "level": "why",
+      "stem": "<p><code>heapify</code> costs less than n pushes because:</p>",
+      "options": [
+        "it never looks at half of the values",
+        "most nodes are near the bottom, and a sift-down costs only the levels <strong>below</strong> a node",
+        "it uses sift-up, which is cheaper than sift-down",
+        "the input is usually almost sorted"
+      ],
+      "answer": 1,
+      "explanation": "<p>Half the nodes are leaves (no work), a quarter move at most one level, and so on: <span class=\"quiz-math\">Σ h · n/2<sup>h+1</sup> ≤ n</span>. It does look at every value (a) — it just does little with most of them.</p>"
+    },
+    {
+      "id": "W12-M12",
+      "level": "how",
+      "stem": "<p>Pushing the values n, n – 1, …, 2, 1 (in that order) into an empty <strong>min</strong>-heap costs, in total:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Each new value is the smallest so far and climbs to the root: about <span class=\"quiz-math\">log<sub>2</sub> i</span> swaps for the i-th push, <span class=\"quiz-math\">Θ(n log n)</span> in total. On random input the pushes average about two comparisons each.</p>"
+    },
+    {
+      "id": "W12-M13",
+      "level": "what",
+      "stem": "<p><code>peek()</code> on a heap of n values costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>The best value is at index 0.</p>"
+    },
+    {
+      "id": "W12-M14",
+      "level": "what",
+      "stem": "<p>Checking whether an arbitrary value x is in a heap of n values costs, in the worst case:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>The heap property says nothing about where a value that is not the best might be — it could be in any subtree. Only the root is cheap to find.</p>"
+    },
+    {
+      "id": "W12-M15",
+      "level": "why",
+      "stem": "<p>A heap is stored in an array, with no node objects, because:</p>",
+      "options": [
+        "Python lists are faster than objects",
+        "a heap is always sorted",
+        "arrays can grow and nodes cannot",
+        "its shape is complete, so there are no gaps, and index arithmetic replaces the child and parent references"
+      ],
+      "answer": 3,
+      "explanation": "<p>Complete shape means indices 0 … n – 1 with no holes, and 2i + 1, 2i + 2, (i – 1) // 2 replace <code>left</code>, <code>right</code> and <code>parent</code>.</p>"
+    },
+    {
+      "id": "W12-M16",
+      "level": "how",
+      "stem": "<p><code>enqueue(\"a\", 2)</code>, <code>enqueue(\"b\", 1)</code>, <code>enqueue(\"c\", 1)</code>, then three <code>dequeue()</code>s return:</p>",
+      "options": [
+        "a, b, c",
+        "b, c, a",
+        "c, b, a",
+        "b, a, c"
+      ],
+      "answer": 1,
+      "explanation": "<p>b and c both have priority 1; b was enqueued first (counter 1 against 2), so it is served first. Then c, then a.</p>"
+    },
+    {
+      "id": "W12-M17",
+      "level": "why",
+      "stem": "<p><code>PriorityQueue</code> pushes <code>(priority, counter, item)</code> rather than <code>(priority, item)</code> because:</p>",
+      "options": [
+        "it makes <code>dequeue</code> faster",
+        "it counts the items in the queue",
+        "when two priorities tie, Python would compare the items, which may not be comparable",
+        "it turns the min-heap into a max-heap"
+      ],
+      "answer": 2,
+      "explanation": "<p>With <code>(1, item_b)</code> against <code>(1, item_c)</code>, Python compares the items: dictionaries raise <code>TypeError</code>, strings silently order alphabetically. The unique counter decides every tie before the item is reached.</p>"
+    },
+    {
+      "id": "W12-M18",
+      "level": "how",
+      "stem": "<p>The k largest of n values, found with a min-heap of at most k values, cost:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n log k)</span>",
+        "<span class=\"quiz-math\">O(k log n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(nk)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>n values, each costing at most one <code>peek</code> and a pop + push on a heap of k: <span class=\"quiz-math\">O(n log k)</span>. (c) is sorting everything.</p>"
+    },
+    {
+      "id": "W12-M19",
+      "level": "why",
+      "stem": "<p>To find the k <strong>largest</strong> values you keep a <strong>min</strong>-heap of size k because:</p>",
+      "options": [
+        "a max-heap cannot hold k values",
+        "a min-heap is faster than a max-heap",
+        "the smallest values must be found first",
+        "its root is the weakest of the best k so far — the one to throw out when a better value arrives"
+      ],
+      "answer": 3,
+      "explanation": "<p>The root is the smallest of the k kept, and it is the one a new, larger value must replace.</p>"
+    },
+    {
+      "id": "W12-M20",
+      "level": "what",
+      "stem": "<p>The extra space of heap sort (Week 10) is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Heap sort builds the heap inside the input array and moves each maximum into the space the heap gives up.</p>"
+    },
+    {
+      "id": "W12-M21",
+      "level": "why",
+      "stem": "<p>Heap sort sorts into <strong>ascending</strong> order with a <strong>max</strong>-heap because:</p>",
+      "options": [
+        "each extraction swaps the maximum to the end of the heap, which is where it belongs in the sorted array",
+        "a max-heap is stable",
+        "a min-heap cannot be built in place",
+        "a max-heap needs fewer comparisons"
+      ],
+      "answer": 0,
+      "explanation": "<p>The sorted region grows from the right as the heap shrinks from the right. Heap sort is not stable (b).</p>"
+    },
+    {
+      "id": "W12-M22",
+      "level": "how",
+      "stem": "<p>After <code>MaxHeap([3, 1, 4, 1, 5, 9, 2, 6])</code>, the value at <code>_items[1]</code> is:</p>",
+      "options": [
+        "5",
+        "1",
+        "4",
+        "6"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>heapify</code> gives <code>[9, 6, 4, 1, 5, 3, 2, 1]</code>: <code>_items[1]</code> is 6.</p>"
+    }
+  ]
+}

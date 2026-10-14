@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content';
 import { navigation } from '../../config/navigation';
 import { siteConfig } from '../../config/site';
 import { getArticleSeriesPath, getEntryPath, getFlashcardModePath } from '../utils/content-routing';
+import { dsa27Weeks, getDsa27WeekPath } from '../utils/quizzes';
 import { getStudyBenefitBookPath } from '../utils/study';
+import { getPlaylistPath, playlists } from '../utils/videos';
 
 const staticPaths = [
   '/',
@@ -142,6 +144,16 @@ export const GET: APIRoute = async () => {
     urls.set(getFlashcardModePath(entry.data.lang, entry.slug, 'training'), undefined);
     urls.set(getFlashcardModePath(entry.data.lang, entry.slug, 'test'), undefined);
     urls.set(getFlashcardModePath(entry.data.lang, entry.slug, 'results'), undefined);
+  }
+
+  for (const lang of ['ar', 'en'] as const) {
+    for (const playlist of playlists) {
+      const latest = playlist.videos.map((video) => video.modified).sort().at(-1);
+      urls.set(getPlaylistPath(lang, playlist.slug), latest);
+    }
+    for (const week of dsa27Weeks) {
+      urls.set(getDsa27WeekPath(lang, week.week), undefined);
+    }
   }
 
   for (const locale of Object.keys(navigation) as Array<keyof typeof navigation>) {

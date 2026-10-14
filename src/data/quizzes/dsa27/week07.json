@@ -1,0 +1,292 @@
+{
+  "week": 7,
+  "title": "Queues (Lecture 07)",
+  "questions": [
+    {
+      "id": "W7-M01",
+      "level": "what",
+      "stem": "<p>\"FIFO\" means:</p>",
+      "options": [
+        "the last item added is the first one removed",
+        "the first item added is the first one removed",
+        "items are removed in sorted order",
+        "any item can be removed"
+      ],
+      "answer": 1,
+      "explanation": "<p>Last in, first out (a) is a stack — Week 6.</p>"
+    },
+    {
+      "id": "W7-M02",
+      "level": "how",
+      "stem": "<p><code>enqueue(1)</code>, <code>enqueue(2)</code>, <code>enqueue(3)</code>, <code>dequeue()</code>, <code>enqueue(4)</code>, <code>dequeue()</code>. What does the <strong>next</strong> <code>dequeue()</code> return?</p>",
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 3,
+      "explanation": "<p>The queue goes [1, 2, 3] → dequeue 1 → [2, 3] → enqueue 4 → [2, 3, 4] → dequeue 2 → [3, 4]; the next dequeue returns 3. (A stack would have returned 4 — the difference in one question.)</p>"
+    },
+    {
+      "id": "W7-M03",
+      "level": "why",
+      "stem": "<p>In <code>SlowQueue</code>, <code>dequeue</code> is <code>pop(0)</code> on a <code>DynamicArray</code>. Its cost on a queue of n items is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span> — every remaining element shifts one slot left",
+        "<span class=\"quiz-math\">O(1)</span>",
+        "amortised <span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>pop(0)</code> moves the n − 1 elements behind the front. Amortised <span class=\"quiz-math\">O(1)</span> (c) is the cost of <code>append</code>, the enqueue.</p>"
+    },
+    {
+      "id": "W7-M04",
+      "level": "why",
+      "stem": "<p>An array-based queue that enqueues with <code>insert_at(0, x)</code> and dequeues with <code>pop()</code> at the end has costs:</p>",
+      "options": [
+        "both <span class=\"quiz-math\">O(1)</span>",
+        "enqueue <span class=\"quiz-math\">O(n)</span>, dequeue <span class=\"quiz-math\">O(1)</span>",
+        "enqueue <span class=\"quiz-math\">O(1)</span>, dequeue <span class=\"quiz-math\">O(n)</span>",
+        "both <span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>pop()</code> at the end moves nothing, but <code>insert_at(0, x)</code> shifts everything. With a plain array, whichever end is the front, one operation is <span class=\"quiz-math\">O(n)</span>.</p>"
+    },
+    {
+      "id": "W7-M05",
+      "level": "how",
+      "stem": "<p>A <code>CircularQueue</code> with capacity 8 has head = 6 and size = 3. The next <code>enqueue</code> writes to slot:</p>",
+      "options": [
+        "9",
+        "0",
+        "1",
+        "7"
+      ],
+      "answer": 2,
+      "explanation": "<p>(6 + 3) % 8 = 9 % 8 = 1. Slot 9 (a) does not exist; the items are in slots 6, 7 and 0.</p>"
+    },
+    {
+      "id": "W7-M06",
+      "level": "how",
+      "stem": "<p>A <code>CircularQueue</code> with capacity 5 has head = 4 and size = 2. After one <code>dequeue</code>, head is:</p>",
+      "options": [
+        "5",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 3,
+      "explanation": "<p>(4 + 1) % 5 = 0: the head wraps. Slot 5 (a) is past the end of the <code>Array</code>.</p>"
+    },
+    {
+      "id": "W7-M07",
+      "level": "what",
+      "stem": "<p>A ring buffer that stores only <code>head</code> and <code>tail</code> (no size) finds <code>head == tail</code>. The queue is:</p>",
+      "options": [
+        "full",
+        "empty",
+        "either full or empty — it cannot tell which",
+        "corrupted"
+      ],
+      "answer": 2,
+      "explanation": "<p>Empty: nothing between head and tail. Full: the tail has come all the way round to the head. Both look the same.</p>"
+    },
+    {
+      "id": "W7-M08",
+      "level": "why",
+      "stem": "<p><code>CircularQueue</code> keeps a <code>_size</code> field because:</p>",
+      "options": [
+        "it tells a full ring from an empty one, which look the same by head and tail",
+        "<code>len</code> would otherwise be <span class=\"quiz-math\">O(n)</span> with no other benefit",
+        "the <code>Array</code> does not know its own length",
+        "Python requires it for <code>__iter__</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>With the size, empty is <code>size == 0</code> and full is <code>size == capacity</code>. The <code>Array</code> does know its length (c): <code>len(block)</code>.</p>"
+    },
+    {
+      "id": "W7-M09",
+      "level": "how",
+      "stem": "<p>A full ring of capacity 4 holds <code>[E, F, C, D]</code> with head = 2. It grows to capacity 8 by copying <code>new[i] = old[i]</code> and keeping head = 2. Read front to back, the queue is now:</p>",
+      "options": [
+        "C D E F",
+        "C D None None",
+        "E F C D",
+        "D C F E"
+      ],
+      "answer": 1,
+      "explanation": "<p>Slots 2 and 3 of the new block hold C and D, slots 4 and 5 are empty, and E and F sit in slots 0 and 1 — behind the front. The correct copy gives (a) with head = 0.</p>"
+    },
+    {
+      "id": "W7-M10",
+      "level": "what",
+      "stem": "<p>A queue on a singly linked list with <code>head</code> and <code>tail</code> references should put the front of the queue at:</p>",
+      "options": [
+        "the tail",
+        "the middle node",
+        "either end — it makes no difference",
+        "the head"
+      ],
+      "answer": 3,
+      "explanation": "<p>Dequeue at the head (<code>pop_front</code>, <span class=\"quiz-math\">O(1)</span>), enqueue after the tail (<span class=\"quiz-math\">O(1)</span>).</p>"
+    },
+    {
+      "id": "W7-M11",
+      "level": "why",
+      "stem": "<p>Why not dequeue at the <strong>tail</strong> of a singly linked list?</p>",
+      "options": [
+        "Removing the last node needs the node before it, which takes an <span class=\"quiz-math\">O(n)</span> walk",
+        "The tail node has no value",
+        "It would make the queue LIFO",
+        "Python forbids it"
+      ],
+      "answer": 0,
+      "explanation": "<p>The new tail is the node before the old one, and a singly linked list can only find it by walking from the head.</p>"
+    },
+    {
+      "id": "W7-M12",
+      "level": "how",
+      "stem": "<p>A queue built from two stacks (<code>inbox</code> and <code>outbox</code>, pouring only when <code>outbox</code> is empty): <code>enqueue(1)</code>, <code>enqueue(2)</code>, <code>enqueue(3)</code>, <code>dequeue()</code>. How many items are now in <code>outbox</code>?</p>",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 2,
+      "explanation": "<p>The first dequeue finds <code>outbox</code> empty and pours all three: <code>outbox</code> holds 3, 2, 1 (1 on top). It pops 1, leaving 2 and 3.</p>"
+    },
+    {
+      "id": "W7-M13",
+      "level": "why",
+      "stem": "<p>The cost of <code>dequeue</code> on that two-stack queue is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span> on average",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(1)</span> in the worst case",
+        "amortised <span class=\"quiz-math\">O(1)</span> — each item is poured from <code>inbox</code> to <code>outbox</code> at most once"
+      ],
+      "answer": 3,
+      "explanation": "<p>One dequeue can pour n items, so the worst case (c) is <span class=\"quiz-math\">O(n)</span>, but each item is pushed, poured and popped once in its life.</p>"
+    },
+    {
+      "id": "W7-M14",
+      "level": "what",
+      "stem": "<p>Which of these needs a <strong>queue</strong>?</p>",
+      "options": [
+        "checking balanced brackets",
+        "undo in an editor",
+        "breadth-first search of a graph",
+        "evaluating a postfix expression"
+      ],
+      "answer": 2,
+      "explanation": "<p>BFS visits nodes in the order they were discovered: FIFO. The other three are stack applications from Week 6.</p>"
+    },
+    {
+      "id": "W7-M15",
+      "level": "how",
+      "stem": "<p>n enqueues followed by n dequeues on a <code>SlowQueue</code> cost in total:</p>",
+      "options": [
+        "<span class=\"quiz-math\">Θ(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">Θ(n)</span>",
+        "<span class=\"quiz-math\">Θ(n log n)</span>",
+        "<span class=\"quiz-math\">Θ(1)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Dequeue number i shifts n − i elements: <span class=\"quiz-math\">(n-1) + (n-2) + … + 0 = n(n-1)/2</span>.</p>"
+    },
+    {
+      "id": "W7-M16",
+      "level": "how",
+      "stem": "<p>In Python, <code>(0 - 1) % 8</code> is:</p>",
+      "options": [
+        "−1",
+        "7",
+        "0",
+        "an error"
+      ],
+      "answer": 1,
+      "explanation": "<p>Python's <code>%</code> takes the sign of the divisor, so the result is in 0..7: stepping back from slot 0 wraps to slot 7. In C or Java the answer would be −1 (a).</p>"
+    },
+    {
+      "id": "W7-M17",
+      "level": "what",
+      "stem": "<p>A <strong>deque</strong> is a structure that:</p>",
+      "options": [
+        "serves the most urgent item first",
+        "can only be used as a stack",
+        "removes items in sorted order",
+        "adds and removes at both ends"
+      ],
+      "answer": 3,
+      "explanation": "<p>A double-ended queue. (a) is a priority queue.</p>"
+    },
+    {
+      "id": "W7-M18",
+      "level": "why",
+      "stem": "<p>Measured, a ring-buffer dequeue and a linked-queue dequeue are both flat lines as n grows, but the ring is about five times slower. The reason:</p>",
+      "options": [
+        "a constant factor: the <code>%</code> and the bounds-checked <code>Array</code> access on every operation",
+        "the ring is really <span class=\"quiz-math\">O(log n)</span>",
+        "the ring copies the queue on every dequeue",
+        "the linked queue is <span class=\"quiz-math\">O(1)</span> and the ring is <span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Both are <span class=\"quiz-math\">O(1)</span>; the ring pays more per operation. Big-O hides constant factors, and measurement shows them.</p>"
+    },
+    {
+      "id": "W7-M19",
+      "level": "how",
+      "stem": "<p>Five people A, B, C, D, E stand in a circle; counting from A, every <strong>second</strong> person leaves. Who is left last?</p>",
+      "options": [
+        "A",
+        "E",
+        "C",
+        "D"
+      ],
+      "answer": 2,
+      "explanation": "<p>B, D, A and E leave in that order (W7-C2); C is last.</p>"
+    },
+    {
+      "id": "W7-M20",
+      "level": "how",
+      "stem": "<p>An array queue with a head index but <strong>no</strong> wrap-around, 8 slots: 8 enqueues, then 5 dequeues. How many more enqueues fit without growing the block?</p>",
+      "options": [
+        "5",
+        "0",
+        "3",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "<p>Tail = 8: there is no slot 8, even though slots 0 to 4 are dead and free. That is why the queue must wrap.</p>"
+    },
+    {
+      "id": "W7-M21",
+      "level": "why",
+      "stem": "<p>A <code>CircularQueue</code> that doubles its capacity when full has an enqueue cost of:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span> every time",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(1)</span> in the worst case",
+        "amortised <span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>The occasional copy is <span class=\"quiz-math\">O(n)</span>, but doubling makes the copies total less than 2n over n enqueues — Lecture 04's argument.</p>"
+    },
+    {
+      "id": "W7-M22",
+      "level": "what",
+      "stem": "<p>A <strong>priority queue</strong> (Week 12) differs from a queue because it dequeues:</p>",
+      "options": [
+        "the most urgent item, not the oldest",
+        "the newest item",
+        "a random item",
+        "from both ends"
+      ],
+      "answer": 0,
+      "explanation": "<p>Same two operations, a different rule — and a different structure underneath, the heap.</p>"
+    }
+  ]
+}

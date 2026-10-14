@@ -1,0 +1,292 @@
+{
+  "week": 11,
+  "title": "Trees (Lecture 11)",
+  "questions": [
+    {
+      "id": "W11-M01",
+      "level": "what",
+      "stem": "<p>A <strong>leaf</strong> is a node that:</p>",
+      "options": [
+        "has no parent",
+        "has no children",
+        "has exactly one child",
+        "is at depth 1"
+      ],
+      "answer": 1,
+      "explanation": "<p>No children. (a) is the root; a node with one child (c) is internal.</p>"
+    },
+    {
+      "id": "W11-M02",
+      "level": "what",
+      "stem": "<p>With height counted in edges, the height of a tree with exactly one node is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">-1</span>",
+        "1",
+        "0",
+        "undefined"
+      ],
+      "answer": 2,
+      "explanation": "<p>Height counts edges, and a single node has none. <span class=\"quiz-math\">-1</span> (a) is the <strong>empty</strong> tree, which makes <span class=\"quiz-math\">1 + max(-1, -1) = 0</span> work for a leaf.</p>"
+    },
+    {
+      "id": "W11-M03",
+      "level": "how",
+      "stem": "<p>The largest number of nodes a binary tree of height 3 can hold is:</p>",
+      "options": [
+        "7",
+        "8",
+        "16",
+        "15"
+      ],
+      "answer": 3,
+      "explanation": "<p>Levels 0 to 3 hold at most 1 + 2 + 4 + 8 = 15 = <span class=\"quiz-math\">2<sup>h+1</sup> - 1</span>. 7 (a) is height 2; 8 (b) is the size of level 3 alone.</p>"
+    },
+    {
+      "id": "W11-M04",
+      "level": "how",
+      "stem": "<p>The smallest possible height of a binary tree with 100 nodes is:</p>",
+      "options": [
+        "6",
+        "7",
+        "10",
+        "99"
+      ],
+      "answer": 0,
+      "explanation": "<p><span class=\"quiz-math\">⌊ log<sub>2</sub> 100 ⌋ = 6</span>: height 6 holds up to 127 nodes, height 5 only 63. 99 (d) is the <strong>tallest</strong> possible height, a chain.</p>"
+    },
+    {
+      "id": "W11-M05",
+      "level": "what",
+      "stem": "<p>A binary tree is a binary <strong>search</strong> tree when, for every node x:</p>",
+      "options": [
+        "x's left child is smaller than x and its right child is larger",
+        "every value in x's left subtree is smaller than x, and every value in its right subtree is larger",
+        "x is smaller than both of its children",
+        "the values read level by level are sorted"
+      ],
+      "answer": 1,
+      "explanation": "<p>The property is about whole subtrees. (a) is the weaker parent–child check, which W11-M20 shows is not enough; (c) is the heap property of Week 12.</p>"
+    },
+    {
+      "id": "W11-M06",
+      "level": "how",
+      "stem": "<p>In the tree Q, the <strong>right child of the root's left child</strong> is:</p>",
+      "options": [
+        "20",
+        "25",
+        "17",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "<p>The root is 30, its left child 15; 20 &gt; 15 went right. 17 and 25 are 20's children; 8 is 15's left child.</p>"
+    },
+    {
+      "id": "W11-M07",
+      "level": "how",
+      "stem": "<p><code>contains(25)</code> on Q compares 25 with how many nodes?</p>",
+      "options": [
+        "3",
+        "5",
+        "4",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "<p>30 (go left), 15 (go right), 20 (go right), 25 (found).</p>"
+    },
+    {
+      "id": "W11-M08",
+      "level": "why",
+      "stem": "<p>The worst-case cost of <code>contains</code> on a BST of n nodes, built by <code>dsa/tree.py</code> from values in an unknown order, is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>The cost is <span class=\"quiz-math\">O(h)</span>, and nothing in <code>dsa/tree.py</code> keeps h small: sorted input makes h = <span class=\"quiz-math\">n - 1</span>. <span class=\"quiz-math\">O(log n)</span> (b) is true only while the tree stays short — on average for random input, or always for a balanced tree.</p>"
+    },
+    {
+      "id": "W11-M09",
+      "level": "how",
+      "stem": "<p>Which insertion order of 1 to 7 builds the <strong>tallest</strong> BST?</p>",
+      "options": [
+        "4, 2, 6, 1, 3, 5, 7",
+        "4, 6, 5, 7, 2, 3, 1",
+        "3, 1, 2, 6, 5, 7, 4",
+        "7, 1, 6, 2, 5, 3, 4"
+      ],
+      "answer": 3,
+      "explanation": "<p>7 first, then 1, then each value between the last two: every node gets one child, a zigzag chain of height 6. (a) and (b) build the perfect tree of height 2 (W11-S2); (c) has height 3.</p>"
+    },
+    {
+      "id": "W11-M10",
+      "level": "how",
+      "stem": "<p>The <strong>pre-order</strong> walk of Q is:</p>",
+      "options": [
+        "8, 15, 17, 20, 25, 30, 40, 45, 50, 60",
+        "30, 15, 8, 20, 17, 25, 45, 40, 60, 50",
+        "30, 15, 45, 8, 20, 40, 60, 17, 25, 50",
+        "8, 17, 25, 20, 15, 40, 50, 60, 45, 30"
+      ],
+      "answer": 1,
+      "explanation": "<p>Node, then the whole left subtree, then the right. (a) is in-order, (c) level-order, (d) post-order.</p>"
+    },
+    {
+      "id": "W11-M11",
+      "level": "how",
+      "stem": "<p>The <strong>post-order</strong> walk of Q is:</p>",
+      "options": [
+        "8, 17, 25, 20, 15, 40, 50, 60, 45, 30",
+        "8, 15, 17, 20, 25, 30, 40, 45, 50, 60",
+        "30, 45, 60, 50, 40, 15, 20, 25, 17, 8",
+        "17, 25, 8, 20, 15, 50, 40, 60, 45, 30"
+      ],
+      "answer": 0,
+      "explanation": "<p>Both subtrees before the node, so the root 30 is last. (c) is not any of the walks; (d) visits 8 after 17 and 25, which are in a different subtree.</p>"
+    },
+    {
+      "id": "W11-M12",
+      "level": "what",
+      "stem": "<p>Which walk of <strong>any</strong> BST lists its values in increasing order?</p>",
+      "options": [
+        "pre-order",
+        "post-order",
+        "in-order",
+        "level-order"
+      ],
+      "answer": 2,
+      "explanation": "<p>Left subtree (all smaller), node, right subtree (all larger): sorted, for every BST.</p>"
+    },
+    {
+      "id": "W11-M13",
+      "level": "why",
+      "stem": "<p>You save a BST to a file as a list of values, and later rebuild it by inserting the list into an empty tree. To get back <strong>the same shape</strong>, the list should be the tree's:</p>",
+      "options": [
+        "in-order walk",
+        "pre-order walk",
+        "post-order walk",
+        "in-order walk, reversed"
+      ],
+      "answer": 1,
+      "explanation": "<p>Pre-order lists every node before its descendants, so re-inserting it sends each value down the same path to the same place. The in-order walk (a) is sorted and rebuilds a <strong>chain</strong>; post-order (c) inserts leaves first, so the first value inserted — a leaf — becomes the root.</p>"
+    },
+    {
+      "id": "W11-M14",
+      "level": "why",
+      "stem": "<p>Which walk frees a tree safely in a language where you release memory yourself, and evaluates an expression tree?</p>",
+      "options": [
+        "post-order",
+        "pre-order",
+        "in-order",
+        "level-order"
+      ],
+      "answer": 0,
+      "explanation": "<p>Post-order finishes a node's children before the node: free the children while you still hold the links to them, and apply an operator only after both operands have values.</p>"
+    },
+    {
+      "id": "W11-M15",
+      "level": "why",
+      "stem": "<p><code>level_order</code> uses a queue rather than the call stack because:</p>",
+      "options": [
+        "a queue uses less memory than recursion",
+        "it must visit nodes in order of distance from the root, and the call stack always goes deeper into the most recent node first",
+        "recursion cannot visit every node of a tree",
+        "the tree stores its nodes in a queue"
+      ],
+      "answer": 1,
+      "explanation": "<p>Recursion is last in, first out: it finishes the most recent node's subtree before returning. Level-order needs first in, first out — the nodes in the order they were discovered. Memory (a) is not the reason; the queue can be larger than the stack (W11-K3).</p>"
+    },
+    {
+      "id": "W11-M16",
+      "level": "how",
+      "stem": "<p>During <code>level_order</code> on Q, the largest number of nodes waiting in the queue at one time is:</p>",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "<p>After dequeuing 45, and again after dequeuing 20, four nodes wait: 8, 20, 40, 60 and then 40, 60, 17, 25 (W11-S3).</p>"
+    },
+    {
+      "id": "W11-M17",
+      "level": "what",
+      "stem": "<p>Deleting a node with <strong>two</strong> children, <code>dsa/tree.py</code> replaces its value with:</p>",
+      "options": [
+        "the largest value in its right subtree",
+        "the value of its right child",
+        "the value of its parent",
+        "the smallest value in its right subtree"
+      ],
+      "answer": 3,
+      "explanation": "<p>The in-order successor. The largest value of the right subtree (a) is too large: everything else in that subtree is smaller than it, yet would sit on its right.</p>"
+    },
+    {
+      "id": "W11-M18",
+      "level": "how",
+      "stem": "<p><code>delete(30)</code> on Q. Which value ends up at the root?</p>",
+      "options": [
+        "40",
+        "25",
+        "45",
+        "17"
+      ],
+      "answer": 0,
+      "explanation": "<p>Right once to 45, then left to 40, which has no left child: 40 is the successor and goes to the root. 25 (b) is the <strong>predecessor</strong> — also a correct choice in general, but not <code>dsa/tree.py</code>'s.</p>"
+    },
+    {
+      "id": "W11-M19",
+      "level": "why",
+      "stem": "<p>The in-order successor of a node with two children never has a left child. Why does that matter to <code>delete</code>?</p>",
+      "options": [
+        "it makes the successor the largest value in the tree",
+        "removing the successor is then always a leaf or one-child case, never a second two-children case",
+        "it means the successor is always a leaf",
+        "it lets <code>delete</code> skip the search"
+      ],
+      "answer": 1,
+      "explanation": "<p>With no left child, the successor is a leaf or has one (right) child, so it is removed by the easy rule. It need not be a leaf (c): in Lecture 11's second example the successor 10 has a right child, 14.</p>"
+    },
+    {
+      "id": "W11-M20",
+      "level": "why",
+      "stem": "<p>A student's <code>is_valid</code> checks, at every node, only that the left child is smaller and the right child larger. It:</p>",
+      "options": [
+        "accepts some trees that are not BSTs",
+        "rejects some valid BSTs",
+        "is correct, but <span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "is correct and <span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>It accepts the lecture's tree 8 <span class=\"quiz-math\">→</span> 3 <span class=\"quiz-math\">→</span> 9, where 9 is a right child of 3 but sits in 8's left subtree. It never rejects a valid BST, and it is <span class=\"quiz-math\">O(n)</span> — but wrong.</p>"
+    },
+    {
+      "id": "W11-M21",
+      "level": "how",
+      "stem": "<p>The expression tree for <code>(2 + 3) * 4</code> is walked in post-order. The result is:</p>",
+      "options": [
+        "<code>* + 2 3 4</code>",
+        "<code>2 + 3 * 4</code>",
+        "<code>2 3 + 4 *</code>",
+        "<code>2 3 4 + *</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Left operand, right operand, operator: <code>2 3 + 4 *</code>, the postfix form of Lecture 06. (a) is pre-order; (b) is in-order, which has lost the brackets and means 14, not 20.</p>"
+    },
+    {
+      "id": "W11-M22",
+      "level": "what",
+      "stem": "<p>AVL trees and red-black trees:</p>",
+      "options": [
+        "are the BSTs of <code>dsa/tree.py</code>, under other names",
+        "store their nodes in an array, like a heap",
+        "are faster than hash tables for every operation",
+        "re-shape themselves on insert and delete so that the height stays <span class=\"quiz-math\">O(log n)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Both keep extra data in each node — a height or a colour — and rotate nodes after changes so that the height stays <span class=\"quiz-math\">O(log n)</span>. They are beyond the bylaw (named, not examined); <code>dsa/tree.py</code> is <strong>unbalanced</strong> (a).</p>"
+    }
+  ]
+}

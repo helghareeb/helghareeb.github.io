@@ -11,6 +11,7 @@ type Course = {
   materialLabel: string;
   materialHref: string;
   repoHref: string;
+  links?: Array<{ label: string; href: string }>;
 };
 
 const courses: Course[] = [
@@ -22,6 +23,10 @@ const courses: Course[] = [
     materialLabel: 'Course book',
     materialHref: getEntryPath('books', 'en', 'data-structures-and-algorithms-dsa27-book-en'),
     repoHref: 'https://github.com/helghareeb/DSA27',
+    links: [
+      { label: 'Quizzes', href: '/en/quizzes/' },
+      { label: 'Recorded lectures (2019/2020)', href: '/en/videos/dsa20/' },
+    ],
   },
   {
     name: 'Introduction to Information Systems',
@@ -135,6 +140,7 @@ const seoDescription = buildSeoDescription(
             <div class="hero__actions">
               <a class="button-secondary" href={course.materialHref}>{course.materialLabel}</a>
               <a class="button-secondary" href={course.repoHref}>GitHub repository</a>
+              {course.links?.map((link) => <a class="button-secondary" href={link.href}>{link.label}</a>)}
             </div>
           </article>
         ))}

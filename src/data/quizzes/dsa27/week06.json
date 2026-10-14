@@ -1,0 +1,292 @@
+{
+  "week": 6,
+  "title": "Stacks (Lecture 06)",
+  "questions": [
+    {
+      "id": "W6-M01",
+      "level": "what",
+      "stem": "<p>\"LIFO\" means:</p>",
+      "options": [
+        "the last item pushed is the first one popped",
+        "the first item pushed is the first one popped",
+        "items are popped in sorted order",
+        "any item can be popped"
+      ],
+      "answer": 0,
+      "explanation": "<p>First in, first out (b) is a queue — Week 7.</p>"
+    },
+    {
+      "id": "W6-M02",
+      "level": "how",
+      "stem": "<p><code>push(1)</code>, <code>push(2)</code>, <code>push(3)</code>, <code>pop()</code>, <code>push(4)</code>, <code>pop()</code>. What does the <strong>next</strong> <code>pop()</code> return?</p>",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "answer": 2,
+      "explanation": "<p>The stack goes [1, 2, 3] → pop 3 → [1, 2] → push 4 → [1, 2, 4] → pop 4 → [1, 2]; the next pop returns 2.</p>"
+    },
+    {
+      "id": "W6-M03",
+      "level": "why",
+      "stem": "<p>A stack built on a dynamic array should keep its top at:</p>",
+      "options": [
+        "index 0",
+        "the end — the last used slot",
+        "the middle",
+        "it makes no difference"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>append</code> and <code>pop()</code> at the end move nothing. Index 0 (a) shifts everything on every operation.</p>"
+    },
+    {
+      "id": "W6-M04",
+      "level": "why",
+      "stem": "<p>A stack built on a singly linked list should keep its top at:</p>",
+      "options": [
+        "the last node",
+        "the middle node",
+        "a separate array",
+        "the head"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>push_front</code> and <code>pop_front</code> are <span class=\"quiz-math\">O(1)</span>. At the last node (a), popping would need the node before it — an <span class=\"quiz-math\">O(n)</span> walk.</p>"
+    },
+    {
+      "id": "W6-M05",
+      "level": "what",
+      "stem": "<p><code>Stack().pop()</code> on an empty stack:</p>",
+      "options": [
+        "raises <code>IndexError</code>",
+        "returns <code>None</code>",
+        "returns 0",
+        "blocks until something is pushed"
+      ],
+      "answer": 0,
+      "explanation": "<p>The contract says <code>IndexError</code>, as <code>list.pop()</code> does. Returning <code>None</code> (b) lets an error travel silently.</p>"
+    },
+    {
+      "id": "W6-M06",
+      "level": "why",
+      "stem": "<p>A stack on an array with its top at <strong>index 0</strong>. <code>push</code> costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "amortised <span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(n)</span> — every element shifts",
+        "<span class=\"quiz-math\">O(log n)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Inserting at index 0 of an array shifts every element — the \"dishonest\" design that still passes every test.</p>"
+    },
+    {
+      "id": "W6-M07",
+      "level": "how",
+      "stem": "<p>Why is <code>\"([)]\"</code> not balanced?</p>",
+      "options": [
+        "It has an odd number of brackets",
+        "<code>)</code> arrives when the most recent opener is <code>[</code>",
+        "The stack is not empty at the end",
+        "A closer arrives when the stack is empty"
+      ],
+      "answer": 1,
+      "explanation": "<p>The partner check fails. The count is even (a), and the stack is not empty at that point (d).</p>"
+    },
+    {
+      "id": "W6-M08",
+      "level": "how",
+      "stem": "<p>Which check makes <code>is_balanced(\")\")</code> return <code>False</code>?</p>",
+      "options": [
+        "the partner check",
+        "the empty-at-the-end check",
+        "a length check",
+        "a closer arrives when the stack is empty"
+      ],
+      "answer": 3,
+      "explanation": "<p>The closer finds nothing to match. The partner check (a) cannot even run.</p>"
+    },
+    {
+      "id": "W6-M09",
+      "level": "how",
+      "stem": "<p>The postfix form of <code>3 + 4 * 2</code> is:</p>",
+      "options": [
+        "<code>3 4 2 * +</code>",
+        "<code>3 4 + 2 *</code>",
+        "<code>+ 3 * 4 2</code>",
+        "<code>3 + 4 2 *</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>*</code> binds tighter, so <code>4 2 *</code> is computed first, then added to 3.</p>"
+    },
+    {
+      "id": "W6-M10",
+      "level": "how",
+      "stem": "<p>The postfix form of <code>( 3 + 4 ) * 2</code> is:</p>",
+      "options": [
+        "<code>3 4 2 * +</code>",
+        "<code>3 + 4 * 2</code>",
+        "<code>3 4 + 2 *</code>",
+        "<code>* + 3 4 2</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>The parentheses group <code>3 4 +</code> first; the result is then multiplied by 2.</p>"
+    },
+    {
+      "id": "W6-M11",
+      "level": "how",
+      "stem": "<p>Evaluating the postfix <code>8 3 -</code> gives:</p>",
+      "options": [
+        "−5",
+        "5",
+        "11",
+        "an error"
+      ],
+      "answer": 1,
+      "explanation": "<p>The first value popped (3) is the <strong>right</strong> operand, the second (8) the <strong>left</strong>: 8 − 3.</p>"
+    },
+    {
+      "id": "W6-M12",
+      "level": "how",
+      "stem": "<p>Evaluating the postfix <code>2 3 4 * +</code> gives:</p>",
+      "options": [
+        "20",
+        "9",
+        "24",
+        "14"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>3 4 *</code> is 12, then <code>2 12 +</code> is 14.</p>"
+    },
+    {
+      "id": "W6-M13",
+      "level": "what",
+      "stem": "<p>In the shunting-yard algorithm, when an operator arrives, it first pops to the output every stacked operator with:</p>",
+      "options": [
+        "higher or equal precedence",
+        "lower precedence",
+        "any precedence",
+        "strictly higher precedence only"
+      ],
+      "answer": 0,
+      "explanation": "<p>Higher <strong>or equal</strong>. Strictly higher (d) is the rule for right-associative operators such as <code>**</code>.</p>"
+    },
+    {
+      "id": "W6-M14",
+      "level": "why",
+      "stem": "<p>Why does an operator of <strong>equal</strong> precedence also leave the stack?</p>",
+      "options": [
+        "It is faster",
+        "To keep the stack small",
+        "So that <code>-</code> and <code>/</code> are left associative: <code>8 - 3 - 2</code> is <code>(8 - 3) - 2</code>",
+        "It makes no difference to the result"
+      ],
+      "answer": 2,
+      "explanation": "<p>Popping the earlier <code>-</code> before pushing the later one computes the left subtraction first.</p>"
+    },
+    {
+      "id": "W6-M15",
+      "level": "how",
+      "stem": "<p>The postfix form of <code>8 - 3 - 2</code> is:</p>",
+      "options": [
+        "<code>8 3 2 - -</code>",
+        "<code>8 3 - 2 -</code>",
+        "<code>- - 8 3 2</code>",
+        "<code>8 - 3 2 -</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Left associative: <code>(8 - 3) - 2</code>. <code>8 3 2 - -</code> (a) is <code>8 - (3 - 2)</code>, which is 7, not 3.</p>"
+    },
+    {
+      "id": "W6-M16",
+      "level": "how",
+      "stem": "<p>The worst-case extra space of <code>is_balanced</code> on a text of length n is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>A text of n openers, <code>((((…</code>, pushes all n.</p>"
+    },
+    {
+      "id": "W6-M17",
+      "level": "why",
+      "stem": "<p>To turn a recursive algorithm into a loop, in general you need:</p>",
+      "options": [
+        "an explicit stack",
+        "a queue",
+        "a sorted array",
+        "nothing — every recursion is already a loop"
+      ],
+      "answer": 0,
+      "explanation": "<p>The call stack does the bookkeeping for a recursion; without it, you keep that stack yourself.</p>"
+    },
+    {
+      "id": "W6-M18",
+      "level": "what",
+      "stem": "<p>In an undo/redo system with two stacks, what happens to the redo stack when the user performs a <strong>new</strong> action?</p>",
+      "options": [
+        "the new action is pushed on it",
+        "it is cleared",
+        "its top is undone",
+        "nothing"
+      ],
+      "answer": 1,
+      "explanation": "<p>Redo only makes sense for actions just undone; a new action starts a new history.</p>"
+    },
+    {
+      "id": "W6-M19",
+      "level": "how",
+      "stem": "<p>n pushes onto the <code>Stack</code> of <code>dsa/stack.py</code> (built on a <code>DynamicArray</code>) cost in total:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span> — amortised <span class=\"quiz-math\">O(1)</span> each",
+        "<span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Each push is an append to the <code>DynamicArray</code>: amortised <span class=\"quiz-math\">O(1)</span>.</p>"
+    },
+    {
+      "id": "W6-M20",
+      "level": "what",
+      "stem": "<p>Which of these is <strong>not</strong> a natural stack application?</p>",
+      "options": [
+        "checking balanced brackets",
+        "evaluating postfix expressions",
+        "undo in an editor",
+        "serving customers in the order they arrived"
+      ],
+      "answer": 3,
+      "explanation": "<p>First come, first served is FIFO — a queue.</p>"
+    },
+    {
+      "id": "W6-M21",
+      "level": "how",
+      "stem": "<p>While <code>is_balanced(\"(((())))\")</code> runs, the largest number of items on the stack at once is:</p>",
+      "options": [
+        "4",
+        "8",
+        "1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "<p>Four openers in a row, then four closers.</p>"
+    },
+    {
+      "id": "W6-M22",
+      "level": "what",
+      "stem": "<p><code>peek()</code> differs from <code>pop()</code> in that it:</p>",
+      "options": [
+        "is slower",
+        "returns the top without removing it",
+        "returns the bottom",
+        "never raises an error"
+      ],
+      "answer": 1,
+      "explanation": "<p>And, like <code>pop</code>, it raises <code>IndexError</code> on an empty stack — so (d) is wrong.</p>"
+    }
+  ]
+}

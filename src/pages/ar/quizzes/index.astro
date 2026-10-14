@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { DSA27_REPO, dsa27Weeks, getDsa27WeekPath, quizLabels } from '../../../utils/quizzes';
+
+const t = quizLabels.ar;
+const total = dsa27Weeks.reduce((sum, week) => sum + week.questions.length, 0);
+const seoTitle = buildSeoTitle('الاختبارات القصيرة', { lang: 'ar', section: 'د. هيثم الغريب' });
+const seoDescription = buildSeoDescription(
+  `اختبارات اختيار من متعدد للتدريب الذاتي في مقرر هياكل البيانات والخوارزميات (DSA27): ${dsa27Weeks.length} أسبوعًا و${total} سؤالًا، مع شرح كل إجابة.`,
+  [],
+);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">الاختبارات القصيرة</p>
+      <h1 class="hero__title">الاختبارات القصيرة</h1>
+      <p class="hero__lead">
+        اختبارات للتدريب الذاتي في المقررات التي أدرّسها. اختر إجابة فتعرف في الحال أصحيحة هي أم لا،
+        ولماذا كان كل خيار خاطئ خاطئًا. {t.practiceNote}
+      </p>
+      <div class="hero__actions">
+        <a class="button-secondary" href="/ar/videos/">المرئيات</a>
+        <a class="button-secondary" href="/ar/teaching/">التدريس</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">{dsa27Weeks.length} أسبوعًا · {total} سؤالًا</p>
+        <h2 class="section-title">{t.course}</h2>
+      </div>
+      <p>
+        اختبار لكل أسبوع من أسابيع المحاضرات، مأخوذ من قسم الاختيار من متعدد في بنك أسئلة المقرر.
+        والكتاب والمعامل والشيفرة في <a href={DSA27_REPO}>مستودع المقرر</a>.
+      </p>
+      <div class="grid-three">
+        {dsa27Weeks.map((week) => (
+          <a class="card-link" href={getDsa27WeekPath('ar', week.week)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{t.week(week.week)} · {t.questions(week.questions.length)}</p>
+              <h3 dir="ltr" lang="en">{week.title}</h3>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

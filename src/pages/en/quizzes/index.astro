@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { DSA27_REPO, dsa27Weeks, getDsa27WeekPath, quizLabels } from '../../../utils/quizzes';
+
+const t = quizLabels.en;
+const total = dsa27Weeks.reduce((sum, week) => sum + week.questions.length, 0);
+const seoTitle = buildSeoTitle('Quizzes', { lang: 'en', section: 'Dr. Haitham A. El-Ghareeb' });
+const seoDescription = buildSeoDescription(
+  `Self-check multiple-choice quizzes for the Data Structures and Algorithms course (DSA27): ${dsa27Weeks.length} weeks, ${total} questions, each answer explained.`,
+  [],
+);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">Quizzes</p>
+      <h1 class="hero__title">Quizzes</h1>
+      <p class="hero__lead">
+        Self-check quizzes on the courses I teach. Pick an answer and you see at once whether it is
+        right, and why each wrong option is wrong. {t.practiceNote}
+      </p>
+      <div class="hero__actions">
+        <a class="button-secondary" href="/en/videos/">Videos</a>
+        <a class="button-secondary" href="/en/teaching/">Teaching</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <div class="section-heading">
+        <p class="section-kicker">{dsa27Weeks.length} weeks · {total} questions</p>
+        <h2 class="section-title">{t.course}</h2>
+      </div>
+      <p>
+        One quiz for each lecture week, from the multiple-choice part of the course question bank.
+        The book, labs and code are in the <a href={DSA27_REPO}>course repository</a>.
+      </p>
+      <div class="grid-three">
+        {dsa27Weeks.map((week) => (
+          <a class="card-link" href={getDsa27WeekPath('en', week.week)}>
+            <article class="content-card entity-card">
+              <p class="content-card__meta">{t.week(week.week)} · {t.questions(week.questions.length)}</p>
+              <h3>{week.title}</h3>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

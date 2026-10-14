@@ -1,0 +1,292 @@
+{
+  "week": 4,
+  "title": "Dynamic arrays and amortised analysis (Lecture 04)",
+  "questions": [
+    {
+      "id": "W4-M01",
+      "level": "what",
+      "stem": "<p>For a <code>DynamicArray</code>, <code>len(a)</code> returns:</p>",
+      "options": [
+        "the size — the number of elements stored",
+        "the capacity of the <code>Array</code> underneath",
+        "capacity minus size",
+        "the number of resizes so far"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>len</code> is the number of elements the user stored. The capacity (b) is internal; showing it would expose the implementation.</p>"
+    },
+    {
+      "id": "W4-M02",
+      "level": "how",
+      "stem": "<p>With doubling, what is the capacity after 5 appends?</p>",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "<p>Capacity 1 → 2 (2nd append) → 4 (3rd) → 8 (5th).</p>"
+    },
+    {
+      "id": "W4-M03",
+      "level": "how",
+      "stem": "<p>With doubling, how many resizes do 1,000 appends cause?</p>",
+      "options": [
+        "9",
+        "10",
+        "500",
+        "999"
+      ],
+      "answer": 1,
+      "explanation": "<p>Resizes happen when the size reaches 1, 2, 4, …, 512 — ten powers of two below 1,000 — so exactly 10 (<span class=\"quiz-math\">2<sup>10</sup> = 1024</span>). 999 (d) is growing by one.</p>"
+    },
+    {
+      "id": "W4-M04",
+      "level": "how",
+      "stem": "<p>If the capacity grows by <strong>one</strong> slot at every resize, the total number of copies for n appends is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">Θ(n)</span>",
+        "<span class=\"quiz-math\">Θ(log n)</span>",
+        "<span class=\"quiz-math\">Θ(n log n)</span>",
+        "<span class=\"quiz-math\">Θ(n<sup>2</sup>)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Every append copies everything already there: <span class=\"quiz-math\">0 + 1 + … + (n-1) = n(n-1)/2</span>.</p>"
+    },
+    {
+      "id": "W4-M05",
+      "level": "why",
+      "stem": "<p>If the capacity grows by a constant <strong>100</strong> slots at every resize, the amortised cost of <code>append</code> is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span> — the constant only divides the copying by 100",
+        "<span class=\"quiz-math\">O(1)</span> — 100 is large enough",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(100)</span>, which is <span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Copies are 100, 200, 300, …: about <span class=\"quiz-math\">n<sup>2</sup>/200</span> in total — still quadratic, so <span class=\"quiz-math\">O(n)</span> per append on average. A constant step only changes the constant. (d) confuses the step size with the cost.</p>"
+    },
+    {
+      "id": "W4-M06",
+      "level": "what",
+      "stem": "<p>With doubling, the amortised cost of <code>append</code> is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Fewer than 3n units of work for n appends: under 3 each.</p>"
+    },
+    {
+      "id": "W4-M07",
+      "level": "why",
+      "stem": "<p>With doubling, the <strong>worst-case</strong> cost of a single <code>append</code> is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>The append that finds the array full copies all n elements. The amortised bound does not change that single worst case.</p>"
+    },
+    {
+      "id": "W4-M08",
+      "level": "why",
+      "stem": "<p>How does amortised cost differ from average-case cost?</p>",
+      "options": [
+        "They are the same thing",
+        "Amortised cost is always larger",
+        "Amortised cost averages over random inputs",
+        "Amortised cost averages over a sequence of operations and needs no assumption about the inputs"
+      ],
+      "answer": 3,
+      "explanation": "<p>Amortised analysis bounds the total over <strong>any</strong> sequence — a guarantee. Average case (c) averages over an assumed distribution of inputs.</p>"
+    },
+    {
+      "id": "W4-M09",
+      "level": "how",
+      "stem": "<p>With doubling, the total number of element <strong>copies</strong> for n appends is:</p>",
+      "options": [
+        "less than 2n",
+        "exactly <span class=\"quiz-math\">n log<sub>2</sub> n</span>",
+        "exactly <span class=\"quiz-math\">n<sup>2</sup> / 2</span>",
+        "exactly n"
+      ],
+      "answer": 0,
+      "explanation": "<p><span class=\"quiz-math\">1 + 2 + 4 + … + 2<sup>k</sup> = 2<sup>k+1</sup> - 1 &lt; 2n</span>, since <span class=\"quiz-math\">2<sup>k</sup> &lt; n</span>.</p>"
+    },
+    {
+      "id": "W4-M10",
+      "level": "how",
+      "stem": "<p>With doubling, which of these appends triggers a resize?</p>",
+      "options": [
+        "the 16th",
+        "the 17th",
+        "the 18th",
+        "the 32nd"
+      ],
+      "answer": 1,
+      "explanation": "<p>Appends that find the array full are those made when the size is a power of two: the 2nd, 3rd, 5th, 9th, 17th, 33rd, … (one more than a power of two).</p>"
+    },
+    {
+      "id": "W4-M11",
+      "level": "why",
+      "stem": "<p>To shrink without thrashing, a dynamic array should halve its capacity when the size falls to:</p>",
+      "options": [
+        "half the capacity",
+        "capacity − 1",
+        "one quarter of the capacity",
+        "zero"
+      ],
+      "answer": 2,
+      "explanation": "<p>A gap between the grow threshold (full) and the shrink threshold (one quarter) means many cheap operations must happen between resizes. Halving at one half (a) leaves no gap.</p>"
+    },
+    {
+      "id": "W4-M12",
+      "level": "what",
+      "stem": "<p>\"Thrashing\" in a dynamic array means:</p>",
+      "options": [
+        "the array is full",
+        "an append causes a resize",
+        "the garbage collector runs",
+        "alternating operations near one boundary make the array resize on almost every operation"
+      ],
+      "answer": 3,
+      "explanation": "<p>For example: full at capacity 8, append (grow to 16), pop (shrink to 8), append (grow), … — an <span class=\"quiz-math\">O(n)</span> copy on every operation.</p>"
+    },
+    {
+      "id": "W4-M13",
+      "level": "what",
+      "stem": "<p>CPython's <code>list</code> grows its capacity by about:</p>",
+      "options": [
+        "one eighth, plus a little",
+        "one slot",
+        "a factor of 10",
+        "exactly double"
+      ],
+      "answer": 0,
+      "explanation": "<p>Capacities 4, 8, 16, 24, 32, 40, 52, 64, 76, … on Python 3.13.</p>"
+    },
+    {
+      "id": "W4-M14",
+      "level": "how",
+      "stem": "<p>How can you see a Python list's capacity from Python?</p>",
+      "options": [
+        "<code>len(values)</code>",
+        "from <code>sys.getsizeof(values)</code>",
+        "<code>values.capacity</code>",
+        "it cannot be observed"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>sys.getsizeof</code> returns the header plus one reference (8 bytes) per slot of <strong>capacity</strong>; subtract the empty list's size and divide by 8.</p>"
+    },
+    {
+      "id": "W4-M15",
+      "level": "how",
+      "stem": "<p>In a <code>DynamicArray</code> of size 5 and capacity 8, <code>a[-1]</code> reads <code>self._block</code> at index:</p>",
+      "options": [
+        "7",
+        "−1",
+        "4",
+        "it raises <code>IndexError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>−1 + size = 4: the last <em>used</em> slot, not the last slot (a).</p>"
+    },
+    {
+      "id": "W4-M16",
+      "level": "what",
+      "stem": "<p><code>insert_at(0, x)</code> on a dynamic array of size n costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "amortised <span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>All n elements shift right — whether or not a resize is needed.</p>"
+    },
+    {
+      "id": "W4-M17",
+      "level": "what",
+      "stem": "<p><code>pop()</code> — removing the <strong>last</strong> element — costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Nothing moves; clear the slot and decrement the size.</p>"
+    },
+    {
+      "id": "W4-M18",
+      "level": "why",
+      "stem": "<p>Why does growing by a factor give amortised <span class=\"quiz-math\">O(1)</span> append?</p>",
+      "options": [
+        "Because the array never needs to copy",
+        "Because the copies form a geometric series, dominated by its last term, which is less than n",
+        "Because Python optimises it",
+        "Because resizes happen at random"
+      ],
+      "answer": 1,
+      "explanation": "<p>The copies at each resize double, so the last resize copies more than all the earlier ones together, and it copies fewer than n.</p>"
+    },
+    {
+      "id": "W4-M19",
+      "level": "why",
+      "stem": "<p>Growing by a factor of <strong>1.5</strong> instead of 2:</p>",
+      "options": [
+        "makes <code>append</code> amortised <span class=\"quiz-math\">O(n)</span>",
+        "makes <code>append</code> amortised <span class=\"quiz-math\">O(log n)</span>",
+        "keeps <code>append</code> amortised <span class=\"quiz-math\">O(1)</span>, with more copies but less wasted space",
+        "removes the need for resizing"
+      ],
+      "answer": 2,
+      "explanation": "<p>Any factor r &gt; 1 gives a geometric series: about <span class=\"quiz-math\">n · r/r-1</span> copies — 3n for r = 1.5 against 2n for r = 2 — while the unused space after a resize is about a third rather than a half.</p>"
+    },
+    {
+      "id": "W4-M20",
+      "level": "how",
+      "stem": "<p>With doubling and no shrinking, just after a resize, about how much of the capacity is unused?</p>",
+      "options": [
+        "none",
+        "a quarter",
+        "three quarters",
+        "about half"
+      ],
+      "answer": 3,
+      "explanation": "<p>Growing from c to 2c with c + 1 elements leaves c − 1 slots unused: about half.</p>"
+    },
+    {
+      "id": "W4-M21",
+      "level": "what",
+      "stem": "<p>Which structure in <code>dsa/</code> stores its items in the student's own <code>DynamicArray</code>?</p>",
+      "options": [
+        "<code>Stack</code>",
+        "<code>CircularQueue</code>",
+        "<code>OpenAddressingHashMap</code>",
+        "<code>BinarySearchTree</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>Stack</code> keeps its top at the end of a <code>DynamicArray</code>. <code>CircularQueue</code> and the open-addressing map use a plain <code>Array</code>; the tree uses nodes.</p>"
+    },
+    {
+      "id": "W4-M22",
+      "level": "how",
+      "stem": "<p>In the accounting (\"bank\") proof for doubling, how many coins must each append be charged?</p>",
+      "options": [
+        "1",
+        "3",
+        "<span class=\"quiz-math\">log<sub>2</sub> n</span>",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "<p>One coin for the append's own write, two saved to pay for copying at the next doubling.</p>"
+    }
+  ]
+}

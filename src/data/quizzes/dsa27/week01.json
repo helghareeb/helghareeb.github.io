@@ -1,0 +1,318 @@
+{
+  "week": 1,
+  "title": "Why this course · Python basics (Lecture 01, Lab 01)",
+  "questions": [
+    {
+      "id": "W1-M01",
+      "level": "what",
+      "stem": "<p>\"Every general-purpose programming language is Turing-complete.\" What does that tell you?</p>",
+      "options": [
+        "All languages run equally fast",
+        "Any problem solvable in one of them is solvable in any other",
+        "All languages differ only in syntax",
+        "A program written in one language runs unchanged in any other"
+      ],
+      "answer": 1,
+      "explanation": "<p>Turing-completeness is about <em>what can be computed</em>: the same set of problems. It says nothing about speed (a), is not the same claim as \"only the syntax differs\" (c) — languages differ in cost to write, read and run — and programs are certainly not portable between languages (d).</p>"
+    },
+    {
+      "id": "W1-M02",
+      "level": "what",
+      "stem": "<p>Python's type system is best described as:</p>",
+      "options": [
+        "static and strong",
+        "static and weak",
+        "dynamic and weak",
+        "dynamic and strong"
+      ],
+      "answer": 3,
+      "explanation": "<p><em>Dynamic</em>: types are checked at run time and a name can be rebound to a different type. <em>Strong</em>: Python refuses to mix incompatible types silently (see M03). \"Static\" (a, b) describes C, Java, Rust; \"weak\" (b, c) describes C's implicit conversions or JavaScript's <code>\"3\" + 5</code>.</p>"
+    },
+    {
+      "id": "W1-M03",
+      "level": "how",
+      "stem": "<p>What does <code>\"3\" + 5</code> do in Python?</p>",
+      "options": [
+        "evaluates to <code>\"35\"</code>",
+        "evaluates to <code>8</code>",
+        "raises <code>TypeError</code>",
+        "raises <code>SyntaxError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>TypeError: can only concatenate str (not \"int\") to str</code>. <code>\"35\"</code> (a) is JavaScript's answer — weak typing. <code>8</code> (b) would need an implicit conversion Python refuses to make. It is valid syntax, so not (d).</p>"
+    },
+    {
+      "id": "W1-M04",
+      "level": "what",
+      "stem": "<p>How does Rust manage memory?</p>",
+      "options": [
+        "The programmer calls <code>free</code> for every allocation",
+        "A garbage collector frees unreachable objects at run time",
+        "Ownership rules, checked by the compiler, guarantee each allocation is freed exactly once",
+        "It never frees memory until the program ends"
+      ],
+      "answer": 2,
+      "explanation": "<p>Ownership and borrowing are checked at compile time. Manual <code>free</code> (a) is C/C++; a garbage collector (b) is Python, Java, Go; (d) describes no mainstream language.</p>"
+    },
+    {
+      "id": "W1-M05",
+      "level": "what",
+      "stem": "<p>Where and why was C created?</p>",
+      "options": [
+        "By Dennis Ritchie at Bell Labs, to write the Unix operating system",
+        "By Bjarne Stroustrup at Bell Labs, to add classes to Simula",
+        "By Donald Knuth, to typeset <em>The Art of Computer Programming</em>",
+        "By Guido van Rossum, as a teaching language"
+      ],
+      "answer": 0,
+      "explanation": "<p>Ritchie, Bell Labs, early 1970s, grown out of Thompson's B, in order to write Unix (rewritten in C in 1973). Stroustrup (b) created C++; Knuth (c) created TeX; van Rossum (d) created Python.</p>"
+    },
+    {
+      "id": "W1-M06",
+      "level": "what",
+      "stem": "<p>An <strong>Abstract Data Type</strong> specifies:</p>",
+      "options": [
+        "how the data is laid out in memory",
+        "which programming language the structure must be written in",
+        "the class hierarchy of the implementation",
+        "the operations, what they mean and what they cost — nothing about storage"
+      ],
+      "answer": 3,
+      "explanation": "<p>The ADT is the <em>contract</em>. Memory layout (a) is exactly what it leaves out — that belongs to the data structure. The language (b) and class hierarchy (c) are implementation choices.</p>"
+    },
+    {
+      "id": "W1-M07",
+      "level": "how",
+      "stem": "<p>Which of these is the <em>declarative (comprehension)</em> style from Lecture 01?</p>",
+      "options": [
+        "<code>for n in numbers: if n % 2 == 0: total += n * n</code>",
+        "<code>total = sum(n * n for n in numbers if n % 2 == 0)</code>",
+        "<code>total = sum(map(lambda n: n * n, filter(lambda n: n % 2 == 0, numbers)))</code>",
+        "<code>while i &lt; len(numbers): ...</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>A generator expression inside <code>sum</code> states the result wanted. (a) and (d) are procedural — steps and state; (c) is functional — composing <code>map</code> and <code>filter</code>.</p>"
+    },
+    {
+      "id": "W1-M08",
+      "level": "what",
+      "stem": "<p>What does the TIOBE index actually count?</p>",
+      "options": [
+        "search-engine results for \"X programming\"",
+        "the quality of each language",
+        "commits on GitHub",
+        "self-reported usage in a developer survey"
+      ],
+      "answer": 0,
+      "explanation": "<p>TIOBE counts search-engine hits. It measures how much people write about a language, not quality (b); GitHub activity is Octoverse (c); self-reported usage is the Stack Overflow survey (d).</p>"
+    },
+    {
+      "id": "W1-M09",
+      "level": "why",
+      "stem": "<p>In the course's three levels of knowledge, which is <strong>know-why</strong>?</p>",
+      "options": [
+        "You can define a stack",
+        "You can implement a stack that passes its tests",
+        "You can say why a stack and not a queue, and what it costs",
+        "You can recite the Big-O of every stack operation"
+      ],
+      "answer": 2,
+      "explanation": "<p>Know-what is (a) and (d) — recall. Know-how is (b) — building it. Know-why is choosing and justifying by cost, which is what the exam weighs.</p>"
+    },
+    {
+      "id": "W1-M10",
+      "level": "what",
+      "stem": "<p>To pass this course, a student needs:</p>",
+      "options": [
+        "at least 50% overall",
+        "at least 60% overall and at least 30% of the final exam",
+        "at least 60% overall, whatever the final exam mark",
+        "at least 30% of the final exam, whatever the overall mark"
+      ],
+      "answer": 1,
+      "explanation": "<p>Both thresholds, from the bylaws: ≥ 60% overall <strong>and</strong> ≥ 30% of the final. (c) is the common misreading — a strong coursework mark cannot rescue a final below 30%. And attendance below 75% bars you from the final entirely.</p>"
+    },
+    {
+      "id": "W1-M11",
+      "level": "how",
+      "stem": "<p>What is <code>-7 // 2</code>?</p>",
+      "options": [
+        "<code>-3</code>",
+        "<code>-3.5</code>",
+        "<code>3</code>",
+        "<code>-4</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>//</code> is <em>floor</em> division: it rounds <strong>down</strong>. −3.5 rounded down is −4. <code>-3</code> (a) is rounding towards zero, which is C's behaviour; <code>-3.5</code> (b) is what <code>/</code> gives.</p>"
+    },
+    {
+      "id": "W1-M12",
+      "level": "how",
+      "stem": "<p>What is <code>-7 % 3</code>?</p>",
+      "options": [
+        "<code>2</code>",
+        "<code>-1</code>",
+        "<code>1</code>",
+        "<code>-2</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Python keeps <code>a == (a // b) * b + a % b</code>. Here <code>-7 // 3</code> is −3, and −3 × 3 + 2 = −7, so the remainder is 2. With a positive divisor, <code>%</code> is never negative in Python.</p>"
+    },
+    {
+      "id": "W1-M13",
+      "level": "how",
+      "stem": "<p>What is <code>2 ** 3 ** 2</code>?</p>",
+      "options": [
+        "<code>64</code>",
+        "<code>512</code>",
+        "<code>36</code>",
+        "<code>12</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>**</code> groups right to left: <code>2 ** (3 ** 2)</code> = 2⁹ = 512. <code>64</code> (a) is <code>(2 ** 3) ** 2</code>.</p>"
+    },
+    {
+      "id": "W1-M14",
+      "level": "how",
+      "stem": "<p>What is <code>type(8 / 4)</code>?</p>",
+      "options": [
+        "<code>&lt;class 'int'&gt;</code>",
+        "<code>&lt;class 'str'&gt;</code>",
+        "<code>&lt;class 'float'&gt;</code>",
+        "it raises <code>TypeError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>/</code> always returns a <code>float</code>, even when the division is exact: <code>8 / 4</code> is <code>2.0</code>. Use <code>//</code> for an integer result.</p>"
+    },
+    {
+      "id": "W1-M15",
+      "level": "how",
+      "stem": "<p>With <code>word = \"Python\"</code>, what is <code>word[1:4]</code>?</p>",
+      "options": [
+        "<code>\"Pyt\"</code>",
+        "<code>\"ytho\"</code>",
+        "<code>\"ython\"</code>",
+        "<code>\"yth\"</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Indices 1, 2, 3 — up to but <strong>not including</strong> 4: <code>\"yth\"</code>. <code>\"ytho\"</code> (b) includes index 4.</p>"
+    },
+    {
+      "id": "W1-M16",
+      "level": "how",
+      "stem": "<p>What is <code>\"Mansoura\"[::-2]</code>?</p>",
+      "options": [
+        "<code>\"ausa\"</code>",
+        "<code>\"aruosnaM\"</code>",
+        "<code>\"Mnor\"</code>",
+        "<code>\"arsa\"</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Step −2 from the end: indices 7, 5, 3, 1 → <code>a</code>, <code>u</code>, <code>s</code>, <code>a</code>. <code>\"aruosnaM\"</code> (b) is <code>[::-1]</code>; <code>\"Mnor\"</code> (c) is <code>[::2]</code>.</p>"
+    },
+    {
+      "id": "W1-M17",
+      "level": "how",
+      "stem": "<p>After <code>a = [1, 2, 3]</code>, <code>b = a</code>, <code>b.append(4)</code>, what is <code>a</code>?</p>",
+      "options": [
+        "<code>[1, 2, 3]</code>",
+        "<code>[4, 1, 2, 3]</code>",
+        "<code>[1, 2, 3, 4]</code>",
+        "<code>[[1, 2, 3], 4]</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>b = a</code> copies nothing: both names refer to the <strong>same</strong> list, so appending through <code>b</code> changes what <code>a</code> sees.</p>"
+    },
+    {
+      "id": "W1-M18",
+      "level": "how",
+      "stem": "<p>After <code>a = [1, 2]</code> and <code>c = a[:]</code>, what are <code>c is a</code> and <code>c == a</code>?</p>",
+      "options": [
+        "<code>True</code>, <code>True</code>",
+        "<code>False</code>, <code>True</code>",
+        "<code>True</code>, <code>False</code>",
+        "<code>False</code>, <code>False</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>a[:]</code> makes a new list with equal contents: a different object (<code>is</code> is <code>False</code>) with the same values (<code>==</code> is <code>True</code>).</p>"
+    },
+    {
+      "id": "W1-M19",
+      "level": "how",
+      "stem": "<p><code>grid = [[0] * 2] * 2</code>, then <code>grid[0][0] = 1</code>. What is <code>grid</code>?</p>",
+      "options": [
+        "<code>[[1, 0], [0, 0]]</code>",
+        "<code>[[1, 1], [0, 0]]</code>",
+        "<code>[[1, 0], [1, 0]]</code>",
+        "<code>[[1, 1], [1, 1]]</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>[[0] * 2] * 2</code> puts <strong>two references to one inner list</strong> into the outer list. Changing it through <code>grid[0]</code> shows through <code>grid[1]</code>. The correct construction is <code>[[0] * 2 for _ in range(2)]</code>.</p>"
+    },
+    {
+      "id": "W1-M20",
+      "level": "what",
+      "stem": "<p>What is <code>round(2.5) + round(3.5)</code>?</p>",
+      "options": [
+        "<code>6</code>",
+        "<code>7</code>",
+        "<code>5</code>",
+        "<code>8</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Python rounds exact halves to the nearest <strong>even</strong> number: <code>round(2.5)</code> is 2 and <code>round(3.5)</code> is 4 — total 6.</p>"
+    },
+    {
+      "id": "W1-M21",
+      "level": "why",
+      "stem": "<p>Why is <code>0.1 + 0.2 == 0.3</code> <code>False</code> in Python?</p>",
+      "options": [
+        "Python has a bug in float addition",
+        "<code>0.1</code> is stored as an <code>int</code>",
+        "<code>==</code> compares identity, not value, for floats",
+        "<code>0.1</code>, <code>0.2</code> and <code>0.3</code> cannot be stored exactly in binary floating point"
+      ],
+      "answer": 3,
+      "explanation": "<p>A float is a binary fraction; 0.1 has no exact binary representation, so <code>0.1 + 0.2</code> is <code>0.30000000000000004</code>. Not a bug (a) — every language with IEEE floats does this. Compare floats with a tolerance.</p>"
+    },
+    {
+      "id": "W1-M22",
+      "level": "how",
+      "stem": "<p>What happens when you run <code>s = \"abc\"</code> then <code>s[0] = \"z\"</code>?</p>",
+      "options": [
+        "<code>s</code> becomes <code>\"zbc\"</code>",
+        "a <code>TypeError</code> is raised, because strings are immutable",
+        "a new string <code>\"zbc\"</code> is created and <code>s</code> refers to it",
+        "an <code>IndexError</code> is raised"
+      ],
+      "answer": 1,
+      "explanation": "<p>Strings are immutable. (c) is how you <em>should</em> do it — <code>s = \"z\" + s[1:]</code> — but item assignment itself is refused.</p>"
+    },
+    {
+      "id": "W1-M23",
+      "level": "how",
+      "stem": "<p>A function's body is <code>print(width * height)</code> and nothing else. What does <code>x = area(3, 4)</code> store in <code>x</code>?</p>",
+      "options": [
+        "<code>12</code>",
+        "<code>\"12\"</code>",
+        "<code>None</code>",
+        "nothing — it is a <code>NameError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>A function with no <code>return</code> returns <code>None</code>. The <code>12</code> appears on the screen, but it is not <em>returned</em>. Tests see only what is returned.</p>"
+    },
+    {
+      "id": "W1-M24",
+      "level": "how",
+      "stem": "<p>What does <code>int(\"4.5\")</code> do?</p>",
+      "options": [
+        "returns <code>4</code>",
+        "returns <code>5</code>",
+        "returns <code>4.5</code>",
+        "raises <code>ValueError</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>int()</code> of a string accepts only an integer literal. Use <code>int(float(\"4.5\"))</code> if truncation is really what you want.</p>"
+    }
+  ]
+}

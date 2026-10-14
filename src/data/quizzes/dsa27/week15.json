@@ -1,0 +1,292 @@
+{
+  "week": 15,
+  "title": "The Principles of Language Translation (Lecture 15)",
+  "questions": [
+    {
+      "id": "W15-M01",
+      "level": "what",
+      "stem": "<p>The job of the <strong>lexer</strong> is to:</p>",
+      "options": [
+        "compute the value of the expression",
+        "group the characters of the text into tokens",
+        "check that the parentheses are balanced",
+        "build the syntax tree"
+      ],
+      "answer": 1,
+      "explanation": "<p>Values are the evaluator's job (a), balanced parentheses and the tree the parser's (c, d). The lexer knows nothing about structure.</p>"
+    },
+    {
+      "id": "W15-M02",
+      "level": "how",
+      "stem": "<p><code>tokenize(\"12+3\")</code> returns a list of how many tokens?</p>",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>['12', '+', '3']</code>. <code>12</code> is one token: the lexer keeps reading while the next character is a digit.</p>"
+    },
+    {
+      "id": "W15-M03",
+      "level": "what",
+      "stem": "<p><code>calculate(\"3 + * 4\")</code> fails. Which stage rejects it?</p>",
+      "options": [
+        "the parser",
+        "the lexer",
+        "the evaluator",
+        "none — it returns 7"
+      ],
+      "answer": 0,
+      "explanation": "<p>Every token is valid, so the lexer accepts it (b); but after the <code>+</code>, <code>factor</code> finds <code>*</code>, which cannot start a factor: <code>ValueError: unexpected '*'</code>. Nothing reaches the evaluator (c).</p>"
+    },
+    {
+      "id": "W15-M04",
+      "level": "what",
+      "stem": "<p>\"AST\" stands for:</p>",
+      "options": [
+        "array of sorted tokens",
+        "automatic syntax translator",
+        "algebraic stack tree",
+        "abstract syntax tree"
+      ],
+      "answer": 3,
+      "explanation": "<p>\"Abstract\" because it drops the grammar's bookkeeping — the parentheses, and the calls that only passed a value up.</p>"
+    },
+    {
+      "id": "W15-M05",
+      "level": "why",
+      "stem": "<p>In the grammar, <code>*</code> binds more tightly than <code>+</code> because:</p>",
+      "options": [
+        "the parser keeps a table in which <code>*</code> has the higher number",
+        "<code>*</code> comes before <code>+</code> in ASCII",
+        "<code>*</code> is handled in <code>term</code>, a rule that <code>expr</code> is built from",
+        "<code>*</code> is always evaluated from right to left"
+      ],
+      "answer": 2,
+      "explanation": "<p>An <code>expr</code> is a sequence of <code>term</code>s, and every <code>*</code> is consumed inside a <code>term</code> before <code>expr</code> sees the next <code>+</code>; so <code>*</code> ends up deeper in the tree. There is no table (a) — that was shunting-yard.</p>"
+    },
+    {
+      "id": "W15-M06",
+      "level": "how",
+      "stem": "<p><code>calculate(\"2 + 3 * 4 - 1\")</code> returns:</p>",
+      "options": [
+        "19.0",
+        "13.0",
+        "11.0",
+        "15.0"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>2 + (3 * 4) - 1 = 13</code>. 19 (a) ignores precedence: <code>((2 + 3) * 4) - 1</code>.</p>"
+    },
+    {
+      "id": "W15-M07",
+      "level": "how",
+      "stem": "<p>The <strong>root</strong> of the AST of <code>2 * 3 + 4</code> is:</p>",
+      "options": [
+        "<code>+</code>",
+        "<code>*</code>",
+        "<code>2</code>",
+        "<code>4</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>(2 * 3) + 4</code>: the last operator applied is the root.</p>"
+    },
+    {
+      "id": "W15-M08",
+      "level": "how",
+      "stem": "<p>The root of the AST of <code>(1 + 2) * (3 - 4)</code> is:</p>",
+      "options": [
+        "<code>+</code>",
+        "<code>-</code>",
+        "<code>(</code>",
+        "<code>*</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Each parenthesised group is a factor of the one <code>term</code> <code>(…) * (…)</code>. Parentheses (c) never appear in the tree.</p>"
+    },
+    {
+      "id": "W15-M09",
+      "level": "why",
+      "stem": "<p><code>1 - 2 - 3</code> evaluates to -4 because subtraction is:</p>",
+      "options": [
+        "commutative",
+        "left-associative: <code>(1 - 2) - 3</code>",
+        "right-associative: <code>1 - (2 - 3)</code>",
+        "of higher precedence than itself"
+      ],
+      "answer": 1,
+      "explanation": "<p>Left-associative: the leftmost operation first. <code>1 - (2 - 3)</code> (c) would be 2.</p>"
+    },
+    {
+      "id": "W15-M10",
+      "level": "why",
+      "stem": "<p>A student writes <code>expr</code> right-recursively: parse a <code>term</code>; <strong>if</strong> the next token is <code>+</code> or <code>-</code>, return <code>BinOp(op, term, self.expr())</code>. What does it give for <code>8 - 4 - 2</code>?</p>",
+      "options": [
+        "2",
+        "an error",
+        "6",
+        "14"
+      ],
+      "answer": 2,
+      "explanation": "<p>It builds <code>8 - (4 - 2) = 6</code>: the recursive call parses the <strong>whole rest</strong> of the line and hangs it on the right. The correct value is 2 (a).</p>"
+    },
+    {
+      "id": "W15-M11",
+      "level": "why",
+      "stem": "<p>The rule <code>expr := expr '+' term | term</code> is turned directly into a method whose first line is <code>left = self.expr()</code>. On the input <code>3</code> it:</p>",
+      "options": [
+        "raises <code>RecursionError</code> — it recurses without consuming a token",
+        "returns <code>Num(3.0)</code>",
+        "raises <code>ValueError: empty expression</code>",
+        "loops for ever without using any memory"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>expr</code> calls <code>expr</code> at the same <code>position</code>, before reading anything, so no call is ever closer to a base case. Python stops it at its recursion limit, so it does use memory — a frame per call (d is wrong).</p>"
+    },
+    {
+      "id": "W15-M12",
+      "level": "what",
+      "stem": "<p>In recursive descent, the EBNF repetition <code>( … )*</code> becomes:</p>",
+      "options": [
+        "a recursive call",
+        "a stack",
+        "an <code>if</code>",
+        "a <code>while</code> loop"
+      ],
+      "answer": 3,
+      "explanation": "<p>A <code>while</code> loop that runs while <code>peek()</code> is one of the operators. A rule name becomes a call (a); <code>|</code> becomes an <code>if</code> (c).</p>"
+    },
+    {
+      "id": "W15-M13",
+      "level": "how",
+      "stem": "<p>Parsing <code>1 + 2 * 3</code>, how many times is <code>factor</code> called?</p>",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": 2,
+      "explanation": "<p>One per number: <code>1</code>, <code>2</code> and <code>3</code>. (Measured: 3 calls.)</p>"
+    },
+    {
+      "id": "W15-M14",
+      "level": "how",
+      "stem": "<p>The tree our parser builds for <code>-5 + 2</code> is:</p>",
+      "options": [
+        "<code>BinOp(\"-\", Num(0.0), BinOp(\"+\", Num(5.0), Num(2.0)))</code>",
+        "<code>BinOp(\"+\", BinOp(\"-\", Num(0.0), Num(5.0)), Num(2.0))</code>",
+        "<code>BinOp(\"+\", Num(-5.0), Num(2.0))</code>",
+        "<code>BinOp(\"-\", Num(5.0), Num(2.0))</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Unary minus is a <code>factor</code>, so it binds only the <code>5</code>: <code>(0 - 5) + 2 = -3</code>. Option (a) is the tree a parser builds if unary minus calls <code>expr</code> instead of <code>factor</code> (W15-B3). The lexer never produces negative numbers (c): <code>-5</code> is two tokens.</p>"
+    },
+    {
+      "id": "W15-M15",
+      "level": "what",
+      "stem": "<p><code>evaluate</code> visits the nodes of the tree in:</p>",
+      "options": [
+        "post-order — both children before the node",
+        "pre-order",
+        "in-order",
+        "level-order"
+      ],
+      "answer": 0,
+      "explanation": "<p>An operator can be applied only once both operand values are known: children first.</p>"
+    },
+    {
+      "id": "W15-M16",
+      "level": "how",
+      "stem": "<p>The post-order sequence of the AST of <code>(3 + 4) * 2</code> is:</p>",
+      "options": [
+        "<code>* + 3 4 2</code>",
+        "<code>3 + 4 * 2</code>",
+        "<code>2 3 4 + *</code>",
+        "<code>3 4 + 2 *</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Left subtree <code>3 4 +</code>, right subtree <code>2</code>, then the root <code>*</code>. It is also the postfix form of Lecture 06.</p>"
+    },
+    {
+      "id": "W15-M17",
+      "level": "why",
+      "stem": "<p><code>parse</code> raises <code>ValueError</code> if tokens are left over after <code>expr</code> returns. Without that check:</p>",
+      "options": [
+        "<code>\"3 +\"</code> would return 3",
+        "<code>\"3 + 4 )\"</code> would return 7",
+        "<code>\"(3 + 4\"</code> would return 7",
+        "nothing would change"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>expr</code> parses <code>3 + 4</code> and stops at the <code>)</code>, which no rule can use; only the final check notices it. (a) and (c) fail inside <code>factor</code> anyway.</p>"
+    },
+    {
+      "id": "W15-M18",
+      "level": "how",
+      "stem": "<p>Each pair of parentheses costs the parser about three Python frames. With Python's default limit of 1,000 frames, roughly how deeply can <code>calculate</code> nest parentheses?</p>",
+      "options": [
+        "1,000",
+        "100",
+        "330",
+        "without limit"
+      ],
+      "answer": 2,
+      "explanation": "<p>1,000 / 3 is about 333, less a few frames already in use: measured from a script, 329 pairs work and 330 raise <code>RecursionError</code>.</p>"
+    },
+    {
+      "id": "W15-M19",
+      "level": "how",
+      "stem": "<p>The time of <code>calculate</code> on an expression of n tokens is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Each stage touches each token or node a constant number of times.</p>"
+    },
+    {
+      "id": "W15-M20",
+      "level": "why",
+      "stem": "<p><code>calculate(\"1 + 1 + … + 1\")</code> with n numbers: how deep does the recursion of <code>evaluate</code> go?</p>",
+      "options": [
+        "1 — the parser used a loop",
+        "about <span class=\"quiz-math\">log<sub>2</sub> n</span>",
+        "3 per number",
+        "about n — the tree leans left all the way down"
+      ],
+      "answer": 3,
+      "explanation": "<p>The parser uses a loop (a is about the parser), but it builds a tree of height n - 1, and <code>evaluate</code> recurses once per level. <span class=\"quiz-math\">log<sub>2</sub> n</span> (b) is the balanced case.</p>"
+    },
+    {
+      "id": "W15-M21",
+      "level": "what",
+      "stem": "<p>When you run a <code>.py</code> file, CPython:</p>",
+      "options": [
+        "interprets the text line by line, with no compilation",
+        "compiles it to machine code, like a C compiler",
+        "compiles it to bytecode, then interprets the bytecode",
+        "translates it to Java"
+      ],
+      "answer": 2,
+      "explanation": "<p>The bytecode is in <code>__pycache__</code>; <code>dis</code> shows it.</p>"
+    },
+    {
+      "id": "W15-M22",
+      "level": "why",
+      "stem": "<p>Compared with the Week 6 route (shunting-yard, then <code>evaluate_postfix</code>), the main advantage of building a tree is that:</p>",
+      "options": [
+        "it is asymptotically faster",
+        "the tree can be reused — printed, simplified, compiled — and new grammar rules such as unary minus are easy to add",
+        "it needs no recursion",
+        "it needs no memory beyond the tokens"
+      ],
+      "answer": 1,
+      "explanation": "<p>Both routes are <span class=\"quiz-math\">O(n)</span> (a). The tree route <strong>needs</strong> recursion (c), and memory for the tree (d).</p>"
+    }
+  ]
+}

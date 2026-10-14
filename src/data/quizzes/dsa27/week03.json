@@ -1,0 +1,344 @@
+{
+  "week": 3,
+  "title": "Recursion · data structures and classes in Python (Lecture 03, Lab 03)",
+  "questions": [
+    {
+      "id": "W3-M01",
+      "level": "what",
+      "stem": "<p>Every correct recursive function needs:</p>",
+      "options": [
+        "a base case, and a recursive case that moves closer to the base case",
+        "a loop and a return statement",
+        "at least two recursive calls",
+        "a global variable to count the calls"
+      ],
+      "answer": 0,
+      "explanation": "<p>A base case that answers directly, and progress towards it. A loop (b) is not needed; one recursive call (c) is enough; a global counter (d) is a debugging aid, not a requirement.</p>"
+    },
+    {
+      "id": "W3-M02",
+      "level": "how",
+      "stem": "<p>With <code>def factorial(n): return 1 if n == 0 else n * factorial(n - 1)</code>, what does <code>factorial(-1)</code> do?</p>",
+      "options": [
+        "returns 1",
+        "returns −1",
+        "raises <code>ValueError</code>",
+        "raises <code>RecursionError</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>−1, −2, −3, … moves <em>away</em> from the base case 0, so the calls never stop until Python's depth limit. <code>ValueError</code> (c) is what the exercise version should raise — by checking <code>n &lt; 0</code> explicitly.</p>"
+    },
+    {
+      "id": "W3-M03",
+      "level": "what",
+      "stem": "<p>By default, CPython stops a recursion at a depth of about:</p>",
+      "options": [
+        "100",
+        "1,000",
+        "100,000",
+        "there is no limit"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>sys.getrecursionlimit()</code> is 1,000 by default.</p>"
+    },
+    {
+      "id": "W3-M04",
+      "level": "how",
+      "stem": "<p>How much stack space does <code>factorial(n)</code> use?</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n!)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>n + 1 frames are on the stack at the deepest point (n down to 0). Space is decided by the depth, not by the answer's size (d).</p>"
+    },
+    {
+      "id": "W3-M05",
+      "level": "how",
+      "stem": "<p><span class=\"quiz-math\">T(n) = T(n/2) + c</span> solves to:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(1)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Unroll: <span class=\"quiz-math\">c</span> is added once per halving, <span class=\"quiz-math\">log<sub>2</sub> n</span> times.</p>"
+    },
+    {
+      "id": "W3-M06",
+      "level": "how",
+      "stem": "<p><span class=\"quiz-math\">T(n) = 2T(n-1) + c</span> solves to:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(2<sup>n</sup>)</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>The number of calls doubles at every level: <span class=\"quiz-math\">1 + 2 + 4 + … + 2<sup>n-1</sup></span>.</p>"
+    },
+    {
+      "id": "W3-M07",
+      "level": "how",
+      "stem": "<p><span class=\"quiz-math\">T(n) = T(n-1) + cn</span> solves to:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(2<sup>n</sup>)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p><span class=\"quiz-math\">cn + c(n-1) + … + c = c n(n+1)/2</span>.</p>"
+    },
+    {
+      "id": "W3-M08",
+      "level": "how",
+      "stem": "<p>How many moves does Towers of Hanoi need for 5 disks?</p>",
+      "options": [
+        "25",
+        "32",
+        "31",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "<p><span class=\"quiz-math\">2<sup>5</sup> - 1 = 31</span>.</p>"
+    },
+    {
+      "id": "W3-M09",
+      "level": "how",
+      "stem": "<p>How many subsets does a set of 4 items have (including the empty set and the whole set)?</p>",
+      "options": [
+        "8",
+        "16",
+        "24",
+        "15"
+      ],
+      "answer": 1,
+      "explanation": "<p>Each item is either in or out: <span class=\"quiz-math\">2<sup>4</sup> = 16</span>. (24 (c) is 4!, the number of permutations.)</p>"
+    },
+    {
+      "id": "W3-M10",
+      "level": "how",
+      "stem": "<p>How many orderings (permutations) do 4 distinct items have?</p>",
+      "options": [
+        "24",
+        "16",
+        "12",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "<p><span class=\"quiz-math\">4! = 4 × 3 × 2 × 1 = 24</span>.</p>"
+    },
+    {
+      "id": "W3-M11",
+      "level": "how",
+      "stem": "<p>How many calls in total does the naive <code>fib(5)</code> make (counting the first)?</p>",
+      "options": [
+        "5",
+        "8",
+        "9",
+        "15"
+      ],
+      "answer": 3,
+      "explanation": "<p>fib(5) calls fib(4) and fib(3), and so on: the recursion tree has 15 nodes. (In general <span class=\"quiz-math\">2 fib(n+1) - 1</span>.) 8 (b) is the <em>value</em> fib(6).</p>"
+    },
+    {
+      "id": "W3-M12",
+      "level": "why",
+      "stem": "<p>Fast power written as <code>half = power(x, n // 2) * power(x, n // 2)</code> (then × x if n is odd). Its cost is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(log n)</span> — it halves n",
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(n)</span> — two calls on n/2 undo the saving",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Two calls on n/2: <span class=\"quiz-math\">T(n) = 2T(n/2) + c = O(n)</span>. Compute the half power <strong>once</strong>, store it, and square the variable: <span class=\"quiz-math\">O(log n)</span>.</p>"
+    },
+    {
+      "id": "W3-M13",
+      "level": "why",
+      "stem": "<p><code>list_max(values)</code> recurses on <code>values[1:]</code>. Its running time is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span> — every slice copies the rest",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>Each call copies the rest of the list: <span class=\"quiz-math\">(n-1) + (n-2) + … = O(n<sup>2</sup>)</span> — the hidden loop from Lecture 02.</p>"
+    },
+    {
+      "id": "W3-M14",
+      "level": "what",
+      "stem": "<p>Memoisation means:</p>",
+      "options": [
+        "storing the answer to each subproblem the first time and looking it up after",
+        "replacing recursion with a loop",
+        "raising the recursion limit",
+        "printing each call to debug it"
+      ],
+      "answer": 0,
+      "explanation": "<p>Solve each subproblem once, store its answer (for Fibonacci, in an <code>Array</code> indexed by n), and look it up afterwards.</p>"
+    },
+    {
+      "id": "W3-M15",
+      "level": "why",
+      "stem": "<p><code>hanoi(20)</code> makes over a million calls. At most how many frames are on the call stack at the same time?</p>",
+      "options": [
+        "about 1,000,000",
+        "<span class=\"quiz-math\">2<sup>20</sup></span>",
+        "1,000 — the recursion limit",
+        "about 20"
+      ],
+      "answer": 3,
+      "explanation": "<p>Frames are popped as calls return; the deepest chain is hanoi(20) → hanoi(19) → … → hanoi(1): about 20 frames. The <em>total</em> number of calls is exponential; the <em>depth</em> is linear.</p>"
+    },
+    {
+      "id": "W3-M16",
+      "level": "how",
+      "stem": "<p>What does <code>f(3)</code> print?</p><pre><code>def f(n):\n    if n == 0:\n        return\n    print(n, end=\" \")\n    f(n - 1)\n    print(n, end=\" \")</code></pre>",
+      "options": [
+        "<code>3 2 1</code>",
+        "<code>1 2 3 3 2 1</code>",
+        "<code>3 2 1 1 2 3</code>",
+        "<code>3 3 2 2 1 1</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Each call prints n on the way <strong>down</strong>, then again on the way <strong>back up</strong>, after the inner call has returned: <code>3 2 1</code> then <code>1 2 3</code>.</p>"
+    },
+    {
+      "id": "W3-M17",
+      "level": "why",
+      "stem": "<p>What should <code>subsets([])</code> return?</p>",
+      "options": [
+        "<code>[[]]</code>",
+        "<code>[]</code>",
+        "<code>None</code>",
+        "<code>[None]</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>The empty set has exactly one subset — itself. Returning <code>[]</code> (b) means \"no subsets\", and every result built from it is then empty too.</p>"
+    },
+    {
+      "id": "W3-M18",
+      "level": "what",
+      "stem": "<p>Tail-call optimisation in Python:</p>",
+      "options": [
+        "is done automatically for every tail call",
+        "is not done: every recursive call costs a stack frame",
+        "is done only when <code>sys.setrecursionlimit</code> is called",
+        "turns recursion into a loop at compile time"
+      ],
+      "answer": 1,
+      "explanation": "<p>Python deliberately keeps every frame (it keeps tracebacks complete). Deep recursion should become a loop.</p>"
+    },
+    {
+      "id": "W3-M19",
+      "level": "how",
+      "stem": "<p><code>marks = [3, 1, 2]; result = marks.sort()</code>. What is <code>result</code>?</p>",
+      "options": [
+        "<code>[1, 2, 3]</code>",
+        "<code>[3, 1, 2]</code>",
+        "an error",
+        "<code>None</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>sort()</code> sorts in place and returns <code>None</code>. <code>sorted(marks)</code> returns the new list.</p>"
+    },
+    {
+      "id": "W3-M20",
+      "level": "what",
+      "stem": "<p>What is <code>type({})</code>?</p>",
+      "options": [
+        "<code>&lt;class 'set'&gt;</code>",
+        "<code>&lt;class 'list'&gt;</code>",
+        "<code>&lt;class 'dict'&gt;</code>",
+        "<code>&lt;class 'tuple'&gt;</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>{}</code> is an empty dictionary; an empty set is <code>set()</code>.</p>"
+    },
+    {
+      "id": "W3-M21",
+      "level": "what",
+      "stem": "<p>The average cost of <code>x in s</code> for a Python <code>set</code> of n items is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>A set is a hash table: average <span class=\"quiz-math\">O(1)</span> membership. A list would be <span class=\"quiz-math\">O(n)</span>.</p>"
+    },
+    {
+      "id": "W3-M22",
+      "level": "why",
+      "stem": "<p>What is wrong with this class?</p><pre><code>class Dog:\n    tricks = []\n    def __init__(self, name):\n        self.name = name\n    def add_trick(self, trick):\n        self.tricks.append(trick)</code></pre>",
+      "options": [
+        "<code>__init__</code> must return <code>self</code>",
+        "<code>add_trick</code> needs a <code>return</code>",
+        "<code>name</code> should be a class variable",
+        "every <code>Dog</code> shares one <code>tricks</code> list"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>tricks</code> is a <strong>class</strong> variable: one list shared by every instance. Create per-object data in <code>__init__</code>: <code>self.tricks = []</code>.</p>"
+    },
+    {
+      "id": "W3-M23",
+      "level": "what",
+      "stem": "<p>Calling a function that contains <code>yield</code>:</p>",
+      "options": [
+        "runs the body and returns the first yielded value",
+        "returns a generator object without running the body yet",
+        "runs the whole body and returns a list",
+        "raises <code>StopIteration</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>The body only starts running when <code>next()</code> is called — by a <code>for</code> loop, <code>list()</code> and so on.</p>"
+    },
+    {
+      "id": "W3-M24",
+      "level": "why",
+      "stem": "<p>Why should a queue not be a Python list used with <code>pop(0)</code>?</p>",
+      "options": [
+        "<code>pop(0)</code> raises an error on lists",
+        "lists cannot hold more than 1,000 items",
+        "<code>pop(0)</code> shifts every remaining item, <span class=\"quiz-math\">O(n)</span> per dequeue",
+        "<code>pop(0)</code> removes the last item, not the first"
+      ],
+      "answer": 2,
+      "explanation": "<p>Every remaining item shifts one place left. Use <code>collections.deque</code> in plain Python — or, in this course, your own <code>CircularQueue</code> (Week 7).</p>"
+    },
+    {
+      "id": "W3-M25",
+      "level": "how",
+      "stem": "<p>What is <code>counts</code> after this?</p><pre><code>counts = {}\nfor w in \"a b a\".split():\n    counts[w] = counts.get(w, 0) + 1</code></pre>",
+      "options": [
+        "<code>{'a': 1, 'b': 1}</code>",
+        "<code>{'a': 2, 'b': 1}</code>",
+        "a <code>KeyError</code>",
+        "<code>{'a': 2}</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>get(w, 0)</code> supplies 0 for a missing key, so no <code>KeyError</code>.</p>"
+    },
+    {
+      "id": "W3-M26",
+      "level": "how",
+      "stem": "<p>The recurrence of naive Fibonacci, <span class=\"quiz-math\">T(n) = T(n-1) + T(n-2) + c</span>, grows like:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n log n)</span>",
+        "<span class=\"quiz-math\">O(φ<sup>n</sup>)</span> with <span class=\"quiz-math\">φ ≈ 1.618</span>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Each call spawns two subtrees almost as large as itself; the call count grows by a factor of about the golden ratio, 1.618, per step of n.</p>"
+    }
+  ]
+}

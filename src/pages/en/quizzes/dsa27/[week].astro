@@ -1,0 +1,60 @@
+---
+import QuizSession from '../../../../components/QuizSession.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import {
+  DSA27_REPO,
+  dsa27Weeks,
+  getDsa27PdfUrl,
+  getDsa27WeekPath,
+  getQuizIndexPath,
+  getWeekSlug,
+  quizLabels,
+  type QuizWeek,
+} from '../../../../utils/quizzes';
+
+export function getStaticPaths() {
+  return dsa27Weeks.map((week) => ({ params: { week: getWeekSlug(week.week) }, props: { week } }));
+}
+
+const { week } = Astro.props as { week: QuizWeek };
+const t = quizLabels.en;
+const previous = dsa27Weeks.find((item) => item.week === week.week - 1);
+const next = dsa27Weeks.find((item) => item.week === week.week + 1);
+const seoTitle = buildSeoTitle(`DSA27 ${t.week(week.week)} Quiz: ${week.title}`, { lang: 'en', section: t.section });
+const seoDescription = buildSeoDescription(
+  `${week.questions.length} multiple-choice questions on ${week.title}, Data Structures and Algorithms (DSA27), each answer explained.`,
+  [],
+);
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">{t.course} · {t.week(week.week)}</p>
+      <h1 class="hero__title">{week.title}</h1>
+      <p class="hero__lead">{t.practiceNote}</p>
+      <div class="hero__actions">
+        <a class="button-secondary" href={getQuizIndexPath('en')}>{t.section}</a>
+        {previous && <a class="button-secondary" href={getDsa27WeekPath('en', previous.week)}>{t.previous}</a>}
+        {next && <a class="button-secondary" href={getDsa27WeekPath('en', next.week)}>{t.next}</a>}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <QuizSession lang="en" quizId={`dsa27:week${week.week}`} questions={week.questions} />
+    </section>
+
+    <section class="shell section">
+      <article class="notice-card">
+        <p>{t.otherParts}</p>
+        <div class="hero__actions">
+          <a class="button-secondary" href={getDsa27PdfUrl(week.week, 'Questions')}>{t.pdfQuestions}</a>
+          <a class="button-secondary" href={getDsa27PdfUrl(week.week, 'Answers')}>{t.pdfAnswers}</a>
+          <a class="button-secondary" href={DSA27_REPO}>{t.repo}</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

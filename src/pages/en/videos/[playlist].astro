@@ -1,0 +1,37 @@
+---
+import VideoPlaylist from '../../../components/VideoPlaylist.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { getFolderUrl, getPlaylistPath, getWhatsAppUrl, playlists, videoLabels, type Playlist } from '../../../utils/videos';
+import { siteConfig } from '../../../../config/site';
+
+export function getStaticPaths() {
+  return playlists.map((playlist) => ({ params: { playlist: playlist.slug }, props: { playlist } }));
+}
+
+const { playlist } = Astro.props as { playlist: Playlist };
+const t = videoLabels.en;
+const pageUrl = new URL(getPlaylistPath('en', playlist.slug), siteConfig.siteUrl).toString();
+const seoTitle = buildSeoTitle(playlist.title.en, { lang: 'en', section: 'Videos' });
+const seoDescription = buildSeoDescription(playlist.summary.en, playlist.videos.map((video) => video.title));
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">{playlist.course.en} · {playlist.year} · {t.videos(playlist.videos.length)}</p>
+      <h1 class="hero__title">{playlist.title.en}</h1>
+      <p class="hero__lead">{playlist.summary.en}</p>
+      <div class="hero__actions">
+        <a class="button-secondary" href={playlist.repoUrl}>{t.repo}</a>
+        <a class="button-secondary" href={getFolderUrl(playlist)}>{t.folder}</a>
+        <a class="button-secondary" href={getWhatsAppUrl(playlist.title.en, pageUrl)}>{t.share}</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <VideoPlaylist lang="en" playlist={playlist} />
+    </section>
+  </main>
+</BaseLayout>
