@@ -71,10 +71,16 @@ def main() -> int:
     by_key = {item["key"]: item for item in existing}
     next_order = max((item.get("order", 0) for item in existing), default=0) + 1
 
+    # While an .mkv is being replaced, both files are in the folder; the .mp4 wins.
+    chosen: dict[str, dict[str, str]] = {}
+    for file in files:
+        key = Path(file["name"]).stem
+        if key not in chosen or file["name"].lower().endswith(".mp4"):
+            chosen[key] = file
+
     videos = []
     seen = set()
-    for file in sorted(files, key=lambda item: item["name"].lower()):
-        key = Path(file["name"]).stem
+    for key, file in sorted(chosen.items(), key=lambda pair: pair[0].lower()):
         seen.add(key)
         item = by_key.get(key)
         if item is None:
