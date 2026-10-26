@@ -339,6 +339,312 @@
       ],
       "answer": 2,
       "explanation": "<p><code>return 1</code> is decided, then <code>finally</code> runs (printing <code>bye</code>) before the function actually returns; then <code>print</code> shows <code>1</code>.</p>"
+    },
+    {
+      "id": "W2-M27",
+      "level": "what",
+      "stem": "<p>In the RAM model of Lecture 02, which of these is <strong>not</strong> one basic step?</p>",
+      "options": [
+        "<code>a[i] = v</code> on an array",
+        "<code>x in values</code> on a Python list of n items",
+        "<code>x &lt; y</code> on two small integers",
+        "calling a function (the call itself, not what it then does)"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>in</code> on a list walks it comparing item by item, <span class=\"quiz-math\">O(n)</span> — a hidden loop (Rule 5). One slot read or write (a), one comparison of small numbers (c) and the call itself (d) each take constant time.</p>"
+    },
+    {
+      "id": "W2-M28",
+      "level": "how",
+      "stem": "<p>An algorithm does <span class=\"quiz-math\">n<sup>2</sup></span> basic steps and takes 1 second at n = 10,000. About how long will it take at n = 100,000, on the same machine?</p>",
+      "options": [
+        "10 seconds",
+        "1,000 seconds",
+        "2 seconds",
+        "100 seconds"
+      ],
+      "answer": 3,
+      "explanation": "<p>Ten times the input, squared: <span class=\"quiz-math\">10<sup>2</sup> = 100</span> times the work, so about 100 seconds. 10 seconds (a) is what an <span class=\"quiz-math\">O(n)</span> algorithm would take; 1,000 (b) would be <span class=\"quiz-math\">n<sup>3</sup></span>.</p>"
+    },
+    {
+      "id": "W2-M29",
+      "level": "why",
+      "stem": "<p>Algorithm A does <span class=\"quiz-math\">1000n</span> steps; algorithm B does <span class=\"quiz-math\">n<sup>2</sup></span> steps. Which statement is <strong>true</strong>?</p>",
+      "options": [
+        "B does fewer steps for n &lt; 1,000; A does fewer for every n &gt; 1,000",
+        "A does fewer steps for every n, because <span class=\"quiz-math\">O(n)</span> beats <span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "B does fewer steps for every n, because its constant is 1",
+        "They are equally good, because both are polynomials"
+      ],
+      "answer": 0,
+      "explanation": "<p><span class=\"quiz-math\">1000n &lt; n<sup>2</sup></span> exactly when <span class=\"quiz-math\">n &gt; 1000</span>. Big-O describes growth for large n, so (b) is wrong for small n; (c) ignores that <span class=\"quiz-math\">n<sup>2</sup></span> overtakes any <span class=\"quiz-math\">1000n</span>; being polynomials (d) says nothing about which is smaller.</p>"
+    },
+    {
+      "id": "W2-M30",
+      "level": "why",
+      "stem": "<p>Which sentence about linear search is <strong>correct</strong>?</p>",
+      "options": [
+        "Its worst case is <span class=\"quiz-math\">Θ(1)</span>, because Θ describes the best input",
+        "Big-O means \"worst case\" and Big-Ω means \"best case\"",
+        "Its best case is <span class=\"quiz-math\">Θ(1)</span> and its worst case is <span class=\"quiz-math\">Θ(n)</span>",
+        "It does exactly n comparisons on every input of size n"
+      ],
+      "answer": 2,
+      "explanation": "<p>\"Best/worst case\" says <strong>which input</strong>; O, Ω, Θ say <strong>what kind of bound</strong>. The two are independent, so (a) and (b) confuse them. (d) is false: it stops at the first match, so one comparison is enough when the target is first.</p>"
+    },
+    {
+      "id": "W2-M31",
+      "level": "how",
+      "stem": "<p>What is the running time of this loop?</p><pre><code>i = 0\nwhile i * i &lt; n:\n    i += 1</code></pre>",
+      "options": [
+        "<span class=\"quiz-math\">Θ(log n)</span>",
+        "<span class=\"quiz-math\">Θ(√n)</span>",
+        "<span class=\"quiz-math\">Θ(n)</span>",
+        "<span class=\"quiz-math\">Θ(n<sup>2</sup>)</span>"
+      ],
+      "answer": 1,
+      "explanation": "<p>The loop stops when <span class=\"quiz-math\">i<sup>2</sup> ≥ n</span>, that is after about <span class=\"quiz-math\">√n</span> steps (n = 1,000,000 gives i = 1,000). It neither halves (a) nor walks all the way to n (c).</p>"
+    },
+    {
+      "id": "W2-M32",
+      "level": "why",
+      "stem": "<p>A recursive <code>total(values)</code> makes one call per element and creates no new data. Its <strong>extra space</strong> is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>, because it creates no new data",
+        "<span class=\"quiz-math\">O(log n)</span>",
+        "<span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "<span class=\"quiz-math\">O(n)</span>, because every call that has not returned keeps a frame on the call stack"
+      ],
+      "answer": 3,
+      "explanation": "<p>Recursion uses space: n calls deep means n frames waiting at once. Creating no data (a) is not the same as using no memory — and Python stops at about 1,000 frames.</p>"
+    },
+    {
+      "id": "W2-M33",
+      "level": "how",
+      "stem": "<p>A partly filled <code>Array</code> has <strong>size 7</strong>. How many elements move during <code>remove_at(arr, 7, 2)</code>?</p>",
+      "options": [
+        "4",
+        "5",
+        "2",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "<p>Slots 3 to 6 move left: size − index − 1 = 7 − 2 − 1 = 4. Five (b) is the count for <code>insert_at</code> at index 2.</p>"
+    },
+    {
+      "id": "W2-M34",
+      "level": "why",
+      "stem": "<p><code>remove_at</code> ends with <code>arr[size - 1] = None</code>. Why?</p>",
+      "options": [
+        "So that <code>len(arr)</code> goes down by one",
+        "Without it, the shifted values would end up in the wrong order",
+        "That slot is no longer in use; clearing it removes a stale copy of the last value, which would otherwise keep that object alive",
+        "The course <code>Array</code> raises an error if a slot is not <code>None</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>After the shift, slot <code>size - 1</code> still holds a copy of the last reference. Clearing it means nothing reads a stale value, and the object can be freed. <code>len(arr)</code> is the fixed capacity and never changes (a); the order (b) was already right after the shift.</p>"
+    },
+    {
+      "id": "W2-M35",
+      "level": "what",
+      "stem": "<p>In C, after <code>int a[6];</code>, the statement <code>a[6] = 0;</code>:</p>",
+      "options": [
+        "raises an index error at run time",
+        "makes the array grow to 7 slots",
+        "is the same as <code>a[0] = 0</code>, because indices wrap round",
+        "writes past the end with no check, over whatever is stored next — a buffer overflow"
+      ],
+      "answer": 3,
+      "explanation": "<p>C does not check indices: <code>a[6]</code> is base + 6 × 4, the memory right after the array. No error is raised (a), and an array cannot grow (b) or wrap (c). The course <code>Array</code> checks, and raises <code>IndexError</code>.</p>"
+    },
+    {
+      "id": "W2-M36",
+      "level": "why",
+      "stem": "<p>One Python array can hold an <code>int</code>, a <code>str</code> and a <code>list</code>, and still index in <span class=\"quiz-math\">O(1)</span>. Why?</p>",
+      "options": [
+        "Python sorts the objects by size first",
+        "Each slot holds a <strong>reference</strong>, and all references are the same size",
+        "Python pads every object to the size of the largest one",
+        "It cannot: indexing is <span class=\"quiz-math\">O(1)</span> only when all items have the same type"
+      ],
+      "answer": 1,
+      "explanation": "<p>The slot holds a reference to the object, not the object; every reference is 8 bytes on a 64-bit machine, so base + i × 8 still works. The objects themselves live elsewhere, at any size — no sorting (a) or padding (c).</p>"
+    },
+    {
+      "id": "W2-M37",
+      "level": "what",
+      "stem": "<p><code>a = Array(3)</code>, then <code>a[0:2]</code>. What happens?</p>",
+      "options": [
+        "<code>TypeError</code>: the course <code>Array</code> does not support slicing",
+        "a new <code>Array</code> of two <code>None</code>s is returned",
+        "the list <code>[None, None]</code> is returned",
+        "<code>IndexError</code>: index 2 is the last slot"
+      ],
+      "answer": 0,
+      "explanation": "<p>A slice is a copy, O(k), dressed as one step, so the course <code>Array</code> refuses it: \"Array does not support slicing; copy with a loop\".</p>"
+    },
+    {
+      "id": "W2-M38",
+      "level": "how",
+      "stem": "<p><code>arr</code> holds <code>[1, 2, 3, 4, 5, 6]</code>. What does it hold after <code>rotate_left(arr, 8)</code>?</p>",
+      "options": [
+        "<code>[1, 2, 3, 4, 5, 6]</code> — 8 is more than a full turn, so nothing moves",
+        "nothing: it raises <code>IndexError</code>, since 8 &gt; 6",
+        "<code>[3, 4, 5, 6, 1, 2]</code>",
+        "<code>[5, 6, 1, 2, 3, 4]</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>rotate_left</code> first does <code>k %= n</code>: 8 mod 6 = 2, so it rotates left by 2. (a) would be right only for k = 6 or 12; (d) is a rotation to the <strong>right</strong> by 2.</p>"
+    },
+    {
+      "id": "W2-M39",
+      "level": "why",
+      "stem": "<p><code>merge_sorted(a, b)</code> takes the front of <code>a</code> when <code>a[i] &lt;= b[j]</code>. Why <code>&lt;=</code> rather than <code>&lt;</code>?</p>",
+      "options": [
+        "With <code>&lt;</code>, the result would not be sorted",
+        "With <code>&lt;</code>, two equal values would raise an error",
+        "With <code>&lt;</code>, the loop would never end on equal values",
+        "With <code>&lt;=</code>, equal values keep their order — the one from <code>a</code> first — which merge sort relies on to be stable"
+      ],
+      "answer": 3,
+      "explanation": "<p>With <code>&lt;</code>, an equal value from <code>b</code> would be taken first, swapping the order of equal values; the output would still be sorted (a), with no error (b) and no endless loop (c). Keeping equal values in their original order is <strong>stability</strong> (Week 10).</p>"
+    },
+    {
+      "id": "W2-M40",
+      "level": "how",
+      "stem": "<p>A 3 × 4 matrix holding the values 0 to 11 row by row is stored flat in row-major order. <code>transpose_flat(arr, 3, 4)</code> returns the 4 × 3 transpose, also row-major. At which index of the result is the value <strong>1</strong>?</p>",
+      "options": [
+        "1",
+        "3",
+        "4",
+        "9"
+      ],
+      "answer": 1,
+      "explanation": "<p>1 is at (0, 1) in the 3 × 4 matrix, so at (1, 0) in the 4 × 3 transpose: <span class=\"quiz-math\">1 × 3 + 0 = 3</span>. The result is <code>[0, 4, 8, 1, 5, 9, …]</code>.</p>"
+    },
+    {
+      "id": "W2-M41",
+      "level": "why",
+      "stem": "<p>\"Any sort that works only by comparing elements needs <span class=\"quiz-math\">Ω(n log n)</span> comparisons in the worst case.\" This means:</p>",
+      "options": [
+        "no comparison sort can have a worst case below a constant times <span class=\"quiz-math\">n log n</span>; counting sort escapes only because it does not compare",
+        "every sorting algorithm, counting sort included, is at least <span class=\"quiz-math\">n log n</span>",
+        "every comparison sort does exactly <span class=\"quiz-math\">n log n</span> comparisons",
+        "comparison sorts are <span class=\"quiz-math\">O(n log n)</span> in the worst case"
+      ],
+      "answer": 0,
+      "explanation": "<p>It is a lower bound on the <strong>problem</strong> for comparison sorts. Counting sort (Week 9) uses the values as indices and never compares, so the bound does not apply to it (b). Ω is \"at least\", not \"exactly\" (c), and not an upper bound (d).</p>"
+    },
+    {
+      "id": "W2-M42",
+      "level": "how",
+      "stem": "<p>How many pairs does <code>is_sorted(arr)</code> compare when <code>arr</code> holds <code>[5, 1, 2, 3, 4, 6, 7, 8]</code>?</p>",
+      "options": [
+        "7",
+        "8",
+        "1",
+        "0"
+      ],
+      "answer": 2,
+      "explanation": "<p>It compares 5 with 1, finds them out of order and returns <code>False</code> at once: <span class=\"quiz-math\">O(1)</span>, the best case. Seven (a) is the number of pairs in a <strong>sorted</strong> array of 8.</p>"
+    },
+    {
+      "id": "W2-M43",
+      "level": "how",
+      "stem": "<p>What happens when <code>increment()</code> is called?</p><pre><code>count = 0\n\ndef increment():\n    count = count + 1</code></pre>",
+      "options": [
+        "the global <code>count</code> becomes 1",
+        "<code>NameError</code>: <code>count</code> is not defined",
+        "nothing visible: a local <code>count</code> becomes 1",
+        "<code>UnboundLocalError</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>The assignment makes <code>count</code> local for the <strong>whole</strong> function, so reading it on the right-hand side finds a local with no value yet. Python does not fall back to the global (a, c), and the error is more specific than a <code>NameError</code> (b).</p>"
+    },
+    {
+      "id": "W2-M44",
+      "level": "why",
+      "stem": "<p>What does <code>print(users)</code> show?</p><pre><code>users = ['guest1', 'guest2', 'ali', 'guest3']\nfor u in users:\n    if u.startswith('guest'):\n        users.remove(u)\nprint(users)</code></pre>",
+      "options": [
+        "<code>['ali']</code>",
+        "<code>['guest2', 'ali']</code>",
+        "<code>['guest2', 'ali', 'guest3']</code>",
+        "<code>RuntimeError</code>: the list changed size during iteration"
+      ],
+      "answer": 1,
+      "explanation": "<p>Removing <code>'guest1'</code> shifts every item left, so the loop's next position holds <code>'ali'</code>: <code>'guest2'</code> is skipped. <code>'guest3'</code> is then removed. A list does not raise (d) — dicts and sets do. Loop over a copy, or build a new list.</p>"
+    }
+  ],
+  "essays": [
+    {
+      "id": "W2-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Big-O throws away constant factors and lower-order terms. Explain <em>why</em> each is thrown away, give one situation where doing so is misleading, and explain how measuring complements counting.</p>",
+      "answer": "<ul><li><strong>Lower-order terms</strong> stop mattering as n grows: in <span class=\"quiz-math\">1/2 n<sup>2</sup> - 1/2 n</span>, the <span class=\"quiz-math\">n<sup>2</sup></span> term is 99.9% of the total by n = 1,000.</li><li><strong>Constant factors</strong> are not properties of the algorithm: they change with the machine, the language and how you count steps. What stays the same everywhere is the <strong>shape</strong> of growth.</li><li><strong>Misleading when n is small</strong>, or constants are huge: a <span class=\"quiz-math\">1000n</span> algorithm is worse than an <span class=\"quiz-math\">n<sup>2</sup></span> one for every n &lt; 1,000; linear search beats binary search on tiny arrays.</li><li><strong>Measuring</strong> (<code>viz.complexity.measure</code>) shows the constants and the crossover point that Big-O hides; counting shows the shape that one machine's timings cannot prove. You need both.</li></ul>"
+    },
+    {
+      "id": "W2-E2",
+      "level": "what",
+      "marks": 4,
+      "stem": "<p>Define <span class=\"quiz-math\">O</span>, <span class=\"quiz-math\">Ω</span> and <span class=\"quiz-math\">Θ</span> precisely. For <span class=\"quiz-math\">f(n) = 3n<sup>2</sup> + 2n</span>, give one true statement using each, and one <em>true but uninformative</em> <span class=\"quiz-math\">O</span> statement.</p>",
+      "answer": "<ul><li><span class=\"quiz-math\">f = O(g)</span>: there exist <span class=\"quiz-math\">c &gt; 0</span>, <span class=\"quiz-math\">n<sub>0</sub></span> with <span class=\"quiz-math\">f(n) ≤ c g(n)</span> for all <span class=\"quiz-math\">n ≥ n<sub>0</sub></span> — an upper bound.</li><li><span class=\"quiz-math\">f = Ω(g)</span>: there exist <span class=\"quiz-math\">c &gt; 0</span>, <span class=\"quiz-math\">n<sub>0</sub></span> with <span class=\"quiz-math\">f(n) ≥ c g(n)</span> for all <span class=\"quiz-math\">n ≥ n<sub>0</sub></span> — a lower bound.</li><li><span class=\"quiz-math\">f = Θ(g)</span>: both — <span class=\"quiz-math\">c<sub>1</sub> g(n) ≤ f(n) ≤ c<sub>2</sub> g(n)</span> eventually — a tight bound.</li><li>For <span class=\"quiz-math\">3n<sup>2</sup> + 2n</span>: it is <span class=\"quiz-math\">O(n<sup>2</sup>)</span>, <span class=\"quiz-math\">Ω(n<sup>2</sup>)</span>, <span class=\"quiz-math\">Θ(n<sup>2</sup>)</span>; it is also <span class=\"quiz-math\">Ω(n)</span>. <strong>True but uninformative:</strong> <span class=\"quiz-math\">3n<sup>2</sup> + 2n = O(n<sup>3</sup>)</span> (or <span class=\"quiz-math\">O(2<sup>n</sup>)</span>).</li></ul>"
+    },
+    {
+      "id": "W2-E3",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Describe the best, worst and average case of linear search, with the number of comparisons for each. Which one does \"linear search is <span class=\"quiz-math\">O(n)</span>\" usually refer to, and why is that the default?</p>",
+      "answer": "<ul><li><strong>Best:</strong> the target is the first element — 1 comparison, <span class=\"quiz-math\">O(1)</span>.</li><li><strong>Worst:</strong> last or absent — n comparisons, <span class=\"quiz-math\">O(n)</span>.</li><li><strong>Average</strong> (present, uniformly placed): <span class=\"quiz-math\">(n+1)/2</span>, still <span class=\"quiz-math\">O(n)</span> — and the average needs a stated assumption about the inputs.</li><li>\"Linear search is O(n)\" means the <strong>worst case</strong>: it is a guarantee that holds for every input of size n, needs no assumption, and is what you plan capacity around.</li></ul>"
+    },
+    {
+      "id": "W2-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain why indexing an array is <span class=\"quiz-math\">O(1)</span> but inserting into the middle is <span class=\"quiz-math\">O(n)</span>. What does the fact that an array has a <em>fixed size</em> force you to do when it fills up, and what does that cost?</p>",
+      "answer": "<ul><li>An array is contiguous, equal-sized slots, so the address of <code>a[i]</code> is <span class=\"quiz-math\">base + i × size</span>: one multiplication and one addition, independent of n → <span class=\"quiz-math\">O(1)</span>.</li><li>Inserting at index i in an array of size n needs every element from i to the end moved one place right: <span class=\"quiz-math\">n - i</span> moves, n in the worst case → <span class=\"quiz-math\">O(n)</span>.</li><li><strong>Fixed size:</strong> the memory after the block may belong to something else, so the array cannot grow in place. When it is full, you must allocate a <strong>new, larger</strong> array and <strong>copy</strong> every element across: <span class=\"quiz-math\">O(n)</span> for that operation.</li><li>(Doubling the capacity each time makes appends <span class=\"quiz-math\">O(1)</span> amortised — Week 4.)</li></ul>"
+    },
+    {
+      "id": "W2-E5",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>State the course storage rule from Lecture 02. Give the reason for it, list what remains allowed, and show how two structures from later in the course follow it.</p>",
+      "answer": "<ul><li><strong>Rule:</strong> a data structure in <code>dsa/</code> stores its data only in the course <code>Array</code>, in node objects, or in another structure the student has built — never in a Python <code>list</code>, <code>dict</code>, <code>set</code> or <code>deque</code>.</li><li><strong>Reason:</strong> those built-ins hide exactly the costs the course teaches — one short call like <code>insert(0, x)</code>, <code>pop(0)</code> or <code>x in values</code> is an <span class=\"quiz-math\">O(n)</span> algorithm someone else wrote. Building on a bare array makes every cost visible and yours.</li><li><strong>Still allowed:</strong> lists as function inputs and return values; lists in tests; plain local variables and tuples.</li><li><strong>Examples</strong>, any two: <code>Stack</code> on the student's <code>DynamicArray</code>; <code>CircularQueue</code> on an <code>Array</code>; <code>ChainingHashMap</code> as an <code>Array</code> of <code>Entry</code> chains; <code>Graph</code> on the student's hash map and <code>DynamicArray</code>s; <code>MinHeap</code> on a <code>DynamicArray</code>.</li></ul>"
+    },
+    {
+      "id": "W2-E6",
+      "level": "what",
+      "marks": 3,
+      "stem": "<p>Compare Python's <code>list</code>, <code>array.array</code>, <code>numpy.ndarray</code> and a <code>ctypes</code> array on: can it grow, what it holds, and whether it hides costs. Why is the course <code>Array</code> built on <code>ctypes</code>?</p>",
+      "answer": "<div class=\"quiz-table\"><table><thead><tr><th></th><th>Grows?</th><th>Holds</th><th>Hides the cost?</th></tr></thead><tbody><tr><td><code>list</code></td><td>yes (dynamic array)</td><td>references to any objects</td><td>yes</td></tr><tr><td><code>array.array</code></td><td>yes</td><td>packed numbers of one type</td><td>yes</td></tr><tr><td><code>numpy.ndarray</code></td><td>no</td><td>packed numbers of one type</td><td>yes — whole-array operations run in C</td></tr><tr><td><code>ctypes</code> array</td><td>no</td><td>C values or references</td><td>no — index and assign only</td></tr></tbody></table></div><p>A <code>ctypes</code> array of object references is a genuine fixed-size C array that can hold any Python object. The course wraps it, adds bounds checking, and offers nothing else — so every other operation must be written, and priced, by the student.</p>"
+    },
+    {
+      "id": "W2-E7",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p><code>values</code> is a Python list of n numbers. Give the running time of each numbered part of this function, justify each with one of the five rules, and give the total. Why is part (3) <strong>not</strong> <span class=\"quiz-math\">O(n<sup>2</sup>)</span>, although it hides a slice and an <code>in</code> inside a loop?</p><pre><code>def report(values):\n    total = 0\n    for v in values:                 # (1)\n        total += v\n    i = len(values)\n    while i &gt; 1:                     # (2)\n        i //= 2\n    for v in values:                 # (3)\n        if v in values[:10]:\n            total -= v\n    return total</code></pre>",
+      "answer": "<ul><li><strong>(1)</strong> One pass over n items with an O(1) body: <strong>Rule 2</strong>, <span class=\"quiz-math\">Θ(n)</span>.</li><li><strong>(2)</strong> i is halved until it reaches 1: <strong>Rule 4</strong>, <span class=\"quiz-math\">Θ(log n)</span>.</li><li><strong>(3)</strong> n iterations (<strong>Rule 2</strong>); the body hides a slice and an <code>in</code> (<strong>Rule 5</strong>), but the slice copies at most <strong>10</strong> items and <code>in</code> searches at most 10 — a constant, not n. So the body is O(1) and the loop is <span class=\"quiz-math\">Θ(n)</span>. A hidden loop costs what it actually walks: here a fixed 10, not the whole list.</li><li><strong>Total</strong>, by <strong>Rule 1</strong>: <span class=\"quiz-math\">Θ(n + log n + n) = Θ(n)</span>. (Timing it confirms this: doubling n doubles the time.)</li></ul>"
+    },
+    {
+      "id": "W2-E8",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Define the <strong>auxiliary space</strong> of an algorithm. Give the extra space of <code>reverse_in_place</code>, <code>resized(arr, 2n)</code>, <code>merge_sorted(a, b)</code> and a recursive <code>total(values)</code>, with a reason for each. Why does recursion use space even when it creates no data, and what limit does Python put on it?</p>",
+      "answer": "<ul><li><strong>Auxiliary space:</strong> the memory an algorithm needs <strong>beyond its input</strong>, as a function of n.</li><li><code>reverse_in_place</code>: two indices and a swap — <span class=\"quiz-math\">O(1)</span>. <code>resized(arr, 2n)</code>: a new array of 2n slots — <span class=\"quiz-math\">O(n)</span>. <code>merge_sorted(a, b)</code>: the output array — <span class=\"quiz-math\">O(n + m)</span>.</li><li>Recursive <code>total(values)</code>: <span class=\"quiz-math\">O(n)</span> — every call that has not yet returned keeps a frame (its arguments, its local variables, where to return to) on the call stack, n frames at the deepest point.</li><li>Python stops recursion at about <strong>1,000</strong> frames (<code>RecursionError</code>), so a recursion n deep fails for large n; a loop with <span class=\"quiz-math\">O(1)</span> space does not. Time and space can be traded: merge sort uses <span class=\"quiz-math\">O(n)</span> extra space for its <span class=\"quiz-math\">O(n log n)</span> time.</li></ul>"
+    },
+    {
+      "id": "W2-E9",
+      "level": "how",
+      "marks": 3,
+      "stem": "<p>Explain row-major order. A 5 × 7 matrix (5 rows, 7 columns) is stored flat in row-major order: at which flat index is element (3, 4), and which (row, column) is at flat index 30? Why is reaching (r, c) still <span class=\"quiz-math\">O(1)</span>?</p>",
+      "answer": "<ul><li><strong>Row-major:</strong> the rows are stored one after another in one flat array, so element (r, c) is at index <span class=\"quiz-math\">r × cols + c</span>.</li><li>(3, 4) in a 5 × 7 matrix: <span class=\"quiz-math\">3 × 7 + 4 = 25</span>. Index 30: row 30 // 7 = 4, column 30 % 7 = 2, so (4, 2).</li><li>Reaching (r, c) is one multiplication and one addition, then one <span class=\"quiz-math\">O(1)</span> array index — whatever the matrix size.</li></ul>"
+    },
+    {
+      "id": "W2-E10",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>The course <code>Array</code> refuses negative indices, slicing and <code>append</code>. For each refusal, explain why it is deliberate and what you write instead. Then explain the difference between <code>len(a)</code> and the <strong>size</strong> of a partly filled array, and who keeps track of each.</p>",
+      "answer": "<ul><li><strong>No negative indices:</strong> an index is an offset from the base, and there is nothing before the base (as in C). You compute <code>size - 1</code> for the last element; <code>DynamicArray</code> (Week 4) adds negative indexing as the translation <code>i + size</code>.</li><li><strong>No slicing:</strong> a slice is a copy, <span class=\"quiz-math\">O(k)</span>, that looks like one step. You write the copying loop and see the cost.</li><li><strong>No <code>append</code>:</strong> an array cannot grow; that is the definition. To make room you allocate a bigger <code>Array</code> and copy — <code>resized</code>, the dynamic array's one move.</li><li><code>len(a)</code> is the <strong>capacity</strong>, fixed when the <code>Array</code> is created; the <strong>size</strong> — how many slots from index 0 hold real data — is kept by <strong>your code</strong>, in a separate variable (<code>insert_at</code> and <code>remove_at</code> take it and the caller updates it). That split is what the dynamic array is built on.</li></ul>"
     }
   ]
 }

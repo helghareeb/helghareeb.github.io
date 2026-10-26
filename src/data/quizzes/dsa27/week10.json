@@ -288,5 +288,42 @@
       "answer": 0,
       "explanation": "<p>Timsort finds one ascending run of 1,000 in 999 comparisons and has nothing to merge (measured: 999).</p>"
     }
+  ],
+  "essays": [
+    {
+      "id": "W10-E1",
+      "level": "why",
+      "marks": 5,
+      "stem": "<p>Describe merge sort as divide and conquer. Write its recurrence and solve it with a recursion tree. Give its extra space, and explain what makes it stable.</p>",
+      "answer": "<ul><li><strong>Divide:</strong> split <code>a[lo:hi]</code> at <code>mid = (lo + hi) // 2</code> — no comparisons. <strong>Conquer:</strong> sort both halves recursively; a range of 0 or 1 elements is sorted (base case). <strong>Combine:</strong> merge the two sorted runs with <code>_merge</code>.</li><li><strong>Recurrence:</strong> <span class=\"quiz-math\">T(n) = 2T(n/2) + cn</span>, <span class=\"quiz-math\">T(1) = c</span>.</li><li><strong>Recursion tree:</strong> the root merges n elements; its two children n/2 each; the four grandchildren n/4 each — every level totals n. The sizes halve, so there are <span class=\"quiz-math\">log<sub>2</sub> n</span> levels that merge: <span class=\"quiz-math\">T(n) = O(n log n)</span>, in every case, because the split never depends on the values.</li><li><strong>Space:</strong> one scratch <code>Array</code> of n slots, plus <span class=\"quiz-math\">log<sub>2</sub> n</span> stack frames: <span class=\"quiz-math\">O(n)</span>. Not in place.</li><li><strong>Stable:</strong> on a tie, <code>_merge</code> takes from the <strong>left</strong> run (<code>&lt;=</code>), and the left run holds the elements that came first in the input.</li></ul>"
+    },
+    {
+      "id": "W10-E2",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Describe Lomuto's partition: what it does, its invariant, and why the pivot is in its final place afterwards. Why is there nothing to \"combine\" in quicksort?</p>",
+      "answer": "<ul><li>Lomuto's partition takes the pivot <code>a[hi]</code> and one scan <code>j = lo..hi-1</code>. Values smaller than the pivot are swapped to the front, into <code>a[boundary]</code>, and <code>boundary</code> grows. A final swap puts the pivot at <code>a[boundary]</code>; it returns <code>boundary</code>.</li><li><strong>Invariant:</strong> <code>a[lo:boundary] &lt; pivot &lt;= a[boundary:j]</code>. True at the start (both empty), kept by each step, and at the end <code>j = hi</code>, so every value is on the correct side.</li><li><strong>Final place:</strong> every value smaller than the pivot is to its left, every other value to its right; sorting either side cannot move any value across, so the pivot's position is its position in the sorted array.</li><li><strong>No combine:</strong> after both parts are sorted, <em>left part, pivot, right part</em> is already in order — the partition did the combining in advance. Merge sort is the mirror image: free divide, expensive combine.</li></ul>"
+    },
+    {
+      "id": "W10-E3",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Compare the pivot strategies <code>\"first\"</code>, <code>\"random\"</code> and <code>\"median3\"</code>: the cost of choosing, and the inputs on which each is at its worst. Why is sorted input the case that matters?</p>",
+      "answer": "<ul><li><code>\"first\"</code> and <code>\"last\"</code>: <span class=\"quiz-math\">O(1)</span> to choose. Worst on <strong>sorted</strong> and reverse-sorted input: the pivot is the extreme of its range every time, one element per level, <span class=\"quiz-math\">n(n-1)/2</span> comparisons.</li><li><code>\"random\"</code>: <span class=\"quiz-math\">O(1)</span> plus a random number. <strong>No fixed input</strong> is bad for it: the worst case needs bad luck at almost every level, which is vanishingly unlikely; the expected cost is about <span class=\"quiz-math\">1.39 n log<sub>2</sub> n</span>.</li><li><code>\"median3\"</code>: up to three extra comparisons per partition. Exact middle on sorted and reversed input. Its worst case exists — specially built \"median-of-three killer\" inputs (Musser, 1997) — but it is not an input that occurs by accident.</li><li><strong>Why sorted input matters:</strong> it is the most common input a real sort sees — data sorted before, with a few changes. A pivot rule that is worst on sorted input is worst exactly when it matters.</li></ul>"
+    },
+    {
+      "id": "W10-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain how heap sort uses an array as a tree. Describe build-heap and the sort phase, and argue that build-heap is <span class=\"quiz-math\">O(n)</span>. Why is heap sort often slower in practice than quicksort, though its worst case is better?</p>",
+      "answer": "<ul><li><strong>Array as tree:</strong> <code>a[0]</code> is the root; the children of <code>a[i]</code> are <code>a[2i + 1]</code> and <code>a[2i + 2]</code>; the parent is <code>a[(i - 1) // 2]</code>. The tree is complete, height <span class=\"quiz-math\">⌊ log<sub>2</sub> n ⌋</span>; there are no pointers.</li><li><strong>Build-heap:</strong> sift down every parent from <code>n // 2 - 1</code> down to 0; each sift may assume both subtrees are already heaps. <strong>Sort:</strong> swap the root (the max) with <code>a[end]</code>, shrink the heap to <code>a[0:end]</code>, sift the new root down; repeat for <code>end = n - 1 … 1</code>. <span class=\"quiz-math\">O(n log n)</span>.</li><li><strong>Build-heap is <span class=\"quiz-math\">O(n)</span>:</strong> a node at height h sinks at most h levels, and there are at most <span class=\"quiz-math\">n/2<sup>h+1</sup></span> such nodes: <span class=\"quiz-math\">Σ<sub>h</sub> h  n/2<sup>h+1</sup> ≤ n</span>. Most nodes are leaves or near them.</li><li><strong>Slower in practice:</strong> the sift jumps from <code>i</code> to <code>2i + 1</code> — far apart in memory, so caches help little — and it makes more comparisons (measured on random data: about 1.7 n log₂ n, against about 1.2 for median-of-three quicksort). Its strength is the guarantee: <span class=\"quiz-math\">O(n log n)</span> worst case with <span class=\"quiz-math\">O(1)</span> extra space.</li></ul>"
+    },
+    {
+      "id": "W10-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Define a <strong>stable</strong> sort. Give a practical reason to want one, say which of the six sorts in <code>dsa/sorting.py</code> are stable, and explain why sorting <code>(key, tag)</code> tuples does <strong>not</strong> test stability.</p>",
+      "answer": "<ul><li><strong>Stable:</strong> elements with equal keys come out in the order they went in.</li><li><strong>Why:</strong> sorting records by one field after another. Sort students by name, then <strong>stably</strong> by grade: within a grade they stay in name order.</li><li><strong>In <code>dsa/sorting.py</code>:</strong> bubble, insertion and merge sort are stable; selection, quick and heap sort are not.</li><li><strong>Tuples do not test it:</strong> Python compares <code>(key, tag)</code> tuples by the tag when the keys are equal, so every correct sort — stable or not — puts <code>(1, \"a\")</code> before <code>(1, \"c\")</code>. A stability test needs values that compare by key <strong>only</strong>, such as a class whose comparison methods look at the key alone.</li></ul>"
+    }
   ]
 }

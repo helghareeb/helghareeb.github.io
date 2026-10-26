@@ -1,4 +1,5 @@
 ---
+import EssayPractice from '../../../../components/EssayPractice.astro';
 import QuizSession from '../../../../components/QuizSession.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
@@ -6,7 +7,9 @@ import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
 import {
   DSA27_REPO,
   dsa27Weeks,
+  getDsa27MidtermPath,
   getDsa27PdfUrl,
+  MIDTERM_LAST_WEEK,
   getDsa27WeekPath,
   getQuizIndexPath,
   getWeekSlug,
@@ -39,12 +42,19 @@ const seoDescription = buildSeoDescription(
         <a class="button-secondary" href={getQuizIndexPath('en')}>{t.section}</a>
         {previous && <a class="button-secondary" href={getDsa27WeekPath('en', previous.week)}>{t.previous}</a>}
         {next && <a class="button-secondary" href={getDsa27WeekPath('en', next.week)}>{t.next}</a>}
+        {week.week <= MIDTERM_LAST_WEEK && <a class="button-secondary" href={getDsa27MidtermPath('en')}>{t.midterm}</a>}
       </div>
     </section>
 
     <section class="shell section">
       <QuizSession lang="en" quizId={`dsa27:week${week.week}`} questions={week.questions} />
     </section>
+
+    {week.essays && week.essays.length > 0 && (
+      <section class="shell section">
+        <EssayPractice lang="en" quizId={`dsa27:week${week.week}`} essays={week.essays} />
+      </section>
+    )}
 
     <section class="shell section">
       <article class="notice-card">

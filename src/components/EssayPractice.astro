@@ -1,0 +1,124 @@
+---
+import { quizLabels, type QuizEssay } from '../utils/quizzes';
+
+interface Props {
+  lang: 'ar' | 'en';
+  quizId: string;
+  essays: QuizEssay[];
+}
+
+const { lang, quizId, essays } = Astro.props;
+const t = quizLabels[lang];
+const totalMarks = essays.reduce((sum, essay) => sum + essay.marks, 0);
+---
+
+<section class="essays" data-essays data-essays-id={quizId} data-show-label={t.showModel} data-hide-label={t.hideModel}>
+  <div class="section-heading">
+    <p class="section-kicker">{t.marks(totalMarks)}</p>
+    <h2 class="section-title">{t.essays}</h2>
+  </div>
+  <p>{t.essaysLead(essays.length, totalMarks)}</p>
+  <p class="notice-card essays__total">
+    <strong>{t.essayTotal}:</strong> <span data-essay-score>0</span> / {totalMarks}
+  </p>
+
+  <ol class="quiz__list" dir="ltr" lang="en">
+    {essays.map((essay) => (
+      <li class="content-card quiz-question essay-question" data-essay-id={essay.id} data-marks={essay.marks}>
+        <p class="content-card__meta quiz-question__meta">
+          <span>{essay.id}</span>
+          {essay.level && <span class="quiz-question__level">{t.levels[essay.level]}</span>}
+          <span>{t.marks(essay.marks)}</span>
+        </p>
+        <div class="quiz-question__stem" set:html={essay.stem} />
+        <label class="essay-question__label">
+          <span dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>{t.yourAnswer}</span>
+          <textarea rows="6" data-essay-text></textarea>
+        </label>
+        <div class="quiz__controls">
+          <button type="button" class="button-secondary" data-essay-toggle>{t.showModel}</button>
+          <label class="quiz__filter" data-essay-mark-wrap hidden>
+            <span dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>{t.selfMark}</span>
+            <select data-essay-mark>
+              <option value="">–</option>
+              {Array.from({ length: essay.marks * 2 + 1 }, (_, i) => i / 2).map((value) => (
+                <option value={value}>{value} / {essay.marks}</option>
+              ))}
+            </select>
+          </label>
+        </div>
+        <div class="quiz-question__feedback" data-essay-model hidden>
+          <p class="quiz-question__verdict">{t.modelAnswer}</p>
+          <div class="quiz-question__explanation" set:html={essay.answer} />
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<script>
+  type Saved = Record<string, { text?: string; mark?: string; open?: boolean }>;
+
+  const read = (key: string): Saved => {
+    try {
+      return JSON.parse(window.localStorage.getItem(key) || '{}') as Saved;
+    } catch {
+      return {};
+    }
+  };
+  const write = (key: string, value: Saved) => {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    } catch {
+      // No storage (private browsing): the page still works for this visit.
+    }
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-essays]').forEach((root) => {
+    const key = `essays:${root.dataset.essaysId}`;
+    const saved = read(key);
+    const scoreSlot = root.querySelector('[data-essay-score]')!;
+    const items = Array.from(root.querySelectorAll<HTMLElement>('[data-essay-id]'));
+
+    const total = () => {
+      const sum = items.reduce((acc, item) => acc + Number(saved[item.dataset.essayId!]?.mark || 0), 0);
+      scoreSlot.textContent = String(sum);
+    };
+
+    for (const item of items) {
+      const id = item.dataset.essayId!;
+      const entry = (saved[id] ??= {});
+      const text = item.querySelector<HTMLTextAreaElement>('[data-essay-text]')!;
+      const toggle = item.querySelector<HTMLButtonElement>('[data-essay-toggle]')!;
+      const model = item.querySelector<HTMLElement>('[data-essay-model]')!;
+      const markWrap = item.querySelector<HTMLElement>('[data-essay-mark-wrap]')!;
+      const mark = item.querySelector<HTMLSelectElement>('[data-essay-mark]')!;
+
+      const show = (open: boolean) => {
+        model.hidden = !open;
+        markWrap.hidden = !open;
+        toggle.textContent = open ? root.dataset.hideLabel! : root.dataset.showLabel!;
+      };
+
+      text.value = entry.text ?? '';
+      mark.value = entry.mark ?? '';
+      show(!!entry.open);
+
+      text.addEventListener('input', () => {
+        entry.text = text.value;
+        write(key, saved);
+      });
+      toggle.addEventListener('click', () => {
+        entry.open = model.hidden;
+        show(entry.open);
+        write(key, saved);
+      });
+      mark.addEventListener('change', () => {
+        entry.mark = mark.value;
+        write(key, saved);
+        total();
+      });
+    }
+    total();
+  });
+</script>

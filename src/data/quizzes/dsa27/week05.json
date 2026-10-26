@@ -287,6 +287,305 @@
       ],
       "answer": 1,
       "explanation": "<p><code>ChainingHashMap</code> (Week 13) stores an <code>Array</code> of chains of <code>Entry</code> nodes.</p>"
+    },
+    {
+      "id": "W5-M23",
+      "level": "why",
+      "stem": "<p>What is printed?</p><pre><code>ll = LinkedList([1, 2, 3, 4])\nnode = ll.head.next\nnode.next = node.next.next\nprint(list(ll), len(ll))</code></pre>",
+      "options": [
+        "<code>[1, 2, 4] 3</code>",
+        "<code>[1, 3, 4] 3</code>",
+        "<code>[1, 2, 4] 4</code>",
+        "<code>[1, 2, 3, 4] 4</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>node</code> is the second node, and <code>node.next = node.next.next</code> skips node 3, so the walk finds <code>[1, 2, 4]</code>. But the change bypassed the list's methods, so <code>_size</code> was never decremented and <code>len</code> still says 4. (a) is what <code>remove(3)</code> would leave. (b) skips the wrong node.</p>"
+    },
+    {
+      "id": "W5-M24",
+      "level": "how",
+      "stem": "<p>On a list of 6 nodes, <code>insert_at(4, x)</code> runs. How many times does <code>prev = prev.next</code> run?</p>",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "3"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>prev</code> must stop on the node <strong>before</strong> the gap, at index 3. It starts at index 0, so <code>range(index - 1)</code> moves it 3 times. 4 (c) is one step too far: the new node would land at index 5.</p>"
+    },
+    {
+      "id": "W5-M25",
+      "level": "what",
+      "stem": "<p><code>ll = LinkedList([1, 2, 3])</code>. Which call raises <code>IndexError</code>?</p>",
+      "options": [
+        "<code>ll[3]</code>",
+        "<code>ll.insert_at(3, 9)</code>",
+        "<code>ll[-1]</code>",
+        "<code>ll.insert_at(0, 9)</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Reading allows <code>0 &lt;= index &lt; len</code>, so <code>ll[3]</code> is out of range. Inserting allows <code>0 &lt;= index &lt;= len</code>, so (b) is a legal append at the end and (d) is <code>push_front</code>. <code>ll[-1]</code> (c) is 3: <code>__getitem__</code> adds <code>_size</code> to a negative index.</p>"
+    },
+    {
+      "id": "W5-M26",
+      "level": "what",
+      "stem": "<p>In a list with a sentinel node, the list is empty when:</p>",
+      "options": [
+        "<code>self.sentinel is None</code>",
+        "<code>self.sentinel.next is None</code>",
+        "<code>self.sentinel.value is None</code>",
+        "the sentinel has been removed"
+      ],
+      "answer": 1,
+      "explanation": "<p>The sentinel is permanent. It is never <code>None</code> (a) and never removed (d), and its value is meaningless (c). The first real node is <code>sentinel.next</code>, so no real node means <code>sentinel.next is None</code>.</p>"
+    },
+    {
+      "id": "W5-M27",
+      "level": "how",
+      "stem": "<p>In a doubly linked list, <code>x</code> is a node that is neither the first nor the last. Which two assignments remove it from the list?</p>",
+      "options": [
+        "<code>x.next = x.prev</code> and <code>x.prev = x.next</code>",
+        "<code>x.prev = None</code> and <code>x.next = None</code>",
+        "<code>x.prev.next = x.next</code> and <code>x.next.prev = x.prev</code>",
+        "<code>x.prev.next = x.prev</code> and <code>x.next.prev = x.next</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>The node before <code>x</code> must point past it, and the node after <code>x</code> must point back past it. (a) and (b) change only <code>x</code>'s own references, which leaves the neighbours still linked to <code>x</code>. (d) makes each neighbour point at itself.</p>"
+    },
+    {
+      "id": "W5-M28",
+      "level": "how",
+      "stem": "<p>A new node is inserted between two neighbouring nodes <code>a</code> and <code>b</code> of a <strong>doubly</strong> linked list. How many references must be set, counting the new node's own?</p>",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>new.prev = a</code>, <code>new.next = b</code>, <code>a.next = new</code> and <code>b.prev = new</code>. A singly linked list needs only two of these, which is the \"twice the bookkeeping\" of the doubly linked list.</p>"
+    },
+    {
+      "id": "W5-M29",
+      "level": "why",
+      "stem": "<p>A student adds <code>_tail</code> to the list. Their <code>append</code> decides \"empty\" by testing <code>self._tail is None</code>, and their <code>pop_front</code> updates <code>head</code> and <code>_size</code> but never <code>_tail</code>. What does this print?</p><pre><code>ll = LinkedList([7])\nll.pop_front()\nll.append(5)\nprint(list(ll), len(ll))</code></pre>",
+      "options": [
+        "<code>[] 1</code>",
+        "<code>[5] 1</code>",
+        "<code>[7, 5] 2</code>",
+        "it raises <code>AttributeError</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>After <code>pop_front</code>, <code>head</code> is <code>None</code> but <code>_tail</code> still refers to the old node 7. <code>append</code> sees a tail that is not <code>None</code>, so it links 5 after that dead node and never sets <code>head</code>. The walk from <code>head</code> finds nothing, while <code>_size</code> went from 0 to 1. It fails silently and raises no error (d). Every method that can empty the list must clear <code>_tail</code>.</p>"
+    },
+    {
+      "id": "W5-M30",
+      "level": "how",
+      "stem": "<p><code>reverse()</code> runs on 1 → 2 → 3. After the <strong>first</strong> pass of the loop body, what is the state?</p>",
+      "options": [
+        "<code>prev</code> is <code>None</code>, <code>current</code> is <code>Node(2)</code>, <code>Node(1).next</code> is <code>Node(2)</code>",
+        "<code>prev</code> is <code>Node(1)</code>, <code>current</code> is <code>Node(2)</code>, <code>Node(1).next</code> is <code>None</code>",
+        "<code>prev</code> is <code>Node(2)</code>, <code>current</code> is <code>Node(3)</code>, <code>Node(2).next</code> is <code>Node(1)</code>",
+        "<code>prev</code> is <code>Node(1)</code>, <code>current</code> is <code>Node(2)</code>, <code>Node(1).next</code> is <code>Node(2)</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>The body saves <code>following = Node(2)</code>, turns <code>Node(1).next</code> round to <code>prev</code>, which is <code>None</code>, then steps forward: <code>prev</code> becomes <code>Node(1)</code> and <code>current</code> becomes <code>Node(2)</code>. (d) forgets that the link was turned. (c) is the state after the <strong>second</strong> pass.</p>"
+    },
+    {
+      "id": "W5-M31",
+      "level": "why",
+      "stem": "<p>Suppose <code>insert_at</code> had <strong>no</strong> <code>index == 0</code> case and went straight to the walk. What would <code>insert_at(0, 9)</code> do to <code>[1, 2, 3]</code>?</p>",
+      "options": [
+        "<code>[9, 1, 2, 3]</code>, as it should",
+        "raise <code>IndexError</code>",
+        "give <code>[1, 9, 2, 3]</code>: <code>range(-1)</code> is empty, so the node goes after the head",
+        "loop for ever"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>range(0 - 1)</code> is empty, so <code>prev</code> stays on the head, and the new node is spliced in after it, at index 1. No error is raised (b), and the list is wrong. On an empty list <code>prev</code> is <code>None</code>, and <code>prev.next</code> raises <code>AttributeError</code>. Position 0 has no node before it, so the head itself must change: that is <code>push_front</code>.</p>"
+    },
+    {
+      "id": "W5-M32",
+      "level": "what",
+      "stem": "<p><code>ll = LinkedList([4, 2, 4])</code>, then <code>ll.remove(4)</code>. Now <code>list(ll)</code> is:</p>",
+      "options": [
+        "<code>[2]</code>",
+        "<code>[4, 2]</code>",
+        "<code>[4, 2, 4]</code>",
+        "<code>[2, 4]</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>remove</code> stops at the <strong>first</strong> node holding the value: here it is the head (the special case), so <code>head</code> moves on and the second 4 stays. (a) would remove every 4.</p>"
+    },
+    {
+      "id": "W5-M33",
+      "level": "why",
+      "stem": "<p>Walking a dynamic array and walking a linked list are both <span class=\"quiz-math\">O(n)</span>, yet the array walk is usually several times faster. Why?</p>",
+      "options": [
+        "The array walk is really <span class=\"quiz-math\">O(log n)</span>",
+        "Each step of the list walk must update <code>_size</code>",
+        "The array's references are contiguous and the processor reads memory in blocks; nodes are scattered, so each <code>next</code> may jump elsewhere",
+        "Python copies every node as the walk reaches it"
+      ],
+      "answer": 2,
+      "explanation": "<p>It is a constant factor that Big-O hides. An array's references are contiguous, and memory is fetched in blocks (the cache). A list's nodes were created one at a time, wherever there was room. Both walks are <span class=\"quiz-math\">Θ(n)</span> (a), and walking does not touch <code>_size</code> (b).</p>"
+    },
+    {
+      "id": "W5-M34",
+      "level": "why",
+      "stem": "<p>In a <strong>circular</strong> list the last node points back to the first. What does the usual loop <code>while node is not None:</code> do on it?</p>",
+      "options": [
+        "It loops for ever, because no <code>next</code> is ever <code>None</code>",
+        "It visits every node once and stops",
+        "It raises <code>AttributeError</code> at the end",
+        "It stops when it returns to the head"
+      ],
+      "answer": 0,
+      "explanation": "<p>Every node has a successor, so <code>node</code> is never <code>None</code> and the loop never ends. A circular walk must stop when it comes back to its starting node. Nothing in the loop shown checks for that (d).</p>"
+    },
+    {
+      "id": "W5-M35",
+      "level": "how",
+      "stem": "<p>What is printed?</p><pre><code>a, b, c = Node(1), Node(2), Node(3)\na.next = b\nb.next = c\nb.next, c.next = None, b\nprint(a.next.value, c.next.value, b.next)</code></pre>",
+      "options": [
+        "<code>2 3 None</code>",
+        "<code>2 2 None</code>",
+        "<code>3 2 None</code>",
+        "<code>2 None 3</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>a.next</code> is still <code>b</code>, whose value is 2. The tuple assignment sets <code>b.next = None</code> and <code>c.next = b</code>, so <code>c.next.value</code> is 2 too, and <code>b.next</code> prints <code>None</code>. (a) reads <code>c.next</code> as if it still pointed forward.</p>"
+    },
+    {
+      "id": "W5-M36",
+      "level": "what",
+      "stem": "<p><code>LinkedList().pop_front()</code>:</p>",
+      "options": [
+        "returns <code>None</code>",
+        "returns 0",
+        "raises <code>AttributeError</code>",
+        "raises <code>IndexError</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>The contract raises <code>IndexError(\"pop from empty list\")</code>, like <code>list.pop()</code>. Without the check, <code>self.head.value</code> would raise <code>AttributeError</code> (c) on <code>None</code>, which is W5-B3.</p>"
+    },
+    {
+      "id": "W5-M37",
+      "level": "why",
+      "stem": "<p>You hold a reference <code>node</code> to a node in the middle of a long <strong>singly</strong> linked list. Inserting a new node immediately <strong>before</strong> it costs:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(1)</span>, like inserting after it",
+        "amortised <span class=\"quiz-math\">O(1)</span>",
+        "<span class=\"quiz-math\">O(n)</span>: the node before it must be found by walking from the head",
+        "<span class=\"quiz-math\">O(log n)</span>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Inserting before a node means changing its <strong>predecessor's</strong> <code>next</code>, and a singly linked node has no reference back. Inserting <strong>after</strong> it is <span class=\"quiz-math\">O(1)</span> (a). A doubly linked list makes both <span class=\"quiz-math\">O(1)</span>.</p>"
+    },
+    {
+      "id": "W5-M38",
+      "level": "how",
+      "stem": "<p>What is printed?</p><pre><code>ll = LinkedList()\nfor v in [3, 1, 2]:\n    ll.push_front(v)\nll.append(ll.pop_front())\nprint(list(ll))</code></pre>",
+      "options": [
+        "<code>[1, 3, 2]</code>",
+        "<code>[2, 1, 3]</code>",
+        "<code>[3, 1, 2]</code>",
+        "<code>[1, 2, 3]</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Three <code>push_front</code> calls build <code>[2, 1, 3]</code> (b), since the last one pushed is first. <code>pop_front</code> takes the 2, and <code>append</code> puts it at the end: <code>[1, 3, 2]</code>. The front value has moved to the back, a rotation.</p>"
+    },
+    {
+      "id": "W5-M39",
+      "level": "what",
+      "stem": "<p><code>insert_at(2, x)</code> on a <strong>singly</strong> linked list of 5 nodes. How many references held by nodes that were <strong>already</strong> in the list change?</p>",
+      "options": [
+        "none",
+        "2",
+        "3, the nodes after the gap",
+        "1, <code>prev.next</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Only the node at index 1 changes its <code>next</code>, to the new node. The new node's own <code>next</code> is set as it is made. Every node after the gap is untouched (c), which is why the splice is <span class=\"quiz-math\">O(1)</span> once the walk has found <code>prev</code>.</p>"
+    },
+    {
+      "id": "W5-M40",
+      "level": "why",
+      "stem": "<p>A singly linked list with <code>head</code> and <code>_tail</code> is reversed in place. What must happen to <code>_tail</code>?</p>",
+      "options": [
+        "Nothing: the last node does not change",
+        "It must refer to the old first node, which can be saved before the loop",
+        "It must be found by a walk after the loop, an extra <span class=\"quiz-math\">O(n)</span>",
+        "It must be set to <code>None</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>After reversing, the old first node is the last node. Saving <code>old_head = self.head</code> before the loop and setting <code>self._tail = old_head</code> after it costs <span class=\"quiz-math\">O(1)</span>, so no walk is needed (c). The last node certainly changes (a), unless the list has at most one node.</p>"
+    }
+  ],
+  "essays": [
+    {
+      "id": "W5-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Compare a dynamic array and a singly linked list on four operations, with their costs. For each structure, give one situation where you would choose it, and say why.</p>",
+      "answer": "<div class=\"quiz-table\"><table><thead><tr><th>Operation</th><th>Dynamic array</th><th>Singly linked list</th></tr></thead><tbody><tr><td>read element i</td><td><span class=\"quiz-math\">O(1)</span></td><td><span class=\"quiz-math\">O(n)</span></td></tr><tr><td>insert / remove at the front</td><td><span class=\"quiz-math\">O(n)</span></td><td><span class=\"quiz-math\">O(1)</span></td></tr><tr><td>append at the end</td><td>amortised <span class=\"quiz-math\">O(1)</span></td><td><span class=\"quiz-math\">O(n)</span>, or <span class=\"quiz-math\">O(1)</span> with a tail</td></tr><tr><td>insert next to a node you hold</td><td><span class=\"quiz-math\">O(n)</span></td><td><span class=\"quiz-math\">O(1)</span></td></tr></tbody></table></div><ul><li><strong>Choose the array</strong> when you index by position, iterate a lot, or care about memory — e.g. storing measurements you read by index. It is compact and cache-friendly.</li><li><strong>Choose the list</strong> when you insert and remove at the front, or splice at positions you already hold — e.g. a stack of undo actions, the chains of a hash table. No copying, ever.</li></ul>"
+    },
+    {
+      "id": "W5-E2",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Explain <code>push_front</code> step by step with a diagram. Show what goes wrong if the two assignments are done in the other order.</p>",
+      "answer": "<ul><li>Step 1: <code>new.next = self.head</code> — the new node points at the current first node.</li><li>Step 2: <code>self.head = new</code> — the list now starts at the new node. Then <code>_size += 1</code>. Two assignments: <span class=\"quiz-math\">O(1)</span>.</li><li>Diagram: new node → old first node → … → <code>None</code>, with <code>head</code> moving from the old first node to the new one.</li><li><strong>Reversed order:</strong> <code>self.head = new</code> first, then <code>new.next = self.head</code> sets <code>new.next = new</code> — a node pointing at itself. Nothing refers to the old first node any more, so the rest of the list is lost, and iterating loops for ever over the one node.</li></ul>"
+    },
+    {
+      "id": "W5-E3",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p><code>LinkedList</code> supports <code>ll[i]</code>, just like an array. Explain why the cost is different, and why <code>for i in range(len(ll)): ll[i]</code> is a bad loop. What should be written instead?</p>",
+      "answer": "<ul><li>Array indexing is address arithmetic, <span class=\"quiz-math\">O(1)</span>. List indexing must follow <code>next</code> from <code>head</code> i times, <span class=\"quiz-math\">O(i)</span> — the same interface hides a different cost.</li><li>In the loop, each <code>ll[i]</code> starts again from the head: <span class=\"quiz-math\">0 + 1 + … + (n-1) = O(n<sup>2</sup>)</span> for what should be one pass.</li><li>Write <code>for value in ll:</code> — <code>__iter__</code> keeps its place and walks once: <span class=\"quiz-math\">O(n)</span>.</li></ul>"
+    },
+    {
+      "id": "W5-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>A tail reference makes <code>append</code> <span class=\"quiz-math\">O(1)</span>. What does it cost? Name the methods that must change, and explain why removing the last node is still <span class=\"quiz-math\">O(n)</span>.</p>",
+      "answer": "<ul><li><strong>Benefit:</strong> <code>append</code> links after <code>_tail</code> and moves <code>_tail</code>: <span class=\"quiz-math\">O(1)</span> instead of a walk.</li><li><strong>Cost:</strong> one more reference to keep correct in every method that can change the last node: <code>push_front</code> and <code>append</code> on an <strong>empty</strong> list (the new node is also the tail), <code>insert_at</code> at the end, <code>pop_front</code> of the <strong>only</strong> node, <code>remove</code> of the last node, and <code>reverse</code> (head and tail swap).</li><li><strong>Removing the last node</strong> is still <span class=\"quiz-math\">O(n)</span>: <code>_tail</code> must move to the node before it, and in a singly linked list only a walk from the head finds that node.</li></ul>"
+    },
+    {
+      "id": "W5-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Explain what a doubly linked list and a sentinel node each fix, and what each costs.</p>",
+      "answer": "<ul><li><strong>Doubly linked:</strong> each node also references its predecessor. Removing a node you hold, and removing from the end, become <span class=\"quiz-math\">O(1)</span>; the list can be walked backwards. Cost: one more reference per node, and every insertion and removal updates twice as many links.</li><li><strong>Sentinel:</strong> a permanent node before the first real one, so every real node has a predecessor and there is no special case for the head (or for an empty list). Cost: one extra node, and every method must remember that the first real node is <code>sentinel.next</code>.</li></ul>"
+    },
+    {
+      "id": "W5-E6",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>A music player keeps a playlist. The user presses <em>next</em> and <em>previous</em>, and can delete the song that is playing. Which structure would you choose: a dynamic array, a singly linked list or a doubly linked list? Give the cost of each of the three actions in your choice, and say why each of the other two is worse.</p>",
+      "answer": "<ul><li><strong>Choice:</strong> a doubly linked list, holding a reference to the current node.</li><li><strong>Costs:</strong> <em>next</em> is <code>current = current.next</code>, <span class=\"quiz-math\">O(1)</span>. <em>Previous</em> is <code>current = current.prev</code>, <span class=\"quiz-math\">O(1)</span>. <em>Delete the current song</em> is <code>current.prev.next = current.next</code> and <code>current.next.prev = current.prev</code>, <span class=\"quiz-math\">O(1)</span>, with the head and tail handled as special cases (or a sentinel).</li><li><strong>Singly linked:</strong> <em>next</em> is <span class=\"quiz-math\">O(1)</span>, but <em>previous</em> and <em>delete</em> need the node before the current one, so they mean a walk from the head, <span class=\"quiz-math\">O(n)</span>.</li><li><strong>Dynamic array</strong>, holding an index: <em>next</em> and <em>previous</em> are <span class=\"quiz-math\">O(1)</span>, but deleting shifts every later song left, <span class=\"quiz-math\">O(n)</span>.</li></ul>"
+    },
+    {
+      "id": "W5-E7",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Explain <code>insert_at(index, value)</code> step by step: the check on <code>index</code>, the case <code>index == 0</code>, the walk, and the splice. Why does the walk stop after <code>index - 1</code> steps? Give the best-case and worst-case cost, and show what goes wrong if the loop is written <code>for _ in range(index):</code>, both for an index in the middle and for <code>index == len(ll)</code>.</p>",
+      "answer": "<ul><li><strong>Steps:</strong> raise <code>IndexError</code> unless <code>0 &lt;= index &lt;= len</code> (<code>index == len</code> means \"at the end\"). If <code>index == 0</code>, call <code>push_front</code>, because there is no node before the gap. Otherwise walk <code>prev</code> from the head <code>index - 1</code> steps, then <code>prev.next = Node(value, prev.next)</code> and <code>_size += 1</code>.</li><li><strong>Why <code>index - 1</code>:</strong> only the node <strong>before</strong> the gap holds the reference that must change. It is at index <code>index - 1</code>, which is <code>index - 1</code> steps from the head.</li><li><strong>Cost:</strong> best case <span class=\"quiz-math\">O(1)</span>, at index 0 or 1. Worst case <span class=\"quiz-math\">O(n)</span>, at the end. The splice itself is always <span class=\"quiz-math\">O(1)</span>.</li><li><strong><code>range(index)</code>:</strong> the walk goes one node too far. <code>insert_at(1, 9)</code> on <code>[1, 2, 3]</code> gives <code>[1, 2, 9, 3]</code>, with no error. At <code>index == len</code>, <code>prev</code> walks off the end to <code>None</code>, and <code>prev.next</code> raises <code>AttributeError</code>.</li></ul>"
+    },
+    {
+      "id": "W5-E8",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>A linked list and a dynamic array are both <span class=\"quiz-math\">O(n)</span> to walk, yet measurement shows the array is faster and smaller. Explain both differences, with numbers for CPython. When is the linked list still the right choice?</p>",
+      "answer": "<ul><li><strong>Memory:</strong> an array slot is one 8-byte reference. A <code>Node</code> with <code>__slots__</code> is about 48 bytes on 64-bit CPython, six times as much per element, plus the value object in both cases.</li><li><strong>Speed:</strong> the array's references are contiguous and the processor reads memory in blocks (the cache). Nodes are scattered, so every <code>next</code> may jump to a new place. That is the same Big-O with a bigger constant.</li><li><strong>Still the right choice:</strong> frequent insertion or removal at the front (a stack); splicing at positions you already hold (an LRU cache, an editor's buffer); never paying for a big copy at an unlucky moment; and short chains inside a hash table.</li></ul>"
+    },
+    {
+      "id": "W5-E9",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain how <code>reverse()</code> reverses a list in place with three references. State what <code>prev</code> and <code>current</code> mean at the start of each pass of the loop, why <code>following</code> must be saved first, and why the extra space is <span class=\"quiz-math\">O(1)</span>. Compare with building a reversed copy with <code>push_front</code>.</p>",
+      "answer": "<ul><li><strong>The invariant:</strong> at the start of each pass, <code>prev</code> is the head of the part already reversed (<code>None</code> at first) and <code>current</code> is the head of the part still to reverse. The loop ends when <code>current</code> is <code>None</code>, and then <code>self.head = prev</code>.</li><li><strong>Each pass:</strong> <code>following = current.next</code>, then <code>current.next = prev</code>, then <code>prev, current = current, following</code>. That turns one link round and moves one step forward.</li><li><strong>Why save <code>following</code> first:</strong> once <code>current.next</code> points backwards, it is the only reference to the rest of the list. Without the saved copy, the rest is lost, and the loop steps back onto <code>prev</code> (W5-B4).</li><li><strong>Space:</strong> three references, whatever n is, so <span class=\"quiz-math\">O(1)</span> extra space and <span class=\"quiz-math\">O(n)</span> time. A reversed copy built by <code>push_front</code> also takes <span class=\"quiz-math\">O(n)</span> time, but it makes n new nodes, which is <span class=\"quiz-math\">O(n)</span> extra space, and it leaves the original list unchanged.</li></ul>"
     }
   ]
 }

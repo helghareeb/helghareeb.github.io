@@ -288,5 +288,42 @@
       "answer": 3,
       "explanation": "<p>Both keep extra data in each node — a height or a colour — and rotate nodes after changes so that the height stays <span class=\"quiz-math\">O(log n)</span>. They are beyond the bylaw (named, not examined); <code>dsa/tree.py</code> is <strong>unbalanced</strong> (a).</p>"
     }
+  ],
+  "essays": [
+    {
+      "id": "W11-E1",
+      "level": "what",
+      "marks": 3,
+      "stem": "<p>Define root, leaf, parent, subtree, depth and height, using the tree Q as the example for each. Why does a tree of n nodes always have exactly <span class=\"quiz-math\">n - 1</span> edges?</p>",
+      "answer": "<ul><li><strong>Root:</strong> the one node with no parent — 30. <strong>Leaf:</strong> a node with no children — 8, 17, 25, 40, 50. <strong>Parent:</strong> 20 is the parent of 17 and 25.</li><li><strong>Subtree:</strong> a node and everything below it — the subtree of 45 is {45, 40, 60, 50}.</li><li><strong>Depth:</strong> edges from the root down to the node — 17 has depth 3. <strong>Height:</strong> edges on the longest path down to a leaf — 15 has height 2 (15, 20, 17), and the tree's height is 3.</li><li><strong><span class=\"quiz-math\">n - 1</span> edges:</strong> every node except the root has exactly one parent, so exactly one edge comes into it from above; the root has none. Counting edges by the node they lead into gives <span class=\"quiz-math\">n - 1</span>.</li></ul>"
+    },
+    {
+      "id": "W11-E2",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>State the BST property. Give a tree in which every parent–child pair is in the right order but which is <strong>not</strong> a BST, and explain how <code>is_valid</code> must be designed to reject it. What is its cost?</p>",
+      "answer": "<ul><li><strong>Property:</strong> for every node x, every value in x's left subtree is smaller than x and every value in its right subtree is larger.</li><li><strong>Counter-example:</strong> root 8, left child 3, right child 10, and 9 as the right child of 3. Each pair is in order (3 &lt; 8, 10 &gt; 8, 9 &gt; 3), but 9 is in 8's left subtree. <code>contains(9)</code> goes right at 8 and never finds it.</li><li><strong>Design:</strong> carry an allowed range (low, high) down the recursion, starting unbounded at the root. Going left from x sets high = x; going right sets low = x. A node outside its range makes the tree invalid; the empty tree is valid. Test \"no bound\" with <code>is not None</code>, not truthiness, or a bound of 0 is lost.</li><li><strong>Cost:</strong> each node is checked once, <span class=\"quiz-math\">O(1)</span> work: <span class=\"quiz-math\">O(n)</span> time, <span class=\"quiz-math\">O(h)</span> stack.</li></ul>"
+    },
+    {
+      "id": "W11-E3",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Describe the three cases of BST deletion. For the two-children case, explain why the in-order successor may take the deleted value's place, and why removing the successor is always easy.</p>",
+      "answer": "<ul><li><strong>Leaf:</strong> set the parent's link to it to <code>None</code>.</li><li><strong>One child:</strong> point the parent's link at that child; the child's whole subtree moves up one level and stays in order, because it lay on the same side of every ancestor as the deleted node.</li><li><strong>Two children:</strong> find the in-order successor — right once, then left until there is no left child. Copy its value into the node, then remove the successor's node.</li><li><strong>Why the successor fits:</strong> it is larger than everything in the left subtree (they are smaller than the deleted value, which is smaller than it), and it is the smallest value of the right subtree, so smaller than all that remain there.</li><li><strong>Why removal is easy:</strong> it was reached by going left until there was no left child, so it has no left child: it is a leaf or has one right child — one of the easy cases. Watch the case where the successor is the node's own right child: then the link to change is the node's <code>right</code> (W11-B3).</li><li><strong>Always:</strong> keep the parent; if the node is the root, <code>self.root</code> changes. <span class=\"quiz-math\">O(h)</span>.</li></ul>"
+    },
+    {
+      "id": "W11-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Name the four traversals of a binary tree, give the order of each, and for each say one thing it is <strong>used for</strong> and why it suits that use.</p>",
+      "answer": "<ul><li><strong>Pre-order</strong> (node, left, right): serialising a tree — re-inserting the list rebuilds the same shape, because every node comes after its ancestors; also prefix notation.</li><li><strong>In-order</strong> (left, node, right): listing a BST's values in <strong>sorted</strong> order without sorting; checking a BST (strictly increasing); range queries.</li><li><strong>Post-order</strong> (left, right, node): freeing a tree (children before the parent whose links you still need), evaluating an expression tree (operands before operator), computing sizes and heights (a node's answer needs its children's).</li><li><strong>Level-order</strong> (by depth, left to right): printing a tree level by level; the nearest nodes first — the idea of breadth-first search. Needs a queue.</li><li>(Marks: one for the orders, one per two correct uses with reasons.)</li></ul>"
+    },
+    {
+      "id": "W11-E5",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>\"A BST gives <span class=\"quiz-math\">O(log n)</span> search.\" When is that true, and when is it false? Explain with the height, give an insertion order that makes it false, and name the cure. Compare a BST with a sorted array for search, insert and listing in order.</p>",
+      "answer": "<ul><li><strong>True when the tree is short:</strong> every operation walks one path, <span class=\"quiz-math\">O(h)</span>, and h can be as small as <span class=\"quiz-math\">⌊ log<sub>2</sub> n ⌋</span>. On random insertion orders h is <span class=\"quiz-math\">O(log n)</span> on average — measured in Lecture 11, 26.6 for 4,096 values.</li><li><strong>False when the tree is tall:</strong> inserting sorted values (1, 2, …, n) makes every new value the largest so far, so it always goes right: a chain of height <span class=\"quiz-math\">n - 1</span>, and search is <span class=\"quiz-math\">O(n)</span> — about 205 µs against 1.8 µs at n = 4,096 in the lecture's measurement.</li><li><strong>Cure:</strong> a balanced BST — AVL or red-black — which re-shapes itself with rotations to keep h = <span class=\"quiz-math\">O(log n)</span> in the worst case (beyond this course); or, with all values known in advance, insert the middle first (W11-C4).</li><li><strong>Against a sorted array:</strong> search <span class=\"quiz-math\">O(log n)</span> in both (the BST only while short); insert <span class=\"quiz-math\">O(n)</span> in the array (shifting) against <span class=\"quiz-math\">O(h)</span> in the BST (no moves); listing in order <span class=\"quiz-math\">O(n)</span> in both (in-order walk).</li></ul>"
+    }
   ]
 }

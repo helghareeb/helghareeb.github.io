@@ -288,5 +288,42 @@
       "answer": 0,
       "explanation": "<p><span class=\"quiz-math\">0 + (70 - 10)(9 - 0) / (100 - 10) = 540 / 90 = 6</span>, and <code>v[6] = 70</code>: found in one probe.</p>"
     }
+  ],
+  "essays": [
+    {
+      "id": "W8-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Describe binary search. State its loop invariant and use it to explain why the algorithm is correct, and show that it makes at most <span class=\"quiz-math\">⌊ log<sub>2</sub> n ⌋ + 1</span> comparisons. What must the caller guarantee?</p>",
+      "answer": "<ul><li><strong>Algorithm:</strong> keep <code>lo = 0</code>, <code>hi = n − 1</code>; while <code>lo &lt;= hi</code>, compare the target with <code>values[mid]</code>, <code>mid = (lo + hi) // 2</code>: equal → return <code>mid</code>; smaller middle → <code>lo = mid + 1</code>; larger → <code>hi = mid − 1</code>. Return −1 when the range is empty.</li><li><strong>Invariant:</strong> if the target is in the list, it is in <code>values[lo..hi]</code>. True at the start (whole list); each step removes only elements that the sorted order proves cannot be the target; so when the range is empty, the target is absent — the −1 is correct.</li><li><strong>Count:</strong> each unsuccessful comparison leaves at most half the range; after <span class=\"quiz-math\">⌊ log<sub>2</sub> n ⌋</span> halvings one element is left, and one more comparison settles it: <span class=\"quiz-math\">O(log n)</span>.</li><li><strong>Caller's guarantee:</strong> the list is <strong>sorted</strong> (a precondition — not checked).</li></ul>"
+    },
+    {
+      "id": "W8-E2",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Give four classic bugs in binary search. For each, give an input on which it fails, what happens, and the fix.</p>",
+      "answer": "<ul><li><code>while lo &lt; hi</code> (inclusive <code>hi</code>): the last candidate is never compared — <code>[42]</code> searched for 42 gives −1. <strong>Fix:</strong> <code>lo &lt;= hi</code>.</li><li><code>hi = mid</code>: when the range is one element and it is too big, nothing changes — <code>[1, 3]</code> searched for 0 loops for ever. <strong>Fix:</strong> <code>hi = mid − 1</code>.</li><li><code>lo = mid</code>: with <code>lo = 0, hi = 1</code> and <code>values[0]</code> too small, <code>mid</code> stays 0 — loops for ever. <strong>Fix:</strong> <code>lo = mid + 1</code>.</li><li><code>mid = (lo + hi) / 2</code> in Java/C: overflows on arrays over about <span class=\"quiz-math\">2<sup>30</sup></span> elements, giving a negative index. <strong>Fix:</strong> <code>lo + (hi − lo) / 2</code>.</li><li>(Also accepted: recursing on slices — returns an index into the slice, W8-B3.)</li></ul>"
+    },
+    {
+      "id": "W8-E3",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Define <code>lower_bound</code> and <code>upper_bound</code>. Give three uses of them, and explain why they never return −1.</p>",
+      "answer": "<ul><li><code>lower_bound(v, x)</code>: the first index i with <code>v[i] &gt;= x</code>; <code>upper_bound(v, x)</code>: the first with <code>v[i] &gt; x</code>. Both in <span class=\"quiz-math\">O(log n)</span>, on a sorted list.</li><li><strong>Uses:</strong> the insertion point that keeps the list sorted (<code>lower_bound</code>); the number of copies of x (<code>upper_bound − lower_bound</code>); the first occurrence (<code>lower_bound</code>, then check <code>v[i] == x</code>); the count of values in <code>[a, b)</code>.</li><li><strong>Never −1:</strong> they answer \"where\", not \"whether\" — every x has a position in the order, from 0 (before everything) to <code>len(v)</code> (after everything). That is why the search range is half-open, <code>[0, len(v))</code>: <code>len(v)</code> must be a possible answer.</li><li>Python: <code>bisect_left</code> and <code>bisect_right</code>.</li></ul>"
+    },
+    {
+      "id": "W8-E4",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Compare jump search, exponential search and interpolation search: cost, and a situation in which each is the right choice.</p>",
+      "answer": "<ul><li><strong>Jump</strong>, <span class=\"quiz-math\">O(√n)</span>: moves only forward, in blocks of <span class=\"quiz-math\">√n</span> — for storage where going back is expensive (tape, a stream read in order).</li><li><strong>Exponential</strong>, <span class=\"quiz-math\">O(log i)</span> for a target at index i: doubles a bound, then binary searches — for sequences of unknown length, or targets near the front.</li><li><strong>Interpolation</strong>, <span class=\"quiz-math\">O(log log n)</span> on average for evenly spread values but <span class=\"quiz-math\">O(n)</span> in the worst case: guesses the position from the values — for large, uniformly distributed keys (numeric IDs, timestamps) where you can trust the distribution.</li></ul>"
+    },
+    {
+      "id": "W8-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>A program searches an unsorted list of n values k times. When is it worth sorting the list first? Compare the costs, and give a concrete example with n = 1,000,000.</p>",
+      "answer": "<ul><li>Linear search k times: <span class=\"quiz-math\">O(kn)</span>. Sort once and binary search k times: <span class=\"quiz-math\">O(n log n + k log n)</span>.</li><li>Sorting pays once <span class=\"quiz-math\">kn &gt; n log n</span>, i.e. once <strong>k exceeds about <span class=\"quiz-math\">log<sub>2</sub> n</span></strong>.</li><li><strong>Example:</strong> n = 1,000,000. One linear search: up to 10^6^ reads. Sorting: about <span class=\"quiz-math\">n log<sub>2</sub> n ≈ 2 × 10<sup>7</sup></span> comparisons, then 20 per search. After about 20 searches the sort has paid for itself.</li><li>If the data also changes often, a sorted array's <span class=\"quiz-math\">O(n)</span> insertion is the catch: a balanced search tree (Week 11) or a hash table (Week 13) may fit better.</li></ul>"
+    }
   ]
 }

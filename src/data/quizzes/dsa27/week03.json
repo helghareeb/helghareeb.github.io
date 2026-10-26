@@ -339,6 +339,312 @@
       ],
       "answer": 3,
       "explanation": "<p>Each call spawns two subtrees almost as large as itself; the call count grows by a factor of about the golden ratio, 1.618, per step of n.</p>"
+    },
+    {
+      "id": "W3-M27",
+      "level": "how",
+      "stem": "<p>Lecture 03's <code>to_binary</code>:</p><pre><code>def to_binary(n):\n    if n &lt; 2:\n        return str(n)\n    return to_binary(n // 2) + str(n % 2)</code></pre><p>What does <code>to_binary(6)</code> return?</p>",
+      "options": [
+        "<code>'011'</code>",
+        "<code>'110'</code>",
+        "<code>'1100'</code>",
+        "<code>'6'</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p>to_binary(6) = to_binary(3) + \"0\" = (to_binary(1) + \"1\") + \"0\" = \"110\". The leading digits come from the recursive call, and the last digit is added on the way back up. (a) is the digits in the order they are computed, last first, which is what you would get by putting <code>str(n % 2)</code> <em>before</em> the call; (c) adds a digit too many; (d) is the decimal number unchanged.</p>"
+    },
+    {
+      "id": "W3-M28",
+      "level": "how",
+      "stem": "<p>With the course <code>gcd</code> (<code>return a</code> if <code>b == 0</code>, else <code>return gcd(b, a % b)</code>), how many calls does <code>gcd(48, 18)</code> make in total, counting the first?</p>",
+      "options": [
+        "2",
+        "3",
+        "18",
+        "4"
+      ],
+      "answer": 3,
+      "explanation": "<p>gcd(48, 18) → gcd(18, 12) → gcd(12, 6) → gcd(6, 0), which returns 6: four calls. (b) forgets the last call, the one that reaches the base case b == 0; (c) confuses the number of calls with the size of b. Euclid's algorithm is O(log min(a, b)), so the count stays small.</p>"
+    },
+    {
+      "id": "W3-M29",
+      "level": "why",
+      "stem": "<p>In <code>binary_strings</code>, the base case is changed from <code>return [\"\"]</code> to <code>return []</code>. What does <code>binary_strings(2)</code> return now?</p><pre><code>def binary_strings(n):\n    if n == 0:\n        return []\n    shorter = binary_strings(n - 1)\n    return [\"0\" + s for s in shorter] + [\"1\" + s for s in shorter]</code></pre>",
+      "options": [
+        "<code>[]</code>",
+        "<code>['0', '1']</code>",
+        "<code>['00', '01', '10', '11']</code>",
+        "it raises <code>RecursionError</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>binary_strings(0)</code> now returns <code>[]</code>, so both comprehensions in <code>binary_strings(1)</code> loop over nothing and return <code>[]</code>, and so does every call above it. There is exactly one string of length 0, the empty string, which is why the base case must be <code>[\"\"]</code>. There is no infinite recursion (d): n still goes down to 0. (c) is the correct answer with the original base case.</p>"
+    },
+    {
+      "id": "W3-M30",
+      "level": "why",
+      "stem": "<p><code>flatten</code> descends only into items for which <code>isinstance(item, list)</code> is true, not into everything that is iterable. Why?</p>",
+      "options": [
+        "strings are immutable, so <code>extend</code> cannot be called on them",
+        "<code>isinstance</code> is faster than checking for iterability",
+        "a one-character string contains itself, so descending into strings never reaches a base case",
+        "lists are the only iterable type in Python"
+      ],
+      "answer": 2,
+      "explanation": "<p>The string <code>\"ab\"</code> is iterable; its item <code>\"a\"</code> is also a string, and the item of <code>\"a\"</code> is <code>\"a\"</code> again, so the recursion never shrinks and ends in <code>RecursionError</code>. (a) is true of strings but has nothing to do with it; (b) is not the reason; (d) is false, since strings, tuples, sets, dicts and ranges are all iterable.</p>"
+    },
+    {
+      "id": "W3-M31",
+      "level": "what",
+      "stem": "<p>With the course's fast <code>power</code> (one call on <code>exponent // 2</code>, base case <code>exponent == 0</code>), at most how many frames of <code>power</code> are on the call stack at once during <code>power(2, 1000)</code>?</p>",
+      "options": [
+        "11",
+        "1,000",
+        "2",
+        "500"
+      ],
+      "answer": 0,
+      "explanation": "<p>The exponents are 1000, 500, 250, 125, 62, 31, 15, 7, 3, 1 and 0: one frame each, 11 at the deepest point, about log₂ n. (b) and (d) describe an <span class=\"quiz-math\">O(n)</span>-deep power; (c) ignores the frames that are waiting for their recursive call to return.</p>"
+    },
+    {
+      "id": "W3-M32",
+      "level": "what",
+      "stem": "<p>The memoised <code>fib_memo(30)</code> of Lecture 03 (memo in an <code>Array</code>) makes how many calls in total, counting the first?</p>",
+      "options": [
+        "30",
+        "59",
+        "2,692,537",
+        "31"
+      ],
+      "answer": 1,
+      "explanation": "<p>Each <code>fib_memo(k)</code> for k from 2 to 30 computes its value once, making two calls; after that it is looked up. That is 29 × 2 calls plus the first one: 59, against 2,692,537 for the naive <code>fib(30)</code> (c). (a) and (d) count the values computed, not the calls; a call that only looks up a stored answer still counts.</p>"
+    },
+    {
+      "id": "W3-M33",
+      "level": "why",
+      "stem": "<p>The course <code>merge_sorted</code> is called on two sorted lists of 600 numbers each, and raises <code>RecursionError</code>. Why?</p>",
+      "options": [
+        "its slices copy the lists, which costs <span class=\"quiz-math\">O(n<sup>2</sup>)</span> time",
+        "the two lists hold equal values, so the merge is not stable",
+        "a Python list cannot be longer than about 1,000 items",
+        "it makes one nested call per item it outputs: about 1,200 frames deep, past the limit of about 1,000"
+      ],
+      "answer": 3,
+      "explanation": "<p>Every call outputs one item and makes one nested call on the rest, so the depth is len(left) + len(right) = 1,200, past CPython's limit of about 1,000 frames. (a) is a real cost, but it makes the merge slow, not crash; (b) equal values are fine; (c) lists can hold millions of items. This is why merge sort's real merge, in Week 10, is a loop.</p>"
+    },
+    {
+      "id": "W3-M34",
+      "level": "why",
+      "stem": "<p><code>merge_sorted</code> compares the heads with <code>left[0] &lt;= right[0]</code>. What would change if it used <code>&lt;</code> instead?</p>",
+      "options": [
+        "equal values would be lost from the result",
+        "the merge would become <span class=\"quiz-math\">O(n<sup>2</sup>)</span>",
+        "on a tie the head of <code>right</code> would go first, so the merge would no longer be stable",
+        "it would raise an error when two heads are equal"
+      ],
+      "answer": 2,
+      "explanation": "<p>With <code>&lt;</code>, a tie takes the head of <code>right</code> first, so two equal keys swap their original order: the merge is still correct but not <strong>stable</strong>, and the test with <code>(1, \"L\")</code> and <code>(1, \"R\")</code> catches it. No value is lost (a), because one of the two heads is always taken; the cost is unchanged (b); equal values compare without error (d).</p>"
+    },
+    {
+      "id": "W3-M35",
+      "level": "how",
+      "stem": "<p><code>sum_digits(n)</code> makes one call on <code>n // 10</code> and does <span class=\"quiz-math\">O(1)</span> work besides. Its running time, in terms of the number n, is:</p>",
+      "options": [
+        "<span class=\"quiz-math\">O(log n)</span> — one call per decimal digit",
+        "<span class=\"quiz-math\">O(n)</span> — one call per unit of n",
+        "<span class=\"quiz-math\">O(1)</span> — the work per call is constant",
+        "<span class=\"quiz-math\">O(n log n)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p><span class=\"quiz-math\">T(d) = T(d-1) + c</span> in the number of digits d, so <span class=\"quiz-math\">O(d)</span>, and a number n has about log₁₀ n digits: <span class=\"quiz-math\">O(log n)</span>. (b) would be right for a recursion on n − 1, not on n // 10; (c) forgets that there is one call per digit.</p>"
+    },
+    {
+      "id": "W3-M36",
+      "level": "how",
+      "stem": "<p>With Lecture 03's <code>depth</code> (0 for a non-list; otherwise 1 + the deepest item, where an empty list has depth 1), what is <code>depth([1, [2, [3]], []])</code>?</p>",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "answer": 2,
+      "explanation": "<p>depth(1) = 0, depth([2, [3]]) = 1 + depth([3]) = 1 + 1 = 2, and depth([]) = 1 + 0 = 1. The outer list is 1 + max(0, 2, 1) = 3. (a) forgets to count the outer list; (b) counts the empty list as if it were nested inside the deepest one.</p>"
+    },
+    {
+      "id": "W3-M37",
+      "level": "what",
+      "stem": "<p>In the recursive solution of Towers of Hanoi with n disks, how many times does the <strong>largest</strong> disk move?</p>",
+      "options": [
+        "n times",
+        "exactly once",
+        "<span class=\"quiz-math\">2<sup>n-1</sup></span> times",
+        "twice: away and back"
+      ],
+      "answer": 1,
+      "explanation": "<p>The largest disk moves once, in the middle: before that move all n − 1 smaller disks go to the spare peg, and after it they come back on top. (c) is how often the <em>smallest</em> disk moves (W3-M38); (d) would mean the largest disk is moved off its target, which the algorithm never does.</p>"
+    },
+    {
+      "id": "W3-M38",
+      "level": "how",
+      "stem": "<p>In the moves returned by <code>hanoi(n)</code>, how many times does the <strong>smallest</strong> disk move?</p>",
+      "options": [
+        "once",
+        "n times",
+        "<span class=\"quiz-math\">2<sup>n</sup> - 1</span> times — every move",
+        "<span class=\"quiz-math\">2<sup>n-1</sup></span> times — every other move"
+      ],
+      "answer": 3,
+      "explanation": "<p>Disk k (1 is the smallest) moves <span class=\"quiz-math\">2<sup>n-k</sup></span> times, so the smallest disk moves <span class=\"quiz-math\">2<sup>n-1</sup></span> times: on every other move, every odd-numbered one. For n = 4 the counts are 8, 4, 2, 1, which add up to <span class=\"quiz-math\">2<sup>4</sup> - 1 = 15</span>. (c) is the total number of moves; (a) is the largest disk.</p>"
+    },
+    {
+      "id": "W3-M39",
+      "level": "why",
+      "stem": "<p>Why is <code>gcd</code> easy to rewrite as a plain <code>while</code> loop, while <code>hanoi</code> would need an explicit stack?</p>",
+      "options": [
+        "<code>gcd</code> makes one call as its very last action; <code>hanoi</code> branches, and must remember work still to do after each call",
+        "<code>gcd</code> is exponential and <code>hanoi</code> is not",
+        "<code>hanoi</code> cannot be written without recursion at all",
+        "Python optimises the tail call in <code>hanoi</code>, but not the one in <code>gcd</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>In <code>gcd</code>, the call <code>return gcd(b, a % b)</code> is the last thing done, so nothing has to be remembered: overwrite a and b and go round again. <code>hanoi</code> makes two calls and has work left after the first (move the largest disk, then the second call), and the call stack is what remembers it; a loop version must keep that stack itself. (b) is reversed; (c) is false, since any recursion can be a loop with a stack; (d) is false, since Python does no tail-call optimisation at all.</p>"
+    },
+    {
+      "id": "W3-M40",
+      "level": "why",
+      "stem": "<p>Lecture 03's <code>array_max(arr, i=0)</code> recurses on <code>i + 1</code> and never slices. What happens when it is called on a course <code>Array</code> of 5,000 numbers?</p>",
+      "options": [
+        "it returns the maximum in <span class=\"quiz-math\">O(n)</span> time and <span class=\"quiz-math\">O(1)</span> space",
+        "it returns the maximum, but in <span class=\"quiz-math\">O(n<sup>2</sup>)</span> time",
+        "it raises <code>RecursionError</code>: one frame per element, and 5,000 is past the limit of about 1,000",
+        "it returns <code>None</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>No slicing means no copying, so the time is <span class=\"quiz-math\">O(n)</span>, but each element still costs a frame: the depth is n, and 5,000 frames is past the limit. That is why (a) is wrong: the space is <span class=\"quiz-math\">O(n)</span>, not <span class=\"quiz-math\">O(1)</span>. (b) is the cost of the <em>slicing</em> version, <code>list_max</code>.</p>"
+    },
+    {
+      "id": "W3-M41",
+      "level": "how",
+      "stem": "<p>The course <code>subsets</code>:</p><pre><code>def subsets(items):\n    if not items:\n        return [[]]\n    rest = subsets(items[1:])\n    return rest + [[items[0]] + subset for subset in rest]</code></pre><p>What does <code>subsets([1, 2])</code> return, in this order?</p>",
+      "options": [
+        "<code>[[], [1], [2], [1, 2]]</code>",
+        "<code>[[], [2], [1], [1, 2]]</code>",
+        "<code>[[1, 2], [1], [2], []]</code>",
+        "<code>[[], [1, 2]]</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>subsets([2])</code> is <code>rest + [[2] + s for s in rest]</code> with <code>rest = [[]]</code>, so <code>[[], [2]]</code>. Then <code>subsets([1, 2])</code> is <code>[[], [2]]</code> (the subsets without 1) followed by <code>[[1], [1, 2]]</code> (the same with 1 in front). (a) is the same subsets in another order, which the tests would also accept after sorting, but it is not what this code returns.</p>"
+    },
+    {
+      "id": "W3-M42",
+      "level": "what",
+      "stem": "<p>Which of these can be used as a <code>dict</code> key or a <code>set</code> member?</p>",
+      "options": [
+        "<code>[1, 2]</code>",
+        "<code>{1: 2}</code>",
+        "<code>{1, 2}</code>",
+        "<code>(1, 2)</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>A key must be <strong>hashable</strong>, and the hash must not change: a tuple of hashable values is immutable, so it qualifies. A list (a), a dict (b) and a set (c) are mutable, and Python raises <code>TypeError: unhashable type</code>. Use <code>frozenset</code> if you need a set as a key.</p>"
+    },
+    {
+      "id": "W3-M43",
+      "level": "why",
+      "stem": "<p>What does this print?</p><pre><code>t = (1, [2])\nt[1].append(3)\nprint(t)</code></pre>",
+      "options": [
+        "<code>(1, [2, 3])</code> — the tuple cannot change which objects it holds, but the list inside it can change",
+        "nothing: <code>TypeError</code>, because tuples are immutable",
+        "<code>(1, [2])</code>",
+        "<code>(1, 2, 3)</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>The tuple stores two references, and these cannot change: you cannot write <code>t[1] = [9]</code>. But the list that <code>t[1]</code> refers to is itself mutable, and <code>append</code> changes it in place, with no error (b). (c) would be true only if the list had been copied into the tuple; (d) confuses the list with its items.</p>"
+    },
+    {
+      "id": "W3-M44",
+      "level": "how",
+      "stem": "<p>What does this print?</p><pre><code>def countdown(n):\n    while n &gt; 0:\n        yield n\n        n -= 1\n\ng = countdown(3)\nnext(g)\nprint(list(g))</code></pre>",
+      "options": [
+        "<code>[3, 2, 1]</code>",
+        "<code>[]</code>",
+        "<code>[2, 1]</code>",
+        "<code>[1]</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>Calling <code>countdown(3)</code> runs nothing yet. <code>next(g)</code> runs the body as far as the first <code>yield</code> and returns 3, which is thrown away. <code>list(g)</code> resumes from there and collects the rest: 2 and 1. (a) forgets that 3 has already been used; (b) would be the answer if <code>next</code> had used up the whole generator.</p>"
+    }
+  ],
+  "essays": [
+    {
+      "id": "W3-E1",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Draw the call stack at every step of <code>factorial(3)</code>, from the first call until the final value is returned. Label winding, the base case, and unwinding, and show the value each frame returns.</p>",
+      "answer": "<p>— writing f for <code>factorial</code>, the stack at each step, bottom → top (Lecture 03's figure draws the same thing for <code>factorial(4)</code>):</p><div class=\"quiz-table\"><table><thead><tr><th>Step</th><th>Stack</th><th>What happens</th></tr></thead><tbody><tr><td>1</td><td>f(3)</td><td>calls f(2)</td></tr><tr><td>2</td><td>f(3) f(2)</td><td>calls f(1)</td></tr><tr><td>3</td><td>f(3) f(2) f(1)</td><td>calls f(0)</td></tr><tr><td>4</td><td>f(3) f(2) f(1) f(0)</td><td><strong>base case</strong>: f(0) returns 1</td></tr><tr><td>5</td><td>f(3) f(2) f(1)</td><td>1 × 1 = 1; f(1) returns 1</td></tr><tr><td>6</td><td>f(3) f(2)</td><td>2 × 1 = 2; f(2) returns 2</td></tr><tr><td>7</td><td>f(3)</td><td>3 × 2 = 6; f(3) returns 6</td></tr></tbody></table></div><p>Marking points: each call pushes a frame with its own <code>n</code>; nothing is multiplied during winding; the base case stops the growth; each return pops a frame and the frame below finishes its multiplication; maximum depth 4 = n + 1.</p>"
+    },
+    {
+      "id": "W3-E2",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain why the naive recursive Fibonacci takes exponential time, using a recursion tree. Show how memoisation fixes it, and state the new time and space costs.</p>",
+      "answer": "<ul><li><code>fib(n)</code> calls <code>fib(n-1)</code> <strong>and</strong> <code>fib(n-2)</code>; the recursion tree roughly doubles with each increase in n, because each node has two children almost as large as itself.</li><li>The same subproblems are recomputed many times: in fib(5), fib(2) is computed 3 times, fib(3) twice. Total calls <span class=\"quiz-math\">2 fib(n+1) - 1</span> — exponential, about <span class=\"quiz-math\">1.618<sup>n</sup></span>; fib(30) makes 2,692,537 calls.</li><li><strong>Memoisation:</strong> store each fib(k) in a memo <code>Array</code> the first time it is computed; later calls look it up. Each value is computed once.</li><li>New cost: <span class=\"quiz-math\">O(n)</span> time (2n − 1 calls — 59 for n = 30), <span class=\"quiz-math\">O(n)</span> space for the memo plus <span class=\"quiz-math\">O(n)</span> stack depth.</li></ul>"
+    },
+    {
+      "id": "W3-E3",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>When should you prefer recursion, and when a loop? Include two concerns that are specific to Python.</p>",
+      "answer": "<ul><li><strong>Recursion</strong> when the data or the problem is recursive: trees, nested lists, grammars; divide and conquer (binary search, merge sort); branching searches (subsets, Hanoi, backtracking) — where it is clearer and the depth is small.</li><li><strong>A loop</strong> when the recursion would be one call per element of flat data, or the depth could be large.</li><li><strong>Python concerns</strong>, any two: the ~1,000-frame recursion limit (<code>RecursionError</code>); no tail-call optimisation, so every call costs a frame; a function call is relatively slow in CPython; slicing inside recursion silently adds <span class=\"quiz-math\">O(n)</span> per call.</li></ul>"
+    },
+    {
+      "id": "W3-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Describe the recursive strategy for Towers of Hanoi. Write its recurrence, solve it, and explain why no algorithm can use fewer moves.</p>",
+      "answer": "<ul><li><strong>Strategy</strong> for n disks from A to C: move n − 1 disks A → B (recursively, using C as spare); move the largest disk A → C; move the n − 1 disks B → C (recursively, using A as spare). Base case: one disk, one move.</li><li><strong>Recurrence:</strong> <span class=\"quiz-math\">T(1) = 1</span>, <span class=\"quiz-math\">T(n) = 2T(n-1) + 1</span>.</li><li><strong>Solution:</strong> <span class=\"quiz-math\">T(n) = 2<sup>n</sup> - 1</span> (unroll: 1, 3, 7, 15, …; or the induction proof in W3-R5).</li><li><strong>Minimum:</strong> the largest disk must move at least once. At that moment all the other n − 1 disks must be on the spare peg — which takes at least <span class=\"quiz-math\">T(n-1)</span> moves — and afterwards they must all be moved back on top, at least <span class=\"quiz-math\">T(n-1)</span> more. So any solution needs at least <span class=\"quiz-math\">2T(n-1) + 1</span> moves: the exponential cost is in the problem, not the algorithm.</li></ul>"
+    },
+    {
+      "id": "W3-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Explain \"trust the recursion\" and how it relates to mathematical induction.</p>",
+      "answer": "<ul><li>When writing the recursive case, <strong>assume</strong> the recursive call correctly solves the smaller problem, and only ask how to build this answer from that one. Do not trace every call.</li><li>This is <strong>induction</strong>: the base case is the induction base; \"if the smaller call is right then this call is right\" is the inductive step. Together they prove the function correct for every input the measure reaches.</li><li>It only works if the base case is right and the recursive case really makes progress towards it.</li></ul>"
+    },
+    {
+      "id": "W3-E6",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>For each job, choose <code>list</code>, <code>tuple</code>, <code>set</code> or <code>dict</code> and justify by cost: (a) the marks of a class, in the order entered; (b) checking whether a student ID has already been registered; (c) looking up a student's name by ID; (d) one student's (ID, name, mark), used as a key elsewhere.</p>",
+      "answer": "<ul><li>(a) <strong>list</strong> — ordered, grows by <code>append</code> in amortised <span class=\"quiz-math\">O(1)</span>, allows duplicates (two students can have the same mark).</li><li>(b) <strong>set</strong> — \"have I seen this ID?\" is <span class=\"quiz-math\">O(1)</span> on average against <span class=\"quiz-math\">O(n)</span> for a list; duplicates are exactly what it prevents.</li><li>(c) <strong>dict</strong> — ID → name, <span class=\"quiz-math\">O(1)</span> average lookup by key.</li><li>(d) <strong>tuple</strong> — a fixed record of related values of different types; immutable, therefore hashable, so it can be a dictionary key or set member (a list cannot).</li></ul>"
+    },
+    {
+      "id": "W3-E7",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p><code>hanoi(20)</code> makes over a million calls, yet it never has more than about 20 frames on the call stack. Explain why the space a recursion needs is set by its <strong>depth</strong> and not by its number of calls. Give the depth of <code>factorial(n)</code>, of the fast <code>power(x, n)</code> and of <code>hanoi(n)</code>, and explain why raising <code>sys.setrecursionlimit</code> is not the right fix for a recursion that must go 100,000 deep.</p>",
+      "answer": "<ul><li>A frame exists only while its call is running. When a call <strong>returns</strong>, its frame is popped, so frames do not accumulate. At any moment the stack holds only one chain of calls, from the first down to the current one, and the longest such chain, the <strong>depth</strong>, sets the space.</li><li><code>hanoi(20)</code> makes <span class=\"quiz-math\">2<sup>21</sup> - 1</span> calls, but each chain goes 20, 19, …, 0 and returns before the next branch starts, so its stack space is <span class=\"quiz-math\">O(n)</span>.</li><li>Depths: <code>factorial(n)</code> n + 1 frames, <span class=\"quiz-math\">O(n)</span>; fast <code>power(x, n)</code> about log₂ n frames, <span class=\"quiz-math\">O(log n)</span>; <code>hanoi(n)</code> about n frames, <span class=\"quiz-math\">O(n)</span>.</li><li>Raising the limit does not make the real stack underneath bigger, so a deep enough recursion then crashes the interpreter. The fix is a different design: a loop, or a recursion that is only <span class=\"quiz-math\">O(log n)</span> deep.</li></ul>"
+    },
+    {
+      "id": "W3-E8",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Three versions of <code>power(x, n)</code>: (i) <code>x * power(x, n - 1)</code>; (ii) <code>half = power(x, n // 2)</code>, then <code>half * half</code> (× x if n is odd); (iii) <code>power(x, n // 2) * power(x, n // 2)</code> (× x if n is odd). For each, write the recurrence and its solution, and say what happens for n = 4,096.</p>",
+      "answer": "<ul><li>(i) <span class=\"quiz-math\">T(n) = T(n-1) + c</span> → <span class=\"quiz-math\">O(n)</span> calls and multiplications, and n + 1 frames deep: <code>power(2, 4096)</code> raises <code>RecursionError</code>.</li><li>(ii) <span class=\"quiz-math\">T(n) = T(n/2) + c</span> → <span class=\"quiz-math\">O(log n)</span>: for n = 4,096 it makes 14 calls (exponents 4096, 2048, …, 1, 0) and 14 multiplications, 14 frames deep.</li><li>(iii) <span class=\"quiz-math\">T(n) = 2T(n/2) + c</span> → <span class=\"quiz-math\">O(n)</span>: two calls on half the input undo the halving. For n = 4,096 it makes 16,383 calls. It is only about 14 deep, so it does not crash, but it is no faster than (i).</li><li>The lesson: count the recursive calls <em>and</em> their size. Calling once and keeping the result in a variable is what makes (ii) logarithmic.</li></ul>"
+    },
+    {
+      "id": "W3-E9",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Rewrite <code>gcd</code> as a loop, and explain why that rewrite is easy. Explain why rewriting <code>hanoi</code> without recursion is harder, and what the loop version must keep for itself.</p>",
+      "answer": "<ul><li>Loop version:</li></ul><pre><code>  def gcd_loop(a, b):\n      while b != 0:\n          a, b = b, a % b\n      return a</code></pre><ul><li>It is easy because <code>gcd</code> is <strong>tail-shaped</strong>: one call, as its very last action, with nothing to do after it. The arguments of the next call can simply replace the current ones.</li><li><code>hanoi</code> <strong>branches</strong>: after the first recursive call it still has to move the largest disk and make the second call. That pending work is what the call stack remembers, so a loop version must push it onto its <strong>own stack</strong> (Lecture 06's <code>Stack</code>) and pop it later. This is more code, and harder to read.</li></ul>"
+    },
+    {
+      "id": "W3-E10",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Explain why <code>binary_strings(0)</code> must return <code>[\"\"]</code>, and <code>subsets([])</code> must return <code>[[]]</code>, rather than <code>[]</code>. What goes wrong with <code>[]</code>, and how many results do <code>binary_strings(n)</code> and <code>subsets</code> of n items return?</p>",
+      "answer": "<ul><li>The base case is the answer for the smallest input, and it must be <strong>right</strong>. There is exactly one bit string of length 0 (the empty string <code>\"\"</code>) and one subset of the empty set (the empty set), so each answer is a list holding one item: <code>[\"\"]</code> and <code>[[]]</code>.</li><li>With <code>[]</code> there is nothing to build on: the recursive case makes every result by extending a result of the smaller call, so every level returns <code>[]</code> and the final answer is empty, with no error to warn you.</li><li><code>binary_strings(n)</code> returns <span class=\"quiz-math\">2<sup>n</sup></span> strings and <code>subsets</code> of n items returns <span class=\"quiz-math\">2<sup>n</sup></span> lists: each of the n decisions (0 or 1; out or in) doubles the count, and the count for n = 0 is <span class=\"quiz-math\">2<sup>0</sup> = 1</span>, which is why the base case holds one item.</li></ul>"
     }
   ]
 }

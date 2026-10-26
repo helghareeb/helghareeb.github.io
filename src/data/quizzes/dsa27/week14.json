@@ -288,5 +288,42 @@
       "answer": 3,
       "explanation": "<p>Every vertex is enqueued and dequeued once; every list is read once, <span class=\"quiz-math\">Σ deg = 2E</span> entries in total.</p>"
     }
+  ],
+  "essays": [
+    {
+      "id": "W14-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Compare the adjacency list and the adjacency matrix: memory, <code>has_edge</code>, <code>neighbours</code>, and the cost of one BFS. Which would you choose for a road map of 100,000 junctions, and which for a graph of 500 people in which almost everyone knows almost everyone and you ask \"do these two know each other?\" millions of times? Justify with numbers.</p>",
+      "answer": "<ul><li><strong>Memory:</strong> list <span class=\"quiz-math\">O(V + E)</span> — <span class=\"quiz-math\">V + 2E</span> cells undirected; matrix <span class=\"quiz-math\">V<sup>2</sup></span> cells, however few edges.</li><li><strong><code>has_edge(u, v)</code>:</strong> list <span class=\"quiz-math\">O(deg u)</span>, scan u's neighbours; matrix <span class=\"quiz-math\">O(1)</span>, one cell. <strong><code>neighbours(u)</code>:</strong> list <span class=\"quiz-math\">O(deg u)</span>; matrix <span class=\"quiz-math\">O(V)</span>, a row scan. <strong>One BFS/DFS:</strong> list <span class=\"quiz-math\">O(V + E)</span>; matrix <span class=\"quiz-math\">O(V<sup>2</sup>)</span>.</li><li><strong>Road map</strong>, V = 100,000, about three roads per junction (E about 150,000): the list holds about <span class=\"quiz-math\">100{,}000 + 300{,}000 = 400{,}000</span> cells; the matrix <span class=\"quiz-math\">10<sup>10</sup></span> cells — about 10 GB even at one byte each. The list, without question; a BFS on it is a few hundred thousand steps.</li><li><strong>500 people, nearly everyone knows everyone:</strong> E is close to <span class=\"quiz-math\">500 × 499 / 2 ≈ 125{,}000</span> and the matrix is only <span class=\"quiz-math\">250{,}000</span> cells — about the same as the list. Each <code>has_edge</code> is <span class=\"quiz-math\">O(1)</span> on the matrix against a scan of up to about 500 neighbours on the list; asked millions of times, the matrix wins by a large factor.</li></ul>"
+    },
+    {
+      "id": "W14-E2",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Describe breadth-first search. Explain why it finds shortest paths by number of edges, how <code>shortest_path_unweighted</code> rebuilds the path, and why the answer can be wrong on a road map with different road lengths.</p>",
+      "answer": "<ul><li><strong>Algorithm:</strong> put s in a queue and mark it; repeatedly dequeue a vertex, output it, and enqueue (and mark) each unmarked neighbour. <span class=\"quiz-math\">O(V + E)</span>.</li><li><strong>Why shortest:</strong> the queue holds the vertices in non-decreasing order of distance from s — all of distance d before any of distance d + 1 — so a vertex is first discovered from a vertex one layer nearer, and no later route can be shorter.</li><li><strong>Rebuilding the path:</strong> record, for each vertex, the vertex it was discovered from (the parent, <code>None</code> for s). When the goal is dequeued, follow the parents back to s and reverse the list; if the queue empties first, the goal is unreachable — <code>None</code>.</li><li><strong>Weighted roads:</strong> BFS minimises the <strong>number</strong> of edges. A route of two 40 km roads beats one of three 1 km roads by BFS's measure. Weighted shortest paths need Dijkstra's algorithm (a priority queue), beyond this course.</li></ul>"
+    },
+    {
+      "id": "W14-E3",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Recursive DFS and DFS with your own stack: what does the call stack remember for you? Why must <code>dfs_iterative</code> mark a vertex when it is <strong>popped</strong> and push neighbours in <strong>reverse</strong> to give the same order as <code>dfs</code>? Why write the iterative version at all in Python?</p>",
+      "answer": "<ul><li><strong>The call stack</strong> holds one frame per vertex on the current path: which vertex it is, and how far its <code>for</code> loop over the neighbours has got. Returning from a call is backing up.</li><li><strong>Mark on pop:</strong> recursion marks a vertex when it <strong>enters</strong> it, and may reach it by a deeper route before an earlier vertex's loop gets to it. Marking on push would fix it to the earlier route. So allow a vertex to be pushed more than once and skip it if it is already visited when popped.</li><li><strong>Push in reverse:</strong> the stack returns the last push first; to take the first neighbour first, it must be pushed last.</li><li><strong>Why bother in Python:</strong> the recursive version fails with <code>RecursionError</code> once the path is about 1,000 vertices deep; your own <code>Stack</code> can grow as large as memory allows. (It also shows exactly what recursion was doing.)</li></ul>"
+    },
+    {
+      "id": "W14-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain cycle detection in an undirected graph and in a directed graph. Why does each rule give wrong answers when used on the other kind of graph? Give a small example of each failure.</p>",
+      "answer": "<ul><li><strong>Undirected:</strong> DFS remembering each vertex's parent; a visited neighbour that is <strong>not</strong> the parent closes a cycle. The parent must be excluded because every edge is stored at both ends.</li><li><strong>Directed:</strong> three colours — white (unseen), grey (on the current path), black (finished). An edge to a <strong>grey</strong> vertex closes a cycle; an edge to a black one does not.</li><li><strong>Parent rule on a directed graph fails:</strong> A <span class=\"quiz-math\">→</span> B, B <span class=\"quiz-math\">→</span> A is a cycle, but at B the neighbour A is its parent and is skipped — \"no cycle\".</li><li><strong>Visited-only rule on a directed graph fails:</strong> the diamond A <span class=\"quiz-math\">→</span> B <span class=\"quiz-math\">→</span> D, A <span class=\"quiz-math\">→</span> C <span class=\"quiz-math\">→</span> D, or simply B <span class=\"quiz-math\">→</span> C and A <span class=\"quiz-math\">→</span> C searched from B first: C is visited when reached again, and the check says \"cycle\" wrongly (W14-B4).</li><li><strong>Colour rule on an undirected graph fails:</strong> at B, entered from A, the neighbour A is grey, so every edge is reported as a cycle.</li></ul>"
+    },
+    {
+      "id": "W14-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Define a topological order. When does one exist? Describe Kahn's algorithm, how it detects that no order exists, and one real application.</p>",
+      "answer": "<ul><li><strong>Definition:</strong> an order of the vertices of a directed graph in which, for every edge X <span class=\"quiz-math\">→</span> Y, X comes before Y. It exists <strong>exactly</strong> when the graph is a DAG: a cycle would need each of its vertices to come before the next.</li><li><strong>Kahn:</strong> count in-degrees; queue the vertices with in-degree 0; repeatedly dequeue one, output it, and subtract 1 from the in-degree of each vertex it points to, queueing any that reach 0. <span class=\"quiz-math\">O(V + E)</span>.</li><li><strong>No order:</strong> if fewer than V vertices are output, the rest wait on each other — they contain a cycle — so return <code>None</code>.</li><li><strong>Application:</strong> course prerequisites (a valid study plan), build systems (compile after dependencies), package managers, spreadsheet recalculation.</li></ul>"
+    }
   ]
 }

@@ -287,6 +287,305 @@
       ],
       "answer": 0,
       "explanation": "<p>Same two operations, a different rule — and a different structure underneath, the heap.</p>"
+    },
+    {
+      "id": "W7-M23",
+      "level": "how",
+      "stem": "<p>A <code>CircularQueue(4)</code>, starting empty: <code>enqueue(1)</code>, <code>enqueue(2)</code>, <code>enqueue(3)</code>, <code>enqueue(4)</code>, <code>dequeue()</code>, <code>dequeue()</code>, <code>enqueue(5)</code>. Which describes the ring now?</p>",
+      "options": [
+        "head = 0, size = 3, and 5 is in slot 0",
+        "head = 2, size = 3, and 5 is in slot 4",
+        "head = 2, size = 3, and 5 is in slot 0",
+        "head = 2, size = 4, and 5 is in slot 1"
+      ],
+      "answer": 2,
+      "explanation": "<p>After four enqueues the ring is full (<code>1 2 3 4</code>, head 0). Two dequeues move head to 2, size 2. The tail is <code>(2 + 2) % 4 = 0</code>, so 5 goes into slot 0, freed by 1. Slot 4 (b) does not exist: that is the missing <code>%</code>. Head 0 (a) forgets that dequeue moves the head; size 4 (d) counts the dequeued items.</p>"
+    },
+    {
+      "id": "W7-M24",
+      "level": "how",
+      "stem": "<p>A <code>CircularQueue(5)</code>, starting empty: enqueue A, B, C, D, E; dequeue three times; enqueue F, then G. What is in the block, from slot 0 to slot 4?</p>",
+      "options": [
+        "<code>F G None D E</code>",
+        "<code>D E F G None</code>",
+        "<code>None None None D E F G</code>",
+        "<code>F G C D E</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>The three dequeues leave D, E in slots 3 and 4, with head 3. F goes to <code>(3 + 2) % 5 = 0</code>, G to slot 1, and slot 2 is still empty. (b) is <code>list(q)</code>, the queue order, not the block. (d) forgets that <code>dequeue</code> clears the slot it read, so C is gone. (c) has seven slots in a five-slot block.</p>"
+    },
+    {
+      "id": "W7-M25",
+      "level": "how",
+      "stem": "<p>A full <code>CircularQueue</code> of capacity 4 holds C D E F (front to back), with head = 2. <code>enqueue(G)</code> makes the correct <code>_grow</code> double the block first. Afterwards, head is ___ and G is in slot ___:</p>",
+      "options": [
+        "2 and 6",
+        "0 and 0",
+        "2 and 2",
+        "0 and 4"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>_grow</code> copies in queue order: C D E F go to slots 0–3 and head becomes 0. Then G is written at <code>(0 + 4) % 8 = 4</code>. (a) is what happens if head is kept, which is the naive grow of W7-M09. (b) would overwrite the front.</p>"
+    },
+    {
+      "id": "W7-M26",
+      "level": "why",
+      "stem": "<p>A student's <code>_grow</code> copies in queue order into an <code>Array(8)</code> and sets <code>head = 0</code>, but forgets to set <code>self._capacity = 8</code>. On the full ring of W7-M25, <code>enqueue(G)</code> then:</p>",
+      "options": [
+        "works, because the new block really has 8 slots",
+        "writes G to slot <code>(0 + 4) % 4 = 0</code>, over the front item C",
+        "raises <code>IndexError</code>, because slot 4 is out of range",
+        "writes G to slot 4, but <code>len(q)</code> stays 4"
+      ],
+      "answer": 1,
+      "explanation": "<p>The tail is still computed modulo 4: <code>(0 + 4) % 4 = 0</code>, so G overwrites C, the front, and <code>list(q)</code> reads <code>G D E F G</code>. No error is raised, which is what makes the bug dangerous: (c) is wrong. (a) is wrong because the arithmetic, not the block, decides where G goes.</p>"
+    },
+    {
+      "id": "W7-M27",
+      "level": "why",
+      "stem": "<p>A <code>dequeue</code> updates the head with <code>self._head += 1</code> instead of <code>self._head = (self._head + 1) % self._capacity</code>. On a <code>CircularQueue(4)</code>: enqueue A, B, C, D; dequeue four times; enqueue E; dequeue. What happens?</p>",
+      "options": [
+        "The first dequeue fails: head starts beyond the block",
+        "Every operation works; the last dequeue returns E",
+        "The last dequeue raises <code>IndexError</code>: it reads slot 4 of a 4-slot block",
+        "The last dequeue returns <code>None</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>The four dequeues read slots 0–3, so they work, and head ends at 4. The enqueue writes E at <code>(4 + 0) % 4 = 0</code>, which also works. Then the dequeue reads <code>self._block[4]</code>, and the <code>Array</code> raises <code>IndexError</code>. The bug hides until the head has gone once round the ring: (b) is what the correct code does.</p>"
+    },
+    {
+      "id": "W7-M28",
+      "level": "why",
+      "stem": "<p>A linked queue's <code>enqueue</code> tests <code>if self._tail is None:</code> to decide that the queue is empty, and its <code>dequeue</code> moves <code>head</code> on but <strong>never</strong> resets <code>tail</code>. After <code>enqueue(1)</code>, <code>dequeue()</code>, <code>enqueue(2)</code>, the next <code>dequeue()</code>:</p>",
+      "options": [
+        "raises <code>IndexError</code>: 2 was linked after the old, removed node, and <code>head</code> is still <code>None</code>",
+        "returns 2",
+        "returns 1 again",
+        "loops for ever"
+      ],
+      "answer": 0,
+      "explanation": "<p>After the first dequeue, head is <code>None</code> but tail still refers to the removed node 1. So <code>enqueue(2)</code> takes the <code>else</code> branch and links 2 after that dead node, and head stays <code>None</code>. The next dequeue finds head <code>None</code> and raises, although <code>len</code> says 1. The fix: when the queue becomes empty, reset <code>tail</code> to <code>None</code> too (W7-B4).</p>"
+    },
+    {
+      "id": "W7-M29",
+      "level": "how",
+      "stem": "<p>A queue from two stacks (pour only when <code>outbox</code> is empty). Count every <code>push</code> and <code>pop</code> on the two stacks, including the pours: enqueue 1, 2, 3; dequeue; enqueue 4, 5; dequeue three times. How many stack operations is that in total?</p>",
+      "options": [
+        "13",
+        "15",
+        "25",
+        "19"
+      ],
+      "answer": 3,
+      "explanation": "<p>Each item costs at most four operations: push to <code>inbox</code>, pop from <code>inbox</code>, push to <code>outbox</code>, pop from <code>outbox</code>. Items 1–4 are dequeued, so 4 × 4 = 16. Item 5 was poured but not dequeued, so 3 more: 19. Step by step: 3 pushes; a pour of 3 items (6) and 1 pop; 2 pushes; 2 pops; a pour of 2 (4) and 1 pop. (b) and (a) forget to count the pours as two operations per item; (c) is not a real count.</p>"
+    },
+    {
+      "id": "W7-M30",
+      "level": "what",
+      "stem": "<p>A ring buffer that <strong>leaves one slot unused</strong> to tell full from empty has a block of 8 slots. It holds at most:</p>",
+      "options": [
+        "8 items",
+        "7 items",
+        "9 items",
+        "4 items"
+      ],
+      "answer": 1,
+      "explanation": "<p>One slot always stays empty, so that <code>head == tail</code> can only mean empty. Eight slots hold seven items. (a) would need a size field, which is what <code>dsa/queue.py</code> keeps.</p>"
+    },
+    {
+      "id": "W7-M31",
+      "level": "how",
+      "stem": "<p>A ring with 8 slots stores only <code>head</code> and <code>tail</code> and leaves one slot unused. Now head = 3 and tail = 2. How many items does it hold, and is it full?</p>",
+      "options": [
+        "1 item, not full",
+        "0 items: <code>head</code> and <code>tail</code> are next to each other, so it is empty",
+        "7 items, full: <code>(tail + 1) % 8 == head</code>",
+        "8 items, full"
+      ],
+      "answer": 2,
+      "explanation": "<p>The size is <code>(tail - head) % 8 = (2 - 3) % 8 = 7</code>, and full is defined as <code>(tail + 1) % 8 == head</code>: <code>3 == 3</code>. With one slot left unused, 7 is the most an 8-slot ring can hold, so (d) is impossible. (a) reads the distance the wrong way round; (b) confuses <code>tail + 1 == head</code> (full) with <code>head == tail</code> (empty).</p>"
+    },
+    {
+      "id": "W7-M32",
+      "level": "why",
+      "stem": "<p><code>CircularQueue.dequeue</code> sets the slot it read back to <code>None</code>. Why?</p>",
+      "options": [
+        "<code>is_empty</code> checks for <code>None</code> in the head slot",
+        "so the block no longer refers to the dequeued object, which can then be freed",
+        "<code>enqueue</code> looks for a <code>None</code> slot to write into",
+        "without it, <code>__iter__</code> would show the dequeued value"
+      ],
+      "answer": 1,
+      "explanation": "<p>The slot is outside the live part of the ring, so the queue is correct without clearing it (a, c and d are wrong: <code>is_empty</code> uses <code>_size</code>, <code>enqueue</code> uses <code>(head + size) % capacity</code>, and <code>__iter__</code> walks only <code>size</code> slots from head). But the block would keep a reference to the object, and Python's garbage collector could not free it.</p>"
+    },
+    {
+      "id": "W7-M33",
+      "level": "what",
+      "stem": "<p>Which of these is a typical use of a <strong>ring buffer</strong>?</p>",
+      "options": [
+        "checking that brackets are balanced",
+        "the undo history of an editor",
+        "sorting a list of names",
+        "keeping the last 1,000 lines of a log, overwriting the oldest"
+      ],
+      "answer": 3,
+      "explanation": "<p>A fixed block that overwrites its oldest entry is exactly a ring buffer. Brackets (a) and undo (b) need stacks; sorting (c) needs neither.</p>"
+    },
+    {
+      "id": "W7-M34",
+      "level": "how",
+      "stem": "<p>What does this print?</p><pre><code>q = CircularQueue()\nq.enqueue(\"1\")\nfor _ in range(6):\n    s = q.dequeue()\n    print(s, end=\" \")\n    q.enqueue(s + \"0\")\n    q.enqueue(s + \"1\")</code></pre>",
+      "options": [
+        "<code>1 10 11 100 101 110</code>",
+        "<code>1 10 100 1000 10000 100000</code>",
+        "<code>1 11 10 111 110 101</code>",
+        "<code>1 10 11 101 100 110</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>The queue gives breadth-first order: the children of <code>1</code> (10, 11) are dequeued before the children of <code>10</code> (100, 101), and those before the children of <code>11</code> (110, 111). That is the binary numbers 1 to 6, in order. (b) follows one branch only (depth-first); (d) swaps 100 and 101; (c) enqueues <code>s + \"1\"</code> first.</p>"
+    },
+    {
+      "id": "W7-M35",
+      "level": "how",
+      "stem": "<p>Six people, 1 to 6, are put in a queue. Until one is left: move two people from the front to the back, then dequeue the third, who leaves. In what order do they leave, and who is left?</p>",
+      "options": [
+        "3, 6, 2, 5, 4 — and 1 is left",
+        "1, 4, 2, 6, 3 — and 5 is left",
+        "3, 6, 4, 2, 5 — and 1 is left",
+        "3, 4, 5, 6, 1 — and 2 is left"
+      ],
+      "answer": 2,
+      "explanation": "<p>Queue 1 2 3 4 5 6: move 1, 2, remove 3. Queue 4 5 6 1 2: move 4, 5, remove 6. Queue 1 2 4 5: move 1, 2, remove 4. Queue 5 1 2: move 5, 1, remove 2. Queue 5 1: move 5, 1, remove 5. 1 is left. (a) removes 2 before 4: it loses track after the queue wraps.</p>"
+    },
+    {
+      "id": "W7-M36",
+      "level": "what",
+      "stem": "<p>A graph search dequeues a node, then enqueues its unvisited neighbours, and repeats. If the queue is replaced by a <strong>stack</strong> (pop instead of dequeue, push instead of enqueue), the same loop:</p>",
+      "options": [
+        "still visits the nodes breadth-first",
+        "visits the nodes depth-first",
+        "never stops",
+        "visits only the start node"
+      ],
+      "answer": 1,
+      "explanation": "<p>The stack hands back the most recently found node first, so the search goes as deep as it can before backing up. That is why Week 14 puts <code>bfs</code> and <code>dfs_iterative</code> side by side: the loops are the same, and only the structure differs. (c) cannot happen as long as visited nodes are not added again.</p>"
+    },
+    {
+      "id": "W7-M37",
+      "level": "what",
+      "stem": "<p>With Python's <code>collections.deque</code>, the <span class=\"quiz-math\">O(1)</span> way to remove the <strong>front</strong> item of a queue <code>d</code> is:</p>",
+      "options": [
+        "<code>d.pop(0)</code>",
+        "<code>d.pop()</code>",
+        "<code>d.dequeue()</code>",
+        "<code>d.popleft()</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>popleft()</code> removes the front in <span class=\"quiz-math\">O(1)</span>. <code>deque.pop()</code> (b) removes the <strong>back</strong>, and <code>deque.pop(0)</code> (a) is an error: <code>pop</code> takes no argument. On a <code>list</code>, <code>pop(0)</code> would work but costs <span class=\"quiz-math\">O(n)</span>. <code>deque</code> has no <code>dequeue</code> method (c).</p>"
+    },
+    {
+      "id": "W7-M38",
+      "level": "why",
+      "stem": "<p>A moving average of the last k readings keeps a <code>CircularQueue(k)</code> <strong>and</strong> a running total beside it. The running total is there because:</p>",
+      "options": [
+        "the ring cannot be iterated",
+        "it tells a full window from an empty one",
+        "each new average then costs <span class=\"quiz-math\">O(1)</span>, instead of <span class=\"quiz-math\">O(k)</span> to add up the window again",
+        "floating-point sums are only exact that way"
+      ],
+      "answer": 2,
+      "explanation": "<p>When a reading arrives, subtract the value that leaves the window and add the new one: <span class=\"quiz-math\">O(1)</span> per update. Adding up k values each time would cost <span class=\"quiz-math\">O(k)</span>. The ring can be iterated (a), and <code>_size</code> tells full from empty (b).</p>"
+    },
+    {
+      "id": "W7-M39",
+      "level": "how",
+      "stem": "<p>A <code>CircularQueue</code> with capacity 6 has head = 4 and size = 5. Front to back, the queue's items are in slots:</p>",
+      "options": [
+        "4, 5, 0, 1, 2",
+        "4, 5, 6, 7, 8",
+        "0, 1, 2, 3, 4",
+        "4, 3, 2, 1, 0"
+      ],
+      "answer": 0,
+      "explanation": "<p>Slot of offset i is <code>(4 + i) % 6</code>, for i = 0 to 4: 4, 5, then round to 0, 1, 2. (b) forgets the <code>%</code>; (c) ignores head; (d) walks backwards.</p>"
+    },
+    {
+      "id": "W7-M40",
+      "level": "why",
+      "stem": "<p>A naive <code>_grow</code> copies <code>new[i] = old[i]</code> and keeps head. It passes a test that fills a fresh <code>CircularQueue(4)</code> with A, B, C, D and then enqueues E. Why does the test not catch the bug?</p>",
+      "options": [
+        "The naive copy is in fact correct",
+        "The ring has not wrapped: head is 0, so slot order and queue order are the same",
+        "The test only checks <code>len(q)</code>",
+        "<code>Array</code> reorders its slots when it grows"
+      ],
+      "answer": 1,
+      "explanation": "<p>With head = 0, the i-th item of the queue really is in slot i, so copying slot by slot happens to give the right order. The naive copy goes wrong only once the data has wrapped: on the ring of W7-M25 it gives <code>C D None None G</code>. So (a) is wrong. A test must wrap the ring <strong>before</strong> it grows it.</p>"
+    }
+  ],
+  "essays": [
+    {
+      "id": "W7-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>State the Queue ADT with the cost of each operation. Explain why an array-based queue that shifts is <span class=\"quiz-math\">O(n)</span> per dequeue, and why swapping which end is the front does not help. How does a ring buffer fix it?</p>",
+      "answer": "<ul><li><strong>ADT:</strong> <code>enqueue(x)</code> at the back, <code>dequeue()</code> from the front (FIFO), <code>is_empty</code>, <code>len</code> — all <span class=\"quiz-math\">O(1)</span>; <code>dequeue</code> raises <code>IndexError</code> when empty.</li><li><strong>Shifting:</strong> on a plain array the front is a fixed position, index 0; removing it moves the n − 1 others: <span class=\"quiz-math\">O(n)</span>.</li><li><strong>Swapping ends</strong> does not help: the back at index 0 makes <strong>enqueue</strong> shift everything instead. A queue uses both ends, and an array is cheap at only one.</li><li><strong>Ring buffer:</strong> do not move data, move the indices. <code>head</code> marks the front; the back is <code>(head + size) % capacity</code>; both wrap round with <code>%</code>, so slots freed at the front are reused. Every operation <span class=\"quiz-math\">O(1)</span>.</li></ul>"
+    },
+    {
+      "id": "W7-E2",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>In a ring buffer, <code>head == tail</code> can mean two different things. Explain which two, with an example of each, and describe two ways of telling them apart. Which one does <code>dsa/queue.py</code> use?</p>",
+      "answer": "<ul><li><strong>Empty:</strong> nothing in the ring, e.g. a new queue: head = tail = 0.</li><li><strong>Full:</strong> the tail has caught up with the head, e.g. capacity 4, head 2, four items: tail = (2 + 4) % 4 = 2.</li><li><strong>Fixes:</strong> (1) keep a count <code>size</code> — empty is <code>size == 0</code>, full is <code>size == capacity</code>; (2) leave one slot always unused — full is <code>(tail + 1) % capacity == head</code>, so <code>head == tail</code> means only empty; (3) a flag set when an enqueue makes head equal tail.</li><li><code>dsa/queue.py</code> keeps <strong><code>_size</code></strong> (and computes the tail from it).</li></ul>"
+    },
+    {
+      "id": "W7-E3",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>A full <code>CircularQueue</code> must grow. Explain, with an example, why copying the block slot by slot gives a wrong queue once the data has wrapped, give the correct copy, and explain why doubling keeps enqueue amortised <span class=\"quiz-math\">O(1)</span>.</p>",
+      "answer": "<ul><li><strong>Example:</strong> capacity 4, head 2, block <code>[E, F, C, D]</code>, queue C D E F. A slot-by-slot copy into 8 slots keeps C, D in slots 2, 3 and E, F in slots 0, 1; with head 2 the queue now reads C, D, then empty slots — E and F are lost behind the front.</li><li><strong>Correct copy:</strong> in queue order: <code>new[i] = old[(head + i) % old_capacity]</code> for i in 0..size − 1, then head = 0 (and the capacity updated).</li><li><strong>Amortised <span class=\"quiz-math\">O(1)</span>:</strong> a copy happens only when the ring is full, and doubling means the copies after n enqueues total 1 + 2 + 4 + … &lt; 2n: <span class=\"quiz-math\">O(n)</span> over n operations, <span class=\"quiz-math\">O(1)</span> each on average.</li><li>It only goes wrong once the data has wrapped, which is why it survives tests that never dequeue before growing.</li></ul>"
+    },
+    {
+      "id": "W7-E4",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Describe a queue built from two stacks. Show that it is amortised <span class=\"quiz-math\">O(1)</span> per operation, and explain why pouring must happen only when the <code>outbox</code> is empty.</p>",
+      "answer": "<ul><li><code>inbox</code> takes every enqueue; <code>dequeue</code> pops <code>outbox</code>, and when <code>outbox</code> is empty it first pours <strong>all</strong> of <code>inbox</code> into it — which reverses them, so the oldest is on top.</li><li><strong>Amortised:</strong> each item is pushed on <code>inbox</code> once, moved to <code>outbox</code> once and popped once — three <span class=\"quiz-math\">O(1)</span> steps in its life, so n operations cost <span class=\"quiz-math\">O(n)</span>.</li><li><strong>Pour only when empty:</strong> pouring into a non-empty <code>outbox</code> would put newer items on top of older ones and break FIFO; pouring back and forth on every dequeue keeps FIFO but costs <span class=\"quiz-math\">O(n)</span> per dequeue (W7-K3).</li></ul>"
+    },
+    {
+      "id": "W7-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Compare the ring buffer and the linked queue (with head and tail): cost per operation, memory, and when you would choose each. Where does Python's <code>collections.deque</code> fit?</p>",
+      "answer": "<ul><li><strong>Ring buffer:</strong> <span class=\"quiz-math\">O(1)</span> (amortised if it grows); one contiguous block, no allocation per item, good locality. Choose it when the maximum size is known or bounded — hardware and OS buffers — or for speed in general.</li><li><strong>Linked queue:</strong> <span class=\"quiz-math\">O(1)</span> worst case, never copies; but a node per item (more memory, scattered). Choose it when a worst-case guarantee matters more than memory.</li><li><strong><code>collections.deque</code></strong> combines them: a doubly linked list of fixed blocks — <span class=\"quiz-math\">O(1)</span> at both ends, few allocations. It is what to use in real Python code.</li></ul>"
+    },
+    {
+      "id": "W7-E6",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Three ring-buffer bugs: the tail computed as <code>head + size</code> with no <code>%</code>; the head moved with <code>head += 1</code> with no <code>%</code>; and a <code>_grow</code> that never updates <code>_capacity</code>. For each, say what goes wrong and the shortest operation sequence that shows it. Why do all three pass a test that never wraps the ring?</p>",
+      "answer": "<ul><li><strong>No <code>%</code> on the tail:</strong> once the back reaches the end of the block, the write goes to slot <code>capacity</code> and the <code>Array</code> raises <code>IndexError</code>, although there are free slots at the front. Shortest: <code>CircularQueue(2)</code>: enqueue, enqueue, dequeue, enqueue (tail = 1 + 1 = 2).</li><li><strong>No <code>%</code> on the head:</strong> dequeues work until head reaches <code>capacity</code>; the next dequeue reads slot <code>capacity</code> and raises. Shortest: <code>CircularQueue(1)</code>: enqueue, dequeue (head = 1), enqueue (written to <code>(1 + 0) % 1 = 0</code>), dequeue.</li><li><strong><code>_capacity</code> not updated in <code>_grow</code>:</strong> the new block is bigger, but every <code>%</code> still wraps at the old size, so the next enqueue after the grow overwrites the front, silently. Shortest: fill a ring of capacity 1, enqueue twice more.</li><li><strong>Why the tests miss them:</strong> while the ring has not wrapped, head is 0 and <code>head + size</code> is below the capacity, so <code>%</code> changes nothing. Every test must take the ring <strong>round</strong> at least once, and grow it after it has wrapped.</li></ul>"
+    },
+    {
+      "id": "W7-E7",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>When a ring buffer is full, it can <strong>refuse</strong> (a bounded queue) or <strong>grow</strong>. Explain both choices, give a real use for each, and say which <code>level_order</code> and <code>bfs</code> need, and why.</p>",
+      "answer": "<ul><li><strong>Refuse (bounded):</strong> raise an error, or make the producer wait, or drop data when full. Memory is fixed. Used for audio and network buffers, and keyboard buffers, where memory must not grow.</li><li><strong>Grow:</strong> allocate a block twice as big and copy in queue order; enqueue stays amortised <span class=\"quiz-math\">O(1)</span>. Used for general-purpose queues such as <code>collections.deque</code>.</li><li><strong><code>level_order</code> and <code>bfs</code></strong> need a growing queue: they cannot know in advance how many nodes will be waiting at once (a whole level of a tree, a whole frontier of a graph), and refusing would make the search fail.</li></ul>"
+    },
+    {
+      "id": "W7-E8",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Describe <code>enqueue</code> and <code>dequeue</code> for a queue on a singly linked list with <code>head</code> and <code>tail</code>, including the empty cases. Explain why the front must be the head, and what goes wrong if <code>dequeue</code> does not reset <code>tail</code> when the queue becomes empty.</p>",
+      "answer": "<ul><li><strong>enqueue:</strong> make a node. If the queue is empty, it becomes both <code>head</code> and <code>tail</code>; otherwise set <code>tail.next</code> to it and move <code>tail</code> to it. <span class=\"quiz-math\">O(1)</span>.</li><li><strong>dequeue:</strong> <code>IndexError</code> if empty; otherwise take <code>head.value</code>, move <code>head</code> to <code>head.next</code>; if <code>head</code> is now <code>None</code>, set <code>tail = None</code> too. <span class=\"quiz-math\">O(1)</span>.</li><li><strong>Front at the head:</strong> removing at the head is <span class=\"quiz-math\">O(1)</span>; removing the last node of a singly linked list needs the node before it, an <span class=\"quiz-math\">O(n)</span> walk. So we add at the tail and remove at the head.</li><li><strong>Stale tail:</strong> <code>tail</code> still refers to the removed node. If <code>enqueue</code> tests <code>tail</code> to detect emptiness, the new node is linked after that dead node and <code>head</code> stays <code>None</code>: <code>len</code> says 1, but the next dequeue raises. (If it tests <code>head</code>, the bug hides, but <code>tail</code> still keeps a dead node alive.)</li></ul>"
+    },
+    {
+      "id": "W7-E9",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Explain why breadth-first order needs a <strong>queue</strong>, using the binary numbers 1, 10, 11, 100, … generated from \"1\" (dequeue s, enqueue s + \"0\" and s + \"1\"). What order do you get if the queue is replaced by a stack, and why?</p>",
+      "answer": "<ul><li>A queue hands items back in the order they were <strong>discovered</strong>: everything at one level is dequeued before anything at the next. From \"1\": dequeue 1, enqueue 10, 11; dequeue 10, enqueue 100, 101; dequeue 11, enqueue 110, 111…</li><li>So the order is 1, 10, 11, 100, 101, 110, 111, …: the binary numbers in increasing order, level by level (by length).</li><li>With a <strong>stack</strong>, the last item found comes out first: 1, 11, 111, 1111, … (with <code>s + \"0\"</code> pushed before <code>s + \"1\"</code>). The search goes deep along one branch and never comes back to 10. That is depth-first order, as in Week 14.</li></ul>"
     }
   ]
 }

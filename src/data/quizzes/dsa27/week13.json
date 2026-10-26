@@ -288,5 +288,42 @@
       "answer": 3,
       "explanation": "<p>A range query needs order, and hashing destroys order on purpose: 2027114 and 2027115 land far apart. A sorted array answers it with two <code>lower_bound</code>s (Week 8). (a)–(c) are <span class=\"quiz-math\">O(1)</span> average in a hash table.</p>"
     }
+  ],
+  "essays": [
+    {
+      "id": "W13-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain how a hash table finds a key in <span class=\"quiz-math\">O(1)</span> time on average. State the assumption behind \"on average\", give the worst case, and name three things that can push a real table towards it.</p>",
+      "answer": "<ul><li><strong>Mechanism:</strong> the index <code>hash(key) % capacity</code> is <strong>computed</strong> in <span class=\"quiz-math\">O(1)</span> and the <code>Array</code> slot is reached in <span class=\"quiz-math\">O(1)</span>; only the keys that share that slot are compared — a chain, or a short run of probes.</li><li><strong>Assumption:</strong> the hash spreads the keys evenly, as if at random, and the load factor <span class=\"quiz-math\">α</span> is kept below a constant by resizing. Then a chain averages <span class=\"quiz-math\">α</span> entries (a probe run: a few slots), so <code>get</code>, <code>put</code> and <code>delete</code> are <span class=\"quiz-math\">O(1)</span> <strong>expected</strong>, and <code>put</code> amortised because of resizes.</li><li><strong>Worst case:</strong> all n keys in one bucket or one cluster: <span class=\"quiz-math\">O(n)</span> per operation.</li><li><strong>What pushes towards it</strong> (any three): a poor hash (sum of characters — anagrams collide); keys sharing their low bits on a power-of-two table (multiples of 1,024); an adversary who can predict the hash (hashDoS — hence string hash randomisation); no resizing, so <span class=\"quiz-math\">α</span> grows with n; open addressing near <span class=\"quiz-math\">α = 1</span>, or clogged with tombstones.</li></ul>"
+    },
+    {
+      "id": "W13-E2",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>A student's class defines <code>__hash__</code> to return 0 for every object. Is a hash table of these objects <strong>wrong</strong>, or only <strong>slow</strong>? Answer for chaining and for open addressing, and give the cost of <code>get</code> and of building a table of n keys.</p>",
+      "answer": "<ul><li><strong>Only slow — never wrong.</strong> Every key hashes to 0 and lands in bucket (or home slot) 0; keys are still told apart by <code>==</code>, so every <code>get</code> finds the right entry or correctly reports it missing.</li><li><strong>Chaining:</strong> one chain holding all n keys. <code>get</code> walks it: <span class=\"quiz-math\">O(n)</span>. Each <code>put</code> walks it too (to check for the key): building n keys is <span class=\"quiz-math\">1 + 2 + … + n = O(n<sup>2</sup>)</span>. Resizing never helps: 0 % capacity is always 0.</li><li><strong>Open addressing:</strong> all keys form one cluster starting at slot 0; a <code>get</code> probes up to n slots, <span class=\"quiz-math\">O(n)</span>; building is <span class=\"quiz-math\">O(n<sup>2</sup>)</span> — the same.</li><li>The only hash rule for correctness is \"equal keys, equal hashes\", and a constant keeps it. Every other quality of a hash function is about speed.</li></ul>"
+    },
+    {
+      "id": "W13-E3",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Compare chaining and open addressing: what a slot holds, the load factors each can tolerate, how each deletes, and one practical advantage of each.</p>",
+      "answer": "<ul><li><strong>A slot holds:</strong> chaining — <code>None</code> or the head of a linked list of <code>Entry</code> nodes; open addressing — one key (in <code>_keys</code>) and its value (in <code>_values</code>), or <code>None</code>, or a tombstone.</li><li><strong>Load factor:</strong> chaining still works above 1 (chains simply grow; cost about <span class=\"quiz-math\">1 + α</span>), and resizes at 0.75 here; open addressing cannot exceed 1 at all and degrades sharply near it (a miss <span class=\"quiz-math\">≈ 1/2(1 + 1/(1-α)<sup>2</sup>)</span>), so it resizes earlier — 0.66 here, about 2/3 in CPython.</li><li><strong>Delete:</strong> chaining unlinks a node (the head is the special case); open addressing must leave a tombstone, which later puts may reuse and a resize drops.</li><li><strong>Advantages:</strong> chaining — simple deletion, graceful at high load, never \"full\"; open addressing — no node per key (less memory, no allocation), and consecutive probes are neighbours in memory, which suits the cache. CPython's <code>dict</code> and <code>set</code> use open addressing; Java's <code>HashMap</code> uses chaining.</li></ul>"
+    },
+    {
+      "id": "W13-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain tombstones. Why can an open-addressing <code>delete</code> not simply empty the slot? State how <code>get</code>, <code>put</code> and <code>_resize</code> each treat a tombstone, and why the load check must count them.</p>",
+      "answer": "<ul><li><strong>Why not empty the slot:</strong> a search stops at <code>None</code>. If keys a and b collide and b was placed beyond a, emptying a's slot cuts b's probe sequence: <code>get(b)</code> stops at the new <code>None</code> and reports b missing although it is still in the table.</li><li><strong><code>get</code> / <code>delete</code>:</strong> skip a tombstone and keep probing; stop only at the key or at <code>None</code>.</li><li><strong><code>put</code>:</strong> remember the first tombstone passed, but keep probing to <code>None</code> — the key may be further on (then overwrite it). If it is not there, insert at the remembered tombstone (reusing the space), else at the <code>None</code>.</li><li><strong><code>_resize</code>:</strong> re-insert only live keys; tombstones are dropped, so the new table has none.</li><li><strong>Load check:</strong> tombstones are not keys, but they fill slots, and only <code>None</code> stops a probe. Counting them (<code>size + tombstones + 1</code>) forces a rebuild — at the same capacity if the live keys alone are within the limit — before the table runs out of <code>None</code>.</li></ul>"
+    },
+    {
+      "id": "W13-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Show that a hash table that doubles its capacity when the load factor passes a fixed limit does amortised <span class=\"quiz-math\">O(1)</span> work per <code>put</code> on rehashing. What happens if it grows by a fixed 8 slots instead?</p>",
+      "answer": "<ul><li>A resize at size s rehashes s keys. With doubling, the resizes before reaching size n happened at sizes of at most <span class=\"quiz-math\">n, n/2, n/4, …</span>, so the total rehashing is at most <span class=\"quiz-math\">n + n/2 + n/4 + … &lt; 2n</span>: <span class=\"quiz-math\">O(n)</span> for n puts, <strong>amortised <span class=\"quiz-math\">O(1)</span></strong> each. (Measured in Lecture 13: 3,075 keys rehashed for 3,000 puts in the chaining table, 5,396 in the open-addressing one — both under 2n.)</li><li>Growing by 8 slots: a resize every 6 or so puts, each rehashing all keys so far: <span class=\"quiz-math\">6 + 12 + 18 + … ≈ n<sup>2</sup>/12</span> — <span class=\"quiz-math\">Θ(n<sup>2</sup>)</span> in total, <span class=\"quiz-math\">Θ(n)</span> amortised per put. The same argument as the <code>DynamicArray</code> with a constant growth step (Lecture 04).</li></ul>"
+    }
   ]
 }

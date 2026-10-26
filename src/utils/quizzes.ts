@@ -1,6 +1,6 @@
 // Self-check quizzes. The DSA27 weeks are generated from the course question bank by
 // scripts/import_dsa27_quizzes.py into src/data/quizzes/dsa27/weekNN.json; the HTML in those files
-// is produced by that script, not typed by hand.
+// is produced by that script, not typed by hand. The midterm simulator draws on weeks 1 to MIDTERM_LAST_WEEK.
 
 type Lang = 'ar' | 'en';
 
@@ -13,10 +13,19 @@ export type QuizQuestion = {
   explanation: string;
 };
 
+export type QuizEssay = {
+  id: string;
+  level: '' | 'what' | 'how' | 'why';
+  marks: number;
+  stem: string;
+  answer: string;
+};
+
 export type QuizWeek = {
   week: number;
   title: string;
   questions: QuizQuestion[];
+  essays?: QuizEssay[];
 };
 
 const dsa27Files = import.meta.glob<QuizWeek>('../data/quizzes/dsa27/week*.json', { eager: true, import: 'default' });
@@ -28,6 +37,9 @@ export const DSA27_REPO = 'https://github.com/helghareeb/DSA27';
 export const getWeekSlug = (week: number) => `week-${String(week).padStart(2, '0')}`;
 export const getQuizIndexPath = (lang: Lang) => `/${lang}/quizzes/`;
 export const getDsa27WeekPath = (lang: Lang, week: number) => `/${lang}/quizzes/dsa27/${getWeekSlug(week)}/`;
+export const MIDTERM_LAST_WEEK = 7;
+export const midtermWeeks = () => dsa27Weeks.filter((week) => week.week <= MIDTERM_LAST_WEEK);
+export const getDsa27MidtermPath = (lang: Lang) => `/${lang}/quizzes/dsa27/midterm/`;
 export const getDsa27PdfUrl = (week: number, kind: 'Questions' | 'Answers') =>
   `${DSA27_REPO}/blob/main/docs/pdf/DSA27-QB-Week${String(week).padStart(2, '0')}-${kind}.pdf`;
 
@@ -59,6 +71,18 @@ export const quizLabels = {
     repo: 'مستودع المقرر',
     previous: 'الأسبوع السابق',
     next: 'الأسبوع التالي',
+    essays: 'أسئلة المقال',
+    essaysLead: (n: number, marks: number) =>
+      `${n} أسئلة مقالية (${marks} درجة). اكتب إجابتك أولًا، ثم اعرض الإجابة النموذجية ونقاط التصحيح، وقدّر درجتك بأمانة: كل نقطة تساوي درجة تقريبًا.`,
+    marks: (n: number) => (n === 1 ? 'درجة واحدة' : n === 2 ? 'درجتان' : `${n} درجات`),
+    yourAnswer: 'إجابتك (تُحفظ على هذا الجهاز فقط)',
+    showModel: 'عرض الإجابة النموذجية',
+    hideModel: 'إخفاء الإجابة النموذجية',
+    modelAnswer: 'الإجابة النموذجية ونقاط التصحيح',
+    selfMark: 'درجتك',
+    essayTotal: 'مجموع درجات المقال',
+    midterm: 'محاكي امتحان منتصف الفصل',
+    midtermLead: 'امتحانات تجريبية من أسئلة المحاضرات 1 إلى 7: حتى 60 سؤالًا بزمن محدد، مع أسئلة مقالية اختيارية وتقرير مفصل بعد التسليم.',
   },
   en: {
     section: 'Quizzes',
@@ -87,5 +111,17 @@ export const quizLabels = {
     repo: 'Course repository',
     previous: 'Previous week',
     next: 'Next week',
+    essays: 'Written questions',
+    essaysLead: (n: number, marks: number) =>
+      `${n} written questions (${marks} marks). Write your answer first, then open the model answer and its marking points, and mark yourself honestly: each point is worth about one mark.`,
+    marks: (n: number) => (n === 1 ? '1 mark' : `${n} marks`),
+    yourAnswer: 'Your answer (saved on this device only)',
+    showModel: 'Show the model answer',
+    hideModel: 'Hide the model answer',
+    modelAnswer: 'Model answer and marking points',
+    selfMark: 'Your mark',
+    essayTotal: 'Written total',
+    midterm: 'Midterm exam simulator',
+    midtermLead: 'Practice midterms from Lectures 1 to 7: up to 60 timed questions, an optional written section, and a detailed report when you submit.',
   },
 };

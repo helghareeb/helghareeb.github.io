@@ -288,5 +288,42 @@
       "answer": 1,
       "explanation": "<p>Both routes are <span class=\"quiz-math\">O(n)</span> (a). The tree route <strong>needs</strong> recursion (c), and memory for the tree (d).</p>"
     }
+  ],
+  "essays": [
+    {
+      "id": "W15-E1",
+      "level": "what",
+      "marks": 4,
+      "stem": "<p>Name the three stages of a translator, with the input and output of each. For each, give an input that it — and only it — rejects, and the exception our calculator raises. How does a compiler differ from an interpreter?</p>",
+      "answer": "<ul><li><strong>Lexer:</strong> text <span class=\"quiz-math\">→</span> tokens. Rejects characters outside the language: <code>\"3 $ 4\"</code> <span class=\"quiz-math\">→</span> <code>ValueError</code> (unexpected character).</li><li><strong>Parser:</strong> tokens <span class=\"quiz-math\">→</span> tree (AST), following the grammar. Rejects valid tokens in an invalid order: <code>\"3 + * 4\"</code>, <code>\"(3 + 4\"</code>, <code>\"3 + 4 )\"</code> <span class=\"quiz-math\">→</span> <code>ValueError</code>.</li><li><strong>Evaluator:</strong> tree <span class=\"quiz-math\">→</span> value. Rejects well-formed expressions with no value: <code>\"1 / 0\"</code> <span class=\"quiz-math\">→</span> <code>ZeroDivisionError</code>.</li><li><strong>Compiler against interpreter:</strong> a compiler translates the whole program ahead of time into another program (machine code, bytecode) that runs later; an interpreter executes as it goes and produces the result. Both share the lexer and parser; a compiler replaces the evaluator by a code generator. CPython does both: compile to bytecode, then interpret it.</li></ul>"
+    },
+    {
+      "id": "W15-E2",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>\"Precedence is the shape of the grammar.\" Explain this sentence using the three rules of our grammar and the tree of <code>3 + 4 * 2</code>. How do parentheses override precedence? Where would you add a rule for a tighter operator such as <code>^</code>?</p>",
+      "answer": "<ul><li><code>expr := term (('+' | '-') term)*</code> — an expression is a sum of terms; <code>term := factor (('*' | '/') factor)*</code> — a term is a product of factors.</li><li>To parse <code>3 + 4 * 2</code>, <code>expr</code> splits at <code>+</code> into the terms <code>3</code> and <code>4 * 2</code>; the <code>*</code> is consumed <strong>inside</strong> the second term. In the tree, <code>*</code> is below <code>+</code>: <code>+</code> over <code>3</code> and <code>*</code>(4, 2). Deeper nodes are evaluated first, so <code>*</code> \"wins\" — value 11.</li><li>The lower the rule an operator lives in, the tighter it binds: precedence is <strong>which rule</strong> handles the operator, not a number.</li><li>Parentheses: <code>factor := '(' expr ')'</code> makes a whole parenthesised expression a <strong>factor</strong>, the tightest level, so <code>(3 + 4) * 2</code> puts <code>+</code> below <code>*</code>.</li><li>A tighter operator such as <code>^</code> gets a <strong>new rule between <code>term</code> and <code>factor</code></strong>, so that <code>term</code> is built from it and it is built from factors (W15-C5).</li></ul>"
+    },
+    {
+      "id": "W15-E3",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>What is associativity? Explain why <code>expr</code> must use a <strong>loop</strong> that makes the tree so far the <strong>left</strong> child. Describe what goes wrong with a right-recursive <code>expr</code> and with a left-recursive one, with an input for each.</p>",
+      "answer": "<ul><li><strong>Associativity</strong> decides how operators of the <strong>same</strong> precedence group: left-associative <code>1 - 2 - 3 = (1 - 2) - 3 = -4</code>.</li><li>The loop in <code>expr</code> does <code>node = BinOp(op, node, self.term())</code>: the tree built so far becomes the <strong>left</strong> child of each new operator, so the first operation ends up deepest and is evaluated first — left associativity.</li><li><strong>Right recursion</strong> (<code>expr := term ('+' expr)?</code>) puts the recursive result — the whole rest of the line — on the right: <code>1 - 2 - 3</code> becomes <code>1 - (2 - 3) = 2</code>. No error; just a wrong answer, and only for chains of <code>-</code> or <code>/</code> (W15-B1).</li><li><strong>Left recursion</strong> (<code>expr := expr '+' term</code>) calls <code>expr</code> first, with nothing consumed: the recursion makes no progress, and <strong>every</strong> input, even <code>3</code>, ends in <code>RecursionError</code>.</li><li>The <code>( … )*</code> form with a loop gives left associativity <strong>and</strong> terminates.</li></ul>"
+    },
+    {
+      "id": "W15-E4",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Compare the two routes from infix tokens to a value: shunting-yard plus <code>evaluate_postfix</code>, and <code>Parser</code> plus <code>evaluate</code>. Give their costs, one advantage of each, and the connection between the postfix list and the tree.</p>",
+      "answer": "<ul><li><strong>Stack route:</strong> <code>infix_to_postfix</code> (operator stack, precedence table) then <code>evaluate_postfix</code> (value stack). <span class=\"quiz-math\">O(n)</span>; no recursion, so no depth limit; builds nothing but a list.</li><li><strong>Tree route:</strong> <code>Parser</code> (recursive descent) then <code>evaluate</code> (post-order). <span class=\"quiz-math\">O(n)</span> too; the tree can be reused — printed, simplified, compiled — and the grammar is easy to extend (unary minus is one case in <code>factor</code>; the Week 6 <code>infix_to_postfix</code> produces <code>5 -</code> for <code>-5</code>, which <code>evaluate_postfix</code> rejects). Its recursion depth follows the tree's height.</li><li><strong>Connection:</strong> the postfix list is exactly the <strong>post-order</strong> traversal of the tree. Shunting-yard emits the post-order of a tree it never builds.</li></ul>"
+    },
+    {
+      "id": "W15-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>\"In a recursive-descent parser, the call stack is the parser's stack.\" Explain. What decides how deep it grows, and what happens when it grows too deep?</p>",
+      "answer": "<ul><li>Each method call pushes a frame holding its own locals — including its <code>node</code> so far and where it is in its rule. At any moment the frames on the call stack are one path of the parse tree: \"inside a <code>factor</code>, inside a <code>term</code>, inside an <code>expr</code>…\". Returning pops a frame and resumes the rule that called it. A hand-written parser would need its own explicit stack for this; recursion gets it for free.</li><li><strong>Depth</strong> is set by the <strong>shape</strong> of the input, not its length: three frames per level of parentheses (<code>expr</code>, <code>term</code>, <code>factor</code>); a flat chain <code>1 + 1 + …</code> is a loop and adds nothing to the parser's depth (but see W15-K2 for <code>evaluate</code>).</li><li><strong>Too deep:</strong> Python's limit (1,000 frames by default) raises <code>RecursionError</code> — at about 330 nested pairs of parentheses. Real compilers raise the limit, or use an explicit stack for deep cases.</li></ul>"
+    }
   ]
 }

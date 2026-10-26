@@ -287,6 +287,305 @@
       ],
       "answer": 1,
       "explanation": "<p>One coin for the append's own write, two saved to pay for copying at the next doubling.</p>"
+    },
+    {
+      "id": "W4-M23",
+      "level": "how",
+      "stem": "<p>With the course <code>DynamicArray</code> (capacity 1, doubling), what are <code>len(a)</code> and <code>a._capacity</code> after <code>a = DynamicArray(range(6))</code>?</p>",
+      "options": [
+        "6 and 6",
+        "8 and 8",
+        "6 and 8",
+        "6 and 12"
+      ],
+      "answer": 2,
+      "explanation": "<p>Resizes on appends 2, 3 and 5 take the capacity 1 → 2 → 4 → 8; the sixth append fits. <code>len</code> is the size, 6. (a) confuses size with capacity; (d) grows by a factor of 3 from 4.</p>"
+    },
+    {
+      "id": "W4-M24",
+      "level": "why",
+      "stem": "<p>Why does <code>__getitem__</code> check <code>index &lt; self._size</code> rather than <code>index &lt; self._capacity</code>?</p>",
+      "options": [
+        "The slots beyond <code>size</code> hold nothing the user stored, so reading one must raise <code>IndexError</code>, as it does for a Python list",
+        "The slots beyond <code>size</code> do not exist in the <code>Array</code> yet",
+        "Comparing with <code>size</code> is faster than comparing with <code>capacity</code>",
+        "It is only needed so that negative indices work"
+      ],
+      "answer": 0,
+      "explanation": "<p>The <code>Array</code> has all <code>capacity</code> slots (so (b) is wrong), but the ones beyond <code>size</code> are not part of the user's data. Reading one must be an <code>IndexError</code>, not a silent <code>None</code> — W4-B2 is exactly this bug.</p>"
+    },
+    {
+      "id": "W4-M25",
+      "level": "how",
+      "stem": "<p>What does this print?</p><pre><code>a = DynamicArray()\nfor i in range(9):\n    a.append(i)\nprint(a.resize_count, a._capacity)</code></pre>",
+      "options": [
+        "<code>3 8</code>",
+        "<code>9 16</code>",
+        "<code>4 9</code>",
+        "<code>4 16</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Appends 2, 3, 5 and 9 find the array full: 4 resizes, capacity 1 → 2 → 4 → 8 → 16. (c) gives the size as the capacity; (a) misses the 9th append, which finds 8 of 8 slots used.</p>"
+    },
+    {
+      "id": "W4-M26",
+      "level": "what",
+      "stem": "<p>When the course <code>DynamicArray</code> resizes, it:</p>",
+      "options": [
+        "makes the existing <code>Array</code> longer, in place",
+        "allocates a new, bigger <code>Array</code>, copies every element into it, and switches <code>_block</code> to it",
+        "copies only the new element into a second <code>Array</code>",
+        "links a second <code>Array</code> after the first one"
+      ],
+      "answer": 1,
+      "explanation": "<p>Allocate, copy, switch — Lecture 04's three steps. An <code>Array</code> cannot grow in place (a), and the dynamic array is one contiguous block, not a chain of blocks (d).</p>"
+    },
+    {
+      "id": "W4-M27",
+      "level": "why",
+      "stem": "<p>Why can <code>_resize</code> not simply make the existing <code>Array</code> longer?</p>",
+      "options": [
+        "Python forbids changing an object after it is created",
+        "A longer <code>Array</code> would make indexing <span class=\"quiz-math\">O(n)</span>",
+        "An <code>Array</code> is one fixed-size block of memory; the memory just after it may already be in use, so a bigger block has to be allocated elsewhere",
+        "The elements must be copied so that they stay sorted"
+      ],
+      "answer": 2,
+      "explanation": "<p>An array's speed comes from being one contiguous block, and the memory after it is not guaranteed to be free. So a larger block is made elsewhere, and everything is copied. (b) is backwards: a contiguous block is exactly what keeps indexing <span class=\"quiz-math\">O(1)</span>.</p>"
+    },
+    {
+      "id": "W4-M28",
+      "level": "how",
+      "stem": "<p>A <code>DynamicArray</code> holds 8 elements and has capacity 8. Counting the elements copied by a resize <strong>and</strong> the elements shifted, how many existing elements move during <code>insert_at(0, \"x\")</code>?</p>",
+      "options": [
+        "8",
+        "9",
+        "1",
+        "16"
+      ],
+      "answer": 3,
+      "explanation": "<p>The array is full, so <code>insert_at</code> first resizes: 8 copies. Then all 8 elements shift one place right to free slot 0: 8 more. Then <code>\"x\"</code> is written. (a) forgets one of the two, and (b) counts the new element as a moved one.</p>"
+    },
+    {
+      "id": "W4-M29",
+      "level": "how",
+      "stem": "<p><code>a = DynamicArray([10, 20, 30, 40, 50])</code>. What does <code>a.pop(2)</code> return, and how many elements move?</p>",
+      "options": [
+        "30; two elements shift one place left",
+        "30; no element moves",
+        "20; two elements shift one place left",
+        "30; three elements shift one place left"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>pop(2)</code> returns <code>a[2]</code>, which is 30, and 40 and 50 shift left to close the gap. (c) counts from 1; (d) also counts the removed element.</p>"
+    },
+    {
+      "id": "W4-M30",
+      "level": "how",
+      "stem": "<p>After 9 appends and then 8 calls of <code>pop()</code>, what is the capacity of the course <code>DynamicArray</code>?</p>",
+      "options": [
+        "1 — popping gives the memory back",
+        "16 — the course <code>pop</code> never shrinks the array",
+        "2 — it halves whenever it is a quarter full",
+        "4 — it halves whenever it is half full"
+      ],
+      "answer": 1,
+      "explanation": "<p>The course <code>DynamicArray.pop</code> shifts and clears a slot, but never resizes: the capacity stays 16. Shrinking at one quarter (c) is the Homework 4 extension, <code>ShrinkingArray</code> (W4-C3), not the course class.</p>"
+    },
+    {
+      "id": "W4-M31",
+      "level": "how",
+      "stem": "<p>During 1,000,000 appends to an array that doubles, the single most expensive append copies how many elements?</p>",
+      "options": [
+        "1,000,000",
+        "999,999",
+        "524,288",
+        "20"
+      ],
+      "answer": 2,
+      "explanation": "<p>Resizes copy 1, 2, 4, …; the last one happens when the size is <span class=\"quiz-math\">2<sup>19</sup> = 524288</span>, because <span class=\"quiz-math\">2<sup>20</sup></span> is over a million. (a) and (b) would need the array to be full at that size, which it never is; (d) is the number of resizes, not the size of the largest.</p>"
+    },
+    {
+      "id": "W4-M32",
+      "level": "how",
+      "stem": "<p>With <code>DynamicArray(growth=3)</code>, the total number of elements copied by n appends is always less than:</p>",
+      "options": [
+        "n / 3",
+        "3n",
+        "<span class=\"quiz-math\">n log<sub>3</sub> n</span>",
+        "1.5n"
+      ],
+      "answer": 3,
+      "explanation": "<p>The copies are <span class=\"quiz-math\">1 + 3 + 9 + … + 3<sup>k</sup> = (3<sup>k+1</sup> - 1)/2</span> with <span class=\"quiz-math\">3<sup>k</sup> &lt; n</span>, which is less than <span class=\"quiz-math\">1.5 · 3<sup>k</sup> &lt; 1.5n</span> — the general bound <span class=\"quiz-math\">n · r/(r-1)</span> with r = 3. (b) is true but weaker, and (c) is not even linear.</p>"
+    },
+    {
+      "id": "W4-M33",
+      "level": "what",
+      "stem": "<p>Which of these statements is an <strong>amortised</strong> bound rather than a worst-case bound for a single operation?</p>",
+      "options": [
+        "Any n appends to a doubling array cost fewer than 3n units of work in total",
+        "One append can cost <span class=\"quiz-math\">O(n)</span>",
+        "Every <code>a[i]</code> costs <span class=\"quiz-math\">O(1)</span>",
+        "<code>insert_at(0, x)</code> costs <span class=\"quiz-math\">O(n)</span>"
+      ],
+      "answer": 0,
+      "explanation": "<p>A bound on the <strong>total</strong> of any sequence, shared over its operations, is amortised. (b), (c) and (d) each bound one operation: worst-case statements.</p>"
+    },
+    {
+      "id": "W4-M34",
+      "level": "what",
+      "stem": "<p><code>DynamicArray(growth=1.5)</code> fails at its first resize. Why?</p>",
+      "options": [
+        "1.5 is not greater than 1",
+        "<code>1 * 1.5</code> is a float, and an <code>Array</code> needs a whole number of slots",
+        "append would become amortised <span class=\"quiz-math\">O(n)</span>",
+        "Python cannot multiply an <code>int</code> by a <code>float</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>make_block(1 * 1.5)</code> asks for 1.5 slots, and the <code>Array</code> raises <code>TypeError: 'float' object cannot be interpreted as an integer</code>. A factor of 1.5 is fine in theory — (a) and (c) are wrong — it only needs rounding to a whole number, as Lecture 04 shows.</p>"
+    },
+    {
+      "id": "W4-M35",
+      "level": "why",
+      "stem": "<p>What does <code>DynamicArray([1, 2], growth=1)</code> do?</p>",
+      "options": [
+        "It works; the capacity grows by one slot at each resize",
+        "It loops for ever",
+        "It raises <code>IndexError</code> on the second append: the \"resize\" makes a new block of 1 × 1 = 1 slot, so there is still no room",
+        "It raises <code>ZeroDivisionError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>The first append fits. The second finds the array full and calls <code>_resize(1 * 1)</code>, which copies into a new block of the <strong>same</strong> size, so the write to slot 1 raises <code>IndexError</code>. A factor of 1 is not growth at all, and certainly not growth by one slot (a).</p>"
+    },
+    {
+      "id": "W4-M36",
+      "level": "why",
+      "stem": "<p>An array that grows by a constant <strong>+10</strong> slots copies 798,400 elements for 4,000 appends. For 8,000 appends it copies about:</p>",
+      "options": [
+        "the same number — the step is the same",
+        "twice as many",
+        "13 more",
+        "four times as many"
+      ],
+      "answer": 3,
+      "explanation": "<p>Constant-step copying is quadratic, about <span class=\"quiz-math\">n<sup>2</sup>/(2 × 10)</span>: double n and the copies multiply by about 4 (3,196,800 in fact). (b) is what doubling gives — linear.</p>"
+    },
+    {
+      "id": "W4-M37",
+      "level": "what",
+      "stem": "<p>A <code>DynamicArray</code> holds 5 elements in capacity 8. What does <code>a[5] = \"x\"</code> do?</p>",
+      "options": [
+        "writes into slot 5, and the size becomes 6",
+        "writes into slot 5, and the size stays 5",
+        "raises <code>IndexError</code>",
+        "appends <code>\"x\"</code> at the end"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>__setitem__</code> accepts the same indices as <code>__getitem__</code>, 0 to size − 1. Slot 5 is not yet an element, so it is an <code>IndexError</code>, as it is for a Python list; writing never changes the size (a). To add an element, use <code>append</code> (d).</p>"
+    },
+    {
+      "id": "W4-M38",
+      "level": "why",
+      "stem": "<p>In the accounting argument (3 coins per append), the doubling from capacity 8 to 16 copies 8 elements. Which coins pay for it?</p>",
+      "options": [
+        "The 2 spare coins saved by each of the 4 appends made since the previous resize",
+        "One coin from each of the 8 appends made so far",
+        "All 3 coins of the append that triggers the resize",
+        "Coins borrowed from the appends still to come"
+      ],
+      "answer": 0,
+      "explanation": "<p>After the resize to capacity 8 at size 4, the appends of elements 5, 6, 7 and 8 each paid 1 coin for their own write and saved 2: 8 coins, exactly enough to copy 8 elements. Earlier appends' coins (b) were spent on earlier resizes; nothing is borrowed (d) — the bank never goes negative.</p>"
+    },
+    {
+      "id": "W4-M39",
+      "level": "why",
+      "stem": "<p>A student's <code>_resize</code> copies into the new block and sets <code>self._block</code>, but forgets <code>self._capacity = capacity</code>. Starting empty with capacity 1, what happens?</p>",
+      "options": [
+        "Nothing goes wrong: <code>_capacity</code> is only for display",
+        "The second append raises <code>IndexError</code>",
+        "Every append resizes from then on: slow, but correct",
+        "The third append raises <code>IndexError</code>: the size never equals the stale capacity again, so the full block is never grown"
+      ],
+      "answer": 3,
+      "explanation": "<p>Append 2 sees size 1 = capacity 1 and resizes to a 2-slot block, but <code>_capacity</code> stays 1. From then on <code>size == _capacity</code> is never true again, so there are no more resizes: append 3 writes to slot 2 of a 2-slot block and raises <code>IndexError</code>. (b) is the bug of W4-B1.</p>"
+    },
+    {
+      "id": "W4-M40",
+      "level": "what",
+      "stem": "<p>Which methods of the course <code>DynamicArray</code> can trigger a resize?</p>",
+      "options": [
+        "only <code>append</code>",
+        "<code>append</code> and <code>insert_at</code>",
+        "<code>append</code> and <code>pop</code>",
+        "<code>append</code>, <code>insert_at</code> and <code>__setitem__</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>append</code> and <code>insert_at</code> add an element, so either may find the array full. <code>pop</code> never resizes in the course class (c), and <code>__setitem__</code> only overwrites an existing slot (d).</p>"
+    }
+  ],
+  "essays": [
+    {
+      "id": "W4-E1",
+      "level": "why",
+      "marks": 5,
+      "stem": "<p>Define amortised cost. Prove that n appends to a dynamic array that doubles cost <span class=\"quiz-math\">O(n)</span> in total, and conclude the amortised cost of one append.</p>",
+      "answer": "<ul><li><strong>Definition:</strong> the amortised cost of an operation is the maximum total cost of any sequence of n operations, divided by n. It is a guarantee over sequences, not an average over inputs.</li><li><strong>Writes:</strong> each of the n appends writes one element: n.</li><li><strong>Copies:</strong> resizes happen when the size reaches 1, 2, 4, …, <span class=\"quiz-math\">2<sup>k</sup></span> with <span class=\"quiz-math\">2<sup>k</sup> &lt; n</span>, each copying that many elements.</li><li><strong>Sum:</strong> <span class=\"quiz-math\">1 + 2 + … + 2<sup>k</sup> = 2<sup>k+1</sup> - 1 &lt; 2 · 2<sup>k</sup> &lt; 2n</span>.</li><li><strong>Conclusion:</strong> total &lt; 3n = O(n), so the amortised cost of one append is &lt; 3 = O(1). (The accounting argument — 3 coins per append — is equally acceptable.)</li></ul>"
+    },
+    {
+      "id": "W4-E2",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain why growing the capacity by a constant number of slots gives <span class=\"quiz-math\">Θ(n<sup>2</sup>)</span> total cost for n appends, however large the constant, while growing by a constant factor gives <span class=\"quiz-math\">Θ(n)</span>.</p>",
+      "answer": "<ul><li>Each resize copies <strong>everything</strong> stored so far.</li><li><strong>Constant step c:</strong> resizes come every c appends, at sizes about c, 2c, 3c, …; the amounts copied grow <strong>linearly</strong>, and a sum of n/c linearly growing terms is about <span class=\"quiz-math\">n<sup>2</sup>/(2c)</span> — <span class=\"quiz-math\">Θ(n<sup>2</sup>)</span>. A larger c only shrinks the constant.</li><li><strong>Factor r:</strong> resizes come at sizes growing <strong>geometrically</strong>; each one copies r times more than the last, so the whole sum is dominated by its last term, which is less than n: total <span class=\"quiz-math\">Θ(n)</span>.</li><li>The difference is linear against geometric spacing of the resizes — not the size of the step.</li></ul>"
+    },
+    {
+      "id": "W4-E3",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p><code>append</code> is \"worst-case <span class=\"quiz-math\">O(n)</span> and amortised <span class=\"quiz-math\">O(1)</span>\". Explain both statements, why both are true, and when the worst case still matters.</p>",
+      "answer": "<ul><li><strong>Worst case O(n):</strong> a single append that finds the array full must copy all n elements before writing.</li><li><strong>Amortised O(1):</strong> such appends are exponentially rare; any n appends cost under 3n in total. Both are true because they measure different things — one operation, against a whole sequence.</li><li><strong>When the worst case matters:</strong> when one slow operation is itself a failure — real-time systems, a game frame, a latency-critical request. Those reserve capacity in advance.</li></ul>"
+    },
+    {
+      "id": "W4-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain thrashing with a concrete sequence of operations, and the shrinking rule that prevents it.</p>",
+      "answer": "<ul><li><strong>Thrashing:</strong> operations alternating around a single boundary force a resize almost every time, so each costs <span class=\"quiz-math\">O(n)</span>.</li><li><strong>Example</strong> (grow at full, shrink at half full): capacity 8, size 8. <code>append</code> → grow to 16 (copy 8); <code>pop</code> → size 8 = half of 16 → shrink to 8 (copy 8); <code>append</code> → grow (copy 8); and so on.</li><li><strong>Rule:</strong> grow when full, but shrink (halve) only when the size falls to <strong>one quarter</strong> of the capacity.</li><li><strong>Why it works:</strong> after any resize the array is about half full, so at least about n/4 cheap operations must happen before the next resize, which pays for it: amortised O(1) for any mix of appends and pops.</li></ul>"
+    },
+    {
+      "id": "W4-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Growth factor is a time–space trade-off. Explain the trade-off, and why CPython's <code>list</code> uses a small factor (about 1.125).</p>",
+      "answer": "<ul><li>A <strong>larger factor</strong> resizes less often (fewer total copies, e.g. under 2n for ×2) but can leave more capacity unused (up to about half).</li><li>A <strong>smaller factor</strong> wastes less memory but copies more (about <span class=\"quiz-math\">n r/(r-1)</span> in total — around 9n for r = 1.125).</li><li>Any factor &gt; 1 keeps append amortised O(1). CPython chooses a small one because Python programs create huge numbers of lists, most of them small, so the saved memory matters more than the extra copying.</li></ul>"
+    },
+    {
+      "id": "W4-E6",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>A <code>DynamicArray</code> holds <code>a b c d</code> in capacity 4. Describe every step of <code>insert_at(1, \"x\")</code>, give the final contents, size and capacity, and count the elements copied and shifted. Why must <code>insert_at</code> check for a full array <strong>before</strong> it shifts?</p>",
+      "answer": "<ul><li><strong>Bounds:</strong> <code>0 &lt;= 1 &lt;= 4</code> holds. <strong>Full:</strong> size 4 = capacity 4, so resize to 8: allocate an <code>Array(8)</code> and copy <code>a b c d</code> — <strong>4 copies</strong>.</li><li><strong>Shift right</strong>, from the end down to the gap: <code>d</code> to slot 4, <code>c</code> to 3, <code>b</code> to 2 — <strong>3 shifts</strong>. Then write <code>\"x\"</code> into slot 1; size becomes 5.</li><li><strong>Result:</strong> <code>a x b c d</code>, size 5, capacity 8; 7 elements moved, plus 1 write.</li><li><strong>Why first:</strong> the first shift writes into slot <code>size</code>, which does not exist in a full block, so shifting before resizing raises <code>IndexError</code>.</li></ul>"
+    },
+    {
+      "id": "W4-E7",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p><code>Stack</code>, <code>SlowQueue</code>, <code>MinHeap</code> and <code>Graph</code> are all built on your <code>DynamicArray</code>. For the stack and the slow queue, explain how the cost of each operation follows from the <code>DynamicArray</code> table. Why does a bug in <code>DynamicArray</code> show up in the tests of other weeks?</p>",
+      "answer": "<ul><li><strong>Stack:</strong> the top is the <strong>end</strong> of the <code>DynamicArray</code>, so push is <code>append</code> (amortised <span class=\"quiz-math\">O(1)</span>), and pop and peek touch only the last slot (<span class=\"quiz-math\">O(1)</span>).</li><li><strong>SlowQueue:</strong> enqueue is <code>append</code> (amortised <span class=\"quiz-math\">O(1)</span>), but dequeue is <code>pop(0)</code>, which shifts every remaining element: <span class=\"quiz-math\">O(n)</span> — the cost Week 7 measures.</li><li>The structure's costs are the <code>DynamicArray</code>'s costs at the end it uses: the stack chose the cheap end; the queue cannot avoid the expensive one. (<code>MinHeap</code> adds a leaf with <code>append</code>; <code>Graph</code> keeps each neighbour list in one.)</li><li><strong>Bugs travel:</strong> these classes call your <code>append</code>, <code>pop</code> and <code>__getitem__</code>, so a wrong bound or a broken resize fails <em>their</em> tests too — the storage rule makes week 4 the foundation of weeks 6, 7, 12 and 14.</li></ul>"
+    },
+    {
+      "id": "W4-E8",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Explain the accounting (\"bank\") argument for a doubling array: how many coins each append is charged, what each coin pays for, and why the bank never goes negative.</p>",
+      "answer": "<ul><li>Charge every append <strong>3 coins</strong>: 1 pays for its own write, 2 are saved in the bank.</li><li>At a resize from capacity c to 2c, the c/2 appends since the previous resize have saved <span class=\"quiz-math\">2 · c/2 = c</span> coins — exactly enough to copy the c elements.</li><li>So the balance never goes negative: every resize is paid for by coins already saved. Total cost ≤ 3n, amortised <span class=\"quiz-math\">O(1)</span> per append.</li></ul>"
+    },
+    {
+      "id": "W4-E9",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>A game appends one record to a dynamic array every frame and must never take longer than one frame. Explain why a doubling array is a risk even though append is amortised <span class=\"quiz-math\">O(1)</span>, and describe two ways to remove the risk.</p>",
+      "answer": "<ul><li><strong>The risk:</strong> amortised <span class=\"quiz-math\">O(1)</span> bounds the <strong>total</strong>, not each append. The append that finds the array full copies everything — with a million records, one frame does a million copies and the game stutters.</li><li><strong>Fix 1 — reserve:</strong> allocate enough capacity in advance for the expected number of records, so no resize happens during play.</li><li><strong>Fix 2 — spread the copy:</strong> when the array is half full, allocate the bigger block and copy a few old elements on each later append, so the copy is finished before the old block fills; every append is then worst-case <span class=\"quiz-math\">O(1)</span>.</li><li>Also acceptable: store the records in a chain of fixed-size blocks (as <code>collections.deque</code> does) or in a linked list — worst-case <span class=\"quiz-math\">O(1)</span> append, at a cost in memory and locality.</li></ul>"
     }
   ]
 }

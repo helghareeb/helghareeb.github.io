@@ -313,6 +313,312 @@
       ],
       "answer": 3,
       "explanation": "<p><code>int()</code> of a string accepts only an integer literal. Use <code>int(float(\"4.5\"))</code> if truncation is really what you want.</p>"
+    },
+    {
+      "id": "W1-M25",
+      "level": "why",
+      "stem": "<p>In C, reading <code>a[10]</code> from a 5-element array returns whatever happens to be in memory; in Python, <code>a[10]</code> on a 5-element list raises <code>IndexError</code>. Which explanation matches Lecture 01?</p>",
+      "options": [
+        "C's compilers have a long-standing bug that was never fixed",
+        "Python checks the index because it is a compiled language",
+        "C was designed as a portable assembler that trusts the programmer, so it does not pay for a bounds check; Python chose to fail loudly instead",
+        "C arrays are stored as linked lists, so the index cannot be checked"
+      ],
+      "answer": 2,
+      "explanation": "<p>\"A portable assembler; trust the programmer\" is C's founding decision. A bounds check costs time on every access, so C leaves it out. It is not a bug (a). Python is not compiled to machine code (b); it checks because its designers preferred a loud failure to silent corruption.</p>"
+    },
+    {
+      "id": "W1-M26",
+      "level": "how",
+      "stem": "<p>What does Python print for <code>2 ** 64 + 1</code>?</p>",
+      "options": [
+        "<code>18446744073709551617</code>",
+        "<code>1</code>, because the value wraps around past 64 bits",
+        "it raises <code>OverflowError</code>",
+        "<code>1.8446744073709552e+19</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>A Python <code>int</code> grows as large as memory allows, so the answer is exact. Wrapping round (b) is what a fixed-size C integer does. <code>OverflowError</code> (c) is raised by some <em>float</em> operations, not by <code>int</code> arithmetic, and (d) would need a float in the expression.</p>"
+    },
+    {
+      "id": "W1-M27",
+      "level": "why",
+      "stem": "<p>Why do the course's exercises never call <code>input()</code>?</p>",
+      "options": [
+        "<code>input()</code> is too slow for large inputs",
+        "<code>input()</code> always returns an <code>int</code>, which is not always wanted",
+        "<code>input()</code> was removed in Python 3",
+        "a function that reads the keyboard cannot be tested automatically; the exercises take parameters and return results instead"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>tests/</code> calls each function with arguments and checks what it returns, and a test cannot type at a keyboard. <code>input()</code> exists in Python 3 (c) and returns a <strong>string</strong> (b), never an <code>int</code>.</p>"
+    },
+    {
+      "id": "W1-M28",
+      "level": "how",
+      "stem": "<p>What is <code>f'{7:03d}|{3.14159:.2f}'</code>?</p>",
+      "options": [
+        "<code>'7|3.14'</code>",
+        "<code>'007|3.14'</code>",
+        "<code>'700|3.141'</code>",
+        "<code>'007|3.1'</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>:03d</code> means an integer, at least 3 wide, padded with zeros: <code>007</code>. <code>:.2f</code> means two digits after the point: <code>3.14</code>. (a) ignores the format, and (d) has the wrong precision.</p>"
+    },
+    {
+      "id": "W1-M29",
+      "level": "how",
+      "stem": "<p>What does this print?</p><pre><code>a = [1, 2, 3]\nb = a\na = a + [4]\nb.append(5)\nprint(a, b)</code></pre>",
+      "options": [
+        "<code>[1, 2, 3, 4] [1, 2, 3, 5]</code>",
+        "<code>[1, 2, 3, 4, 5] [1, 2, 3, 4, 5]</code>",
+        "<code>[1, 2, 3, 4] [1, 2, 3, 4, 5]</code>",
+        "<code>[1, 2, 3, 5, 4] [1, 2, 3, 5]</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>b = a</code> makes two names for one list. Then <code>a = a + [4]</code> builds a <strong>new</strong> list and rebinds only <code>a</code>. <code>b</code> still names the old list, so <code>b.append(5)</code> changes only that one. (b) and (c) assume that <code>+</code> changes the list in place; <code>append</code> does, <code>+</code> does not.</p>"
+    },
+    {
+      "id": "W1-M30",
+      "level": "why",
+      "stem": "<p><code>xs = [42, \"hello\", 3.14]</code> holds an <code>int</code>, a <code>str</code> and a <code>float</code> in one list. Why is that possible?</p>",
+      "options": [
+        "Python converts every element to a string when it is stored",
+        "a list declares a union type when it is created",
+        "a list grows when a bigger element is added",
+        "a list stores <strong>references</strong> to objects, not the objects themselves, and every reference has the same size"
+      ],
+      "answer": 3,
+      "explanation": "<p>The list holds references, as the ladder in Lecture 01 shows, so the objects themselves can be of any type. Nothing is converted (a), and Python lists declare no element type (b).</p>"
+    },
+    {
+      "id": "W1-M31",
+      "level": "what",
+      "stem": "<p>Lecture 01 lists three properties we care about in an algorithm. In the lecture's order, they are:</p>",
+      "options": [
+        "cost in time, cost in space, correctness",
+        "correctness, cost in time, cost in space",
+        "cost in time, cost in space, readability",
+        "readability, correctness, cost in time"
+      ],
+      "answer": 1,
+      "explanation": "<p>Correctness first, because a fast wrong answer is worthless; then time, then space. (a) puts speed before correctness, which is exactly the habit the lecture warns against.</p>"
+    },
+    {
+      "id": "W1-M32",
+      "level": "why",
+      "stem": "<p>You time linear and binary search on a sorted list of 20 items, and linear search is faster. Does this contradict \"binary search is <span class=\"quiz-math\">O(log n)</span>, linear search is <span class=\"quiz-math\">O(n)</span>\"?</p>",
+      "options": [
+        "No: Big-O ignores constant factors and describes how the cost grows for large n; at small n, the constants can win",
+        "Yes: the measurement must have been wrong",
+        "No: binary search is <span class=\"quiz-math\">O(n)</span> when n is below 100",
+        "Yes: Big-O applies only to unsorted input"
+      ],
+      "answer": 0,
+      "explanation": "<p>Big-O describes growth and throws constant factors away. Binary search does more work per step, so at small n linear search can win: the <strong>crossover point</strong> that a measurement shows. The measurement is not wrong (b), and binary search is <span class=\"quiz-math\">O(log n)</span> at every size (c).</p>"
+    },
+    {
+      "id": "W1-M33",
+      "level": "how",
+      "stem": "<p>An <span class=\"quiz-math\">O(n<sup>2</sup>)</span> program takes 2 seconds on today's data. The data grows <strong>ten times</strong> larger. About how long will it take now?</p>",
+      "options": [
+        "20 seconds",
+        "40 seconds",
+        "200 seconds",
+        "4 seconds"
+      ],
+      "answer": 2,
+      "explanation": "<p><span class=\"quiz-math\">O(n<sup>2</sup>)</span>: ten times the data means <span class=\"quiz-math\">10<sup>2</sup> = 100</span> times the work, so about 200 seconds. (a) is what an <span class=\"quiz-math\">O(n)</span> program would do.</p>"
+    },
+    {
+      "id": "W1-M34",
+      "level": "why",
+      "stem": "<p>TIOBE ranked Visual Basic above Rust in September 2026. What does Lecture 01 conclude from rankings like this?</p>",
+      "options": [
+        "Visual Basic is the better language for new projects",
+        "The index counts search-engine hits, which says nothing about quality; use rankings only to see trends and to check that a language is not dying, never to choose a language for a task",
+        "Rust is dying and should not be learnt",
+        "All rankings are worthless and should never be read"
+      ],
+      "answer": 1,
+      "explanation": "<p>TIOBE counts search results, a proxy for how much people write about a language. The lecture keeps two uses for rankings, trends over years and \"is it still alive?\", so (d) goes too far, and neither (a) nor (c) follows from a search count.</p>"
+    },
+    {
+      "id": "W1-M35",
+      "level": "what",
+      "stem": "<p>What is <code>'a,b,,c'.split(',')</code>?</p>",
+      "options": [
+        "<code>['a', 'b', '', 'c']</code>",
+        "<code>['a', 'b', 'c']</code>",
+        "<code>['a,b,,c']</code>",
+        "<code>['a', 'b', ',c']</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>Splitting on an exact separator keeps the empty string between two commas that are next to each other. It is <code>split()</code> with <strong>no</strong> argument that splits on runs of whitespace and drops empty pieces, which is where (b) comes from.</p>"
+    },
+    {
+      "id": "W1-M36",
+      "level": "why",
+      "stem": "<p>A shop stores prices in pounds as <code>float</code> values and adds them up. Why does Lab 01 say not to, and what should it do instead?</p>",
+      "options": [
+        "floats are slower than ints; it should use strings",
+        "floats cannot hold negative values; it should use <code>abs()</code>",
+        "floats overflow above a million; it should use smaller units",
+        "amounts like 0.10 cannot be stored exactly in binary, so totals drift; it should store whole piasters as <code>int</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Most decimal fractions are not exact in binary (<code>0.1 + 0.1 + 0.1 == 0.3</code> is <code>False</code>), and the errors add up over many sums. Store the smallest unit as an <code>int</code>, which is exact. Floats can be negative (b) and go far above a million (c).</p>"
+    },
+    {
+      "id": "W1-M37",
+      "level": "what",
+      "stem": "<p>What do <code>'banana'.find('z')</code> and <code>'banana'.index('z')</code> do?</p>",
+      "options": [
+        "both return <code>-1</code>",
+        "<code>find</code> returns <code>-1</code>; <code>index</code> raises <code>ValueError</code>",
+        "<code>find</code> raises <code>ValueError</code>; <code>index</code> returns <code>-1</code>",
+        "<code>find</code> returns <code>None</code>; <code>index</code> raises <code>IndexError</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>find</code> returns <code>-1</code> when the substring is absent; <code>index</code> raises <code>ValueError</code> (<code>substring not found</code>). Neither returns <code>None</code> (d), and the error is a <code>ValueError</code>, not an <code>IndexError</code>.</p>"
+    },
+    {
+      "id": "W1-M38",
+      "level": "why",
+      "stem": "<p>Lecture 01 calls Python's built-in <code>list</code>, <code>dict</code>, <code>sorted</code> and <code>heapq</code> \"the honest case against Python — for us\". Why are they a problem in <strong>this</strong> course?</p>",
+      "options": [
+        "They already <em>are</em> the structures the course studies, so using them would hide the mechanism and the cost that the course is about",
+        "They are slower than any structure a student can write",
+        "They are not part of the Python standard library",
+        "They make the tests run too fast to be measured"
+      ],
+      "answer": 0,
+      "explanation": "<p>The course studies how structures work and what they cost. Calling the built-in that does it for you hides both, which is why the course re-implements them and, from Lecture 02, forbids <code>list</code>, <code>dict</code> and <code>set</code> as storage inside <code>dsa/</code>. The built-ins are usually <strong>faster</strong> than student code, because they run in C, so (b) is the wrong way round.</p>"
+    },
+    {
+      "id": "W1-M39",
+      "level": "what",
+      "stem": "<p>Which pairing of designer, language and decision is correct?</p>",
+      "options": [
+        "Bjarne Stroustrup — Python — readability is worth paying for",
+        "Guido van Rossum — Go — fewer features, faster builds",
+        "Bjarne Stroustrup — C++ — leave no room for a lower-level language",
+        "Graydon Hoare — C — trust the programmer"
+      ],
+      "answer": 2,
+      "explanation": "<p>Stroustrup's rule for C++ was that it should leave no gap below it. \"Readability\" is van Rossum's Python (a), \"fewer features\" is Go, by Pike, Thompson and Griesemer (b), and \"trust the programmer\" is Ritchie's C (d).</p>"
+    },
+    {
+      "id": "W1-M40",
+      "level": "why",
+      "stem": "<p>Lecture 01 says you cannot write badly-indented Python. Why?</p>",
+      "options": [
+        "Python editors re-indent your code before it runs",
+        "Python ignores indentation, so any indentation is fine",
+        "the interpreter repairs inconsistent indentation as it reads the file",
+        "indentation is part of Python's syntax: indent differently and you get a different program (or an error), a decision made for readability"
+      ],
+      "answer": 3,
+      "explanation": "<p>In Python the indentation <em>is</em> the block structure, so there is no separate layout that could be bad while the code stays the same. Nothing re-indents your code (a, c), and the indentation is not ignored (b).</p>"
+    },
+    {
+      "id": "W1-M41",
+      "level": "how",
+      "stem": "<p>What does this print?</p><pre><code>def min_max(a, b):\n    if a &lt; b:\n        return a, b\n    return b, a\n\nresult = min_max(9, 2)\nprint(type(result).__name__, result[0])</code></pre>",
+      "options": [
+        "<code>tuple 2</code>",
+        "<code>list 2</code>",
+        "<code>tuple 9</code>",
+        "<code>int 2</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p><code>return a, b</code> returns <strong>one</strong> value, a tuple. Here <code>9 &lt; 2</code> is false, so the second <code>return</code> gives <code>(2, 9)</code>, and <code>result[0]</code> is <code>2</code>. (c) takes the order of the arguments instead of the order returned.</p>"
+    },
+    {
+      "id": "W1-M42",
+      "level": "how",
+      "stem": "<p>What does this print?</p><pre><code>grid = [[0, 0], [0, 0]]\ncopy = grid[:]\ncopy[0][0] = 9\ncopy[1] = [7, 7]\nprint(grid)</code></pre>",
+      "options": [
+        "<code>[[0, 0], [0, 0]]</code>",
+        "<code>[[9, 0], [0, 0]]</code>",
+        "<code>[[9, 0], [7, 7]]</code>",
+        "<code>[[0, 0], [7, 7]]</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>grid[:]</code> is a <strong>shallow</strong> copy: a new outer list holding the same inner lists. <code>copy[0][0] = 9</code> changes an inner list that both share, so <code>grid</code> sees it. <code>copy[1] = [7, 7]</code> rebinds a slot of the <strong>new</strong> outer list only, so <code>grid</code> does not see it, which rules out (c). (a) assumes a deep copy.</p>"
+    }
+  ],
+  "essays": [
+    {
+      "id": "W1-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>\"All programming languages are the same; only the syntax differs.\" Explain what is true in this statement and what is wrong with it. Give one concrete example of a design decision that makes two languages genuinely different.</p>",
+      "answer": "<ul><li><strong>True part:</strong> general-purpose languages are Turing-complete, so they can all compute the same set of functions.</li><li><strong>What is wrong:</strong> equivalence of <em>what</em> can be computed says nothing about the <strong>cost</strong> — to write, to read and maintain, to run — nor about which mistakes the language lets survive into production.</li><li>A language is a <strong>set of design decisions</strong> with authors and reasons (language → design → philosophy).</li><li><strong>Example</strong>, any one well explained: C trusts the programmer and does no bounds checking, so <code>a[10]</code> on a 5-element array silently corrupts memory, while Python raises <code>IndexError</code>; or Python is strongly typed (<code>\"3\" + 5</code> is an error) while JavaScript is weak (<code>\"35\"</code>); or Rust's ownership versus C's manual <code>free</code>.</li></ul>"
+    },
+    {
+      "id": "W1-E2",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain the two independent axes of type systems. Place Python and JavaScript on both axes, and show with one expression how their behaviour differs.</p>",
+      "answer": "<ul><li><strong>Static vs dynamic</strong> is <em>when</em> types are checked — at compile time, or at run time.</li><li><strong>Strong vs weak</strong> is <em>how strictly</em> types are kept apart — refusing, or silently converting.</li><li>Python is <strong>dynamic and strong</strong>; JavaScript is <strong>dynamic and weak</strong>.</li><li><code>\"3\" + 5</code>: Python raises <code>TypeError</code>; JavaScript returns <code>\"35\"</code>. Neither is a bug — they are different decisions about loud failure versus convenient conversion.</li></ul>"
+    },
+    {
+      "id": "W1-E3",
+      "level": "what",
+      "marks": 3,
+      "stem": "<p>Describe the three approaches to memory management from Lecture 01, naming one language that uses each. Which one does Python use, and why does that make data structures harder to <em>see</em> in Python?</p>",
+      "answer": "<ul><li><strong>Manual</strong> (C, C++): the programmer allocates and frees — fast, and the source of many security bugs. <strong>Garbage collected</strong> (Python, Java, Go): the runtime frees unreachable objects — safe, less control. <strong>Ownership</strong> (Rust): the compiler proves each allocation is freed exactly once — safe and fast, harder to satisfy.</li><li>Python uses <strong>garbage collection</strong> (reference counting plus a cycle collector).</li><li>Consequence: removing a node from a linked list is just \"stop referring to it\" — no <code>free</code>, no visible pointer — so the structure is invisible unless you use the debugger to watch references change.</li></ul>"
+    },
+    {
+      "id": "W1-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Distinguish an <strong>Abstract Data Type</strong> from a <strong>data structure</strong>. Illustrate with the Stack ADT and two different structures that implement it.</p>",
+      "answer": "<ul><li><strong>ADT</strong>: the contract — operations, their meaning, their cost — with nothing about storage.</li><li><strong>Data structure</strong>: a concrete arrangement of data in memory that fulfils the contract.</li><li><strong>Stack ADT</strong>: <code>push</code> adds, <code>pop</code> removes the most recent, <code>peek</code> looks; all O(1).</li><li><strong>Two structures</strong>: a dynamic array with the top at the end; a linked list with the top at the head. Both honest stacks; they differ in memory overhead, cache behaviour and whether one operation can occasionally be slow. Choosing between them is the engineering.</li></ul>"
+    },
+    {
+      "id": "W1-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Give two reasons the course uses Python, and the honest drawback of Python <em>for this course</em>. How does the course deal with that drawback?</p>",
+      "answer": "<ul><li><strong>For</strong>, any two: the field (research, data, AI/ML) runs on Python; it binds to fast C/C++/CUDA underneath; it reads close to pseudocode, so the algorithm survives onto the page; students meet it again in every program.</li><li><strong>Against:</strong> Python already has the structures as built-ins — <code>list</code>, <code>dict</code>, <code>deque</code>, <code>sorted</code>, <code>heapq</code> — which hides exactly what the course studies.</li><li><strong>Remedy:</strong> the course reimplements them, and (from Lecture 02) structures may store data only in the course <code>Array</code>, in nodes, or in structures students built — never in <code>list</code>, <code>dict</code> or <code>set</code>.</li></ul>"
+    },
+    {
+      "id": "W1-E6",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>\"In Python a variable is not a box holding a value; it is a name bound to an object.\" Explain this with a short code example and a diagram, and state one consequence for lists.</p>",
+      "answer": "<ul><li><code>a = [1, 2, 3]</code> creates a list object and binds the name <code>a</code> to it; <code>b = a</code> binds a <strong>second name to the same object</strong> — no copy.</li><li>Diagram: two names, <code>a</code> and <code>b</code>, with arrows to one list object.</li><li>Consequence: <code>b.append(4)</code> changes what <code>a</code> shows. To get an independent list, copy it: <code>a[:]</code>, <code>a.copy()</code> or <code>list(a)</code> — and that copy is <strong>shallow</strong>.</li></ul>"
+    },
+    {
+      "id": "W1-E7",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>\"Measure, do not assert.\" Explain why the course asks you to measure an algorithm's cost, what a measurement shows that a Big-O table does not, and one way a measurement can mislead you, with how to avoid it.</p>",
+      "answer": "<ul><li><strong>Why measure:</strong> a claim about cost is a hypothesis. Timing the code over growing n and plotting it against reference curves checks the claim instead of arguing about it (<code>viz.complexity.measure</code> and <code>plot_growth</code>).</li><li><strong>What it shows that Big-O does not:</strong> the <strong>constant factors</strong>, and so the <strong>crossover point</strong>. Linear search can beat binary search at small n, because binary search does more work per step, even though it wins at scale.</li><li><strong>How it can mislead:</strong> one run is noisy, a small n hides the growth, and one machine is not every machine.</li><li><strong>Avoiding it:</strong> time many sizes over a wide range, repeat the runs and take the best or the average, and judge the <strong>shape</strong> (the slope on a log–log plot), not one number.</li></ul>"
+    },
+    {
+      "id": "W1-E8",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>\"<code>print</code> is not <code>return</code>.\" Explain the difference with a two-line function, say what a test sees in each case, and explain why the exercises use parameters and <code>return</code> rather than <code>input()</code> and <code>print()</code>.</p>",
+      "answer": "<ul><li><code>def f(x): print(x * 2)</code> shows the value on the screen and returns <code>None</code>; <code>def g(x): return x * 2</code> hands the value back to the caller.</li><li>A test sees only what is <strong>returned</strong>: <code>assert f(3) == 6</code> fails, because <code>f(3)</code> is <code>None</code>, although \"6\" appeared on the screen.</li><li>Exercises take <strong>parameters</strong> and <strong>return</strong> results because a test can call them with any input and check the output automatically. A function that calls <code>input()</code> waits for a keyboard that a test does not have, and <code>print()</code> gives the test nothing to check.</li></ul>"
+    },
+    {
+      "id": "W1-E9",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>\"Which language is best?\" is not a question. Rewrite it as the real questions it hides, and explain why the <strong>ecosystem</strong> of a language matters more than its syntax, naming at least three parts of an ecosystem.</p>",
+      "answer": "<ul><li>The real questions: best <strong>for what task</strong> (firmware, a web service, data analysis…), <strong>for whom</strong> (one learner, or a large team for ten years), <strong>by which measure</strong> (speed to write, speed to run, safety, hiring), and <strong>when</strong> (this project, or one maintained until 2035).</li><li>Change any one of them and the answer changes, so \"best\" alone has no answer.</li><li><strong>Ecosystem</strong>, any three: libraries, tooling (debugger, profiler, package manager, test runner), community (answers already written), interoperability (calling fast code written in another language), longevity.</li><li><strong>Why it beats syntax:</strong> you stop noticing syntax after two weeks, but you work inside the ecosystem for years. Whether someone has already solved your problem, well, matters more than how a loop is spelt.</li></ul>"
+    },
+    {
+      "id": "W1-E10",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Compare Python's <code>int</code> and <code>float</code> with C's <code>int</code>: what happens when a value gets very large, what that costs, and why <code>0.1 + 0.2 == 0.3</code> is <code>False</code>. State the two rules Lab 01 gives for working with floats.</p>",
+      "answer": "<ul><li><strong>C <code>int</code></strong> has a fixed size (usually 32 bits) and silently <strong>wraps round</strong> when it overflows: <span class=\"quiz-math\">2<sup>31</sup> - 1</span> plus 1 becomes <span class=\"quiz-math\">-2<sup>31</sup></span>.</li><li><strong>Python <code>int</code></strong> grows as large as memory allows, so <code>2 ** 100</code> is exact. The cost is that arithmetic on huge integers is <strong>not <span class=\"quiz-math\">O(1)</span></strong>: it takes longer as the number of digits grows.</li><li>A <strong><code>float</code></strong> is a 64-bit binary fraction. 0.1, 0.2 and 0.3 have no exact binary form, so <code>0.1 + 0.2</code> is <code>0.30000000000000004</code>. This is not a bug; C, Java and JavaScript do the same.</li><li><strong>Rules:</strong> never compare floats with <code>==</code> after arithmetic (round them, or test <code>abs(x - y) &lt; 1e-9</code>), and never store money as a float (store piasters as an <code>int</code>).</li></ul>"
     }
   ]
 }

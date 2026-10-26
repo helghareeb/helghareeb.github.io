@@ -288,5 +288,42 @@
       "answer": 3,
       "explanation": "<p><code>heapify</code> gives <code>[9, 6, 4, 1, 5, 3, 2, 1]</code>: <code>_items[1]</code> is 6.</p>"
     }
+  ],
+  "essays": [
+    {
+      "id": "W12-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Define a binary heap by its two properties. Explain why the <strong>shape</strong> property matters: what it gives the height, and what it gives the storage.</p>",
+      "answer": "<ul><li><strong>Shape:</strong> a <strong>complete</strong> binary tree — every level full except possibly the last, which is filled from the left.</li><li><strong>Order (heap property):</strong> every parent beats its children — <span class=\"quiz-math\">≤</span> in a min-heap, <span class=\"quiz-math\">≥</span> in a max-heap. So the best value is at the root. Siblings are unordered.</li><li><strong>Height:</strong> a complete tree of n nodes has height <span class=\"quiz-math\">⌊ log<sub>2</sub> n ⌋</span>, so every operation that walks one path is <span class=\"quiz-math\">O(log n)</span>. A heap can never degenerate into a list, unlike an unbalanced BST.</li><li><strong>Storage:</strong> level-by-level numbering fills indices 0 … n – 1 with no gaps, so the tree is an array; children at 2i + 1 and 2i + 2, parent at (i – 1) // 2. No nodes, no references.</li></ul>"
+    },
+    {
+      "id": "W12-E2",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Describe <code>push</code> and <code>pop</code> on a min-heap, including sift-up and sift-down, the cost of each, and the special cases the code must handle.</p>",
+      "answer": "<ul><li><strong>push(x):</strong> append x at index n (the only place that keeps the shape complete), then <strong>sift up</strong>: while x beats its parent, swap them. At most one swap per level: <span class=\"quiz-math\">O(log n)</span>.</li><li><strong>pop():</strong> raise <code>IndexError</code> if empty. Save the root; remove the <strong>last</strong> item; if the heap is now empty, return it (the one-item case); otherwise put it at the root and <strong>sift down</strong>: find the better of the item and its (up to two) children; if a child is better, swap and continue. At most two comparisons per level: <span class=\"quiz-math\">O(log n)</span>.</li><li><strong>Special cases:</strong> empty <code>pop</code>/<code>peek</code>; a single item; a node with a left child but no right child (check each child index against <code>len</code> before reading it).</li><li><code>peek</code> is <span class=\"quiz-math\">O(1)</span>: the root.</li></ul>"
+    },
+    {
+      "id": "W12-E3",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain how <code>heapify</code> builds a heap bottom-up, why it must go from the last parent <strong>backwards</strong>, and show that it is <span class=\"quiz-math\">O(n)</span>. Why are n pushes <span class=\"quiz-math\">O(n log n)</span> in the worst case?</p>",
+      "answer": "<ul><li><strong>Algorithm:</strong> leave the values in place; for i from <code>n // 2 − 1</code> <strong>down</strong> to 0, sift down i. Leaves (the back half) are heaps already.</li><li><strong>Why backwards:</strong> when i is sifted down, both of its subtrees must already be heaps — sift-down only repairs a root sitting on two valid heaps. Going backwards guarantees that; going forwards does not (W12-K3).</li><li><strong>O(n):</strong> a node of height h moves at most h levels, and at most <span class=\"quiz-math\">⌈ n / 2<sup>h+1</sup> ⌉</span> nodes have height h, so the work is at most <span class=\"quiz-math\">Σ<sub>h</sub> h · n/2<sup>h+1</sup> = n/2Σ<sub>h</sub> h/2<sup>h</sup> = n/2· 2 = n</span> swaps.</li><li><strong>n pushes:</strong> a push costs the node's <strong>depth</strong>, and half the nodes are at the bottom, at depth <span class=\"quiz-math\">≈ log<sub>2</sub> n</span>: in the worst case (descending input for a min-heap) the total is <span class=\"quiz-math\">Θ(n log n)</span>. Measured in Lecture 12: 2.0 comparisons per element for heapify against 14 per element for pushes, at n = 2^16^.</li></ul>"
+    },
+    {
+      "id": "W12-E4",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>Compare four ways to implement a priority queue — unsorted array, sorted array, binary heap, balanced binary search tree — by the cost of enqueue, dequeue and peek. Which would you choose, and why?</p>",
+      "answer": "<div class=\"quiz-table\"><table><thead><tr><th></th><th>enqueue</th><th>dequeue</th><th>peek</th></tr></thead><tbody><tr><td>unsorted array</td><td><span class=\"quiz-math\">O(1)</span> amortised</td><td><span class=\"quiz-math\">O(n)</span></td><td><span class=\"quiz-math\">O(n)</span></td></tr><tr><td>sorted array</td><td><span class=\"quiz-math\">O(n)</span></td><td><span class=\"quiz-math\">O(1)</span> (from the end)</td><td><span class=\"quiz-math\">O(1)</span></td></tr><tr><td>binary heap</td><td><span class=\"quiz-math\">O(log n)</span></td><td><span class=\"quiz-math\">O(log n)</span></td><td><span class=\"quiz-math\">O(1)</span></td></tr><tr><td>balanced BST</td><td><span class=\"quiz-math\">O(log n)</span></td><td><span class=\"quiz-math\">O(log n)</span></td><td><span class=\"quiz-math\">O(log n)</span>, or <span class=\"quiz-math\">O(1)</span> with a pointer to the minimum</td></tr></tbody></table></div><ul><li><strong>Choose the heap:</strong> a workload of n enqueues and n dequeues costs <span class=\"quiz-math\">O(n log n)</span>, against <span class=\"quiz-math\">O(n<sup>2</sup>)</span> for either array; it lives in one array with no references, and needs no balancing. The BST matches the Big-O but costs nodes, references and a balancing scheme — worth it only if you also need to search for or delete <strong>arbitrary</strong> items.</li></ul>"
+    },
+    {
+      "id": "W12-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p><code>PriorityQueue</code> stores <code>(priority, counter, item)</code>. What goes wrong with <code>(priority, item)</code>? What does the counter add besides avoiding that error?</p>",
+      "answer": "<ul><li>With <code>(priority, item)</code>, two equal priorities make Python compare the items. Items that do not support <code>&lt;</code> (dictionaries, most objects) raise <code>TypeError</code>; items that do (strings) are ordered by value, which is not what anyone asked for.</li><li>The counter is unique and sits before the item, so every comparison is settled by priority or counter and never reaches the item.</li><li>It also makes ties <strong>FIFO</strong>: the counter grows with each enqueue, so of two equal priorities the earlier one is served first. A heap on its own is not stable, so this fairness comes only from the counter.</li></ul>"
+    }
   ]
 }

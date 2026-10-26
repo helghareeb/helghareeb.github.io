@@ -287,6 +287,305 @@
       ],
       "answer": 1,
       "explanation": "<p>And, like <code>pop</code>, it raises <code>IndexError</code> on an empty stack — so (d) is wrong.</p>"
+    },
+    {
+      "id": "W6-M23",
+      "level": "how",
+      "stem": "<p>The shunting-yard algorithm converts <code>2 * 3 + 4</code> to:</p>",
+      "options": [
+        "<code>2 3 4 + *</code>",
+        "<code>2 3 * 4 +</code>",
+        "<code>2 * 3 4 +</code>",
+        "<code>+ * 2 3 4</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>*</code> is stacked first; when <code>+</code> arrives, <code>*</code> has higher precedence and leaves first, so <code>2 3 *</code> comes before <code>4 +</code>. (a) is <code>2 * (3 + 4)</code>, and (c) and (d) are not postfix.</p>"
+    },
+    {
+      "id": "W6-M24",
+      "level": "how",
+      "stem": "<p>The shunting-yard algorithm converts <code>( 1 + 2 ) * ( 3 - 4 ) / 5</code> to:</p>",
+      "options": [
+        "<code>1 2 + 3 4 - 5 / *</code>",
+        "<code>1 2 3 4 + - * 5 /</code>",
+        "<code>1 2 + 3 4 - * 5 /</code>",
+        "<code>1 2 + * 3 4 - 5 /</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p>When <code>/</code> arrives, <code>*</code> is on the stack with <strong>equal</strong> precedence, so it leaves first: <code>… * 5 /</code>, which is <code>((1 + 2) * (3 - 4)) / 5</code>. (a) is what the <code>&gt;</code> bug produces: <code>/</code> waits on top of <code>*</code>, which computes <code>(1 + 2) * ((3 - 4) / 5)</code>.</p>"
+    },
+    {
+      "id": "W6-M25",
+      "level": "why",
+      "stem": "<p>A student's <code>infix_to_postfix</code> pops an operator only when the stacked one has <strong>strictly higher</strong> precedence (<code>&gt;</code> instead of <code>&gt;=</code>). Their calculator, <code>evaluate_postfix(infix_to_postfix(...))</code>, now gives <code>8 - 3 - 2</code> as:</p>",
+      "options": [
+        "3",
+        "13",
+        "a <code>ValueError</code>",
+        "7"
+      ],
+      "answer": 3,
+      "explanation": "<p>The second <code>-</code> does not pop the first, so the postfix is <code>8 3 2 - -</code>, which is <code>8 - (3 - 2)</code> = 7. The right answer (a) is 3. No error (c): the postfix is well formed, just wrong.</p>"
+    },
+    {
+      "id": "W6-M26",
+      "level": "why",
+      "stem": "<p>With the same <code>&gt;</code> bug, which of these inputs is <strong>still</strong> converted correctly?</p>",
+      "options": [
+        "<code>3 + 4 * 2</code>",
+        "<code>8 - 3 - 2</code>",
+        "<code>8 / 4 / 2</code>",
+        "<code>6 - 2 + 1</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>When <code>*</code> arrives, <code>+</code> is <strong>lower</strong>, so it stays under both rules; the two rules differ only for equal precedence. (b), (c) and (d) each have two operators of equal precedence in a row: (c) becomes <code>8 / (4 / 2)</code> = 4.0 instead of 1.0, (d) <code>6 - (2 + 1)</code> = 3 instead of 5.</p>"
+    },
+    {
+      "id": "W6-M27",
+      "level": "how",
+      "stem": "<p><code>evaluate_postfix([\"6\", \"2\", \"/\", \"3\", \"*\"])</code> returns:</p>",
+      "options": [
+        "1.0",
+        "18.0",
+        "9.0",
+        "it raises <code>ValueError</code>"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>6 / 2</code> is 3.0 (true division gives a float), then <code>3.0 * 3</code> is 9.0. (a) multiplies first, which the postfix order does not allow; exactly one value is left at the end, so there is no <code>ValueError</code> (d).</p>"
+    },
+    {
+      "id": "W6-M28",
+      "level": "why",
+      "stem": "<p>A buggy <code>evaluate_postfix</code> computes (first value popped) op (second value popped): the operands the wrong way round. On which input does it <strong>still</strong> give the right answer?</p>",
+      "options": [
+        "<code>8 3 -</code>",
+        "<code>9 3 /</code>",
+        "<code>5 1 2 + -</code>",
+        "<code>3 4 + 2 *</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p>Only <code>+</code> and <code>*</code> appear, and both commute, so the swapped order cannot show. (a) gives −5 instead of 5, (b) 0.33 instead of 3.0, (c) −2 instead of 2: every <code>-</code> and <code>/</code> exposes the bug, which is why the tests need them.</p>"
+    },
+    {
+      "id": "W6-M29",
+      "level": "how",
+      "stem": "<p><code>evaluate_postfix([\"3\", \"4\"])</code>:</p>",
+      "options": [
+        "returns 4",
+        "raises <code>ValueError</code>: two values are left at the end",
+        "returns 7",
+        "returns 3"
+      ],
+      "answer": 1,
+      "explanation": "<p>Two numbers and no operator leave two values on the stack; the contract says exactly one must remain, so the input is malformed. Returning the top (a) would hide the error.</p>"
+    },
+    {
+      "id": "W6-M30",
+      "level": "what",
+      "stem": "<p><code>evaluate_postfix([\"1\", \"0\", \"/\"])</code>:</p>",
+      "options": [
+        "raises <code>ZeroDivisionError</code>",
+        "raises <code>ValueError</code>",
+        "returns 0",
+        "returns <code>None</code>"
+      ],
+      "answer": 0,
+      "explanation": "<p>The expression is well formed, so it is not a <code>ValueError</code> (b). Python's own <code>1 / 0</code> raises <code>ZeroDivisionError</code>, and <code>evaluate_postfix</code> lets it through.</p>"
+    },
+    {
+      "id": "W6-M31",
+      "level": "why",
+      "stem": "<p>A version of <code>is_balanced</code> ends with <code>return True</code> instead of <code>return openers.is_empty()</code>. Which input does it get <strong>wrong</strong>?</p>",
+      "options": [
+        "<code>([)]</code>",
+        "<code>)(</code>",
+        "<code>(a))</code>",
+        "<code>((a)</code>"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>((a)</code> leaves one <code>(</code> on the stack, which only the empty-at-the-end check catches. The partner check still catches (a), and the non-empty check still catches (b) and (c), whose closer arrives on an empty stack.</p>"
+    },
+    {
+      "id": "W6-M32",
+      "level": "what",
+      "stem": "<p>A version of <code>is_balanced</code> pops for every closer <strong>without</strong> first checking that the stack is non-empty. On <code>\"())\"</code> it:</p>",
+      "options": [
+        "returns <code>True</code>",
+        "returns <code>False</code>",
+        "raises <code>IndexError</code>: <code>pop</code> on the empty stack",
+        "loops for ever"
+      ],
+      "answer": 2,
+      "explanation": "<p>After <code>()</code> the stack is empty; the second <code>)</code> calls <code>pop</code>, and your <code>Stack.pop</code> raises <code>IndexError</code>: a crash instead of the answer <code>False</code> (b).</p>"
+    },
+    {
+      "id": "W6-M33",
+      "level": "how",
+      "stem": "<p><code>is_balanced(\"a(b)c)d(\")</code> returns <code>False</code>. Which check fails <strong>first</strong>?</p>",
+      "options": [
+        "the partner check",
+        "a closer arrives when the stack is empty",
+        "the empty-at-the-end check",
+        "none of them: it returns <code>True</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>(</code> is pushed and matched by the first <code>)</code>; the second <code>)</code> finds the stack empty, and the function returns <code>False</code> there. The final <code>(</code> (c) is never reached.</p>"
+    },
+    {
+      "id": "W6-M34",
+      "level": "why",
+      "stem": "<p><code>is_balanced(\"print('(')\")</code>, a line of valid Python, returns:</p>",
+      "options": [
+        "<code>True</code>: the characters inside quotes are skipped",
+        "<code>True</code>: it has as many <code>(</code> as <code>)</code>",
+        "it raises an error on the quote characters",
+        "<code>False</code>: the <code>(</code> inside the quotes is counted like any other"
+      ],
+      "answer": 3,
+      "explanation": "<p><code>is_balanced</code> knows nothing about strings: it sees <code>(</code>, <code>(</code>, <code>)</code>, and one <code>(</code> is left at the end. The counts are 2 and 1, not equal (b). A real parser first splits the text into tokens, so a bracket inside a string is not a bracket (Week 15).</p>"
+    },
+    {
+      "id": "W6-M35",
+      "level": "why",
+      "stem": "<p>Most pushes onto the <code>Stack</code> of <code>dsa/stack.py</code> are instant, but now and then <strong>one</strong> push takes much longer. Why?</p>",
+      "options": [
+        "The <code>DynamicArray</code> was full, so that push copies every item into a bigger block: <span class=\"quiz-math\">O(n)</span> for that push, amortised <span class=\"quiz-math\">O(1)</span> overall",
+        "The top is kept at index 0, so that push shifts every item",
+        "<code>push</code> walks to the end of the stack first",
+        "Python checks the whole stack for duplicates"
+      ],
+      "answer": 0,
+      "explanation": "<p>That is the resize of Week 4: rare, expensive pushes, paid for by the many cheap ones. The course stack keeps the top at the <strong>end</strong>, not at index 0 (b), and nothing walks (c).</p>"
+    },
+    {
+      "id": "W6-M36",
+      "level": "what",
+      "stem": "<p>Which stack gives <strong>worst-case</strong> <span class=\"quiz-math\">O(1)</span> for every push, not just amortised <span class=\"quiz-math\">O(1)</span>?</p>",
+      "options": [
+        "an array with the top at the end",
+        "an array with the top at index 0",
+        "a singly linked list with the top at the head",
+        "a singly linked list with the top at the last node"
+      ],
+      "answer": 2,
+      "explanation": "<p><code>push_front</code> makes one node and moves one reference, always. The array with the top at the end (a) is amortised <span class=\"quiz-math\">O(1)</span>: a push that triggers a resize copies everything. (b) and (d) are <span class=\"quiz-math\">O(n)</span> designs.</p>"
+    },
+    {
+      "id": "W6-M37",
+      "level": "what",
+      "stem": "<p><code>s = Stack([1, 2, 3])</code>. What does <code>s.pop()</code> return?</p>",
+      "options": [
+        "1",
+        "3",
+        "<code>[1, 2, 3]</code>",
+        "it raises <code>IndexError</code>"
+      ],
+      "answer": 1,
+      "explanation": "<p><code>Stack(values)</code> pushes the values in order, so the last one, 3, is the top. A stack built from values is not empty (d).</p>"
+    },
+    {
+      "id": "W6-M38",
+      "level": "why",
+      "stem": "<p>Two <code>peek()</code> calls in a row, with nothing in between, return two <strong>different</strong> values. The most likely bug is that <code>peek</code>:</p>",
+      "options": [
+        "reads index 0 instead of the last slot",
+        "forgets to raise <code>IndexError</code> on an empty stack",
+        "is <span class=\"quiz-math\">O(n)</span> instead of <span class=\"quiz-math\">O(1)</span>",
+        "removes the top, as <code>pop</code> does"
+      ],
+      "answer": 3,
+      "explanation": "<p>A <code>peek</code> that removes is a <code>pop</code>: the second call sees the item underneath. Reading index 0 (a) is wrong too, but it would return the <strong>same</strong> wrong value twice.</p>"
+    },
+    {
+      "id": "W6-M39",
+      "level": "how",
+      "stem": "<p>An editor with an undo stack and a redo stack. The user types A, types B, types C, then: undo, undo, redo, types D. What is on the two stacks (bottom → top)?</p>",
+      "options": [
+        "undo: A B D · redo: empty",
+        "undo: A B C D · redo: empty",
+        "undo: A B D · redo: C",
+        "undo: A D · redo: C B"
+      ],
+      "answer": 0,
+      "explanation": "<p>Undo, undo: C, then B, move to the redo stack. Redo moves B back. Typing D pushes D on the undo stack and <strong>clears</strong> the redo stack, so C is gone (c). (b) forgets that C was undone.</p>"
+    },
+    {
+      "id": "W6-M40",
+      "level": "why",
+      "stem": "<p><code>nested_sum</code> with your own <code>Stack</code> instead of recursion. Its real advantage in Python is that:</p>",
+      "options": [
+        "it is asymptotically faster",
+        "it adds the numbers in a different order, so the sum is more exact",
+        "a deeply nested input cannot raise <code>RecursionError</code>: your <code>Stack</code> has no 1,000-frame limit",
+        "it uses no extra memory"
+      ],
+      "answer": 2,
+      "explanation": "<p>Both versions visit every item once, <span class=\"quiz-math\">O(n)</span> either way (a), and the explicit stack needs memory too (d). The gain is the depth limit: Python stops a recursion at about 1,000 frames, and does not optimise tail calls.</p>"
+    }
+  ],
+  "essays": [
+    {
+      "id": "W6-E1",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>State the Stack ADT with the cost of each operation. Describe two honest implementations, compare them, and describe one design that passes every test but is not honest.</p>",
+      "answer": "<ul><li><strong>ADT:</strong> <code>push(x)</code>, <code>pop()</code>, <code>peek()</code>, <code>is_empty()</code>, <code>len()</code> — LIFO, all <span class=\"quiz-math\">O(1)</span>; <code>pop</code> and <code>peek</code> raise <code>IndexError</code> when empty.</li><li><strong>On a dynamic array</strong>, top at the end: push is amortised <span class=\"quiz-math\">O(1)</span> (occasional resize), pop and peek <span class=\"quiz-math\">O(1)</span>; compact memory, contiguous.</li><li><strong>On a linked list</strong>, top at the head: all worst-case <span class=\"quiz-math\">O(1)</span>; a node per item (about six times the memory of an array slot).</li><li><strong>Dishonest:</strong> top at index 0 of an array — every push and pop shifts all the elements, <span class=\"quiz-math\">O(n)</span> each, <span class=\"quiz-math\">O(n<sup>2</sup>)</span> for n operations — yet the stack behaves correctly and passes every test.</li></ul>"
+    },
+    {
+      "id": "W6-E2",
+      "level": "how",
+      "marks": 4,
+      "stem": "<p>Describe the stack algorithm for balanced brackets. Give an example of each of the three ways a text can be unbalanced, and the check that catches it.</p>",
+      "answer": "<ul><li>Scan the text. <strong>Opener</strong>: push. <strong>Closer</strong>: the stack must be non-empty and the popped opener must be its partner. <strong>End</strong>: the stack must be empty. Other characters are ignored.</li><li><strong>Wrong partner:</strong> <code>([)]</code> — <code>)</code> pops <code>[</code>.</li><li><strong>Closer with nothing open:</strong> <code>)</code> or <code>())</code> — the stack is empty when a closer arrives.</li><li><strong>Opener never closed:</strong> <code>(</code> or <code>(()</code> — the stack is not empty at the end.</li><li><span class=\"quiz-math\">O(n)</span> time, <span class=\"quiz-math\">O(n)</span> space in the worst case.</li></ul>"
+    },
+    {
+      "id": "W6-E3",
+      "level": "how",
+      "marks": 3,
+      "stem": "<p>Explain how a stack evaluates a postfix expression. Why does the order in which the two operands are popped matter, and for which operators?</p>",
+      "answer": "<ul><li>Scan the tokens: push numbers; for an operator, pop two values, apply it, push the result; at the end exactly one value must remain (otherwise the input was malformed).</li><li>The <strong>first</strong> value popped is the <strong>right</strong> operand and the <strong>second</strong> the <strong>left</strong>, because the left operand was pushed earlier.</li><li>It matters for the non-commutative operators, <code>-</code> and <code>/</code>: <code>8 3 -</code> must be 8 − 3 = 5, not 3 − 8 = −5.</li></ul>"
+    },
+    {
+      "id": "W6-E4",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Explain the shunting-yard algorithm, and trace it on <code>2 * ( 3 + 4 ) - 5</code>. Why must an operator of equal precedence be popped?</p>",
+      "answer": "<ul><li>Output list and operator stack. Numbers go to the output; <code>(</code> is pushed; <code>)</code> pops to the output down to the matching <code>(</code>; an operator pops every stacked operator of higher <strong>or equal</strong> precedence, then is pushed; at the end the stack is emptied to the output.</li><li><strong>Trace</strong> of <code>2 * ( 3 + 4 ) - 5</code>:</li></ul><div class=\"quiz-table\"><table><thead><tr><th>Token</th><th>Output</th><th>Stack</th></tr></thead><tbody><tr><td>2</td><td>2</td><td></td></tr><tr><td>*</td><td>2</td><td>*</td></tr><tr><td>(</td><td>2</td><td>* (</td></tr><tr><td>3</td><td>2 3</td><td>* (</td></tr><tr><td>+</td><td>2 3</td><td>* ( +</td></tr><tr><td>4</td><td>2 3 4</td><td>* ( +</td></tr><tr><td>)</td><td>2 3 4 +</td><td>*</td></tr><tr><td>-</td><td>2 3 4 + *</td><td>-</td></tr><tr><td>5</td><td>2 3 4 + * 5</td><td>-</td></tr><tr><td>end</td><td><strong>2 3 4 + * 5 -</strong></td><td></td></tr></tbody></table></div><ul><li><strong>Equal precedence pops</strong> so that left-associative operators apply left to right: in <code>8 - 3 - 2</code>, the first <code>-</code> must be applied before the second.</li></ul>"
+    },
+    {
+      "id": "W6-E5",
+      "level": "why",
+      "marks": 3,
+      "stem": "<p>\"Recursion is a stack.\" Explain, and describe how you would rewrite a recursive algorithm without recursion. When is that worth doing in Python?</p>",
+      "answer": "<ul><li>Every call pushes a frame (its local variables and where to return) on the call stack, and every return pops one — so a recursion is a computation driven by a stack.</li><li><strong>Rewrite:</strong> push the initial problem on an explicit <code>Stack</code>; loop while it is not empty: pop a problem, solve it directly if it is a base case, otherwise push its sub-problems.</li><li><strong>Worth it in Python</strong> when the recursion could go deeper than about 1,000 frames (<code>RecursionError</code>), since there is no tail-call optimisation — e.g. a depth-first search on a large graph (Week 14).</li></ul>"
+    },
+    {
+      "id": "W6-E6",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>A student's <code>infix_to_postfix</code> pops an operator only on <strong>strictly higher</strong> precedence (<code>&gt;</code> instead of <code>&gt;=</code>). Give one input that it still converts correctly and one that it gets wrong, with both postfix results and their values. Explain why the tests can miss this bug, and name an operator for which <code>&gt;</code> is the right rule.</p>",
+      "answer": "<ul><li><strong>Still right:</strong> <code>3 + 4 * 2</code>. It gives <code>3 4 2 * +</code> = 11 under both rules: when <code>*</code> arrives, <code>+</code> is lower, and the two rules differ only for <strong>equal</strong> precedence.</li><li><strong>Wrong:</strong> <code>8 - 3 - 2</code>. The second <code>-</code> does not pop the first, so the output is <code>8 3 2 - -</code>, which is <code>8 - (3 - 2)</code> = 7 instead of <code>8 3 - 2 -</code> = 3.</li><li><strong>Why tests miss it:</strong> only an input with two operators of equal precedence <strong>in a row</strong>, where the operation does not associate (<code>-</code>, <code>/</code>), shows the difference. <code>2 + 3 + 4</code> gives a different postfix but the same value, so a test that checks only values passes.</li><li><strong><code>&gt;</code> is right</strong> for a right-associative operator such as <code>**</code>: <code>2 ** 3 ** 2</code> means <code>2 ** (3 ** 2)</code>, so the later <code>**</code> must wait on top of the earlier one.</li></ul>"
+    },
+    {
+      "id": "W6-E7",
+      "level": "how",
+      "marks": 3,
+      "stem": "<p>Run the whole calculator on <code>( 8 - 2 ) / ( 1 + 2 ) * 4</code>: convert it to postfix with the shunting-yard algorithm, then evaluate the postfix with a stack, showing the stack after each operator. Why is the answer a float?</p>",
+      "answer": "<ul><li><strong>Postfix:</strong> <code>8 2 - 1 2 + / 4 *</code>. The <code>)</code>s output <code>-</code> and <code>+</code>; when <code>*</code> arrives, the <code>/</code> on the stack has equal precedence and leaves first.</li><li><strong>Evaluation</strong> (stack bottom → top): <code>-</code> pops 2 and 8 → [6]; <code>+</code> pops 2 and 1 → [6, 3]; <code>/</code> pops 3 and 6 → [2.0]; <code>*</code> pops 4 and 2.0 → [8.0]. Exactly one value is left: the answer, 8.0.</li><li><strong>A float</strong> because <code>/</code> is true division in Python: <code>6 / 3</code> is 2.0, and every result built on it stays a float.</li></ul>"
+    },
+    {
+      "id": "W6-E8",
+      "level": "why",
+      "marks": 4,
+      "stem": "<p>Compare a stack on a dynamic array (top at the end) with a stack on a singly linked list (top at the head): the cost of push in the worst case and amortised, the memory per item, and memory locality. The lecture's timings found the linked stack faster in this course. Why, and would that still hold for Python's own <code>list</code>? Which would you choose for a program that must never pause?</p>",
+      "answer": "<ul><li><strong>Push:</strong> the array stack is amortised <span class=\"quiz-math\">O(1)</span>, but a push that fills the block copies everything, <span class=\"quiz-math\">O(n)</span> for that one push. The linked stack is <span class=\"quiz-math\">O(1)</span> in the worst case: one node and one reference, every time.</li><li><strong>Memory and locality:</strong> the array stores one reference per item (plus spare capacity) in one contiguous block; the linked stack needs a whole node per item (about 48 bytes), scattered in memory.</li><li><strong>The measurement:</strong> every access to the course <code>Array</code> goes through a Python-level bounds check in <code>dsa/array.py</code>, while a node's <code>next</code> is a plain attribute. That is a constant factor, not a different Big-O. Python's own <code>list</code>, whose checks run in C, is faster than both.</li><li><strong>Never pause:</strong> the linked stack, because its worst case is <span class=\"quiz-math\">O(1)</span> (or an array allocated once at its full size, so that it never resizes).</li></ul>"
+    },
+    {
+      "id": "W6-E9",
+      "level": "how",
+      "marks": 3,
+      "stem": "<p>Design undo and redo for a text editor with two stacks. Say what each of <em>action</em>, <em>Undo</em> and <em>Redo</em> does to the two stacks, and show both stacks after: type A, type B, type C, undo, undo, redo, type D. What would go wrong if a new action did not clear the redo stack?</p>",
+      "answer": "<ul><li><strong>Action:</strong> push it on the undo stack and <strong>clear</strong> the redo stack. <strong>Undo:</strong> pop from undo, reverse it, push it on redo. <strong>Redo:</strong> pop from redo, do it again, push it on undo. Undo or Redo on an empty stack does nothing.</li><li><strong>Trace:</strong> after A, B, C: undo [A, B, C], redo []. Undo, undo: undo [A], redo [C, B] (top B). Redo: undo [A, B], redo [C]. Type D: undo [A, B, D], redo [].</li><li><strong>Without the clear,</strong> Redo would bring back C on top of D, an edit made to a different text, and the history would no longer describe a sequence of states the user actually saw.</li></ul>"
     }
   ]
 }
