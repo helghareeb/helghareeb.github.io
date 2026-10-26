@@ -3,12 +3,23 @@ import ExamSimulator from '../../../../components/ExamSimulator.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
-import { DSA27_REPO, getDsa27WeekPath, getQuizIndexPath, midtermWeeks, quizLabels } from '../../../../utils/quizzes';
+import { DSA27_REPO, getDsa27MidtermPath, getDsa27WeekPath, getQuizIndexPath, midtermWeeks, quizLabels } from '../../../../utils/quizzes';
 
 const t = quizLabels.ar;
 const weeks = midtermWeeks();
 const mcqs = weeks.reduce((sum, week) => sum + week.questions.length, 0);
 const essays = weeks.reduce((sum, week) => sum + (week.essays?.length ?? 0), 0);
+const papers = [
+  ['full', 'امتحان كامل', '60 سؤالًا، 90 دقيقة'],
+  ['format', 'شكل الامتحان', '30 سؤالًا و30 درجة مقالية، ساعتان'],
+  ['half', 'نصف ورقة', '30 سؤالًا، 45 دقيقة'],
+  ['sprint', 'سباق سريع', '20 سؤالًا، 20 دقيقة'],
+  ['why', 'تحدي التعليل', '25 سؤال «لماذا»، 40 دقيقة'],
+  ['weak', 'نقاط ضعفي', 'من المحاضرات التي تخطئ فيها أكثر، بنمط التدريب'],
+  ['wrongs', 'أخطائي', 'كل سؤال أخطأت فيه من قبل، بنمط التدريب'],
+];
+const midterm = getDsa27MidtermPath('ar');
+const short = (title: string) => title.replace(/\s*\(Lecture.*\)\s*$/, '');
 const seoTitle = buildSeoTitle('محاكي امتحان منتصف الفصل في DSA27', { lang: 'ar', section: t.section });
 const seoDescription = buildSeoDescription(
   `امتحانات تجريبية بزمن محدد في مقرر هياكل البيانات والخوارزميات (DSA27)، المحاضرات 1 إلى ${weeks.length}: حتى 60 سؤالًا من ${mcqs} سؤال اختيار من متعدد و${essays} سؤالًا مقاليًا، مع تقرير مفصل.`,
@@ -35,6 +46,28 @@ const seoDescription = buildSeoDescription(
 
     <section class="shell section">
       <ExamSimulator lang="ar" />
+    </section>
+
+    <section class="shell section" id="links">
+      <article class="notice-card exam__tips">
+        <h2>روابط مباشرة</h2>
+        <p>كل رابط يفتح المحاكي على تلك الورقة. احفظه في المفضلة، أو شاركه مع مجموعتك.</p>
+        <h3>أوراق منتصف الفصل، المحاضرات 1–{weeks.length}</h3>
+        <ul>
+          {papers.map(([key, name, note]) => (
+            <li><a href={`${midterm}#paper=${key}`}>{name}</a> — {note}</li>
+          ))}
+        </ul>
+        <h3>محاضرة واحدة في كل مرة</h3>
+        <ul>
+          {weeks.map((week) => (
+            <li>
+              <a href={`${midterm}#lecture=${week.week}`}>اختبار المحاضرة {week.week}</a> (20 سؤالًا، 25 دقيقة) ·{' '}
+              <a href={getDsa27WeekPath('ar', week.week)}>الاختبار الأسبوعي والأسئلة المقالية</a> — <span dir="ltr">{short(week.title)}</span>
+            </li>
+          ))}
+        </ul>
+      </article>
     </section>
 
     <section class="shell section">

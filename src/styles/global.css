@@ -1766,9 +1766,20 @@ aside.entity-panel {
   white-space: pre-wrap;
 }
 
-.exam__tips ol {
+.exam__tips ol,
+.exam__tips ul {
   margin: 0.5rem 0;
   padding-inline-start: 1.4rem;
+}
+
+.exam__tips li {
+  margin-block: 0.3rem;
+}
+
+.exam__tips a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .exam__promo {

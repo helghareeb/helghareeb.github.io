@@ -116,6 +116,7 @@ const L = {
       format: ['Exam format', '30 questions + 30 marks written · 2 h'],
       half: ['Half paper', '30 questions · 45 min'],
       sprint: ['Sprint', '20 questions · 20 min · shuffled'],
+      lecture: ['One lecture', '20 questions · 25 min · choose the lecture in the settings'],
       why: ['Explain-level challenge', '25 “why” questions · 40 min'],
       weak: ['My weak spots', '30 questions from lectures I miss most · practice mode'],
       wrongs: ['My mistakes', 'Every question I got wrong before · practice mode'],
@@ -226,6 +227,7 @@ const L = {
       format: ['شكل الامتحان', '30 سؤالًا + 30 درجة مقالية · ساعتان'],
       half: ['نصف ورقة', '30 سؤالًا · 45 دقيقة'],
       sprint: ['سباق سريع', '20 سؤالًا · 20 دقيقة · ترتيب عشوائي'],
+      lecture: ['محاضرة واحدة', '20 سؤالًا · 25 دقيقة · اختر المحاضرة من الإعدادات'],
       why: ['تحدي التعليل', '25 سؤال «لماذا» · 40 دقيقة'],
       weak: ['نقاط ضعفي', '30 سؤالًا من المحاضرات التي أخطئ فيها أكثر · نمط التدريب'],
       wrongs: ['أخطائي', 'كل سؤال أخطأت فيه من قبل · نمط التدريب'],
@@ -478,6 +480,7 @@ const clientLabels = Object.fromEntries(
     format: { count: 30, time: 'minutes', minutes: 120, dist: 'balanced', pool: 'any', mode: 'exam', order: 'lecture', written: 30, levels: ['what', 'how', 'why'] },
     half: { count: 30, time: 'minutes', minutes: 45, dist: 'balanced', pool: 'any', mode: 'exam', order: 'lecture', written: 0, levels: ['what', 'how', 'why'] },
     sprint: { count: 20, time: 'minutes', minutes: 20, dist: 'proportional', pool: 'unseen', mode: 'exam', order: 'shuffle', written: 0, levels: ['what', 'how', 'why'] },
+    lecture: { count: 20, time: 'minutes', minutes: 25, dist: 'proportional', pool: 'unseen', mode: 'exam', order: 'shuffle', written: 0, levels: ['what', 'how', 'why'] },
     why: { count: 25, time: 'minutes', minutes: 40, dist: 'balanced', pool: 'any', mode: 'exam', order: 'shuffle', written: 0, levels: ['why'] },
     weak: { count: 30, time: 'none', dist: 'weak', pool: 'unseen', mode: 'practice', order: 'shuffle', written: 0, levels: ['what', 'how', 'why'] },
     wrongs: { count: 60, time: 'none', dist: 'proportional', pool: 'wrong', mode: 'practice', order: 'lecture', written: 0, levels: ['what', 'how', 'why'] },
@@ -573,8 +576,12 @@ const clientLabels = Object.fromEntries(
     };
     const applyPreset = (key: string) => {
       const allWeeks = weeks.map((week) => week.week);
-      if (key !== 'custom') writeSettings({ weeks: allWeeks, ...PRESETS[key] });
-      ($<HTMLDetailsElement>('[data-settings-box]')).open = key === 'custom' || ($<HTMLDetailsElement>('[data-settings-box]')).open;
+      // "One lecture" keeps a single chosen lecture, or starts from Lecture 1.
+      const chosen = $$<HTMLInputElement>('[data-s="week"]').filter((box) => box.checked).map((box) => Number(box.value));
+      const lectureWeeks = chosen.length === 1 ? chosen : [allWeeks[0]];
+      if (key !== 'custom') writeSettings({ weeks: key === 'lecture' ? lectureWeeks : allWeeks, ...PRESETS[key] });
+      ($<HTMLDetailsElement>('[data-settings-box]')).open =
+        key === 'custom' || key === 'lecture' || ($<HTMLDetailsElement>('[data-settings-box]')).open;
       refreshAvail();
     };
 
@@ -1156,9 +1163,29 @@ const clientLabels = Object.fromEntries(
       applyPreset('full');
     }
     if (!field('code').value) field('code').value = newCode();
-    // A shared link can carry a paper code: …/midterm/#code=ABC123
-    const shared = /code=([A-Za-z0-9]{1,12})/.exec(window.location.hash);
-    if (shared) field('code').value = shared[1].toUpperCase();
+
+    // Direct links choose the paper: …/midterm/#paper=half, #lecture=6 (one
+    // lecture), #paper=why&lecture=4,5, and #code=ABC123 for a shared paper.
+    const followLink = () => {
+      const link = new URLSearchParams(window.location.hash.slice(1));
+      const known = weeks.map((w) => w.week);
+      const lectures = (link.get('lecture') ?? '').split(',').map(Number).filter((n) => known.includes(n));
+      const paper = link.get('paper') ?? (lectures.length ? 'lecture' : '');
+      const radio = paper ? root.querySelector<HTMLInputElement>(`input[name="preset"][value="${paper}"]`) : null;
+      if (radio) {
+        radio.checked = true;
+        applyPreset(paper);
+      }
+      if (lectures.length) writeSettings({ weeks: lectures });
+      const code = /^[A-Za-z0-9]{1,12}$/.exec(link.get('code') ?? '');
+      if (code) field('code').value = code[0].toUpperCase();
+      if (radio || lectures.length || code) {
+        refreshAvail();
+        root.scrollIntoView({ block: 'start' });
+      }
+    };
+    followLink();
+    window.addEventListener('hashchange', followLink);
     const pending = store.get<Attempt | null>(K_CURRENT, null);
     $('[data-resume]').hidden = !pending || !!pending.finished;
     refreshAvail();

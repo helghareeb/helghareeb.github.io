@@ -3,12 +3,23 @@ import ExamSimulator from '../../../../components/ExamSimulator.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
-import { DSA27_REPO, getDsa27WeekPath, getQuizIndexPath, midtermWeeks, quizLabels } from '../../../../utils/quizzes';
+import { DSA27_REPO, getDsa27MidtermPath, getDsa27WeekPath, getQuizIndexPath, midtermWeeks, quizLabels } from '../../../../utils/quizzes';
 
 const t = quizLabels.en;
 const weeks = midtermWeeks();
 const mcqs = weeks.reduce((sum, week) => sum + week.questions.length, 0);
 const essays = weeks.reduce((sum, week) => sum + (week.essays?.length ?? 0), 0);
+const papers = [
+  ['full', 'Full midterm', '60 questions, 90 minutes'],
+  ['format', 'Exam format', '30 questions and 30 marks of written answers, 2 hours'],
+  ['half', 'Half paper', '30 questions, 45 minutes'],
+  ['sprint', 'Sprint', '20 questions, 20 minutes'],
+  ['why', 'Explain-level challenge', '25 “why” questions, 40 minutes'],
+  ['weak', 'My weak spots', 'from the lectures you miss most, in practice mode'],
+  ['wrongs', 'My mistakes', 'every question you got wrong before, in practice mode'],
+];
+const midterm = getDsa27MidtermPath('en');
+const short = (title: string) => title.replace(/\s*\(Lecture.*\)\s*$/, '');
 const seoTitle = buildSeoTitle('DSA27 Midterm Exam Simulator', { lang: 'en', section: t.section });
 const seoDescription = buildSeoDescription(
   `Timed practice midterms for Data Structures and Algorithms (DSA27), Lectures 1 to ${weeks.length}: up to 60 questions drawn from ${mcqs} multiple-choice and ${essays} written questions, with a detailed report.`,
@@ -35,6 +46,28 @@ const seoDescription = buildSeoDescription(
 
     <section class="shell section">
       <ExamSimulator lang="en" />
+    </section>
+
+    <section class="shell section" id="links">
+      <article class="notice-card exam__tips">
+        <h2>Direct links</h2>
+        <p>Each link opens the simulator with that paper chosen. Bookmark it, or share it with your group.</p>
+        <h3>Midterm papers, Lectures 1–{weeks.length}</h3>
+        <ul>
+          {papers.map(([key, name, note]) => (
+            <li><a href={`${midterm}#paper=${key}`}>{name}</a> — {note}</li>
+          ))}
+        </ul>
+        <h3>One lecture at a time</h3>
+        <ul>
+          {weeks.map((week) => (
+            <li>
+              <a href={`${midterm}#lecture=${week.week}`}>Lecture {week.week} test</a> (20 questions, 25 min) ·{' '}
+              <a href={getDsa27WeekPath('en', week.week)}>quiz and written practice</a> — {short(week.title)}
+            </li>
+          ))}
+        </ul>
+      </article>
     </section>
 
     <section class="shell section">

@@ -43,6 +43,9 @@ const seoDescription = buildSeoDescription(
         {previous && <a class="button-secondary" href={getDsa27WeekPath('ar', previous.week)}>{t.previous}</a>}
         {next && <a class="button-secondary" href={getDsa27WeekPath('ar', next.week)}>{t.next}</a>}
         {week.week <= MIDTERM_LAST_WEEK && <a class="button-secondary" href={getDsa27MidtermPath('ar')}>{t.midterm}</a>}
+        {week.week <= MIDTERM_LAST_WEEK && (
+          <a class="button-secondary" href={`${getDsa27MidtermPath('ar')}#lecture=${week.week}`}>اختبار بزمن على هذه المحاضرة</a>
+        )}
       </div>
     </section>
 
