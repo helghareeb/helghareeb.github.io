@@ -1,0 +1,1167 @@
+---
+// The DSA27 midterm simulator. Every paper is drawn in the browser from the weekly question-bank
+// files (src/data/quizzes/dsa27/weekNN.json) for weeks 1 to MIDTERM_LAST_WEEK. Attempts, history and
+// per-question statistics stay in localStorage on the student's device.
+import { midtermWeeks } from '../utils/quizzes';
+
+interface Props {
+  lang: 'ar' | 'en';
+}
+
+const { lang } = Astro.props;
+const weeks = midtermWeeks();
+
+const L = {
+  en: {
+    setup: 'Set up your paper',
+    presets: 'Choose a paper',
+    settings: 'Settings',
+    custom: 'Custom',
+    count: 'Multiple-choice questions',
+    time: 'Time limit',
+    timeAuto: 'Exam pace (90 s per question, 3 min per written mark)',
+    timeNone: 'No limit',
+    timeMinutes: 'Minutes',
+    lectures: 'Lectures',
+    distribution: 'Spread across lectures',
+    distBalanced: 'Balanced: the same number from each lecture',
+    distProportional: 'In proportion to the bank',
+    distWeak: 'Focus on my weak lectures',
+    levels: 'Levels',
+    pool: 'Which questions',
+    poolAny: 'Any',
+    poolUnseen: 'Ones I have not seen first',
+    poolWrong: 'Only ones I got wrong before',
+    mode: 'Mode',
+    modeExam: 'Exam: answers only after you submit',
+    modePractice: 'Practice: see each answer at once',
+    order: 'Order',
+    orderLecture: 'Lecture by lecture',
+    orderShuffle: 'Shuffled',
+    written: 'Written section',
+    writtenNone: 'None',
+    writtenMarks: (n: number) => `${n} marks`,
+    negative: 'Wrong answers',
+    negNone: 'Cost nothing',
+    negQuarter: 'Lose ¼ mark',
+    code: 'Paper code',
+    codeHint: 'Same code + same settings = the same paper. Share it so a group sits the same exam.',
+    newCode: 'New code',
+    start: 'Start the exam',
+    available: (n: number) => `${n} questions match these settings.`,
+    tooFew: (n: number, k: number) => `Only ${n} questions match; the paper will have ${n} instead of ${k}.`,
+    noneMatch: 'No questions match these settings. Choose more lectures or levels.',
+    resume: 'You have an unfinished paper.',
+    resumeBtn: 'Resume it',
+    discardBtn: 'Discard it',
+    question: (i: number, n: number) => `Question ${i} of ${n}`,
+    writtenQ: (i: number, n: number) => `Written ${i} of ${n}`,
+    lecture: (n: number) => `Lecture ${n}`,
+    flag: 'Flag for review',
+    unflag: 'Remove flag',
+    prev: 'Previous',
+    next: 'Next',
+    submit: 'Submit',
+    confirm: (u: number | string, f: number | string) =>
+      `Submit now? ${u} unanswered, ${f} flagged. You cannot change your answers afterwards.`,
+    timeLeft: 'Time left',
+    elapsed: 'Time',
+    answered: 'Answered',
+    flagged: 'Flagged',
+    timeUp: 'Time is up: your paper was submitted.',
+    navLegend: 'Grey: not answered · filled: answered · ring: flagged',
+    keys: 'Keys: 1–4 or a–d answer · ← → move · F flag',
+    yourAnswer: 'Your answer (saved on this device)',
+    results: 'Your report',
+    mcqScore: 'Multiple choice',
+    netScore: 'After the ¼-mark penalty',
+    percent: 'Score',
+    timeUsed: 'Time used',
+    passLine: 'Aim for at least 60% before the real midterm.',
+    byLecture: 'By lecture',
+    byLevel: 'By level',
+    correct: 'right',
+    wrong: 'wrong',
+    blank: 'blank',
+    review: 'Review',
+    filterAll: 'All',
+    filterWrong: 'Wrong',
+    filterBlank: 'Unanswered',
+    filterFlagged: 'Flagged',
+    yourChoice: 'You chose',
+    noChoice: 'Not answered',
+    answerIs: 'Answer',
+    explanation: 'Explanation',
+    writtenTitle: 'Written section: mark yourself',
+    writtenLead: 'Compare your answer with the model answer. Each marking point is worth about one mark.',
+    selfMark: 'Your mark',
+    writtenTotal: 'Written total',
+    total: 'Paper total',
+    retryWrong: 'Retry the ones I got wrong',
+    again: 'New paper, same settings',
+    change: 'Change settings',
+    printPaper: 'Print the paper',
+    printKey: 'Print with answers',
+    history: 'Your history on this device',
+    historyEmpty: 'No papers yet.',
+    hDate: 'Date',
+    hPaper: 'Paper',
+    hScore: 'Score',
+    hTime: 'Time',
+    clearHistory: 'Clear history and statistics',
+    clearConfirm: 'Delete every past result and question statistic on this device?',
+    levelNames: { what: 'Recall', how: 'Apply', why: 'Explain' },
+    presetsList: {
+      full: ['Full midterm', '60 questions · 90 min · balanced over Lectures 1–7'],
+      format: ['Exam format', '30 questions + 30 marks written · 2 h'],
+      half: ['Half paper', '30 questions · 45 min'],
+      sprint: ['Sprint', '20 questions · 20 min · shuffled'],
+      why: ['Explain-level challenge', '25 “why” questions · 40 min'],
+      weak: ['My weak spots', '30 questions from lectures I miss most · practice mode'],
+      wrongs: ['My mistakes', 'Every question I got wrong before · practice mode'],
+      custom: ['Custom', 'Set everything yourself'],
+    },
+  },
+  ar: {
+    setup: 'جهّز ورقتك',
+    presets: 'اختر نوع الورقة',
+    settings: 'الإعدادات',
+    custom: 'مخصص',
+    count: 'أسئلة الاختيار من متعدد',
+    time: 'الزمن',
+    timeAuto: 'إيقاع الامتحان (90 ثانية للسؤال، و3 دقائق لكل درجة مقالية)',
+    timeNone: 'بلا حد',
+    timeMinutes: 'دقائق',
+    lectures: 'المحاضرات',
+    distribution: 'التوزيع على المحاضرات',
+    distBalanced: 'متوازن: العدد نفسه من كل محاضرة',
+    distProportional: 'بنسبة أسئلة البنك',
+    distWeak: 'ركّز على المحاضرات التي أضعف فيها',
+    levels: 'المستويات',
+    pool: 'أي الأسئلة',
+    poolAny: 'أي سؤال',
+    poolUnseen: 'التي لم أرها أولًا',
+    poolWrong: 'التي أخطأت فيها من قبل فقط',
+    mode: 'النمط',
+    modeExam: 'امتحان: الإجابات بعد التسليم فقط',
+    modePractice: 'تدريب: ترى إجابة كل سؤال فورًا',
+    order: 'الترتيب',
+    orderLecture: 'محاضرة بعد محاضرة',
+    orderShuffle: 'عشوائي',
+    written: 'القسم المقالي',
+    writtenNone: 'بدون',
+    writtenMarks: (n: number) => `${n} درجة`,
+    negative: 'الإجابة الخاطئة',
+    negNone: 'لا تُخصم',
+    negQuarter: 'يُخصم ربع درجة',
+    code: 'رمز الورقة',
+    codeHint: 'الرمز نفسه مع الإعدادات نفسها = الورقة نفسها. شاركه ليؤدي زملاؤك الامتحان نفسه.',
+    newCode: 'رمز جديد',
+    start: 'ابدأ الامتحان',
+    available: (n: number) => `${n} سؤالًا تطابق هذه الإعدادات.`,
+    tooFew: (n: number, k: number) => `تطابق ${n} أسئلة فقط؛ ستضم الورقة ${n} بدلًا من ${k}.`,
+    noneMatch: 'لا توجد أسئلة تطابق هذه الإعدادات. اختر محاضرات أو مستويات أكثر.',
+    resume: 'لديك ورقة لم تكملها.',
+    resumeBtn: 'أكملها',
+    discardBtn: 'احذفها',
+    question: (i: number, n: number) => `السؤال ${i} من ${n}`,
+    writtenQ: (i: number, n: number) => `المقالي ${i} من ${n}`,
+    lecture: (n: number) => `المحاضرة ${n}`,
+    flag: 'علّم للمراجعة',
+    unflag: 'أزل العلامة',
+    prev: 'السابق',
+    next: 'التالي',
+    submit: 'سلّم الورقة',
+    confirm: (u: number | string, f: number | string) =>
+      `أتسلّم الآن؟ بلا إجابة: ${u}، ومعلّمة للمراجعة: ${f}. لن تستطيع تغيير إجاباتك بعد التسليم.`,
+    timeLeft: 'الوقت المتبقي',
+    elapsed: 'الوقت',
+    answered: 'أُجيب',
+    flagged: 'معلّمة',
+    timeUp: 'انتهى الوقت وسُلّمت ورقتك.',
+    navLegend: 'رمادي: بلا إجابة · ممتلئ: أُجيب · حلقة: معلّم للمراجعة',
+    keys: 'المفاتيح: 1–4 أو a–d للإجابة · ← → للتنقل · F للتعليم',
+    yourAnswer: 'إجابتك (تُحفظ على هذا الجهاز)',
+    results: 'تقريرك',
+    mcqScore: 'الاختيار من متعدد',
+    netScore: 'بعد خصم ربع الدرجة',
+    percent: 'النسبة',
+    timeUsed: 'الوقت المستغرق',
+    passLine: 'اجعل هدفك 60% على الأقل قبل امتحان منتصف الفصل.',
+    byLecture: 'حسب المحاضرة',
+    byLevel: 'حسب المستوى',
+    correct: 'صحيح',
+    wrong: 'خطأ',
+    blank: 'بلا إجابة',
+    review: 'المراجعة',
+    filterAll: 'الكل',
+    filterWrong: 'الخاطئة',
+    filterBlank: 'بلا إجابة',
+    filterFlagged: 'المعلّمة',
+    yourChoice: 'اخترت',
+    noChoice: 'لم تُجب',
+    answerIs: 'الإجابة',
+    explanation: 'الشرح',
+    writtenTitle: 'القسم المقالي: صحّح لنفسك',
+    writtenLead: 'قارن إجابتك بالإجابة النموذجية. كل نقطة تصحيح تساوي درجة تقريبًا.',
+    selfMark: 'درجتك',
+    writtenTotal: 'مجموع المقالي',
+    total: 'مجموع الورقة',
+    retryWrong: 'أعد الأسئلة التي أخطأت فيها',
+    again: 'ورقة جديدة بالإعدادات نفسها',
+    change: 'غيّر الإعدادات',
+    printPaper: 'اطبع الورقة',
+    printKey: 'اطبع مع الإجابات',
+    history: 'سجلك على هذا الجهاز',
+    historyEmpty: 'لا توجد أوراق بعد.',
+    hDate: 'التاريخ',
+    hPaper: 'الورقة',
+    hScore: 'الدرجة',
+    hTime: 'الوقت',
+    clearHistory: 'امسح السجل والإحصاءات',
+    clearConfirm: 'أتحذف كل النتائج السابقة وإحصاءات الأسئلة من هذا الجهاز؟',
+    levelNames: { what: 'تذكّر', how: 'تطبيق', why: 'تعليل' },
+    presetsList: {
+      full: ['امتحان كامل', '60 سؤالًا · 90 دقيقة · متوازن على المحاضرات 1–7'],
+      format: ['شكل الامتحان', '30 سؤالًا + 30 درجة مقالية · ساعتان'],
+      half: ['نصف ورقة', '30 سؤالًا · 45 دقيقة'],
+      sprint: ['سباق سريع', '20 سؤالًا · 20 دقيقة · ترتيب عشوائي'],
+      why: ['تحدي التعليل', '25 سؤال «لماذا» · 40 دقيقة'],
+      weak: ['نقاط ضعفي', '30 سؤالًا من المحاضرات التي أخطئ فيها أكثر · نمط التدريب'],
+      wrongs: ['أخطائي', 'كل سؤال أخطأت فيه من قبل · نمط التدريب'],
+      custom: ['مخصص', 'اضبط كل شيء بنفسك'],
+    },
+  },
+}[lang];
+
+const pool = weeks.map((week) => ({
+  week: week.week,
+  title: week.title,
+  questions: week.questions,
+  essays: week.essays ?? [],
+}));
+const json = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+const presetKeys = Object.keys(L.presetsList) as Array<keyof typeof L.presetsList>;
+// Functions cannot travel as JSON: each becomes a template with {0}, {1} for its arguments.
+const clientLabels = Object.fromEntries(
+  Object.entries(L)
+    .filter(([key]) => key !== 'presetsList')
+    .map(([key, value]) => [key, typeof value === 'function' ? (value as (...a: unknown[]) => string)('{0}', '{1}') : value]),
+);
+---
+
+<section class="exam" data-exam data-lang={lang}>
+  <script type="application/json" data-exam-pool set:html={json(pool)} />
+  <script type="application/json" data-exam-labels set:html={json(clientLabels)} />
+
+  <!-- setup -->
+  <div class="exam__setup" data-view="setup">
+    <div class="notice-card exam__resume" data-resume hidden>
+      <p>{L.resume}</p>
+      <div class="quiz__controls">
+        <button type="button" class="button-secondary" data-act="resume">{L.resumeBtn}</button>
+        <button type="button" class="button-secondary" data-act="discard">{L.discardBtn}</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">{L.presets}</h2>
+    <div class="exam__presets" role="radiogroup">
+      {presetKeys.map((key, i) => (
+        <label class="content-card exam__preset">
+          <input type="radio" name="preset" value={key} checked={i === 0} />
+          <strong>{L.presetsList[key][0]}</strong>
+          <span>{L.presetsList[key][1]}</span>
+        </label>
+      ))}
+    </div>
+
+    <details class="notice-card exam__settings" data-settings-box>
+      <summary><strong>{L.settings}</strong></summary>
+      <div class="exam__grid">
+        <label class="exam__field">
+          <span>{L.count}</span>
+          <input type="number" min="5" max="60" step="1" value="60" data-s="count" />
+        </label>
+        <label class="exam__field">
+          <span>{L.time}</span>
+          <select data-s="time">
+            <option value="auto">{L.timeAuto}</option>
+            <option value="none">{L.timeNone}</option>
+            <option value="minutes">{L.timeMinutes}…</option>
+          </select>
+          <input type="number" min="5" max="240" step="5" value="90" data-s="minutes" hidden />
+        </label>
+        <fieldset class="exam__field">
+          <legend>{L.lectures}</legend>
+          <div class="exam__checks">
+            {weeks.map((week) => (
+              <label title={week.title}><input type="checkbox" data-s="week" value={week.week} checked /> {week.week}</label>
+            ))}
+          </div>
+        </fieldset>
+        <fieldset class="exam__field">
+          <legend>{L.levels}</legend>
+          <div class="exam__checks">
+            {(['what', 'how', 'why'] as const).map((level) => (
+              <label><input type="checkbox" data-s="level" value={level} checked /> {L.levelNames[level]}</label>
+            ))}
+          </div>
+        </fieldset>
+        <label class="exam__field">
+          <span>{L.distribution}</span>
+          <select data-s="dist">
+            <option value="balanced">{L.distBalanced}</option>
+            <option value="proportional">{L.distProportional}</option>
+            <option value="weak">{L.distWeak}</option>
+          </select>
+        </label>
+        <label class="exam__field">
+          <span>{L.pool}</span>
+          <select data-s="pool">
+            <option value="any">{L.poolAny}</option>
+            <option value="unseen">{L.poolUnseen}</option>
+            <option value="wrong">{L.poolWrong}</option>
+          </select>
+        </label>
+        <label class="exam__field">
+          <span>{L.mode}</span>
+          <select data-s="mode">
+            <option value="exam">{L.modeExam}</option>
+            <option value="practice">{L.modePractice}</option>
+          </select>
+        </label>
+        <label class="exam__field">
+          <span>{L.order}</span>
+          <select data-s="order">
+            <option value="lecture">{L.orderLecture}</option>
+            <option value="shuffle">{L.orderShuffle}</option>
+          </select>
+        </label>
+        <label class="exam__field">
+          <span>{L.written}</span>
+          <select data-s="written">
+            <option value="0">{L.writtenNone}</option>
+            <option value="10">{L.writtenMarks(10)}</option>
+            <option value="15">{L.writtenMarks(15)}</option>
+            <option value="30">{L.writtenMarks(30)}</option>
+          </select>
+        </label>
+        <label class="exam__field">
+          <span>{L.negative}</span>
+          <select data-s="negative">
+            <option value="0">{L.negNone}</option>
+            <option value="0.25">{L.negQuarter}</option>
+          </select>
+        </label>
+        <label class="exam__field exam__field--wide">
+          <span>{L.code}</span>
+          <span class="exam__code">
+            <input type="text" maxlength="12" data-s="code" dir="ltr" spellcheck="false" />
+            <button type="button" class="button-secondary" data-act="newcode">{L.newCode}</button>
+          </span>
+          <small>{L.codeHint}</small>
+        </label>
+      </div>
+    </details>
+
+    <p class="exam__avail" data-avail></p>
+    <button type="button" class="button exam__start" data-act="start">{L.start}</button>
+
+    <h2 class="section-title exam__history-title">{L.history}</h2>
+    <div data-history></div>
+  </div>
+
+  <!-- exam -->
+  <div class="exam__run" data-view="run" hidden>
+    <div class="notice-card exam__bar">
+      <span class="exam__clock"><span data-clock-label></span> <strong data-clock dir="ltr"></strong></span>
+      <span>{L.answered}: <strong data-count-answered>0</strong> / <span data-count-total></span></span>
+      <span>{L.flagged}: <strong data-count-flagged>0</strong></span>
+      <span class="exam__code-show" dir="ltr" data-code-show></span>
+      <button type="button" class="button" data-act="submit">{L.submit}</button>
+    </div>
+    <nav class="exam__nav" data-nav aria-label="Questions"></nav>
+    <p class="exam__legend">{L.navLegend} · {L.keys}</p>
+    <article class="content-card quiz-question exam__card" data-card dir="ltr" lang="en"></article>
+    <div class="quiz__controls exam__move">
+      <button type="button" class="button-secondary" data-act="prev">{L.prev}</button>
+      <button type="button" class="button-secondary" data-act="flag">{L.flag}</button>
+      <button type="button" class="button-secondary" data-act="next">{L.next}</button>
+    </div>
+  </div>
+
+  <!-- results -->
+  <div class="exam__results" data-view="results" hidden>
+    <h2 class="section-title">{L.results}</h2>
+    <div class="exam__summary" data-summary></div>
+    <div class="exam__breakdowns">
+      <div class="notice-card"><h3>{L.byLecture}</h3><div data-by-week></div></div>
+      <div class="notice-card"><h3>{L.byLevel}</h3><div data-by-level></div></div>
+    </div>
+    <div class="quiz__controls exam__after">
+      <button type="button" class="button-secondary" data-act="retry">{L.retryWrong}</button>
+      <button type="button" class="button-secondary" data-act="again">{L.again}</button>
+      <button type="button" class="button-secondary" data-act="change">{L.change}</button>
+      <button type="button" class="button-secondary" data-act="print">{L.printPaper}</button>
+      <button type="button" class="button-secondary" data-act="printkey">{L.printKey}</button>
+    </div>
+    <section data-written-results hidden>
+      <h3 class="section-title">{L.writtenTitle}</h3>
+      <p>{L.writtenLead}</p>
+      <ol class="quiz__list" data-written-list dir="ltr" lang="en"></ol>
+    </section>
+    <h3 class="section-title">{L.review}</h3>
+    <div class="quiz__controls" data-review-filter>
+      <button type="button" class="button-secondary is-on" data-filter="all">{L.filterAll}</button>
+      <button type="button" class="button-secondary" data-filter="wrong">{L.filterWrong}</button>
+      <button type="button" class="button-secondary" data-filter="blank">{L.filterBlank}</button>
+      <button type="button" class="button-secondary" data-filter="flagged">{L.filterFlagged}</button>
+    </div>
+    <ol class="quiz__list" data-review dir="ltr" lang="en"></ol>
+  </div>
+
+  <!-- the printable paper -->
+  <div class="exam__print" data-print dir="ltr" lang="en"></div>
+</section>
+
+<script>
+  type Level = '' | 'what' | 'how' | 'why';
+  type Q = { id: string; level: Level; stem: string; options: string[]; answer: number; explanation: string; week: number };
+  type E = { id: string; level: Level; marks: number; stem: string; answer: string; week: number };
+  type Week = { week: number; title: string; questions: Omit<Q, 'week'>[]; essays: Omit<E, 'week'>[] };
+  type Settings = {
+    preset: string; count: number; time: string; minutes: number; weeks: number[]; levels: string[];
+    dist: string; pool: string; mode: string; order: string; written: number; negative: number; code: string;
+  };
+  type Attempt = {
+    settings: Settings; title: string; ids: string[]; essays: string[]; answers: Record<string, number>;
+    flags: string[]; texts: Record<string, string>; marks: Record<string, number>;
+    started: number; deadline: number | null; finished: number | null; current: number; saved?: boolean;
+  };
+  type Stat = { seen: number; wrong: number; last: number };
+  type HistoryRow = {
+    at: number; title: string; code: string; n: number; right: number; net: number; written: number;
+    writtenMax: number; ms: number; key: number;
+  };
+
+  const store = {
+    get<T>(key: string, fallback: T): T {
+      try {
+        const raw = window.localStorage.getItem(key);
+        return raw ? (JSON.parse(raw) as T) : fallback;
+      } catch {
+        return fallback;
+      }
+    },
+    set(key: string, value: unknown) {
+      try {
+        window.localStorage.setItem(key, JSON.stringify(value));
+      } catch {
+        // No storage: the simulator still works for this visit.
+      }
+    },
+    drop(key: string) {
+      try {
+        window.localStorage.removeItem(key);
+      } catch {
+        /* ignore */
+      }
+    },
+  };
+  const K_CURRENT = 'midterm:dsa27:current';
+  const K_HISTORY = 'midterm:dsa27:history';
+  const K_STATS = 'midterm:dsa27:stats';
+  const K_SETTINGS = 'midterm:dsa27:settings';
+
+  const PRESETS: Record<string, Partial<Settings>> = {
+    full: { count: 60, time: 'minutes', minutes: 90, dist: 'balanced', pool: 'any', mode: 'exam', order: 'lecture', written: 0, levels: ['what', 'how', 'why'] },
+    format: { count: 30, time: 'minutes', minutes: 120, dist: 'balanced', pool: 'any', mode: 'exam', order: 'lecture', written: 30, levels: ['what', 'how', 'why'] },
+    half: { count: 30, time: 'minutes', minutes: 45, dist: 'balanced', pool: 'any', mode: 'exam', order: 'lecture', written: 0, levels: ['what', 'how', 'why'] },
+    sprint: { count: 20, time: 'minutes', minutes: 20, dist: 'proportional', pool: 'unseen', mode: 'exam', order: 'shuffle', written: 0, levels: ['what', 'how', 'why'] },
+    why: { count: 25, time: 'minutes', minutes: 40, dist: 'balanced', pool: 'any', mode: 'exam', order: 'shuffle', written: 0, levels: ['why'] },
+    weak: { count: 30, time: 'none', dist: 'weak', pool: 'unseen', mode: 'practice', order: 'shuffle', written: 0, levels: ['what', 'how', 'why'] },
+    wrongs: { count: 60, time: 'none', dist: 'proportional', pool: 'wrong', mode: 'practice', order: 'lecture', written: 0, levels: ['what', 'how', 'why'] },
+    custom: {},
+  };
+
+  /* ---- seeded randomness: the same code and settings give the same paper ---- */
+  const hash = (text: string) => {
+    let h = 1779033703 ^ text.length;
+    for (let i = 0; i < text.length; i += 1) {
+      h = Math.imul(h ^ text.charCodeAt(i), 3432918353);
+      h = (h << 13) | (h >>> 19);
+    }
+    return h >>> 0;
+  };
+  const rngFrom = (seed: number) => () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const shuffle = <T,>(items: T[], rng: () => number) => {
+    const out = [...items];
+    for (let i = out.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(rng() * (i + 1));
+      [out[i], out[j]] = [out[j], out[i]];
+    }
+    return out;
+  };
+  const newCode = () => {
+    const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    let code = '';
+    for (let i = 0; i < 6; i += 1) code += alphabet[Math.floor(Math.random() * alphabet.length)];
+    return code;
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-exam]').forEach((root) => {
+    const $ = <T extends Element = HTMLElement>(sel: string) => root.querySelector<T>(sel)!;
+    const $$ = <T extends Element = HTMLElement>(sel: string) => Array.from(root.querySelectorAll<T>(sel));
+    const weeks = JSON.parse($('[data-exam-pool]').textContent || '[]') as Week[];
+    const T = JSON.parse($('[data-exam-labels]').textContent || '{}');
+    const tf = (key: string, ...args: Array<string | number>) =>
+      String(T[key]).replace(/\{(\d)\}/g, (_, i: string) => String(args[Number(i)]));
+    const lang = root.dataset.lang;
+    const fmt = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(2).replace(/0$/, ''));
+    const letters = 'abcd';
+
+    const questions = new Map<string, Q>();
+    const essays = new Map<string, E>();
+    for (const week of weeks) {
+      for (const q of week.questions) questions.set(q.id, { ...q, week: week.week });
+      for (const e of week.essays) essays.set(e.id, { ...e, week: week.week });
+    }
+
+    const views = $$('[data-view]');
+    const show = (name: string) => {
+      for (const view of views) view.hidden = view.dataset.view !== name;
+      // Leave room for the sticky site header.
+      window.scrollTo({ top: root.getBoundingClientRect().top + window.scrollY - 110 });
+    };
+
+    /* ---------------- settings ---------------- */
+    const field = <T extends HTMLInputElement | HTMLSelectElement>(name: string) => $<T>(`[data-s="${name}"]`);
+    const readSettings = (): Settings => ({
+      preset: $<HTMLInputElement>('input[name="preset"]:checked').value,
+      count: Math.max(5, Math.min(60, Number(field('count').value) || 60)),
+      time: field('time').value,
+      minutes: Math.max(5, Math.min(240, Number(field('minutes').value) || 90)),
+      weeks: $$<HTMLInputElement>('[data-s="week"]').filter((box) => box.checked).map((box) => Number(box.value)),
+      levels: $$<HTMLInputElement>('[data-s="level"]').filter((box) => box.checked).map((box) => box.value),
+      dist: field('dist').value,
+      pool: field('pool').value,
+      mode: field('mode').value,
+      order: field('order').value,
+      written: Number(field('written').value),
+      negative: Number(field('negative').value),
+      code: (field('code').value || '').trim().toUpperCase() || newCode(),
+    });
+    const writeSettings = (s: Partial<Settings>) => {
+      if (s.count !== undefined) field('count').value = String(s.count);
+      if (s.time !== undefined) field('time').value = s.time;
+      if (s.minutes !== undefined) field('minutes').value = String(s.minutes);
+      if (s.weeks) $$<HTMLInputElement>('[data-s="week"]').forEach((box) => (box.checked = s.weeks!.includes(Number(box.value))));
+      if (s.levels) $$<HTMLInputElement>('[data-s="level"]').forEach((box) => (box.checked = s.levels!.includes(box.value)));
+      if (s.dist) field('dist').value = s.dist;
+      if (s.pool) field('pool').value = s.pool;
+      if (s.mode) field('mode').value = s.mode;
+      if (s.order) field('order').value = s.order;
+      if (s.written !== undefined) field('written').value = String(s.written);
+      if (s.negative !== undefined) field('negative').value = String(s.negative);
+      if (s.code) field('code').value = s.code;
+      field('minutes').hidden = field('time').value !== 'minutes';
+    };
+    const applyPreset = (key: string) => {
+      const allWeeks = weeks.map((week) => week.week);
+      if (key !== 'custom') writeSettings({ weeks: allWeeks, ...PRESETS[key] });
+      ($<HTMLDetailsElement>('[data-settings-box]')).open = key === 'custom' || ($<HTMLDetailsElement>('[data-settings-box]')).open;
+      refreshAvail();
+    };
+
+    /* ---------------- drawing a paper ---------------- */
+    const stats = () => store.get<Record<string, Stat>>(K_STATS, {});
+    const candidates = (s: Settings) => {
+      const st = stats();
+      return [...questions.values()].filter(
+        (q) =>
+          s.weeks.includes(q.week) &&
+          (q.level === '' || s.levels.includes(q.level)) &&
+          (s.pool !== 'wrong' || (st[q.id]?.wrong ?? 0) > 0),
+      );
+    };
+
+    const draw = (s: Settings) => {
+      const rng = rngFrom(hash(JSON.stringify([s.code, s.count, s.weeks, s.levels, s.dist, s.pool, s.order, s.written])));
+      const st = stats();
+      const byWeek = new Map<number, Q[]>();
+      for (const q of shuffle(candidates(s), rng)) {
+        if (!byWeek.has(q.week)) byWeek.set(q.week, []);
+        byWeek.get(q.week)!.push(q);
+      }
+      if (s.pool === 'unseen') {
+        for (const list of byWeek.values()) list.sort((a, b) => Number((st[a.id]?.seen ?? 0) > 0) - Number((st[b.id]?.seen ?? 0) > 0));
+      }
+      const total = [...byWeek.values()].reduce((sum, list) => sum + list.length, 0);
+      const k = Math.min(s.count, total);
+      const quota = new Map<number, number>();
+      const order = shuffle([...byWeek.keys()], rng);
+
+      if (s.dist === 'balanced') {
+        let left = k;
+        while (left > 0) {
+          for (const w of order) {
+            if (left > 0 && (quota.get(w) ?? 0) < byWeek.get(w)!.length) {
+              quota.set(w, (quota.get(w) ?? 0) + 1);
+              left -= 1;
+            }
+          }
+        }
+      } else {
+        // In proportion to a weight per lecture (its size, or how often it was missed), by largest remainder.
+        const weight = new Map<number, number>();
+        for (const w of order) {
+          const list = byWeek.get(w)!;
+          if (s.dist === 'weak') {
+            let seen = 0;
+            let wrong = 0;
+            for (const q of questions.values()) {
+              if (q.week !== w || !st[q.id]) continue;
+              seen += st[q.id].seen;
+              wrong += st[q.id].wrong;
+            }
+            weight.set(w, 0.2 + (seen ? wrong / seen : 0.5));
+          } else {
+            weight.set(w, list.length);
+          }
+        }
+        const sum = [...weight.values()].reduce((a, b) => a + b, 0);
+        const raw = order.map((w) => ({ w, x: (k * weight.get(w)!) / sum }));
+        let left = k;
+        for (const { w, x } of raw) {
+          const take = Math.min(Math.floor(x), byWeek.get(w)!.length);
+          quota.set(w, take);
+          left -= take;
+        }
+        const byRemainder = [...raw].sort((a, b) => (b.x % 1) - (a.x % 1)).map((r) => r.w);
+        while (left > 0) {
+          for (const w of byRemainder) {
+            if (left > 0 && quota.get(w)! < byWeek.get(w)!.length) {
+              quota.set(w, quota.get(w)! + 1);
+              left -= 1;
+            }
+          }
+        }
+      }
+
+      let picked: Q[] = [];
+      for (const w of order) picked.push(...byWeek.get(w)!.slice(0, quota.get(w) ?? 0));
+      const position = (id: string) => Number(id.split('-M')[1]);
+      picked = s.order === 'lecture'
+        ? picked.sort((a, b) => a.week - b.week || position(a.id) - position(b.id))
+        : shuffle(picked, rng);
+
+      // The written section: lectures in turn, each adding an essay that still fits the marks left.
+      const chosenEssays: E[] = [];
+      if (s.written > 0) {
+        const lists = new Map<number, E[]>();
+        for (const e of shuffle([...essays.values()].filter((e) => s.weeks.includes(e.week)), rng)) {
+          if (!lists.has(e.week)) lists.set(e.week, []);
+          lists.get(e.week)!.push(e);
+        }
+        let left = s.written;
+        let progress = true;
+        while (left > 0 && progress) {
+          progress = false;
+          for (const w of shuffle([...lists.keys()], rng)) {
+            const list = lists.get(w)!;
+            const i = list.findIndex((e) => e.marks <= left);
+            if (left > 0 && i >= 0) {
+              chosenEssays.push(list.splice(i, 1)[0]);
+              left -= chosenEssays[chosenEssays.length - 1].marks;
+              progress = true;
+            }
+          }
+        }
+        chosenEssays.sort((a, b) => a.week - b.week || Number(a.id.split('-E')[1]) - Number(b.id.split('-E')[1]));
+      }
+      return { ids: picked.map((q) => q.id), essays: chosenEssays.map((e) => e.id) };
+    };
+
+    const minutesFor = (s: Settings, n: number, writtenMarks: number) =>
+      s.time === 'none' ? null : s.time === 'minutes' ? s.minutes : Math.ceil(n * 1.5 + writtenMarks * 3);
+
+    const refreshAvail = () => {
+      const s = readSettings();
+      const n = candidates(s).length;
+      const avail = $('[data-avail]');
+      const start = $<HTMLButtonElement>('[data-act="start"]');
+      start.disabled = n === 0;
+      avail.textContent = n === 0 ? T.noneMatch : n < s.count ? `${tf('available', n)} ${tf('tooFew', n, s.count)}` : tf('available', n);
+      store.set(K_SETTINGS, { ...s, code: field('code').value });
+    };
+
+    /* ---------------- running a paper ---------------- */
+    let attempt: Attempt | null = null;
+    let timer = 0;
+    const items = () => (attempt ? [...attempt.ids, ...attempt.essays] : []);
+    const save = () => attempt && store.set(K_CURRENT, attempt);
+
+    const begin = (s: Settings, ids?: string[]) => {
+      const paper = ids ? { ids, essays: [] as string[] } : draw(s);
+      if (!paper.ids.length) return;
+      const writtenMarks = paper.essays.reduce((sum, id) => sum + essays.get(id)!.marks, 0);
+      const minutes = minutesFor(s, paper.ids.length, writtenMarks);
+      const preset = root.querySelector<HTMLInputElement>(`input[name="preset"][value="${s.preset}"]`);
+      const title = ids ? T.retryWrong : (preset?.parentElement?.querySelector('strong')?.textContent ?? '');
+      attempt = {
+        settings: s, title, ids: paper.ids, essays: paper.essays, answers: {}, flags: [], texts: {}, marks: {},
+        started: Date.now(), deadline: minutes ? Date.now() + minutes * 60000 : null, finished: null, current: 0,
+      };
+      save();
+      run();
+    };
+
+    const run = () => {
+      show('run');
+      $('[data-count-total]').textContent = String(items().length);
+      $('[data-code-show]').textContent = attempt!.settings.code;
+      $('[data-clock-label]').textContent = attempt!.deadline ? T.timeLeft : T.elapsed;
+      buildNav();
+      paintCard();
+      tick();
+      window.clearInterval(timer);
+      timer = window.setInterval(tick, 1000);
+    };
+
+    const clock = (ms: number) => {
+      const total = Math.max(0, Math.round(ms / 1000));
+      const h = Math.floor(total / 3600);
+      const m = Math.floor((total % 3600) / 60);
+      const sec = total % 60;
+      return (h ? `${h}:${String(m).padStart(2, '0')}` : String(m)) + ':' + String(sec).padStart(2, '0');
+    };
+    const tick = () => {
+      if (!attempt) return;
+      const now = Date.now();
+      const el = $('[data-clock]');
+      if (attempt.deadline) {
+        const left = attempt.deadline - now;
+        el.textContent = clock(left);
+        el.classList.toggle('is-low', left < 5 * 60000);
+        if (left <= 0) {
+          finish(true);
+        }
+      } else {
+        el.textContent = clock(now - attempt.started);
+      }
+    };
+
+    const buildNav = () => {
+      const nav = $('[data-nav]');
+      nav.replaceChildren();
+      items().forEach((id, i) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'exam__dot';
+        button.textContent = i < attempt!.ids.length ? String(i + 1) : `W${i - attempt!.ids.length + 1}`;
+        button.dataset.index = String(i);
+        button.title = id;
+        nav.append(button);
+      });
+      paintNav();
+    };
+    const isDone = (id: string) =>
+      questions.has(id) ? attempt!.answers[id] !== undefined : (attempt!.texts[id] ?? '').trim() !== '';
+    const paintNav = () => {
+      const all = items();
+      $$<HTMLButtonElement>('.exam__dot').forEach((dot, i) => {
+        const id = all[i];
+        dot.classList.toggle('is-done', isDone(id));
+        dot.classList.toggle('is-flag', attempt!.flags.includes(id));
+        dot.classList.toggle('is-here', i === attempt!.current);
+        if (attempt!.settings.mode === 'practice' && questions.has(id) && attempt!.answers[id] !== undefined) {
+          dot.classList.toggle('is-right', attempt!.answers[id] === questions.get(id)!.answer);
+          dot.classList.toggle('is-wrong', attempt!.answers[id] !== questions.get(id)!.answer);
+        }
+      });
+      $('[data-count-answered]').textContent = String(all.filter(isDone).length);
+      $('[data-count-flagged]').textContent = String(attempt!.flags.length);
+      $('[data-act="flag"]').textContent = attempt!.flags.includes(all[attempt!.current]) ? T.unflag : T.flag;
+    };
+
+    const optionsHtml = (q: Q, chosen: number | undefined, reveal: boolean) =>
+      q.options
+        .map((option, i) => {
+          const cls = ['quiz-option'];
+          if (chosen === i) cls.push(reveal ? 'is-chosen' : 'is-picked');
+          if (reveal && i === q.answer) cls.push('is-answer');
+          return `<button type="button" class="${cls.join(' ')}" data-option="${i}" ${reveal ? 'disabled' : ''}>` +
+            `<span class="quiz-option__letter">${letters[i]}</span><span class="quiz-option__text">${option}</span></button>`;
+        })
+        .join('');
+
+    const feedbackHtml = (q: Q, chosen: number | undefined) => {
+      const verdict = chosen === undefined ? T.noChoice : chosen === q.answer ? `✓` : `✗ ${T.yourChoice} (${letters[chosen]})`;
+      return `<div class="quiz-question__feedback"><p class="quiz-question__verdict">${verdict} · ${T.answerIs}: (${letters[q.answer]})</p>` +
+        `<div class="quiz-question__explanation">${q.explanation}</div></div>`;
+    };
+
+    const levelName = (level: Level) => (level ? T.levelNames[level] : '');
+    const paintCard = () => {
+      const all = items();
+      const id = all[attempt!.current];
+      const card = $('[data-card]');
+      const mcq = questions.get(id);
+      if (mcq) {
+        const chosen = attempt!.answers[id];
+        const reveal = attempt!.settings.mode === 'practice' && chosen !== undefined;
+        card.className = `content-card quiz-question exam__card${reveal ? (chosen === mcq.answer ? ' is-correct' : ' is-wrong') : ''}`;
+        card.innerHTML =
+          `<p class="content-card__meta quiz-question__meta"><span>${tf('question', attempt!.current + 1, attempt!.ids.length)}</span>` +
+          `<span>${tf('lecture', mcq.week)}</span><span class="quiz-question__level">${levelName(mcq.level)}</span><span>${mcq.id}</span></p>` +
+          `<div class="quiz-question__stem">${mcq.stem}</div><div class="quiz-question__options">${optionsHtml(mcq, chosen, reveal)}</div>` +
+          (reveal ? feedbackHtml(mcq, chosen) : '');
+      } else {
+        const essay = essays.get(id)!;
+        const i = attempt!.current - attempt!.ids.length;
+        card.className = 'content-card quiz-question exam__card';
+        card.innerHTML =
+          `<p class="content-card__meta quiz-question__meta"><span>${tf('writtenQ', i + 1, attempt!.essays.length)}</span>` +
+          `<span>${tf('lecture', essay.week)}</span><span>${essay.marks}</span><span>${essay.id}</span></p>` +
+          `<div class="quiz-question__stem">${essay.stem}</div>` +
+          `<label class="essay-question__label"><span>${T.yourAnswer}</span><textarea rows="10" data-text></textarea></label>`;
+        const area = card.querySelector<HTMLTextAreaElement>('[data-text]')!;
+        area.dir = 'auto';
+        area.value = attempt!.texts[id] ?? '';
+        area.addEventListener('input', () => {
+          attempt!.texts[id] = area.value;
+          save();
+          paintNav();
+        });
+      }
+      $<HTMLButtonElement>('[data-act="prev"]').disabled = attempt!.current === 0;
+      $<HTMLButtonElement>('[data-act="next"]').disabled = attempt!.current === all.length - 1;
+      paintNav();
+    };
+
+    const go = (i: number) => {
+      if (!attempt) return;
+      attempt.current = Math.max(0, Math.min(items().length - 1, i));
+      save();
+      paintCard();
+    };
+    const choose = (option: number) => {
+      const id = items()[attempt!.current];
+      if (!questions.has(id)) return;
+      if (attempt!.settings.mode === 'practice' && attempt!.answers[id] !== undefined) return;
+      attempt!.answers[id] = option;
+      save();
+      paintCard();
+    };
+    const toggleFlag = () => {
+      const id = items()[attempt!.current];
+      attempt!.flags = attempt!.flags.includes(id) ? attempt!.flags.filter((x) => x !== id) : [...attempt!.flags, id];
+      save();
+      paintNav();
+    };
+
+    $('[data-card]').addEventListener('click', (event) => {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-option]');
+      if (button && !button.disabled) choose(Number(button.dataset.option));
+    });
+    $('[data-nav]').addEventListener('click', (event) => {
+      const dot = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-index]');
+      if (dot) go(Number(dot.dataset.index));
+    });
+    document.addEventListener('keydown', (event) => {
+      if (!attempt || attempt.finished || $('[data-view="run"]').hidden) return;
+      const target = event.target;
+      if (target instanceof Element && target.closest('textarea, input, select')) return;
+      const key = event.key.toLowerCase();
+      const rtl = lang === 'ar';
+      if ('1234'.includes(key) && key.length === 1) choose(Number(key) - 1);
+      else if ('abcd'.includes(key) && key.length === 1) choose('abcd'.indexOf(key));
+      else if (event.key === 'ArrowRight') go(attempt.current + (rtl ? -1 : 1));
+      else if (event.key === 'ArrowLeft') go(attempt.current + (rtl ? 1 : -1));
+      else if (key === 'f') toggleFlag();
+      else return;
+      event.preventDefault();
+    });
+
+    /* ---------------- results ---------------- */
+    const scoreOf = (a: Attempt) => {
+      let right = 0;
+      let wrong = 0;
+      for (const id of a.ids) {
+        const chosen = a.answers[id];
+        if (chosen === undefined) continue;
+        if (chosen === questions.get(id)!.answer) right += 1;
+        else wrong += 1;
+      }
+      const net = Math.max(0, right - wrong * a.settings.negative);
+      const written = a.essays.reduce((sum, id) => sum + (a.marks[id] ?? 0), 0);
+      const writtenMax = a.essays.reduce((sum, id) => sum + essays.get(id)!.marks, 0);
+      return { right, wrong, blank: a.ids.length - right - wrong, net, written, writtenMax };
+    };
+
+    const finish = (timeUp = false) => {
+      if (!attempt || attempt.finished) return;
+      window.clearInterval(timer);
+      attempt.finished = Date.now();
+      const st = stats();
+      for (const id of attempt.ids) {
+        const chosen = attempt.answers[id];
+        const entry = (st[id] ??= { seen: 0, wrong: 0, last: 0 });
+        entry.seen += 1;
+        entry.last = attempt.finished;
+        if (chosen === undefined || chosen !== questions.get(id)!.answer) entry.wrong += 1;
+        else entry.wrong = Math.max(0, entry.wrong - 1);
+      }
+      store.set(K_STATS, st);
+      const score = scoreOf(attempt);
+      const history = store.get<HistoryRow[]>(K_HISTORY, []);
+      history.unshift({
+        at: attempt.finished, title: attempt.title, code: attempt.settings.code, n: attempt.ids.length, right: score.right,
+        net: score.net, written: score.written, writtenMax: score.writtenMax,
+        ms: (attempt.deadline ? Math.min(attempt.finished, attempt.deadline) : attempt.finished) - attempt.started, key: attempt.started,
+      });
+      store.set(K_HISTORY, history.slice(0, 50));
+      store.set(K_CURRENT, null);
+      results(timeUp);
+    };
+
+    const bar = (label: string, right: number, total: number) => {
+      const pct = total ? Math.round((100 * right) / total) : 0;
+      return `<div class="exam__row"><span>${label}</span><span class="exam__meter"><i style="inline-size:${pct}%"></i></span>` +
+        `<span dir="ltr">${right}/${total} · ${pct}%</span></div>`;
+    };
+
+    let filter = 'all';
+    const results = (timeUp = false) => {
+      const a = attempt!;
+      show('results');
+      const s = scoreOf(a);
+      const used = (a.deadline ? Math.min(a.finished!, a.deadline) : a.finished!) - a.started;
+      const pct = Math.round((100 * s.net) / a.ids.length);
+      const parts = [
+        timeUp ? `<p class="exam__warn">${T.timeUp}</p>` : '',
+        `<div class="exam__tiles">`,
+        `<div class="notice-card exam__tile"><span>${T.mcqScore}</span><strong dir="ltr">${s.right} / ${a.ids.length}</strong>` +
+          `<small>${s.right} ${T.correct} · ${s.wrong} ${T.wrong} · ${s.blank} ${T.blank}</small></div>`,
+        a.settings.negative ? `<div class="notice-card exam__tile"><span>${T.netScore}</span><strong dir="ltr">${fmt(s.net)}</strong></div>` : '',
+        `<div class="notice-card exam__tile"><span>${T.percent}</span><strong dir="ltr">${pct}%</strong><small>${T.passLine}</small></div>`,
+        `<div class="notice-card exam__tile"><span>${T.timeUsed}</span><strong dir="ltr">${clock(used)}</strong></div>`,
+        a.essays.length
+          ? `<div class="notice-card exam__tile"><span>${T.total}</span><strong dir="ltr" data-paper-total></strong><small data-written-total></small></div>`
+          : '',
+        `</div>`,
+      ];
+      $('[data-summary]').innerHTML = parts.join('');
+
+      const weeksSeen = [...new Set(a.ids.map((id) => questions.get(id)!.week))].sort((x, y) => x - y);
+      $('[data-by-week]').innerHTML = weeksSeen
+        .map((w) => {
+          const ids = a.ids.filter((id) => questions.get(id)!.week === w);
+          const right = ids.filter((id) => a.answers[id] === questions.get(id)!.answer).length;
+          const title = weeks.find((x) => x.week === w)?.title ?? '';
+          return bar(`<span title="${title.replace(/"/g, '&quot;')}">${tf('lecture', w)}</span>`, right, ids.length);
+        })
+        .join('');
+      $('[data-by-level]').innerHTML = (['what', 'how', 'why'] as const)
+        .map((level) => {
+          const ids = a.ids.filter((id) => questions.get(id)!.level === level);
+          if (!ids.length) return '';
+          return bar(T.levelNames[level], ids.filter((id) => a.answers[id] === questions.get(id)!.answer).length, ids.length);
+        })
+        .join('');
+
+      const writtenBox = $('[data-written-results]');
+      writtenBox.hidden = a.essays.length === 0;
+      $('[data-written-list]').innerHTML = a.essays
+        .map((id) => {
+          const e = essays.get(id)!;
+          const options = Array.from({ length: e.marks * 2 + 1 }, (_, i) => i / 2)
+            .map((v) => `<option value="${v}" ${a.marks[id] === v ? 'selected' : ''}>${fmt(v)} / ${e.marks}</option>`)
+            .join('');
+          const mine = (a.texts[id] ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
+          return `<li class="content-card quiz-question"><p class="content-card__meta quiz-question__meta"><span>${e.id}</span>` +
+            `<span>${tf('lecture', e.week)}</span><span>${e.marks}</span></p><div class="quiz-question__stem">${e.stem}</div>` +
+            `<div class="exam__mine" dir="auto">${mine || '—'}</div>` +
+            `<div class="quiz-question__feedback"><div class="quiz-question__explanation">${e.answer}</div></div>` +
+            `<label class="quiz__filter"><span>${T.selfMark}</span><select data-mark="${id}"><option value="">–</option>${options}</select></label></li>`;
+        })
+        .join('');
+      paintTotals();
+      paintReview();
+      paintHistory();
+    };
+
+    const paintTotals = () => {
+      const a = attempt!;
+      if (!a.essays.length) return;
+      const s = scoreOf(a);
+      const totalSlot = root.querySelector('[data-paper-total]');
+      const writtenSlot = root.querySelector('[data-written-total]');
+      if (totalSlot) totalSlot.textContent = `${fmt(s.net + s.written)} / ${a.ids.length + s.writtenMax}`;
+      if (writtenSlot) writtenSlot.textContent = `${T.writtenTotal}: ${fmt(s.written)} / ${s.writtenMax}`;
+    };
+
+    $('[data-written-list]').addEventListener('change', (event) => {
+      const select = (event.target as HTMLElement).closest<HTMLSelectElement>('[data-mark]');
+      if (!select || !attempt) return;
+      if (select.value === '') delete attempt.marks[select.dataset.mark!];
+      else attempt.marks[select.dataset.mark!] = Number(select.value);
+      const history = store.get<HistoryRow[]>(K_HISTORY, []);
+      const row = history.find((r) => r.key === attempt!.started);
+      if (row) {
+        row.written = scoreOf(attempt).written;
+        store.set(K_HISTORY, history);
+      }
+      paintTotals();
+      paintHistory();
+    });
+
+    const paintReview = () => {
+      const a = attempt!;
+      $$<HTMLButtonElement>('[data-filter]').forEach((b) => b.classList.toggle('is-on', b.dataset.filter === filter));
+      $('[data-review]').innerHTML = a.ids
+        .map((id, i) => ({ id, i, q: questions.get(id)!, chosen: a.answers[id] }))
+        .filter(({ id, q, chosen }) =>
+          filter === 'all' ||
+          (filter === 'wrong' && chosen !== undefined && chosen !== q.answer) ||
+          (filter === 'blank' && chosen === undefined) ||
+          (filter === 'flagged' && a.flags.includes(id)),
+        )
+        .map(({ i, q, chosen }) =>
+          `<li class="content-card quiz-question ${chosen === q.answer ? 'is-correct' : 'is-wrong'}">` +
+          `<p class="content-card__meta quiz-question__meta"><span>${i + 1}</span><span>${tf('lecture', q.week)}</span>` +
+          `<span class="quiz-question__level">${levelName(q.level)}</span><span>${q.id}</span></p>` +
+          `<div class="quiz-question__stem">${q.stem}</div><div class="quiz-question__options">${optionsHtml(q, chosen, true)}</div>${feedbackHtml(q, chosen)}</li>`,
+        )
+        .join('');
+    };
+    $('[data-review-filter]').addEventListener('click', (event) => {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-filter]');
+      if (!button) return;
+      filter = button.dataset.filter!;
+      paintReview();
+    });
+
+    const paintHistory = () => {
+      const history = store.get<HistoryRow[]>(K_HISTORY, []);
+      const box = $('[data-history]');
+      if (!history.length) {
+        box.innerHTML = `<p>${T.historyEmpty}</p>`;
+        return;
+      }
+      const date = new Intl.DateTimeFormat(lang === 'ar' ? 'ar-EG' : 'en-GB', { dateStyle: 'medium', timeStyle: 'short' });
+      box.innerHTML =
+        `<div class="quiz-table"><table><thead><tr><th>${T.hDate}</th><th>${T.hPaper}</th><th>${T.hScore}</th><th>${T.hTime}</th></tr></thead><tbody>` +
+        history
+          .map((r) =>
+            `<tr><td>${date.format(r.at)}</td><td>${r.title} <small dir="ltr">${r.code}</small></td>` +
+            `<td dir="ltr">${fmt(r.net)}/${r.n} (${Math.round((100 * r.net) / r.n)}%)${r.writtenMax ? ` + ${fmt(r.written)}/${r.writtenMax}` : ''}</td>` +
+            `<td dir="ltr">${clock(r.ms)}</td></tr>`,
+          )
+          .join('') +
+        `</tbody></table></div><button type="button" class="button-secondary" data-act="clear">${T.clearHistory}</button>`;
+    };
+
+    /* ---------------- printing ---------------- */
+    const print = (withKey: boolean) => {
+      const a = attempt!;
+      const paper = a.ids
+        .map((id, i) => {
+          const q = questions.get(id)!;
+          return `<li><div>${q.stem}</div><ol type="a">${q.options.map((o) => `<li>${o}</li>`).join('')}</ol>` +
+            (withKey ? `<p><strong>(${letters[q.answer]})</strong></p>${q.explanation}` : '') + `</li>`;
+        })
+        .join('');
+      const written = a.essays
+        .map((id) => {
+          const e = essays.get(id)!;
+          return `<li><p><em>(${e.marks})</em></p>${e.stem}${withKey ? e.answer : ''}</li>`;
+        })
+        .join('');
+      $('[data-print]').innerHTML =
+        `<h2>DSA27 · ${a.title} · ${a.settings.code}</h2><ol>${paper}</ol>` + (written ? `<h3>Written</h3><ol>${written}</ol>` : '');
+      document.body.classList.add('exam-printing');
+      window.print();
+      document.body.classList.remove('exam-printing');
+    };
+
+    /* ---------------- buttons ---------------- */
+    root.addEventListener('click', (event) => {
+      const button = (event.target as HTMLElement).closest<HTMLElement>('[data-act]');
+      if (!button) return;
+      const act = button.dataset.act;
+      if (act === 'start') begin(readSettings());
+      else if (act === 'newcode') {
+        field('code').value = newCode();
+        refreshAvail();
+      } else if (act === 'resume') {
+        attempt = store.get<Attempt | null>(K_CURRENT, null);
+        if (attempt) run();
+      } else if (act === 'discard') {
+        store.set(K_CURRENT, null);
+        $('[data-resume]').hidden = true;
+      } else if (act === 'prev') go(attempt!.current - 1);
+      else if (act === 'next') go(attempt!.current + 1);
+      else if (act === 'flag') toggleFlag();
+      else if (act === 'submit') {
+        const all = items();
+        const unanswered = all.filter((id) => !isDone(id)).length;
+        if (window.confirm(tf('confirm', unanswered, attempt!.flags.length))) finish();
+      } else if (act === 'retry') {
+        const a = attempt!;
+        const wrongIds = a.ids.filter((id) => a.answers[id] !== questions.get(id)!.answer);
+        if (wrongIds.length) begin({ ...a.settings, mode: 'practice', time: 'none', written: 0 }, wrongIds);
+      } else if (act === 'again') {
+        field('code').value = newCode();
+        begin({ ...attempt!.settings, code: field('code').value });
+      } else if (act === 'change') {
+        attempt = null;
+        $('[data-resume]').hidden = true;
+        show('setup');
+        refreshAvail();
+        paintHistory();
+      } else if (act === 'print') print(false);
+      else if (act === 'printkey') print(true);
+      else if (act === 'clear') {
+        if (window.confirm(T.clearConfirm)) {
+          store.drop(K_HISTORY);
+          store.drop(K_STATS);
+          paintHistory();
+          refreshAvail();
+        }
+      }
+    });
+
+    $$<HTMLInputElement>('input[name="preset"]').forEach((radio) => radio.addEventListener('change', () => applyPreset(radio.value)));
+    $('[data-settings-box]').addEventListener('change', (event) => {
+      if ((event.target as HTMLElement).closest('[data-s]')) {
+        $<HTMLInputElement>('input[name="preset"][value="custom"]').checked = true;
+        field('minutes').hidden = field('time').value !== 'minutes';
+        refreshAvail();
+      }
+    });
+
+    /* ---------------- start-up ---------------- */
+    const last = store.get<Partial<Settings> | null>(K_SETTINGS, null);
+    if (last?.preset) {
+      const radio = root.querySelector<HTMLInputElement>(`input[name="preset"][value="${last.preset}"]`);
+      if (radio) radio.checked = true;
+      writeSettings({ ...last, weeks: last.weeks?.length ? last.weeks : weeks.map((w) => w.week) });
+    } else {
+      applyPreset('full');
+    }
+    if (!field('code').value) field('code').value = newCode();
+    // A shared link can carry a paper code: …/midterm/#code=ABC123
+    const shared = /code=([A-Za-z0-9]{1,12})/.exec(window.location.hash);
+    if (shared) field('code').value = shared[1].toUpperCase();
+    const pending = store.get<Attempt | null>(K_CURRENT, null);
+    $('[data-resume]').hidden = !pending || !!pending.finished;
+    refreshAvail();
+    paintHistory();
+  });
+</script>

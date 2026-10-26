@@ -2,10 +2,11 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
-import { DSA27_REPO, dsa27Weeks, getDsa27WeekPath, quizLabels } from '../../../utils/quizzes';
+import { DSA27_REPO, dsa27Weeks, getDsa27MidtermPath, getDsa27WeekPath, midtermWeeks, quizLabels } from '../../../utils/quizzes';
 
 const t = quizLabels.en;
 const total = dsa27Weeks.reduce((sum, week) => sum + week.questions.length, 0);
+const midtermTotal = midtermWeeks().reduce((sum, week) => sum + week.questions.length, 0);
 const seoTitle = buildSeoTitle('Quizzes', { lang: 'en', section: 'Dr. Haitham A. El-Ghareeb' });
 const seoDescription = buildSeoDescription(
   `Self-check multiple-choice quizzes for the Data Structures and Algorithms course (DSA27): ${dsa27Weeks.length} weeks, ${total} questions, each answer explained.`,
@@ -37,6 +38,13 @@ const seoDescription = buildSeoDescription(
         One quiz for each lecture week, from the multiple-choice part of the course question bank.
         The book, labs and code are in the <a href={DSA27_REPO}>course repository</a>.
       </p>
+      <a class="card-link exam__promo-link" href={getDsa27MidtermPath('en')}>
+        <article class="content-card entity-card exam__promo">
+          <p class="content-card__meta">Lectures 1–7 · {midtermTotal} questions</p>
+          <h3>{t.midterm}</h3>
+          <p>{t.midtermLead}</p>
+        </article>
+      </a>
       <div class="grid-three">
         {dsa27Weeks.map((week) => (
           <a class="card-link" href={getDsa27WeekPath('en', week.week)}>

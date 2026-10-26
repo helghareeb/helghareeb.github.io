@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import { navigation } from '../../config/navigation';
 import { siteConfig } from '../../config/site';
 import { getArticleSeriesPath, getEntryPath, getFlashcardModePath } from '../utils/content-routing';
-import { dsa27Weeks, getDsa27WeekPath } from '../utils/quizzes';
+import { dsa27Weeks, getDsa27MidtermPath, getDsa27WeekPath } from '../utils/quizzes';
 import { getStudyBenefitBookPath } from '../utils/study';
 import { getPlaylistPath, playlists } from '../utils/videos';
 
@@ -154,6 +154,7 @@ export const GET: APIRoute = async () => {
     for (const week of dsa27Weeks) {
       urls.set(getDsa27WeekPath(lang, week.week), undefined);
     }
+    urls.set(getDsa27MidtermPath(lang), undefined);
   }
 
   for (const locale of Object.keys(navigation) as Array<keyof typeof navigation>) {

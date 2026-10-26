@@ -1,0 +1,61 @@
+---
+import ExamSimulator from '../../../../components/ExamSimulator.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { DSA27_REPO, getDsa27WeekPath, getQuizIndexPath, midtermWeeks, quizLabels } from '../../../../utils/quizzes';
+
+const t = quizLabels.ar;
+const weeks = midtermWeeks();
+const mcqs = weeks.reduce((sum, week) => sum + week.questions.length, 0);
+const essays = weeks.reduce((sum, week) => sum + (week.essays?.length ?? 0), 0);
+const seoTitle = buildSeoTitle('محاكي امتحان منتصف الفصل في DSA27', { lang: 'ar', section: t.section });
+const seoDescription = buildSeoDescription(
+  `امتحانات تجريبية بزمن محدد في مقرر هياكل البيانات والخوارزميات (DSA27)، المحاضرات 1 إلى ${weeks.length}: حتى 60 سؤالًا من ${mcqs} سؤال اختيار من متعدد و${essays} سؤالًا مقاليًا، مع تقرير مفصل.`,
+  [],
+);
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">{t.course} · المحاضرات 1–{weeks.length}</p>
+      <h1 class="hero__title">{t.midterm}</h1>
+      <p class="hero__lead">
+        تُسحب كل ورقة من جديد من بنك أسئلة المقرر: {mcqs} سؤال اختيار من متعدد و{essays} سؤالًا مقاليًا في
+        المحاضرات 1 إلى {weeks.length}. اختر ورقتك، وأدِّها في الوقت المحدد، ثم خذ تقريرًا حسب المحاضرة والمستوى
+        مع شرح كل إجابة. {t.practiceNote}
+      </p>
+      <div class="hero__actions">
+        <a class="button-secondary" href={getQuizIndexPath('ar')}>{t.section}</a>
+        <a class="button-secondary" href={getDsa27WeekPath('ar', 1)}>{t.week(1)}</a>
+        <a class="button-secondary" href={DSA27_REPO}>{t.repo}</a>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <ExamSimulator lang="ar" />
+    </section>
+
+    <section class="shell section">
+      <article class="notice-card exam__tips">
+        <h2>كيف تتدرب به</h2>
+        <ol>
+          <li><strong>ابدأ بنصف ورقة</strong> في نمط الامتحان، بلا كتاب، لتعرف أين تقف.</li>
+          <li>
+            اقرأ التقرير. كل محاضرة دون 60%: ارجع إلى مذكرتها ومعملها التفاعلي، ثم حل اختبار أسبوعها وأسئلته
+            المقالية.
+          </li>
+          <li>استعمل <strong>نقاط ضعفي</strong> و<strong>أخطائي</strong> حتى تكف الأسئلة نفسها عن الرجوع.</li>
+          <li>
+            درّب القسم المقالي أيضًا: ورقة <strong>شكل الامتحان</strong> فيها 30 درجة مقالية. اكتب إجاباتك، ثم صحح
+            لنفسك على نقاط التصحيح بأمانة.
+          </li>
+          <li>في الأيام الأخيرة، أدِّ <strong>امتحانًا كاملًا</strong> مرة واحدة، بالوقت، وهاتفك بعيد. واجعل هدفك 60% فأكثر.</li>
+          <li>تذاكر مع مجموعة؟ شاركوا <strong>رمز الورقة</strong>: بالرمز والإعدادات نفسها يحصل الجميع على الورقة نفسها.</li>
+        </ol>
+        <p>يُعلن شكل امتحان منتصف الفصل الحقيقي وموعده في المحاضرة وعلى قناة المقرر في واتساب.</p>
+      </article>
+    </section>
+  </main>
+</BaseLayout>
