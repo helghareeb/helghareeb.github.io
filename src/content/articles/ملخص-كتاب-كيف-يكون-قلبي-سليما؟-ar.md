@@ -19,9 +19,9 @@ draft: false
 
 <figure style="margin:0 0 1.5rem;">
 <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;">
-<iframe src="https://drive.google.com/file/d/1uO7y8ThsRGVh5L1KJXO0oDC7T2tzNdCj/preview" title="ملخص مرئي لكتاب كيف يكون قلبي سليما" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/1UTa8V2MYwdBvcMcsel7wANE3gjhPruOU/preview" title="ملخص مرئي لكتاب كيف يكون قلبي سليما" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
 </div>
-<figcaption style="margin-top:.5rem;font-size:.95em;">ملخص مرئي لكتاب «كيف يكون قلبي سليمًا؟» · <a href="https://drive.google.com/file/d/1uO7y8ThsRGVh5L1KJXO0oDC7T2tzNdCj/view">فتح الفيديو على Google Drive</a></figcaption>
+<figcaption style="margin-top:.5rem;font-size:.95em;">ملخص مرئي لكتاب «كيف يكون قلبي سليمًا؟» · <a href="https://drive.google.com/file/d/1UTa8V2MYwdBvcMcsel7wANE3gjhPruOU/view">فتح الفيديو على Google Drive</a></figcaption>
 </figure>
 
 خطبة الحاجة
