@@ -1,0 +1,100 @@
+---
+import { siteConfig } from '../../config/site';
+import {
+  getFileDownloadUrl,
+  getPlaylistPath,
+  getPreviewUrl,
+  getThumbnailUrl,
+  getWatchUrl,
+  getWhatsAppUrl,
+  videoLabels,
+  type Playlist,
+} from '../utils/videos';
+
+interface Props {
+  lang: 'ar' | 'en';
+  playlist: Playlist;
+}
+
+const { lang, playlist } = Astro.props;
+const t = videoLabels[lang];
+const pageUrl = new URL(getPlaylistPath(lang, playlist.slug), siteConfig.siteUrl).toString();
+const parts = (ids: string[] | undefined, label: string) =>
+  (ids ?? []).map((id, i, all) => ({ id, label: all.length > 1 ? `${label} · ${t.part(i + 1)}` : label }));
+---
+
+<ol class="dawah-list">
+  {playlist.videos.map((video, index) => {
+    const title = lang === 'ar' ? video.titleAr : video.title;
+    const anchor = `v-${index + 1}`;
+    const verses = video.verses?.[lang];
+    return (
+      <li class="content-card dawah-card" id={anchor}>
+        <details class="dawah-card__player">
+          <summary>
+            <span class="dawah-card__thumb">
+              <img src={getThumbnailUrl(video)} alt="" loading="lazy" referrerpolicy="no-referrer" data-video-thumb />
+              <span class="dawah-card__play" aria-hidden="true">▶</span>
+            </span>
+            <span class="dawah-card__head">
+              <span class="content-card__meta">{index + 1} · {video.duration}</span>
+              <h3 dir="auto">{title}</h3>
+              <span class="button">{t.play}</span>
+            </span>
+          </summary>
+          <div class="dawah-card__frame">
+            <iframe
+              data-src={getPreviewUrl(video.id)}
+              title={title}
+              allow="autoplay; fullscreen"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </details>
+        {video.summary && <p class="dawah-card__summary" dir="auto">{video.summary[lang]}</p>}
+        {verses && <p class="content-card__meta" dir="auto">{t.verses}: {verses}</p>}
+        <div class="video-card__actions">
+          <a class="button-secondary" href={getWatchUrl(video)} target="_blank" rel="noopener">{t.watch}</a>
+          <a class="button-secondary" href={getFileDownloadUrl(video.id)} target="_blank" rel="noopener">{t.download}</a>
+          {parts(video.mobile, t.mobile).map((p) => (
+            <a class="button-secondary" href={getFileDownloadUrl(p.id)} target="_blank" rel="noopener">{p.label}</a>
+          ))}
+          {parts(video.status, t.status).map((p) => (
+            <a class="button-secondary" href={getFileDownloadUrl(p.id)} target="_blank" rel="noopener">{p.label}</a>
+          ))}
+          {video.descId && (
+            <a class="button-secondary" href={getWatchUrl({ ...video, id: video.descId })} target="_blank" rel="noopener">{t.description}</a>
+          )}
+          {video.article && <a class="button-secondary" href={video.article[lang]}>{t.article}</a>}
+          <a
+            class="video-card__share"
+            href={getWhatsAppUrl(`${title} | ${playlist.title[lang]}`, `${pageUrl}#${anchor}`)}
+            target="_blank"
+            rel="noopener"
+          >
+            {t.share}
+          </a>
+        </div>
+      </li>
+    );
+  })}
+</ol>
+
+<p class="content-card__meta video-grid__note">{t.dawahNote}{t.quotaNote}</p>
+
+<script>
+  // A thumbnail Drive cannot serve falls back to the plain tile.
+  document.querySelectorAll<HTMLImageElement>('[data-video-thumb]').forEach((img) => {
+    const hide = () => img.remove();
+    if (img.complete && img.naturalWidth === 0) hide();
+    else img.addEventListener('error', hide);
+  });
+  // The Drive player loads only when its card is opened.
+  document.querySelectorAll<HTMLDetailsElement>('.dawah-card__player').forEach((d) => {
+    d.addEventListener('toggle', () => {
+      const frame = d.querySelector<HTMLIFrameElement>('iframe[data-src]');
+      if (d.open && frame && !frame.src) frame.src = frame.dataset.src!;
+    });
+  });
+</script>

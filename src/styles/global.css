@@ -1204,6 +1204,127 @@ aside.entity-panel {
   margin-top: 1.25rem;
 }
 
+/* Da'wah playlists (src/components/DawahPlaylist.astro) */
+.dawah-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dawah-card {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem 1.1rem 1.1rem;
+  scroll-margin-top: 6rem;
+}
+
+.dawah-card:target {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(138, 106, 47, 0.25), var(--shadow);
+}
+
+.dawah-card__player > summary {
+  display: grid;
+  grid-template-columns: minmax(9rem, 14rem) 1fr;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.dawah-card__player > summary::-webkit-details-marker {
+  display: none;
+}
+
+.dawah-card__player[open] > summary {
+  margin-bottom: 0.8rem;
+}
+
+.dawah-card__player[open] .dawah-card__thumb,
+.dawah-card__player[open] .dawah-card__head .button {
+  display: none;
+}
+
+.dawah-card__player[open] > summary {
+  grid-template-columns: 1fr;
+}
+
+.dawah-card__thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--accent), var(--brand-strong));
+}
+
+.dawah-card__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dawah-card__play {
+  position: absolute;
+  inset-block-end: 0.5rem;
+  inset-inline-start: 0.5rem;
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: rgba(31, 44, 40, 0.78);
+  color: #f8f5ee;
+  font-size: 0.95rem;
+}
+
+.dawah-card__head {
+  display: grid;
+  gap: 0.4rem;
+  justify-items: start;
+}
+
+.dawah-card__head h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.dawah-card__head .button {
+  width: auto;
+  padding: 0.45rem 0.9rem;
+}
+
+.dawah-card__frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: #000;
+}
+
+.dawah-card__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.dawah-card__summary {
+  margin: 0;
+  line-height: 1.8;
+}
+
+@media (max-width: 40rem) {
+  .dawah-card__player > summary {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Quizzes (src/components/QuizSession.astro) */
 .quiz__toolbar {
   position: sticky;

@@ -1,4 +1,5 @@
 ---
+import DawahPlaylist from '../../../components/DawahPlaylist.astro';
 import VideoPlaylist from '../../../components/VideoPlaylist.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
@@ -20,18 +21,18 @@ const seoDescription = buildSeoDescription(playlist.summary.ar, playlist.videos.
 <BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
   <main class="page-main">
     <section class="shell hero hero--detail">
-      <p class="hero__eyebrow">{playlist.course.ar} · {playlist.year} · {t.videos(playlist.videos.length)}</p>
+      <p class="hero__eyebrow">{playlist.course.ar} · {playlist.year} · {playlist.kind === 'dawah' ? t.dawahVideos(playlist.videos.length) : t.videos(playlist.videos.length)}</p>
       <h1 class="hero__title">{playlist.title.ar}</h1>
       <p class="hero__lead">{playlist.summary.ar}</p>
       <div class="hero__actions">
-        <a class="button-secondary" href={playlist.repoUrl}>{t.repo}</a>
+        {playlist.repoUrl && <a class="button-secondary" href={playlist.repoUrl}>{t.repo}</a>}
         <a class="button-secondary" href={getFolderUrl(playlist)}>{t.folder}</a>
         <a class="button-secondary" href={getWhatsAppUrl(playlist.title.ar, pageUrl)}>{t.share}</a>
       </div>
     </section>
 
     <section class="shell section">
-      <VideoPlaylist lang="ar" playlist={playlist} />
+      {playlist.kind === 'dawah' ? <DawahPlaylist lang="ar" playlist={playlist} /> : <VideoPlaylist lang="ar" playlist={playlist} />}
     </section>
   </main>
 </BaseLayout>

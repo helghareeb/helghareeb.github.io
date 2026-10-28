@@ -7,7 +7,7 @@ import { getPlaylistPath, getThumbnailUrl, playlists, videoLabels } from '../../
 const t = videoLabels.ar;
 const seoTitle = buildSeoTitle('المرئيات', { lang: 'ar', section: 'د. هيثم الغريب' });
 const seoDescription = buildSeoDescription(
-  'محاضرات ومعامل مسجلة للدكتور هيثم الغريب، للمشاهدة أو التحميل، وكل قائمة مرتبطة بمستودع مقررها.',
+  'مرئيات دعوية (سلسلة «لو قالوا» وتلاوات وملخصات كتب) ومحاضرات مسجلة للدكتور هيثم الغريب، للمشاهدة أو التحميل.',
   playlists.map((playlist) => playlist.title.ar),
 );
 ---
@@ -18,8 +18,8 @@ const seoDescription = buildSeoDescription(
       <p class="hero__eyebrow">المرئيات</p>
       <h1 class="hero__title">المرئيات</h1>
       <p class="hero__lead">
-        محاضرات ومعامل مسجلة، مجموعة في قوائم بحسب المقرر. يمكن مشاهدة كل تسجيل مباشرة أو تحميله
-        للمذاكرة دون اتصال، ولكل تسجيل رابط إلى شيفرته في مستودع المقرر.
+        مرئيات دعوية: سلسلة «لو قالوا» في الجواب عن الشبهات من القرآن الكريم، وتلاوات، وملخصات كتب؛
+        ثم تسجيلات المقررات الجامعية. كل مرئي يُشاهَد هنا مباشرة أو يُحمَّل وينشر.
       </p>
       <div class="hero__actions">
         <a class="button-secondary" href="/ar/teaching/">التدريس</a>
@@ -28,8 +28,27 @@ const seoDescription = buildSeoDescription(
     </section>
 
     <section class="shell section">
+      <h2>{t.dawahSection}</h2>
       <div class="grid-two">
-        {playlists.map((playlist) => (
+        {playlists.filter((playlist) => playlist.kind === 'dawah').map((playlist) => (
+          <a class="card-link" href={getPlaylistPath('ar', playlist.slug)}>
+            <article class="content-card entity-card">
+              {playlist.videos[0] && (
+                <img class="video-playlist-cover" src={getThumbnailUrl(playlist.videos[0])} alt="" loading="lazy" referrerpolicy="no-referrer" />
+              )}
+              <p class="content-card__meta">{playlist.year} · {t.dawahVideos(playlist.videos.length)}</p>
+              <h3>{playlist.title.ar}</h3>
+              <p>{playlist.summary.ar}</p>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="shell section">
+      <h2>{t.courseSection}</h2>
+      <div class="grid-two">
+        {playlists.filter((playlist) => playlist.kind === 'course').map((playlist) => (
           <a class="card-link" href={getPlaylistPath('ar', playlist.slug)}>
             <article class="content-card entity-card">
               {playlist.videos[0] && (
