@@ -22,12 +22,12 @@ const seoDescription = buildSeoDescription(
         summaries), then recorded university lectures. Every video can be watched here or downloaded and shared.
       </p>
       <div class="hero__actions">
-        <a class="button-secondary" href="/en/teaching/">Teaching</a>
-        <a class="button-secondary" href="/en/quizzes/">Quizzes</a>
+        <a class="button-secondary" href="#dawah">{t.dawahSection}</a>
+        <a class="button-secondary" href="#courses">{t.courseSection}</a>
       </div>
     </section>
 
-    <section class="shell section">
+    <section class="shell section" id="dawah">
       <h2>{t.dawahSection}</h2>
       <div class="grid-two">
         {playlists.filter((playlist) => playlist.kind === 'dawah').map((playlist) => (
@@ -45,8 +45,12 @@ const seoDescription = buildSeoDescription(
       </div>
     </section>
 
-    <section class="shell section">
+    <section class="shell section" id="courses">
       <h2>{t.courseSection}</h2>
+      <p class="hero__actions">
+        <a class="button-secondary" href="/en/teaching/">Teaching</a>
+        <a class="button-secondary" href="/en/quizzes/">Quizzes</a>
+      </p>
       <div class="grid-two">
         {playlists.filter((playlist) => playlist.kind === 'course').map((playlist) => (
           <a class="card-link" href={getPlaylistPath('en', playlist.slug)}>

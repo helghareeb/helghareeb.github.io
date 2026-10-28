@@ -22,12 +22,12 @@ const seoDescription = buildSeoDescription(
         ثم تسجيلات المقررات الجامعية. كل مرئي يُشاهَد هنا مباشرة أو يُحمَّل وينشر.
       </p>
       <div class="hero__actions">
-        <a class="button-secondary" href="/ar/teaching/">التدريس</a>
-        <a class="button-secondary" href="/ar/quizzes/">الاختبارات القصيرة</a>
+        <a class="button-secondary" href="#dawah">{t.dawahSection}</a>
+        <a class="button-secondary" href="#courses">{t.courseSection}</a>
       </div>
     </section>
 
-    <section class="shell section">
+    <section class="shell section" id="dawah">
       <h2>{t.dawahSection}</h2>
       <div class="grid-two">
         {playlists.filter((playlist) => playlist.kind === 'dawah').map((playlist) => (
@@ -45,8 +45,12 @@ const seoDescription = buildSeoDescription(
       </div>
     </section>
 
-    <section class="shell section">
+    <section class="shell section" id="courses">
       <h2>{t.courseSection}</h2>
+      <p class="hero__actions">
+        <a class="button-secondary" href="/ar/teaching/">التدريس</a>
+        <a class="button-secondary" href="/ar/quizzes/">الاختبارات القصيرة</a>
+      </p>
       <div class="grid-two">
         {playlists.filter((playlist) => playlist.kind === 'course').map((playlist) => (
           <a class="card-link" href={getPlaylistPath('ar', playlist.slug)}>
