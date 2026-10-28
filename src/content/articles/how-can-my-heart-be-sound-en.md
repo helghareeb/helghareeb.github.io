@@ -17,6 +17,13 @@ draft: false
 
 ## How Can My Heart Be Sound?
 
+<figure style="margin:0 0 1.5rem;">
+<div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;">
+<iframe src="https://drive.google.com/file/d/1uO7y8ThsRGVh5L1KJXO0oDC7T2tzNdCj/preview" title="Video summary of How Can My Heart Be Sound" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+</div>
+<figcaption style="margin-top:.5rem;font-size:.95em;">Video summary of the book <em>How Can My Heart Be Sound?</em> (in Arabic) · <a href="https://drive.google.com/file/d/1uO7y8ThsRGVh5L1KJXO0oDC7T2tzNdCj/view">Open the video on Google Drive</a></figcaption>
+</figure>
+
 This article summarizes a short book devoted to the sound heart, presenting سلامة القلب as
 one of the greatest aims of the believer's life. It treats the sound heart not as a vague
 emotional state, but as a heart ordered rightly in its loyalties, loves, reactions, and

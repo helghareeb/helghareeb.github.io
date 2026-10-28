@@ -11,6 +11,13 @@ externalUrl: "https://ar.islamway.net/article/94301/%D9%85%D9%84%D8%AE%D8%B5-%D9
 draft: false
 ---
 
+<figure style="margin:0 0 1.5rem;">
+<div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;">
+<iframe src="https://drive.google.com/file/d/1uO7y8ThsRGVh5L1KJXO0oDC7T2tzNdCj/preview" title="ملخص مرئي لكتاب كيف يكون قلبي سليما" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+</div>
+<figcaption style="margin-top:.5rem;font-size:.95em;">ملخص مرئي لكتاب «كيف يكون قلبي سليمًا؟» · <a href="https://drive.google.com/file/d/1uO7y8ThsRGVh5L1KJXO0oDC7T2tzNdCj/view">فتح الفيديو على Google Drive</a></figcaption>
+</figure>
+
 هذا الملخص يعرّف بكتاب **"كيف يكون قلبي سليمًا؟"** لفضيلة الأستاذ الدكتور أحمد عبدالرحمن النقيب، ويبرز فكرته المركزية: أن سلامة القلب من أعظم النعم، وأنها أصل تتفرع عنه الأعمال الصالحة والاستقامة في السير إلى الله.
 
 يركز المقال على وضوح الكتاب في بنائه ومقاصده، وعلى عنايته بجملة من أبواب سلامة القلب، مثل سلامته لله عز وجل، ولسنة النبي صلى الله عليه وسلم، ولأصحاب رسول الله صلى الله عليه وسلم، وللعلماء وأهل الفضل والحق. كما يشير إلى أن الكتاب في أصله محاضرة علمية جرى تفريغها ثم تهذيبها لتخرج في صورة أنفع وأقرب للقراءة المنظمة.
