@@ -9,7 +9,7 @@ workType: "Book"
 externalUrl: "https://helghareeb.github.io/ar/books/qatra-min-al-hayah/read/"
 ---
 
-**[Read the whole book online](/ar/books/qatra-min-al-hayah/read/)** (Arabic) · **[Download the PDF](/books/qatra-min-al-hayah/qatra-min-al-hayah.pdf)** · [Print edition from Dar Taba](https://dartaba.com/product/%d9%82%d8%b7%d8%b1%d8%a9-%d9%85%d9%86-%d8%a7%d9%84%d8%ad%d9%8a%d8%a7%d8%a9-%d8%af%d9%8a%d9%88%d8%a7%d9%86-%d9%82%d8%b5%d8%b5%d9%8a-%d8%a7%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%d9%8a/)
+**[Read the whole book online](/ar/books/qatra-min-al-hayah/read/)** (Arabic) · **[Download the PDF](/books/qatra-min-al-hayah/qatra-min-al-hayah.pdf)** · [The book on Midad](https://midad.com/book/196471) · [Print edition from Dar Taba](https://dartaba.com/product/%d9%82%d8%b7%d8%b1%d8%a9-%d9%85%d9%86-%d8%a7%d9%84%d8%ad%d9%8a%d8%a7%d8%a9-%d8%af%d9%8a%d9%88%d8%a7%d9%86-%d9%82%d8%b5%d8%b5%d9%8a-%d8%a7%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%d9%8a/)
 
 <img src="/books/qatra-min-al-hayah/cover.webp" alt="Cover of Qatra min al-Hayah" width="240" style="max-width:240px;height:auto;border-radius:12px;" />
 

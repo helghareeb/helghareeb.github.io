@@ -10,6 +10,9 @@ articleType: "Translated in-site version of an externally hosted article"
 readingTime: "15 minutes"
 externalUrl: "https://www.alukah.net/sharia/0/171206/"
 draft: false
+alternateLinks:
+  - name: "IslamWay"
+    url: "https://ar.islamway.net/article/94206"
 ---
 
 ## Role of Youth in Building the Ummah

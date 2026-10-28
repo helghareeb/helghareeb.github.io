@@ -10,6 +10,9 @@ articleType: "مقال خارجي"
 readingTime: "15 دقيقة"
 externalUrl: "https://www.alukah.net/sharia/0/171206/"
 draft: false
+alternateLinks:
+  - name: "طريق الإسلام"
+    url: "https://ar.islamway.net/article/94206"
 ---
 
 ## دور الشباب في بناء الأمة

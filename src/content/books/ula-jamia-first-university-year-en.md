@@ -8,11 +8,12 @@ workType: "Book"
 externalUrl: "https://helghareeb.github.io/books/ula-jamia/ula-jamia-updated-2026-07.pdf"
 ---
 
-**[Download the updated version (PDF)](/books/ula-jamia/ula-jamia-updated-2026-07.pdf)** (Arabic) · [Alukah version (first)](https://www.alukah.net/library/0/183337/)
+**[Download the updated version (PDF)](/books/ula-jamia/ula-jamia-updated-2026-07.pdf)** (Arabic) · [The book on Midad](https://midad.com/book/196478) · [Alukah version (first)](https://www.alukah.net/library/0/183337/)
 
 ## Two versions of the book
 
 - **Updated version (July 2026):** the latest and authoritative text — [PDF download from this site](/books/ula-jamia/ula-jamia-updated-2026-07.pdf).
+- **On Midad (October 2026):** [book page on Midad](https://midad.com/book/196478).
 - **Alukah version (24 June 2026):** the first version — [book page in the Alukah library](https://www.alukah.net/library/0/183337/).
 
 The updated version is a revision of this Arabic book (أولى جامعة) made after it was published in the

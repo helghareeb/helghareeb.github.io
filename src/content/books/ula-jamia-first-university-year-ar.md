@@ -8,11 +8,12 @@ workType: "كتاب"
 externalUrl: "https://helghareeb.github.io/books/ula-jamia/ula-jamia-updated-2026-07.pdf"
 ---
 
-**[تحميل النسخة المحدَّثة بصيغة PDF](/books/ula-jamia/ula-jamia-updated-2026-07.pdf)** · [نسخة الألوكة (الأولى)](https://www.alukah.net/library/0/183337/)
+**[تحميل النسخة المحدَّثة بصيغة PDF](/books/ula-jamia/ula-jamia-updated-2026-07.pdf)** · [الكتاب على مداد](https://midad.com/book/196478) · [نسخة الألوكة (الأولى)](https://www.alukah.net/library/0/183337/)
 
 ## نسختا الكتاب
 
 - **النسخة المحدَّثة (يوليو 2026م):** هي الأحدث والمعتمدة — [تحميل PDF من هذا الموقع](/books/ula-jamia/ula-jamia-updated-2026-07.pdf).
+- **على منصة مداد (أكتوبر 2026م):** [صفحة الكتاب على مداد](https://midad.com/book/196478).
 - **نسخة الألوكة (24 يونيو 2026م):** هي النسخة الأولى — [صفحة الكتاب في مكتبة الألوكة](https://www.alukah.net/library/0/183337/).
 
 النسخة المحدَّثة مراجعةٌ للكتاب بعد نشره في مكتبة شبكة الألوكة، وهي التي يُرجَع إليها عند الاختلاف
