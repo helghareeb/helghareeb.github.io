@@ -75,7 +75,7 @@ const next = h && i < k.hadith.length - 1 ? k.hadith[i + 1] : null;
       });
       const frame = document.createElement('iframe');
       frame.src = `https://drive.google.com/file/d/${box.dataset.audioId}/preview`;
-      frame.allow = 'autoplay';
+      frame.allow = 'autoplay; fullscreen';
       frame.title = box.querySelector('button')!.textContent ?? '';
       box.append(frame);
       box.classList.add('is-open');

@@ -28,7 +28,7 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 
   <div class="hadith-card__audio">
     {h.audio.id ? (
-      <div class="hadith-audio" data-audio-id={h.audio.id}>
+      <div class="hadith-audio" data-audio-id={h.audio.player ?? h.audio.id}>
         <button type="button" class="button hadith-audio__play">▶ {t.listen}</button>
         {h.audio.reader[lang] && <span class="content-card__meta">{t.reader}: {h.audio.reader[lang]}</span>}
       </div>

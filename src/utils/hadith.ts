@@ -19,7 +19,7 @@ export type Hadith = {
   grade: Record<Lang, string>;
   takhrij: Record<Lang, string>;
   en: { narrator: string; text: string; source: string };
-  audio: { reader: Record<Lang, string>; id: string | null };
+  audio: { reader: Record<Lang, string>; id: string | null; player?: string | null };
   video: { id: string } | null;
   sharh: { ar: string; source?: string } | null;
   fawaid: { ar: string }[];
@@ -54,8 +54,9 @@ export const kitabPath = (lang: Lang, book: string, slug: string) => `/${lang}/h
 export const num = (lang: Lang, n: number | string) =>
   lang === 'ar' ? String(n).replace(/[0-9]/g, (d) => '٠١٢٣٤٥٦٧٨٩'[Number(d)]) : String(n);
 
-// Drive will not serve its files to another site's <audio> element (cross-origin policy), so audio is
-// played in Drive's own embedded player, opened on demand.
+// Drive refuses its files to another site's <audio> element, and its embedded player never loads for
+// audio files there; it does play videos. So each hadith's audio is also published as a light MP4
+// (one still card + the audio): `player` is that file's Drive id, played in Drive's player on demand.
 export const audioPreviewUrl = (id: string) => `https://drive.google.com/file/d/${id}/preview`;
 
 /** Letters only, without vowel marks or tatweel, with ى→ي, for matching gharib words in the text. */
