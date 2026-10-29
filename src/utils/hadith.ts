@@ -4,6 +4,8 @@
 
 import bukhari from '../data/hadith/bukhari.json';
 import bukhariNotes from '../data/hadith/notes/bukhari.json';
+import malik from '../data/hadith/malik.json';
+import malikNotes from '../data/hadith/notes/malik.json';
 
 type Lang = 'ar' | 'en';
 
@@ -41,7 +43,10 @@ function withNotes(book: Book, notes: Notes): Book {
   return book;
 }
 
-export const books: Book[] = [withNotes(bukhari as Book, bukhariNotes as Notes)];
+export const books: Book[] = [
+  withNotes(bukhari as Book, bukhariNotes as Notes),
+  withNotes(malik as Book, malikNotes as Notes),
+];
 
 export const hadithPath = (lang: Lang, book: string, n: number) => `/${lang}/hadith/${book}/${n}/`;
 export const kitabPath = (lang: Lang, book: string, slug: string) => `/${lang}/hadith/${book}/${slug}/`;

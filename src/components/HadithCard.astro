@@ -21,10 +21,10 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 <article class="content-card hadith-card" id={`h${h.n}`}>
   <header class="hadith-card__head">
     <a class="hadith-card__num" href={hadithPath(lang, book.id, h.n)}>{book[lang]} · {num(lang, h.n)}</a>
-    <span class="hadith-card__grade">{t.grade}: {h.grade[lang]}</span>
+    {h.grade[lang] && <span class="hadith-card__grade">{t.grade}: {h.grade[lang]}</span>}
   </header>
 
-  <p class="hadith-card__bab" dir="rtl">{h.bab.ar}</p>
+  {h.bab.ar && <p class="hadith-card__bab" dir="rtl">{h.bab.ar}</p>}
 
   <div class="hadith-card__audio">
     {h.audio.id ? (
