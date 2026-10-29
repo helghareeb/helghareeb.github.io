@@ -2101,3 +2101,18 @@ button.gharib:focus-visible {
 .gharib-pop p {
   margin: 0.3rem 0;
 }
+
+.hadith-card__review {
+  margin-inline-start: 0.6rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.hadith-card__slot ol[lang="ar"] {
+  list-style-type: arabic-indic;
+}

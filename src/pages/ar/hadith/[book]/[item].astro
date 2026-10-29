@@ -3,7 +3,7 @@ import HadithCard from '../../../../components/HadithCard.astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
-import { books, hadithLabels, hadithPath, kitabPath, type Book, type Hadith, type Kitab } from '../../../../utils/hadith';
+import { books, hadithLabels, hadithPath, kitabPath, num, type Book, type Hadith, type Kitab } from '../../../../utils/hadith';
 
 export function getStaticPaths() {
   return books.flatMap((b) =>
@@ -16,7 +16,7 @@ export function getStaticPaths() {
 
 const { b, k, h } = Astro.props as { b: Book; k: Kitab; h: Hadith | null };
 const t = hadithLabels.ar;
-const title = h ? `${b.book.ar} ${h.n}` : `${k.ar} — ${b.book.ar}`;
+const title = h ? `${b.book.ar} ${num('ar', h.n)}` : `${k.ar} — ${b.book.ar}`;
 const seoTitle = buildSeoTitle(title, { lang: 'ar', section: t.section });
 const seoDescription = buildSeoDescription(h ? h.matn.slice(0, 160) : k.ar, h ? [h.takhrij.ar] : k.hadith.map((x) => x.matn.slice(0, 40)));
 const i = h ? k.hadith.findIndex((x) => x.n === h.n) : -1;

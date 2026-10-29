@@ -1,6 +1,6 @@
 ---
 import { siteConfig } from '../../config/site';
-import { audioUrl, hadithLabels, hadithPath, markGharib, type Hadith } from '../utils/hadith';
+import { audioUrl, hadithLabels, hadithPath, markGharib, num, type Hadith } from '../utils/hadith';
 import { getWhatsAppUrl } from '../utils/videos';
 
 interface Props {
@@ -20,7 +20,7 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 
 <article class="content-card hadith-card" id={`h${h.n}`}>
   <header class="hadith-card__head">
-    <a class="hadith-card__num" href={hadithPath(lang, book.id, h.n)}>{book[lang]} · {h.n}</a>
+    <a class="hadith-card__num" href={hadithPath(lang, book.id, h.n)}>{book[lang]} · {num(lang, h.n)}</a>
     <span class="hadith-card__grade">{t.grade}: {h.grade[lang]}</span>
   </header>
 
@@ -61,13 +61,13 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 
   {(h.sharh || full) && (
     <section class={`hadith-card__slot${h.sharh ? '' : ' hadith-card__slot--empty'}`}>
-      <h4>{t.sharh}</h4>
+      <h4>{t.sharh}{h.sharh && h.notesStatus === 'review' && <span class="hadith-card__review">{t.review}</span>}</h4>
       <p dir="rtl" lang="ar">{h.sharh ? h.sharh.ar : t.soon}</p>
     </section>
   )}
   {(h.fawaid.length > 0 || full) && (
     <section class={`hadith-card__slot${h.fawaid.length ? '' : ' hadith-card__slot--empty'}`}>
-      <h4>{t.fawaid}</h4>
+      <h4>{t.fawaid}{h.fawaid.length > 0 && h.notesStatus === 'review' && <span class="hadith-card__review">{t.review}</span>}</h4>
       {h.fawaid.length ? <ol dir="rtl" lang="ar">{h.fawaid.map((f) => <li>{f.ar}</li>)}</ol> : <p>{t.soon}</p>}
     </section>
   )}
@@ -81,7 +81,7 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
   <footer class="hadith-card__foot">
     <span class="content-card__meta">{t.takhrij}: {h.takhrij[lang]}</span>
     <span class="hadith-card__actions">
-      <a class="video-card__share" href={getWhatsAppUrl(`${book.ar} ${h.n}`, url)} target="_blank" rel="noopener">{t.share}</a>
+      <a class="video-card__share" href={getWhatsAppUrl(`${book.ar} ${num('ar', h.n)}`, url)} target="_blank" rel="noopener">{t.share}</a>
       <a class="video-card__share" href={mail}>{t.report}</a>
     </span>
   </footer>

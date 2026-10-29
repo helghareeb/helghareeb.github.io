@@ -2,7 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import '../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
-import { books, hadithLabels, kitabPath } from '../../../utils/hadith';
+import { books, hadithLabels, kitabPath, num } from '../../../utils/hadith';
 
 const t = hadithLabels.ar;
 const seoTitle = buildSeoTitle('الحديث النبوي', { lang: 'ar', section: 'د. هيثم الغريب' });
@@ -23,7 +23,7 @@ const seoDescription = buildSeoDescription('أحاديث الكتب التسعة
           {b.kutub.map((k) => (
             <a class="card-link" href={kitabPath('ar', b.book.id, k.slug)}>
               <article class="content-card entity-card">
-                <p class="content-card__meta">{t.count(k.hadith.length)} · {k.first}–{k.last}</p>
+                <p class="content-card__meta">{t.count(k.hadith.length)} · {num('ar', k.first)}–{num('ar', k.last)}</p>
                 <h3>{k.ar}</h3>
               </article>
             </a>

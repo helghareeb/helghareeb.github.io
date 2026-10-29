@@ -3,6 +3,7 @@
 // grow: audio, video, sharh and fawaid are present and empty until they exist.
 
 import bukhari from '../data/hadith/bukhari.json';
+import bukhariNotes from '../data/hadith/notes/bukhari.json';
 
 type Lang = 'ar' | 'en';
 
@@ -20,14 +21,34 @@ export type Hadith = {
   video: { id: string } | null;
   sharh: { ar: string; source?: string } | null;
   fawaid: { ar: string }[];
+  notesStatus?: 'review' | 'approved';
 };
 export type Kitab = { slug: string; ar: string; en: string; first: number; last: number; hadith: Hadith[] };
 export type Book = { book: { id: string; ar: string; en: string }; kutub: Kitab[] };
 
-export const books: Book[] = [bukhari as Book];
+type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; fawaid?: string[] } | string>;
+
+/** Merge the hand-written commentary and benefits (src/data/hadith/notes/<book>.json) into the records. */
+function withNotes(book: Book, notes: Notes): Book {
+  for (const k of book.kutub)
+    for (const h of k.hadith) {
+      const n = notes[String(h.n)];
+      if (!n || typeof n === 'string') continue;
+      if (n.sharh) h.sharh = { ar: n.sharh };
+      if (n.fawaid) h.fawaid = n.fawaid.map((ar) => ({ ar }));
+      h.notesStatus = n.status;
+    }
+  return book;
+}
+
+export const books: Book[] = [withNotes(bukhari as Book, bukhariNotes as Notes)];
 
 export const hadithPath = (lang: Lang, book: string, n: number) => `/${lang}/hadith/${book}/${n}/`;
 export const kitabPath = (lang: Lang, book: string, slug: string) => `/${lang}/hadith/${book}/${slug}/`;
+/** Arabic-Indic digits for Arabic pages (١٢٣); Western digits elsewhere. */
+export const num = (lang: Lang, n: number | string) =>
+  lang === 'ar' ? String(n).replace(/[0-9]/g, (d) => '٠١٢٣٤٥٦٧٨٩'[Number(d)]) : String(n);
+
 export const audioUrl = (id: string) => `https://drive.usercontent.google.com/download?id=${id}&export=download`;
 
 /** Letters only, without vowel marks or tatweel, with ى→ي, for matching gharib words in the text. */
@@ -57,13 +78,14 @@ export const hadithLabels = {
     grade: 'الحكم',
     takhrij: 'التخريج',
     english: 'الترجمة الإنجليزية',
-    reader: 'التلاوة',
+    reader: 'القراءة',
     audioSoon: 'يُضاف الصوت بعد التقسيم والمراجعة',
     sharh: 'شرح موجز',
     fawaid: 'فوائد',
     soon: 'يُضاف لاحقًا بإذن الله',
-    hadith: (n: number) => `الحديث ${n}`,
-    count: (n: number) => (n === 1 ? 'حديث واحد' : n === 2 ? 'حديثان' : n <= 10 ? `${n} أحاديث` : `${n} حديثًا`),
+    review: 'قيد المراجعة',
+    hadith: (n: number) => `الحديث ${num('ar', n)}`,
+    count: (n: number) => (n === 1 ? 'حديث واحد' : n === 2 ? 'حديثان' : n <= 10 ? `${num('ar', n)} أحاديث` : `${num('ar', n)} حديثًا`),
     share: 'مشاركة عبر واتساب',
     report: 'الإبلاغ عن خطأ',
     open: 'صفحة الحديث',
@@ -80,6 +102,7 @@ export const hadithLabels = {
     sharh: 'Brief explanation',
     fawaid: 'Benefits',
     soon: 'To be added, God willing',
+    review: 'Under review',
     hadith: (n: number) => `Hadith ${n}`,
     count: (n: number) => (n === 1 ? '1 hadith' : `${n} hadith`),
     share: 'Share on WhatsApp',
