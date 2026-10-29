@@ -5,10 +5,9 @@ interface Props {
   lang: 'ar' | 'en';
   currentPath: string;
   currentTitle?: string;
-  items?: { href: string; label: string }[];
 }
 
-const { lang, currentPath, currentTitle, items } = Astro.props;
+const { lang, currentPath, currentTitle } = Astro.props;
 const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
 const localeHome = lang === 'ar' ? '/ar/' : '/en/';
 const homeLabel = lang === 'ar' ? 'الرئيسية' : 'Home';
@@ -16,8 +15,8 @@ const segments = normalizedPath.split('/').filter(Boolean);
 
 // Labelled paths link normally; the last crumb falls back to the page title.
 // Unlabelled intermediate paths are skipped, since some (such as /ar/study/benefits/<field>/) have no page.
-const breadcrumbItems = items ??
-  (normalizedPath === '/' || normalizedPath === localeHome
+const breadcrumbItems =
+  normalizedPath === '/' || normalizedPath === localeHome
     ? []
     : segments
         .map((_, index) => {
@@ -26,7 +25,7 @@ const breadcrumbItems = items ??
           const label = breadcrumbLabels[path]?.[lang] ?? (isLast ? currentTitle : undefined);
           return label ? { href: path, label } : undefined;
         })
-        .filter((item): item is { href: string; label: string } => Boolean(item) && item!.href !== localeHome));
+        .filter((item): item is { href: string; label: string } => Boolean(item) && item!.href !== localeHome);
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',

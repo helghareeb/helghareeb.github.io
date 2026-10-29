@@ -1,5 +1,7 @@
 ---
+import { siteConfig } from '../../config/site';
 import { hadithLabels, hadithPath, markGharib, num, type Hadith } from '../utils/hadith';
+import ShareButtons from './ShareButtons.astro';
 
 interface Props {
   lang: 'ar' | 'en';
@@ -10,6 +12,7 @@ interface Props {
 
 const { lang, book, h, full = false } = Astro.props;
 const t = hadithLabels[lang];
+const url = new URL(hadithPath(lang, book.id, h.n), siteConfig.siteUrl).toString();
 const isnad = markGharib(h.isnad, h.gharib);
 const matn = markGharib(h.matn, h.gharib);
 const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.ar} ${h.n}`)}`;
@@ -84,4 +87,5 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
       <a class="video-card__share" href={mail}>{t.report}</a>
     </span>
   </footer>
+  <ShareButtons lang={lang} url={url} title={`${book[lang]} ${num(lang, h.n)}`} compact />
 </article>

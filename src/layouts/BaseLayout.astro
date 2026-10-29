@@ -20,8 +20,6 @@ export interface Props {
     section?: string;
     series?: string;
   };
-  /** Breadcrumb trail for pages whose URL does not show it (the hadith book sites). */
-  crumbs?: { href: string; label: string }[];
 }
 
 const {
@@ -32,7 +30,6 @@ const {
   noindex = false,
   searchable = !noindex,
   article,
-  crumbs,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -189,7 +186,7 @@ const structuredData = {
   <body>
     <div class="site-frame">
       <SiteHeader lang={lang} currentPath={currentPath} />
-      <SiteBreadcrumbs lang={lang} currentPath={currentPath} currentTitle={title.split(' | ')[0]} items={crumbs} />
+      <SiteBreadcrumbs lang={lang} currentPath={currentPath} currentTitle={title.split(' | ')[0]} />
       <div class="site-content" data-pagefind-body={searchable ? '' : undefined}>
         <slot />
       </div>
