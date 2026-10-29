@@ -13,9 +13,9 @@ draft: false
 
 <figure style="margin:0 0 1.5rem;">
 <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;">
-<iframe src="https://drive.google.com/file/d/1UTa8V2MYwdBvcMcsel7wANE3gjhPruOU/preview" title="ملخص مرئي لكتاب كيف يكون قلبي سليما" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/1wSk7DeaeZdgdyBE_96N8Jt4TBL6IyE-o/preview" title="ملخص مرئي لكتاب كيف يكون قلبي سليما" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
 </div>
-<figcaption style="margin-top:.5rem;font-size:.95em;">ملخص مرئي لكتاب «كيف يكون قلبي سليمًا؟» · <a href="https://drive.google.com/file/d/1UTa8V2MYwdBvcMcsel7wANE3gjhPruOU/view">فتح الفيديو على Google Drive</a></figcaption>
+<figcaption style="margin-top:.5rem;font-size:.95em;">ملخص مرئي لكتاب «كيف يكون قلبي سليمًا؟» · <a href="https://drive.google.com/file/d/1wSk7DeaeZdgdyBE_96N8Jt4TBL6IyE-o/view">فتح الفيديو على Google Drive</a></figcaption>
 </figure>
 
 هذا الملخص يعرّف بكتاب **"كيف يكون قلبي سليمًا؟"** لفضيلة الأستاذ الدكتور أحمد عبدالرحمن النقيب، ويبرز فكرته المركزية: أن سلامة القلب من أعظم النعم، وأنها أصل تتفرع عنه الأعمال الصالحة والاستقامة في السير إلى الله.

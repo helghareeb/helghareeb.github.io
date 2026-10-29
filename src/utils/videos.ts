@@ -55,7 +55,7 @@ export const playlists: Playlist[] = [
       ar: 'أسئلة وشبهات عن المسيح عيسى ابن مريم عليهما السلام، والجواب عنها من آيات القرآن الكريم بتلاوة الشيخ محمود خليل الحصري رحمه الله، مع الترجمة الإنجليزية. لكل حلقة نسخة أفقية، ونسخة للجوال، ونسخة مضغوطة لحالات واتساب، وملف وصف.',
       en: "Questions and claims about the Messiah, Jesus son of Mary (peace be upon them both), answered from the verses of the Qur'an, recited by Sheikh Mahmoud Khalil Al-Husary, with an English translation. Each episode has a landscape version, a mobile version, a compressed copy for WhatsApp statuses, and a description file.",
     },
-    folderId: '1K1lM2NXSOlKOofNYTDvzUpT7RCnsiImq',
+    folderId: '1Li_CPXHb44UU5O2kKXCGROugDgtEgT2w',
     videos: byOrder(lawQalu),
   },
   {
@@ -68,7 +68,7 @@ export const playlists: Playlist[] = [
       ar: 'سور وآيات بتلاوة الشيخ محمود خليل الحصري رحمه الله، بالرسم العثماني مع الترجمة الإنجليزية.',
       en: 'Surahs and verses recited by Sheikh Mahmoud Khalil Al-Husary, in Uthmani script with an English translation.',
     },
-    folderId: '1PFhAagfCOXu2oFPJtCbMBYioShPmXcBE',
+    folderId: '1xgfJlyagJaci23KyyAdEMR9fvUv01Dgo',
     videos: byOrder(quranRecitations),
   },
   {
@@ -81,7 +81,7 @@ export const playlists: Playlist[] = [
       ar: 'ملخصات مرئية لكتب نافعة، مع رابط المقال المكتوب في هذا الموقع.',
       en: 'Video summaries of beneficial books, each linked to its written article on this site.',
     },
-    folderId: '1f8OSj2LgsBZTXU1s62sE4siE-fgedZl_',
+    folderId: '1T9I-jbjCZAjMmywJMoakdjtPr5PxpJWF',
     videos: byOrder(bookSummaries),
   },
   {

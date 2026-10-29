@@ -13,9 +13,9 @@ draft: false
 
 <figure style="margin:0 0 1.5rem;">
 <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;">
-<iframe src="https://drive.google.com/file/d/1UTa8V2MYwdBvcMcsel7wANE3gjhPruOU/preview" title="Video summary of How Can My Heart Be Sound" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+<iframe src="https://drive.google.com/file/d/1wSk7DeaeZdgdyBE_96N8Jt4TBL6IyE-o/preview" title="Video summary of How Can My Heart Be Sound" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
 </div>
-<figcaption style="margin-top:.5rem;font-size:.95em;">Video summary of the book <em>How Can My Heart Be Sound?</em> (in Arabic) · <a href="https://drive.google.com/file/d/1UTa8V2MYwdBvcMcsel7wANE3gjhPruOU/view">Open the video on Google Drive</a></figcaption>
+<figcaption style="margin-top:.5rem;font-size:.95em;">Video summary of the book <em>How Can My Heart Be Sound?</em> (in Arabic) · <a href="https://drive.google.com/file/d/1wSk7DeaeZdgdyBE_96N8Jt4TBL6IyE-o/view">Open the video on Google Drive</a></figcaption>
 </figure>
 
 This summary introduces the book *How Can My Heart Be Sound?* by Prof. Dr. Ahmad Abdelrahman Al-Naqeeb. The article presents the sound heart as one of the greatest divine blessings and as a central spiritual aim from which righteous action follows.
