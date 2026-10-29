@@ -1,0 +1,65 @@
+---
+import HadithCard from '../../../../components/HadithCard.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import '../../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
+import { books, hadithLabels, hadithPath, kitabPath, type Book, type Hadith, type Kitab } from '../../../../utils/hadith';
+
+export function getStaticPaths() {
+  return books.flatMap((b) =>
+    b.kutub.flatMap((k) => [
+      { params: { book: b.book.id, item: k.slug }, props: { b, k, h: null } },
+      ...k.hadith.map((h) => ({ params: { book: b.book.id, item: String(h.n) }, props: { b, k, h } })),
+    ]),
+  );
+}
+
+const { b, k, h } = Astro.props as { b: Book; k: Kitab; h: Hadith | null };
+const t = hadithLabels.en;
+const title = h ? `${b.book.en} ${h.n}` : `${k.en} — ${b.book.en}`;
+const seoTitle = buildSeoTitle(title, { lang: 'en', section: t.section });
+const seoDescription = buildSeoDescription(h ? h.matn.slice(0, 160) : k.en, h ? [h.takhrij.en] : k.hadith.map((x) => x.matn.slice(0, 40)));
+const i = h ? k.hadith.findIndex((x) => x.n === h.n) : -1;
+const prev = h && i > 0 ? k.hadith[i - 1] : null;
+const next = h && i < k.hadith.length - 1 ? k.hadith[i + 1] : null;
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow"><a href="/en/hadith/">{t.section}</a> · {b.book.en}</p>
+      <h1 class="hero__title">{h ? t.hadith(h.n) : k.en}</h1>
+      {h ? <p class="hero__lead"><a href={kitabPath('en', b.book.id, k.slug)}>{k.en}</a></p> : <p class="hero__lead">{t.count(k.hadith.length)}</p>}
+    </section>
+    <section class="shell section hadith-list">
+      {h ? <HadithCard lang="en" book={b.book} h={h} full /> : k.hadith.map((x) => <HadithCard lang="en" book={b.book} h={x} />)}
+      {h && (
+        <nav class="hero__actions">
+          {prev && <a class="button-secondary" href={hadithPath('en', b.book.id, prev.n)}>{t.hadith(prev.n)}</a>}
+          {next && <a class="button-secondary" href={hadithPath('en', b.book.id, next.n)}>{t.hadith(next.n)}</a>}
+        </nav>
+      )}
+    </section>
+  </main>
+</BaseLayout>
+
+<div class="gharib-pop" role="tooltip" hidden></div>
+<script>
+  // Tap a gold-underlined word to see its meaning.
+  const pop = document.querySelector<HTMLElement>('.gharib-pop')!;
+  document.querySelectorAll<HTMLButtonElement>('button.gharib').forEach((b) => {
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      pop.innerHTML = '';
+      const w = document.createElement('strong'); w.textContent = b.textContent ?? '';
+      const m = document.createElement('p'); m.textContent = b.dataset.meaning ?? '';
+      const s = document.createElement('small'); s.textContent = b.dataset.source ?? '';
+      pop.append(w, m, s);
+      const r = b.getBoundingClientRect();
+      pop.style.top = `${window.scrollY + r.bottom + 8}px`;
+      pop.style.left = `${Math.max(8, Math.min(window.innerWidth - 328, window.scrollX + r.left + r.width / 2 - 160))}px`;
+      pop.hidden = false;
+    });
+  });
+  document.addEventListener('click', () => (pop.hidden = true));
+</script>

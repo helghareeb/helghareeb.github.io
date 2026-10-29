@@ -1,0 +1,88 @@
+---
+import { siteConfig } from '../../config/site';
+import { audioUrl, hadithLabels, hadithPath, markGharib, num, type Hadith } from '../utils/hadith';
+import { getWhatsAppUrl } from '../utils/videos';
+
+interface Props {
+  lang: 'ar' | 'en';
+  book: { id: string; ar: string; en: string };
+  h: Hadith;
+  full?: boolean; // the hadith's own page: show the empty sharh/fawaid slots too
+}
+
+const { lang, book, h, full = false } = Astro.props;
+const t = hadithLabels[lang];
+const url = new URL(hadithPath(lang, book.id, h.n), siteConfig.siteUrl).toString();
+const isnad = markGharib(h.isnad, h.gharib);
+const matn = markGharib(h.matn, h.gharib);
+const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.ar} ${h.n}`)}`;
+---
+
+<article class="content-card hadith-card" id={`h${h.n}`}>
+  <header class="hadith-card__head">
+    <a class="hadith-card__num" href={hadithPath(lang, book.id, h.n)}>{book[lang]} · {num(lang, h.n)}</a>
+    <span class="hadith-card__grade">{t.grade}: {h.grade[lang]}</span>
+  </header>
+
+  <p class="hadith-card__bab" dir="rtl">{h.bab.ar}</p>
+
+  <div class="hadith-card__audio">
+    {h.audio.id ? (
+      <audio controls preload="none" src={audioUrl(h.audio.id)}></audio>
+    ) : (
+      <p class="content-card__meta">{t.reader}: {h.audio.reader[lang]} — {t.audioSoon}</p>
+    )}
+  </div>
+
+  <div class="hadith-card__text" dir="rtl" lang="ar">
+    {h.isnad && (
+      <p class="hadith-card__isnad">
+        {isnad.map((x) => (x.g ? <button type="button" class="gharib" data-meaning={x.g.meaning} data-source={x.g.source}>{x.tok}</button> : x.tok))}
+      </p>
+    )}
+    <p class="hadith-card__matn">
+      {matn.map((x) => (x.g ? <button type="button" class="gharib" data-meaning={x.g.meaning} data-source={x.g.source}>{x.tok}</button> : x.tok))}
+    </p>
+  </div>
+
+  {h.gharib.length > 0 && (
+    <details class="hadith-card__gharib" open={full}>
+      <summary>{t.gharib} ({h.gharib.length})</summary>
+      <dl dir="rtl" lang="ar">
+        {h.gharib.map((g) => (
+          <div>
+            <dt>{g.word}</dt>
+            <dd>{g.meaning} {g.source && <span class="content-card__meta">({g.source})</span>}</dd>
+          </div>
+        ))}
+      </dl>
+    </details>
+  )}
+
+  {(h.sharh || full) && (
+    <section class={`hadith-card__slot${h.sharh ? '' : ' hadith-card__slot--empty'}`}>
+      <h4>{t.sharh}{h.sharh && h.notesStatus === 'review' && <span class="hadith-card__review">{t.review}</span>}</h4>
+      <p dir="rtl" lang="ar">{h.sharh ? h.sharh.ar : t.soon}</p>
+    </section>
+  )}
+  {(h.fawaid.length > 0 || full) && (
+    <section class={`hadith-card__slot${h.fawaid.length ? '' : ' hadith-card__slot--empty'}`}>
+      <h4>{t.fawaid}{h.fawaid.length > 0 && h.notesStatus === 'review' && <span class="hadith-card__review">{t.review}</span>}</h4>
+      {h.fawaid.length ? <ol dir="rtl" lang="ar">{h.fawaid.map((f) => <li>{f.ar}</li>)}</ol> : <p>{t.soon}</p>}
+    </section>
+  )}
+
+  <details class="hadith-card__en" open={lang === 'en'}>
+    <summary>{t.english}</summary>
+    <p dir="ltr" lang="en">{h.en.narrator && <strong>Narrated {h.en.narrator}: </strong>}{h.en.text}</p>
+    <p class="content-card__meta" dir="ltr">{h.en.source}</p>
+  </details>
+
+  <footer class="hadith-card__foot">
+    <span class="content-card__meta">{t.takhrij}: {h.takhrij[lang]}</span>
+    <span class="hadith-card__actions">
+      <a class="video-card__share" href={getWhatsAppUrl(`${book.ar} ${num('ar', h.n)}`, url)} target="_blank" rel="noopener">{t.share}</a>
+      <a class="video-card__share" href={mail}>{t.report}</a>
+    </span>
+  </footer>
+</article>

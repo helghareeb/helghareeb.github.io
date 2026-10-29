@@ -1956,3 +1956,163 @@ aside.entity-panel {
     gap: 0.3rem 0.8rem;
   }
 }
+
+/* Hadith (src/components/HadithCard.astro) */
+.hadith-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.hadith-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.2rem 1.3rem;
+  scroll-margin-top: 6rem;
+}
+
+.hadith-card:target {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(138, 106, 47, 0.25), var(--shadow);
+}
+
+.hadith-card__head,
+.hadith-card__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.hadith-card__num {
+  font-weight: 700;
+  color: var(--brand-strong);
+}
+
+.hadith-card__grade {
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(138, 106, 47, 0.12);
+  color: var(--brand-strong);
+  font-size: 0.92rem;
+}
+
+.hadith-card__bab {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hadith-card__audio audio {
+  width: 100%;
+}
+
+.hadith-card__text p {
+  margin: 0;
+}
+
+.hadith-card__isnad {
+  color: var(--muted, #6b6b6b);
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+.hadith-card__matn {
+  font-size: 1.45rem;
+  line-height: 2.1;
+  font-weight: 500;
+}
+
+button.gharib {
+  all: unset;
+  cursor: pointer;
+  border-bottom: 2px solid var(--brand);
+  color: inherit;
+}
+
+button.gharib:focus-visible {
+  outline: 2px solid var(--brand);
+}
+
+.hadith-card__gharib dl {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.6rem 0 0;
+}
+
+.hadith-card__gharib dt {
+  display: inline;
+  font-weight: 700;
+  color: var(--brand-strong);
+}
+
+.hadith-card__gharib dt::after {
+  content: ': ';
+}
+
+.hadith-card__gharib dd {
+  display: inline;
+  margin: 0;
+}
+
+.hadith-card details > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hadith-card__slot {
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(138, 106, 47, 0.06);
+}
+
+.hadith-card__slot h4 {
+  margin: 0 0 0.35rem;
+}
+
+.hadith-card__slot p,
+.hadith-card__slot ol {
+  margin: 0;
+}
+
+.hadith-card__slot--empty {
+  border: 1px dashed var(--line);
+  background: transparent;
+  color: var(--muted, #6b6b6b);
+}
+
+.hadith-card__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.gharib-pop {
+  position: absolute;
+  z-index: 50;
+  width: 320px;
+  max-width: calc(100vw - 16px);
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+  direction: rtl;
+}
+
+.gharib-pop p {
+  margin: 0.3rem 0;
+}
+
+.hadith-card__review {
+  margin-inline-start: 0.6rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.hadith-card__slot ol[lang="ar"] {
+  list-style-type: arabic-indic;
+}
