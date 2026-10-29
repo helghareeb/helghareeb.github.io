@@ -6,7 +6,6 @@
 import bookSummaries from '../data/videos/book-summaries.json';
 import dsa20 from '../data/videos/dsa20.json';
 import lawQalu from '../data/videos/law-qalu.json';
-import lawQaluSunnah from '../data/videos/law-qalu-sunnah.json';
 import quranRecitations from '../data/videos/quran-recitations.json';
 
 type Lang = 'ar' | 'en';
@@ -58,19 +57,6 @@ export const playlists: Playlist[] = [
     },
     folderId: '1K1lM2NXSOlKOofNYTDvzUpT7RCnsiImq',
     videos: byOrder(lawQalu),
-  },
-  {
-    slug: 'law-qalu-sunnah',
-    kind: 'dawah',
-    title: { ar: 'لو قالوا — من السنة النبوية', en: 'If They Said — from the Sunnah' },
-    course: { ar: 'سلسلة «لو قالوا»', en: 'Law Qalu series' },
-    year: '2026',
-    summary: {
-      ar: 'أسئلة عن المسيح عيسى ابن مريم عليهما السلام، وأجوبتها من أحاديث صحيح الإمام البخاري: الإسناد والنص المشكول بصوت القارئ، مع الترجمة الإنجليزية. لكل حديث مقطع للجوال ونسخة لحالات واتساب، والحلقة كاملة بالعرض.',
-      en: 'Questions about the Messiah, Jesus son of Mary (peace be upon them), answered from hadith in Sahih al-Bukhari: the chain and the vowelled text, read aloud, with an English translation. Each hadith has a mobile clip and a WhatsApp-status copy; the full episode is in landscape.',
-    },
-    folderId: '1K1lM2NXSOlKOofNYTDvzUpT7RCnsiImq',
-    videos: byOrder(lawQaluSunnah),
   },
   {
     slug: 'quran-recitations',
