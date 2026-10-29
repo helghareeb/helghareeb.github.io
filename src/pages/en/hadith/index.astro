@@ -16,6 +16,52 @@ const seoDescription = buildSeoDescription('Hadith of the nine books, read by Dr
       <h1 class="hero__title">Hadith</h1>
       <p class="hero__lead">Hadith of the nine books, read by Dr. Yusuf bin Nuh Ahmad: the vowelled text with its chain, rare words (gharib), grade and reference, and an English translation, with brief explanations and benefits to follow, God willing. We begin with the Book of Revelation in Sahih al-Bukhari.</p>
     </section>
+    <section class="shell section hadith-about">
+      <h2>About the project</h2>
+      <p>
+        An ongoing da'wah and scholarly project aiming to give every hadith of the nine books a page that can be
+        heard, read, understood and shared: the hadith read aloud with its chain, its vowelled text, its rare words
+        explained, its grade and source, and a brief explanation with benefits.
+      </p>
+      <div class="grid-two">
+        <article class="content-card">
+          <h3>On each hadith page</h3>
+          <ul>
+            <li>The audio read by Dr. Yusuf bin Nuh Ahmad, split hadith by hadith and checked by ear.</li>
+            <li>The vowelled text, with the chain shown apart from the text.</li>
+            <li>Rare words marked in the text; tap one to see its meaning and source.</li>
+            <li>Grade, reference, and an English translation.</li>
+            <li>A brief explanation and benefits, reviewed and extended over time.</li>
+          </ul>
+        </article>
+        <article class="content-card">
+          <h3>Sources</h3>
+          <ul>
+            <li>Reading: Dr. Yusuf bin Nuh Ahmad, who kindly permitted its use in this project.</li>
+            <li>Texts: the standard editions of the nine books and their usual numbering.</li>
+            <li>Rare words: Ibn al-Athir's al-Nihaya, Lisan al-Arab and other lexicons.</li>
+            <li>English translation: sunnah.com.</li>
+          </ul>
+        </article>
+      </div>
+      <h3>The nine books</h3>
+      <div class="table-wrap">
+        <table class="hadith-plan">
+          <thead><tr><th>Book</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Sahih al-Bukhari</td><td>Started: the Book of Revelation</td></tr>
+            <tr><td>Sahih Muslim</td><td>Audio ready for splitting</td></tr>
+            <tr><td>Sunan Abi Dawud</td><td>Audio ready for splitting</td></tr>
+            <tr><td>Jami' at-Tirmidhi</td><td>Audio ready for splitting</td></tr>
+            <tr><td>Sunan an-Nasa'i, Sunan Ibn Majah, Muwatta Malik, Musnad Ahmad</td><td>In preparation</td></tr>
+            <tr><td>Sunan ad-Darimi</td><td>Looking for a recording</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="content-card__meta">
+        Found an error in a text, recording or explanation? Every hadith has a "Report an error" link; review is ongoing.
+      </p>
+    </section>
     {books.map((b) => (
       <section class="shell section">
         <h2>{b.book.en}</h2>

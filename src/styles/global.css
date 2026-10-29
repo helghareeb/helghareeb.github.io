@@ -2013,14 +2013,31 @@ aside.entity-panel {
 
 .hadith-card__isnad {
   color: var(--muted, #6b6b6b);
-  font-size: 1.05rem;
-  line-height: 2;
+  font-size: 1.2rem;
+  line-height: 2.05;
+  text-align: justify;
 }
 
 .hadith-card__matn {
-  font-size: 1.45rem;
-  line-height: 2.1;
+  font-size: 1.7rem;
+  line-height: 2.15;
   font-weight: 500;
+  text-align: justify;
+}
+
+.hadith-card__slot p,
+.hadith-card__slot li,
+.hadith-card__gharib dd,
+.hadith-card__en p {
+  font-size: 1.15rem;
+  line-height: 1.95;
+  text-align: justify;
+}
+
+@media (max-width: 40rem) {
+  .hadith-card__matn {
+    font-size: 1.45rem;
+  }
 }
 
 button.gharib {
@@ -2115,4 +2132,54 @@ button.gharib:focus-visible {
 
 .hadith-card__slot ol[lang="ar"] {
   list-style-type: arabic-indic;
+}
+
+/* Homepage feature for the hadith project */
+.hadith-feature {
+  display: grid;
+  gap: 0.7rem;
+  justify-items: start;
+  padding: 1.6rem 1.7rem;
+  border: 1px solid rgba(138, 106, 47, 0.35);
+  background: linear-gradient(135deg, rgba(138, 106, 47, 0.1), transparent 70%), var(--surface-strong);
+}
+
+.hadith-feature p {
+  margin: 0;
+  line-height: 1.9;
+}
+
+.hadith-feature .section-title {
+  margin: 0;
+}
+
+.hadith-feature .button {
+  width: auto;
+}
+
+.hadith-about ul {
+  margin: 0;
+  padding-inline-start: 1.2rem;
+  line-height: 1.9;
+}
+
+.hadith-about > p {
+  line-height: 1.95;
+  text-align: justify;
+}
+
+.hadith-plan {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hadith-plan th,
+.hadith-plan td {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  text-align: start;
+}
+
+.table-wrap {
+  overflow-x: auto;
 }

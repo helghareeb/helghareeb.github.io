@@ -47,7 +47,7 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 
   {h.gharib.length > 0 && (
     <details class="hadith-card__gharib" open={full}>
-      <summary>{t.gharib} ({h.gharib.length})</summary>
+      <summary>{t.gharib} ({num(lang, h.gharib.length)})</summary>
       <dl dir="rtl" lang="ar">
         {h.gharib.map((g) => (
           <div>
