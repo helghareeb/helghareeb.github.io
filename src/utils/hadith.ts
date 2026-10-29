@@ -48,8 +48,16 @@ export const books: Book[] = [
   withNotes(malik as Book, malikNotes as Notes),
 ];
 
-export const hadithPath = (lang: Lang, book: string, n: number) => `/${lang}/hadith/${book}/${n}/`;
-export const kitabPath = (lang: Lang, book: string, slug: string) => `/${lang}/hadith/${book}/${slug}/`;
+// Each book is its own GitHub Pages site (repo helghareeb/hadith-<book>) under the same domain, so every
+// book has its own 1 GB, and readers move between it and the main site without noticing. A book site is
+// this same project built with HADITH_BOOK=<book> (see astro.config.mjs); the main site links to it.
+export const HADITH_BOOK: string | undefined = process.env.HADITH_BOOK || undefined;
+export const BOOK_SITES = ['malik']; // books whose repo exists; the others are still pages of the main site
+export const hasBookSite = (book: string) => BOOK_SITES.includes(book);
+export const bookSite = (book: string) => `/hadith-${book}`;
+const base = (lang: Lang, book: string) => (hasBookSite(book) ? `${bookSite(book)}/${lang}` : `/${lang}/hadith/${book}`);
+export const hadithPath = (lang: Lang, book: string, n: number) => `${base(lang, book)}/${n}/`;
+export const kitabPath = (lang: Lang, book: string, slug: string) => `${base(lang, book)}/${slug}/`;
 /** Arabic-Indic digits for Arabic pages (١٢٣); Western digits elsewhere. */
 export const num = (lang: Lang, n: number | string) =>
   lang === 'ar' ? String(n).replace(/[0-9]/g, (d) => '٠١٢٣٤٥٦٧٨٩'[Number(d)]) : String(n);

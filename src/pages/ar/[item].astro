@@ -1,0 +1,19 @@
+---
+import HadithPage from '../../components/HadithPage.astro';
+import { books, HADITH_BOOK, type Book, type Hadith, type Kitab } from '../../utils/hadith';
+
+// A hadith book's own site (HADITH_BOOK=<book>): its kutub and hadith at /hadith-<book>/ar/<kitab or number>/.
+// The main site builds none of these.
+export function getStaticPaths() {
+  return books.filter((b) => b.book.id === HADITH_BOOK).flatMap((b) =>
+    b.kutub.flatMap((k) => [
+      { params: { item: k.slug }, props: { b, k, h: null } },
+      ...k.hadith.map((h) => ({ params: { item: String(h.n) }, props: { b, k, h } })),
+    ]),
+  );
+}
+
+const { b, k, h } = Astro.props as { b: Book; k: Kitab; h: Hadith | null };
+---
+
+<HadithPage lang="ar" b={b} k={k} h={h} />
