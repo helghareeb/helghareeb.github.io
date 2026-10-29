@@ -1,4 +1,7 @@
 ---
+import { siteConfig } from '../../config/site';
+import ShareButtons from './ShareButtons.astro';
+
 interface MetaItem {
   label: string;
   value: string;
@@ -29,6 +32,7 @@ const {
   externalUrl,
   externalLabel,
 } = Astro.props;
+const pageUrl = new URL(Astro.url.pathname, siteConfig.siteUrl).toString();
 ---
 
 <main class="page-main page-main--detail">
@@ -44,11 +48,15 @@ const {
         ))}
       </div>
     )}
+    <ShareButtons lang={lang} url={pageUrl} title={title} />
   </section>
 
   <section class="shell entity-grid">
     <article class="entity-summary">
       <slot />
+      <div class="entity-share">
+        <ShareButtons lang={lang} url={pageUrl} title={title} />
+      </div>
     </article>
 
     <aside class="entity-panel">

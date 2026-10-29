@@ -1,0 +1,58 @@
+---
+// Share a page (or a part of it) on social networks. On phones, «مشاركة» opens the system share
+// sheet (Instagram, Messenger, …); the links below work everywhere.
+interface Props {
+  lang: 'ar' | 'en';
+  url: string;
+  title: string;
+  compact?: boolean;
+}
+
+const { lang, url, title, compact = false } = Astro.props;
+const u = encodeURIComponent(url);
+const t = encodeURIComponent(title);
+const text = encodeURIComponent(`${title}\n${url}`);
+const L = lang === 'ar'
+  ? { share: 'مشاركة', copy: 'نسخ الرابط', copied: 'نُسخ الرابط', email: 'بريد' }
+  : { share: 'Share', copy: 'Copy link', copied: 'Link copied', email: 'Email' };
+const links = [
+  { name: 'WhatsApp', href: `https://wa.me/?text=${text}` },
+  { name: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
+  { name: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+  { name: 'X', href: `https://x.com/intent/post?url=${u}&text=${t}` },
+  { name: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
+  { name: L.email, href: `mailto:?subject=${t}&body=${text}` },
+];
+---
+
+<div class:list={['share', { 'share--compact': compact }]} data-share-url={url} data-share-title={title}>
+  <button type="button" class="share__native" hidden>{L.share}</button>
+  {!compact && <span class="share__label">{L.share}:</span>}
+  {links.map((l) => (
+    <a class="share__link" href={l.href} target="_blank" rel="noopener">{l.name}</a>
+  ))}
+  <button type="button" class="share__copy" data-copied={L.copied}>{L.copy}</button>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.share').forEach((box) => {
+    const url = box.dataset.shareUrl!;
+    const title = box.dataset.shareTitle!;
+    const native = box.querySelector<HTMLButtonElement>('.share__native')!;
+    if (navigator.share) {
+      native.hidden = false;
+      native.addEventListener('click', () => navigator.share({ title, url }).catch(() => {}));
+    }
+    const copy = box.querySelector<HTMLButtonElement>('.share__copy')!;
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(url);
+        const before = copy.textContent;
+        copy.textContent = copy.dataset.copied ?? before;
+        setTimeout(() => (copy.textContent = before), 1800);
+      } catch {
+        window.prompt('', url);
+      }
+    });
+  });
+</script>

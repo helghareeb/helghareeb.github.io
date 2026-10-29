@@ -54,7 +54,9 @@ export const kitabPath = (lang: Lang, book: string, slug: string) => `/${lang}/h
 export const num = (lang: Lang, n: number | string) =>
   lang === 'ar' ? String(n).replace(/[0-9]/g, (d) => '٠١٢٣٤٥٦٧٨٩'[Number(d)]) : String(n);
 
-export const audioUrl = (id: string) => `https://drive.usercontent.google.com/download?id=${id}&export=download`;
+// Drive will not serve its files to another site's <audio> element (cross-origin policy), so audio is
+// played in Drive's own embedded player, opened on demand.
+export const audioPreviewUrl = (id: string) => `https://drive.google.com/file/d/${id}/preview`;
 
 /** Letters only, without vowel marks or tatweel, with ى→ي, for matching gharib words in the text. */
 export const bare = (s: string) =>
@@ -84,6 +86,7 @@ export const hadithLabels = {
     takhrij: 'التخريج',
     english: 'الترجمة الإنجليزية',
     reader: 'القراءة',
+    listen: 'استماع',
     audioSoon: 'يُضاف الصوت بعد التقسيم والمراجعة',
     sharh: 'شرح موجز',
     fawaid: 'فوائد',
@@ -102,7 +105,8 @@ export const hadithLabels = {
     grade: 'Grade',
     takhrij: 'Reference',
     english: 'English translation',
-    reader: 'Recitation',
+    reader: 'Reading',
+    listen: 'Listen',
     audioSoon: 'Audio will be added after splitting and review',
     sharh: 'Brief explanation',
     fawaid: 'Benefits',

@@ -1,12 +1,12 @@
 ---
 import { siteConfig } from '../../config/site';
+import ShareButtons from './ShareButtons.astro';
 import {
   getFileDownloadUrl,
   getPlaylistPath,
   getPreviewUrl,
   getThumbnailUrl,
   getWatchUrl,
-  getWhatsAppUrl,
   videoLabels,
   type Playlist,
 } from '../utils/videos';
@@ -67,15 +67,8 @@ const parts = (ids: string[] | undefined, label: string) =>
             <a class="button-secondary" href={getWatchUrl({ ...video, id: video.descId })} target="_blank" rel="noopener">{t.description}</a>
           )}
           {video.article && <a class="button-secondary" href={video.article[lang]}>{t.article}</a>}
-          <a
-            class="video-card__share"
-            href={getWhatsAppUrl(`${title} | ${playlist.title[lang]}`, `${pageUrl}#${anchor}`)}
-            target="_blank"
-            rel="noopener"
-          >
-            {t.share}
-          </a>
         </div>
+        <ShareButtons lang={lang} url={`${pageUrl}#${anchor}`} title={`${title} | ${playlist.title[lang]}`} compact />
       </li>
     );
   })}

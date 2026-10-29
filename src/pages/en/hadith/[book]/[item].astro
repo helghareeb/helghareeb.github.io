@@ -1,5 +1,7 @@
 ---
 import HadithCard from '../../../../components/HadithCard.astro';
+import ShareButtons from '../../../../components/ShareButtons.astro';
+import { siteConfig } from '../../../../../config/site';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import '../../../../styles/global.css';
 import { buildSeoDescription, buildSeoTitle } from '../../../../utils/seo';
@@ -30,6 +32,7 @@ const next = h && i < k.hadith.length - 1 ? k.hadith[i + 1] : null;
       <p class="hero__eyebrow"><a href="/en/hadith/">{t.section}</a> · {b.book.en}</p>
       <h1 class="hero__title">{h ? t.hadith(h.n) : k.en}</h1>
       {h ? <p class="hero__lead"><a href={kitabPath('en', b.book.id, k.slug)}>{k.en}</a></p> : <p class="hero__lead">{t.count(k.hadith.length)}</p>}
+      <ShareButtons lang="en" url={new URL(Astro.url.pathname, siteConfig.siteUrl).toString()} title={title} />
     </section>
     <section class="shell section hadith-list">
       {h ? <HadithCard lang="en" book={b.book} h={h} full /> : k.hadith.map((x) => <HadithCard lang="en" book={b.book} h={x} />)}
@@ -62,4 +65,20 @@ const next = h && i < k.hadith.length - 1 ? k.hadith[i + 1] : null;
     });
   });
   document.addEventListener('click', () => (pop.hidden = true));
+
+  // Audio: open Drive's player for one hadith at a time; opening another closes (and so stops) the rest.
+  document.querySelectorAll<HTMLElement>('.hadith-audio').forEach((box) => {
+    box.querySelector('button')!.addEventListener('click', () => {
+      document.querySelectorAll<HTMLElement>('.hadith-audio.is-open').forEach((other) => {
+        other.querySelector('iframe')?.remove();
+        other.classList.remove('is-open');
+      });
+      const frame = document.createElement('iframe');
+      frame.src = `https://drive.google.com/file/d/${box.dataset.audioId}/preview`;
+      frame.allow = 'autoplay';
+      frame.title = box.querySelector('button')!.textContent ?? '';
+      box.append(frame);
+      box.classList.add('is-open');
+    });
+  });
 </script>

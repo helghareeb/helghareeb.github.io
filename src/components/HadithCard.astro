@@ -1,7 +1,7 @@
 ---
 import { siteConfig } from '../../config/site';
-import { audioUrl, hadithLabels, hadithPath, markGharib, num, type Hadith } from '../utils/hadith';
-import { getWhatsAppUrl } from '../utils/videos';
+import { hadithLabels, hadithPath, markGharib, num, type Hadith } from '../utils/hadith';
+import ShareButtons from './ShareButtons.astro';
 
 interface Props {
   lang: 'ar' | 'en';
@@ -28,7 +28,10 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 
   <div class="hadith-card__audio">
     {h.audio.id ? (
-      <audio controls preload="none" src={audioUrl(h.audio.id)}></audio>
+      <div class="hadith-audio" data-audio-id={h.audio.id}>
+        <button type="button" class="button hadith-audio__play">▶ {t.listen}</button>
+        <span class="content-card__meta">{t.reader}: {h.audio.reader[lang]}</span>
+      </div>
     ) : (
       <p class="content-card__meta">{t.reader}: {h.audio.reader[lang]} — {t.audioSoon}</p>
     )}
@@ -81,8 +84,8 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
   <footer class="hadith-card__foot">
     <span class="content-card__meta">{t.takhrij}: {h.takhrij[lang]}</span>
     <span class="hadith-card__actions">
-      <a class="video-card__share" href={getWhatsAppUrl(`${book.ar} ${num('ar', h.n)}`, url)} target="_blank" rel="noopener">{t.share}</a>
       <a class="video-card__share" href={mail}>{t.report}</a>
     </span>
   </footer>
+  <ShareButtons lang={lang} url={url} title={`${book[lang]} ${num(lang, h.n)}`} compact />
 </article>
