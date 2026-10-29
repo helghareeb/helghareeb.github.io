@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { books, hadithLabels, kitabPath } from '../../../utils/hadith';
+
+const t = hadithLabels.ar;
+const seoTitle = buildSeoTitle('الحديث النبوي', { lang: 'ar', section: 'د. هيثم الغريب' });
+const seoDescription = buildSeoDescription('أحاديث الكتب التسعة بصوت القارئ الدكتور يوسف بن نوح أحمد: النص المشكول بإسناده، وغريب الحديث، والحكم والتخريج، والترجمة الإنجليزية؛ ويُضاف إليها شرح موجز وفوائد بإذن الله. نبدأ بكتاب بدء الوحي من صحيح البخاري.', books.map((b) => b.book.ar));
+---
+
+<BaseLayout lang="ar" dir="rtl" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">{t.section}</p>
+      <h1 class="hero__title">الحديث النبوي</h1>
+      <p class="hero__lead">أحاديث الكتب التسعة بصوت القارئ الدكتور يوسف بن نوح أحمد: النص المشكول بإسناده، وغريب الحديث، والحكم والتخريج، والترجمة الإنجليزية؛ ويُضاف إليها شرح موجز وفوائد بإذن الله. نبدأ بكتاب بدء الوحي من صحيح البخاري.</p>
+    </section>
+    {books.map((b) => (
+      <section class="shell section">
+        <h2>{b.book.ar}</h2>
+        <div class="grid-two">
+          {b.kutub.map((k) => (
+            <a class="card-link" href={kitabPath('ar', b.book.id, k.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{t.count(k.hadith.length)} · {k.first}–{k.last}</p>
+                <h3>{k.ar}</h3>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </main>
+</BaseLayout>

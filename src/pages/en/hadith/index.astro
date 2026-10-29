@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/global.css';
+import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
+import { books, hadithLabels, kitabPath } from '../../../utils/hadith';
+
+const t = hadithLabels.en;
+const seoTitle = buildSeoTitle('Hadith', { lang: 'en', section: 'Dr. Haitham A. El-Ghareeb' });
+const seoDescription = buildSeoDescription('Hadith of the nine books, read by Dr. Yusuf bin Nuh Ahmad: the vowelled text with its chain, rare words (gharib), grade and reference, and an English translation, with brief explanations and benefits to follow, God willing. We begin with the Book of Revelation in Sahih al-Bukhari.', books.map((b) => b.book.en));
+---
+
+<BaseLayout lang="en" dir="ltr" title={seoTitle} description={seoDescription}>
+  <main class="page-main">
+    <section class="shell hero hero--detail">
+      <p class="hero__eyebrow">{t.section}</p>
+      <h1 class="hero__title">Hadith</h1>
+      <p class="hero__lead">Hadith of the nine books, read by Dr. Yusuf bin Nuh Ahmad: the vowelled text with its chain, rare words (gharib), grade and reference, and an English translation, with brief explanations and benefits to follow, God willing. We begin with the Book of Revelation in Sahih al-Bukhari.</p>
+    </section>
+    {books.map((b) => (
+      <section class="shell section">
+        <h2>{b.book.en}</h2>
+        <div class="grid-two">
+          {b.kutub.map((k) => (
+            <a class="card-link" href={kitabPath('en', b.book.id, k.slug)}>
+              <article class="content-card entity-card">
+                <p class="content-card__meta">{t.count(k.hadith.length)} · {k.first}–{k.last}</p>
+                <h3>{k.en}</h3>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </main>
+</BaseLayout>
