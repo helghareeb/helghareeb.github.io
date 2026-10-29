@@ -30,10 +30,10 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
     {h.audio.id ? (
       <div class="hadith-audio" data-audio-id={h.audio.id}>
         <button type="button" class="button hadith-audio__play">▶ {t.listen}</button>
-        <span class="content-card__meta">{t.reader}: {h.audio.reader[lang]}</span>
+        {h.audio.reader[lang] && <span class="content-card__meta">{t.reader}: {h.audio.reader[lang]}</span>}
       </div>
     ) : (
-      <p class="content-card__meta">{t.reader}: {h.audio.reader[lang]} — {t.audioSoon}</p>
+      <p class="content-card__meta">{h.audio.reader[lang] ? `${t.reader}: ${h.audio.reader[lang]} — ` : ''}{t.audioSoon}</p>
     )}
   </div>
 
