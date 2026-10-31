@@ -20,7 +20,7 @@ The owner requested publication of newly added Alukah articles on the personal w
 - Re-read remote HEAD before publication, preserve concurrent edits, then verify the exact deployed commit and live pages.
 
 ## Current status
-Local preparation only. Remote publication has not occurred. Verification results will be recorded below after execution, not predicted.
+The article publication commit is live. See the publication evidence below; the preceding sections preserve the plan and validation sequence.
 
 ## Completed local validation
 - Four article files assembled, retaining complete Arabic source text (apart from heading markup) and five footnotes in every Arabic and English file.
@@ -38,3 +38,17 @@ Prepared for one atomic content/documentation commit to `master`, preserving all
 
 ## Scoped logging exception
 The attempted rewrite of the legacy `project-docs/update-log.md` was blocked because its pre-existing contents contain operational details outside this publication's disclosure scope. That file is left unchanged; no alternate route was used to perform the rejected rewrite. This clean, article-specific handoff and the current-status entry provide the new batch record instead. Only four article files and three documentation files are included.
+
+## Publication evidence — 2026-10-31
+- Article publication commit: `71b3737ec2ef9cfd0e27892973f0bb5b6cf303ed`, on `master`, applied atomically with an expected-head lease.
+- Read-back verified exactly seven files changed: four article files, this handoff, current-status, and the scoped execution-method instruction. The legacy update-log remained byte-for-byte unchanged.
+- Deployment run: https://github.com/helghareeb/helghareeb.github.io/actions/runs/41193480732 . Build, Pages deployment, and IndexNow submission all succeeded.
+- All four live article routes returned HTTP 200. Correct language, five footnotes per page, canonical Alukah source links, reciprocal Arabic/English switching, and sitemap inclusion were verified from live HTML.
+- This was HTML/content validation, not a visual browser review. The pre-existing `npm run check` error remains, as documented above.
+- No unrelated project, local Claude workspace, or running experiment was changed.
+
+### Published routes
+- https://helghareeb.github.io/ar/articles/سلسله-الميزان-كيف-نزن-الشبهات-6-القداسه-بين-دوركايم-والتوقيف-الشرعي/
+- https://helghareeb.github.io/en/articles/the-mizan-series-6-sacredness-between-durkheim-and-divine-prescription/
+- https://helghareeb.github.io/ar/articles/سلسله-الميزان-كيف-نزن-الشبهات-7-احداث-الكعبه-وثبات-حرمتها/
+- https://helghareeb.github.io/en/articles/the-mizan-series-7-events-at-the-kabah-and-the-endurance-of-its-sanctity/
