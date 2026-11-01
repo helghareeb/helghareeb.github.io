@@ -5,6 +5,7 @@ import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 import { books, hadithLabels, kitabPath } from '../../../utils/hadith';
 
 const t = hadithLabels.en;
+const bukhariAudioCount = books.find((b) => b.book.id === 'bukhari')?.kutub.reduce((count, k) => count + k.hadith.filter((h) => h.audio.id).length, 0) ?? 0;
 const seoTitle = buildSeoTitle('Hadith', { lang: 'en', section: 'Dr. Haitham A. El-Ghareeb' });
 const seoDescription = buildSeoDescription('Hadith of the nine books, read by Dr. Yusuf bin Nuh Ahmad: the vowelled text with its chain, rare words (gharib), grade and reference, and an English translation, with brief explanations and benefits to follow, God willing. We begin with the Book of Revelation in Sahih al-Bukhari.', books.map((b) => b.book.en));
 ---
@@ -49,7 +50,7 @@ const seoDescription = buildSeoDescription('Hadith of the nine books, read by Dr
         <table class="hadith-plan">
           <thead><tr><th>Book</th><th>Status</th></tr></thead>
           <tbody>
-            <tr><td>Sahih al-Bukhari</td><td>Started: the Book of Revelation</td></tr>
+            <tr><td>Sahih al-Bukhari</td><td>Published: {bukhariAudioCount} hadith with audio; more to follow</td></tr>
             <tr><td>Sahih Muslim</td><td>Audio ready for splitting</td></tr>
             <tr><td>Sunan Abi Dawud</td><td>Audio ready for splitting</td></tr>
             <tr><td>Jami' at-Tirmidhi</td><td>Audio ready for splitting</td></tr>

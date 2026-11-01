@@ -28,7 +28,7 @@ export type Hadith = {
 export type Kitab = { slug: string; ar: string; en: string; first: number; last: number; hadith: Hadith[] };
 export type Book = { book: { id: string; ar: string; en: string }; kutub: Kitab[] };
 
-type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; fawaid?: string[] } | string>;
+type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[] } | string>;
 
 /** Merge the hand-written commentary and benefits (src/data/hadith/notes/<book>.json) into the records. */
 function withNotes(book: Book, notes: Notes): Book {
@@ -36,7 +36,7 @@ function withNotes(book: Book, notes: Notes): Book {
     for (const h of k.hadith) {
       const n = notes[String(h.n)];
       if (!n || typeof n === 'string') continue;
-      if (n.sharh) h.sharh = { ar: n.sharh };
+      if (n.sharh) h.sharh = { ar: n.sharh, ...(n.source ? { source: n.source } : {}) };
       if (n.fawaid) h.fawaid = n.fawaid.map((ar) => ({ ar }));
       h.notesStatus = n.status;
     }

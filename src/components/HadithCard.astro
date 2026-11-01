@@ -71,6 +71,7 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
     <section class={`hadith-card__slot${h.sharh ? '' : ' hadith-card__slot--empty'}`}>
       <h4>{t.sharh}{h.sharh && h.notesStatus === 'review' && <span class="hadith-card__review">{t.review}</span>}</h4>
       <p dir="rtl" lang="ar">{h.sharh ? h.sharh.ar : t.soon}</p>
+      {h.sharh?.source && <p class="content-card__meta" dir="rtl" lang="ar">{h.sharh.source}</p>}
     </section>
   )}
   {(h.fawaid.length > 0 || full) && (

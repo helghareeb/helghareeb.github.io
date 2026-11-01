@@ -5,6 +5,7 @@ import { buildSeoDescription, buildSeoTitle } from '../../../utils/seo';
 import { books, hadithLabels, kitabPath, num } from '../../../utils/hadith';
 
 const t = hadithLabels.ar;
+const bukhariAudioCount = books.find((b) => b.book.id === 'bukhari')?.kutub.reduce((count, k) => count + k.hadith.filter((h) => h.audio.id).length, 0) ?? 0;
 const seoTitle = buildSeoTitle('الحديث النبوي', { lang: 'ar', section: 'د. هيثم الغريب' });
 const seoDescription = buildSeoDescription('أحاديث الكتب التسعة بصوت القارئ الدكتور يوسف بن نوح أحمد: النص المشكول بإسناده، وغريب الحديث، والحكم والتخريج، والترجمة الإنجليزية؛ ويُضاف إليها شرح موجز وفوائد بإذن الله. نبدأ بكتاب بدء الوحي من صحيح البخاري.', books.map((b) => b.book.ar));
 ---
@@ -48,7 +49,7 @@ const seoDescription = buildSeoDescription('أحاديث الكتب التسعة
         <table class="hadith-plan">
           <thead><tr><th>الكتاب</th><th>الحالة</th></tr></thead>
           <tbody>
-            <tr><td>صحيح البخاري</td><td>بدأ: كتاب بدء الوحي</td></tr>
+            <tr><td>صحيح البخاري</td><td>المنشور: {num('ar', bukhariAudioCount)} حديثًا بالصوت؛ والبقية تباعًا</td></tr>
             <tr><td>صحيح مسلم</td><td>الصوت جاهز للتقسيم</td></tr>
             <tr><td>سنن أبي داود</td><td>الصوت جاهز للتقسيم</td></tr>
             <tr><td>جامع الترمذي</td><td>الصوت جاهز للتقسيم</td></tr>

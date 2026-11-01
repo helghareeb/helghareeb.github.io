@@ -438,6 +438,313 @@
      "fawaid": []
     }
    ]
+  },
+  {
+   "slug": "al-iman",
+   "ar": "كتاب الإيمان",
+   "en": "Belief",
+   "first": 8,
+   "last": 15,
+   "hadith": [
+    {
+     "n": 8,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُوسَى، قَالَ أَخْبَرَنَا حَنْظَلَةُ بْنُ أَبِي سُفْيَانَ، عَنْ عِكْرِمَةَ بْنِ خَالِدٍ، عَنِ ابْنِ عُمَرَ ـ رضى الله عنهما ـ",
+     "matn": "قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  بُنِيَ الإِسْلاَمُ عَلَى خَمْسٍ شَهَادَةِ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلاَةِ، وَإِيتَاءِ الزَّكَاةِ، وَالْحَجِّ، وَصَوْمِ رَمَضَانَ .",
+     "gharib": [
+      {
+       "word": "إِقَامِ",
+       "meaning": "الإتيان بالصلاة والمحافظة عليها.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٥٠، شرح الحديث ٨"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٨",
+      "en": "Sahih al-Bukhari, Belief, hadith 8"
+     },
+     "en": {
+      "narrator": "Ibn 'Umar",
+      "text": "Allah's Messenger (ﷺ) said: Islam is based on (the following) five (principles): 1. To testify that none has the right to be worshipped but Allah and Muhammad is Allah's Messenger (ﷺ). 2. To offer the (compulsory congregational) prayers dutifully and perfectly. 3. To pay Zakat (i.e. obligatory charity) . 4. To perform Hajj. (i.e. Pilgrimage to Mecca) 5. To observe fast during the month of Ramadan",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1LeE_xkbOxxl1shI8tcOSoGeIeL3OoyNF",
+      "player": "1keviKrXY95EKwlYncvDoaGKVWJYpQniy"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 9,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ، قَالَ حَدَّثَنَا أَبُو عَامِرٍ الْعَقَدِيُّ، قَالَ حَدَّثَنَا سُلَيْمَانُ بْنُ بِلاَلٍ، عَنْ عَبْدِ اللَّهِ بْنِ دِينَارٍ، عَنْ أَبِي صَالِحٍ، عَنْ أَبِي هُرَيْرَةَ ـ رضى الله عنه ـ",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  الإِيمَانُ بِضْعٌ وَسِتُّونَ شُعْبَةً، وَالْحَيَاءُ شُعْبَةٌ مِنَ الإِيمَانِ .",
+     "gharib": [
+      {
+       "word": "بِضْعٌ",
+       "meaning": "عدد مبهم من ثلاثة إلى تسعة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٥١، شرح الحديث ٩"
+      },
+      {
+       "word": "شُعْبَةً",
+       "meaning": "خصلة أو جزء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٥٢، شرح الحديث ٩"
+      },
+      {
+       "word": "الْحَيَاءُ",
+       "meaning": "خلق يحمل على اجتناب القبيح وعدم التقصير في الحقوق.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٥٢، شرح الحديث ٩"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٩",
+      "en": "Sahih al-Bukhari, Belief, hadith 9"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"Faith (Belief) consists of more than sixty branches (i.e. parts). And Haya (This term \"Haya\" covers a large number of concepts which are to be taken together; amongst them are self respect, modesty, bashfulness, and scruple, etc.) is a part of faith",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1-0Um7JbGXOXnPM8PJznK8K8Q0nyqoPtk",
+      "player": "1KOsO0WzAvSc-YbwisW_-_2o9nTQfamUq"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 10,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ بْنُ أَبِي إِيَاسٍ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ عَبْدِ اللَّهِ بْنِ أَبِي السَّفَرِ، وَإِسْمَاعِيلَ، عَنِ الشَّعْبِيِّ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو ـ رضى الله عنهما ـ",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ، وَالْمُهَاجِرُ مَنْ هَجَرَ مَا نَهَى اللَّهُ عَنْهُ . قَالَ أَبُو عَبْدِ اللَّهِ وَقَالَ أَبُو مُعَاوِيَةَ حَدَّثَنَا دَاوُدُ عَنْ عَامِرٍ قَالَ سَمِعْتُ عَبْدَ اللَّهِ عَنِ النَّبِيِّ ﷺ. وَقَالَ عَبْدُ الأَعْلَى عَنْ دَاوُدَ عَنْ عَامِرٍ عَنْ عَبْدِ اللَّهِ عَنِ النَّبِيِّ ﷺ.",
+     "gharib": [
+      {
+       "word": "هَجَرَ",
+       "meaning": "ترك؛ والمراد هنا ترك ما نهى الله عنه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٥٤، شرح الحديث ١٠"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٠",
+      "en": "Sahih al-Bukhari, Belief, hadith 10"
+     },
+     "en": {
+      "narrator": "'Abdullah bin 'Amr",
+      "text": "The Prophet (ﷺ) said, \"A Muslim is the one who avoids harming Muslims with his tongue and hands. And a Muhajir (emigrant) is the one who gives up (abandons) all what Allah has forbidden",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 11,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سَعِيدُ بْنُ يَحْيَى بْنِ سَعِيدٍ الْقُرَشِيِّ، قَالَ حَدَّثَنَا أَبِي قَالَ، حَدَّثَنَا أَبُو بُرْدَةَ بْنُ عَبْدِ اللَّهِ بْنِ أَبِي بُرْدَةَ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى ـ رضى الله عنه ـ قَالَ قَالُوا يَا رَسُولَ اللَّهِ أَىُّ الإِسْلاَمِ أَفْضَلُ قَالَ",
+     "matn": "مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١١",
+      "en": "Sahih al-Bukhari, Belief, hadith 11"
+     },
+     "en": {
+      "narrator": "Abu Musa",
+      "text": "Some people asked Allah's Messenger (ﷺ), \"Whose Islam is the best? i.e. (Who is a very good Muslim)?\" He replied, \"One who avoids harming the Muslims with his tongue and hands",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1rSQ03HmyKOSsmLehXbtxwJAxW9iWiKHp",
+      "player": "1y3kPQhhb4_l6ZaMgX65y7KS3tDeduuUz"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 12,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَمْرُو بْنُ خَالِدٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ يَزِيدَ، عَنْ أَبِي الْخَيْرِ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو ـ رضى الله عنهما ـ",
+     "matn": "أَنَّ رَجُلاً، سَأَلَ النَّبِيَّ ﷺ أَىُّ الإِسْلاَمِ خَيْرٌ قَالَ  تُطْعِمُ الطَّعَامَ، وَتَقْرَأُ السَّلاَمَ عَلَى مَنْ عَرَفْتَ وَمَنْ لَمْ تَعْرِفْ .",
+     "gharib": [
+      {
+       "word": "تَقْرَأُ",
+       "meaning": "تقول وتُلقي السلام.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٥٦، شرح الحديث ١٢"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٢",
+      "en": "Sahih al-Bukhari, Belief, hadith 12"
+     },
+     "en": {
+      "narrator": "'Abdullah bin 'Amr",
+      "text": "A man asked the Prophet (ﷺ) , \"What sort of deeds or (what qualities of) Islam are good?\" The Prophet (ﷺ) replied, 'To feed (the poor) and greet those whom you know and those whom you do not Know (See Hadith No)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1hkCDj4tCxlNUJsoX8bjchrn3AtQbfHup",
+      "player": "1fSdK8IxQm41X0L0QU3vq13og_sgDKoSq"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 13,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ شُعْبَةَ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ ـ رضى الله عنه ـ",
+     "matn": "عَنِ النَّبِيِّ ﷺ. وَعَنْ حُسَيْنٍ الْمُعَلِّمِ، قَالَ حَدَّثَنَا قَتَادَةُ، عَنْ أَنَسٍ، عَنِ النَّبِيِّ ﷺ قَالَ  لا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٣",
+      "en": "Sahih al-Bukhari, Belief, hadith 13"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) said, \"None of you will have faith till he wishes for his (Muslim) brother what he likes for himself",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1QnX-UC8ny2vO_H2-ihYQYpcv0eEWEqAu",
+      "player": "1wMV1Fk6s0t3QqZcvL-gTmxzht518w-ms"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 14,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، قَالَ حَدَّثَنَا أَبُو الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ ـ رضى الله عنه ـ",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  فَوَالَّذِي نَفْسِي بِيَدِهِ لاَ يُؤْمِنُ أَحَدُكُمْ حَتَّى أَكُونَ أَحَبَّ إِلَيْهِ مِنْ وَالِدِهِ وَوَلَدِهِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٤",
+      "en": "Sahih al-Bukhari, Belief, hadith 14"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "\"Allah's Messenger (ﷺ) said, \"By Him in Whose Hands my life is, none of you will have faith till he loves me more than his father and his children",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ev5GcMsZBfvyTqNuNRX4XMh4FnGyIvxt",
+      "player": "1IC_ypLYlvNd9T0Ce9xNXd5e7kSG6LK6G"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 15,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَعْقُوبُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا ابْنُ عُلَيَّةَ، عَنْ عَبْدِ الْعَزِيزِ بْنِ صُهَيْبٍ، عَنْ أَنَسٍ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ ح وَحَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ، قَالَ قَالَ النَّبِيُّ ﷺ  لاَ يُؤْمِنُ أَحَدُكُمْ حَتَّى أَكُونَ أَحَبَّ إِلَيْهِ مِنْ وَالِدِهِ وَوَلَدِهِ وَالنَّاسِ أَجْمَعِينَ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٥",
+      "en": "Sahih al-Bukhari, Belief, hadith 15"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) said \"None of you will have faith till he loves me more than his father, his children and all mankind",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1J3IdVTHSGQS-n964Zz1DL1BLoGtkrLxu",
+      "player": "1ENc1aHrqqKQ5qMBDFK4KUBdnuxtaPPBg"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    }
+   ]
   }
  ]
 }
