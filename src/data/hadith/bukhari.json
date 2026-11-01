@@ -2507,6 +2507,333 @@
      "fawaid": []
     }
    ]
+  },
+  {
+   "slug": "al-ilm",
+   "ar": "كتاب العلم",
+   "en": "Knowledge",
+   "first": 59,
+   "last": 66,
+   "hadith": [
+    {
+     "n": 59,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ سِنَانٍ، قَالَ حَدَّثَنَا فُلَيْحٌ، ح وَحَدَّثَنِي إِبْرَاهِيمُ بْنُ الْمُنْذِرِ، قَالَ حَدَّثَنَا مُحَمَّدُ بْنُ فُلَيْحٍ، قَالَ حَدَّثَنِي أَبِي قَالَ، حَدَّثَنِي هِلاَلُ بْنُ عَلِيٍّ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "قَالَ بَيْنَمَا النَّبِيُّ ﷺ فِي مَجْلِسٍ يُحَدِّثُ الْقَوْمَ جَاءَهُ أَعْرَابِيٌّ فَقَالَ مَتَى السَّاعَةُ فَمَضَى رَسُولُ اللَّهِ ﷺ يُحَدِّثُ، فَقَالَ بَعْضُ الْقَوْمِ سَمِعَ مَا قَالَ، فَكَرِهَ مَا قَالَ، وَقَالَ بَعْضُهُمْ بَلْ لَمْ يَسْمَعْ، حَتَّى إِذَا قَضَى حَدِيثَهُ قَالَ  أَيْنَ ـ أُرَاهُ ـ السَّائِلُ عَنِ السَّاعَةِ . قَالَ هَا أَنَا يَا رَسُولَ اللَّهِ. قَالَ  فَإِذَا ضُيِّعَتِ الأَمَانَةُ فَانْتَظِرِ السَّاعَةَ . قَالَ كَيْفَ إِضَاعَتُهَا قَالَ  إِذَا وُسِّدَ الأَمْرُ إِلَى غَيْرِ أَهْلِهِ فَانْتَظِرِ السَّاعَةَ .",
+     "gharib": [
+      {
+       "word": "وُسِّدَ",
+       "meaning": "أُسند وأُوكل.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٤٣، شرح الحديث ٥٩"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٥٩",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 59"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "While the Prophet (ﷺ) was saying something in a gathering, a Bedouin came and asked him, \"When would the Hour (Doomsday) take place?\" Allah's Messenger (ﷺ) continued his talk, so some people said that Allah's Messenger (ﷺ) had heard the question, but did not like what that Bedouin had asked. Some of them said that Allah's Messenger (ﷺ) had not heard it. When the Prophet (ﷺ) finished his speech, he said, \"Where is the questioner, who inquired about the Hour (Doomsday)?\" The Bedouin said, \"I am here, O Allah's Apostle .\" Then the Prophet (ﷺ) said, \"When honesty is lost, then wait for the Hour (Doomsday).\" The Bedouin said, \"How will that be lost?\" The Prophet (ﷺ) said, \"When the power or authority comes in the hands of unfit persons, then wait for the Hour (Doomsday)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Bxp908jaN2t7ntZvqseDtYEmOeUTRpzI",
+      "player": "1KjqUMTClW7DP-hMCBq4cz0nTO8-3EvUE"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 60,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو النُّعْمَانِ، عَارِمُ بْنُ الْفَضْلِ قَالَ حَدَّثَنَا أَبُو عَوَانَةَ، عَنْ أَبِي بِشْرٍ، عَنْ يُوسُفَ بْنِ مَاهَكَ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو،",
+     "matn": "قَالَ تَخَلَّفَ عَنَّا النَّبِيُّ ﷺ فِي سَفْرَةٍ سَافَرْنَاهَا، فَأَدْرَكَنَا وَقَدْ أَرْهَقَتْنَا الصَّلاَةُ وَنَحْنُ نَتَوَضَّأُ، فَجَعَلْنَا نَمْسَحُ عَلَى أَرْجُلِنَا، فَنَادَى بِأَعْلَى صَوْتِهِ  وَيْلٌ لِلأَعْقَابِ مِنَ النَّارِ . مَرَّتَيْنِ أَوْ ثَلاَثًا.",
+     "gharib": [
+      {
+       "word": "أَرْهَقَتْنَا",
+       "meaning": "أى : أعجلتنا بها لضيق وقتها .",
+       "source": "مشارق الأنوار ١ / ٣٠١"
+      },
+      {
+       "word": "لِلأَعْقَابِ",
+       "meaning": "جمع العقب : وهو مؤخر القدم .",
+       "source": "مقدمة فتح البارى لابن حجر ص ١٦٧"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٦٠",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 60"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Amr",
+      "text": "Once the Prophet (ﷺ) remained behind us in a journey. He joined us while we were performing ablution for the prayer which was over-due. We were just passing wet hands over our feet (and not washing them properly) so the Prophet (ﷺ) addressed us in a loud voice and said twice or thrice: \"Save your heels from the fire",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ubLEaU4XLWU0qnBSFwXkItdJIIXdeiow",
+      "player": "1kyaknbD49j_fuwEEkZw3kC37jS4lO0uj"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 61,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ، حَدَّثَنَا إِسْمَاعِيلُ بْنُ جَعْفَرٍ، عَنْ عَبْدِ اللَّهِ بْنِ دِينَارٍ، عَنِ ابْنِ عُمَرَ،",
+     "matn": "قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  إِنَّ مِنَ الشَّجَرِ شَجَرَةً لاَ يَسْقُطُ وَرَقُهَا، وَإِنَّهَا مَثَلُ الْمُسْلِمِ، فَحَدِّثُونِي مَا هِيَ . فَوَقَعَ النَّاسُ فِي شَجَرِ الْبَوَادِي. قَالَ عَبْدُ اللَّهِ وَوَقَعَ فِي نَفْسِي أَنَّهَا النَّخْلَةُ، فَاسْتَحْيَيْتُ ثُمَّ قَالُوا حَدِّثْنَا مَا هِيَ يَا رَسُولَ اللَّهِ قَالَ  هِيَ النَّخْلَةُ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٦١",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 61"
+     },
+     "en": {
+      "narrator": "Ibn `Umar",
+      "text": "Allah's Messenger (ﷺ) said, \"Amongst the trees, there is a tree, the leaves of which do not fall and is like a Muslim. Tell me the name of that tree.\" Everybody started thinking about the trees of the desert areas. And I thought of the date-palm tree but felt shy to answer the others then asked, \"What is that tree, O Allah's Messenger (ﷺ) ?\" He replied, \"It is the date-palm tree",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 62,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا خَالِدُ بْنُ مَخْلَدٍ، حَدَّثَنَا سُلَيْمَانُ، حَدَّثَنَا عَبْدُ اللَّهِ بْنُ دِينَارٍ، عَنِ ابْنِ عُمَرَ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  إِنَّ مِنَ الشَّجَرِ شَجَرَةً لاَ يَسْقُطُ وَرَقُهَا، وَإِنَّهَا مَثَلُ الْمُسْلِمِ، حَدِّثُونِي مَا هِيَ . قَالَ فَوَقَعَ النَّاسُ فِي شَجَرِ الْبَوَادِي. قَالَ عَبْدُ اللَّهِ فَوَقَعَ فِي نَفْسِي أَنَّهَا النَّخْلَةُ، ثُمَّ قَالُوا حَدِّثْنَا مَا هِيَ يَا رَسُولَ اللَّهِ قَالَ  هِيَ النَّخْلَةُ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٦٢",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 62"
+     },
+     "en": {
+      "narrator": "Ibn `Umar",
+      "text": "The Prophet (ﷺ) said, \"Amongst the trees, there is a tree, the leaves of which do not fall and is like a Muslim. Tell me the name of that tree.\" Everybody started thinking about the trees of the desert areas. And I thought of the date-palm tree. The others then asked, \"Please inform us what is that tree, O Allah's Messenger (ﷺ)?\" He replied, \"It is the date-palm tree",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "163VItZlcRkIMthrLE7OHHDXby3Ef7-TP",
+      "player": "1lMwiEIr02ibpgq4OUUab-UYa3H8_mWOG"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 63,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ سَعِيدٍ ـ هُوَ الْمَقْبُرِيُّ ـ عَنْ شَرِيكِ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي نَمِرٍ، أَنَّهُ سَمِعَ أَنَسَ بْنَ مَالِكٍ،",
+     "matn": "يَقُولُ بَيْنَمَا نَحْنُ جُلُوسٌ مَعَ النَّبِيِّ ﷺ فِي الْمَسْجِدِ، دَخَلَ رَجُلٌ عَلَى جَمَلٍ فَأَنَاخَهُ فِي الْمَسْجِدِ، ثُمَّ عَقَلَهُ، ثُمَّ قَالَ لَهُمْ أَيُّكُمْ مُحَمَّدٌ وَالنَّبِيُّ ﷺ مُتَّكِئٌ بَيْنَ ظَهْرَانَيْهِمْ. فَقُلْنَا هَذَا الرَّجُلُ الأَبْيَضُ الْمُتَّكِئُ. فَقَالَ لَهُ الرَّجُلُ ابْنَ عَبْدِ الْمُطَّلِبِ فَقَالَ لَهُ النَّبِيُّ ﷺ  قَدْ أَجَبْتُكَ . فَقَالَ الرَّجُلُ لِلنَّبِيِّ ﷺ إِنِّي سَائِلُكَ فَمُشَدِّدٌ عَلَيْكَ فِي الْمَسْأَلَةِ فَلاَ تَجِدْ عَلَىَّ فِي نَفْسِكَ. فَقَالَ  سَلْ عَمَّا بَدَا لَكَ . فَقَالَ أَسْأَلُكَ بِرَبِّكَ وَرَبِّ مَنْ قَبْلَكَ، آللَّهُ أَرْسَلَكَ إِلَى النَّاسِ كُلِّهِمْ فَقَالَ  اللَّهُمَّ نَعَمْ . قَالَ أَنْشُدُكَ بِاللَّهِ، آللَّهُ أَمَرَكَ أَنْ نُصَلِّيَ الصَّلَوَاتِ الْخَمْسَ فِي الْيَوْمِ وَاللَّيْلَةِ قَالَ  اللَّهُمَّ نَعَمْ . قَالَ أَنْشُدُكَ بِاللَّهِ، آللَّهُ أَمَرَكَ أَنْ نَصُومَ هَذَا الشَّهْرَ مِنَ السَّنَةِ قَالَ  اللَّهُمَّ نَعَمْ . قَالَ أَنْشُدُكَ بِاللَّهِ، آللَّهُ أَمَرَكَ أَنْ تَأْخُذَ هَذِهِ الصَّدَقَةَ مِنْ أَغْنِيَائِنَا فَتَقْسِمَهَا عَلَى فُقَرَائِنَا فَقَالَ النَّبِيُّ ﷺ  اللَّهُمَّ نَعَمْ . فَقَالَ الرَّجُلُ آمَنْتُ بِمَا جِئْتَ بِهِ، وَأَنَا رَسُولُ مَنْ وَرَائِي مِنْ قَوْمِي، وَأَنَا ضِمَامُ بْنُ ثَعْلَبَةَ أَخُو بَنِي سَعْدِ بْنِ بَكْرٍ. رَوَاهُ مُوسَى وَعَلِيُّ بْنُ عَبْدِ الْحَمِيدِ عَنْ سُلَيْمَانَ عَنْ ثَابِتٍ عَنْ أَنَسٍ عَنِ النَّبِيِّ ﷺ بِهَذَا.",
+     "gharib": [
+      {
+       "word": "تَجِدُ",
+       "meaning": "تغضب .",
+       "source": "النهاية وجد"
+      },
+      {
+       "word": "ظَهْرَانَيْهِمْ",
+       "meaning": "كل ما كان فى وسط شىء ومعظمه فهو بين ظهريه وظهرانيه .",
+       "source": "اللسان ظهر"
+      },
+      {
+       "word": "أَنْشُدُكَ",
+       "meaning": "أسألك بالله.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٥١، شرح الحديث ٦٣"
+      },
+      {
+       "word": "عَقَلَهُ",
+       "meaning": "شد على ساق الجمل بعد ثني ركبته حبلًا ليثبته.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٥١، شرح الحديث ٦٣"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٦٣",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 63"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "While we were sitting with the Prophet (ﷺ) in the mosque, a man came riding on a camel. He made his camel kneel down in the mosque, tied its foreleg and then said: \"Who amongst you is Muhammad?\" At that time the Prophet (ﷺ) was sitting amongst us (his companions) leaning on his arm. We replied, \"This white man reclining on his arm.\" The man then addressed him, \"O Son of `Abdul Muttalib.\" The Prophet (ﷺ) said, \"I am here to answer your questions.\" The man said to the Prophet, \"I want to ask you something and will be hard in questioning. So do not get angry.\" The Prophet (ﷺ) said, \"Ask whatever you want.\" The man said, \"I ask you by your Lord, and the Lord of those who were before you, has Allah sent you as an Apostle to all the mankind?\" The Prophet (ﷺ) replied, \"By Allah, yes.\" The man further said, \"I ask you by Allah. Has Allah ordered you to offer five prayers in a day and night (24 hours)? He replied, \"By Allah, Yes.\" The man further said, \"I ask you by Allah! Has Allah ordered you to observe fasts during this month of the year (i.e. Ramadan)?\" He replied, \"By Allah, Yes.\" The man further said, \"I ask you by Allah. Has Allah ordered you to take Zakat (obligatory charity) from our rich people and distribute it amongst our poor people?\" The Prophet (ﷺ) replied, \"By Allah, yes.\" Thereupon that man said, \"I have believed in all that with which you have been sent, and I have been sent by my people as a messenger, and I am Dimam bin Tha`laba from the brothers of Bani Sa`d bin Bakr",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1QqvKnaztaFveIO5P19r2ot43z5-eVQE8",
+      "player": "1rYwndg9-VNRsfgs-mLNc_Sd_humITXC1"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 64,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنِي إِبْرَاهِيمُ بْنُ سَعْدٍ، عَنْ صَالِحٍ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ عُتْبَةَ بْنِ مَسْعُودٍ، أَنَّ عَبْدَ اللَّهِ بْنَ عَبَّاسٍ، أَخْبَرَهُ أَنَّ رَسُولَ اللَّهِ ﷺ بَعَثَ بِكِتَابِهِ رَجُلاً، وَأَمَرَهُ أَنْ يَدْفَعَهُ إِلَى عَظِيمِ الْبَحْرَيْنِ، فَدَفَعَهُ عَظِيمُ الْبَحْرَيْنِ إِلَى كِسْرَى، فَلَمَّا قَرَأَهُ مَزَّقَهُ. فَحَسِبْتُ أَنَّ ابْنَ الْمُسَيَّبِ",
+     "matn": "قَالَ فَدَعَا عَلَيْهِمْ رَسُولُ اللَّهِ ﷺ أَنْ يُمَزَّقُوا كُلَّ مُمَزَّقٍ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٦٤",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 64"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Abbas",
+      "text": "Once Allah's Messenger (ﷺ) gave a letter to a person and ordered him to go and deliver it to the Governor of Bahrain. (He did so) and the Governor of Bahrain sent it to Chousroes, who read that letter and then tore it to pieces. (The sub-narrator (Ibn Shihab) thinks that Ibn Al-Musaiyab said that Allah's Messenger (ﷺ) invoked Allah against them (saying), \"May Allah tear them into pieces, and disperse them all totally",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1InePxZ9Sz34WuY7cVv9XxSloE2c7GSRW",
+      "player": "1VLJy53WNTthbIHB9TlbRpBP2Q2nw_zRm"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 65,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ مُقَاتِلٍ أَبُو الْحَسَنِ، أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا شُعْبَةُ، عَنْ قَتَادَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ،",
+     "matn": "قَالَ كَتَبَ النَّبِيُّ ﷺ كِتَابًا ـ أَوْ أَرَادَ أَنْ يَكْتُبَ ـ فَقِيلَ لَهُ إِنَّهُمْ لاَ يَقْرَءُونَ كِتَابًا إِلاَّ مَخْتُومًا. فَاتَّخَذَ خَاتَمًا مِنْ فِضَّةٍ نَقْشُهُ مُحَمَّدٌ رَسُولُ اللَّهِ. كَأَنِّي أَنْظُرُ إِلَى بَيَاضِهِ فِي يَدِهِ. فَقُلْتُ لِقَتَادَةَ مَنْ قَالَ نَقْشُهُ مُحَمَّدٌ رَسُولُ اللَّهِ قَالَ أَنَسٌ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٦٥",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 65"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "Once the Prophet (ﷺ) wrote a letter or had an idea of writing a letter. The Prophet (ﷺ) was told that they (rulers) would not read letters unless they were sealed. So the Prophet (ﷺ) got a silver ring made with \"Muhammad Allah's Messenger (ﷺ)\" engraved on it. As if I were just observing its white glitter in the hand of the Prophet",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1qCxTy_1QZQnRhVU0sO6DSkRxkEz8byW0",
+      "player": "1NYzZsO5k_oktobv8E456nDlgdUrDcojw"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 66,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكٌ، عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، أَنَّ أَبَا مُرَّةَ، مَوْلَى عَقِيلِ بْنِ أَبِي طَالِبٍ أَخْبَرَهُ عَنْ أَبِي وَاقِدٍ اللَّيْثِيِّ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ بَيْنَمَا هُوَ جَالِسٌ فِي الْمَسْجِدِ وَالنَّاسُ مَعَهُ، إِذْ أَقْبَلَ ثَلاَثَةُ نَفَرٍ، فَأَقْبَلَ اثْنَانِ إِلَى رَسُولِ اللَّهِ ﷺ وَذَهَبَ وَاحِدٌ، قَالَ فَوَقَفَا عَلَى رَسُولِ اللَّهِ ﷺ فَأَمَّا أَحَدُهُمَا فَرَأَى فُرْجَةً فِي الْحَلْقَةِ فَجَلَسَ فِيهَا، وَأَمَّا الآخَرُ فَجَلَسَ خَلْفَهُمْ، وَأَمَّا الثَّالِثُ فَأَدْبَرَ ذَاهِبًا، فَلَمَّا فَرَغَ رَسُولُ اللَّهِ ﷺ قَالَ  أَلاَ أُخْبِرُكُمْ عَنِ النَّفَرِ الثَّلاَثَةِ أَمَّا أَحَدُهُمْ فَأَوَى إِلَى اللَّهِ، فَآوَاهُ اللَّهُ، وَأَمَّا الآخَرُ فَاسْتَحْيَا، فَاسْتَحْيَا اللَّهُ مِنْهُ، وَأَمَّا الآخَرُ فَأَعْرَضَ، فَأَعْرَضَ اللَّهُ عَنْهُ .",
+     "gharib": [
+      {
+       "word": "فُرْجَةً",
+       "meaning": "مكانًا خاليًا بين الجالسين.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٥٧، شرح الحديث ٦٦"
+      },
+      {
+       "word": "الْحَلْقَةِ",
+       "meaning": "جماعة الجالسين على هيئة دائرة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٥٧، شرح الحديث ٦٦"
+      },
+      {
+       "word": "فَأَوَى",
+       "meaning": "لجأ وانضم إلى مجلس الخير.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٥٧، شرح الحديث ٦٦"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٦٦",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 66"
+     },
+     "en": {
+      "narrator": "Abu Waqid Al-Laithi",
+      "text": "While Allah's Messenger (ﷺ) was sitting in the mosque with some people, three men came. Two of them came in front of Allah's Messenger (ﷺ) and the third one went away. The two persons kept on standing before Allah's Messenger (ﷺ) for a while and then one of them found a place in the circle and sat there while the other sat behind the gathering, and the third one went away. When Allah's Messenger (ﷺ) finished his preaching, he said, \"Shall I tell you about these three persons? One of them betook himself to Allah, so Allah took him into His grace and mercy and accommodated him, the second felt shy from Allah, so Allah sheltered Him in His mercy (and did not punish him), while the third turned his face from Allah and went away, so Allah turned His face from him likewise",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1DWp7x5Kc_mLY4aYAttBYEfltgMLZD0Mp",
+      "player": "1zo8wa86ugO0E3RbkGHs63a82dpYp7ffU"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    }
+   ]
   }
  ]
 }
