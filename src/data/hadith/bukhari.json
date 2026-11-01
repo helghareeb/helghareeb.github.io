@@ -444,7 +444,7 @@
    "ar": "كتاب الإيمان",
    "en": "Belief",
    "first": 8,
-   "last": 15,
+   "last": 23,
    "hadith": [
     {
      "n": 8,
@@ -739,6 +739,309 @@
       },
       "id": "1J3IdVTHSGQS-n964Zz1DL1BLoGtkrLxu",
       "player": "1ENc1aHrqqKQ5qMBDFK4KUBdnuxtaPPBg"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 16,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا عَبْدُ الْوَهَّابِ الثَّقَفِيُّ، قَالَ حَدَّثَنَا أَيُّوبُ، عَنْ أَبِي قِلاَبَةَ، عَنْ أَنَسٍ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  ثَلاَثٌ مَنْ كُنَّ فِيهِ وَجَدَ حَلاَوَةَ الإِيمَانِ أَنْ يَكُونَ اللَّهُ وَرَسُولُهُ أَحَبَّ إِلَيْهِ مِمَّا سِوَاهُمَا، وَأَنْ يُحِبَّ الْمَرْءَ لاَ يُحِبُّهُ إِلاَّ لِلَّهِ، وَأَنْ يَكْرَهَ أَنْ يَعُودَ فِي الْكُفْرِ كَمَا يَكْرَهُ أَنْ يُقْذَفَ فِي النَّارِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٦",
+      "en": "Sahih al-Bukhari, Belief, hadith 16"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) said, \"Whoever possesses the following three qualities will have the sweetness (delight) of faith: 1. The one to whom Allah and His Apostle become dearer than anything else. 2. Who loves a person and he loves him only for Allah's sake. 3. Who hates to revert to Atheism (disbelief) as he hates to be thrown into the fire",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1kpolIQKopsx7Lov_Nvq6dXn5KE_gExLJ",
+      "player": "1y0RaEKKgcpMj9CbKQzIOMVtncrtqVrjt"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 17,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْوَلِيدِ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ أَخْبَرَنِي عَبْدُ اللَّهِ بْنُ عَبْدِ اللَّهِ بْنِ جَبْرٍ، قَالَ سَمِعْتُ أَنَسًا، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "آيَةُ الإِيمَانِ حُبُّ الأَنْصَارِ، وَآيَةُ النِّفَاقِ بُغْضُ الأَنْصَارِ .",
+     "gharib": [
+      {
+       "word": "آيَةُ",
+       "meaning": "علامة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٦٣، شرح الحديث ١٧"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٧",
+      "en": "Sahih al-Bukhari, Belief, hadith 17"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) said, \"Love for the Ansar is a sign of faith and hatred for the Ansar is a sign of hypocrisy",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1RJm4ImNA3cDKvmm2JYIFWxESbZ7x21Y1",
+      "player": "1pfK-abrFNG0aiHTDmk0tKkMG64zoeaXg"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 18,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي أَبُو إِدْرِيسَ، عَائِذُ اللَّهِ بْنُ عَبْدِ اللَّهِ أَنَّ عُبَادَةَ بْنَ الصَّامِتِ ـ رضى الله عنه ـ",
+     "matn": "وَكَانَ شَهِدَ بَدْرًا، وَهُوَ أَحَدُ النُّقَبَاءِ لَيْلَةَ الْعَقَبَةِ ـ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ وَحَوْلَهُ عِصَابَةٌ مِنْ أَصْحَابِهِ  بَايِعُونِي عَلَى أَنْ لاَ تُشْرِكُوا بِاللَّهِ شَيْئًا، وَلاَ تَسْرِقُوا، وَلاَ تَزْنُوا، وَلاَ تَقْتُلُوا أَوْلاَدَكُمْ، وَلاَ تَأْتُوا بِبُهْتَانٍ تَفْتَرُونَهُ بَيْنَ أَيْدِيكُمْ وَأَرْجُلِكُمْ، وَلاَ تَعْصُوا فِي مَعْرُوفٍ، فَمَنْ وَفَى مِنْكُمْ فَأَجْرُهُ عَلَى اللَّهِ، وَمَنْ أَصَابَ مِنْ ذَلِكَ شَيْئًا فَعُوقِبَ فِي الدُّنْيَا فَهُوَ كَفَّارَةٌ لَهُ، وَمَنْ أَصَابَ مِنْ ذَلِكَ شَيْئًا ثُمَّ سَتَرَهُ اللَّهُ، فَهُوَ إِلَى اللَّهِ إِنْ شَاءَ عَفَا عَنْهُ، وَإِنْ شَاءَ عَاقَبَهُ . فَبَايَعْنَاهُ عَلَى ذَلِكَ.",
+     "gharib": [
+      {
+       "word": "النُّقَبَاءِ",
+       "meaning": "جمع نقيب ، وهو كالعَريف على القوم المُقَدَّم عليهم ، الذى يَتعرَّف أخبارهم .",
+       "source": "النهاية نقب"
+      },
+      {
+       "word": "عِصَابَةٌ",
+       "meaning": "العصابة : الجماعة من الناس .",
+       "source": "النهاية عصب"
+      },
+      {
+       "word": "ببهتان",
+       "meaning": "البُهْتَانُ : هو الباطل الذى يُتَحَيَّرُ منه ، وهو من البُهْت ، وهو الكذب والافتراء .",
+       "source": "النهاية بهت"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٨",
+      "en": "Sahih al-Bukhari, Belief, hadith 18"
+     },
+     "en": {
+      "narrator": "'Ubada bin As-Samit",
+      "text": "who took part in the battle of Badr and was a Naqib (a person heading a group of six persons), on the night of Al-'Aqaba pledge: Allah's Apostle said while a group of his companions were around him, \"Swear allegiance to me for: 1. Not to join anything in worship along with Allah. 2. Not to steal. 3. Not to commit illegal sexual intercourse. 4. Not to kill your children. 5. Not to accuse an innocent person (to spread such an accusation among people). 6. Not to be disobedient (when ordered) to do good deed.\" The Prophet (ﷺ) added: \"Whoever among you fulfills his pledge will be rewarded by Allah. And whoever indulges in any one of them (except the ascription of partners to Allah) and gets the punishment in this world, that punishment will be an expiation for that sin. And if one indulges in any of them, and Allah conceals his sin, it is up to Him to forgive or punish him (in the Hereafter).\" 'Ubada bin As-Samit added: \"So we swore allegiance for these.\" (points to Allah's Apostle)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1m7X1N67wgK-sqHmZ6QsoZcybFh7gGMlu",
+      "player": "1eKdp9qWzX1F_3zIZqXdGH1naWxwuRRQP"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 19,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ،",
+     "matn": "عَنْ عَبْدِ الرَّحْمَنِ بْنِ عَبْدِ اللَّهِ بْنِ عَبْدِ الرَّحْمَنِ بْنِ أَبِي صَعْصَعَةَ، عَنْ أَبِيهِ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، أَنَّهُ قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  يُوشِكُ أَنْ يَكُونَ خَيْرَ مَالِ الْمُسْلِمِ غَنَمٌ يَتْبَعُ بِهَا شَعَفَ الْجِبَالِ وَمَوَاقِعَ الْقَطْرِ، يَفِرُّ بِدِينِهِ مِنَ الْفِتَنِ .",
+     "gharib": [
+      {
+       "word": "شَعَفَ",
+       "meaning": "جمع شَعَفَة ، وهى رأس الجبل .",
+       "source": "النهاية شعف"
+      },
+      {
+       "word": "الْقَطْرِ",
+       "meaning": "المطر؛ ومواقعه هنا مواضع نزوله وبطون الأودية التي يوجد فيها المرعى.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٦٩، شرح الحديث ١٩"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ١٩",
+      "en": "Sahih al-Bukhari, Belief, hadith 19"
+     },
+     "en": {
+      "narrator": "Abu Said Al-Khudri",
+      "text": "Allah's Messenger (ﷺ) said, \"A time will soon come when the best property of a Muslim will be sheep which he will take on the top of mountains and the places of rainfall (valleys) so as to flee with his religion from afflictions",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 20,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ سَلاَمٍ، قَالَ أَخْبَرَنَا عَبْدَةُ، عَنْ هِشَامٍ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كَانَ رَسُولُ اللَّهِ ﷺ إِذَا أَمَرَهُمْ أَمَرَهُمْ مِنَ الأَعْمَالِ بِمَا يُطِيقُونَ قَالُوا إِنَّا لَسْنَا كَهَيْئَتِكَ يَا رَسُولَ اللَّهِ، إِنَّ اللَّهَ قَدْ غَفَرَ لَكَ مَا تَقَدَّمَ مِنْ ذَنْبِكَ وَمَا تَأَخَّرَ. فَيَغْضَبُ حَتَّى يُعْرَفَ الْغَضَبُ فِي وَجْهِهِ ثُمَّ يَقُولُ  إِنَّ أَتْقَاكُمْ وَأَعْلَمَكُمْ بِاللَّهِ أَنَا .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٠",
+      "en": "Sahih al-Bukhari, Belief, hadith 20"
+     },
+     "en": {
+      "narrator": "'Aisha",
+      "text": "Whenever Allah's Messenger (ﷺ) ordered the Muslims to do something, he used to order them deeds which were easy for them to do, (according to their strength and endurance). They said, \"O Allah's Messenger (ﷺ)! We are not like you. Allah has forgiven your past and future sins.\" So Allah's Apostle became angry and it was apparent on his face. He said, \"I am the most Allah fearing, and know Allah better than all of you do",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1baa6BUg69xeKyZbL3e4LgePsV3duwqEw",
+      "player": "11mQsWS3ftN8OxVfgaZVmsxf_CTsTn1_1"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 21,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سُلَيْمَانُ بْنُ حَرْبٍ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ ـ رضى الله عنه ـ",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  ثَلاَثٌ مَنْ كُنَّ فِيهِ وَجَدَ حَلاَوَةَ الإِيمَانِ مَنْ كَانَ اللَّهُ وَرَسُولُهُ أَحَبَّ إِلَيْهِ مِمَّا سِوَاهُمَا، وَمَنْ أَحَبَّ عَبْدًا لاَ يُحِبُّهُ إِلاَّ لِلَّهِ، وَمَنْ يَكْرَهُ أَنْ يَعُودَ فِي الْكُفْرِ بَعْدَ إِذْ أَنْقَذَهُ اللَّهُ، كَمَا يَكْرَهُ أَنْ يُلْقَى فِي النَّارِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢١",
+      "en": "Sahih al-Bukhari, Belief, hadith 21"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) said, \"Whoever possesses the following three qualities will taste the sweetness of faith: 1. The one to whom Allah and His Apostle become dearer than anything else. 2. Who loves a person and he loves him only for Allah's sake. 3. Who hates to revert to disbelief (Atheism) after Allah has brought (saved) him out from it, as he hates to be thrown in fire",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ZWBU6_ZvQ7A6kmva3eGlEHsK-Nbz3E20",
+      "player": "1dz4HEwBon_CQR8AbaGKqO0odNNnHJg01"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 22,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكٌ،",
+     "matn": "عَنْ عَمْرِو بْنِ يَحْيَى الْمَازِنِيِّ، عَنْ أَبِيهِ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، رضى الله عنه ـ عَنِ النَّبِيِّ ﷺ قَالَ  يَدْخُلُ أَهْلُ الْجَنَّةِ الْجَنَّةَ، وَأَهْلُ النَّارِ النَّارَ، ثُمَّ يَقُولُ اللَّهُ تَعَالَى أَخْرِجُوا مَنْ كَانَ فِي قَلْبِهِ مِثْقَالُ حَبَّةٍ مِنْ خَرْدَلٍ مِنْ إِيمَانٍ. فَيُخْرَجُونَ مِنْهَا قَدِ اسْوَدُّوا فَيُلْقَوْنَ فِي نَهَرِ الْحَيَا ـ أَوِ الْحَيَاةِ، شَكَّ مَالِكٌ ـ فَيَنْبُتُونَ كَمَا تَنْبُتُ الْحِبَّةُ فِي جَانِبِ السَّيْلِ، أَلَمْ تَرَ أَنَّهَا تَخْرُجُ صَفْرَاءَ مُلْتَوِيَةً . قَالَ وُهَيْبٌ حَدَّثَنَا عَمْرٌو  الْحَيَاةِ . وَقَالَ  خَرْدَلٍ مِنْ خَيْرٍ .",
+     "gharib": [
+      {
+       "word": "الْحِبَّةُ",
+       "meaning": "بُزُور البُقُول وحَب الرياحين ، وقيل : نبت صغير ينبت فى الحشيش .",
+       "source": "النهاية حبب"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٢",
+      "en": "Sahih al-Bukhari, Belief, hadith 22"
+     },
+     "en": {
+      "narrator": "Abu Said Al-Khudri",
+      "text": "The Prophet (ﷺ) said, \"When the people of Paradise will enter Paradise and the people of Hell will go to Hell, Allah will order those who have had faith equal to the weight of a grain of mustard seed to be taken out from Hell. So they will be taken out but (by then) they will be blackened (charred). Then they will be put in the river of Haya' (rain) or Hayat (life) (the Narrator is in doubt as to which is the right term), and they will revive like a grain that grows near the bank of a flood channel. Don't you see that it comes out yellow and twisted?",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_C4CUvLnZ_04-MuqkdjQ7n6oyuWjW6l_",
+      "player": "1ZjIRuHvUG_D7BTOjksABgzQfk9lMWoQX"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 23,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ عُبَيْدِ اللَّهِ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ،",
+     "matn": "عَنْ صَالِحٍ، عَنِ ابْنِ شِهَابٍ، عَنْ أَبِي أُمَامَةَ بْنِ سَهْلٍ، أَنَّهُ سَمِعَ أَبَا سَعِيدٍ الْخُدْرِيَّ، يَقُولُ قَالَ رَسُولُ اللَّهِ ﷺ  بَيْنَا أَنَا نَائِمٌ رَأَيْتُ النَّاسَ يُعْرَضُونَ عَلَىَّ، وَعَلَيْهِمْ قُمُصٌ مِنْهَا مَا يَبْلُغُ الثُّدِيَّ، وَمِنْهَا مَا دُونَ ذَلِكَ، وَعُرِضَ عَلَىَّ عُمَرُ بْنُ الْخَطَّابِ وَعَلَيْهِ قَمِيصٌ يَجُرُّهُ . قَالُوا فَمَا أَوَّلْتَ ذَلِكَ يَا رَسُولَ اللَّهِ قَالَ  الدِّينَ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٣",
+      "en": "Sahih al-Bukhari, Belief, hadith 23"
+     },
+     "en": {
+      "narrator": "Abu Said Al-Khudri",
+      "text": "Allah's Messenger (ﷺ) said, \"While I was sleeping I saw (in a dream) some people wearing shirts of which some were reaching up to the breasts only while others were even shorter than that. Umar bin Al-Khattab was shown wearing a shirt that he was dragging.\" The people asked, \"How did you interpret it? (What is its interpretation) O Allah's Messenger (ﷺ)?\" He (the Prophet (ﷺ) ) replied, \"It is the Religion",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1nnJi3IZyz7r8JRvl_q_vZ0aS5V19gysM",
+      "player": "1iRN9O4uj1d547ON-dsZeN_Ia7FnrbeVR"
      },
      "video": null,
      "sharh": null,
