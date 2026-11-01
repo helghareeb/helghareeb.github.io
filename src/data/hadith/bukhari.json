@@ -444,7 +444,7 @@
    "ar": "كتاب الإيمان",
    "en": "Belief",
    "first": 8,
-   "last": 46,
+   "last": 54,
    "hadith": [
     {
      "n": 8,
@@ -1981,6 +1981,366 @@
       },
       "id": "1GGuazrXKxjm7oa7X1aacmq2Eea6jvjd_",
       "player": "1ZAbC5F3E3UYJ9ipm0y9Hw_UUQDe_VFmu"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 47,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَحْمَدُ بْنُ عَبْدِ اللَّهِ بْنِ عَلِيٍّ الْمَنْجُوفِيُّ، قَالَ حَدَّثَنَا رَوْحٌ، قَالَ حَدَّثَنَا عَوْفٌ، عَنِ الْحَسَنِ، وَمُحَمَّدٍ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  مَنِ اتَّبَعَ جَنَازَةَ مُسْلِمٍ إِيمَانًا وَاحْتِسَابًا، وَكَانَ مَعَهُ حَتَّى يُصَلَّى عَلَيْهَا، وَيَفْرُغَ مِنْ دَفْنِهَا، فَإِنَّهُ يَرْجِعُ مِنَ الأَجْرِ بِقِيرَاطَيْنِ، كُلُّ قِيرَاطٍ مِثْلُ أُحُدٍ، وَمَنْ صَلَّى عَلَيْهَا ثُمَّ رَجَعَ قَبْلَ أَنْ تُدْفَنَ فَإِنَّهُ يَرْجِعُ بِقِيرَاطٍ . تَابَعَهُ عُثْمَانُ الْمُؤَذِّنُ قَالَ حَدَّثَنَا عَوْفٌ عَنْ مُحَمَّدٍ عَنْ أَبِي هُرَيْرَةَ عَنِ النَّبِيِّ ﷺ نَحْوَهُ.",
+     "gharib": [
+      {
+       "word": "قِيرَاطٍ",
+       "meaning": "مقدار من الأجر؛ شبّه الحديث كل قيراط منه بجبل أحد.",
+       "source": "صحيح البخاري، حديث ٤٧؛ وانظر فتح الباري ١/١٠٨–١٠٩"
+      },
+      {
+       "word": "بِقِيرَاطَيْنِ",
+       "meaning": "مقدار من الأجر؛ شبّه الحديث كل قيراط منه بجبل أحد.",
+       "source": "صحيح البخاري، حديث ٤٧؛ وانظر فتح الباري ١/١٠٨–١٠٩"
+      },
+      {
+       "word": "بِقِيرَاطٍ",
+       "meaning": "مقدار من الأجر؛ شبّه الحديث كل قيراط منه بجبل أحد.",
+       "source": "صحيح البخاري، حديث ٤٧؛ وانظر فتح الباري ١/١٠٨–١٠٩"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٧",
+      "en": "Sahih al-Bukhari, Belief, hadith 47"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"(A believer) who accompanies the funeral procession of a Muslim out of sincere faith and hoping to attain Allah's reward and remains with it till the funeral prayer is offered and the burial ceremonies are over, he will return with a reward of two Qirats. Each Qirat is like the size of the (Mount) Uhud. He who offers the funeral prayer only and returns before the burial, will return with the reward of one Qirat only",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1T_8Gz8KiP55kacMKvrh3LT6UiWX3ahJK",
+      "player": "1GuiU-pLcbTdfUE0zMBPMVaWTjm06PLQr"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 48,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ عَرْعَرَةَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ زُبَيْدٍ، قَالَ سَأَلْتُ أَبَا وَائِلٍ عَنِ الْمُرْجِئَةِ،، فَقَالَ حَدَّثَنِي عَبْدُ اللَّهِ، أَنَّ النَّبِيَّ ﷺ قَالَ",
+     "matn": "سِبَابُ الْمُسْلِمِ فُسُوقٌ، وَقِتَالُهُ كُفْرٌ .",
+     "gharib": [
+      {
+       "word": "فُسُوقٌ",
+       "meaning": "خروج عن طاعة الله ورسوله.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١١٢، شرح الحديث ٤٨"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٨",
+      "en": "Sahih al-Bukhari, Belief, hadith 48"
+     },
+     "en": {
+      "narrator": "'Abdullah",
+      "text": "The Prophet (ﷺ) said, \"Abusing a Muslim is Fusuq (an evil doing) and killing him is Kufr (disbelief)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1UX33iV-jvyN9ukkNHzub_sZ6u14Fuago",
+      "player": "1IlDNkBxxQWBQWH3aPXdxrPiT_B77MFhd"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 49,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "أَخْبَرَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، حَدَّثَنَا إِسْمَاعِيلُ بْنُ جَعْفَرٍ، عَنْ حُمَيْدٍ، عَنْ أَنَسٍ، قَالَ أَخْبَرَنِي عُبَادَةُ بْنُ الصَّامِتِ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ خَرَجَ يُخْبِرُ بِلَيْلَةِ الْقَدْرِ، فَتَلاَحَى رَجُلاَنِ مِنَ الْمُسْلِمِينَ فَقَالَ  إِنِّي خَرَجْتُ لأُخْبِرَكُمْ بِلَيْلَةِ الْقَدْرِ، وَإِنَّهُ تَلاَحَى فُلاَنٌ وَفُلاَنٌ فَرُفِعَتْ وَعَسَى أَنْ يَكُونَ خَيْرًا لَكُمُ الْتَمِسُوهَا فِي السَّبْعِ وَالتِّسْعِ وَالْخَمْسِ .",
+     "gharib": [
+      {
+       "word": "فَتَلاَحَى",
+       "meaning": "تنازع وتخاصم .",
+       "source": "فتح البارى 1 / 139"
+      },
+      {
+       "word": "تَلاَحَى",
+       "meaning": "تنازع وتخاصم.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١١٣، شرح الحديث ٤٩"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٩",
+      "en": "Sahih al-Bukhari, Belief, hadith 49"
+     },
+     "en": {
+      "narrator": "'Ubada bin As-Samit",
+      "text": "\"Allah's Messenger (ﷺ) went out to inform the people about the (date of the) night of decree (Al-Qadr) but there happened a quarrel between two Muslim men. The Prophet (ﷺ) said, \"I came out to inform you about (the date of) the night of Al-Qadr, but as so and so and so and so quarrelled, its knowledge was taken away (I forgot it) and maybe it was better for you. Now look for it in the 7th, the 9th and the 5th (of the last 10 nights of the month of Ramadan)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 50,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ بْنُ إِبْرَاهِيمَ، أَخْبَرَنَا أَبُو حَيَّانَ التَّيْمِيُّ، عَنْ أَبِي زُرْعَةَ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "قَالَ كَانَ النَّبِيُّ ﷺ بَارِزًا يَوْمًا لِلنَّاسِ، فَأَتَاهُ جِبْرِيلُ فَقَالَ مَا الإِيمَانُ قَالَ  الإِيمَانُ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلاَئِكَتِهِ وَبِلِقَائِهِ وَرُسُلِهِ، وَتُؤْمِنَ بِالْبَعْثِ . قَالَ مَا الإِسْلاَمُ قَالَ  الإِسْلاَمُ أَنْ تَعْبُدَ اللَّهَ وَلاَ تُشْرِكَ بِهِ، وَتُقِيمَ الصَّلاَةَ، وَتُؤَدِّيَ الزَّكَاةَ الْمَفْرُوضَةَ، وَتَصُومَ رَمَضَانَ . قَالَ مَا الإِحْسَانُ قَالَ  أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ، فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ . قَالَ مَتَى السَّاعَةُ قَالَ  مَا الْمَسْئُولُ عَنْهَا بِأَعْلَمَ مِنَ السَّائِلِ، وَسَأُخْبِرُكَ عَنْ أَشْرَاطِهَا إِذَا وَلَدَتِ الأَمَةُ رَبَّهَا، وَإِذَا تَطَاوَلَ رُعَاةُ الإِبِلِ الْبُهْمُ فِي الْبُنْيَانِ، فِي خَمْسٍ لاَ يَعْلَمُهُنَّ إِلاَّ اللَّهُ . ثُمَّ تَلاَ النَّبِيُّ ﷺ {إِنَّ اللَّهَ عِنْدَهُ عِلْمُ السَّاعَةِ} الآيَةَ. ثُمَّ أَدْبَرَ فَقَالَ  رُدُّوهُ . فَلَمْ يَرَوْا شَيْئًا. فَقَالَ  هَذَا جِبْرِيلُ جَاءَ يُعَلِّمُ النَّاسَ دِينَهُمْ . قَالَ أَبُو عَبْدِ اللَّهِ جَعَلَ ذَلِكَ كُلَّهُ مِنَ الإِيمَانِ.",
+     "gharib": [
+      {
+       "word": "أَشْرَاطِهَا",
+       "meaning": "علاماتها.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٢١، شرح الحديث ٥٠"
+      },
+      {
+       "word": "بَارِزًا",
+       "meaning": "ظاهرًا للناس، غير محتجب عنهم.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١١٦، شرح الحديث ٥٠"
+      },
+      {
+       "word": "رَبَّهَا",
+       "meaning": "مالكها أو سيدها، مع اختلاف العلماء في تفسير الصورة المذكورة في الحديث.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٢٢، شرح الحديث ٥٠"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٥٠",
+      "en": "Sahih al-Bukhari, Belief, hadith 50"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "One day while the Prophet (ﷺ) was sitting in the company of some people, (The angel) Gabriel came and asked, \"What is faith?\" Allah's Messenger (ﷺ) replied, 'Faith is to believe in Allah, His angels, (the) meeting with Him, His Apostles, and to believe in Resurrection.\" Then he further asked, \"What is Islam?\" Allah's Messenger (ﷺ) replied, \"To worship Allah Alone and none else, to offer prayers perfectly to pay the compulsory charity (Zakat) and to observe fasts during the month of Ramadan.\" Then he further asked, \"What is Ihsan (perfection)?\" Allah's Messenger (ﷺ) replied, \"To worship Allah as if you see Him, and if you cannot achieve this state of devotion then you must consider that He is looking at you.\" Then he further asked, \"When will the Hour be established?\" Allah's Messenger (ﷺ) replied, \"The answerer has no better knowledge than the questioner. But I will inform you about its portents. 1. When a slave (lady) gives birth to her master. 2. When the shepherds of black camels start boasting and competing with others in the construction of higher buildings. And the Hour is one of five things which nobody knows except Allah. The Prophet (ﷺ) then recited: \"Verily, with Allah (Alone) is the knowledge of the Hour--.\" (31. 34) Then that man (Gabriel) left and the Prophet (ﷺ) asked his companions to call him back, but they could not see him. Then the Prophet (ﷺ) said, \"That was Gabriel who came to teach the people their religion.\" Abu 'Abdullah said: He (the Prophet) considered all that as a part of faith",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1vKWA-igIG5q4sCmTuql2bHHudAKyR6ol",
+      "player": "1V8mqIdlULZqqTYBoLwsi34uTOjbl0RTU"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 51,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ حَمْزَةَ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، عَنْ صَالِحٍ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ، أَنَّ عَبْدَ اللَّهِ بْنَ عَبَّاسٍ، أَخْبَرَهُ قَالَ أَخْبَرَنِي أَبُو سُفْيَانَ، أَنَّ هِرَقْلَ، قَالَ لَهُ سَأَلْتُكَ هَلْ يَزِيدُونَ أَمْ يَنْقُصُونَ، فَزَعَمْتَ أَنَّهُمْ يَزِيدُونَ، وَكَذَلِكَ الإِيمَانُ حَتَّى يَتِمَّ. وَسَأَلْتُكَ هَلْ يَرْتَدُّ أَحَدٌ سَخْطَةً لِدِينِهِ بَعْدَ أَنْ يَدْخُلَ فِيهِ، فَزَعَمْتَ أَنْ لاَ، وَكَذَلِكَ الإِيمَانُ حِينَ تُخَالِطُ بَشَاشَتُهُ الْقُلُوبَ، لاَ يَسْخَطُهُ أَحَدٌ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٥١",
+      "en": "Sahih al-Bukhari, Belief, hadith 51"
+     },
+     "en": {
+      "narrator": "'Abdullah bin 'Abbas",
+      "text": "I was informed by Abu Sufyan that Heraclius said to him, \"I asked you whether they (followers of Muhammad) were increasing or decreasing. You replied that they were increasing. And in fact, this is the way of true Faith till it is complete in all respects. I further asked you whether there was anybody, who, after embracing his (the Prophets) religion (Islam) became displeased and discarded it. You replied in the negative, and in fact, this is (a sign of) true faith. When its delight enters the heart and mixes with them completely, nobody can be displeased with it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1x6l7xa4Kpkvx8auT9ayMmP22PdtefYJ8",
+      "player": "1Ud_wx9FyIXaECABT47TG6qdt5KVdJnn9"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 52,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، حَدَّثَنَا زَكَرِيَّاءُ، عَنْ عَامِرٍ، قَالَ سَمِعْتُ النُّعْمَانَ بْنَ بَشِيرٍ،",
+     "matn": "يَقُولُ سَمِعْتُ رَسُولَ اللَّهِ ﷺ يَقُولُ  الْحَلاَلُ بَيِّنٌ وَالْحَرَامُ بَيِّنٌ، وَبَيْنَهُمَا مُشَبَّهَاتٌ لاَ يَعْلَمُهَا كَثِيرٌ مِنَ النَّاسِ، فَمَنِ اتَّقَى الْمُشَبَّهَاتِ اسْتَبْرَأَ لِدِيِنِهِ وَعِرْضِهِ، وَمَنْ وَقَعَ فِي الشُّبُهَاتِ كَرَاعٍ يَرْعَى حَوْلَ الْحِمَى، يُوشِكُ أَنْ يُوَاقِعَهُ. أَلاَ وَإِنَّ لِكُلِّ مَلِكٍ حِمًى، أَلاَ إِنَّ حِمَى اللَّهِ فِي أَرْضِهِ مَحَارِمُهُ، أَلاَ وَإِنَّ فِي الْجَسَدِ مُضْغَةً إِذَا صَلَحَتْ صَلَحَ الْجَسَدُ كُلُّهُ، وَإِذَا فَسَدَتْ فَسَدَ الْجَسَدُ كُلُّهُ. أَلاَ وَهِيَ الْقَلْبُ .",
+     "gharib": [
+      {
+       "word": "مُضْغَةً",
+       "meaning": "قطعة صغيرة قدر ما يمضغ؛ والمراد هنا القلب.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٢٨، شرح الحديث ٥٢"
+      },
+      {
+       "word": "اسْتَبْرَأَ",
+       "meaning": "طلب البراءة لدينه من النقص ولعرضه من الطعن.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٢٧، شرح الحديث ٥٢"
+      },
+      {
+       "word": "الْحِمَى",
+       "meaning": "المكان المحمي الذي يمنع الرعي فيه إلا بإذن صاحبه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٢٨، شرح الحديث ٥٢"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٥٢",
+      "en": "Sahih al-Bukhari, Belief, hadith 52"
+     },
+     "en": {
+      "narrator": "An-Nu'man bin Bashir",
+      "text": "I heard Allah's Messenger (ﷺ) saying, 'Both legal and illegal things are evident but in between them there are doubtful (suspicious) things and most of the people have no knowledge about them. So whoever saves himself from these suspicious things saves his religion and his honor. And whoever indulges in these suspicious things is like a shepherd who grazes (his animals) near the Hima (private pasture) of someone else and at any moment he is liable to get in it. (O people!) Beware! Every king has a Hima and the Hima of Allah on the earth is His illegal (forbidden) things. Beware! There is a piece of flesh in the body if it becomes good (reformed) the whole body becomes good but if it gets spoilt the whole body gets spoilt and that is the heart",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1X3LkqGclYdrLw14oIr6g7DJQtO3-8FVv",
+      "player": "1keF0V8Dj4R4lJvvLja9mGIw8RzFm2dp2"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 53,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ الْجَعْدِ، قَالَ أَخْبَرَنَا شُعْبَةُ، عَنْ أَبِي جَمْرَةَ، قَالَ كُنْتُ أَقْعُدُ مَعَ ابْنِ عَبَّاسٍ،",
+     "matn": "يُجْلِسُنِي عَلَى سَرِيرِهِ فَقَالَ أَقِمْ عِنْدِي حَتَّى أَجْعَلَ لَكَ سَهْمًا مِنْ مَالِي، فَأَقَمْتُ مَعَهُ شَهْرَيْنِ، ثُمَّ قَالَ إِنَّ وَفْدَ عَبْدِ الْقَيْسِ لَمَّا أَتَوُا النَّبِيَّ ﷺ قَالَ  مَنِ الْقَوْمُ أَوْ مَنِ الْوَفْدُ . قَالُوا رَبِيعَةُ. قَالَ  مَرْحَبًا بِالْقَوْمِ ـ أَوْ بِالْوَفْدِ ـ غَيْرَ خَزَايَا وَلاَ نَدَامَى . فَقَالُوا يَا رَسُولَ اللَّهِ، إِنَّا لاَ نَسْتَطِيعُ أَنْ نَأْتِيَكَ إِلاَّ فِي شَهْرِ الْحَرَامِ، وَبَيْنَنَا وَبَيْنَكَ هَذَا الْحَىُّ مِنْ كُفَّارِ مُضَرَ، فَمُرْنَا بِأَمْرٍ فَصْلٍ، نُخْبِرْ بِهِ مَنْ وَرَاءَنَا، وَنَدْخُلْ بِهِ الْجَنَّةَ. وَسَأَلُوهُ عَنِ الأَشْرِبَةِ. فَأَمَرَهُمْ بِأَرْبَعٍ، وَنَهَاهُمْ عَنْ أَرْبَعٍ، أَمَرَهُمْ بِالإِيمَانِ بِاللَّهِ وَحْدَهُ. قَالَ  أَتَدْرُونَ مَا الإِيمَانُ بِاللَّهِ وَحْدَهُ . قَالُوا اللَّهُ وَرَسُولُهُ أَعْلَمُ. قَالَ  شَهَادَةُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامُ الصَّلاَةِ، وَإِيتَاءُ الزَّكَاةِ، وَصِيَامُ رَمَضَانَ، وَأَنْ تُعْطُوا مِنَ الْمَغْنَمِ الْخُمُسَ . وَنَهَاهُمْ عَنْ أَرْبَعٍ عَنِ الْحَنْتَمِ وَالدُّبَّاءِ وَالنَّقِيرِ وَالْمُزَفَّتِ. وَرُبَّمَا قَالَ الْمُقَيَّرِ. وَقَالَ  احْفَظُوهُنَّ وَأَخْبِرُوا بِهِنَّ مَنْ وَرَاءَكُمْ .",
+     "gharib": [
+      {
+       "word": "الْحَنْتَمِ",
+       "meaning": "الجرار، وجاء في تفسيرها الجرار الخضر.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "الْمُقَيَّرِ",
+       "meaning": "الوعاء المطلي بالقار، وهو مادة تطلى بها الأوعية ونحوها.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "وَالْمُزَفَّتِ",
+       "meaning": "الوعاء المطلي بالزفت.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "وَالنَّقِيرِ",
+       "meaning": "أصل نخلة ينقر فيجعل وعاء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "وَالدُّبَّاءِ",
+       "meaning": "القرع اليابس الذي يتخذ وعاء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "خزايا",
+       "meaning": "الخزايا : جمع خَزيان ، وهو المستحى . وقيل : الذليل المهان .",
+       "source": "شرح النووى على صحيح مسلم ١ / ١٨٧"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٥٣",
+      "en": "Sahih al-Bukhari, Belief, hadith 53"
+     },
+     "en": {
+      "narrator": "Abu Jamra",
+      "text": "I used to sit with Ibn 'Abbas and he made me sit on his sitting place. He requested me to stay with him in order that he might give me a share from his property. So I stayed with him for two months. Once he told (me) that when the delegation of the tribe of 'Abdul Qais came to the Prophet, the Prophet (ﷺ) asked them, \"Who are the people (i.e. you)? (Or) who are the delegate?\" They replied, \"We are from the tribe of Rabi'a.\" Then the Prophet (ﷺ) said to them, \"Welcome! O people (or O delegation of 'Abdul Qais)! Neither will you have disgrace nor will you regret.\" They said, \"O Allah's Messenger (ﷺ)! We cannot come to you except in the sacred month and there is the infidel tribe of Mudar intervening between you and us. So please order us to do something good (religious deeds) so that we may inform our people whom we have left behind (at home), and that we may enter Paradise (by acting on them).\" Then they asked about drinks (what is legal and what is illegal). The Prophet (ﷺ) ordered them to do four things and forbade them from four things. He ordered them to believe in Allah Alone and asked them, \"Do you know what is meant by believing in Allah Alone?\" They replied, \"Allah and His Apostle know better.\" Thereupon the Prophet (ﷺ) said, \"It means: 1. To testify that none has the right to be worshipped but Allah and Muhammad is Allah's Messenger (ﷺ). 2. To offer prayers perfectly 3. To pay the Zakat (obligatory charity) 4. To observe fast during the month of Ramadan. 5. And to pay Al-Khumus (one fifth of the booty to be given in Allah's Cause). Then he forbade them four things, namely, Hantam, Dubba,' Naqir Ann Muzaffat or Muqaiyar; (These were the names of pots in which Alcoholic drinks were prepared) (The Prophet (ﷺ) mentioned the container of wine and he meant the wine itself). The Prophet (ﷺ) further said (to them): \"Memorize them (these instructions) and convey them to the people whom you have left behind",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1aVScSEB3J0vnL9RHO7EfL40cnSa1h-kM",
+      "player": "1gCtli32TU-9JRvpE2Nf2hdotPSI545I8"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 54,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ يَحْيَى بْنِ سَعِيدٍ، عَنْ مُحَمَّدِ بْنِ إِبْرَاهِيمَ، عَنْ عَلْقَمَةَ بْنِ وَقَّاصٍ، عَنْ عُمَرَ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  الأَعْمَالُ بِالنِّيَّةِ، وَلِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ، فَهِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ، وَمَنْ كَانَتْ هِجْرَتُهُ لِدُنْيَا يُصِيبُهَا، أَوِ امْرَأَةٍ يَتَزَوَّجُهَا، فَهِجْرَتُهُ إِلَى مَا هَاجَرَ إِلَيْهِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٥٤",
+      "en": "Sahih al-Bukhari, Belief, hadith 54"
+     },
+     "en": {
+      "narrator": "'Umar bin Al-Khattab",
+      "text": "Allah's Messenger (ﷺ) said, \"The reward of deeds depends upon the intention and every person will get the reward according to what he has intended. So whoever emigrated for Allah and His Apostle, then his emigration was for Allah and His Apostle. And whoever emigrated for worldly benefits or for a woman to marry, his emigration was for what he emigrated for",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1SUMBBn54v3f-QfU7fPDV5wUnsJI2Dolx",
+      "player": "1fpS3yZjetGghMiGDqMMNsj4X9fH6dXDd"
      },
      "video": null,
      "sharh": null,
