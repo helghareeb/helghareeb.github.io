@@ -2513,7 +2513,7 @@
    "ar": "كتاب العلم",
    "en": "Knowledge",
    "first": 59,
-   "last": 86,
+   "last": 94,
    "hadith": [
     {
      "n": 59,
@@ -3742,6 +3742,360 @@
       },
       "id": "190ISxPE_y6Lkvur2IDaHqBUReAwYzWVA",
       "player": "16GyctgPwrPa-9uUpuUm9PeVqm7bOpKWC"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 87,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ، قَالَ حَدَّثَنَا غُنْدَرٌ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَبِي جَمْرَةَ، قَالَ كُنْتُ أُتَرْجِمُ بَيْنَ ابْنِ عَبَّاسٍ",
+     "matn": "وَبَيْنَ النَّاسِ فَقَالَ إِنَّ وَفْدَ عَبْدِ الْقَيْسِ أَتَوُا النَّبِيَّ ﷺ فَقَالَ  مَنِ الْوَفْدُ ـ أَوْ مَنِ الْقَوْمُ . قَالُوا رَبِيعَةُ. فَقَالَ  مَرْحَبًا بِالْقَوْمِ ـ أَوْ بِالْوَفْدِ ـ غَيْرَ خَزَايَا وَلاَ نَدَامَى . قَالُوا إِنَّا نَأْتِيكَ مِنْ شُقَّةٍ بَعِيدَةٍ، وَبَيْنَنَا وَبَيْنَكَ هَذَا الْحَىُّ مِنْ كُفَّارِ مُضَرَ، وَلاَ نَسْتَطِيعُ أَنْ نَأْتِيَكَ إِلاَّ فِي شَهْرٍ حَرَامٍ فَمُرْنَا بِأَمْرٍ نُخْبِرْ بِهِ مَنْ وَرَاءَنَا، نَدْخُلُ بِهِ الْجَنَّةَ. فَأَمَرَهُمْ بِأَرْبَعٍ، وَنَهَاهُمْ عَنْ أَرْبَعٍ أَمَرَهُمْ بِالإِيمَانِ بِاللَّهِ عَزَّ وَجَلَّ وَحْدَهُ. قَالَ  هَلْ تَدْرُونَ مَا الإِيمَانُ بِاللَّهِ وَحْدَهُ . قَالُوا اللَّهُ وَرَسُولُهُ أَعْلَمُ. قَالَ  شَهَادَةُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامُ الصَّلاَةِ، وَإِيتَاءُ الزَّكَاةِ، وَصَوْمُ رَمَضَانَ، وَتُعْطُوا الْخُمُسَ مِنَ الْمَغْنَمِ . وَنَهَاهُمْ عَنِ الدُّبَّاءِ وَالْحَنْتَمِ وَالْمُزَفَّتِ. قَالَ شُعْبَةُ رُبَّمَا قَالَ النَّقِيرِ، وَرُبَّمَا قَالَ الْمُقَيَّرِ. قَالَ  احْفَظُوهُ وَأَخْبِرُوهُ مَنْ وَرَاءَكُمْ .",
+     "gharib": [
+      {
+       "word": "الْمُقَيَّرِ",
+       "meaning": "الوعاء المطلي بالقار، وهو مادة تطلى بها الأوعية ونحوها.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "النَّقِيرِ",
+       "meaning": "أصل نخلة ينقر فيجعل وعاء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "شُقَّةٍ",
+       "meaning": "مسافة .",
+       "source": "النهاية شقق"
+      },
+      {
+       "word": "وَالْحَنْتَمِ",
+       "meaning": "الجرار، وجاء في تفسيرها الجرار الخضر.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "وَالْمُزَفَّتِ",
+       "meaning": "الوعاء المطلي بالزفت.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "الدُّبَّاءِ",
+       "meaning": "القرع اليابس الذي يتخذ وعاء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٣٤، شرح الحديث ٥٣"
+      },
+      {
+       "word": "خزايا",
+       "meaning": "الخزايا : جمع خَزيان ، وهو المستحى . وقيل : الذليل المهان .",
+       "source": "شرح النووى على صحيح مسلم ١ / ١٨٧"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٨٧",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 87"
+     },
+     "en": {
+      "narrator": "Abu Jamra",
+      "text": "I was an interpreter between the people and Ibn `Abbas. Once Ibn `Abbas said that a delegation of the tribe of `Abdul Qais came to the Prophet (ﷺ) who asked them, \"Who are the people (i.e. you)? (Or) who are the delegates?\" They replied, \"We are from the tribe of Rabi`a.\" Then the Prophet (ﷺ) said to them, \"Welcome, O people (or said, \"O delegation (of `Abdul Qais).\") Neither will you have disgrace nor will you regret.\" They said, \"We have come to you from a distant place and there is the tribe of the infidels of Mudar intervening between you and us and we cannot come to you except in the sacred month. So please order us to do something good (religious deeds) and that we may also inform our people whom we have left behind (at home) and that we may enter Paradise (by acting on them.)\" The Prophet ordered them to do four things, and forbade them from four things. He ordered them to believe in Allah Alone, the Honorable the Majestic and said to them, \"Do you know what is meant by believing in Allah Alone?\" They replied, \"Allah and His Apostle know better.\" Thereupon the Prophet (ﷺ) said, \"(That means to testify that none has the right to be worshipped but Allah and that Muhammad is His Apostle, to offer prayers perfectly, to pay Zakat, to observe fasts during the month of Ramadan, (and) to pay Al-Khumus (one fifth of the booty to be given in Allah's cause).\" Then he forbade them four things, namely Ad-Dubba.' Hantam, Muzaffat (and) An-Naqir or Muqaiyar (These were the names of pots in which alcoholic drinks used to be prepared). The Prophet (ﷺ) further said, \"Memorize them (these instructions) and tell them to the people whom you have left behind",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_SAyRjilXyM-E6qbrYa-kR7bOwiTyQX_",
+      "player": "1bFGWLo3djjpKbozIE-vCigDzH7w2MCP4"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 88,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ مُقَاتِلٍ أَبُو الْحَسَنِ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا عُمَرُ بْنُ سَعِيدِ بْنِ أَبِي حُسَيْنٍ، قَالَ حَدَّثَنِي عَبْدُ اللَّهِ بْنُ أَبِي مُلَيْكَةَ، عَنْ عُقْبَةَ بْنِ الْحَارِثِ،",
+     "matn": "أَنَّهُ تَزَوَّجَ ابْنَةً لأَبِي إِهَابِ بْنِ عَزِيزٍ، فَأَتَتْهُ امْرَأَةٌ فَقَالَتْ إِنِّي قَدْ أَرْضَعْتُ عُقْبَةَ وَالَّتِي تَزَوَّجَ بِهَا. فَقَالَ لَهَا عُقْبَةُ مَا أَعْلَمُ أَنَّكِ أَرْضَعْتِنِي وَلاَ أَخْبَرْتِنِي. فَرَكِبَ إِلَى رَسُولِ اللَّهِ ﷺ بِالْمَدِينَةِ فَسَأَلَهُ، فَقَالَ رَسُولُ اللَّهِ ﷺ  كَيْفَ وَقَدْ قِيلَ . فَفَارَقَهَا عُقْبَةُ، وَنَكَحَتْ زَوْجًا غَيْرَهُ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٨٨",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 88"
+     },
+     "en": {
+      "narrator": "`Abdullah bin Abi Mulaika",
+      "text": "`Uqba bin Al-Harith said that he had married the daughter of Abi Ihab bin `Aziz. Later on a woman came to him and said, \"I have suckled (nursed) `Uqba and the woman whom he married (his wife) at my breast.\" `Uqba said to her, \"Neither I knew that you have suckled (nursed) me nor did you tell me.\" Then he rode over to see Allah's Messenger (ﷺ) at Medina, and asked him about it. Allah's Messenger (ﷺ) said, \"How can you keep her as a wife when it has been said (that she is your foster-sister)?\" Then `Uqba divorced her, and she married another man",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1nM4w-BNLkSCzG3qTa6KK_xmDEzUbRMRu",
+      "player": "1pfZRyhE8hoWuhYyiFKxhM9vRDt5SbrjN"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 89,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، ح قَالَ أَبُو عَبْدِ اللَّهِ وَقَالَ ابْنُ وَهْبٍ أَخْبَرَنَا يُونُسُ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي ثَوْرٍ، عَنْ عَبْدِ اللَّهِ بْنِ عَبَّاسٍ، عَنْ عُمَرَ،",
+     "matn": "قَالَ كُنْتُ أَنَا وَجَارٌ، لِي مِنَ الأَنْصَارِ فِي بَنِي أُمَيَّةَ بْنِ زَيْدٍ، وَهْىَ مِنْ عَوَالِي الْمَدِينَةِ، وَكُنَّا نَتَنَاوَبُ النُّزُولَ عَلَى رَسُولِ اللَّهِ ﷺ يَنْزِلُ يَوْمًا وَأَنْزِلُ يَوْمًا، فَإِذَا نَزَلْتُ جِئْتُهُ بِخَبَرِ ذَلِكَ الْيَوْمِ مِنَ الْوَحْىِ وَغَيْرِهِ، وَإِذَا نَزَلَ فَعَلَ مِثْلَ ذَلِكَ، فَنَزَلَ صَاحِبِي الأَنْصَارِيُّ يَوْمَ نَوْبَتِهِ، فَضَرَبَ بَابِي ضَرْبًا شَدِيدًا. فَقَالَ أَثَمَّ هُوَ فَفَزِعْتُ فَخَرَجْتُ إِلَيْهِ فَقَالَ قَدْ حَدَثَ أَمْرٌ عَظِيمٌ. قَالَ فَدَخَلْتُ عَلَى حَفْصَةَ فَإِذَا هِيَ تَبْكِي فَقُلْتُ طَلَّقَكُنَّ رَسُولُ اللَّهِ ﷺ قَالَتْ لاَ أَدْرِي. ثُمَّ دَخَلْتُ عَلَى النَّبِيِّ ﷺ فَقُلْتُ وَأَنَا قَائِمٌ أَطَلَّقْتَ نِسَاءَكَ قَالَ  لاَ . فَقُلْتُ اللَّهُ أَكْبَرُ.",
+     "gharib": [
+      {
+       "word": "نَتَنَاوَبُ",
+       "meaning": "نتعاقب على الحضور: يحضر أحدنا يومًا والآخر يومًا.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٥–١٨٦، شرح الحديث 89"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٨٩",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 89"
+     },
+     "en": {
+      "narrator": "`Umar",
+      "text": "My Ansari neighbor from Bani Umaiya bin Zaid who used to live at `Awali Al-Medina and I used to visit the Prophet (ﷺ) by turns. He used to go one day and I another day. When I went I used to bring the news of that day regarding the Divine Inspiration and other things, and when he went, he used to do the same for me. Once my Ansari friend, in his turn (on returning from the Prophet), knocked violently at my door and asked if I was there.\" I became horrified and came out to him. He said, \"Today a great thing has happened.\" I then went to Hafsa and saw her weeping. I asked her, \"Did Allah's Messenger (ﷺ) divorce you all?\" She replied, \"I do not know.\" Then, I entered upon the Prophet (ﷺ) and said while standing, \"Have you divorced your wives?\" The Prophet (ﷺ) replied in the negative. On that I said, \"Allahu-Akbar (Allah is Greater).\" (See Hadith No. 119, Vol. 3 for details)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1j1hXHAv5HbpaWqYD1J9JqcvvoNpAPuWV",
+      "player": "1UKybVpAx1Yy0j78wia3vG_H6Ntzi8_D9"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 90,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ كَثِيرٍ، قَالَ أَخْبَرَنَا سُفْيَانُ، عَنِ ابْنِ أَبِي خَالِدٍ، عَنْ قَيْسِ بْنِ أَبِي حَازِمٍ، عَنْ أَبِي مَسْعُودٍ الأَنْصَارِيِّ، قَالَ قَالَ رَجُلٌ يَا رَسُولَ اللَّهِ، لاَ أَكَادُ أُدْرِكُ الصَّلاَةَ مِمَّا يُطَوِّلُ بِنَا فُلاَنٌ، فَمَا رَأَيْتُ النَّبِيَّ ﷺ فِي مَوْعِظَةٍ أَشَدَّ غَضَبًا مِنْ يَوْمِئِذٍ فَقَالَ",
+     "matn": "أَيُّهَا النَّاسُ، إِنَّكُمْ مُنَفِّرُونَ، فَمَنْ صَلَّى بِالنَّاسِ فَلْيُخَفِّفْ، فَإِنَّ فِيهِمُ الْمَرِيضَ وَالضَّعِيفَ وَذَا الْحَاجَةِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٠",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 90"
+     },
+     "en": {
+      "narrator": "Abu Mas`ud Al-Ansari",
+      "text": "Once a man said to Allah's Messenger (ﷺ) \"O Allah's Messenger (ﷺ)! I may not attend the (compulsory congregational) prayer because so and so (the Imam) prolongs the prayer when he leads us for it. The narrator added: \"I never saw the Prophet (ﷺ) more furious in giving advice than he was on that day. The Prophet said, \"O people! Some of you make others dislike good deeds (the prayers). So whoever leads the people in prayer should shorten it because among them there are the sick the weak and the needy (having some jobs to do)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1walXDwhIDRxVMOFGXEuIQqZCU-V01C6U",
+      "player": "1RjcZBaACZdcj5RnktbaasSqv5lfz5Gm8"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 91,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ، قَالَ حَدَّثَنَا أَبُو عَامِرٍ، قَالَ حَدَّثَنَا سُلَيْمَانُ بْنُ بِلاَلٍ الْمَدِينِيُّ، عَنْ رَبِيعَةَ بْنِ أَبِي عَبْدِ الرَّحْمَنِ، عَنْ يَزِيدَ، مَوْلَى الْمُنْبَعِثِ عَنْ زَيْدِ بْنِ خَالِدٍ الْجُهَنِيِّ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ سَأَلَهُ رَجُلٌ عَنِ اللُّقَطَةِ فَقَالَ  اعْرِفْ وِكَاءَهَا ـ أَوْ قَالَ وِعَاءَهَا ـ وَعِفَاصَهَا، ثُمَّ عَرِّفْهَا سَنَةً، ثُمَّ اسْتَمْتِعْ بِهَا، فَإِنْ جَاءَ رَبُّهَا فَأَدِّهَا إِلَيْهِ . قَالَ فَضَالَّةُ الإِبِلِ فَغَضِبَ حَتَّى احْمَرَّتْ وَجْنَتَاهُ ـ أَوْ قَالَ احْمَرَّ وَجْهُهُ ـ فَقَالَ  وَمَا لَكَ وَلَهَا مَعَهَا سِقَاؤُهَا وَحِذَاؤُهَا، تَرِدُ الْمَاءَ، وَتَرْعَى الشَّجَرَ، فَذَرْهَا حَتَّى يَلْقَاهَا رَبُّهَا . قَالَ فَضَالَّةُ الْغَنَمِ قَالَ  لَكَ أَوْ لأَخِيكَ أَوْ لِلذِّئْبِ .",
+     "gharib": [
+      {
+       "word": "اللُّقَطَةِ",
+       "meaning": "اسم الشىء الذى تجده مُلْقى فتأخذه .",
+       "source": "المصباح المنير لقط"
+      },
+      {
+       "word": "وِكَاءَهَا",
+       "meaning": "ما يربط به وعاء المال.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٧، شرح الحديث 91"
+      },
+      {
+       "word": "وَعِفَاصَهَا",
+       "meaning": "وعاءها الذي تحفظ فيه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٧، شرح الحديث 91"
+      },
+      {
+       "word": "فَضَالَّةُ",
+       "meaning": "الضالَّة : الضائعة من كل ما يقتنى من الحيوان وغيره .",
+       "source": "النهاية ضلل"
+      },
+      {
+       "word": "وَجْنَتَاهُ",
+       "meaning": "مثنى وجنة وهى أعلى الخد .",
+       "source": "النهاية وجن"
+      },
+      {
+       "word": "سِقَاؤُهَا",
+       "meaning": "أجوافها التي تستوعب الماء فيكفيها أيامًا.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٧، شرح الحديث 91"
+      },
+      {
+       "word": "وَحِذَاؤُهَا",
+       "meaning": "خفها الذي تمشي به.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٧، شرح الحديث 91"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩١",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 91"
+     },
+     "en": {
+      "narrator": "Zaid bin Khalid Al-Juhani",
+      "text": "A man asked the Prophet (ﷺ) about the picking up of a \"Luqata\" (fallen lost thing). The Prophet (ﷺ) replied, \"Recognize and remember its tying material and its container, and make public announcement (about it) for one year, then utilize it but give it to its owner if he comes.\" Then the person asked about the lost camel. On that, the Prophet (ﷺ) got angry and his cheeks or his Face became red and he said, \"You have no concern with it as it has its water container, and its feet and it will reach water, and eat (the leaves) of trees till its owner finds it.\" The man then asked about the lost sheep. The Prophet (ﷺ) replied, \"It is either for you, for your brother (another person) or for the wolf",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1tKO_Ifn4HeBAT4jB91oluMhfQIYP0xY-",
+      "player": "1inXJtwB5Zq1rs6d582BE-ElqT1UIJVhY"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 92,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ الْعَلاَءِ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، عَنْ بُرَيْدٍ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى، قَالَ سُئِلَ النَّبِيُّ ﷺ عَنْ أَشْيَاءَ كَرِهَهَا، فَلَمَّا أُكْثِرَ عَلَيْهِ غَضِبَ، ثُمَّ قَالَ لِلنَّاسِ",
+     "matn": "سَلُونِي عَمَّا شِئْتُمْ . قَالَ رَجُلٌ مَنْ أَبِي قَالَ  أَبُوكَ حُذَافَةُ . فَقَامَ آخَرُ فَقَالَ مَنْ أَبِي يَا رَسُولَ اللَّهِ فَقَالَ  أَبُوكَ سَالِمٌ مَوْلَى شَيْبَةَ . فَلَمَّا رَأَى عُمَرُ مَا فِي وَجْهِهِ قَالَ يَا رَسُولَ اللَّهِ، إِنَّا نَتُوبُ إِلَى اللَّهِ عَزَّ وَجَلَّ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٢",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 92"
+     },
+     "en": {
+      "narrator": "Abu Musa",
+      "text": "The Prophet (ﷺ) was asked about things which he did not like, but when the questioners insisted, the Prophet got angry. He then said to the people, \"Ask me anything you like.\" A man asked, \"Who is my father?\" The Prophet (ﷺ) replied, \"Your father is Hudhafa.\" Then another man got up and said, \"Who is my father, O Allah's Messenger (ﷺ) ?\" He replied, \"Your father is Salim, Maula (the freed slave) of Shaiba.\" So when `Umar saw that (the anger) on the face of the Prophet (ﷺ) he said, \"O Allah's Messenger (ﷺ)! We repent to Allah (Our offending you)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1d9X699Y2ofax4DSK1yzEs5oJb8BfQ_dH",
+      "player": "1t6Qc1Y8lpKbiqplNi8GZ-henoHClVDJh"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 93,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي أَنَسُ بْنُ مَالِكٍ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ خَرَجَ، فَقَامَ عَبْدُ اللَّهِ بْنُ حُذَافَةَ فَقَالَ مَنْ أَبِي فَقَالَ  أَبُوكَ حُذَافَةُ . ثُمَّ أَكْثَرَ أَنْ يَقُولَ  سَلُونِي . فَبَرَكَ عُمَرُ عَلَى رُكْبَتَيْهِ فَقَالَ رَضِينَا بِاللَّهِ رَبًّا، وَبِالإِسْلاَمِ دِينًا، وَبِمُحَمَّدٍ ﷺ نَبِيًّا، فَسَكَتَ.",
+     "gharib": [
+      {
+       "word": "فَبَرَكَ",
+       "meaning": "جلس على ركبتيه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٨، شرح الحديث 93"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٣",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 93"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "One day Allah's Messenger (ﷺ) came out (before the people) and `Abdullah bin Hudhafa stood up and asked (him) \"Who is my father?\" The Prophet (ﷺ) replied, \"Your father is Hudhafa.\" The Prophet (ﷺ) told them repeatedly (in anger) to ask him anything they liked. `Umar knelt down before the Prophet (ﷺ) and said thrice, \"We accept Allah as (our) Lord and Islam as (our) religion and Muhammad as (our) Prophet.\" After that the Prophet (ﷺ) became silent",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1MSBnWGnxdceu0j9DGljgqSxBQmIY8TVo",
+      "player": "1GxiONzid1aiECe07KW85L-GtNhj3_omP"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 94,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدَةُ، قَالَ حَدَّثَنَا عَبْدُ الصَّمَدِ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا ثُمَامَةُ بْنُ عَبْدِ اللَّهِ، عَنْ أَنَسٍ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ أَنَّهُ كَانَ إِذَا سَلَّمَ سَلَّمَ ثَلاَثًا، وَإِذَا تَكَلَّمَ بِكَلِمَةٍ أَعَادَهَا ثَلاَثًا.",
+     "gharib": [
+      {
+       "word": "بِكَلِمَةٍ",
+       "meaning": "بجملة مفيدة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٩، شرح الحديث 94"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٤",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 94"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "Whenever the Prophet (ﷺ) asked permission to enter, he knocked the door thrice with greeting and whenever he spoke a sentence (said a thing) he used to repeat it thrice. (See Hadith No. 261, Vol)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
