@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 166,
+   "last": 170,
    "hadith": [
     {
      "n": 135,
@@ -7187,6 +7187,172 @@
       },
       "id": "1jWRUq1S133da10GfYWbuX9yXS24vSPAi",
       "player": "10WwjlZIXHRkJxl05rYjPhGYDsjl8z3u_"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 167,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنَا خَالِدٌ، عَنْ حَفْصَةَ بِنْتِ سِيرِينَ، عَنْ أُمِّ عَطِيَّةَ، قَالَتْ قَالَ النَّبِيُّ ﷺ لَهُنَّ فِي غُسْلِ ابْنَتِهِ",
+     "matn": "ابْدَأْنَ بِمَيَامِنِهَا وَمَوَاضِعِ الْوُضُوءِ مِنْهَا .",
+     "gharib": [
+      {
+       "word": "بِمَيَامِنِهَا",
+       "meaning": "بالجهات اليمنى منها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٦٩–٢٧٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٦٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 167"
+     },
+     "en": {
+      "narrator": "Um-`Atiya",
+      "text": "That the Prophet (ﷺ) at the time of washing his deceased daughter had said to them, \"Start from the right side beginning with those parts which are washed in ablution",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1AO9By4Zm3bM0tvv54btaV2_knAGc00QG",
+      "player": "1YIV6Lq-KM4aknl1PoBHxqfZ761jGW79D"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 168,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا حَفْصُ بْنُ عُمَرَ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ أَخْبَرَنِي أَشْعَثُ بْنُ سُلَيْمٍ، قَالَ سَمِعْتُ أَبِي، عَنْ مَسْرُوقٍ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كَانَ النَّبِيُّ ﷺ يُعْجِبُهُ التَّيَمُّنُ فِي تَنَعُّلِهِ وَتَرَجُّلِهِ وَطُهُورِهِ وَفِي شَأْنِهِ كُلِّهِ.",
+     "gharib": [
+      {
+       "word": "وَتَرَجُّلِهِ",
+       "meaning": "تسريح شعره ودهنه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٦٩."
+      },
+      {
+       "word": "التَّيَمُّنُ",
+       "meaning": "البداءة باليمين في المواضع المشروعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٦٩–٢٧٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٦٨",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 168"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) used to like to start from the right side on wearing shoes, combing his hair and cleaning or washing himself and on doing anything else",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Cim3kO7If5PQ0u0GPDiQopcaNGxIzNcH",
+      "player": "17b22b4lHRepnlz1JQ41m5PrBMMI4iWWh"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 169,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ،",
+     "matn": "عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ، أَنَّهُ قَالَ رَأَيْتُ رَسُولَ اللَّهِ ﷺ وَحَانَتْ صَلاَةُ الْعَصْرِ، فَالْتَمَسَ النَّاسُ الْوَضُوءَ فَلَمْ يَجِدُوهُ، فَأُتِيَ رَسُولُ اللَّهِ ﷺ بِوَضُوءٍ، فَوَضَعَ رَسُولُ اللَّهِ ﷺ فِي ذَلِكَ الإِنَاءِ يَدَهُ، وَأَمَرَ النَّاسَ أَنْ يَتَوَضَّئُوا مِنْهُ. قَالَ فَرَأَيْتُ الْمَاءَ يَنْبُعُ مِنْ تَحْتِ أَصَابِعِهِ حَتَّى تَوَضَّئُوا مِنْ عِنْدِ آخِرِهِمْ.",
+     "gharib": [
+      {
+       "word": "حَانَتْ",
+       "meaning": "قرب وقتها وحضر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٧١."
+      },
+      {
+       "word": "الْوَضُوءَ",
+       "meaning": "الماء المعد للوضوء؛ ضبطه الشارح بفتح الواو في هذا الموضع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٧١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٦٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 169"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "I saw Allah's Messenger (ﷺ) when the `Asr prayer was due and the people searched for water to perform ablution but they could not find it. Later on (a pot full of) water for ablution was brought to Allah's Apostle. He put his hand in that pot and ordered the people to perform ablution from it. I saw the water springing out from underneath his fingers till all of them performed the ablution (it was one of the miracles of the Prophet)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 170,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مَالِكُ بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا إِسْرَائِيلُ، عَنْ عَاصِمٍ، عَنِ ابْنِ سِيرِينَ، قَالَ قُلْتُ لِعَبِيدَةَ عِنْدَنَا مِنْ شَعَرِ النَّبِيِّ ﷺ أَصَبْنَاهُ مِنْ قِبَلِ أَنَسٍ،",
+     "matn": "أَوْ مِنْ قِبَلِ أَهْلِ أَنَسٍ فَقَالَ لأَنْ تَكُونَ عِنْدِي شَعَرَةٌ مِنْهُ أَحَبُّ إِلَىَّ مِنَ الدُّنْيَا وَمَا فِيهَا.",
+     "gharib": [
+      {
+       "word": "أَصَبْنَاهُ",
+       "meaning": "حصل لنا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٧٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 170"
+     },
+     "en": {
+      "narrator": "Ibn Seereen",
+      "text": "I said to `Abida, \"I have some of the hair of the Prophet (ﷺ) which I got from Anas or from his family.\" `Abida replied. \"No doubt if I had a single hair of that it would have been dearer to me than the whole world and whatever is in it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1L1lToGa8hUKSntzrLpDdrl-3fWxYJXki",
+      "player": "1m2rStU-0YPPwB5wYJypnlpPbbdGbpHsk"
      },
      "video": null,
      "sharh": null,
