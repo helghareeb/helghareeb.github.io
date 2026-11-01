@@ -444,7 +444,7 @@
    "ar": "كتاب الإيمان",
    "en": "Belief",
    "first": 8,
-   "last": 23,
+   "last": 30,
    "hadith": [
     {
      "n": 8,
@@ -1021,7 +1021,13 @@
      },
      "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ عُبَيْدِ اللَّهِ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ،",
      "matn": "عَنْ صَالِحٍ، عَنِ ابْنِ شِهَابٍ، عَنْ أَبِي أُمَامَةَ بْنِ سَهْلٍ، أَنَّهُ سَمِعَ أَبَا سَعِيدٍ الْخُدْرِيَّ، يَقُولُ قَالَ رَسُولُ اللَّهِ ﷺ  بَيْنَا أَنَا نَائِمٌ رَأَيْتُ النَّاسَ يُعْرَضُونَ عَلَىَّ، وَعَلَيْهِمْ قُمُصٌ مِنْهَا مَا يَبْلُغُ الثُّدِيَّ، وَمِنْهَا مَا دُونَ ذَلِكَ، وَعُرِضَ عَلَىَّ عُمَرُ بْنُ الْخَطَّابِ وَعَلَيْهِ قَمِيصٌ يَجُرُّهُ . قَالُوا فَمَا أَوَّلْتَ ذَلِكَ يَا رَسُولَ اللَّهِ قَالَ  الدِّينَ .",
-     "gharib": [],
+     "gharib": [
+      {
+       "word": "قُمُصٌ",
+       "meaning": "جمع قميص.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١٢/٣٩٥، شرح الحديث ٧٠٠٨، وهو مكرر الحديث ٢٣"
+      }
+     ],
      "grade": {
       "ar": "صحيح",
       "en": "Sahih"
@@ -1042,6 +1048,299 @@
       },
       "id": "1nnJi3IZyz7r8JRvl_q_vZ0aS5V19gysM",
       "player": "1iRN9O4uj1d547ON-dsZeN_Ia7FnrbeVR"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 24,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكُ بْنُ أَنَسٍ، عَنِ ابْنِ شِهَابٍ، عَنْ سَالِمِ بْنِ عَبْدِ اللَّهِ، عَنْ أَبِيهِ، أَنَّ رَسُولَ اللَّهِ ﷺ مَرَّ عَلَى رَجُلٍ مِنَ الأَنْصَارِ وَهُوَ يَعِظُ أَخَاهُ فِي الْحَيَاءِ، فَقَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "دَعْهُ فَإِنَّ الْحَيَاءَ مِنَ الإِيمَانِ .",
+     "gharib": [
+      {
+       "word": "الْحَيَاءُ",
+       "meaning": "خلق يحمل على اجتناب القبيح وعدم التقصير في الحقوق.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٧٤، شرح الحديث ٢٤"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٤",
+      "en": "Sahih al-Bukhari, Belief, hadith 24"
+     },
+     "en": {
+      "narrator": "'Abdullah (bin 'Umar)",
+      "text": "Once Allah's Messenger (ﷺ) passed by an Ansari (man) who was admonishing his brother regarding Haya'. On that Allah's Messenger (ﷺ) said, \"Leave him as Haya' is a part of faith.\" (See Hadith)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "10FKtAaQ4puek_8Pplz_jfZKEYAv9LPuC",
+      "player": "1uMc336FMzMWv_bohu9-1W-krLKyky-zv"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 25,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ الْمُسْنَدِيُّ، قَالَ حَدَّثَنَا أَبُو رَوْحٍ الْحَرَمِيُّ بْنُ عُمَارَةَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ وَاقِدِ بْنِ مُحَمَّدٍ، قَالَ سَمِعْتُ أَبِي يُحَدِّثُ، عَنِ ابْنِ عُمَرَ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  أُمِرْتُ أَنْ أُقَاتِلَ النَّاسَ حَتَّى يَشْهَدُوا أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَيُقِيمُوا الصَّلاَةَ، وَيُؤْتُوا الزَّكَاةَ، فَإِذَا فَعَلُوا ذَلِكَ عَصَمُوا مِنِّي دِمَاءَهُمْ وَأَمْوَالَهُمْ إِلاَّ بِحَقِّ الإِسْلاَمِ، وَحِسَابُهُمْ عَلَى اللَّهِ .",
+     "gharib": [
+      {
+       "word": "عَصَمُوا",
+       "meaning": "حفظوا ومنعوا؛ أي صارت دماؤهم وأموالهم محرمة الاعتداء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٧٦–٧٧، شرح الحديث ٢٥"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٥",
+      "en": "Sahih al-Bukhari, Belief, hadith 25"
+     },
+     "en": {
+      "narrator": "Ibn 'Umar",
+      "text": "Allah's Messenger (ﷺ) said: \"I have been ordered (by Allah) to fight against the people until they testify that none has the right to be worshipped but Allah and that Muhammad is Allah's Messenger (ﷺ), and offer the prayers perfectly and give the obligatory charity, so if they perform that, then they save their lives and property from me except for Islamic laws and then their reckoning (accounts) will be done by Allah",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1-1hWhAtUR78wKd__NkIZ-GASjuyV8pUy",
+      "player": "1coA-k3_dW5UTzok33Px8fv_UU52Kb8-Z"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 26,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَحْمَدُ بْنُ يُونُسَ، وَمُوسَى بْنُ إِسْمَاعِيلَ، قَالاَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، قَالَ حَدَّثَنَا ابْنُ شِهَابٍ، عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ سُئِلَ أَىُّ الْعَمَلِ أَفْضَلُ فَقَالَ  إِيمَانٌ بِاللَّهِ وَرَسُولِهِ . قِيلَ ثُمَّ مَاذَا قَالَ  الْجِهَادُ فِي سَبِيلِ اللَّهِ . قِيلَ ثُمَّ مَاذَا قَالَ  حَجٌّ مَبْرُورٌ .",
+     "gharib": [
+      {
+       "word": "مَبْرُورٌ",
+       "meaning": "مقبول؛ ومن تفسيره أنه لا يخالطه إثم.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٧٨–٧٩، شرح الحديث ٢٦"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٦",
+      "en": "Sahih al-Bukhari, Belief, hadith 26"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) was asked, \"What is the best deed?\" He replied, \"To believe in Allah and His Apostle (Muhammad). The questioner then asked, \"What is the next (in goodness)? He replied, \"To participate in Jihad (religious fighting) in Allah's Cause.\" The questioner again asked, \"What is the next (in goodness)?\" He replied, \"To perform Hajj (Pilgrim age to Mecca) 'Mubrur, (which is accepted by Allah and is performed with the intention of seeking Allah's pleasure only and not to show off and without committing a sin and in accordance with the traditions of the Prophet)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 27,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي عَامِرُ بْنُ سَعْدِ بْنِ أَبِي وَقَّاصٍ،",
+     "matn": "عَنْ سَعْدٍ، رضى الله عنه أَنَّ رَسُولَ اللَّهِ ﷺ أَعْطَى رَهْطًا وَسَعْدٌ جَالِسٌ، فَتَرَكَ رَسُولُ اللَّهِ ﷺ رَجُلاً هُوَ أَعْجَبُهُمْ إِلَىَّ فَقُلْتُ يَا رَسُولَ اللَّهِ مَا لَكَ عَنْ فُلاَنٍ فَوَاللَّهِ إِنِّي لأَرَاهُ مُؤْمِنًا. فَقَالَ  أَوْ مُسْلِمًا . فَسَكَتُّ قَلِيلاً، ثُمَّ غَلَبَنِي مَا أَعْلَمُ مِنْهُ فَعُدْتُ لِمَقَالَتِي فَقُلْتُ مَا لَكَ عَنْ فُلاَنٍ فَوَاللَّهِ إِنِّي لأَرَاهُ مُؤْمِنًا فَقَالَ  أَوْ مُسْلِمًا . ثُمَّ غَلَبَنِي مَا أَعْلَمُ مِنْهُ فَعُدْتُ لِمَقَالَتِي وَعَادَ رَسُولُ اللَّهِ ﷺ ثُمَّ قَالَ  يَا سَعْدُ، إِنِّي لأُعْطِي الرَّجُلَ وَغَيْرُهُ أَحَبُّ إِلَىَّ مِنْهُ، خَشْيَةَ أَنْ يَكُبَّهُ اللَّهُ فِي النَّارِ . وَرَوَاهُ يُونُسُ وَصَالِحٌ وَمَعْمَرٌ وَابْنُ أَخِي الزُّهْرِيِّ عَنِ الزُّهْرِيِّ.",
+     "gharib": [
+      {
+       "word": "يَكُبَّهُ",
+       "meaning": "يسقطه .",
+       "source": "مرقاة المفاتيح 11 / 259"
+      },
+      {
+       "word": "رهطا",
+       "meaning": "الرهط من الرجال ما دون العشرة . وقيل : إلى الأربعين ولا تكون فيهم امرأة ولا واحد له من لفظه .",
+       "source": "النهاية رهط"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٧",
+      "en": "Sahih al-Bukhari, Belief, hadith 27"
+     },
+     "en": {
+      "narrator": "Sa'd",
+      "text": "Allah's Messenger (ﷺ) distributed (Zakat) amongst (a group of) people while I was sitting there but Allah's Messenger (ﷺ) left a man whom I thought the best of the lot. I asked, \"O Allah's Messenger (ﷺ)! Why have you left that person? By Allah I regard him as a faithful believer.\" The Prophet (ﷺ) commented: \"Or merely a Muslim.\" I remained quiet for a while, but could not help repeating my question because of what I knew about him. And then asked Allah's Messenger (ﷺ), \"Why have you left so and so? By Allah! He is a faithful believer.\" The Prophet (ﷺ) again said, \"Or merely a Muslim.\" And I could not help repeating my question because of what I knew about him. Then the Prophet (ﷺ) said, \"O Sa'd! I give to a person while another is dearer to me, for fear that he might be thrown on his face in the Fire by Allah",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1sRWxvnkepKGMbwsS6SLVSu6UEziWKqsF",
+      "player": "1f8Lyhkxxs2bbEWInSWpGijwH8LVrIcDG"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 28,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ يَزِيدَ بْنِ أَبِي حَبِيبٍ، عَنْ أَبِي الْخَيْرِ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو،",
+     "matn": "أَنَّ رَجُلاً، سَأَلَ رَسُولَ اللَّهِ ﷺ أَىُّ الإِسْلاَمِ خَيْرٌ قَالَ  تُطْعِمُ الطَّعَامَ، وَتَقْرَأُ السَّلاَمَ عَلَى مَنْ عَرَفْتَ وَمَنْ لَمْ تَعْرِفْ .",
+     "gharib": [
+      {
+       "word": "تَقْرَأُ",
+       "meaning": "تقول وتُلقي السلام.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٥٦، شرح الحديث ١٢"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٨",
+      "en": "Sahih al-Bukhari, Belief, hadith 28"
+     },
+     "en": {
+      "narrator": "'Abdullah bin 'Amr",
+      "text": "A person asked Allah's Messenger (ﷺ), \"What (sort of) deeds in or (what qualities of) Islam are good?\" He replied, \"To feed (the poor) and greet those whom you know and those whom you don't know",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1DAQx6VsS_N9Va5OPEndUzfrnIIsgkpXr",
+      "player": "1ktW7mE4KlZOe_3jsuXctsTL0mamLHaMr"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 29,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ زَيْدِ بْنِ أَسْلَمَ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنِ ابْنِ عَبَّاسٍ،",
+     "matn": "قَالَ قَالَ النَّبِيُّ ﷺ  أُرِيتُ النَّارَ فَإِذَا أَكْثَرُ أَهْلِهَا النِّسَاءُ يَكْفُرْنَ . قِيلَ أَيَكْفُرْنَ بِاللَّهِ قَالَ  يَكْفُرْنَ الْعَشِيرَ، وَيَكْفُرْنَ الإِحْسَانَ، لَوْ أَحْسَنْتَ إِلَى إِحْدَاهُنَّ الدَّهْرَ ثُمَّ رَأَتْ مِنْكَ شَيْئًا قَالَتْ مَا رَأَيْتُ مِنْكَ خَيْرًا قَطُّ .",
+     "gharib": [
+      {
+       "word": "الْعَشِيرَ",
+       "meaning": "الزوج .",
+       "source": "النهاية عشر"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٢٩",
+      "en": "Sahih al-Bukhari, Belief, hadith 29"
+     },
+     "en": {
+      "narrator": "Ibn 'Abbas",
+      "text": "The Prophet (ﷺ) said: \"I was shown the Hell-fire and that the majority of its dwellers were women who were ungrateful.\" It was asked, \"Do they disbelieve in Allah?\" (or are they ungrateful to Allah?) He replied, \"They are ungrateful to their husbands and are ungrateful for the favors and the good (charitable deeds) done to them. If you have always been good (benevolent) to one of them and then she sees something in you (not of her liking), she will say, 'I have never received any good from you",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 30,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سُلَيْمَانُ بْنُ حَرْبٍ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ وَاصِلٍ الأَحْدَبِ، عَنِ الْمَعْرُورِ، قَالَ لَقِيتُ أَبَا ذَرٍّ بِالرَّبَذَةِ،",
+     "matn": "وَعَلَيْهِ حُلَّةٌ، وَعَلَى غُلاَمِهِ حُلَّةٌ، فَسَأَلْتُهُ عَنْ ذَلِكَ، فَقَالَ إِنِّي سَابَبْتُ رَجُلاً، فَعَيَّرْتُهُ بِأُمِّهِ، فَقَالَ لِيَ النَّبِيُّ ﷺ  يَا أَبَا ذَرٍّ أَعَيَّرْتَهُ بِأُمِّهِ إِنَّكَ امْرُؤٌ فِيكَ جَاهِلِيَّةٌ، إِخْوَانُكُمْ خَوَلُكُمْ، جَعَلَهُمُ اللَّهُ تَحْتَ أَيْدِيكُمْ، فَمَنْ كَانَ أَخُوهُ تَحْتَ يَدِهِ فَلْيُطْعِمْهُ مِمَّا يَأْكُلُ، وَلْيُلْبِسْهُ مِمَّا يَلْبَسُ، وَلاَ تُكَلِّفُوهُمْ مَا يَغْلِبُهُمْ، فَإِنْ كَلَّفْتُمُوهُمْ فَأَعِينُوهُمْ .",
+     "gharib": [
+      {
+       "word": "خَوَلُكُمْ",
+       "meaning": "الخَوَل : حشم الرجل وأتباعه .",
+       "source": "النهاية خول"
+      },
+      {
+       "word": "حلة",
+       "meaning": "هى ثياب ذات خطوط . والحلة لا تكون إلا من ثوبين . وقيل : إنما تكون حلة إذا كانت جديدة . وقيل : الحلل برود اليمن .",
+       "source": "مقدمة الفتح ١/ ١١٣"
+      },
+      {
+       "word": "سَابَبْتُ",
+       "meaning": "وقع بيني وبينه سباب وشتم.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٨٦، شرح الحديث ٣٠"
+      },
+      {
+       "word": "فَعَيَّرْتُهُ",
+       "meaning": "فنسبته إلى العار وعِبته.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٨٦، شرح الحديث ٣٠"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٠",
+      "en": "Sahih al-Bukhari, Belief, hadith 30"
+     },
+     "en": {
+      "narrator": "Al-Ma'rur",
+      "text": "At Ar-Rabadha I met Abu Dhar who was wearing a cloak, and his slave, too, was wearing a similar one. I asked about the reason for it. He replied, \"I abused a person by calling his mother with bad names.\" The Prophet said to me, 'O Abu Dhar! Did you abuse him by calling his mother with bad names You still have some characteristics of ignorance. Your slaves are your brothers and Allah has put them under your command. So whoever has a brother under his command should feed him of what he eats and dress him of what he wears. Do not ask them (slaves) to do things beyond their capacity (power) and if you do so, then help them",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1DSR0S5ATz_kIj5e-N-2rf1c4aEiKnVn5",
+      "player": "1I93-ru4hmp5fAgFO4kjNDUk5LssY8hEi"
      },
      "video": null,
      "sharh": null,
