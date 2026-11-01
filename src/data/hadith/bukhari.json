@@ -5821,6 +5821,366 @@
      "fawaid": []
     }
    ]
+  },
+  {
+   "slug": "al-wudu",
+   "ar": "كتاب الوضوء",
+   "en": "Ablutions (Wudu')",
+   "first": 135,
+   "last": 142,
+   "hadith": [
+    {
+     "n": 135,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْحَاقُ بْنُ إِبْرَاهِيمَ الْحَنْظَلِيُّ، قَالَ أَخْبَرَنَا عَبْدُ الرَّزَّاقِ، قَالَ أَخْبَرَنَا مَعْمَرٌ، عَنْ هَمَّامِ بْنِ مُنَبِّهٍ، أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ،",
+     "matn": "يَقُولُ قَالَ رَسُولُ اللَّهِ ﷺ  لاَ تُقْبَلُ صَلاَةُ مَنْ أَحْدَثَ حَتَّى يَتَوَضَّأَ . قَالَ رَجُلٌ مِنْ حَضْرَمَوْتَ مَا الْحَدَثُ يَا أَبَا هُرَيْرَةَ قَالَ فُسَاءٌ أَوْ ضُرَاطٌ.",
+     "gharib": [
+      {
+       "word": "فُسَاءٌ",
+       "meaning": "خروج الريح من الدبر بلا صوت.",
+       "source": "العيني، عمدة القاري، ٢/٢٤٤، بيان لغات الحديث."
+      },
+      {
+       "word": "ضُرَاطٌ",
+       "meaning": "خروج الريح من الدبر مع صوت.",
+       "source": "العيني، عمدة القاري، ٢/٢٤٤، بيان لغات الحديث."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٣٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 135"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"The prayer of a person who does Hadath (passes urine, stool or wind) is not accepted till he performs the ablution.\" A person from Hadaramout asked Abu Huraira, \"What is 'Hadath'?\" Abu Huraira replied, \" 'Hadath' means the passing of wind",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1qSIjr_6y4neShGSPzKEe1oZxJfpQFQ1G",
+      "player": "19C-Vou8XY7i4-5xAChXrkDeE9ysfuzdG"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 136,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ خَالِدٍ، عَنْ سَعِيدِ بْنِ أَبِي هِلاَلٍ، عَنْ نُعَيْمٍ الْمُجْمِرِ، قَالَ رَقِيتُ مَعَ أَبِي هُرَيْرَةَ عَلَى ظَهْرِ الْمَسْجِدِ،",
+     "matn": "فَتَوَضَّأَ فَقَالَ إِنِّي سَمِعْتُ النَّبِيَّ ﷺ يَقُولُ  إِنَّ أُمَّتِي يُدْعَوْنَ يَوْمَ الْقِيَامَةِ غُرًّا مُحَجَّلِينَ مِنْ آثَارِ الْوُضُوءِ، فَمَنِ اسْتَطَاعَ مِنْكُمْ أَنْ يُطِيلَ غُرَّتَهُ فَلْيَفْعَلْ .",
+     "gharib": [
+      {
+       "word": "غُرًّا",
+       "meaning": "ذوي نور في الوجوه؛ وأصل الغرة بياض في جبهة الفرس.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٦."
+      },
+      {
+       "word": "غُرَّتَهُ",
+       "meaning": "الغُرَّة : بياض الوجه ، يريد بياض الوجه بنور الوضوء يوم القيامة .",
+       "source": "النهاية غرر"
+      },
+      {
+       "word": "مُحَجَّلِينَ",
+       "meaning": "ذوي نور في الأطراف من آثار الوضوء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٦."
+      },
+      {
+       "word": "رَقِيتُ",
+       "meaning": "صعدت.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٣٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 136"
+     },
+     "en": {
+      "narrator": "Nu`am Al-Mujmir",
+      "text": "Once I went up the roof of the mosque, along with Abu Huraira. He performed ablution and said, \"I heard the Prophet (ﷺ) saying, \"On the Day of Resurrection, my followers will be called \"Al-Ghurr-ul- Muhajjalun\" from the trace of ablution and whoever can increase the area of his radiance should do so (i.e. by performing ablution regularly)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1VH63y2y1lFEQV1I1JteU5RNoL5tvOrUi",
+      "player": "1uVe3t2xcDHWdAAlzvsIOZrwDxAK-n5V2"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 137,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيٌّ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَدَّثَنَا الزُّهْرِيُّ، عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ، وَعَنْ عَبَّادِ بْنِ تَمِيمٍ، عَنْ عَمِّهِ، أَنَّهُ شَكَا إِلَى رَسُولِ اللَّهِ ﷺ الرَّجُلُ الَّذِي يُخَيَّلُ إِلَيْهِ أَنَّهُ يَجِدُ الشَّىْءَ فِي الصَّلاَةِ. فَقَالَ",
+     "matn": "لاَ يَنْفَتِلْ ـ أَوْ لاَ يَنْصَرِفْ ـ حَتَّى يَسْمَعَ صَوْتًا أَوْ يَجِدَ رِيحًا .",
+     "gharib": [
+      {
+       "word": "يَنْفَتِلْ",
+       "meaning": "ينصرف من الصلاة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٣٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 137"
+     },
+     "en": {
+      "narrator": "`Abbad bin Tamim",
+      "text": "My uncle asked Allah's Messenger (ﷺ) about a person who imagined to have passed wind during the prayer. Allah's Apostle replied: \"He should not leave his prayers unless he hears sound or smells something",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1LL2Cm2TvdctV1pWcoVrD_icNovHh_Lrb",
+      "player": "11Qgb8d9Kg256xeEY3beXKYJ2DR0Et43g"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 138,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ عَمْرٍو، قَالَ أَخْبَرَنِي كُرَيْبٌ، عَنِ ابْنِ عَبَّاسٍ، أَنَّ النَّبِيَّ ﷺ نَامَ حَتَّى نَفَخَ ثُمَّ صَلَّى ـ وَرُبَّمَا قَالَ اضْطَجَعَ حَتَّى نَفَخَ ـ ثُمَّ قَامَ فَصَلَّى. ثُمَّ حَدَّثَنَا بِهِ سُفْيَانُ مَرَّةً بَعْدَ مَرَّةٍ عَنْ عَمْرٍو عَنْ كُرَيْبٍ عَنِ ابْنِ عَبَّاسٍ قَالَ بِتُّ عِنْدَ خَالَتِي مَيْمُونَةَ لَيْلَةً، فَقَامَ النَّبِيُّ ﷺ مِنَ اللَّيْلِ، فَلَمَّا كَانَ فِي بَعْضِ اللَّيْلِ قَامَ النَّبِيُّ ﷺ فَتَوَضَّأَ مِنْ شَنٍّ مُعَلَّقٍ وُضُوءًا خَفِيفًا ـ يُخَفِّفُهُ عَمْرٌو وَيُقَلِّلُهُ ـ وَقَامَ يُصَلِّي فَتَوَضَّأْتُ نَحْوًا مِمَّا تَوَضَّأَ، ثُمَّ جِئْتُ فَقُمْتُ عَنْ يَسَارِهِ ـ وَرُبَّمَا قَالَ سُفْيَانُ عَنْ شِمَالِهِ ـ فَحَوَّلَنِي فَجَعَلَنِي عَنْ يَمِينِهِ، ثُمَّ صَلَّى مَا شَاءَ اللَّهُ، ثُمَّ اضْطَجَعَ، فَنَامَ حَتَّى نَفَخَ، ثُمَّ أَتَاهُ الْمُنَادِي فَآذَنَهُ بِالصَّلاَةِ، فَقَامَ مَعَهُ إِلَى الصَّلاَةِ، فَصَلَّى وَلَمْ يَتَوَضَّأْ. قُلْنَا لِعَمْرٍو إِنَّ نَاسًا يَقُولُونَ إِنَّ رَسُولَ اللَّهِ ﷺ تَنَامُ عَيْنُهُ وَلاَ يَنَامُ قَلْبُهُ. قَالَ عَمْرٌو سَمِعْتُ عُبَيْدَ بْنَ عُمَيْرٍ",
+     "matn": "يَقُولُ رُؤْيَا الأَنْبِيَاءِ وَحْىٌ، ثُمَّ قَرَأَ {إِنِّي أَرَى فِي الْمَنَامِ أَنِّي أَذْبَحُكَ}.",
+     "gharib": [
+      {
+       "word": "شَنٍّ",
+       "meaning": "القربة العتيقة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٩."
+      },
+      {
+       "word": "فَآذَنَهُ",
+       "meaning": "أعلمه بالصلاة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٣٨",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 138"
+     },
+     "en": {
+      "narrator": "Kuraib",
+      "text": "Ibn `Abbas said, \"The Prophet (ﷺ) slept till he snored and then prayed (or probably lay till his breath sounds were heard and then got up and prayed).\" Ibn `Abbas added: \"I stayed overnight in the house of my aunt, Maimuna, the Prophet (ﷺ) slept for a part of the night, (See Fath-al-Bari page 249, Vol. 1), and late in the night, he got up and performed ablution from a hanging water skin, a light (perfect) ablution and stood up for the prayer. I, too, performed a similar ablution, then I went and stood on his left. He drew me to his right and prayed as much as Allah wished, and again lay and slept till his breath sounds were heard. Later on the Mu'adh-dhin (call maker for the prayer) came to him and informed him that it was time for Prayer. The Prophet (ﷺ) went with him for the prayer without performing a new ablution.\" (Sufyan said to `Amr that some people said, \"The eyes of Allah's Messenger (ﷺ) sleep but his heart does not sleep.\" `Amr replied, \"I heard `Ubaid bin `Umar saying that the dreams of Prophets were Divine Inspiration, and then he recited the verse: 'I (Abraham) see in a dream, (O my son) that I offer you in sacrifice (to Allah).\" (37.102) (See Hadith No)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1i0fnNSgRBUR0QUaXKLRdj4HI3H8ECsrW",
+      "player": "1A3FlYfQAwA1zvKltCRiethYU2UtDQ8ga"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 139,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ مُوسَى بْنِ عُقْبَةَ، عَنْ كُرَيْبٍ، مَوْلَى ابْنِ عَبَّاسٍ عَنْ أُسَامَةَ بْنِ زَيْدٍ،",
+     "matn": "أَنَّهُ سَمِعَهُ يَقُولُ دَفَعَ رَسُولُ اللَّهِ ﷺ مِنْ عَرَفَةَ حَتَّى إِذَا كَانَ بِالشِّعْبِ نَزَلَ فَبَالَ، ثُمَّ تَوَضَّأَ وَلَمْ يُسْبِغِ الْوُضُوءَ. فَقُلْتُ الصَّلاَةَ يَا رَسُولَ اللَّهِ. فَقَالَ  الصَّلاَةُ أَمَامَكَ . فَرَكِبَ، فَلَمَّا جَاءَ الْمُزْدَلِفَةَ نَزَلَ فَتَوَضَّأَ، فَأَسْبَغَ الْوُضُوءَ، ثُمَّ أُقِيمَتِ الصَّلاَةُ فَصَلَّى الْمَغْرِبَ، ثُمَّ أَنَاخَ كُلُّ إِنْسَانٍ بَعِيرَهُ فِي مَنْزِلِهِ، ثُمَّ أُقِيمَتِ الْعِشَاءُ فَصَلَّى وَلَمْ يُصَلِّ بَيْنَهُمَا.",
+     "gharib": [
+      {
+       "word": "بِالشِّعْبِ",
+       "meaning": "الطريق في الجبل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٠."
+      },
+      {
+       "word": "فَأَسْبَغَ",
+       "meaning": "أتم الوضوء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٠."
+      },
+      {
+       "word": "يُسْبِغَ",
+       "meaning": "إسباغ الوضوء : إكماله وإتمامه والمبالغة فيه .",
+       "source": "مشارق الأنوار 2 / 205"
+      },
+      {
+       "word": "دَفَعَ",
+       "meaning": "أفاض وانطلق من عرفة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٣٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 139"
+     },
+     "en": {
+      "narrator": "Usama bin Zaid",
+      "text": "Allah's Messenger (ﷺ) proceeded from `Arafat till when he reached the mountain pass, he dismounted, urinated and then performed ablution but not a perfect one. I said to him, (\"Is it the time for) the prayer, O Allah's Messenger (ﷺ)?\" He said, \"The (place of) prayer is ahead of you.\" He rode till when he reached Al-Muzdalifa, he dismounted and performed ablution and a perfect one, The (call for) Iqama was pronounced and he led the Maghrib prayer. Then everybody made his camel kneel down at its place. Then the Iqama was pronounced for the `Isha' prayer which the Prophet (ﷺ) led and no prayer was offered in between the two . prayers (`Isha' and Maghrib)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1gci1Y2TKOD4EdJcUSHyA6OX0KnJXZj5v",
+      "player": "1QMCkBXj7rgI6pHEVdIpLWrsfHSm6goYZ"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 140,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ الرَّحِيمِ، قَالَ أَخْبَرَنَا أَبُو سَلَمَةَ الْخُزَاعِيُّ، مَنْصُورُ بْنُ سَلَمَةَ قَالَ أَخْبَرَنَا ابْنُ بِلاَلٍ ـ يَعْنِي سُلَيْمَانَ ـ عَنْ زَيْدِ بْنِ أَسْلَمَ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنِ ابْنِ عَبَّاسٍ،",
+     "matn": "أَنَّهُ تَوَضَّأَ فَغَسَلَ وَجْهَهُ، ثُمَّ أَخَذَ غَرْفَةً مِنْ مَاءٍ، فَمَضْمَضَ بِهَا وَاسْتَنْشَقَ، ثُمَّ أَخَذَ غَرْفَةً مِنْ مَاءٍ، فَجَعَلَ بِهَا هَكَذَا، أَضَافَهَا إِلَى يَدِهِ الأُخْرَى، فَغَسَلَ بِهِمَا وَجْهَهُ، ثُمَّ أَخَذَ غَرْفَةً مِنْ مَاءٍ، فَغَسَلَ بِهَا يَدَهُ الْيُمْنَى، ثُمَّ أَخَذَ غَرْفَةً مِنْ مَاءٍ، فَغَسَلَ بِهَا يَدَهُ الْيُسْرَى، ثُمَّ مَسَحَ بِرَأْسِهِ، ثُمَّ أَخَذَ غَرْفَةً مِنْ مَاءٍ فَرَشَّ عَلَى رِجْلِهِ الْيُمْنَى حَتَّى غَسَلَهَا، ثُمَّ أَخَذَ غَرْفَةً أُخْرَى، فَغَسَلَ بِهَا رِجْلَهُ ـ يَعْنِي الْيُسْرَى ـ ثُمَّ قَالَ هَكَذَا رَأَيْتُ رَسُولَ اللَّهِ ﷺ يَتَوَضَّأُ.",
+     "gharib": [
+      {
+       "word": "فَرَشَّ",
+       "meaning": "سكب الماء قليلًا قليلًا حتى تحقق الغسل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 140"
+     },
+     "en": {
+      "narrator": "`Ata' bin Yasar",
+      "text": "Ibn `Abbas performed ablution and washed his face (in the following way): He ladled out a handful of water, rinsed his mouth and washed his nose with it by putting in water and then blowing it out. He then, took another handful (of water) and did like this (gesturing) joining both hands, and washed his face, took another handful of water and washed his right forearm. He again took another handful of water and washed his left forearm, and passed wet hands over his head and took another handful of water and poured it over his right foot (up to his ankles) and washed it thoroughly and similarly took another handful of water and washed thoroughly his left foot (up to the ankles) and said, \"I saw Allah's Messenger (ﷺ) performing ablution in this way",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Lih6BKxTkP1t6dxOO1UuCB0R0B5GP4pz",
+      "player": "1lDSiDQPEtBSeNIdhH82XEcuCuyHlWIls"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 141,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا جَرِيرٌ، عَنْ مَنْصُورٍ، عَنْ سَالِمِ بْنِ أَبِي الْجَعْدِ، عَنْ كُرَيْبٍ، عَنِ ابْنِ عَبَّاسٍ،",
+     "matn": "يَبْلُغُ بِهِ النَّبِيَّ ﷺ قَالَ  لَوْ أَنَّ أَحَدَكُمْ إِذَا أَتَى أَهْلَهُ قَالَ بِسْمِ اللَّهِ اللَّهُمَّ جَنِّبْنَا الشَّيْطَانَ وَجَنِّبِ الشَّيْطَانَ مَا رَزَقْتَنَا. فَقُضِيَ بَيْنَهُمَا وَلَدٌ، لَمْ يَضُرَّهُ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤١",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 141"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "The Prophet (ﷺ) said, \"If anyone of you on having sexual relations with his wife said (and he must say it before starting) 'In the name of Allah. O Allah! Protect us from Satan and also protect what you bestow upon us (i.e. the coming offspring) from Satan,' and if it is destined that they should have a child then, Satan will never be able to harm that offspring",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1pQOdYwQOdhq_Lf4zkRHiLpCjVkzDsg3a",
+      "player": "1R-iK2kqWpKoBoW_w3r9QZyJPY0MRr0PP"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 142,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ عَبْدِ الْعَزِيزِ بْنِ صُهَيْبٍ، قَالَ سَمِعْتُ أَنَسًا، يَقُولُ كَانَ النَّبِيُّ ﷺ إِذَا دَخَلَ الْخَلاَءَ قَالَ",
+     "matn": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ . تَابَعَهُ ابْنُ عَرْعَرَةَ عَنْ شُعْبَةَ. وَقَالَ غُنْدَرٌ عَنْ شُعْبَةَ إِذَا أَتَى الْخَلاَءَ. وَقَالَ مُوسَى عَنْ حَمَّادٍ إِذَا دَخَلَ. وَقَالَ سَعِيدُ بْنُ زَيْدٍ حَدَّثَنَا عَبْدُ الْعَزِيزِ إِذَا أَرَادَ أَنْ يَدْخُلَ.",
+     "gharib": [
+      {
+       "word": "الْخُبُثِ",
+       "meaning": "جمع خبيث؛ فسر هنا بذكران الشياطين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٣."
+      },
+      {
+       "word": "وَالْخَبَائِثِ",
+       "meaning": "جمع خبيثة؛ فسر هنا بإناث الشياطين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٢",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 142"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "Whenever the Prophet (ﷺ) went to answer the call of nature, he used to say, \"Allah-umma inni a`udhu bika minal khubuthi wal khaba'ith i.e. O Allah, I seek Refuge with You from all offensive and wicked things (evil deeds and evil spirits)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "14JsZ13GpS0UONp1sXYZ-TOL_NjnYp3cA",
+      "player": "1PMc0nNyUb2hZPfnGaa4WQCH4_QYOOdw9"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    }
+   ]
   }
  ]
 }
