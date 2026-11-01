@@ -2513,7 +2513,7 @@
    "ar": "كتاب العلم",
    "en": "Knowledge",
    "first": 59,
-   "last": 74,
+   "last": 82,
    "hadith": [
     {
      "n": 59,
@@ -3189,6 +3189,393 @@
       },
       "id": "1oSt6uuhA0Ushyy-7SNo0sqS3-8RyIDKv",
       "player": "1MREc0sp2S0SUDtFxV7o_tdIbKO4hKJc7"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 75,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو مَعْمَرٍ، قَالَ حَدَّثَنَا عَبْدُ الْوَارِثِ، قَالَ حَدَّثَنَا خَالِدٌ، عَنْ عِكْرِمَةَ، عَنِ ابْنِ عَبَّاسٍ،",
+     "matn": "قَالَ ضَمَّنِي رَسُولُ اللَّهِ ﷺ وَقَالَ  اللَّهُمَّ عَلِّمْهُ الْكِتَابَ .",
+     "gharib": [
+      {
+       "word": "الْكِتَابَ",
+       "meaning": "القرآن، ويشمل تعلمه حفظه وفهمه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٠، شرح الحديث 75"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٧٥",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 75"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "Once the Prophet (ﷺ) embraced me and said, \"O Allah! Bestow on him the knowledge of the Book (Qur'an)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1O33jBfnX52j_Wh6kyriGLh1clMCQHgFF",
+      "player": "1zKJArQVKVw9O6ylX_3JqrItYYm5zh3vK"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 76,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ أَبِي أُوَيْسٍ، قَالَ حَدَّثَنِي مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ عُتْبَةَ، عَنْ عَبْدِ اللَّهِ بْنِ عَبَّاسٍ،",
+     "matn": "قَالَ أَقْبَلْتُ رَاكِبًا عَلَى حِمَارٍ أَتَانٍ، وَأَنَا يَوْمَئِذٍ قَدْ نَاهَزْتُ الاِحْتِلاَمَ، وَرَسُولُ اللَّهِ ﷺ يُصَلِّي بِمِنًى إِلَى غَيْرِ جِدَارٍ، فَمَرَرْتُ بَيْنَ يَدَىْ بَعْضِ الصَّفِّ وَأَرْسَلْتُ الأَتَانَ تَرْتَعُ، فَدَخَلْتُ فِي الصَّفِّ، فَلَمْ يُنْكَرْ ذَلِكَ عَلَىَّ.",
+     "gharib": [
+      {
+       "word": "أَتَانٍ",
+       "meaning": "أنثى الحمار.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧١، شرح الحديث 76"
+      },
+      {
+       "word": "نَاهَزْتُ",
+       "meaning": "قاربت.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧١، شرح الحديث 76"
+      },
+      {
+       "word": "الأَتَانَ",
+       "meaning": "أنثى الحمار .",
+       "source": "النهاية أتن"
+      },
+      {
+       "word": "تَرْتَعُ",
+       "meaning": "ترعى وتأكل ما تشاء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧١، شرح الحديث 76"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٧٦",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 76"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "Once I came riding a she-ass and had (just) attained the age of puberty. Allah's Messenger (ﷺ) was offering the prayer at Mina. There was no wall in front of him and I passed in front of some of the row while they were offering their prayers. There I let the she-ass loose to graze and entered the row, and nobody objected to it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 77,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنِي مُحَمَّدُ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا أَبُو مُسْهِرٍ، قَالَ حَدَّثَنِي مُحَمَّدُ بْنُ حَرْبٍ، حَدَّثَنِي الزُّبَيْدِيُّ، عَنِ الزُّهْرِيِّ، عَنْ مَحْمُودِ بْنِ الرَّبِيعِ،",
+     "matn": "قَالَ عَقَلْتُ مِنَ النَّبِيِّ ﷺ مَجَّةً مَجَّهَا فِي وَجْهِي وَأَنَا ابْنُ خَمْسِ سِنِينَ مِنْ دَلْوٍ.",
+     "gharib": [
+      {
+       "word": "مَجَّةً",
+       "meaning": "ماء أرسله من فمه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٢، شرح الحديث 77"
+      },
+      {
+       "word": "مجها",
+       "meaning": "مج لعابه إذا قذفه .",
+       "source": "النهاية مجج"
+      },
+      {
+       "word": "عَقَلْتُ",
+       "meaning": "حفظت وضبطت.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٢، شرح الحديث 77"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٧٧",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 77"
+     },
+     "en": {
+      "narrator": "Mahmud bin Rabi`a",
+      "text": "When I was a boy of five, I remember, the Prophet (ﷺ) took water from a bucket (used for getting water out of a well) with his mouth and threw it on my face",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1qvYhIhfqYlBbCM-mgr5T6e3w0iTYY74Y",
+      "player": "1rSpd5LiOUh9vjsk9eZrmV9XrCHnOty0j"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 78,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْقَاسِمِ، خَالِدُ بْنُ خَلِيٍّ قَالَ حَدَّثَنَا مُحَمَّدُ بْنُ حَرْبٍ، قَالَ قَالَ الأَوْزَاعِيُّ أَخْبَرَنَا الزُّهْرِيُّ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ عُتْبَةَ بْنِ مَسْعُودٍ، عَنِ ابْنِ عَبَّاسٍ، أَنَّهُ تَمَارَى هُوَ وَالْحُرُّ بْنُ قَيْسِ بْنِ حِصْنٍ الْفَزَارِيُّ فِي صَاحِبِ مُوسَى، فَمَرَّ بِهِمَا أُبَىُّ بْنُ كَعْبٍ،",
+     "matn": "فَدَعَاهُ ابْنُ عَبَّاسٍ فَقَالَ إِنِّي تَمَارَيْتُ أَنَا وَصَاحِبِي هَذَا فِي صَاحِبِ مُوسَى الَّذِي سَأَلَ السَّبِيلَ إِلَى لُقِيِّهِ، هَلْ سَمِعْتَ رَسُولَ اللَّهِ ﷺ يَذْكُرُ شَأْنَهُ فَقَالَ أُبَىٌّ نَعَمْ، سَمِعْتُ النَّبِيَّ ﷺ يَذْكُرُ شَأْنَهُ يَقُولُ  بَيْنَمَا مُوسَى فِي مَلإٍ مِنْ بَنِي إِسْرَائِيلَ، إِذْ جَاءَهُ رَجُلٌ فَقَالَ أَتَعْلَمُ أَحَدًا أَعْلَمَ مِنْكَ قَالَ مُوسَى لاَ. فَأَوْحَى اللَّهُ عَزَّ وَجَلَّ إِلَى مُوسَى بَلَى، عَبْدُنَا خَضِرٌ، فَسَأَلَ السَّبِيلَ إِلَى لُقِيِّهِ، فَجَعَلَ اللَّهُ لَهُ الْحُوتَ آيَةً، وَقِيلَ لَهُ إِذَا فَقَدْتَ الْحُوتَ فَارْجِعْ، فَإِنَّكَ سَتَلْقَاهُ، فَكَانَ مُوسَى ﷺ يَتَّبِعُ أَثَرَ الْحُوتِ فِي الْبَحْرِ. فَقَالَ فَتَى مُوسَى لِمُوسَى أَرَأَيْتَ إِذْ أَوَيْنَا إِلَى الصَّخْرَةِ فَإِنِّي نَسِيتُ الْحُوتَ، وَمَا أَنْسَانِيهِ إِلاَّ الشَّيْطَانُ أَنْ أَذْكُرَهُ. قَالَ مُوسَى ذَلِكَ مَا كُنَّا نَبْغِي. فَارْتَدَّا عَلَى آثَارِهِمَا قَصَصًا، فَوَجَدَا خَضِرًا، فَكَانَ مِنْ شَأْنِهِمَا مَا قَصَّ اللَّهُ فِي كِتَابِهِ .",
+     "gharib": [
+      {
+       "word": "تَمَارَى",
+       "meaning": "تجادل واختلف في المسألة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٦٩، ١٧٥، شرح الحديث 78"
+      },
+      {
+       "word": "تَمَارَيْتُ",
+       "meaning": "أى : تجادلت .",
+       "source": "النهاية مرا"
+      },
+      {
+       "word": "الحوت",
+       "meaning": "السمكة .",
+       "source": "صحيح مسلم بشرح النووى 15/ 138"
+      },
+      {
+       "word": "قصصا",
+       "meaning": "أى : تَتَبُّعا .",
+       "source": "القاموس المحيط قصص"
+      },
+      {
+       "word": "فارتدا",
+       "meaning": "أى : رجعا .",
+       "source": "مقدمة فتح البارى ص 128"
+      },
+      {
+       "word": "آيَةً",
+       "meaning": "علامة يعرف بها موضع اللقاء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٦٩، ١٧٥، شرح الحديث 78"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٧٨",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 78"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "that he differed with Hur bin Qais bin Hisn Al-Fazari regarding the companion of the Prophet Moses (ﷺ). Meanwhile, Ubai bin Ka`b passed by them and Ibn `Abbas called him saying, \"My friend (Hur) and I have differed regarding Moses' companion whom Moses asked the way to meet. Have you heard Allah's Messenger (ﷺ) mentioning something about him?\" Ubai bin Ka`b said: \"Yes, I heard the Prophet (ﷺ) mentioning something about him (saying) while Moses was sitting in the company of some Israelites, a man came and asked him: \"Do you know anyone who is more learned than you?\" Moses replied: \"No.\" So Allah sent the Divine Inspiration to Moses: '--Yes, Our slave Khadir is more learned than you.' Moses asked Allah how to meet him (Al-Khadir). So Allah made the fish a sign for him and he was told when the fish was lost, he should return (to the place where he had lost it) and there he would meet him (Al-Khadir). So Moses went on looking for the sign of the fish in the sea. The servant-boy of Moses said: 'Do you remember when we betook ourselves to the rock, I indeed forgot the fish, none but Satan made me forget to remember it. On that Moses said, 'That is what we have been seeking.' So they went back retracing their footsteps, and found Khadir. (and) what happened further about them is narrated in the Holy Qur'an by Allah.\" (18.54 up to)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1JIHb8gU6F5HJRE5il8baav6zxxsWcHjy",
+      "player": "13oNsDRXkD9GmowinUjl8xWZ7oOIvNu7M"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 79,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ الْعَلاَءِ، قَالَ حَدَّثَنَا حَمَّادُ بْنُ أُسَامَةَ، عَنْ بُرَيْدِ بْنِ عَبْدِ اللَّهِ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "مَثَلُ مَا بَعَثَنِي اللَّهُ بِهِ مِنَ الْهُدَى وَالْعِلْمِ كَمَثَلِ الْغَيْثِ الْكَثِيرِ أَصَابَ أَرْضًا، فَكَانَ مِنْهَا نَقِيَّةٌ قَبِلَتِ الْمَاءَ، فَأَنْبَتَتِ الْكَلأَ وَالْعُشْبَ الْكَثِيرَ، وَكَانَتْ مِنْهَا أَجَادِبُ أَمْسَكَتِ الْمَاءَ، فَنَفَعَ اللَّهُ بِهَا النَّاسَ، فَشَرِبُوا وَسَقَوْا وَزَرَعُوا، وَأَصَابَتْ مِنْهَا طَائِفَةً أُخْرَى، إِنَّمَا هِيَ قِيعَانٌ لاَ تُمْسِكُ مَاءً، وَلاَ تُنْبِتُ كَلأً، فَذَلِكَ مَثَلُ مَنْ فَقِهَ فِي دِينِ اللَّهِ وَنَفَعَهُ مَا بَعَثَنِي اللَّهُ بِهِ، فَعَلِمَ وَعَلَّمَ، وَمَثَلُ مَنْ لَمْ يَرْفَعْ بِذَلِكَ رَأْسًا، وَلَمْ يَقْبَلْ هُدَى اللَّهِ الَّذِي أُرْسِلْتُ بِهِ . قَالَ أَبُو عَبْدِ اللَّهِ قَالَ إِسْحَاقُ وَكَانَ مِنْهَا طَائِفَةٌ قَيَّلَتِ الْمَاءَ. قَاعٌ يَعْلُوهُ الْمَاءُ، وَالصَّفْصَفُ الْمُسْتَوِي مِنَ الأَرْضِ.",
+     "gharib": [
+      {
+       "word": "الْكَلأَ",
+       "meaning": "النبات الرطب واليابس، والعشب يخص الرطب.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٦–١٧٧، شرح الحديث 79"
+      },
+      {
+       "word": "أَجَادِبُ",
+       "meaning": "أرض صلبة تمسك الماء فينتفع به الناس.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٦–١٧٧، شرح الحديث 79"
+      },
+      {
+       "word": "قِيعَانٌ",
+       "meaning": "أراض مستوية ملساء لا تنبت.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٦–١٧٧، شرح الحديث 79"
+      },
+      {
+       "word": "كَلأً",
+       "meaning": "الكلأ النبات والعشب .",
+       "source": "النهاية كلأ"
+      },
+      {
+       "word": "نَقِيَّةٌ",
+       "meaning": "أرض طيبة تقبل الماء وتنبت.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٦–١٧٧، شرح الحديث 79"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٧٩",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 79"
+     },
+     "en": {
+      "narrator": "Abu Musa",
+      "text": "The Prophet (ﷺ) said, \"The example of guidance and knowledge with which Allah has sent me is like abundant rain falling on the earth, some of which was fertile soil that absorbed rain water and brought forth vegetation and grass in abundance. (And) another portion of it was hard and held the rain water and Allah benefited the people with it and they utilized it for drinking, making their animals drink from it and for irrigation of the land for cultivation. (And) a portion of it was barren which could neither hold the water nor bring forth vegetation (then that land gave no benefits). The first is the example of the person who comprehends Allah's religion and gets benefit (from the knowledge) which Allah has revealed through me (the Prophet) and learns and then teaches others. The last example is that of a person who does not care for it and does not take Allah's guidance revealed through me (He is like that barren land)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1oIiOAx47Cm-Gj8TtdXKqgSeh4ZyyTtJ_",
+      "player": "1DvBgIhcKXBqR8WQjbGL6WO7pUtIIf08P"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 80,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عِمْرَانُ بْنُ مَيْسَرَةَ، قَالَ حَدَّثَنَا عَبْدُ الْوَارِثِ، عَنْ أَبِي التَّيَّاحِ، عَنْ أَنَسٍ،",
+     "matn": "قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  إِنَّ مِنْ أَشْرَاطِ السَّاعَةِ أَنْ يُرْفَعَ الْعِلْمُ، وَيَثْبُتَ الْجَهْلُ، وَيُشْرَبَ الْخَمْرُ، وَيَظْهَرَ الزِّنَا .",
+     "gharib": [
+      {
+       "word": "أَشْرَاطِ",
+       "meaning": "علامات الساعة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٨، شرح الحديث 80"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٨٠",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 80"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "Allah's Messenger (ﷺ) said, \"From among the portents of the Hour are (the following): -1. Religious knowledge will be taken away (by the death of Religious learned men). -2. (Religious) ignorance will prevail. -3. Drinking of Alcoholic drinks (will be very common). -4. There will be prevalence of open illegal sexual intercourse",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1J5LhclkPbxC3ejvWmsoeCKYqWhy89p07",
+      "player": "148-kJkfAApUZSR-EyrGko9PXwo26RKkb"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 81,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ شُعْبَةَ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ،",
+     "matn": "قَالَ لأُحَدِّثَنَّكُمْ حَدِيثًا لاَ يُحَدِّثُكُمْ أَحَدٌ بَعْدِي سَمِعْتُ رَسُولَ اللَّهِ ﷺ يَقُولُ  مِنْ أَشْرَاطِ السَّاعَةِ أَنْ يَقِلَّ الْعِلْمُ، وَيَظْهَرَ الْجَهْلُ، وَيَظْهَرَ الزِّنَا، وَتَكْثُرَ النِّسَاءُ وَيَقِلَّ الرِّجَالُ، حَتَّى يَكُونَ لِخَمْسِينَ امْرَأَةً الْقَيِّمُ الْوَاحِدُ .",
+     "gharib": [
+      {
+       "word": "أَشْرَاطِ",
+       "meaning": "علامات .",
+       "source": "النهاية شرط"
+      },
+      {
+       "word": "الْقَيِّمُ",
+       "meaning": "من يقوم بأمرهن ويرعى شؤونهن.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٧٩، شرح الحديث 81"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٨١",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 81"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "I will narrate to you a Hadith and none other than I will tell you about after it. I heard Allah's Messenger (ﷺ) saying: From among the portents of the Hour are (the following): -1. Religious knowledge will decrease (by the death of religious learned men). -2. Religious ignorance will prevail. -3. There will be prevalence of open illegal sexual intercourse. -4. Women will increase in number and men will decrease in number so much so that fifty women will be looked after by one man",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1EEOuTCpRby1pkjO04jCuKIXgenovaLS3",
+      "player": "1xajF1d77F_O3Q3BoplZaR7jq_C7cpWg1"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 82,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سَعِيدُ بْنُ عُفَيْرٍ، قَالَ حَدَّثَنِي اللَّيْثُ، قَالَ حَدَّثَنِي عُقَيْلٌ، عَنِ ابْنِ شِهَابٍ، عَنْ حَمْزَةَ بْنِ عَبْدِ اللَّهِ بْنِ عُمَرَ،",
+     "matn": "أَنَّ ابْنَ عُمَرَ، قَالَ سَمِعْتُ رَسُولَ اللَّهِ ﷺ قَالَ  بَيْنَا أَنَا نَائِمٌ أُتِيتُ بِقَدَحِ لَبَنٍ، فَشَرِبْتُ حَتَّى إِنِّي لأَرَى الرِّيَّ يَخْرُجُ فِي أَظْفَارِي، ثُمَّ أَعْطَيْتُ فَضْلِي عُمَرَ بْنَ الْخَطَّابِ . قَالُوا فَمَا أَوَّلْتَهُ يَا رَسُولَ اللَّهِ قَالَ  الْعِلْمَ .",
+     "gharib": [
+      {
+       "word": "فَضْلِي",
+       "meaning": "ما بقي بعد شربي من اللبن.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٠، شرح الحديث 82"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٨٢",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 82"
+     },
+     "en": {
+      "narrator": "Ibn `Umar",
+      "text": "Allah's Messenger (ﷺ) said, \"While I was sleeping, I saw that a cup full of milk was brought to me and I drank my fill till I noticed (the milk) its wetness coming out of my nails. Then I gave the remaining milk to `Umar Ibn Al-Khattab\" The companions of the Prophet (ﷺ) asked, \"What have you interpreted (about this dream), O Allah's Messenger (ﷺ)?\" He replied, \"(It is religious) knowledge",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
