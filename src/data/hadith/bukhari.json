@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 142,
+   "last": 150,
    "hadith": [
     {
      "n": 135,
@@ -6175,6 +6175,328 @@
       },
       "id": "14JsZ13GpS0UONp1sXYZ-TOL_NjnYp3cA",
       "player": "1PMc0nNyUb2hZPfnGaa4WQCH4_QYOOdw9"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 143,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ، قَالَ حَدَّثَنَا هَاشِمُ بْنُ الْقَاسِمِ، قَالَ حَدَّثَنَا وَرْقَاءُ، عَنْ عُبَيْدِ اللَّهِ بْنِ أَبِي يَزِيدَ، عَنِ ابْنِ عَبَّاسٍ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ دَخَلَ الْخَلاَءَ، فَوَضَعْتُ لَهُ وَضُوءًا قَالَ  مَنْ وَضَعَ هَذَا . فَأُخْبِرَ فَقَالَ  اللَّهُمَّ فَقِّهْهُ فِي الدِّينِ .",
+     "gharib": [
+      {
+       "word": "وَضُوءًا",
+       "meaning": "الماء الذي يتطهر به؛ بفتح الواو.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٣",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 143"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "Once the Prophet (ﷺ) entered a lavatory and I placed water for his ablution. He asked, \"Who placed it?\" He was informed accordingly and so he said, \"O Allah! Make him (Ibn `Abbas) a learned scholar in religion (Islam)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1MCkAbim7jHoQ21_ijpuq_t4xMFuFSf8z",
+      "player": "15quLJYVjRDieskvARbsotz3XjOMU-6pO"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 144,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، قَالَ حَدَّثَنَا الزُّهْرِيُّ، عَنْ عَطَاءِ بْنِ يَزِيدَ اللَّيْثِيِّ، عَنْ أَبِي أَيُّوبَ الأَنْصَارِيِّ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "إِذَا أَتَى أَحَدُكُمُ الْغَائِطَ فَلاَ يَسْتَقْبِلِ الْقِبْلَةَ وَلاَ يُوَلِّهَا ظَهْرَهُ، شَرِّقُوا أَوْ غَرِّبُوا .",
+     "gharib": [
+      {
+       "word": "الْغَائِطَ",
+       "meaning": "أصله المكان المطمئن من الأرض، واستعمل لقضاء الحاجة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٥–٢٤٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٤",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 144"
+     },
+     "en": {
+      "narrator": "Abu Aiyub Al-Ansari",
+      "text": "Allah's Messenger (ﷺ) said, \"If anyone of you goes to an open space for answering the call of nature he should neither face nor turn his back towards the Qibla; he should either face the east or the west",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1dfbzWuDKBXXQUgJNcm4L52EaeD37DBht",
+      "player": "1JT0p4LK0MP2bh_rhCanzc-ZRCWUF-dqd"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 145,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ يَحْيَى بْنِ سَعِيدٍ، عَنْ مُحَمَّدِ بْنِ يَحْيَى بْنِ حَبَّانَ، عَنْ عَمِّهِ، وَاسِعِ بْنِ حَبَّانَ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ،",
+     "matn": "أَنَّهُ كَانَ يَقُولُ إِنَّ نَاسًا يَقُولُونَ إِذَا قَعَدْتَ عَلَى حَاجَتِكَ، فَلاَ تَسْتَقْبِلِ الْقِبْلَةَ وَلاَ بَيْتَ الْمَقْدِسِ. فَقَالَ عَبْدُ اللَّهِ بْنُ عُمَرَ لَقَدِ ارْتَقَيْتُ يَوْمًا عَلَى ظَهْرِ بَيْتٍ لَنَا، فَرَأَيْتُ رَسُولَ اللَّهِ ﷺ عَلَى لَبِنَتَيْنِ مُسْتَقْبِلاً بَيْتَ الْمَقْدِسِ لِحَاجَتِهِ. وَقَالَ لَعَلَّكَ مِنَ الَّذِينَ يُصَلُّونَ عَلَى أَوْرَاكِهِمْ، فَقُلْتُ لاَ أَدْرِي وَاللَّهِ. قَالَ مَالِكٌ يَعْنِي الَّذِي يُصَلِّي وَلاَ يَرْتَفِعُ عَنِ الأَرْضِ، يَسْجُدُ وَهُوَ لاَصِقٌ بِالأَرْضِ.",
+     "gharib": [
+      {
+       "word": "لَبِنَتَيْنِ",
+       "meaning": "تثنية لبنة؛ ما يصنع من الطين أو غيره للبناء قبل إحراقه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 145"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "People say, \"Whenever you sit for answering the call of nature, you should not face the Qibla or Baitul-Maqdis (Jerusalem).\" I told them, \"Once I went up the roof of our house and I saw Allah's Apostle answering the call of nature while sitting on two bricks facing Baitul-Maqdis (Jerusalem) (but there was a screen covering him. ' (Fath-al-Bari, Page 258, Vol)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 146,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، قَالَ حَدَّثَنِي عُقَيْلٌ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ،",
+     "matn": "أَنَّ أَزْوَاجَ النَّبِيِّ، ﷺ كُنَّ يَخْرُجْنَ بِاللَّيْلِ إِذَا تَبَرَّزْنَ إِلَى الْمَنَاصِعِ ـ وَهُوَ صَعِيدٌ أَفْيَحُ ـ فَكَانَ عُمَرُ يَقُولُ لِلنَّبِيِّ ﷺ احْجُبْ نِسَاءَكَ. فَلَمْ يَكُنْ رَسُولُ اللَّهِ ﷺ يَفْعَلُ، فَخَرَجَتْ سَوْدَةُ بِنْتُ زَمْعَةَ زَوْجُ النَّبِيِّ ﷺ لَيْلَةً مِنَ اللَّيَالِي عِشَاءً، وَكَانَتِ امْرَأَةً طَوِيلَةً، فَنَادَاهَا عُمَرُ أَلاَ قَدْ عَرَفْنَاكِ يَا سَوْدَةُ. حِرْصًا عَلَى أَنْ يَنْزِلَ الْحِجَابُ، فَأَنْزَلَ اللَّهُ آيَةَ الْحِجَابِ.",
+     "gharib": [
+      {
+       "word": "أَفْيَحُ",
+       "meaning": "واسع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٩."
+      },
+      {
+       "word": "الْمَنَاصِعِ",
+       "meaning": "أماكن معروفة من ناحية البقيع كانوا يخرجون إليها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٩."
+      },
+      {
+       "word": "صَعِيدٌ",
+       "meaning": "يعنى الأرض .",
+       "source": "شرح النووى على صحيح مسلم ١٢ / ٥٣"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 146"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The wives of the Prophet (ﷺ) used to go to Al-Manasi, a vast open place (near Baqi` at Medina) to answer the call of nature at night. `Umar used to say to the Prophet (ﷺ) \"Let your wives be veiled,\" but Allah's Apostle did not do so. One night Sauda bint Zam`a the wife of the Prophet (ﷺ) went out at `Isha' time and she was a tall lady. `Umar addressed her and said, \"I have recognized you, O Sauda.\" He said so, as he desired eagerly that the verses of Al-Hijab (the observing of veils by the Muslim women) may be revealed. So Allah revealed the verses of \"Al-Hijab\" (A complete body cover excluding the eyes)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1XUPwTNodNdnbjchKeUtzQuGnvGYWnEbZ",
+      "player": "1a6CvFtYc_wzIOCQ41Jsqb2rky-Lk0XzC"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 147,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا زَكَرِيَّاءُ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  قَدْ أُذِنَ أَنْ تَخْرُجْنَ فِي حَاجَتِكُنَّ . قَالَ هِشَامٌ يَعْنِي الْبَرَازَ.",
+     "gharib": [
+      {
+       "word": "الْبَرَازَ",
+       "meaning": "الفضاء، والمراد هنا الخروج لقضاء الحاجة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٩–٢٥٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 147"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) said to his wives, \"You are allowed to go out to answer the call of nature",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 148,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ الْمُنْذِرِ، قَالَ حَدَّثَنَا أَنَسُ بْنُ عِيَاضٍ، عَنْ عُبَيْدِ اللَّهِ، عَنْ مُحَمَّدِ بْنِ يَحْيَى بْنِ حَبَّانَ، عَنْ وَاسِعِ بْنِ حَبَّانَ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ،",
+     "matn": "قَالَ ارْتَقَيْتُ فَوْقَ ظَهْرِ بَيْتِ حَفْصَةَ لِبَعْضِ حَاجَتِي، فَرَأَيْتُ رَسُولَ اللَّهِ ﷺ يَقْضِي حَاجَتَهُ مُسْتَدْبِرَ الْقِبْلَةِ مُسْتَقْبِلَ الشَّأْمِ.",
+     "gharib": [
+      {
+       "word": "ارْتَقَيْتُ",
+       "meaning": "صعدت إلى السطح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٧، ٢٥٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٨",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 148"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "I went up to the roof of Hafsa's house for some job and I saw Allah's Messenger (ﷺ) answering the call of nature facing Sham (Syria, Jordan, Palestine and Lebanon regarded as one country) with his back towards the Qibla. (See Hadith No)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 149,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَعْقُوبُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ هَارُونَ، قَالَ أَخْبَرَنَا يَحْيَى، عَنْ مُحَمَّدِ بْنِ يَحْيَى بْنِ حَبَّانَ، أَنَّ عَمَّهُ، وَاسِعَ بْنَ حَبَّانَ، أَخْبَرَهُ أَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ",
+     "matn": "أَخْبَرَهُ قَالَ لَقَدْ ظَهَرْتُ ذَاتَ يَوْمٍ عَلَى ظَهْرِ بَيْتِنَا، فَرَأَيْتُ رَسُولَ اللَّهِ ﷺ قَاعِدًا عَلَى لَبِنَتَيْنِ مُسْتَقْبِلَ بَيْتِ الْمَقْدِسِ.",
+     "gharib": [
+      {
+       "word": "ظَهَرْتُ",
+       "meaning": "علوت وصعدت إلى ظهر البيت، كما تبينه بقية الروايات.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٧، ٢٥٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٤٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 149"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "Once I went up the roof of our house and saw Allah's Messenger (ﷺ) answering the call of nature while sitting over two bricks facing Baitul-Maqdis (Jerusalem). (See Hadith No)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 150,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْوَلِيدِ، هِشَامُ بْنُ عَبْدِ الْمَلِكِ قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَبِي مُعَاذٍ ـ وَاسْمُهُ عَطَاءُ بْنُ أَبِي مَيْمُونَةَ ـ قَالَ سَمِعْتُ أَنَسَ بْنَ مَالِكٍ،",
+     "matn": "يَقُولُ كَانَ النَّبِيُّ ﷺ إِذَا خَرَجَ لِحَاجَتِهِ أَجِيءُ أَنَا وَغُلاَمٌ مَعَنَا إِدَاوَةٌ مِنْ مَاءٍ. يَعْنِي يَسْتَنْجِي بِهِ.",
+     "gharib": [
+      {
+       "word": "إِدَاوَةٌ",
+       "meaning": "إناء صغير من جلد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٥١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٥٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 150"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "Whenever Allah's Messenger (ﷺ) went to answer the call of nature, I along with another boy used to accompany him with a tumbler full of water. (Hisham commented, \"So that he might wash his private parts with it)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1UMIbEi1JBLK8oqegVVwNoiDsz690vEUL",
+      "player": "1YoZn58msV92D6dsH7SYWapoc8ONoDSIo"
      },
      "video": null,
      "sharh": null,
