@@ -10,6 +10,7 @@ import malikNotes from '../data/hadith/notes/malik.json';
 type Lang = 'ar' | 'en';
 
 export type Gharib = { word: string; meaning: string; source: string };
+export type QuranQuote = { original: string; uthmani: string; reference: string; sourceUrl: string };
 export type Hadith = {
   n: number;
   bab: { ar: string };
@@ -24,11 +25,12 @@ export type Hadith = {
   sharh: { ar: string; source?: string } | null;
   fawaid: { ar: string }[];
   notesStatus?: 'review' | 'approved';
+  quran?: QuranQuote[];
 };
 export type Kitab = { slug: string; ar: string; en: string; first: number; last: number; hadith: Hadith[] };
 export type Book = { book: { id: string; ar: string; en: string }; kutub: Kitab[] };
 
-type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[] } | string>;
+type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[]; quran?: QuranQuote[] } | string>;
 
 /** Merge the hand-written commentary and benefits (src/data/hadith/notes/<book>.json) into the records. */
 function withNotes(book: Book, notes: Notes): Book {
@@ -39,6 +41,7 @@ function withNotes(book: Book, notes: Notes): Book {
       if (n.sharh) h.sharh = { ar: n.sharh, ...(n.source ? { source: n.source } : {}) };
       if (n.fawaid) h.fawaid = n.fawaid.map((ar) => ({ ar }));
       h.notesStatus = n.status;
+      if (n.quran) h.quran = n.quran;
     }
   return book;
 }

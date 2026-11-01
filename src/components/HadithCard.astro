@@ -1,5 +1,6 @@
 ---
-import { hadithLabels, hadithPath, markGharib, num, type Hadith } from '../utils/hadith';
+import { hadithLabels, hadithPath, num, type Hadith } from '../utils/hadith';
+import HadithText from './HadithText.astro';
 import { getFileDownloadUrl } from '../utils/videos';
 
 interface Props {
@@ -11,8 +12,6 @@ interface Props {
 
 const { lang, book, h, full = false } = Astro.props;
 const t = hadithLabels[lang];
-const isnad = markGharib(h.isnad, h.gharib);
-const matn = markGharib(h.matn, h.gharib);
 const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.ar} ${h.n}`)}`;
 ---
 
@@ -45,12 +44,13 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
   <div class="hadith-card__text" dir="rtl" lang="ar">
     {h.isnad && (
       <p class="hadith-card__isnad">
-        {isnad.map((x) => (x.g ? <button type="button" class="gharib" data-meaning={x.g.meaning} data-source={x.g.source}>{x.tok}</button> : x.tok))}
+        <HadithText text={h.isnad} gharib={h.gharib} quran={h.quran} />
       </p>
     )}
     <p class="hadith-card__matn">
-      {matn.map((x) => (x.g ? <button type="button" class="gharib" data-meaning={x.g.meaning} data-source={x.g.source}>{x.tok}</button> : x.tok))}
+      <HadithText text={h.matn} gharib={h.gharib} quran={h.quran} />
     </p>
+    {h.quran?.length && <p class="content-card__meta">{h.quran.map((q,i) => <>{i ? '؛ ' : ''}<span>{q.reference}</span></>)} — النص القرآني بالرسم العثماني من <a href="https://qurancomplex.gov.sa/quran-dev/" target="_blank" rel="noopener noreferrer">مجمع الملك فهد لطباعة المصحف الشريف</a>.</p>}
   </div>
 
   {h.gharib.length > 0 && (

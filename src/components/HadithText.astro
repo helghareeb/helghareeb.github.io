@@ -1,0 +1,21 @@
+---
+import { markGharib, type Gharib, type QuranQuote } from '../utils/hadith';
+interface Props { text: string; gharib: Gharib[]; quran?: QuranQuote[] }
+const { text, gharib, quran = [] } = Astro.props;
+const parts: { text: string; quote?: QuranQuote }[] = [];
+let cursor = 0;
+while (cursor < text.length) {
+  const next = quran.map((quote) => ({ quote, at: text.indexOf(quote.original, cursor) }))
+    .filter(({at}) => at >= cursor).sort((a,b) => a.at - b.at)[0];
+  if (!next) { parts.push({text: text.slice(cursor)}); break; }
+  if (next.at > cursor) parts.push({text: text.slice(cursor,next.at)});
+  parts.push({text: next.quote.uthmani,quote:next.quote});
+  cursor = next.at + next.quote.original.length;
+}
+---
+{parts.map((part) => part.quote ? <><span>﴿</span><span class="hadith-quran" data-quran-reference={part.quote.reference} data-quran-source={part.quote.sourceUrl}>{markGharib(part.text,gharib).map((x) => x.g ? <button type="button" class="gharib" data-meaning={x.g.meaning} data-source={x.g.source}>{x.tok}</button> : x.tok)}</span><span>﴾</span></> : markGharib(part.text,gharib).map((x) => x.g ? <button type="button" class="gharib" data-meaning={x.g.meaning} data-source={x.g.source}>{x.tok}</button> : x.tok))}
+<style>
+  @font-face { font-family: 'Hadith Hafs'; src: url('../assets/fonts/kfgqpc-hafs-v30.ttf') format('truetype'); font-display: swap; }
+  .hadith-quran { font-family: 'Hadith Hafs', serif; font-weight: 400; font-size: 1.08em; line-height: 2.1; }
+  .hadith-quran :global(button.gharib) { font-family: inherit; font-weight: 400; }
+</style>

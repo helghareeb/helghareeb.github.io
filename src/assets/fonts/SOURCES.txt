@@ -1,0 +1,5 @@
+kfgqpc-hafs-v30.ttf: King Fahd Quran Printing Complex Unicode Uthmanic Hafs 3.0.
+Official paired font/text package: https://download.qurancomplex.gov.sa/resources_dev/kfgqpc_hafs_v30.zip
+Source: https://qurancomplex.gov.sa/quran-dev/
+Package SHA256: 227e6b1564d980f2bd09c2c35ebfb0330ac268c79a7c247cd1ab665bc635f245
+Quran excerpts are copied without character changes from aya_text_unicode in the paired official JSON. The verse-number suffix is outside each excerpt.

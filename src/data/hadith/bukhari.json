@@ -444,7 +444,7 @@
    "ar": "كتاب الإيمان",
    "en": "Belief",
    "first": 8,
-   "last": 30,
+   "last": 38,
    "hadith": [
     {
      "n": 8,
@@ -831,13 +831,13 @@
       },
       {
        "word": "عِصَابَةٌ",
-       "meaning": "العصابة : الجماعة من الناس .",
-       "source": "النهاية عصب"
+       "meaning": "جماعة من الناس.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٦٤، شرح الحديث ١٨"
       },
       {
-       "word": "ببهتان",
-       "meaning": "البُهْتَانُ : هو الباطل الذى يُتَحَيَّرُ منه ، وهو من البُهْت ، وهو الكذب والافتراء .",
-       "source": "النهاية بهت"
+       "word": "بِبُهْتَانٍ",
+       "meaning": "بكذب عظيم يدهش سامعه، والمراد الافتراء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٦٥، شرح الحديث ١٨"
       }
      ],
      "grade": {
@@ -875,8 +875,8 @@
      "gharib": [
       {
        "word": "شَعَفَ",
-       "meaning": "جمع شَعَفَة ، وهى رأس الجبل .",
-       "source": "النهاية شعف"
+       "meaning": "رؤوس الجبال.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٦٩، شرح الحديث ١٩"
       },
       {
        "word": "الْقَطْرِ",
@@ -985,8 +985,8 @@
      "gharib": [
       {
        "word": "الْحِبَّةُ",
-       "meaning": "بُزُور البُقُول وحَب الرياحين ، وقيل : نبت صغير ينبت فى الحشيش .",
-       "source": "النهاية حبب"
+       "meaning": "بذور نبات الصحراء التي ليست من الحبوب المقتاتة؛ بكسر الحاء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٧٣، شرح الحديث ٢٢"
       }
      ],
      "grade": {
@@ -1180,8 +1180,8 @@
      "gharib": [
       {
        "word": "يَكُبَّهُ",
-       "meaning": "يسقطه .",
-       "source": "مرقاة المفاتيح 11 / 259"
+       "meaning": "يطرحه على وجهه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٨١، شرح الحديث ٢٧"
       },
       {
        "word": "رهطا",
@@ -1263,8 +1263,8 @@
      "gharib": [
       {
        "word": "الْعَشِيرَ",
-       "meaning": "الزوج .",
-       "source": "النهاية عشر"
+       "meaning": "الزوج؛ سمي بذلك للمعاشرة والمخالطة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٨٤، شرح الحديث ٢٩"
       }
      ],
      "grade": {
@@ -1302,13 +1302,13 @@
      "gharib": [
       {
        "word": "خَوَلُكُمْ",
-       "meaning": "الخَوَل : حشم الرجل وأتباعه .",
-       "source": "النهاية خول"
+       "meaning": "خدمكم ومن تحت أيديكم؛ والمراد في سياق الحديث المماليك.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ٥/١٧٤، شرح حديث أبي ذر في كتاب العتق"
       },
       {
-       "word": "حلة",
-       "meaning": "هى ثياب ذات خطوط . والحلة لا تكون إلا من ثوبين . وقيل : إنما تكون حلة إذا كانت جديدة . وقيل : الحلل برود اليمن .",
-       "source": "مقدمة الفتح ١/ ١١٣"
+       "word": "حُلَّةٌ",
+       "meaning": "ثوبان من جنس واحد.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٨٦، شرح الحديث ٣٠"
       },
       {
        "word": "سَابَبْتُ",
@@ -1341,6 +1341,317 @@
       },
       "id": "1DSR0S5ATz_kIj5e-N-2rf1c4aEiKnVn5",
       "player": "1I93-ru4hmp5fAgFO4kjNDUk5LssY8hEi"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 31,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ الرَّحْمَنِ بْنُ الْمُبَارَكِ، حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ، حَدَّثَنَا أَيُّوبُ، وَيُونُسُ، عَنِ الْحَسَنِ، عَنِ الأَحْنَفِ بْنِ قَيْسٍ، قَالَ ذَهَبْتُ لأَنْصُرَ هَذَا الرَّجُلَ، فَلَقِيَنِي أَبُو بَكْرَةَ فَقَالَ أَيْنَ تُرِيدُ قُلْتُ أَنْصُرُ هَذَا الرَّجُلَ. قَالَ ارْجِعْ فَإِنِّي سَمِعْتُ رَسُولَ اللَّهِ ﷺ يَقُولُ",
+     "matn": "إِذَا الْتَقَى الْمُسْلِمَانِ بِسَيْفَيْهِمَا فَالْقَاتِلُ وَالْمَقْتُولُ فِي النَّارِ . فَقُلْتُ يَا رَسُولَ اللَّهِ هَذَا الْقَاتِلُ فَمَا بَالُ الْمَقْتُولِ قَالَ  إِنَّهُ كَانَ حَرِيصًا عَلَى قَتْلِ صَاحِبِهِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣١",
+      "en": "Sahih al-Bukhari, Belief, hadith 31"
+     },
+     "en": {
+      "narrator": "Al-Ahnaf bin Qais",
+      "text": "While I was going to help this man ('Ali Ibn Abi Talib), Abu Bakra met me and asked, \"Where are you going?\" I replied, \"I am going to help that person.\" He said, \"Go back for I have heard Allah's Messenger (ﷺ) saying, 'When two Muslims fight (meet) each other with their swords, both the murderer as well as the murdered will go to the Hell-fire.' I said, 'O Allah's Messenger (ﷺ)! It is all right for the murderer but what about the murdered one?' Allah's Messenger (ﷺ) replied, \"He surely had the intention to kill his companion",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1n-vtWK_7SKzXb7xvNL8-RZo0OKcOatKK",
+      "player": "15vOhqywylv4k4gCiRZDSwMhFYNFXOWR0"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 32,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو الْوَلِيدِ، قَالَ حَدَّثَنَا شُعْبَةُ، ح. قَالَ وَحَدَّثَنِي بِشْرٌ، قَالَ حَدَّثَنَا مُحَمَّدٌ، عَنْ شُعْبَةَ، عَنْ سُلَيْمَانَ، عَنْ إِبْرَاهِيمَ، عَنْ عَلْقَمَةَ، عَنْ عَبْدِ اللَّهِ، قَالَ لَمَّا نَزَلَتِ {الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُمْ بِظُلْمٍ} قَالَ أَصْحَابُ رَسُولِ اللَّهِ ﷺ أَيُّنَا لَمْ يَظْلِمْ فَأَنْزَلَ اللَّهُ {إِنَّ الشِّرْكَ لَظُلْمٌ عَظِيمٌ}.",
+     "gharib": [
+      {
+       "word": "يلبسوا",
+       "meaning": "يخلطوا .",
+       "source": "لسان العرب لبس"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٢",
+      "en": "Sahih al-Bukhari, Belief, hadith 32"
+     },
+     "en": {
+      "narrator": "'Abdullah",
+      "text": "When the following Verse was revealed: \"It is those who believe and confuse not their belief with wrong (worshipping others besides Allah.)\" (6:83), the companions of Allah's Messenger (ﷺ) asked, \"Who is amongst us who had not done injustice (wrong)?\" Allah revealed: \"No doubt, joining others in worship with Allah is a great injustice (wrong) indeed",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "14XZbpAPLNVpZiffNkaHG7UwDf2_qh85F",
+      "player": "1t3g_GIZl5EOn3Ef1bHF2yW-jvfzRAsrB"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 33,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سُلَيْمَانُ أَبُو الرَّبِيعِ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ بْنُ جَعْفَرٍ، قَالَ حَدَّثَنَا نَافِعُ بْنُ مَالِكِ بْنِ أَبِي عَامِرٍ أَبُو سُهَيْلٍ، عَنْ أَبِيهِ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  آيَةُ الْمُنَافِقِ ثَلاَثٌ إِذَا حَدَّثَ كَذَبَ، وَإِذَا وَعَدَ أَخْلَفَ، وَإِذَا اؤْتُمِنَ خَانَ .",
+     "gharib": [
+      {
+       "word": "آيَةُ",
+       "meaning": "علامة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٦٣، في بيان معنى آية الإيمان"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٣",
+      "en": "Sahih al-Bukhari, Belief, hadith 33"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"The signs of a hypocrite are three: 1. Whenever he speaks, he tells a lie. 2. Whenever he promises, he always breaks it (his promise ). 3. If you trust him, he proves to be dishonest. (If you keep something as a trust with him, he will not return it)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1yUTLCZUF9VbuPNbS76Xftl4dv5hkt3Ct",
+      "player": "15wodyDsJju0Feokn32oX_Rbb7QjfT4tw"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 34,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قَبِيصَةُ بْنُ عُقْبَةَ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنِ الأَعْمَشِ، عَنْ عَبْدِ اللَّهِ بْنِ مُرَّةَ، عَنْ مَسْرُوقٍ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ قَالَ  أَرْبَعٌ مَنْ كُنَّ فِيهِ كَانَ مُنَافِقًا خَالِصًا، وَمَنْ كَانَتْ فِيهِ خَصْلَةٌ مِنْهُنَّ كَانَتْ فِيهِ خَصْلَةٌ مِنَ النِّفَاقِ حَتَّى يَدَعَهَا إِذَا اؤْتُمِنَ خَانَ وَإِذَا حَدَّثَ كَذَبَ وَإِذَا عَاهَدَ غَدَرَ، وَإِذَا خَاصَمَ فَجَرَ . تَابَعَهُ شُعْبَةُ عَنِ الأَعْمَشِ.",
+     "gharib": [
+      {
+       "word": "فَجَرَ",
+       "meaning": "مال عن الحق واحتال في رده.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٩٠، شرح الحديث ٣٤"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٤",
+      "en": "Sahih al-Bukhari, Belief, hadith 34"
+     },
+     "en": {
+      "narrator": "'Abdullah bin 'Amr",
+      "text": "The Prophet (ﷺ) said, \"Whoever has the following four (characteristics) will be a pure hypocrite and whoever has one of the following four characteristics will have one characteristic of hypocrisy unless and until he gives it up. 1. Whenever he is entrusted, he betrays. 2. Whenever he speaks, he tells a lie. 3. Whenever he makes a covenant, he proves treacherous. 4. Whenever he quarrels, he behaves in a very imprudent, evil and insulting manner",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ZVBv-HohaQodlLPg9p2qz3-VsC6nqAlX",
+      "player": "176Wz57Ogs-fhh8oMFfvRsR9bwwyNJP3T"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 35,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، قَالَ حَدَّثَنَا أَبُو الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  مَنْ يَقُمْ لَيْلَةَ الْقَدْرِ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ .",
+     "gharib": [
+      {
+       "word": "وَاحْتِسَابًا",
+       "meaning": "طلبًا للأجر من الله، لا رياء ولا لقصد آخر.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ٤/٢٥١، شرح قيام رمضان"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٥",
+      "en": "Sahih al-Bukhari, Belief, hadith 35"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"Whoever establishes the prayers on the night of Qadr out of sincere faith and hoping to attain Allah's rewards (not to show off) then all his past sins will be forgiven",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "15xa6N25bLrnbrkyLrvzDWt1y6cJLVbtT",
+      "player": "1mXg5WUiSKlkuioG3IIaDG4Uz8fUGuhTa"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 36,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا حَرَمِيُّ بْنُ حَفْصٍ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ، قَالَ حَدَّثَنَا عُمَارَةُ، قَالَ حَدَّثَنَا أَبُو زُرْعَةَ بْنُ عَمْرِو بْنِ جَرِيرٍ، قَالَ سَمِعْتُ أَبَا هُرَيْرَةَ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  انْتَدَبَ اللَّهُ لِمَنْ خَرَجَ فِي سَبِيلِهِ لاَ يُخْرِجُهُ إِلاَّ إِيمَانٌ بِي وَتَصْدِيقٌ بِرُسُلِي أَنْ أُرْجِعَهُ بِمَا نَالَ مِنْ أَجْرٍ أَوْ غَنِيمَةٍ، أَوْ أُدْخِلَهُ الْجَنَّةَ، وَلَوْلاَ أَنْ أَشُقَّ عَلَى أُمَّتِي مَا قَعَدْتُ خَلْفَ سَرِيَّةٍ، وَلَوَدِدْتُ أَنِّي أُقْتَلُ فِي سَبِيلِ اللَّهِ ثُمَّ أُحْيَا، ثُمَّ أُقْتَلُ ثُمَّ أُحْيَا، ثُمَّ أُقْتَلُ .",
+     "gharib": [
+      {
+       "word": "انْتَدَبَ",
+       "meaning": "تكفّل بالثواب وحسن الجزاء.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٩٣، شرح الحديث ٣٦"
+      },
+      {
+       "word": "سَرِيَّةٍ",
+       "meaning": "قطعة من الجيش تخرج في مهمة، والمراد هنا جماعة تخرج في سبيل الله.",
+       "source": "الحميدي، تفسير غريب ما في الصحيحين البخاري ومسلم، بيان لفظ السرية"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٦",
+      "en": "Sahih al-Bukhari, Belief, hadith 36"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"The person who participates in (Holy battles) in Allah's cause and nothing compels him to do so except belief in Allah and His Apostles, will be recompensed by Allah either with a reward, or booty (if he survives) or will be admitted to Paradise (if he is killed in the battle as a martyr). Had I not found it difficult for my followers, then I would not remain behind any sariya going for Jihad and I would have loved to be martyred in Allah's cause and then made alive, and then martyred and then made alive, and then again martyred in His cause",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "14uRzmUFjzA0w8R5AdLeH6F7uMqKGFGz6",
+      "player": "1hUrPR7b7_crX4bZKhxQDn7nY_T9bQrJK"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 37,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ حُمَيْدِ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  مَنْ قَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ .",
+     "gharib": [
+      {
+       "word": "وَاحْتِسَابًا",
+       "meaning": "طلبًا للأجر من الله، لا رياء ولا لقصد آخر.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ٤/٢٥١، شرح قيام رمضان"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٧",
+      "en": "Sahih al-Bukhari, Belief, hadith 37"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said: \"Whoever establishes prayers during the nights of Ramadan faithfully out of sincere faith and hoping to attain Allah's rewards (not for showing off), all his past sins will be forgiven",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1qOTbSR2iv2ZiuxGx7d83rfzmkeA-qvSw",
+      "player": "1laYlHEzkJLasun3KCQ6EWptHsqX7TH9P"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 38,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا ابْنُ سَلاَمٍ، قَالَ أَخْبَرَنَا مُحَمَّدُ بْنُ فُضَيْلٍ، قَالَ حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ .",
+     "gharib": [
+      {
+       "word": "وَاحْتِسَابًا",
+       "meaning": "طلبًا لثواب الله، مع الرغبة فيه وطيب النفس بالعبادة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ٤/١١٥، شرح صيام رمضان"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٨",
+      "en": "Sahih al-Bukhari, Belief, hadith 38"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"Whoever observes fasts during the month of Ramadan out of sincere faith, and hoping to attain Allah's rewards, then all his past sins will be forgiven",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ZcR2CNMWpVLerR0Nw-KIfW9UJaCtSI9S",
+      "player": "1bFdE9k58QuF_zpm1KI2vPcdGAI2__ZUb"
      },
      "video": null,
      "sharh": null,
