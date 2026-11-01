@@ -2513,7 +2513,7 @@
    "ar": "كتاب العلم",
    "en": "Knowledge",
    "first": 59,
-   "last": 130,
+   "last": 134,
    "hadith": [
     {
      "n": 59,
@@ -5640,6 +5640,181 @@
       },
       "id": "1bZ27ByPHxVnBK22HrTQzYCV5lxFocmX3",
       "player": "1SIzl66f3ZLzcUwnlBpGy562Zz1pJcJ0T"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 131,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكٌ، عَنْ عَبْدِ اللَّهِ بْنِ دِينَارٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  إِنَّ مِنَ الشَّجَرِ شَجَرَةً لاَ يَسْقُطُ وَرَقُهَا، وَهِيَ مَثَلُ الْمُسْلِمِ، حَدِّثُونِي مَا هِيَ . فَوَقَعَ النَّاسُ فِي شَجَرِ الْبَادِيَةِ، وَوَقَعَ فِي نَفْسِي أَنَّهَا النَّخْلَةُ. قَالَ عَبْدُ اللَّهِ فَاسْتَحْيَيْتُ. فَقَالُوا يَا رَسُولَ اللَّهِ، أَخْبِرْنَا بِهَا. فَقَالَ رَسُولُ اللَّهِ ﷺ  هِيَ النَّخْلَةُ . قَالَ عَبْدُ اللَّهِ فَحَدَّثْتُ أَبِي بِمَا وَقَعَ فِي نَفْسِي فَقَالَ لأَنْ تَكُونَ قُلْتَهَا أَحَبُّ إِلَىَّ مِنْ أَنْ يَكُونَ لِي كَذَا وَكَذَا.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٣١",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 131"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "Once Allah's Messenger (ﷺ) said, \"Amongst the trees there is a tree, the leaves of which do not fall and is like a Muslim, tell me the name of that tree.\" Everybody started thinking about the trees of the desert areas and I thought of the date-palm tree but felt shy (to answer). The others asked, \"O Allah's Apostle! inform us of it.\" He replied, \"It is the date-palm tree.\" I told my father what had come to my mind and on that he said, \"Had you said it I would have preferred it to such and such a thing that I might possess",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "15YkousnaIo889mMEftpsGKDd6w7l4mHK",
+      "player": "1oyQxxp7NH7ulNYm9XssegojnRHaNuqbp"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 132,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ دَاوُدَ، عَنِ الأَعْمَشِ، عَنْ مُنْذِرٍ الثَّوْرِيِّ، عَنْ مُحَمَّدٍ ابْنِ الْحَنَفِيَّةِ، عَنْ عَلِيٍّ،",
+     "matn": "قَالَ كُنْتُ رَجُلاً مَذَّاءً فَأَمَرْتُ الْمِقْدَادَ أَنْ يَسْأَلَ النَّبِيَّ ﷺ فَسَأَلَهُ فَقَالَ  فِيهِ الْوُضُوءُ .",
+     "gharib": [
+      {
+       "word": "مَذَّاءً",
+       "meaning": "كثير المذي؛ وهو الماء المذكور في باب الطهارة الخارج عند الملاعبة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٣٢",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 132"
+     },
+     "en": {
+      "narrator": "`Ali",
+      "text": "I used to get the emotional urethral discharge frequently so I requested Al-Miqdad to ask the Prophet (ﷺ) about it. Al-Miqdad asked him and he replied, \"One has to perform ablution (after it).\" (See Hadith No)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1nmauR-nAKBlza6LixJnRboY2K4GiYH0e",
+      "player": "1Ouds6Y6n9IZe8jtirgI_CtMl8YlopDNV"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 133,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنِي قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا اللَّيْثُ بْنُ سَعْدٍ، قَالَ حَدَّثَنَا نَافِعٌ، مَوْلَى عَبْدِ اللَّهِ بْنِ عُمَرَ بْنِ الْخَطَّابِ",
+     "matn": "عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ،. أَنَّ رَجُلاً، قَامَ فِي الْمَسْجِدِ فَقَالَ يَا رَسُولَ اللَّهِ، مِنْ أَيْنَ تَأْمُرُنَا أَنْ نُهِلَّ فَقَالَ رَسُولُ اللَّهِ ﷺ  يُهِلُّ أَهْلُ الْمَدِينَةِ مِنْ ذِي الْحُلَيْفَةِ، وَيُهِلُّ أَهْلُ الشَّأْمِ مِنَ الْجُحْفَةِ، وَيُهِلُّ أَهْلُ نَجْدٍ مِنْ قَرْنٍ . وَقَالَ ابْنُ عُمَرَ وَيَزْعُمُونَ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  وَيُهِلُّ أَهْلُ الْيَمَنِ مِنْ يَلَمْلَمَ . وَكَانَ ابْنُ عُمَرَ يَقُولُ لَمْ أَفْقَهْ هَذِهِ مِنْ رَسُولِ اللَّهِ ﷺ.",
+     "gharib": [
+      {
+       "word": "نُهِلَّ",
+       "meaning": "الإهلال رفع الصوت بالتلبية ، والمراد نُحْرِم .",
+       "source": "اللسان هلل"
+      },
+      {
+       "word": "وَيُهِلُّ",
+       "meaning": "الإهلال رفع الصوت بالتلبية ، والمراد ويُحْرِم .",
+       "source": "اللسان هلل"
+      },
+      {
+       "word": "يُهِلّ",
+       "meaning": "الإهلال : رفع الصوت بالتلبية ، والمراد يحرم .",
+       "source": "اللسان هلل"
+      },
+      {
+       "word": "قَرْنٍ",
+       "meaning": "اسم الميقات الوارد لأهل نجد؛ ضبطه ابن حجر بسكون الراء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٣٣",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 133"
+     },
+     "en": {
+      "narrator": "Nafi`",
+      "text": "`Abdullah bin `Umar said: \"A man got up in the mosque and said: 'O Allah's Messenger (ﷺ) At which place you order us that we should assume the Ihram?' Allah's Messenger (ﷺ) replied, 'The residents of Medina should assure the Ihram from Dhil-Hulaifa, the people of Syria from Al-Juhfa and the people of Najd from Qarn.\" Ibn `Umar further said, \"The people consider that Allah's Messenger (ﷺ) had also said, 'The residents of Yemen should assume Ihram from Yalamlam.' \" Ibn `Umar used to say, \"I do not remember whether Allah's Messenger (ﷺ) had said the last statement or not",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1C5R_MDvQ3zWdZu4qOQtB8aYzp3w68nwp",
+      "player": "1VyXTCjFqV_WMHlEUrPKVyGOKdwKlM2dr"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 134,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ. وَعَنِ الزُّهْرِيِّ، عَنْ سَالِمٍ، عَنِ ابْنِ عُمَرَ، عَنِ النَّبِيِّ ﷺ أَنَّ رَجُلاً سَأَلَهُ مَا يَلْبَسُ الْمُحْرِمُ فَقَالَ  لاَ يَلْبَسِ الْقَمِيصَ وَلاَ الْعِمَامَةَ وَلاَ السَّرَاوِيلَ وَلاَ الْبُرْنُسَ وَلاَ ثَوْبًا مَسَّهُ الْوَرْسُ أَوِ الزَّعْفَرَانُ، فَإِنْ لَمْ يَجِدِ النَّعْلَيْنِ فَلْيَلْبَسِ الْخُفَّيْنِ وَلْيَقْطَعْهُمَا حَتَّى يَكُونَا تَحْتَ الْكَعْبَيْنِ .",
+     "gharib": [
+      {
+       "word": "الْبُرْنُسَ",
+       "meaning": "هو كل ثوب رأسُهُ منه مُلْتَزق به .",
+       "source": "النهاية برنس"
+      },
+      {
+       "word": "الْوَرْسُ",
+       "meaning": "نبت أصفر طيب الريح يصبغ به.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ٣/٤٠٤، شرح الحديث ١٥٤٢."
+      },
+      {
+       "word": "الكعبين",
+       "meaning": "الكعبان : العظمان الناتئان عند مفصل الساق والقدم عن الجنبين .",
+       "source": "النهاية كعب"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٣٤",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 134"
+     },
+     "en": {
+      "narrator": "Ibn `Umar",
+      "text": "A man asked the Prophet (ﷺ) : \"What (kinds of clothes) should a Muhrim (a Muslim intending to perform `Umra or Hajj) wear? He replied, \"He should not wear a shirt, a turban, trousers, a head cloak or garment scented with saffron or Wars (kinds of perfumes). And if he has no slippers, then he can use Khuffs (socks made from thick fabric or leather) but the socks should be cut short so as to make the ankles bare.\" (See Hadith No. 615, Vol)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1BhBZob65xgxr-lKVBiF7lSQe3gZH6285",
+      "player": "1rKXUoC7Xiv2SKBVKAOh6R3s3XsiQJCtI"
      },
      "video": null,
      "sharh": null,
