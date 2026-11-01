@@ -444,7 +444,7 @@
    "ar": "كتاب الإيمان",
    "en": "Belief",
    "first": 8,
-   "last": 38,
+   "last": 46,
    "hadith": [
     {
      "n": 8,
@@ -1652,6 +1652,335 @@
       },
       "id": "1ZcR2CNMWpVLerR0Nw-KIfW9UJaCtSI9S",
       "player": "1bFdE9k58QuF_zpm1KI2vPcdGAI2__ZUb"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 39,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ السَّلاَمِ بْنُ مُطَهَّرٍ، قَالَ حَدَّثَنَا عُمَرُ بْنُ عَلِيٍّ، عَنْ مَعْنِ بْنِ مُحَمَّدٍ الْغِفَارِيِّ، عَنْ سَعِيدِ بْنِ أَبِي سَعِيدٍ الْمَقْبُرِيِّ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  إِنَّ الدِّينَ يُسْرٌ، وَلَنْ يُشَادَّ الدِّينَ أَحَدٌ إِلاَّ غَلَبَهُ، فَسَدِّدُوا وَقَارِبُوا وَأَبْشِرُوا، وَاسْتَعِينُوا بِالْغَدْوَةِ وَالرَّوْحَةِ وَشَىْءٍ مِنَ الدُّلْجَةِ .",
+     "gharib": [
+      {
+       "word": "فَسَدِّدُوا",
+       "meaning": "الزموا الصواب والاعتدال من غير إفراط ولا تفريط.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٩٥، شرح الحديث ٣٩"
+      },
+      {
+       "word": "بِالْغَدْوَةِ",
+       "meaning": "بوقت أول النهار؛ شُبّهت الاستعانة بأوقات النشاط بسير المسافر.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٩٥، شرح الحديث ٣٩"
+      },
+      {
+       "word": "وَالرَّوْحَةِ",
+       "meaning": "السير بعد الزوال، والمراد الاستعانة بوقت النشاط على دوام العبادة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٩٥، شرح الحديث ٣٩"
+      },
+      {
+       "word": "الدُّلْجَةِ",
+       "meaning": "السير في الليل، وقيل في آخره؛ والمراد هنا شيء من عبادة الليل.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٩٥، شرح الحديث ٣٩"
+      },
+      {
+       "word": "يشاد",
+       "meaning": "أى : يقاويه ويقاومه ويكلف نفسه من العبادة فيه فوق طاقته .",
+       "source": "النهاية شدد"
+      },
+      {
+       "word": "وَقَارِبُوا",
+       "meaning": "اعملوا بما يقرب من الأكمل إن عجزتم عن بلوغه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٩٥، شرح الحديث ٣٩"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٣٩",
+      "en": "Sahih al-Bukhari, Belief, hadith 39"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"Religion is very easy and whoever overburdens himself in his religion will not be able to continue in that way. So you should not be extremists, but try to be near to perfection and receive the good tidings that you will be rewarded; and gain strength by worshipping in the mornings, the afternoons, and during the last hours of the nights.\" (See Fath-ul-Bari, Page 102, Vol)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "16mORuiVay7VsLNZ8c97seSZo-mJqBMpv",
+      "player": "1SfuySwgP7dJ06ugxzBp-vg51NDSkcjSY"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 40,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَمْرُو بْنُ خَالِدٍ، قَالَ حَدَّثَنَا زُهَيْرٌ، قَالَ حَدَّثَنَا أَبُو إِسْحَاقَ، عَنِ الْبَرَاءِ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ كَانَ أَوَّلَ مَا قَدِمَ الْمَدِينَةَ نَزَلَ عَلَى أَجْدَادِهِ ـ أَوْ قَالَ أَخْوَالِهِ ـ مِنَ الأَنْصَارِ، وَأَنَّهُ صَلَّى قِبَلَ بَيْتِ الْمَقْدِسِ سِتَّةَ عَشَرَ شَهْرًا، أَوْ سَبْعَةَ عَشَرَ شَهْرًا، وَكَانَ يُعْجِبُهُ أَنْ تَكُونَ قِبْلَتُهُ قِبَلَ الْبَيْتِ، وَأَنَّهُ صَلَّى أَوَّلَ صَلاَةٍ صَلاَّهَا صَلاَةَ الْعَصْرِ، وَصَلَّى مَعَهُ قَوْمٌ، فَخَرَجَ رَجُلٌ مِمَّنْ صَلَّى مَعَهُ، فَمَرَّ عَلَى أَهْلِ مَسْجِدٍ، وَهُمْ رَاكِعُونَ فَقَالَ أَشْهَدُ بِاللَّهِ لَقَدْ صَلَّيْتُ مَعَ رَسُولِ اللَّهِ ﷺ قِبَلَ مَكَّةَ، فَدَارُوا كَمَا هُمْ قِبَلَ الْبَيْتِ، وَكَانَتِ الْيَهُودُ قَدْ أَعْجَبَهُمْ إِذْ كَانَ يُصَلِّي قِبَلَ بَيْتِ الْمَقْدِسِ، وَأَهْلُ الْكِتَابِ، فَلَمَّا وَلَّى وَجْهَهُ قِبَلَ الْبَيْتِ أَنْكَرُوا ذَلِكَ. قَالَ زُهَيْرٌ حَدَّثَنَا أَبُو إِسْحَاقَ عَنِ الْبَرَاءِ فِي حَدِيثِهِ هَذَا أَنَّهُ مَاتَ عَلَى الْقِبْلَةِ قَبْلَ أَنْ تُحَوَّلَ رِجَالٌ وَقُتِلُوا، فَلَمْ نَدْرِ مَا نَقُولُ فِيهِمْ، فَأَنْزَلَ اللَّهُ تَعَالَى {وَمَا كَانَ اللَّهُ لِيُضِيعَ إِيمَانَكُمْ}",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٠",
+      "en": "Sahih al-Bukhari, Belief, hadith 40"
+     },
+     "en": {
+      "narrator": "Al-Bara' (bin 'Azib)",
+      "text": "When the Prophet (ﷺ) came to Medina, he stayed first with his grandfathers or maternal uncles from Ansar. He offered his prayers facing Baitul-Maqdis (Jerusalem) for sixteen or seventeen months, but he wished that he could pray facing the Ka'ba (at Mecca). The first prayer which he offered facing the Ka'ba was the 'Asr prayer in the company of some people. Then one of those who had offered that prayer with him came out and passed by some people in a mosque who were bowing during their prayers (facing Jerusalem). He said addressing them, \"By Allah, I testify that I have prayed with Allah's Messenger (ﷺ) facing Mecca (Ka'ba).' Hearing that, those people changed their direction towards the Ka'ba immediately. Jews and the people of the scriptures used to be pleased to see the Prophet (ﷺ) facing Jerusalem in prayers but when he changed his direction towards the Ka'ba, during the prayers, they disapproved of it. Al-Bara' added, \"Before we changed our direction towards the Ka'ba (Mecca) in prayers, some Muslims had died or had been killed and we did not know what to say about them (regarding their prayers.) Allah then revealed: And Allah would never make your faith (prayers) to be lost (i.e. the prayers of those Muslims were valid).' \" (2:)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1JnSFGi9jkHp0dKPXHUi5JKy7TgvPtWsr",
+      "player": "1avgz-_6lnCYIpmvZcW6Gnp0Z2czMwgJu"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 41,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "قَالَ مَالِكٌ أَخْبَرَنِي زَيْدُ بْنُ أَسْلَمَ، أَنَّ عَطَاءَ بْنَ يَسَارٍ، أَخْبَرَهُ أَنَّ أَبَا سَعِيدٍ الْخُدْرِيَّ أَخْبَرَهُ أَنَّهُ، سَمِعَ رَسُولَ اللَّهِ ﷺ يَقُولُ",
+     "matn": "إِذَا أَسْلَمَ الْعَبْدُ فَحَسُنَ إِسْلاَمُهُ يُكَفِّرُ اللَّهُ عَنْهُ كُلَّ سَيِّئَةٍ كَانَ زَلَفَهَا، وَكَانَ بَعْدَ ذَلِكَ الْقِصَاصُ، الْحَسَنَةُ بِعَشْرِ أَمْثَالِهَا إِلَى سَبْعِمِائَةِ ضِعْفٍ، وَالسَّيِّئَةُ بِمِثْلِهَا إِلاَّ أَنْ يَتَجَاوَزَ اللَّهُ عَنْهَا .",
+     "gharib": [
+      {
+       "word": "زَلَفَهَا",
+       "meaning": "أسلفها وقدمها فيما مضى.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٩٩، شرح الحديث ٤١"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤١",
+      "en": "Sahih al-Bukhari, Belief, hadith 41"
+     },
+     "en": {
+      "narrator": "Abu Sa'id Al Khudri",
+      "text": "Allah's Messenger (ﷺ) said, \"If a person embraces Islam sincerely, then Allah shall forgive all his past sins, and after that starts the settlement of accounts, the reward of his good deeds will be ten times to seven hundred times for each good deed and one evil deed will be recorded as it is unless Allah forgives it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1RyxKMQcL2mv-m545lSiJ79DpuejFJhET",
+      "player": "18jKIjBFZ96KO9hZIq7pU5OZ8tGTiYVJg"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 42,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْحَاقُ بْنُ مَنْصُورٍ، قَالَ حَدَّثَنَا عَبْدُ الرَّزَّاقِ، قَالَ أَخْبَرَنَا مَعْمَرٌ، عَنْ هَمَّامٍ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  إِذَا أَحْسَنَ أَحَدُكُمْ إِسْلاَمَهُ، فَكُلُّ حَسَنَةٍ يَعْمَلُهَا تُكْتَبُ لَهُ بِعَشْرِ أَمْثَالِهَا إِلَى سَبْعِمِائَةِ ضِعْفٍ، وَكُلُّ سَيِّئَةٍ يَعْمَلُهَا تُكْتَبُ لَهُ بِمِثْلِهَا .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٢",
+      "en": "Sahih al-Bukhari, Belief, hadith 42"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"If any one of you improves (follows strictly) his Islamic religion then his good deeds will be rewarded ten times to seven hundred times for each good deed and a bad deed will be recorded as it is",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1dvvAlNhSEQMevpmBUYgK91pPCBTCi_4M",
+      "player": "1tPj1TScRKWNbzO5jGmjX74PQz8_0epLh"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 43,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى، حَدَّثَنَا يَحْيَى، عَنْ هِشَامٍ، قَالَ أَخْبَرَنِي أَبِي، عَنْ عَائِشَةَ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ دَخَلَ عَلَيْهَا وَعِنْدَهَا امْرَأَةٌ قَالَ  مَنْ هَذِهِ . قَالَتْ فُلاَنَةُ. تَذْكُرُ مِنْ صَلاَتِهَا. قَالَ  مَهْ، عَلَيْكُمْ بِمَا تُطِيقُونَ، فَوَاللَّهِ لاَ يَمَلُّ اللَّهُ حَتَّى تَمَلُّوا . وَكَانَ أَحَبَّ الدِّينِ إِلَيْهِ مَا دَامَ عَلَيْهِ صَاحِبُهُ.",
+     "gharib": [
+      {
+       "word": "مَهْ",
+       "meaning": "اكفف؛ كلمة زجر ونهي.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٠٢، شرح الحديث ٤٣"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٣",
+      "en": "Sahih al-Bukhari, Belief, hadith 43"
+     },
+     "en": {
+      "narrator": "'Aisha",
+      "text": "Once the Prophet (ﷺ) came while a woman was sitting with me. He said, \"Who is she?\" I replied, \"She is so and so,\" and told him about her (excessive) praying. He said disapprovingly, \"Do (good) deeds which is within your capacity (without being overtaxed) as Allah does not get tired (of giving rewards) but (surely) you will get tired and the best deed (act of Worship) in the sight of Allah is that which is done regularly",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "10rXU6QEwtWB5GpT1OStcPbfdiPFCSYVi",
+      "player": "1u01Fj-PAf4DmL-LfAJft_gAyleDHEF62"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 44,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا هِشَامٌ، قَالَ حَدَّثَنَا قَتَادَةُ، عَنْ أَنَسٍ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  يَخْرُجُ مِنَ النَّارِ مَنْ قَالَ لاَ إِلَهَ إِلاَّ اللَّهُ، وَفِي قَلْبِهِ وَزْنُ شَعِيرَةٍ مِنْ خَيْرٍ، وَيَخْرُجُ مِنَ النَّارِ مَنْ قَالَ لاَ إِلَهَ إِلاَّ اللَّهُ، وَفِي قَلْبِهِ وَزْنُ بُرَّةٍ مِنْ خَيْرٍ، وَيَخْرُجُ مِنَ النَّارِ مَنْ قَالَ لاَ إِلَهَ إِلاَّ اللَّهُ، وَفِي قَلْبِهِ وَزْنُ ذَرَّةٍ مِنْ خَيْرٍ . قَالَ أَبُو عَبْدِ اللَّهِ قَالَ أَبَانُ حَدَّثَنَا قَتَادَةُ حَدَّثَنَا أَنَسٌ عَنِ النَّبِيِّ ﷺ  مِنْ إِيمَانٍ . مَكَانَ  مِنْ خَيْرٍ .",
+     "gharib": [
+      {
+       "word": "ذرة",
+       "meaning": "نملة صغيرة .",
+       "source": "اللسان ذرر"
+      },
+      {
+       "word": "بُرَّةٍ",
+       "meaning": "قمحة، أي حبة من القمح.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٠٤، شرح الحديث ٤٤"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٤",
+      "en": "Sahih al-Bukhari, Belief, hadith 44"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) said, \"Whoever said \"None has the right to be worshipped but Allah and has in his heart good (faith) equal to the weight of a barley grain will be taken out of Hell. And whoever said: \"None has the right to be worshipped but Allah and has in his heart good (faith) equal to the weight of a wheat grain will be taken out of Hell. And whoever said, \"None has the right to be worshipped but Allah and has in his heart good (faith) equal to the weight of an atom will be taken out of Hell",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 45,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا الْحَسَنُ بْنُ الصَّبَّاحِ، سَمِعَ جَعْفَرَ بْنَ عَوْنٍ، حَدَّثَنَا أَبُو الْعُمَيْسِ، أَخْبَرَنَا قَيْسُ بْنُ مُسْلِمٍ، عَنْ طَارِقِ بْنِ شِهَابٍ، عَنْ عُمَرَ بْنِ الْخَطَّابِ،",
+     "matn": "أَنَّ رَجُلاً، مِنَ الْيَهُودِ قَالَ لَهُ يَا أَمِيرَ الْمُؤْمِنِينَ، آيَةٌ فِي كِتَابِكُمْ تَقْرَءُونَهَا لَوْ عَلَيْنَا مَعْشَرَ الْيَهُودِ نَزَلَتْ لاَتَّخَذْنَا ذَلِكَ الْيَوْمَ عِيدًا. قَالَ أَىُّ آيَةٍ قَالَ {الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الإِسْلاَمَ دِينًا}. قَالَ عُمَرُ قَدْ عَرَفْنَا ذَلِكَ الْيَوْمَ وَالْمَكَانَ الَّذِي نَزَلَتْ فِيهِ عَلَى النَّبِيِّ ﷺ وَهُوَ قَائِمٌ بِعَرَفَةَ يَوْمَ جُمُعَةٍ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٥",
+      "en": "Sahih al-Bukhari, Belief, hadith 45"
+     },
+     "en": {
+      "narrator": "'Umar bin Al-Khattab",
+      "text": "Once a Jew said to me, \"O the chief of believers! There is a verse in your Holy Book Which is read by all of you (Muslims), and had it been revealed to us, we would have taken that day (on which it was revealed as a day of celebration.\" 'Umar bin Al-Khattab asked, \"Which is that verse?\" The Jew replied, \"This day I have perfected your religion For you, completed My favor upon you, And have chosen for you Islam as your religion.\" (5:3) 'Umar replied,\"No doubt, we know when and where this verse was revealed to the Prophet. It was Friday and the Prophet (ﷺ) was standing at 'Arafat (i.e. the Day of Hajj)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1S3FOtwKguu-SHvq8KjQ2uEwQCuEwRx1m",
+      "player": "1PdF1P7DL_czXvdAS3yA_5ig9ahOU3VhU"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 46,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكُ بْنُ أَنَسٍ، عَنْ عَمِّهِ أَبِي سُهَيْلِ بْنِ مَالِكٍ، عَنْ أَبِيهِ، أَنَّهُ سَمِعَ طَلْحَةَ بْنَ عُبَيْدِ اللَّهِ،",
+     "matn": "يَقُولُ جَاءَ رَجُلٌ إِلَى رَسُولِ اللَّهِ ﷺ مِنْ أَهْلِ نَجْدٍ، ثَائِرُ الرَّأْسِ، يُسْمَعُ دَوِيُّ صَوْتِهِ، وَلاَ يُفْقَهُ مَا يَقُولُ حَتَّى دَنَا، فَإِذَا هُوَ يَسْأَلُ عَنِ الإِسْلاَمِ فَقَالَ رَسُولُ اللَّهِ ـ ﷺ  خَمْسُ صَلَوَاتٍ فِي الْيَوْمِ وَاللَّيْلَةِ . فَقَالَ هَلْ عَلَىَّ غَيْرُهَا قَالَ  لاَ، إِلاَّ أَنْ تَطَوَّعَ . قَالَ رَسُولُ اللَّهِ ﷺ  وَصِيَامُ رَمَضَانَ . قَالَ هَلْ عَلَىَّ غَيْرُهُ قَالَ  لاَ، إِلاَّ أَنْ تَطَوَّعَ . قَالَ وَذَكَرَ لَهُ رَسُولُ اللَّهِ ﷺ الزَّكَاةَ. قَالَ هَلْ عَلَىَّ غَيْرُهَا قَالَ  لاَ، إِلاَّ أَنْ تَطَوَّعَ . قَالَ فَأَدْبَرَ الرَّجُلُ وَهُوَ يَقُولُ وَاللَّهِ لاَ أَزِيدُ عَلَى هَذَا وَلاَ أَنْقُصُ. قَالَ رَسُولُ اللَّهِ ﷺ  أَفْلَحَ إِنْ صَدَقَ .",
+     "gharib": [
+      {
+       "word": "دَوِىٌّ",
+       "meaning": "صوت ليس بالعالى .",
+       "source": "النهاية دوا"
+      },
+      {
+       "word": "ثَائِرُ",
+       "meaning": "متفرق الشعر؛ والمراد بثائر الرأس أن شعره غير مرتب.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٠٦، شرح الحديث ٤٦"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الإيمان، حديث رقم ٤٦",
+      "en": "Sahih al-Bukhari, Belief, hadith 46"
+     },
+     "en": {
+      "narrator": "Talha bin 'Ubaidullah",
+      "text": "A man from Najd with unkempt hair came to Allah's Messenger (ﷺ) and we heard his loud voice but could not understand what he was saying, till he came near and then we came to know that he was asking about Islam. Allah's Messenger (ﷺ) said, \"You have to offer prayers perfectly five times in a day and night (24 hours).\" The man asked, \"Is there any more (praying)?\" Allah's Messenger (ﷺ) replied, \"No, but if you want to offer the Nawafil prayers (you can).\" Allah's Messenger (ﷺ) further said to him: \"You have to observe fasts during the month of Ramadan.\" The man asked, \"Is there any more fasting?\" Allah's Messenger (ﷺ) replied, \"No, but if you want to observe the Nawafil fasts (you can.)\" Then Allah's Messenger (ﷺ) further said to him, \"You have to pay the Zakat (obligatory charity).\" The man asked, \"Is there any thing other than the Zakat for me to pay?\" Allah's Messenger (ﷺ) replied, \"No, unless you want to give alms of your own.\" And then that man retreated saying, \"By Allah! I will neither do less nor more than this.\" Allah's Messenger (ﷺ) said, \"If what he said is true, then he will be successful (i.e. he will be granted Paradise)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1GGuazrXKxjm7oa7X1aacmq2Eea6jvjd_",
+      "player": "1ZAbC5F3E3UYJ9ipm0y9Hw_UUQDe_VFmu"
      },
      "video": null,
      "sharh": null,
