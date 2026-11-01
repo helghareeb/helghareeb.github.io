@@ -2513,7 +2513,7 @@
    "ar": "كتاب العلم",
    "en": "Knowledge",
    "first": 59,
-   "last": 122,
+   "last": 130,
    "hadith": [
     {
      "n": 59,
@@ -5309,6 +5309,337 @@
       },
       "id": "1GXJvUdr_9ObqbbBnDkG6BVgZbV_5Ji87",
       "player": "1sGrKSD-k386LfZUlLAMeRbkNXVzfb1Pv"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 123,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عُثْمَانُ، قَالَ أَخْبَرَنَا جَرِيرٌ، عَنْ مَنْصُورٍ، عَنْ أَبِي وَائِلٍ، عَنْ أَبِي مُوسَى، قَالَ جَاءَ رَجُلٌ إِلَى النَّبِيِّ ﷺ فَقَالَ يَا رَسُولَ اللَّهِ، مَا الْقِتَالُ فِي سَبِيلِ اللَّهِ فَإِنَّ أَحَدَنَا يُقَاتِلُ غَضَبًا، وَيُقَاتِلُ حَمِيَّةً. فَرَفَعَ إِلَيْهِ رَأْسَهُ ـ قَالَ وَمَا رَفَعَ إِلَيْهِ رَأْسَهُ إِلاَّ أَنَّهُ كَانَ قَائِمًا ـ فَقَالَ",
+     "matn": "مَنْ قَاتَلَ لِتَكُونَ كَلِمَةُ اللَّهِ هِيَ الْعُلْيَا فَهُوَ فِي سَبِيلِ اللَّهِ عَزَّ وَجَلَّ .",
+     "gharib": [
+      {
+       "word": "حَمِيَّةً",
+       "meaning": "أنفة وعصبية تدفع صاحبها للقتال، وليست وحدها معيار القتال في سبيل الله.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٢–٢٢٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٢٣",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 123"
+     },
+     "en": {
+      "narrator": "Abu Musa",
+      "text": "A man came to the Prophet (ﷺ) and asked, \"O Allah's Messenger (ﷺ)! What kind of fighting is in Allah's cause? (I ask this), for some of us fight because of being enraged and angry and some for the sake of his pride and haughtiness.\" The Prophet (ﷺ) raised his head (as the questioner was standing) and said, \"He who fights so that Allah's Word (Islam) should be superior, then he fights in Allah's cause",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1F3DStP1AyEmUSQ721IRpenHCmyTzYTac",
+      "player": "1g3V29CAlRyakXYLqn0EBjSxsqkRorFDh"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 124,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ أَبِي سَلَمَةَ، عَنِ الزُّهْرِيِّ، عَنْ عِيسَى بْنِ طَلْحَةَ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو،",
+     "matn": "قَالَ رَأَيْتُ النَّبِيَّ ﷺ عِنْدَ الْجَمْرَةِ وَهُوَ يُسْأَلُ، فَقَالَ رَجُلٌ يَا رَسُولَ اللَّهِ نَحَرْتُ قَبْلَ أَنْ أَرْمِيَ. قَالَ  ارْمِ وَلاَ حَرَجَ . قَالَ آخَرُ يَا رَسُولَ اللَّهِ حَلَقْتُ قَبْلَ أَنْ أَنْحَرَ. قَالَ  انْحَرْ وَلاَ حَرَجَ . فَمَا سُئِلَ عَنْ شَىْءٍ قُدِّمَ وَلاَ أُخِّرَ إِلاَّ قَالَ افْعَلْ وَلاَ حَرَجَ.",
+     "gharib": [
+      {
+       "word": "حَرَجَ",
+       "meaning": "إثم أو ضيق؛ رفعه النبي ﷺ في صور التقديم والتأخير المذكورة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٢٤",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 124"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Ammar",
+      "text": "I saw the Prophet (ﷺ) near the Jamra and the people were asking him questions (about religious problems). A man asked, \"O Allah's Messenger (ﷺ)! I have slaughtered the Hadi (animal) before doing the Rami.\" The Prophet (ﷺ) replied, \"Do the Rami (now) and there is no harm.\" Another person asked, \"O Allah's Messenger (ﷺ)! I got my head shaved before slaughtering the animal.\" The Prophet (ﷺ) replied, \"Do the slaughtering (now) and there is no harm.\" So on that day, when the Prophet (ﷺ) was asked about anything as regards the ceremonies of Hajj performed before or after its due time his reply was, \"Do it (now) and there is no harm",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Im_zxiqv9DE9xp7TYiVUinSG79C5qrYx",
+      "player": "1ZKEROWMqBtv3K6qd70-Q_6Ct224efszr"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 125,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا قَيْسُ بْنُ حَفْصٍ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ، قَالَ حَدَّثَنَا الأَعْمَشُ، سُلَيْمَانُ عَنْ إِبْرَاهِيمَ، عَنْ عَلْقَمَةَ، عَنْ عَبْدِ اللَّهِ، قَالَ بَيْنَا أَنَا أَمْشِي، مَعَ النَّبِيِّ ﷺ فِي خَرِبِ الْمَدِينَةِ، وَهُوَ يَتَوَكَّأُ عَلَى عَسِيبٍ مَعَهُ، فَمَرَّ بِنَفَرٍ مِنَ الْيَهُودِ، فَقَالَ بَعْضُهُمْ لِبَعْضٍ سَلُوهُ عَنِ الرُّوحِ. وَقَالَ بَعْضُهُمْ لاَ تَسْأَلُوهُ لاَ يَجِيءُ فِيهِ بِشَىْءٍ تَكْرَهُونَهُ. فَقَالَ بَعْضُهُمْ لَنَسْأَلَنَّهُ. فَقَامَ رَجُلٌ مِنْهُمْ فَقَالَ يَا أَبَا الْقَاسِمِ، مَا الرُّوحُ فَسَكَتَ. فَقُلْتُ إِنَّهُ يُوحَى إِلَيْهِ. فَقُمْتُ، فَلَمَّا انْجَلَى عَنْهُ، قَالَ {وَيَسْأَلُونَكَ عَنِ الرُّوحِ قُلِ الرُّوحُ مِنْ أَمْرِ رَبِّي وَمَا أُوتُيتُمْ مِنَ الْعِلْمِ إِلاَّ قَلِيلاً}. قَالَ الأَعْمَشُ هَكَذَا فِي قِرَاءَتِنَا.",
+     "gharib": [
+      {
+       "word": "عَسِيبٍ",
+       "meaning": "عصا من جريد النخل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٤."
+      },
+      {
+       "word": "خَرِبِ",
+       "meaning": "مواضع الخراب، ضد العامر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٤."
+      },
+      {
+       "word": "انْجَلَى",
+       "meaning": "زال ما كان يغشاه عند نزول الوحي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٢٥",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 125"
+     },
+     "en": {
+      "narrator": "`Abdullah",
+      "text": "While I was going with the Prophet (ﷺ) through the ruins of Medina and he was reclining on a date-palm leaf stalk, some Jews passed by. Some of them said to the others: Ask him (the Prophet) about the spirit. Some of them said that they should not ask him that question as he might give a reply which would displease them. But some of them insisted on asking, and so one of them stood up and asked, \"O Abul-Qasim ! What is the spirit?\" The Prophet (ﷺ) remained quiet. I thought he was being inspired Divinely. So I stayed till that state of the Prophet (while being inspired) was over. The Prophet (ﷺ) then said, \"And they ask you (O Muhammad) concerning the spirit --Say: The spirit -- its knowledge is with my Lord. And of knowledge you (mankind) have been given only a little",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1lMyV8FYWKcyasfwbNc4ppBUsj6pN_7Xv",
+      "player": "1sTySW_Y8-RPW39a6MrwDMCRfVvSzMOMq"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 126,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُوسَى، عَنْ إِسْرَائِيلَ، عَنْ أَبِي إِسْحَاقَ، عَنِ الأَسْوَدِ، قَالَ قَالَ لِي ابْنُ الزُّبَيْرِ كَانَتْ عَائِشَةُ",
+     "matn": "تُسِرُّ إِلَيْكَ كَثِيرًا فَمَا حَدَّثَتْكَ فِي الْكَعْبَةِ قُلْتُ قَالَتْ لِي قَالَ النَّبِيُّ ﷺ  يَا عَائِشَةُ، لَوْلاَ قَوْمُكِ حَدِيثٌ عَهْدُهُمْ ـ قَالَ ابْنُ الزُّبَيْرِ بِكُفْرٍ ـ لَنَقَضْتُ الْكَعْبَةَ فَجَعَلْتُ لَهَا بَابَيْنِ باب يَدْخُلُ النَّاسُ، وَبَابٌ يَخْرُجُونَ . فَفَعَلَهُ ابْنُ الزُّبَيْرِ.",
+     "gharib": [
+      {
+       "word": "لَنَقَضْتُ",
+       "meaning": "لأعدت بناء الكعبة على الصفة المذكورة بعد إزالة بنائها القائم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٤–٢٢٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٢٦",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 126"
+     },
+     "en": {
+      "narrator": "Aswad",
+      "text": "Ibn Az-Zubair said to me, \"Aisha used to tell you secretly a number of things. What did she tell you about the Ka`ba?\" I replied, \"She told me that once the Prophet (ﷺ) said, 'O `Aisha! Had not your people been still close to the pre-Islamic period of ignorance (infidelity)! I would have dismantled the Ka`ba and would have made two doors in it; one for entrance and the other for exit.\" Later on Ibn Az-Zubair did the same",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1COlUHhxtULHm2jPXDs5MY_5fg_BSOChi",
+      "player": "1BWE3GAOKfKlTNvyDem9nPFZrXdVCz0et"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 127,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُوسَى عَنْ مَعْرُوفِ بْنِ خَرَّبُوذٍ عَنْ أَبِي",
+     "matn": "الطُّفَيْلِ عَنْ عَلِيٍّ بِذَلِكَ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٢٧",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 127"
+     },
+     "en": {
+      "narrator": "Abu at-Tufail",
+      "text": "The above mentioned Statement of `Ali",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_RRb2T9YZMGmIOtcYazuCpTZTPW4UpBq",
+      "player": "1lM8IlLdkelvGopq1No957aoOgPYlgpZu"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 128,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْحَاقُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا مُعَاذُ بْنُ هِشَامٍ، قَالَ حَدَّثَنِي أَبِي، عَنْ قَتَادَةَ، قَالَ حَدَّثَنَا أَنَسُ بْنُ مَالِكٍ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ وَمُعَاذٌ رَدِيفُهُ عَلَى الرَّحْلِ قَالَ  يَا مُعَاذُ بْنَ جَبَلٍ . قَالَ لَبَّيْكَ يَا رَسُولَ اللَّهِ وَسَعْدَيْكَ. قَالَ  يَا مُعَاذُ . قَالَ لَبَّيْكَ يَا رَسُولَ اللَّهِ وَسَعْدَيْكَ. ثَلاَثًا. قَالَ  مَا مِنْ أَحَدٍ يَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ صِدْقًا مِنْ قَلْبِهِ إِلاَّ حَرَّمَهُ اللَّهُ عَلَى النَّارِ . قَالَ يَا رَسُولَ اللَّهِ، أَفَلاَ أُخْبِرُ بِهِ النَّاسَ فَيَسْتَبْشِرُوا قَالَ  إِذًا يَتَّكِلُوا . وَأَخْبَرَ بِهَا مُعَاذٌ عِنْدَ مَوْتِهِ تَأَثُّمًا .",
+     "gharib": [
+      {
+       "word": "الرَّحْلِ",
+       "meaning": "ما يوضع على ظهر الدابة للركوب، وأكثر استعماله للبعير.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٦."
+      },
+      {
+       "word": "رَدِيفُهُ",
+       "meaning": "راكب خلفه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٦."
+      },
+      {
+       "word": "تَأَثُّمًا",
+       "meaning": "خشية الوقوع في إثم كتمان العلم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٧."
+      },
+      {
+       "word": "يَتَّكِلُوا",
+       "meaning": "يعتمدوا على ظاهر البشارة فيتركوا العمل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٢٨",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 128"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "\"Once Mu`adh was along with Allah's Messenger (ﷺ) as a companion rider. Allah's Messenger (ﷺ) said, \"O Mu`adh bin Jabal.\" Mu`adh replied, \"Labbaik and Sa`daik. O Allah's Messenger (ﷺ)!\" Again the Prophet (ﷺ) said, \"O Mu`adh!\" Mu`adh said thrice, \"Labbaik and Sa`daik, O Allah's Messenger (ﷺ)!\" Allah's Messenger (ﷺ) said, \"There is none who testifies sincerely that none has the right to be worshipped but Allah and Muhammad is his Apostle, except that Allah, will save him from the Hell-fire.\" Mu`adh said, \"O Allah's Messenger (ﷺ) ! Should I not inform the people about it so that they may have glad tidings?\" He replied, \"When the people hear about it, they will solely depend on it.\" Then Mu`adh narrated the above-mentioned Hadith just before his death, being afraid of committing sin (by not telling the knowledge)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1tbjmaqkm_j6HwOZDuVy09isUmy8cgNvl",
+      "player": "1sWTevjSY-LPk8JkiciXfRjsn0jEvAgLE"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 129,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا مُعْتَمِرٌ، قَالَ سَمِعْتُ أَبِي قَالَ، سَمِعْتُ أَنَسًا، قَالَ ذُكِرَ لِي أَنَّ النَّبِيَّ ﷺ قَالَ لِمُعَاذٍ",
+     "matn": "مَنْ لَقِيَ اللَّهَ لاَ يُشْرِكُ بِهِ شَيْئًا دَخَلَ الْجَنَّةَ . قَالَ أَلاَ أُبَشِّرُ النَّاسَ قَالَ  لاَ، إِنِّي أَخَافُ أَنْ يَتَّكِلُوا .",
+     "gharib": [
+      {
+       "word": "يَتَّكِلُوا",
+       "meaning": "يعتمدوا على البشارة ويدعوا التنافس في الأعمال.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٢٩",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 129"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "I was informed that the Prophet (ﷺ) had said to Mu`adh, \"Whosoever will meet Allah without associating anything in worship with Him will go to Paradise.\" Mu`adh asked the Prophet, \"Should I not inform the people of this good news?\" The Prophet (ﷺ) replied, \"No, I am afraid, lest they should depend upon it (absolutely)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ey_qm0UK0L79CrhAdcUNV5iUTwgjh1jb",
+      "player": "1Dw65DQE_WDyElPveNHXbiQBZoxLmt6cj"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 130,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ سَلاَمٍ، قَالَ أَخْبَرَنَا أَبُو مُعَاوِيَةَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ أَبِيهِ، عَنْ زَيْنَبَ ابْنَةِ أُمِّ سَلَمَةَ، عَنْ أُمِّ سَلَمَةَ، قَالَتْ جَاءَتْ أُمُّ سُلَيْمٍ إِلَى رَسُولِ اللَّهِ ﷺ فَقَالَتْ يَا رَسُولَ اللَّهِ إِنَّ اللَّهَ لاَ يَسْتَحْيِي مِنَ الْحَقِّ، فَهَلْ عَلَى الْمَرْأَةِ مِنْ غُسْلٍ إِذَا احْتَلَمَتْ قَالَ النَّبِيُّ ﷺ",
+     "matn": "إِذَا رَأَتِ الْمَاءَ . فَغَطَّتْ أُمُّ سَلَمَةَ ـ تَعْنِي وَجْهَهَا ـ وَقَالَتْ يَا رَسُولَ اللَّهِ وَتَحْتَلِمُ الْمَرْأَةُ قَالَ  نَعَمْ تَرِبَتْ يَمِينُكِ فَبِمَ يُشْبِهُهَا وَلَدُهَا .",
+     "gharib": [
+      {
+       "word": "تَرِبَتْ",
+       "meaning": "أصلها افتقرت وصارت على التراب؛ ولا يراد ظاهرها هنا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٢٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٣٠",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 130"
+     },
+     "en": {
+      "narrator": "Um Salama",
+      "text": "Um-Sulaim came to Allah's Messenger (ﷺ) and said, \"Verily, Allah is not shy of (telling you) the truth. Is it necessary for a woman to take a bath after she has a wet dream (nocturnal sexual discharge?) The Prophet replied, \"Yes, if she notices a discharge.\" Um Salama, then covered her face and asked, \"O Allah's Messenger (ﷺ)! Does a woman get a discharge?\" He replied, \"Yes, let your right hand be in dust (An Arabic expression you say to a person when you contradict his statement meaning \"you will not achieve goodness\"), and that is why the son resembles his mother",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1bZ27ByPHxVnBK22HrTQzYCV5lxFocmX3",
+      "player": "1SIzl66f3ZLzcUwnlBpGy562Zz1pJcJ0T"
      },
      "video": null,
      "sharh": null,
