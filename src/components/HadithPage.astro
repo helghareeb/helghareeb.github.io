@@ -73,18 +73,30 @@ const crumbs = [
   document.addEventListener('click', () => (pop.hidden = true));
 
   // Audio: open Drive's player for one hadith at a time; opening another closes (and so stops) the rest.
+  const closePlayer = (box: HTMLElement) => {
+    box.querySelector('iframe')?.remove();
+    box.classList.remove('is-open');
+    box.querySelector<HTMLElement>('.hadith-audio__frame')!.hidden = true;
+    const button = box.querySelector<HTMLButtonElement>('.hadith-audio__play')!;
+    button.setAttribute('aria-expanded', 'false');
+    button.querySelector('[data-play-label]')!.textContent = button.dataset.openLabel!;
+  };
   document.querySelectorAll<HTMLElement>('.hadith-audio').forEach((box) => {
-    box.querySelector('button')!.addEventListener('click', () => {
-      document.querySelectorAll<HTMLElement>('.hadith-audio.is-open').forEach((other) => {
-        other.querySelector('iframe')?.remove();
-        other.classList.remove('is-open');
-      });
+    const button = box.querySelector<HTMLButtonElement>('.hadith-audio__play')!;
+    button.addEventListener('click', () => {
+      if (box.classList.contains('is-open')) { closePlayer(box); return; }
+      document.querySelectorAll<HTMLElement>('.hadith-audio.is-open').forEach(closePlayer);
       const frame = document.createElement('iframe');
       frame.src = `https://drive.google.com/file/d/${box.dataset.audioId}/preview`;
       frame.allow = 'autoplay; fullscreen';
-      frame.title = box.querySelector('button')!.textContent ?? '';
-      box.append(frame);
+      frame.allowFullscreen = true;
+      frame.title = box.dataset.playerTitle!;
+      const holder = box.querySelector<HTMLElement>('.hadith-audio__frame')!;
+      holder.hidden = false;
+      holder.append(frame);
       box.classList.add('is-open');
+      button.setAttribute('aria-expanded', 'true');
+      button.querySelector('[data-play-label]')!.textContent = button.dataset.closeLabel!;
     });
   });
 </script>

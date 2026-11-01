@@ -13,10 +13,10 @@ const u = encodeURIComponent(url);
 const t = encodeURIComponent(title);
 const text = encodeURIComponent(`${title}\n${url}`);
 const L = lang === 'ar'
-  ? { share: 'مشاركة', copy: 'نسخ الرابط', copied: 'نُسخ الرابط', email: 'بريد' }
-  : { share: 'Share', copy: 'Copy link', copied: 'Link copied', email: 'Email' };
+  ? { share: 'مشاركة', copy: 'نسخ الرابط', copied: 'نُسخ الرابط', email: 'البريد الإلكتروني', more: 'المزيد', group: 'مشاركة الصفحة', copyPrompt: 'انسخ الرابط التالي' }
+  : { share: 'Share', copy: 'Copy link', copied: 'Link copied', email: 'Email', more: 'More', group: 'Share this page', copyPrompt: 'Copy this link' };
 const links = [
-  { name: 'WhatsApp', href: `https://wa.me/?text=${text}` },
+  { name: lang === 'ar' ? 'واتساب' : 'WhatsApp', href: `https://wa.me/?text=${text}` },
   { name: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
   { name: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
   { name: 'X', href: `https://x.com/intent/post?url=${u}&text=${t}` },
@@ -25,34 +25,65 @@ const links = [
 ];
 ---
 
-<div class:list={['share', { 'share--compact': compact }]} data-share-url={url} data-share-title={title}>
-  <button type="button" class="share__native" hidden>{L.share}</button>
-  {!compact && <span class="share__label">{L.share}:</span>}
-  {links.map((l) => (
-    <a class="share__link" href={l.href} target="_blank" rel="noopener">{l.name}</a>
-  ))}
-  <button type="button" class="share__copy" data-copied={L.copied}>{L.copy}</button>
+<div class:list={['share', { 'share--compact': compact }]} role="group" aria-label={L.group} data-share-url={url} data-share-title={title}>
+  <button type="button" class="share__native" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg>
+    <span>{L.share}</span>
+  </button>
+  <a class="share__link share__whatsapp" href={links[0].href} target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 0 1-12.8 7.3L3 20l1.2-4.2A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8 7.5c0 4 4.5 8.5 8 8.5l1-2.5-3-1-1 1a9 9 0 0 1-3-3l1-1-1-3Z"/></svg>
+    <span>{links[0].name}</span>
+  </a>
+  <button type="button" class="share__copy" data-copied={L.copied} data-prompt={L.copyPrompt}>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V4H4v11h4"/></svg>
+    <span>{L.copy}</span>
+  </button>
+  <details class="share__more">
+    <summary>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>
+      <span>{L.more}</span>
+    </summary>
+    <div class="share__options">
+      {links.slice(1).map((l) => <a href={l.href} target="_blank" rel="noopener noreferrer">{l.name}</a>)}
+    </div>
+  </details>
+  <span class="share__status" role="status" aria-live="polite"></span>
 </div>
 
 <script>
   document.querySelectorAll<HTMLElement>('.share').forEach((box) => {
     const url = box.dataset.shareUrl!;
     const title = box.dataset.shareTitle!;
+    const more = box.querySelector<HTMLDetailsElement>('.share__more')!;
     const native = box.querySelector<HTMLButtonElement>('.share__native')!;
     if (navigator.share) {
       native.hidden = false;
-      native.addEventListener('click', () => navigator.share({ title, url }).catch(() => {}));
+      native.addEventListener('click', async () => {
+        try { await navigator.share({ title, url }); }
+        catch (error) { if (!(error instanceof DOMException && error.name === 'AbortError')) more.open = true; }
+      });
     }
     const copy = box.querySelector<HTMLButtonElement>('.share__copy')!;
+    const label = copy.querySelector('span')!;
+    const status = box.querySelector<HTMLElement>('.share__status')!;
+    const originalLabel = label.textContent;
+    let reset: ReturnType<typeof setTimeout>;
     copy.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(url);
-        const before = copy.textContent;
-        copy.textContent = copy.dataset.copied ?? before;
-        setTimeout(() => (copy.textContent = before), 1800);
+        clearTimeout(reset);
+        label.textContent = copy.dataset.copied ?? originalLabel;
+        status.textContent = label.textContent;
+        reset = setTimeout(() => { label.textContent = originalLabel; status.textContent = ''; }, 2000);
       } catch {
-        window.prompt('', url);
+        window.prompt(copy.dataset.prompt, url);
       }
+    });
+    box.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && more.open) { more.open = false; more.querySelector('summary')?.focus(); }
+    });
+    document.addEventListener('click', (event) => {
+      if (event.target instanceof Node && !box.contains(event.target)) more.open = false;
     });
   });
 </script>

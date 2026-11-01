@@ -2004,26 +2004,74 @@ aside.entity-panel {
 }
 
 .hadith-audio {
+  display: grid;
+  gap: 0.65rem;
+  min-width: 0;
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.hadith-audio__toolbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.7rem;
+  justify-content: space-between;
+  gap: 0.6rem;
 }
 
-.hadith-audio .button {
+.hadith-audio .hadith-audio__play {
   width: auto;
-  padding: 0.45rem 1rem;
+  min-height: 48px;
+  gap: 0.6rem;
+  padding: 0.5rem 1.1rem;
+}
+
+.hadith-audio__external,
+.hadith-audio__download {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hadith-audio__download { font-weight: 700; }
+
+.hadith-audio__reader {
+  line-height: 1.6;
+}
+
+.hadith-audio__frame {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #182126;
+}
+
+.hadith-audio__frame[hidden] {
+  display: none;
 }
 
 .hadith-audio iframe {
-  flex-basis: 100%;
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
-  max-width: 560px;
+  min-height: 240px;
   border: 0;
-  border-radius: var(--radius-sm);
-  background: #f1f3f4;
+}
+
+@media (max-width: 40rem) {
+  .hadith-card { padding: 1rem; }
+  .hadith-audio { padding: 0.7rem; }
+  .hadith-audio__toolbar { gap: 0.3rem; }
+  .dawah-card__frame { min-height: 240px; }
 }
 
 .hadith-card__text p {
@@ -2208,40 +2256,105 @@ button.gharib:focus-visible {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-}
-
-.share__label {
-  color: var(--muted);
+  gap: 0.55rem;
+  font-size: 0.95rem;
+  position: relative;
 }
 
 .share__link,
 .share__copy,
-.share__native {
-  padding: 0.2rem 0.65rem;
+.share__native,
+.share__more > summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  background: transparent;
+  border-radius: 12px;
+  background: var(--surface-strong);
   color: var(--accent);
   font: inherit;
+  line-height: 1.3;
   cursor: pointer;
   text-decoration: none;
+  transition: background 160ms, border-color 160ms;
 }
 
 .share__native {
-  border-color: var(--brand);
-  color: var(--brand-strong);
+  background: var(--accent);
+  color: var(--surface-strong);
+  border-color: var(--accent);
   font-weight: 600;
 }
 
-.share__link:hover,
-.share__copy:hover {
-  border-color: var(--brand);
+.share__native[hidden] { display: none; }
+.share svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.share--compact {
-  font-size: 0.85rem;
+.share__link:hover,
+.share__copy:hover,
+.share__more > summary:hover {
+  border-color: var(--brand);
+  background: var(--bg-soft);
+}
+
+.share__more { position: relative; }
+.share__more > summary { list-style: none; }
+.share__more > summary::-webkit-details-marker { display: none; }
+.share__more[open] > summary { border-color: var(--brand); }
+.share__options {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 0.5rem);
+  z-index: 20;
+  display: grid;
+  min-width: min(220px, calc(100vw - 4rem));
+  padding: 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+}
+.share__options a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.share__options a:hover { background: var(--bg); }
+.share__status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.share :is(button, a, summary):focus-visible,
+.hadith-audio :is(button, a):focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
+.share--compact { font-size: 0.9rem; }
+@media (max-width: 30rem) {
+  .share { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.45rem; }
+  .share :is(.share__link, .share__copy, .share__native, summary) {
+    padding-inline: 0.7rem;
+    width: 100%;
+  }
+  .share__more { position: static; }
+  .share__options { top: calc(100% + 0.4rem); }
 }
 
 .entity-share {

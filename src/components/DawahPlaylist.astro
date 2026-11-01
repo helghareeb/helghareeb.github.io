@@ -87,7 +87,15 @@ const parts = (ids: string[] | undefined, label: string) =>
   document.querySelectorAll<HTMLDetailsElement>('.dawah-card__player').forEach((d) => {
     d.addEventListener('toggle', () => {
       const frame = d.querySelector<HTMLIFrameElement>('iframe[data-src]');
-      if (d.open && frame && !frame.src) frame.src = frame.dataset.src!;
+      if (!frame) return;
+      if (d.open) {
+        document.querySelectorAll<HTMLDetailsElement>('.dawah-card__player[open]').forEach((other) => {
+          if (other !== d) other.open = false;
+        });
+        if (!frame.hasAttribute('src')) frame.src = frame.dataset.src!;
+      } else {
+        frame.removeAttribute('src');
+      }
     });
   });
 </script>

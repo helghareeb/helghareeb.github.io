@@ -1,5 +1,6 @@
 ---
 import { hadithLabels, hadithPath, markGharib, num, type Hadith } from '../utils/hadith';
+import { getFileDownloadUrl } from '../utils/videos';
 
 interface Props {
   lang: 'ar' | 'en';
@@ -25,9 +26,16 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 
   <div class="hadith-card__audio">
     {h.audio.id ? (
-      <div class="hadith-audio" data-audio-id={h.audio.player ?? h.audio.id}>
-        <button type="button" class="button hadith-audio__play">▶ {t.listen}</button>
-        {h.audio.reader[lang] && <span class="content-card__meta">{t.reader}: {h.audio.reader[lang]}</span>}
+      <div class="hadith-audio" data-audio-id={h.audio.player ?? h.audio.id} data-player-title={`${book[lang]} · ${t.hadith(h.n)}`}>
+        <div class="hadith-audio__toolbar">
+          <button type="button" class="button hadith-audio__play" aria-expanded="false" aria-controls={`audio-${book.id}-${h.n}`} data-open-label={t.listen} data-close-label={lang === 'ar' ? 'إغلاق المشغّل' : 'Close player'}>
+            <span aria-hidden="true">▶</span> <span data-play-label>{t.listen}</span>
+          </button>
+          <a class="hadith-audio__download" href={getFileDownloadUrl(h.audio.id)} target="_blank" rel="noopener noreferrer">{lang === 'ar' ? 'تحميل الصوت MP3 ↓' : 'Download MP3 ↓'}</a>
+          <a class="hadith-audio__external" href={`https://drive.google.com/file/d/${h.audio.player ?? h.audio.id}/view`} target="_blank" rel="noopener noreferrer">{lang === 'ar' ? 'فتح في Drive ↗' : 'Open in Drive ↗'}</a>
+        </div>
+        {h.audio.reader[lang] && <span class="content-card__meta hadith-audio__reader">{t.reader}: {h.audio.reader[lang]}</span>}
+        <div class="hadith-audio__frame" id={`audio-${book.id}-${h.n}`} hidden></div>
       </div>
     ) : (
       <p class="content-card__meta">{h.audio.reader[lang] ? `${t.reader}: ${h.audio.reader[lang]} — ` : ''}{t.audioSoon}</p>
