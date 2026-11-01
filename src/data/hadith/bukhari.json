@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 170,
+   "last": 178,
    "hadith": [
     {
      "n": 135,
@@ -7353,6 +7353,288 @@
       },
       "id": "1L1lToGa8hUKSntzrLpDdrl-3fWxYJXki",
       "player": "1m2rStU-0YPPwB5wYJypnlpPbbdGbpHsk"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 171,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ الرَّحِيمِ، قَالَ أَخْبَرَنَا سَعِيدُ بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنَا عَبَّادٌ، عَنِ ابْنِ عَوْنٍ، عَنِ ابْنِ سِيرِينَ، عَنْ أَنَسٍ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ لَمَّا حَلَقَ رَأْسَهُ كَانَ أَبُو طَلْحَةَ أَوَّلَ مَنْ أَخَذَ مِنْ شَعَرِهِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧١",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 171"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "When Allah's Messenger (ﷺ) got his head shaved, Abu- Talha was the first to take some of his hair",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1jbjSwdLB2TrfpXpN85IpRZpX_KzXBCIS",
+      "player": "1lEYzSWp0ye5-Q-oNcXgwqHGr2xVeo2mv"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 172,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، عَنْ مَالِكٍ، عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "قَالَ إِنَّ رَسُولَ اللَّهِ ﷺ قَالَ  إِذَا شَرِبَ الْكَلْبُ فِي إِنَاءِ أَحَدِكُمْ فَلْيَغْسِلْهُ سَبْعًا .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٢",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 172"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"If a dog drinks from the utensil of anyone of you it is essential to wash it seven times",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1H6dNagWKD7qhCCoRr09b20D6Z4ZacKaK",
+      "player": "1ZisPB80lNZ-LbpBP2jnLaHMUxNUAys10"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 173,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْحَاقُ، أَخْبَرَنَا عَبْدُ الصَّمَدِ، حَدَّثَنَا عَبْدُ الرَّحْمَنِ بْنُ عَبْدِ اللَّهِ بْنِ دِينَارٍ، سَمِعْتُ أَبِي، عَنْ أَبِي صَالِحٍ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ  أَنَّ رَجُلاً رَأَى كَلْبًا يَأْكُلُ الثَّرَى مِنَ الْعَطَشِ، فَأَخَذَ الرَّجُلُ خُفَّهُ فَجَعَلَ يَغْرِفُ لَهُ بِهِ حَتَّى أَرْوَاهُ، فَشَكَرَ اللَّهُ لَهُ فَأَدْخَلَهُ الْجَنَّةَ .",
+     "gharib": [
+      {
+       "word": "الثَّرَى",
+       "meaning": "التراب الندي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٧٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٣",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 173"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"A man saw a dog eating mud from (the severity of) thirst. So, that man took a shoe (and filled it) with water and kept on pouring the water for the dog till it quenched its thirst. So Allah approved of his deed and made him to enter Paradise",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_zl7WE6AAL3e5EmBUdt3csuqBvG8hplN",
+      "player": "1ejcfb5eophrpal24IE9FMhgP1skRf-8Y"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 174,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "وَقَالَ أَحْمَدُ بْنُ شَبِيبٍ حَدَّثَنَا أَبِي، عَنْ يُونُسَ، عَنِ ابْنِ شِهَابٍ، قَالَ حَدَّثَنِي حَمْزَةُ بْنُ عَبْدِ اللَّهِ، عَنْ أَبِيهِ، قَالَ كَانَتِ الْكِلاَبُ تَبُولُ وَتُقْبِلُ وَتُدْبِرُ فِي الْمَسْجِدِ فِي زَمَانِ رَسُولِ اللَّهِ ﷺ فَلَمْ يَكُونُوا يَرُشُّونَ شَيْئًا مِنْ ذَلِكَ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٤",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 174"
+     },
+     "en": {
+      "narrator": "",
+      "text": "And narrated Hamza bin 'Abdullah:My father said. \"During the lifetime of Allah's Apostle, the dogs used to urinate, and pass through the mosques (come and go), nevertheless they never used to sprinkle water on it (urine of the dog)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1jQA0IUPCsDVoeSFyX9PXlByG29GEsjg3",
+      "player": "1DRuuq9T_AJynCaMWeb6OL0NBpiMBsDwl"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 175,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا حَفْصُ بْنُ عُمَرَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنِ ابْنِ أَبِي السَّفَرِ، عَنِ الشَّعْبِيِّ، عَنْ عَدِيِّ بْنِ حَاتِمٍ،",
+     "matn": "قَالَ سَأَلْتُ النَّبِيَّ ﷺ فَقَالَ  إِذَا أَرْسَلْتَ كَلْبَكَ الْمُعَلَّمَ فَقَتَلَ فَكُلْ، وَإِذَا أَكَلَ فَلاَ تَأْكُلْ، فَإِنَّمَا أَمْسَكَهُ عَلَى نَفْسِهِ . قُلْتُ أُرْسِلُ كَلْبِي فَأَجِدُ مَعَهُ كَلْبًا آخَرَ قَالَ  فَلاَ تَأْكُلْ، فَإِنَّمَا سَمَّيْتَ عَلَى كَلْبِكَ، وَلَمْ تُسَمِّ عَلَى كَلْبٍ آخَرَ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 175"
+     },
+     "en": {
+      "narrator": "`Adi bin Hatim",
+      "text": "I asked the Prophet (about the hunting dogs) and he replied, \"If you let loose (with Allah's name) your tamed dog after a game and it hunts it, you may eat it, but if the dog eats of (that game) then do not eat it because the dog has hunted it for itself.\" I further said, \"Sometimes I send my dog for hunting and find another dog with it. He said, \"Do not eat the game for you have mentioned Allah's name only on sending your dog and not the other dog",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1OiR05EVaow9HrkInbDKOa8kQoY6vy-Tj",
+      "player": "1slLezYPKTf45oWZSR5ITNB7ttNeiGA7p"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 176,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ بْنُ أَبِي إِيَاسٍ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، عَنْ سَعِيدٍ الْمَقْبُرِيِّ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "قَالَ قَالَ النَّبِيُّ ﷺ  لاَ يَزَالُ الْعَبْدُ فِي صَلاَةٍ مَا كَانَ فِي الْمَسْجِدِ يَنْتَظِرُ الصَّلاَةَ، مَا لَمْ يُحْدِثْ . فَقَالَ رَجُلٌ أَعْجَمِيٌّ مَا الْحَدَثُ يَا أَبَا هُرَيْرَةَ قَالَ الصَّوْتُ. يَعْنِي الضَّرْطَةَ.",
+     "gharib": [
+      {
+       "word": "أَعْجَمِيٌّ",
+       "meaning": "غير فصيح بالعربية، سواء كان عربي الأصل أم لا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٨٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 176"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"A person is considered in prayer as long as he is waiting for the prayer in the mosque as long as he does not do Hadath.\" A non-Arab man asked, \"O Abu Huraira! What is Hadath?\" I replied, \"It is the passing of wind (from the anus) (that is one of the types of Hadath)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1m5C7jxXR2U0n8ibvJKRImFdZstt7UCZC",
+      "player": "1PM8C0s0Zo_x7zXEoQqZ5iIQYldl72ygS"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 177,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْوَلِيدِ، قَالَ حَدَّثَنَا ابْنُ عُيَيْنَةَ، عَنِ الزُّهْرِيِّ، عَنْ عَبَّادِ بْنِ تَمِيمٍ، عَنْ عَمِّهِ، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "لاَ يَنْصَرِفْ حَتَّى يَسْمَعَ صَوْتًا أَوْ يَجِدَ رِيحًا .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 177"
+     },
+     "en": {
+      "narrator": "`Abbad bin Tamim",
+      "text": "My uncle said: The Prophet (ﷺ) said, \"One should not leave his prayer unless he hears sound or smells something",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "17SPLljVrrgGRrWYOJ2zXQYM3rklTffLP",
+      "player": "1aQ4OTf8T5bVukRaojVQL4LD8GPCFMXmd"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 178,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا جَرِيرٌ، عَنِ الأَعْمَشِ، عَنْ مُنْذِرٍ أَبِي يَعْلَى الثَّوْرِيِّ،",
+     "matn": "عَنْ مُحَمَّدٍ ابْنِ الْحَنَفِيَّةِ، قَالَ قَالَ عَلِيٌّ كُنْتُ رَجُلاً مَذَّاءً، فَاسْتَحْيَيْتُ أَنْ أَسْأَلَ رَسُولَ اللَّهِ ﷺ فَأَمَرْتُ الْمِقْدَادَ بْنَ الأَسْوَدِ فَسَأَلَهُ فَقَالَ  فِيهِ الْوُضُوءُ . وَرَوَاهُ شُعْبَةُ عَنِ الأَعْمَشِ.",
+     "gharib": [
+      {
+       "word": "مَذَّاءً",
+       "meaning": "كثير المذي؛ وهو ماء أبيض رقيق لزج يخرج عند الملاعبة أو تذكر الجماع أو إرادته.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٣٠ و٣٧٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٨",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 178"
+     },
+     "en": {
+      "narrator": "`Ali",
+      "text": "I used to get emotional urethral discharges frequently and felt shy to ask Allah's Messenger (ﷺ) about it. So I requested Al-Miqdad bin Al-Aswad to ask (the Prophet (ﷺ) ) about it. Al-Miqdad asked him and he replied, \"One has to perform ablution (after it)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
