@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 178,
+   "last": 186,
    "hadith": [
     {
      "n": 135,
@@ -7635,6 +7635,351 @@
       },
       "id": null,
       "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 179,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سَعْدُ بْنُ حَفْصٍ، حَدَّثَنَا شَيْبَانُ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، أَنَّ عَطَاءَ بْنَ يَسَارٍ، أَخْبَرَهُ أَنْ زَيْدَ بْنَ خَالِدٍ أَخْبَرَهُ أَنَّهُ، سَأَلَ عُثْمَانَ بْنَ عَفَّانَ ـ رضى الله عنه ـ",
+     "matn": "قُلْتُ أَرَأَيْتَ إِذَا جَامَعَ فَلَمْ يُمْنِ قَالَ عُثْمَانُ يَتَوَضَّأُ كَمَا يَتَوَضَّأُ لِلصَّلاَةِ، وَيَغْسِلُ ذَكَرَهُ. قَالَ عُثْمَانُ سَمِعْتُهُ مِنْ رَسُولِ اللَّهِ ﷺ. فَسَأَلْتُ عَنْ ذَلِكَ عَلِيًّا، وَالزُّبَيْرَ، وَطَلْحَةَ، وَأُبَىَّ بْنَ كَعْبٍ ـ رضى الله عنهم ـ فَأَمَرُوهُ بِذَلِكَ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٧٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 179"
+     },
+     "en": {
+      "narrator": "Zaid bin Khalid",
+      "text": "I asked `Uthman bin `Affan about a person who engaged in intercourse but did no discharge. `Uthman replied, \"He should perform ablution like the one for an ordinary prayer but he must wash his penis.\" `Uthman added, \"I heard it from Allah's Messenger (ﷺ).\" I asked `Ali Az-Zubair, Talha and Ubai bin Ka`b about it and they, too, gave the same reply. (This order was canceled later on and taking a bath became necessary for such cases)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1qfjz7ffc8l-9ePiSdcBc_0GZyY9-NAaZ",
+      "player": "10IRvO0ti8AnChkLksJIw6jPJod-moOoo"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 180,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْحَاقُ، قَالَ أَخْبَرَنَا النَّضْرُ، قَالَ أَخْبَرَنَا شُعْبَةُ، عَنِ الْحَكَمِ، عَنْ ذَكْوَانَ أَبِي صَالِحٍ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، أَنَّ رَسُولَ اللَّهِ ﷺ أَرْسَلَ إِلَى رَجُلٍ مِنَ الأَنْصَارِ فَجَاءَ وَرَأْسُهُ يَقْطُرُ، فَقَالَ النَّبِيُّ ﷺ",
+     "matn": "لَعَلَّنَا أَعْجَلْنَاكَ . فَقَالَ نَعَمْ. فَقَالَ رَسُولُ اللَّهِ ﷺ  إِذَا أُعْجِلْتَ أَوْ قُحِطْتَ، فَعَلَيْكَ الْوُضُوءُ . تَابَعَهُ وَهْبٌ قَالَ حَدَّثَنَا شُعْبَةُ. قَالَ أَبُو عَبْدِ اللَّهِ وَلَمْ يَقُلْ غُنْدَرٌ وَيَحْيَى عَنْ شُعْبَةَ الْوُضُوءُ.",
+     "gharib": [
+      {
+       "word": "أُعْجِلْتَ",
+       "meaning": "عجل بك عن فراغ حاجتك من الجماع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٨٤."
+      },
+      {
+       "word": "قُحِطْتَ",
+       "meaning": "جامعت ولم تنزل؛ استعير اللفظ من احتباس المطر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٨٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٨٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 180"
+     },
+     "en": {
+      "narrator": "Abu Sa`id Al-Khudri",
+      "text": "Allah's Messenger (ﷺ) sent for a Ansari man who came with water dropping from his head. The Prophet (ﷺ) said, \"Perhaps we have forced you to hurry up, haven't we?\" The Ansari replied, \"Yes.\" Allah's Messenger (ﷺ) further said, \"If you are forced to hurry up (during intercourse) or you do not discharge then ablution is due on you (This order was canceled later on, i.e. one has to take a bath)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1FGxMu3O2GQ08aMzI_ZGRd7vtMGlcg2it",
+      "player": "1M9nTARnV9HYb9enJkEjjRgWAtj7YUhVq"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 181,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنِي مُحَمَّدُ بْنُ سَلاَمٍ، قَالَ أَخْبَرَنَا يَزِيدُ بْنُ هَارُونَ، عَنْ يَحْيَى، عَنْ مُوسَى بْنِ عُقْبَةَ، عَنْ كُرَيْبٍ، مَوْلَى ابْنِ عَبَّاسٍ عَنْ أُسَامَةَ بْنِ زَيْدٍ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ لَمَّا أَفَاضَ مِنْ عَرَفَةَ عَدَلَ إِلَى الشِّعْبِ، فَقَضَى حَاجَتَهُ. قَالَ أُسَامَةُ بْنُ زَيْدٍ فَجَعَلْتُ أَصُبُّ عَلَيْهِ وَيَتَوَضَّأُ فَقُلْتُ يَا رَسُولَ اللَّهِ أَتُصَلِّي فَقَالَ  الْمُصَلَّى أَمَامَكَ .",
+     "gharib": [
+      {
+       "word": "الشِّعْبِ",
+       "meaning": "الطريق في الجبل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٠."
+      },
+      {
+       "word": "أفاض",
+       "meaning": "دفع من عرفة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٤٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٨١",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 181"
+     },
+     "en": {
+      "narrator": "Usama bin Zaid",
+      "text": "\"When Allah's Messenger (ﷺ) departed from `Arafat, he turned towards a mountain pass where he answered the call of nature. (After he had finished) I poured water and he performed ablution and then I said to him, \"O Allah's Messenger (ﷺ)! Will you offer the prayer?\" He replied, \"The Musalla (place of the prayer) is ahead of you (in Al-Muzdalifa)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 182,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَمْرُو بْنُ عَلِيٍّ، قَالَ حَدَّثَنَا عَبْدُ الْوَهَّابِ، قَالَ سَمِعْتُ يَحْيَى بْنَ سَعِيدٍ، قَالَ أَخْبَرَنِي سَعْدُ بْنُ إِبْرَاهِيمَ، أَنَّ نَافِعَ بْنَ جُبَيْرِ بْنِ مُطْعِمٍ، أَخْبَرَهُ أَنَّهُ، سَمِعَ عُرْوَةَ بْنَ الْمُغِيرَةِ بْنِ شُعْبَةَ،",
+     "matn": "يُحَدِّثُ عَنِ الْمُغِيرَةِ بْنِ شُعْبَةَ، أَنَّهُ كَانَ مَعَ رَسُولِ اللَّهِ ﷺ فِي سَفَرٍ، وَأَنَّهُ ذَهَبَ لِحَاجَةٍ لَهُ، وَأَنَّ مُغِيرَةَ جَعَلَ يَصُبُّ الْمَاءَ عَلَيْهِ، وَهُوَ يَتَوَضَّأُ، فَغَسَلَ وَجْهَهُ وَيَدَيْهِ وَمَسَحَ بِرَأْسِهِ وَمَسَحَ عَلَى الْخُفَّيْنِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٨٢",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 182"
+     },
+     "en": {
+      "narrator": "Al-Mughira bin Shu`ba",
+      "text": "I was in the company of Allah's Messenger (ﷺ) on one of the journeys and he went out to answer the call of nature (and after he finished) I poured water and he performed ablution; he washed his face, forearms and passed his wet hand over his head and over the two Khuff (socks made from thick fabric or leather)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 183,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكٌ، عَنْ مَخْرَمَةَ بْنِ سُلَيْمَانَ، عَنْ كُرَيْبٍ، مَوْلَى ابْنِ عَبَّاسٍ أَنَّ عَبْدَ اللَّهِ بْنَ عَبَّاسٍ،",
+     "matn": "أَخْبَرَهُ أَنَّهُ، بَاتَ لَيْلَةً عِنْدَ مَيْمُونَةَ زَوْجِ النَّبِيِّ ﷺ وَهِيَ خَالَتُهُ فَاضْطَجَعْتُ فِي عَرْضِ الْوِسَادَةِ، وَاضْطَجَعَ رَسُولُ اللَّهِ ﷺ وَأَهْلُهُ فِي طُولِهَا، فَنَامَ رَسُولُ اللَّهِ ﷺ حَتَّى إِذَا انْتَصَفَ اللَّيْلُ، أَوْ قَبْلَهُ بِقَلِيلٍ أَوْ بَعْدَهُ بِقَلِيلٍ، اسْتَيْقَظَ رَسُولُ اللَّهِ ﷺ فَجَلَسَ يَمْسَحُ النَّوْمَ عَنْ وَجْهِهِ بِيَدِهِ، ثُمَّ قَرَأَ الْعَشْرَ الآيَاتِ الْخَوَاتِمَ مِنْ سُورَةِ آلِ عِمْرَانَ، ثُمَّ قَامَ إِلَى شَنٍّ مُعَلَّقَةٍ، فَتَوَضَّأَ مِنْهَا فَأَحْسَنَ وُضُوءَهُ، ثُمَّ قَامَ يُصَلِّي. قَالَ ابْنُ عَبَّاسٍ فَقُمْتُ فَصَنَعْتُ مِثْلَ مَا صَنَعَ، ثُمَّ ذَهَبْتُ، فَقُمْتُ إِلَى جَنْبِهِ، فَوَضَعَ يَدَهُ الْيُمْنَى عَلَى رَأْسِي، وَأَخَذَ بِأُذُنِي الْيُمْنَى، يَفْتِلُهَا، فَصَلَّى رَكْعَتَيْنِ، ثُمَّ رَكْعَتَيْنِ، ثُمَّ رَكْعَتَيْنِ، ثُمَّ رَكْعَتَيْنِ، ثُمَّ رَكْعَتَيْنِ، ثُمَّ رَكْعَتَيْنِ، ثُمَّ أَوْتَرَ، ثُمَّ اضْطَجَعَ، حَتَّى أَتَاهُ الْمُؤَذِّنُ، فَقَامَ، فَصَلَّى رَكْعَتَيْنِ خَفِيفَتَيْنِ، ثُمَّ خَرَجَ فَصَلَّى الصُّبْحَ.",
+     "gharib": [
+      {
+       "word": "شَنٍّ",
+       "meaning": "قربة بدأت تبلى.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٨٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٨٣",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 183"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Abbas",
+      "text": "That he stayed overnight in the house of Maimuna the wife of the Prophet, his aunt. He added: I lay on the bed (cushion transversally) while Allah's Messenger (ﷺ) and his wife lay in the lengthwise direction of the cushion. Allah's Messenger (ﷺ) slept till the middle of the night, either a bit before or a bit after it and then woke up, rubbing the traces of sleep off his face with his hands. He then, recited the last ten verses of Sura Al-`Imran, got up and went to a hanging water-skin. He then Performed the ablution from it and it was a perfect ablution, and then stood up to offer the prayer. I, too, got up and did as the Prophet had done. Then I went and stood by his side. He placed his right hand on my head and caught my right ear and twisted it. He prayed two rak`at, then two rak`at and then two rak`at and then two rak`at and then two rak`at and then two rak`at (separately six times), and finally one rak`a (the witr). Then he lay down again in the bed till the Mu'adh-dhin came to him where upon the Prophet (ﷺ) got up, offered a two light rak`at prayer and went out and led the Fajr prayer",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1P-A6R-F5thCB0NXKchHVDHekOoN1tHJI",
+      "player": "1Uf84yaKtm-4uv4QDbqt8WIOkaZXUBC6o"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 184,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكٌ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنِ امْرَأَتِهِ، فَاطِمَةَ عَنْ جَدَّتِهَا، أَسْمَاءَ بِنْتِ أَبِي",
+     "matn": "بَكْرٍ أَنَّهَا قَالَتْ أَتَيْتُ عَائِشَةَ زَوْجَ النَّبِيِّ ﷺ حِينَ خَسَفَتِ الشَّمْسُ، فَإِذَا النَّاسُ قِيَامٌ يُصَلُّونَ، وَإِذَا هِيَ قَائِمَةٌ تُصَلِّي فَقُلْتُ مَا لِلنَّاسِ فَأَشَارَتْ بِيَدِهَا نَحْوَ السَّمَاءِ وَقَالَتْ سُبْحَانَ اللَّهِ. فَقُلْتُ آيَةٌ فَأَشَارَتْ أَىْ نَعَمْ. فَقُمْتُ حَتَّى تَجَلاَّنِي الْغَشْىُ، وَجَعَلْتُ أَصُبُّ فَوْقَ رَأْسِي مَاءً، فَلَمَّا انْصَرَفَ رَسُولُ اللَّهِ ﷺ حَمِدَ اللَّهَ وَأَثْنَى عَلَيْهِ، ثُمَّ قَالَ  مَا مِنْ شَىْءٍ كُنْتُ لَمْ أَرَهُ إِلاَّ قَدْ رَأَيْتُهُ فِي مَقَامِي هَذَا حَتَّى الْجَنَّةِ وَالنَّارِ، وَلَقَدْ أُوحِيَ إِلَىَّ أَنَّكُمْ تُفْتَنُونَ فِي الْقُبُورِ مِثْلَ أَوْ قَرِيبًا مِنْ فِتْنَةِ الدَّجَّالِ ـ لاَ أَدْرِي أَىَّ ذَلِكَ قَالَتْ أَسْمَاءُ ـ يُؤْتَى أَحَدُكُمْ فَيُقَالُ مَا عِلْمُكَ بِهَذَا الرَّجُلِ فَأَمَّا الْمُؤْمِنُ ـ أَوِ الْمُوقِنُ لاَ أَدْرِي أَىَّ ذَلِكَ قَالَتْ أَسْمَاءُ ـ فَيَقُولُ هُوَ مُحَمَّدٌ رَسُولُ اللَّهِ، جَاءَنَا بِالْبَيِّنَاتِ وَالْهُدَى، فَأَجَبْنَا وَآمَنَّا وَاتَّبَعْنَا، فَيُقَالُ نَمْ صَالِحًا، فَقَدْ عَلِمْنَا إِنْ كُنْتَ لَمُؤْمِنًا، وَأَمَّا الْمُنَافِقُ ـ أَوِ الْمُرْتَابُ لاَ أَدْرِي أَىَّ ذَلِكَ قَالَتْ أَسْمَاءُ ـ فَيَقُولُ لاَ أَدْرِي، سَمِعْتُ النَّاسَ يَقُولُونَ شَيْئًا فَقُلْتُهُ .",
+     "gharib": [
+      {
+       "word": "تَجَلاَّنِي",
+       "meaning": "غطاني.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٨٩."
+      },
+      {
+       "word": "الْغَشْىُ",
+       "meaning": "فسره الشارح هنا بضعف من التعب والوقوف دون الغشي المثقل المزيل للشعور؛ وبقي إدراك أسماء في القصة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٨٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٨٤",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 184"
+     },
+     "en": {
+      "narrator": "Asma' bint Abu Bakr",
+      "text": "I came to `Aisha the wife of the Prophet (ﷺ) during the solar eclipse. The people were standing and offering the prayer and she was also praying. I asked her, \"What is wrong with the people?\" She beckoned with her hand towards the sky and said, \"Subhan Allah.\" I asked her, \"Is there a sign?\" She pointed out, \"Yes.\" So I, too, stood for the prayer till I fell unconscious and later on I poured water on my head. After the prayer, Allah's Messenger (ﷺ) praised and glorified Allah and said, \"Just now I have seen something which I never saw before at this place of mine, including Paradise and Hell. I have been inspired (and have understood) that you will be put to trials in your graves and these trials will be like the trials of Ad-Dajjal, or nearly like it (the sub narrator is not sure of what Asma' said). Angels will come to every one of you and ask, 'What do you know about this man?' A believer will reply, 'He is Muhammad, Allah's Messenger (ﷺ) , and he came to us with self-evident truth and guidance. So we accepted his teaching, believed and followed him.' Then the angels will say to him to sleep in peace as they have come to know that he was a believer. On the other hand a hypocrite or a doubtful person will reply, 'I do not know but heard the people saying something and so I said the same",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1sOStRHwW4QwcAr9ur6q6LAwIJaqhmQFW",
+      "player": "1819cRGHH__mzMT2XHfhGOxxlvmtK9Uun"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 185,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ عَمْرِو بْنِ يَحْيَى الْمَازِنِيِّ، عَنْ أَبِيهِ، أَنَّ رَجُلاً، قَالَ لِعَبْدِ اللَّهِ بْنِ زَيْدٍ ـ",
+     "matn": "وَهُوَ جَدُّ عَمْرِو بْنِ يَحْيَى ـ أَتَسْتَطِيعُ أَنْ تُرِيَنِي، كَيْفَ كَانَ رَسُولُ اللَّهِ ﷺ يَتَوَضَّأُ فَقَالَ عَبْدُ اللَّهِ بْنُ زَيْدٍ نَعَمْ. فَدَعَا بِمَاءٍ، فَأَفْرَغَ عَلَى يَدَيْهِ فَغَسَلَ يَدَهُ مَرَّتَيْنِ، ثُمَّ مَضْمَضَ وَاسْتَنْثَرَ ثَلاَثًا، ثُمَّ غَسَلَ وَجْهَهُ ثَلاَثًا، ثُمَّ غَسَلَ يَدَيْهِ مَرَّتَيْنِ مَرَّتَيْنِ إِلَى الْمِرْفَقَيْنِ، ثُمَّ مَسَحَ رَأْسَهُ بِيَدَيْهِ، فَأَقْبَلَ بِهِمَا وَأَدْبَرَ، بَدَأَ بِمُقَدَّمِ رَأْسِهِ، حَتَّى ذَهَبَ بِهِمَا إِلَى قَفَاهُ، ثُمَّ رَدَّهُمَا إِلَى الْمَكَانِ الَّذِي بَدَأَ مِنْهُ، ثُمَّ غَسَلَ رِجْلَيْهِ.",
+     "gharib": [
+      {
+       "word": "واستنثر",
+       "meaning": "أخرج من أنفه الماء الذي استنشقه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٦٢."
+      },
+      {
+       "word": "المرفقين",
+       "meaning": "مثنى مرفق، وهو العظم الناتئ في آخر الذراع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٨٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 185"
+     },
+     "en": {
+      "narrator": "Yahya Al-Mazini",
+      "text": "A person asked `Abdullah bin Zaid who was the grandfather of `Amr bin Yahya, \"Can you show me how Allah's Messenger (ﷺ) used to perform ablution?\" `Abdullah bin Zaid replied in the affirmative and asked for water. He poured it on his hands and washed them twice, then he rinsed his mouth thrice and washed his nose with water thrice by putting water in it and blowing it out. He washed his face thrice and after that he washed his forearms up to the elbows twice and then passed his wet hands over his head from its front to its back and vice versa (beginning from the front and taking them to the back of his head up to the nape of the neck and then brought them to the front again from where he had started) and washed his feet (up to the ankles)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 186,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى، قَالَ حَدَّثَنَا وُهَيْبٌ، عَنْ عَمْرٍو، عَنْ أَبِيهِ، شَهِدْتُ عَمْرَو بْنَ أَبِي حَسَنٍ سَأَلَ عَبْدَ اللَّهِ بْنَ زَيْدٍ عَنْ وُضُوءِ النَّبِيِّ،",
+     "matn": "ﷺ فَدَعَا بِتَوْرٍ مِنْ مَاءٍ، فَتَوَضَّأَ لَهُمْ وُضُوءَ النَّبِيِّ ﷺ فَأَكْفَأَ عَلَى يَدِهِ مِنَ التَّوْرِ، فَغَسَلَ يَدَيْهِ ثَلاَثًا، ثُمَّ أَدْخَلَ يَدَهُ فِي التَّوْرِ، فَمَضْمَضَ وَاسْتَنْشَقَ وَاسْتَنْثَرَ ثَلاَثَ غَرَفَاتٍ، ثُمَّ أَدْخَلَ يَدَهُ فَغَسَلَ وَجْهَهُ ثَلاَثًا، ثُمَّ أَدْخَلَ يَدَهُ فَغَسَلَ يَدَيْهِ مَرَّتَيْنِ إِلَى الْمِرْفَقَيْنِ مَرَّتَيْنِ، ثُمَّ أَدْخَلَ يَدَهُ فَمَسَحَ رَأْسَهُ، فَأَقْبَلَ بِهِمَا وَأَدْبَرَ مَرَّةً وَاحِدَةً، ثُمَّ غَسَلَ رِجْلَيْهِ إِلَى الْكَعْبَيْنِ.",
+     "gharib": [
+      {
+       "word": "بِتَوْرٍ",
+       "meaning": "بإناء؛ قيل قدح، وقيل يشبه الطست.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩١."
+      },
+      {
+       "word": "فَأَكْفَأَ",
+       "meaning": "أمال الإناء لإفراغ الماء على اليد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩١."
+      },
+      {
+       "word": "التور",
+       "meaning": "إناء؛ قيل قدح، وقيل يشبه الطست.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩١."
+      },
+      {
+       "word": "واستنثر",
+       "meaning": "أخرج من أنفه الماء الذي استنشقه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٦٢."
+      },
+      {
+       "word": "المرفقين",
+       "meaning": "مثنى مرفق، وهو العظم الناتئ في آخر الذراع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩٢."
+      },
+      {
+       "word": "الكعبين",
+       "meaning": "العظمان البارزان عند ملتقى الساق والقدم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٨٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 186"
+     },
+     "en": {
+      "narrator": "`Amr",
+      "text": "My father saw `Amr bin Abi Hasan asking `Abdullah bin Zaid about the ablution of the Prophet. `Abdullah bin Zaid asked for earthenware pot containing water and in front of them performed ablution like that of the Prophet (ﷺ) . He poured water from the pot over his hand and washed his hands thrice and then he put his hands in the pot and rinsed his mouth and washed his nose by putting water in it and then blowing it out with three handfuls of water. Again he put his hand in the water and washed his face thrice and washed his forearms up to the elbows twice; and then put his hands in the water and then passed them over his head by bringing them to the front and then to the rear of the head once, and then he washed his feet up to the ankles",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1tpkwvCdQ5pZnaBSpt0zv97MZwSRZiZpG",
+      "player": "1E5K4M8cCL2UJrife_thRzUzgUtP8sR93"
      },
      "video": null,
      "sharh": null,
