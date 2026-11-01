@@ -2513,7 +2513,7 @@
    "ar": "كتاب العلم",
    "en": "Knowledge",
    "first": 59,
-   "last": 110,
+   "last": 114,
    "hadith": [
     {
      "n": 59,
@@ -4712,6 +4712,201 @@
       },
       "id": "1AIP4ZL5RIYkRBx_Lpd_a1UIz6yjSD_Z-",
       "player": "1cevAj9pHY8KfZXpFlA699EAdUxjC90w5"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 111,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ سَلاَمٍ، قَالَ أَخْبَرَنَا وَكِيعٌ، عَنْ سُفْيَانَ، عَنْ مُطَرِّفٍ، عَنِ الشَّعْبِيِّ، عَنْ أَبِي جُحَيْفَةَ،",
+     "matn": "قَالَ قُلْتُ لِعَلِيٍّ هَلْ عِنْدَكُمْ كِتَابٌ قَالَ لاَ، إِلاَّ كِتَابُ اللَّهِ، أَوْ فَهْمٌ أُعْطِيَهُ رَجُلٌ مُسْلِمٌ، أَوْ مَا فِي هَذِهِ الصَّحِيفَةِ. قَالَ قُلْتُ فَمَا فِي هَذِهِ الصَّحِيفَةِ قَالَ الْعَقْلُ، وَفَكَاكُ الأَسِيرِ، وَلاَ يُقْتَلُ مُسْلِمٌ بِكَافِرٍ.",
+     "gharib": [
+      {
+       "word": "الْعَقْلُ",
+       "meaning": "الدية؛ والمراد أحكامها ومقاديرها.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٢٠٥، شرح الحديث 111"
+      },
+      {
+       "word": "وَفَكَاكُ",
+       "meaning": "تخليص الأسير من يد عدوه.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٢٠٥، شرح الحديث 111"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١١١",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 111"
+     },
+     "en": {
+      "narrator": "Ash-Shu`bi",
+      "text": "Abu Juhaifa said, \"I asked `Ali, 'Have you got any book (which has been revealed to the Prophet (ﷺ) apart from the Qur'an)?' `Ali replied, 'No, except Allah's Book or the power of understanding which has been bestowed (by Allah) upon a Muslim or what is (written) in this sheet of paper (with me).' Abu Juhaifa said, \"I asked, 'What is (written) in this sheet of paper?' `Ali replied, it deals with The Diyya (compensation (blood money) paid by the killer to the relatives of the victim), the ransom for the releasing of the captives from the hands of the enemies, and the law that no Muslim should be killed in Qisas (equality in punishment) for the killing of (a disbeliever)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1oxKBin1CXgR4fnFIoIPXNyVCbqGf2UvU",
+      "player": "1GxMrgluEjhDabHIrY_LOI85fpOAqr7k3"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 112,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ الْفَضْلُ بْنُ دُكَيْنٍ، قَالَ حَدَّثَنَا شَيْبَانُ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "أَنَّ خُزَاعَةَ، قَتَلُوا رَجُلاً مِنْ بَنِي لَيْثٍ عَامَ فَتْحِ مَكَّةَ بِقَتِيلٍ مِنْهُمْ قَتَلُوهُ، فَأُخْبِرَ بِذَلِكَ النَّبِيُّ ﷺ فَرَكِبَ رَاحِلَتَهُ، فَخَطَبَ فَقَالَ  إِنَّ اللَّهَ حَبَسَ عَنْ مَكَّةَ الْقَتْلَ ـ أَوِ الْفِيلَ شَكَّ أَبُو عَبْدِ اللَّهِ ـ وَسَلَّطَ عَلَيْهِمْ رَسُولَ اللَّهِ ﷺ وَالْمُؤْمِنِينَ، أَلاَ وَإِنَّهَا لَمْ تَحِلَّ لأَحَدٍ قَبْلِي، وَلاَ تَحِلُّ لأَحَدٍ بَعْدِي أَلاَ وَإِنَّهَا حَلَّتْ لِي سَاعَةً مِنْ نَهَارٍ، أَلاَ وَإِنَّهَا سَاعَتِي هَذِهِ حَرَامٌ، لاَ يُخْتَلَى شَوْكُهَا، وَلاَ يُعْضَدُ شَجَرُهَا، وَلاَ تُلْتَقَطُ سَاقِطَتُهَا إِلاَّ لِمُنْشِدٍ، فَمَنْ قُتِلَ فَهُوَ بِخَيْرِ النَّظَرَيْنِ إِمَّا أَنْ يُعْقَلَ، وَإِمَّا أَنْ يُقَادَ أَهْلُ الْقَتِيلِ . فَجَاءَ رَجُلٌ مِنْ أَهْلِ الْيَمَنِ فَقَالَ اكْتُبْ لِي يَا رَسُولَ اللَّهِ. فَقَالَ  اكْتُبُوا لأَبِي فُلاَنٍ . فَقَالَ رَجُلٌ مِنْ قُرَيْشٍ إِلاَّ الإِذْخِرَ يَا رَسُولَ اللَّهِ، فَإِنَّا نَجْعَلُهُ فِي بُيُوتِنَا وَقُبُورِنَا. فَقَالَ النَّبِيُّ ﷺ  إِلاَّ الإِذْخِرَ، إِلاَّ الإِذْخِرَ . قَالَ أَبُو عَبْدِ اللَّهِ يُقَالُ يُقَادُ بِالْقَافِ. فَقِيلَ لأَبِي عَبْدِ اللَّهِ أَىُّ شَىْءٍ كَتَبَ لَهُ قَالَ كَتَبَ لَهُ هَذِهِ الْخُطْبَةَ.",
+     "gharib": [
+      {
+       "word": "الإذخر",
+       "meaning": "حشيشة طيبة الرائحة .",
+       "source": "النهاية إذخر"
+      },
+      {
+       "word": "رَاحِلَتَهُ",
+       "meaning": "الراحلة من الإبل : البعير القوى على الأسفار والأحمال .",
+       "source": "النهاية رحل"
+      },
+      {
+       "word": "يُخْتَلَى",
+       "meaning": "يحصد أو يقطع.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٢٠٦، شرح الحديث 112"
+      },
+      {
+       "word": "يعضد",
+       "meaning": "يقطع .",
+       "source": "النهاية عضد"
+      },
+      {
+       "word": "يُقَادُ",
+       "meaning": "القود : القصاص  .",
+       "source": "النهاية قود"
+      },
+      {
+       "word": "لِمُنْشِدٍ",
+       "meaning": "لمن يعرف باللقطة ويطلب صاحبها.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٢٠٦، شرح الحديث 112"
+      },
+      {
+       "word": "يُعْقَلَ",
+       "meaning": "تؤدى الدية عن القتيل.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٢٠٦، شرح الحديث 112"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١١٢",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 112"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "In the year of the Conquest of Mecca, the tribe of Khuza`a killed a man from the tribe of Bani Laith in revenge for a killed person, belonging to them. They informed the Prophet (ﷺ) about it. So he rode his Rahila (she-camel for riding) and addressed the people saying, \"Allah held back the killing from Mecca. (The sub-narrator is in doubt whether the Prophet (ﷺ) said \"elephant or killing,\" as the Arabic words standing for these words have great similarity in shape), but He (Allah) let His Apostle and the believers over power the infidels of Mecca. Beware! (Mecca is a sanctuary) Verily! Fighting in Mecca was not permitted for anyone before me nor will it be permitted for anyone after me. It (war) in it was made legal for me for few hours or so on that day. No doubt it is at this moment a sanctuary, it is not allowed to uproot its thorny shrubs or to uproot its trees or to pick up its Luqat (fallen things) except by a person who will look for its owner (announce it publicly). And if somebody is killed, then his closest relative has the right to choose one of the two-- the blood money (Diyya) or retaliation having the killer killed. In the meantime a man from Yemen came and said, \"O Allah's Messenger (ﷺ)! Get that written for me.\" The Prophet (ﷺ) ordered his companions to write that for him. Then a man from Quraish said, \"Except Al-Idhkhir (a type of grass that has good smell) O Allah's Messenger (ﷺ), as we use it in our houses and graves.\" The Prophet (ﷺ) said, \"Except Al-Idhkhir i.e. Al-Idhkhir is allowed to be plucked",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "10xPWeOBqTnr5mGqEXAcUaKoUWNo-V1eR",
+      "player": "1PwvPWuMMIAsR-OsbvfsYktUKjVDcdVMn"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 113,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَدَّثَنَا عَمْرٌو، قَالَ أَخْبَرَنِي وَهْبُ بْنُ مُنَبِّهٍ، عَنْ أَخِيهِ، قَالَ سَمِعْتُ أَبَا هُرَيْرَةَ،",
+     "matn": "يَقُولُ مَا مِنْ أَصْحَابِ النَّبِيِّ ﷺ أَحَدٌ أَكْثَرَ حَدِيثًا عَنْهُ مِنِّي، إِلاَّ مَا كَانَ مِنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو فَإِنَّهُ كَانَ يَكْتُبُ وَلاَ أَكْتُبُ. تَابَعَهُ مَعْمَرٌ عَنْ هَمَّامٍ عَنْ أَبِي هُرَيْرَةَ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١١٣",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 113"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "There is none among the companions of the Prophet (ﷺ) who has narrated more Hadiths than I except `Abdullah bin `Amr (bin Al-`As) who used to write them and I never did the same",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1n7IHi__U0aNzjb_ACWtiuBfsSOhmtdQH",
+      "player": "181ogOB0FRsdXbWSL263xkBvkaiOg2Xqm"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 114,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنِي ابْنُ وَهْبٍ، قَالَ أَخْبَرَنِي يُونُسُ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ، عَنِ ابْنِ عَبَّاسٍ،",
+     "matn": "قَالَ لَمَّا اشْتَدَّ بِالنَّبِيِّ ﷺ وَجَعُهُ قَالَ  ائْتُونِي بِكِتَابٍ أَكْتُبُ لَكُمْ كِتَابًا لاَ تَضِلُّوا بَعْدَهُ . قَالَ عُمَرُ إِنَّ النَّبِيَّ ﷺ غَلَبَهُ الْوَجَعُ وَعِنْدَنَا كِتَابُ اللَّهِ حَسْبُنَا فَاخْتَلَفُوا وَكَثُرَ اللَّغَطُ. قَالَ  قُومُوا عَنِّي، وَلاَ يَنْبَغِي عِنْدِي التَّنَازُعُ . فَخَرَجَ ابْنُ عَبَّاسٍ يَقُولُ إِنَّ الرَّزِيَّةَ كُلَّ الرَّزِيَّةِ مَا حَالَ بَيْنَ رَسُولِ اللَّهِ ﷺ وَبَيْنَ كِتَابِهِ.",
+     "gharib": [
+      {
+       "word": "الرَّزِيَّةَ",
+       "meaning": "المصيبة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٢٠٨–٢٠٩، شرح الحديث 114"
+      },
+      {
+       "word": "اللَّغْطُ",
+       "meaning": "صوت وضَجَّة لا يُفهَم معناها .",
+       "source": "النهاية لغط"
+      },
+      {
+       "word": "بِكِتَابٍ",
+       "meaning": "بأدوات الكتابة في أول الخبر.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/٢٠٨–٢٠٩، شرح الحديث 114"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١١٤",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 114"
+     },
+     "en": {
+      "narrator": "'Ubaidullah bin `Abdullah",
+      "text": "Ibn `Abbas said, \"When the ailment of the Prophet (ﷺ) became worse, he said, 'Bring for me (writing) paper and I will write for you a statement after which you will not go astray.' But `Umar said, 'The Prophet is seriously ill, and we have got Allah's Book with us and that is sufficient for us.' But the companions of the Prophet (ﷺ) differed about this and there was a hue and cry. On that the Prophet (ﷺ) said to them, 'Go away (and leave me alone). It is not right that you should quarrel in front of me.\" Ibn `Abbas came out saying, \"It was most unfortunate (a great disaster) that Allah's Messenger (ﷺ) was prevented from writing that statement for them because of their disagreement and noise. (Note: It is apparent from this Hadith that Ibn `Abbas had witnessed the event and came out saying this statement. The truth is not so, for Ibn `Abbas used to say this statement on narrating the Hadith and he had not witnessed the event personally. See Fath Al-Bari Vol. 1, p.220 footnote.) (See Hadith No. 228, Vol)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1PhTWB6McEs1v1uXS5SWv4PZnagQajf8A",
+      "player": "1uPHkk_JccWa0uby28KYLL-22sucj6DF1"
      },
      "video": null,
      "sharh": null,
