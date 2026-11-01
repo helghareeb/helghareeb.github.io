@@ -2513,7 +2513,7 @@
    "ar": "كتاب العلم",
    "en": "Knowledge",
    "first": 59,
-   "last": 94,
+   "last": 102,
    "hadith": [
     {
      "n": 59,
@@ -4087,6 +4087,311 @@
      "en": {
       "narrator": "Anas",
       "text": "Whenever the Prophet (ﷺ) asked permission to enter, he knocked the door thrice with greeting and whenever he spoke a sentence (said a thing) he used to repeat it thrice. (See Hadith No. 261, Vol)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 95,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدَةُ بْنُ عَبْدِ اللَّهِ، حَدَّثَنَا عَبْدُ الصَّمَدِ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا ثُمَامَةُ بْنُ عَبْدِ اللَّهِ، عَنْ أَنَسٍ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ أَنَّهُ كَانَ إِذَا تَكَلَّمَ بِكَلِمَةٍ أَعَادَهَا ثَلاَثًا حَتَّى تُفْهَمَ عَنْهُ، وَإِذَا أَتَى عَلَى قَوْمٍ فَسَلَّمَ عَلَيْهِمْ سَلَّمَ عَلَيْهِمْ ثَلاَثًا.",
+     "gharib": [
+      {
+       "word": "بِكَلِمَةٍ",
+       "meaning": "بجملة مفيدة.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٨٩، شرح الحديث 95"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٥",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 95"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "Whenever the Prophet (ﷺ) spoke a sentence (said a thing), he used to repeat it thrice so that the people could understand it properly from him and whenever he asked permission to enter, (he knocked the door) thrice with greeting",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 96,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا أَبُو عَوَانَةَ، عَنْ أَبِي بِشْرٍ، عَنْ يُوسُفَ بْنِ مَاهَكَ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو،",
+     "matn": "قَالَ تَخَلَّفَ رَسُولُ اللَّهِ ﷺ فِي سَفَرٍ سَافَرْنَاهُ فَأَدْرَكَنَا وَقَدْ أَرْهَقْنَا الصَّلاَةَ صَلاَةَ الْعَصْرِ وَنَحْنُ نَتَوَضَّأُ، فَجَعَلْنَا نَمْسَحُ عَلَى أَرْجُلِنَا، فَنَادَى بِأَعْلَى صَوْتِهِ  وَيْلٌ لِلأَعْقَابِ مِنَ النَّارِ . مَرَّتَيْنِ أَوْ ثَلاَثًا.",
+     "gharib": [
+      {
+       "word": "لِلأَعْقَابِ",
+       "meaning": "جمع عقب، وهو مؤخر القدم.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٤٣، ٢٦٧، شرح الحديث 96"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٦",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 96"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Amr",
+      "text": "Once Allah's Messenger (ﷺ) remained behind us in a journey. He joined us while we were performing ablution for the `Asr prayer which was over-due. We were just passing wet hands over our feet (not washing them properly) so the Prophet (ﷺ) addressed us in a loud voice and said twice or thrice, \"Save your heels from the fire",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1uM1ayp7TKRC0tbqWbh_QfGvvrAthBwzk",
+      "player": "1yNPj7DaCy2VVVDajSBbEd1H2WvtbS-2G"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 97,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "أَخْبَرَنَا مُحَمَّدٌ ـ هُوَ ابْنُ سَلاَمٍ ـ حَدَّثَنَا الْمُحَارِبِيُّ، قَالَ حَدَّثَنَا صَالِحُ بْنُ حَيَّانَ، قَالَ قَالَ عَامِرٌ الشَّعْبِيُّ حَدَّثَنِي أَبُو بُرْدَةَ، عَنْ أَبِيهِ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "ثَلاَثَةٌ لَهُمْ أَجْرَانِ رَجُلٌ مِنْ أَهْلِ الْكِتَابِ آمَنَ بِنَبِيِّهِ، وَآمَنَ بِمُحَمَّدٍ ﷺ وَالْعَبْدُ الْمَمْلُوكُ إِذَا أَدَّى حَقَّ اللَّهِ وَحَقَّ مَوَالِيهِ، وَرَجُلٌ كَانَتْ عِنْدَهُ أَمَةٌ {يَطَؤُهَا} فَأَدَّبَهَا، فَأَحْسَنَ تَأْدِيبَهَا، وَعَلَّمَهَا فَأَحْسَنَ تَعْلِيمَهَا، ثُمَّ أَعْتَقَهَا فَتَزَوَّجَهَا، فَلَهُ أَجْرَانِ . ثُمَّ قَالَ عَامِرٌ أَعْطَيْنَاكَهَا بِغَيْرِ شَىْءٍ، قَدْ كَانَ يُرْكَبُ فِيمَا دُونَهَا إِلَى الْمَدِينَةِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٧",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 97"
+     },
+     "en": {
+      "narrator": "Abu Burda's father",
+      "text": "Allah's Messenger (ﷺ) said \"Three persons will have a double reward: 1. A Person from the people of the scriptures who believed in his prophet (Jesus or Moses) and then believed in the Prophet Muhammad (ﷺ) (i.e. has embraced Islam). 2. A slave who discharges his duties to Allah and his master. 3. A master of a woman-slave who teaches her good manners and educates her in the best possible way (the religion) and manumits her and then marries her",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "10UNy1-dsfWLAa3ZF5K40T5giYWWPBbOn",
+      "player": "1jo9ab6yG16Lgw5QcO3Hq7XvzMf0c4-BN"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 98,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سُلَيْمَانُ بْنُ حَرْبٍ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَيُّوبَ، قَالَ سَمِعْتُ عَطَاءً، قَالَ سَمِعْتُ ابْنَ عَبَّاسٍ،",
+     "matn": "قَالَ أَشْهَدُ عَلَى النَّبِيِّ ﷺ ـ أَوْ قَالَ عَطَاءٌ أَشْهَدُ عَلَى ابْنِ عَبَّاسٍ ـ أَنَّ رَسُولَ اللَّهِ ﷺ خَرَجَ وَمَعَهُ بِلاَلٌ، فَظَنَّ أَنَّهُ لَمْ يُسْمِعِ النِّسَاءَ فَوَعَظَهُنَّ، وَأَمَرَهُنَّ بِالصَّدَقَةِ، فَجَعَلَتِ الْمَرْأَةُ تُلْقِي الْقُرْطَ وَالْخَاتَمَ، وَبِلاَلٌ يَأْخُذُ فِي طَرَفِ ثَوْبِهِ. وَقَالَ إِسْمَاعِيلُ عَنْ أَيُّوبَ عَنْ عَطَاءٍ وَقَالَ عَنِ ابْنِ عَبَّاسٍ أَشْهَدُ عَلَى النَّبِيِّ ﷺ.",
+     "gharib": [
+      {
+       "word": "الْقُرْطَ",
+       "meaning": "الحلية التي تكون في شحمة الأذن.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٩٣، شرح الحديث 98"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٨",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 98"
+     },
+     "en": {
+      "narrator": "Ibn 'Abbas",
+      "text": "Once Allah's Messenger (ﷺ) came out while Bilal was accompanying him. He went towards the women thinking that they had not heard him (i.e. his sermon). So he preached them and ordered them to pay alms. (Hearing that) the women started giving alms; some donated their ear-rings, some gave their rings and Bilal was collecting them in the corner of his garment",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1i5gV_tVOTmDdj7H3TzRLeluWa8mTGmVp",
+      "player": "1aZf77dqht9E81hl3Flasb5-XFARkXiT5"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 99,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنِي سُلَيْمَانُ، عَنْ عَمْرِو بْنِ أَبِي عَمْرٍو، عَنْ سَعِيدِ بْنِ أَبِي سَعِيدٍ الْمَقْبُرِيِّ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "أَنَّهُ قَالَ قِيلَ يَا رَسُولَ اللَّهِ، مَنْ أَسْعَدُ النَّاسِ بِشَفَاعَتِكَ يَوْمَ الْقِيَامَةِ قَالَ رَسُولُ اللَّهِ ﷺ  لَقَدْ ظَنَنْتُ يَا أَبَا هُرَيْرَةَ أَنْ لاَ يَسْأَلَنِي عَنْ هَذَا الْحَدِيثِ أَحَدٌ أَوَّلُ مِنْكَ، لِمَا رَأَيْتُ مِنْ حِرْصِكَ عَلَى الْحَدِيثِ، أَسْعَدُ النَّاسِ بِشَفَاعَتِي يَوْمَ الْقِيَامَةِ مَنْ قَالَ لاَ إِلَهَ إِلاَّ اللَّهُ، خَالِصًا مِنْ قَلْبِهِ أَوْ نَفْسِهِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ٩٩",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 99"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "I said: \"O Allah's Messenger (ﷺ)! Who will be the luckiest person, who will gain your intercession on the Day of Resurrection?\" Allah's Messenger (ﷺ) said: \"O Abu Huraira! I have thought that none will ask me about it before you as I know your longing for the (learning of) Hadiths. The luckiest person who will have my intercession on the Day of Resurrection will be the one who said sincerely from the bottom of his heart \"None has the right to be worshipped but Allah",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1KS08nn77JVBMdnA3Y0p4UEWxB8PJfnNz",
+      "player": "1iTPBZXAEzJdFxgQT69pSmIqG5N53Tyto"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 100,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ أَبِي أُوَيْسٍ، قَالَ حَدَّثَنِي مَالِكٌ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرِو بْنِ الْعَاصِ،",
+     "matn": "قَالَ سَمِعْتُ رَسُولَ اللَّهِ ﷺ يَقُولُ  إِنَّ اللَّهَ لاَ يَقْبِضُ الْعِلْمَ انْتِزَاعًا، يَنْتَزِعُهُ مِنَ الْعِبَادِ، وَلَكِنْ يَقْبِضُ الْعِلْمَ بِقَبْضِ الْعُلَمَاءِ، حَتَّى إِذَا لَمْ يُبْقِ عَالِمًا، اتَّخَذَ النَّاسُ رُءُوسًا جُهَّالاً فَسُئِلُوا، فَأَفْتَوْا بِغَيْرِ عِلْمٍ، فَضَلُّوا وَأَضَلُّوا . قَالَ الْفِرَبْرِيُّ حَدَّثَنَا عَبَّاسٌ قَالَ حَدَّثَنَا قُتَيْبَةُ حَدَّثَنَا جَرِيرٌ عَنْ هِشَامٍ نَحْوَهُ.",
+     "gharib": [
+      {
+       "word": "انْتِزَاعًا",
+       "meaning": "محوا للعلم من الصدور في سياق هذا النفي.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٩٥، شرح الحديث 100"
+      },
+      {
+       "word": "رُءُوسًا",
+       "meaning": "رؤساء يرجع إليهم الناس في الفتوى.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٩٥، شرح الحديث 100"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٠٠",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 100"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Amr bin Al-`As",
+      "text": "I heard Allah's Messenger (ﷺ) saying, \"Allah does not take away the knowledge, by taking it away from (the hearts of) the people, but takes it away by the death of the religious learned men till when none of the (religious learned men) remains, people will take as their leaders ignorant persons who when consulted will give their verdict without knowledge. So they will go astray and will lead the people astray",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1qdCQedo_Fqyvh-Aw7d8MTiXLCk1hv-V9",
+      "player": "1ZeJxX6gT1ABr_RA2BGDW_5CgDBr-SkDj"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 101,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنِي ابْنُ الأَصْبَهَانِيِّ، قَالَ سَمِعْتُ أَبَا صَالِحٍ، ذَكْوَانَ يُحَدِّثُ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ،. قَالَتِ النِّسَاءُ لِلنَّبِيِّ ﷺ غَلَبَنَا عَلَيْكَ الرِّجَالُ، فَاجْعَلْ لَنَا يَوْمًا مِنْ نَفْسِكَ. فَوَعَدَهُنَّ يَوْمًا لَقِيَهُنَّ فِيهِ، فَوَعَظَهُنَّ وَأَمَرَهُنَّ، فَكَانَ فِيمَا قَالَ لَهُنَّ",
+     "matn": "مَا مِنْكُنَّ امْرَأَةٌ تُقَدِّمُ ثَلاَثَةً مِنْ وَلَدِهَا إِلاَّ كَانَ لَهَا حِجَابًا مِنَ النَّارِ . فَقَالَتِ امْرَأَةٌ وَاثْنَيْنِ فَقَالَ  وَاثْنَيْنِ .",
+     "gharib": [
+      {
+       "word": "تُقَدِّمُ",
+       "meaning": "يموت أولادها في حياتها؛ كما بيّن الشرح في تفسير الخبر.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٩٦، شرح الحديث 101"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٠١",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 101"
+     },
+     "en": {
+      "narrator": "Abu Sa`id Al-Khudri",
+      "text": "Some women requested the Prophet (ﷺ) to fix a day for them as the men were taking all his time. On that he promised them one day for religious lessons and commandments. Once during such a lesson the Prophet said, \"A woman whose three children die will be shielded by them from the Hell fire.\" On that a woman asked, \"If only two die?\" He replied, \"Even two (will shield her from the Hell-fire)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "174gIoR-quElhfFnHaJXioUG5P5hnsNiJ",
+      "player": "11Nm2y3VdGeno90-AnzDNtfs_r5fp0WFq"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 102,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ، قَالَ حَدَّثَنَا غُنْدَرٌ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ الأَصْبَهَانِيِّ، عَنْ ذَكْوَانَ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، عَنِ النَّبِيِّ ﷺ بِهَذَا. وَعَنْ عَبْدِ الرَّحْمَنِ بْنِ الأَصْبَهَانِيِّ، قَالَ سَمِعْتُ أَبَا حَازِمٍ، عَنْ أَبِي هُرَيْرَةَ، قَالَ",
+     "matn": "ثَلاَثَةً لَمْ يَبْلُغُوا الْحِنْثَ .",
+     "gharib": [
+      {
+       "word": "الْحِنْثَ",
+       "meaning": "الإثم؛ والمراد أنهم ماتوا قبل البلوغ.",
+       "source": "فتح الباري لابن حجر، ط السلفية، ١/١٩٦، شرح الحديث 102"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب العلم، حديث رقم ١٠٢",
+      "en": "Sahih al-Bukhari, Knowledge, hadith 102"
+     },
+     "en": {
+      "narrator": "Abu Sa`id Al-Khudri",
+      "text": "as above (the sub narrators are different). Abu Huraira qualified the three children referred to in the above mentioned Hadith as not having reached the age of committing sins (i.e. age of puberty)",
       "source": "sunnah.com (Muhsin Khan)"
      },
      "audio": {
