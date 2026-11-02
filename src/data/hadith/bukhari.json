@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 242,
+   "last": 247,
    "hadith": [
     {
      "n": 135,
@@ -10327,6 +10327,211 @@
       },
       "id": "16SZaNK0WLaWBaS4IdqgV7XfYxe0d1Ido",
       "player": "1FTJIejBspB_jgxyKDOZuH_Bj2ww1OBDZ"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 243,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدٌ، قَالَ أَخْبَرَنَا سُفْيَانُ بْنُ عُيَيْنَةَ، عَنْ أَبِي حَازِمٍ، سَمِعَ سَهْلَ بْنَ سَعْدٍ السَّاعِدِيَّ،، وَسَأَلَهُ النَّاسُ، وَمَا بَيْنِي وَبَيْنَهُ أَحَدٌ بِأَىِّ شَىْءٍ دُووِيَ جُرْحُ النَّبِيِّ ﷺ فَقَالَ مَا بَقِيَ أَحَدٌ أَعْلَمُ بِهِ مِنِّي، كَانَ عَلِيٌّ يَجِيءُ بِتُرْسِهِ فِيهِ مَاءٌ، وَفَاطِمَةُ تَغْسِلُ عَنْ وَجْهِهِ الدَّمَ، فَأُخِذَ حَصِيرٌ فَأُحْرِقَ فَحُشِيَ بِهِ جُرْحُهُ.",
+     "gharib": [
+      {
+       "word": "بِتُرْسِهِ",
+       "meaning": "بما يتوقى به المقاتل السلاح ويحتمي خلفه.",
+       "source": "ابن منظور، لسان العرب، ٦/٣٢، مادة ترس."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٤٣",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 243"
+     },
+     "en": {
+      "narrator": "Abu Hazim",
+      "text": "Sahl bin Sa`d As-Sa`idi, was asked by the people, \"With what was the wound of the Prophet (ﷺ) treated?\" Sahl replied, \"None remains among the people living who knows that better than I. `Ali [??] used to bring water in his shield and Fatima used to wash the blood off his face. Then straw mat was burnt and the wound was filled with it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1fap6ZBuWQpgmXgOofeXwVVd8m-is6-0Q",
+      "player": "1U60_JhjOAZ0k3qq246wjIxvHcY2LBPR4"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 244,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ، عَنْ غَيْلاَنَ بْنِ جَرِيرٍ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِيهِ، قَالَ أَتَيْتُ النَّبِيَّ ﷺ فَوَجَدْتُهُ يَسْتَنُّ بِسِوَاكٍ بِيَدِهِ يَقُولُ",
+     "matn": "أُعْ أُعْ ، وَالسِّوَاكُ فِي فِيهِ، كَأَنَّهُ يَتَهَوَّعُ.",
+     "gharib": [
+      {
+       "word": "يَسْتَنُّ",
+       "meaning": "يستعمل السواك في تنظيف أسنانه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٥–٣٥٦."
+      },
+      {
+       "word": "يَتَهَوَّعُ",
+       "meaning": "يتكلف القيء؛ وهنا تشبيه بالصوت، لا إثبات وقوع القيء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٤٤",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 244"
+     },
+     "en": {
+      "narrator": "Abu Burda",
+      "text": "My father said, \"I came to the Prophet (ﷺ) and saw him carrying a Siwak in his hand and cleansing his teeth, saying, 'U' U',\" as if he was retching while the Siwak was in his mouth",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1p2cVW2P6k81bdufxQkg0mx8TUW9oHmW5",
+      "player": "1OOnDUviSmEQh6hd0y0A3Gundb6RGhemW"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 245,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عُثْمَانُ، قَالَ حَدَّثَنَا جَرِيرٌ، عَنْ مَنْصُورٍ، عَنْ أَبِي وَائِلٍ، عَنْ حُذَيْفَةَ، قَالَ كَانَ النَّبِيُّ ﷺ إِذَا قَامَ مِنَ اللَّيْلِ يَشُوصُ فَاهُ بِالسِّوَاكِ.",
+     "gharib": [
+      {
+       "word": "يَشُوصُ",
+       "meaning": "يغسل وينظف، وفسر أيضًا بالدلك.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٤٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 245"
+     },
+     "en": {
+      "narrator": "Hudhaifa",
+      "text": "Whenever the Prophet (ﷺ) got up at night, he used to clean his mouth with Siwak",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ERuQ3fGVU3B1WoS0fHXOpdLLfLqoD3ok",
+      "player": "1d5NqbjuTekAEM_63Et5WabI76HKb8CLe"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 246,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "وَقَالَ عَفَّانُ حَدَّثَنَا صَخْرُ بْنُ جُوَيْرِيَةَ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، أَنَّ النَّبِيَّ ﷺ قَالَ",
+     "matn": "أَرَانِي أَتَسَوَّكُ بِسِوَاكٍ، فَجَاءَنِي رَجُلاَنِ أَحَدُهُمَا أَكْبَرُ مِنَ الآخَرِ، فَنَاوَلْتُ السِّوَاكَ الأَصْغَرَ مِنْهُمَا، فَقِيلَ لِي كَبِّرْ. فَدَفَعْتُهُ إِلَى الأَكْبَرِ مِنْهُمَا . قَالَ أَبُو عَبْدِ اللَّهِ اخْتَصَرَهُ نُعَيْمٌ عَنِ ابْنِ الْمُبَارَكِ عَنْ أُسَامَةَ عَنْ نَافِعٍ عَنِ ابْنِ عُمَرَ.",
+     "gharib": [
+      {
+       "word": "كَبِّرْ",
+       "meaning": "قدم الأكبر في السن.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٤٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 246"
+     },
+     "en": {
+      "narrator": "Ibn 'Umar",
+      "text": "The Prophet (ﷺ) said, \"I dreamt that I was cleaning my teeth with a Siwak and two persons came to me. One of them was older than the other and I gave the Siwak to the younger. I was told that I should give it to the older and so I did",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 247,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ مُقَاتِلٍ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا سُفْيَانُ، عَنْ مَنْصُورٍ، عَنْ سَعْدِ بْنِ عُبَيْدَةَ، عَنِ الْبَرَاءِ بْنِ عَازِبٍ، قَالَ قَالَ النَّبِيُّ ﷺ",
+     "matn": "إِذَا أَتَيْتَ مَضْجَعَكَ فَتَوَضَّأْ وُضُوءَكَ لِلصَّلاَةِ، ثُمَّ اضْطَجِعْ عَلَى شِقِّكَ الأَيْمَنِ، ثُمَّ قُلِ اللَّهُمَّ أَسْلَمْتُ وَجْهِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لاَ مَلْجَأَ وَلاَ مَنْجَا مِنْكَ إِلاَّ إِلَيْكَ، اللَّهُمَّ آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ. فَإِنْ مُتَّ مِنْ لَيْلَتِكَ فَأَنْتَ عَلَى الْفِطْرَةِ، وَاجْعَلْهُنَّ آخِرَ مَا تَتَكَلَّمُ بِهِ . قَالَ فَرَدَّدْتُهَا عَلَى النَّبِيِّ ﷺ فَلَمَّا بَلَغْتُ  اللَّهُمَّ آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ . قُلْتُ وَرَسُولِكَ. قَالَ  لاَ، وَنَبِيِّكَ الَّذِي أَرْسَلْتَ .",
+     "gharib": [
+      {
+       "word": "وَأَلْجَأْتُ",
+       "meaning": "أسندت؛ والالتجاء الاعتماد والاعتصام.",
+       "source": "ابن منظور، لسان العرب، ١/١٥٢، مادة لجأ."
+      },
+      {
+       "word": "الْفِطْرَةِ",
+       "meaning": "السنة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٤٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 247"
+     },
+     "en": {
+      "narrator": "Al-Bara 'bin `Azib",
+      "text": "The Prophet (ﷺ) said to me, \"Whenever you go to bed perform ablution like that for the prayer, lie on your right side and say, \"Allahumma aslamtu wajhi ilaika, wa fauwadtu `Amri ilaika, wa alja'tu Zahri ilaika raghbatan wa rahbatan ilaika. La Malja'a wa la manja minka illa ilaika. Allahumma amantu bikitabika-l-ladhi anzalta wa bina-biyika-l ladhi arsalta\" (O Allah! I surrender to You and entrust all my affairs to You and depend upon You for Your Blessings both with hope and fear of You. There is no fleeing from You, and there is no place of protection and safety except with You O Allah! I believe in Your Book (the Qur'an) which You have revealed and in Your Prophet (Muhammad) whom You have sent). Then if you die on that very night, you will die with faith (i.e. on the religion of Islam). Let the aforesaid words be your last utterance (before sleep).\" I repeated it before the Prophet (ﷺ) and when I reached \"Allahumma amantu bikitabika-l-ladhi anzalta (O Allah I believe in Your Book which You have revealed).\" I said, \"Wa-rasulika (and your Apostle).\" The Prophet (ﷺ) said, \"No, (but say): 'Wanabiyika-l-ladhi arsalta (Your Prophet whom You have sent), instead",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1C_dDs-2uZsl2acsqH2FarQVSt_-1U4Rz",
+      "player": "1D-SdUQX4dZ7iAoJmTOpWDUynQDDPGAQl"
      },
      "video": null,
      "sharh": null,
