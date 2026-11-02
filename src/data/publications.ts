@@ -1,4 +1,6 @@
 // Source: CV (helghareeb-hub/CV/cv_2026/cv_en.tex), June 2026; DOIs verified on Crossref 2026-10-11.
+// Author lists corrected 2026-11-02 from Crossref/OpenAlex/Zenodo (professor-promotion-dossier/dossier/cv/cv.json);
+// "(co-author)" marks items whose full author list is not yet verified.
 export type Publication = {
   type: 'journal' | 'conference' | 'chapter' | 'book';
   title: string;
@@ -10,16 +12,25 @@ export type Publication = {
   highlight?: boolean;
 };
 
-export const scholarMetrics = { citations: '1,272', hIndex: 15, i10Index: 23, asOf: 'June 2026' };
+export const scholarMetrics = { citations: '1,314', hIndex: 14, i10Index: 23, asOf: 'November 2026' };
 
 export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "No representation consistently beats the simple baseline: a pre-registered audit of uncertainty representations and threshold tuning for edge data-quality governance",
     "authors": "H. A. El-Ghareeb, M. Abouhawwash",
-    "venue": "IEEE Access",
+    "venue": "IEEE Access, vol. 14, pp. 156818–156845",
     "year": "2026",
-    "note": "Accepted 8 October 2026; in press",
+    "highlight": true,
+    "doi": "10.1109/ACCESS.2026.3742903"
+  },
+  {
+    "type": "journal",
+    "title": "BlueEdge: edge computing-based framework for efficient text matching and duplicate detection",
+    "authors": "N. Elmobark, H. A. El-Ghareeb, S. Elhishi",
+    "venue": "Array",
+    "year": "2026",
+    "doi": "10.1016/j.array.2026.101224",
     "highlight": true
   },
   {
@@ -59,14 +70,14 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Comparative mathematical model for predicting financial-loan defaults using Altman Z-score and neutrosophic-AHP methods",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "N. A. Ibrahem, H. A. El-Ghareeb, F. F. Farahat, A. AboElfotouh",
     "venue": "",
     "year": "2021"
   },
   {
     "type": "journal",
     "title": "Comparative analysis of AHP, FAHP and neutrosophic-AHP based on multi-criteria for adopting ERP systems",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "A. A. Slamaa, H. A. El-Ghareeb, A. Aboelfetouh",
     "venue": "Neutrosophic Sets & Systems",
     "year": "2021"
   },
@@ -81,7 +92,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Sustainable-energy production's spatial-determination framework",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "A. M. El-hosiny, H. A. El-Ghareeb, B. T. Shabana, A. AbouElfetouh",
     "venue": "Neutrosophic Sets & Systems",
     "year": "2021"
   },
@@ -126,7 +137,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Context-aware mobile cloud computing: applications, limitations and a novel new solution",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "H. A. El-Ghareeb (co-author)",
     "venue": "International Journal on Information Technologies and Security",
     "year": "2017"
   },
@@ -141,7 +152,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "A proposed system for push messaging on Android",
-    "authors": "R. El-Stohy, M. El-Ghetany, H. A. El-Ghareeb",
+    "authors": "R. Elstohy, N. E. Khamessy, H. A. El-Ghareeb",
     "venue": "International Journal of Interactive Mobile Technologies",
     "year": "2016",
     "doi": "10.3991/ijim.v10i3.5567"
@@ -149,7 +160,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Push-notification service for enhancing the relation between parents and educational institutions: a case study on Egyptian schools",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "H. A. El-Ghareeb (co-author)",
     "venue": "IJIMT / IRJECE",
     "year": "2016"
   },
@@ -170,28 +181,28 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Introduction to develop some software programs for dealing with neutrosophic sets",
-    "authors": "H. A. El-Ghareeb",
+    "authors": "A. A. Salama, H. A. El-Ghareeb, A. M. Manie, F. Smarandache",
     "venue": "Infinite Study",
     "year": "2014"
   },
   {
     "type": "journal",
     "title": "Utilizing neutrosophic set in social-network analysis e-learning systems",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "A. A. Salama, H. A. El-Ghareeb, A. M. Manie, M. Lotfy",
     "venue": "International Journal of Information Science and Intelligent System",
     "year": "2014"
   },
   {
     "type": "journal",
     "title": "Design and implementation of neutrosophic data operations using object-oriented programming",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "A. A. Salama, M. A. Elfattah, H. A. El-Ghareeb, A. M. Manie",
     "venue": "International Journal of Computer Application",
     "year": "2014"
   },
   {
     "type": "journal",
     "title": "Hybrid Heuristic Algorithm for solving Capacitated Vehicle Routing problem",
-    "authors": "M. M. AbdElAziz, H. A. El-Ghareeb, M. S. M. Ksasy",
+    "authors": "M. M. AbdElAziz, H. A. El-Ghareeb, M. S. Ksasy",
     "venue": "International Journal of Computers and Technology",
     "year": "2014",
     "doi": "10.24297/ijct.v12i9.2824"
@@ -199,7 +210,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Subject recommendation using ontology for computer-science ACM curricula",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "M. Lotfy, A. A. Salama, H. A. El-Ghareeb, M. A. El-dosuky",
     "venue": "International Journal of Information Science and Intelligent System",
     "year": "2014"
   },
@@ -213,35 +224,36 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Online social-learning suggestion system based on student behavior",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "H. A. El-Ghareeb (co-author)",
     "venue": "International Journal of Advance Foundation and Research in Computer",
     "year": "2014"
   },
   {
     "type": "journal",
     "title": "Open social-learning network",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "H. A. El-Ghareeb (co-author)",
     "venue": "International Journal of Computer Engineering and Intelligent Systems",
     "year": "2014"
   },
   {
     "type": "journal",
     "title": "Review in finding-path problem classification and algorithms in vehicle routing",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "H. A. El-Ghareeb (co-author)",
     "venue": "International Journal of Information Science and Intelligent Systems",
     "year": "2014"
   },
   {
     "type": "journal",
     "title": "Adaptive e-learning system based on learning interactivity",
-    "authors": "H. A. El-Ghareeb et al.",
+    "authors": "M. Yaqub, A. M. Riad, H. A. El-Ghareeb",
     "venue": "International Journal of Advanced Foundation and Research in Computer",
-    "year": "2014"
+    "year": "2014",
+    "doi": "10.47277/IJCNCS/2(3)2"
   },
   {
     "type": "journal",
     "title": "Particle swarm optimization to improve a hybrid heuristic algorithm for solving capacitated vehicle routing problem",
-    "authors": "M. M. AbdElAziz, H. A. El-Ghareeb, M. Ksasy",
+    "authors": "M. M. AbdElAziz, H. A. El-Ghareeb, M. S. Ksasy",
     "venue": "International Journal of Intelligent Computing and Information Sciences",
     "year": "2014",
     "doi": "10.21608/ijicis.2014.15775"
@@ -256,7 +268,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Supporting Online Lectures with Adaptive and Intelligent Features",
-    "authors": "A. M. Riad, H. K. El-Minir, H. M. El-Bakry, H. A. El-Ghareeb",
+    "authors": "A. M. Riad, H. K. Elminir, H. M. El-Bakry, H. A. El-Ghareeb",
     "venue": "Advances in Information Sciences and Service Sciences",
     "year": "2011",
     "doi": "10.4156/aiss.vol3.issue1.6"
@@ -264,7 +276,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Review of e-learning systems convergence from traditional systems to services-based adaptive and intelligent systems",
-    "authors": "A. M. Riad, H. K. El-Minir, H. A. El-Ghareeb",
+    "authors": "A. M. Riad, H. K. Elminir, H. A. El-Ghareeb",
     "venue": "Journal of Convergence Information Technology",
     "year": "2009"
   },
@@ -286,7 +298,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Mapping different software-architecture paradigms to different integration techniques",
-    "authors": "A. M. Riad, H. A. El-Ghareeb et al.",
+    "authors": "A. M. Riad, H. M. El-Bakry, H. A. El-Ghareeb",
     "venue": "Journal of Convergence Information Technology",
     "year": "2009",
     "doi": "10.4156/jcit.vol4.issue2.riad"
@@ -296,7 +308,8 @@ export const publications: Publication[] = [
     "title": "A service-oriented architecture to integrate mobile assessment in Learning Management Systems",
     "authors": "A. M. Riad, H. A. El-Ghareeb",
     "venue": "Turkish Online Journal of Distance Education",
-    "year": "2008"
+    "year": "2008",
+    "doi": "10.17718/tojde.14156"
   },
   {
     "type": "journal",
@@ -330,7 +343,7 @@ export const publications: Publication[] = [
   {
     "type": "conference",
     "title": "Framework for providing context-aware mobile cloud services",
-    "authors": "R. El-Stohy, H. A. El-Ghareeb, N. E. Khamessy",
+    "authors": "R. Elstohy, H. A. El-Ghareeb, N. E. Khamessy",
     "venue": "2018 International Conference on Innovative Trends in Computer Engineering (ITCE)",
     "year": "2018",
     "doi": "10.1109/itce.2018.8316606"
