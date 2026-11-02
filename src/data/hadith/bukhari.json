@@ -12341,7 +12341,7 @@
    "ar": "كتاب الحيض",
    "en": "Menstrual Periods",
    "first": 294,
-   "last": 301,
+   "last": 306,
    "hadith": [
     {
      "n": 294,
@@ -12675,6 +12675,236 @@
      "en": {
       "narrator": "`Aisha",
       "text": "The Prophet (ﷺ) and I used to take a bath from a single pot while we were Junub. During the menses, he used to order me to put on an Izar (dress worn below the waist) and used to fondle me. While in I`tikaf, he used to bring his head near me and I would wash it while I used to be in my periods (menses)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 302,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ خَلِيلٍ، قَالَ أَخْبَرَنَا عَلِيُّ بْنُ مُسْهِرٍ، قَالَ أَخْبَرَنَا أَبُو إِسْحَاقَ ـ هُوَ الشَّيْبَانِيُّ ـ عَنْ عَبْدِ الرَّحْمَنِ بْنِ الأَسْوَدِ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كَانَتْ إِحْدَانَا إِذَا كَانَتْ حَائِضًا، فَأَرَادَ رَسُولُ اللَّهِ ﷺ أَنْ يُبَاشِرَهَا، أَمَرَهَا أَنْ تَتَّزِرَ فِي فَوْرِ حَيْضَتِهَا ثُمَّ يُبَاشِرُهَا. قَالَتْ وَأَيُّكُمْ يَمْلِكُ إِرْبَهُ كَمَا كَانَ النَّبِيُّ ﷺ يَمْلِكُ إِرْبَهُ. تَابَعَهُ خَالِدٌ وَجَرِيرٌ عَنِ الشَّيْبَانِيِّ.",
+     "gharib": [
+      {
+       "word": "تَتَّزِرَ",
+       "meaning": "تشد الإزار على وسطها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٤."
+      },
+      {
+       "word": "فَوْرِ",
+       "meaning": "أول الحيض ومعظمه؛ وذكر الشارح تفسيره بمعظم صبه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٤."
+      },
+      {
+       "word": "إِرْبَهُ",
+       "meaning": "حاجته؛ وذكر الشارح قولين في تفسيره، والمراد بيان ملكه ﷺ لأمره.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٢",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 302"
+     },
+     "en": {
+      "narrator": "`Abdur-Rahman bin Al-Aswad",
+      "text": "(on the authority of his father) `Aisha said: \"Whenever Allah's Messenger (ﷺ) wanted to fondle anyone of us during her periods (menses), he used to order her to put on an Izar and start fondling her.\" `Aisha added, \"None of you could control his sexual desires as the Prophet (ﷺ) could",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 303,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ، قَالَ حَدَّثَنَا الشَّيْبَانِيُّ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ شَدَّادٍ، قَالَ سَمِعْتُ مَيْمُونَةَ، كَانَ رَسُولُ اللَّهِ ﷺ إِذَا أَرَادَ أَنْ يُبَاشِرَ امْرَأَةً مِنْ نِسَائِهِ أَمَرَهَا فَاتَّزَرَتْ وَهْىَ حَائِضٌ. وَرَوَاهُ سُفْيَانُ عَنِ الشَّيْبَانِيِّ.",
+     "gharib": [
+      {
+       "word": "فَاتَّزَرَتْ",
+       "meaning": "فشدت إزارها على وسطها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٤–٤٠٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٣",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 303"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "When ever Allah's Messenger (ﷺ) wanted to fondle any of his wives during the periods (menses), he used to ask her to wear an Izar",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 304,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سَعِيدُ بْنُ أَبِي مَرْيَمَ، قَالَ أَخْبَرَنَا مُحَمَّدُ بْنُ جَعْفَرٍ، قَالَ أَخْبَرَنِي زَيْدٌ ـ هُوَ ابْنُ أَسْلَمَ ـ عَنْ عِيَاضِ بْنِ عَبْدِ اللَّهِ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، قَالَ خَرَجَ رَسُولُ اللَّهِ ﷺ فِي أَضْحًى ـ أَوْ فِطْرٍ ـ إِلَى الْمُصَلَّى، فَمَرَّ عَلَى النِّسَاءِ فَقَالَ",
+     "matn": "يَا مَعْشَرَ النِّسَاءِ تَصَدَّقْنَ، فَإِنِّي أُرِيتُكُنَّ أَكْثَرَ أَهْلِ النَّارِ . فَقُلْنَ وَبِمَ يَا رَسُولَ اللَّهِ قَالَ  تُكْثِرْنَ اللَّعْنَ، وَتَكْفُرْنَ الْعَشِيرَ، مَا رَأَيْتُ مِنْ نَاقِصَاتِ عَقْلٍ وَدِينٍ أَذْهَبَ لِلُبِّ الرَّجُلِ الْحَازِمِ مِنْ إِحْدَاكُنَّ . قُلْنَ وَمَا نُقْصَانُ دِينِنَا وَعَقْلِنَا يَا رَسُولَ اللَّهِ قَالَ  أَلَيْسَ شَهَادَةُ الْمَرْأَةِ مِثْلَ نِصْفِ شَهَادَةِ الرَّجُلِ . قُلْنَ بَلَى. قَالَ  فَذَلِكَ مِنْ نُقْصَانِ عَقْلِهَا، أَلَيْسَ إِذَا حَاضَتْ لَمْ تُصَلِّ وَلَمْ تَصُمْ . قُلْنَ بَلَى. قَالَ  فَذَلِكَ مِنْ نُقْصَانِ دِينِهَا .",
+     "gharib": [
+      {
+       "word": "الْعَشِيرَ",
+       "meaning": "الخليط، وهو الزوج في تفسير الخبر، وقيل أعم من ذلك.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٦."
+      },
+      {
+       "word": "تَكْفُرْنَ",
+       "meaning": "تجحدن حق العشير؛ ليس المراد هنا الكفر المخرج من الملة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٦."
+      },
+      {
+       "word": "لِلُبِّ",
+       "meaning": "لخالص العقل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٦."
+      },
+      {
+       "word": "الْحَازِمِ",
+       "meaning": "الضابط لأمره.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٤",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 304"
+     },
+     "en": {
+      "narrator": "Abu Sa`id Al-Khudri",
+      "text": "Once Allah's Messenger (ﷺ) went out to the Musalla (to offer the prayer) of `Id-al-Adha or Al-Fitr prayer. Then he passed by the women and said, \"O women! Give alms, as I have seen that the majority of the dwellers of Hell-fire were you (women).\" They asked, \"Why is it so, O Allah's Messenger (ﷺ) ?\" He replied, \"You curse frequently and are ungrateful to your husbands. I have not seen anyone more deficient in intelligence and religion than you. A cautious sensible man could be led astray by some of you.\" The women asked, \"O Allah's Messenger (ﷺ)! What is deficient in our intelligence and religion?\" He said, \"Is not the evidence of two women equal to the witness of one man?\" They replied in the affirmative. He said, \"This is the deficiency in her intelligence. Isn't it true that a woman can neither pray nor fast during her menses?\" The women replied in the affirmative. He said, \"This is the deficiency in her religion",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 305,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ أَبِي سَلَمَةَ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ الْقَاسِمِ، عَنِ الْقَاسِمِ بْنِ مُحَمَّدٍ، عَنْ عَائِشَةَ، قَالَتْ خَرَجْنَا مَعَ النَّبِيِّ ﷺ لاَ نَذْكُرُ إِلاَّ الْحَجَّ، فَلَمَّا جِئْنَا سَرِفَ طَمِثْتُ، فَدَخَلَ عَلَىَّ النَّبِيُّ ﷺ وَأَنَا أَبْكِي فَقَالَ {مَا يُبْكِيكِ}. قُلْتُ لَوَدِدْتُ وَاللَّهِ أَنِّي لَمْ أَحُجَّ الْعَامَ. قَالَ {لَعَلَّكِ نُفِسْتِ}. قُلْتُ نَعَمْ. قَالَ",
+     "matn": "فَإِنَّ ذَلِكَ شَىْءٌ كَتَبَهُ اللَّهُ عَلَى بَنَاتِ آدَمَ، فَافْعَلِي مَا يَفْعَلُ الْحَاجُّ، غَيْرَ أَنْ لاَ تَطُوفِي بِالْبَيْتِ حَتَّى تَطْهُرِي .",
+     "gharib": [
+      {
+       "word": "طَمِثْتُ",
+       "meaning": "حضت.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٩."
+      },
+      {
+       "word": "سَرِفَ",
+       "meaning": "موضع قريب من مكة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٠–٤٠١."
+      },
+      {
+       "word": "نُفِسْتِ",
+       "meaning": "حضتِ في سياق هذا الخبر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٠؛ و٤٠٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٥",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 305"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "We set out with the Prophet (ﷺ) for Hajj and when we reached Sarif I got my menses. When the Prophet (ﷺ) came to me, I was weeping. He asked, \"Why are you weeping?\" I said, \"I wish if I had not performed Hajj this year.\" He asked, \"May be that you got your menses?\" I replied, \"Yes.\" He then said, \"This is the thing which Allah has ordained for all the daughters of Adam. So do what all the pilgrims do except that you do not perform the Tawaf round the Ka`ba till you are clean",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 306,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "أَنَّهَا قَالَتْ قَالَتْ فَاطِمَةُ بِنْتُ أَبِي حُبَيْشٍ لِرَسُولِ اللَّهِ ﷺ يَا رَسُولَ اللَّهِ إِنِّي لاَ أَطْهُرُ، أَفَأَدَعُ الصَّلاَةَ فَقَالَ رَسُولُ اللَّهِ ﷺ  إِنَّمَا ذَلِكِ عِرْقٌ وَلَيْسَ بِالْحَيْضَةِ، فَإِذَا أَقْبَلَتِ الْحَيْضَةُ فَاتْرُكِي الصَّلاَةَ، فَإِذَا ذَهَبَ قَدْرُهَا فَاغْسِلِي عَنْكِ الدَّمَ وَصَلِّي .",
+     "gharib": [
+      {
+       "word": "عِرْقٌ",
+       "meaning": "إشارة في الجواب إلى دم الاستحاضة، المتميز في حكمه من دم الحيض.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٦",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 306"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Fatima bint Abi Hubaish said to Allah's Messenger (ﷺ), \"O Allah's Messenger (ﷺ)! I do not become clean (from bleeding). Shall I give up my prayers?\" Allah's Messenger (ﷺ) replied: \"No, because it is from a blood vessel and not the menses. So when the real menses begins give up your prayers and when it (the period) has finished wash the blood off your body (take a bath) and offer your prayers",
       "source": "sunnah.com (Muhsin Khan)"
      },
      "audio": {
