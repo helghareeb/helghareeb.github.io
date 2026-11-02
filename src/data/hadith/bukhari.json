@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 234,
+   "last": 242,
    "hadith": [
     {
      "n": 135,
@@ -9998,6 +9998,335 @@
       },
       "id": "1Xy9kO08-co1yy7z_Z2Bij3jh99f84SUq",
       "player": "1DRPzxJXUhkTfDoitM-K8kHIbHCtV4GDi"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 235,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكٌ،",
+     "matn": "عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ، عَنِ ابْنِ عَبَّاسٍ، عَنْ مَيْمُونَةَ، أَنَّ رَسُولَ اللَّهِ ﷺ سُئِلَ عَنْ فَأْرَةٍ سَقَطَتْ فِي سَمْنٍ فَقَالَ  أَلْقُوهَا وَمَا حَوْلَهَا فَاطْرَحُوهُ. وَكُلُوا سَمْنَكُمْ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 235"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "Allah's Messenger (ﷺ) was asked regarding ghee (cooking butter) in which a mouse had fallen. He said, \"Take out the mouse and throw away the ghee around it and use the rest",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1e0xk1z8JT1mKsOHqeD4-2VviXnJWvOjK",
+      "player": "1OdKCjLguFtpYfEeZjoFicK8oxgwouIaY"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 236,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا مَعْنٌ، قَالَ حَدَّثَنَا مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ عُتْبَةَ بْنِ مَسْعُودٍ، عَنِ ابْنِ عَبَّاسٍ، عَنْ مَيْمُونَةَ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ سُئِلَ عَنْ فَأْرَةٍ سَقَطَتْ فِي سَمْنٍ فَقَالَ  خُذُوهَا وَمَا حَوْلَهَا فَاطْرَحُوهُ . قَالَ مَعْنٌ حَدَّثَنَا مَالِكٌ مَا لاَ أُحْصِيهِ يَقُولُ عَنِ ابْنِ عَبَّاسٍ عَنْ مَيْمُونَةَ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 236"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "The Prophet (ﷺ) was asked regarding ghee in which a mouse had fallen. He said, \"Take out the mouse and throw away the ghee around it (and use the rest)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 237,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَحْمَدُ بْنُ مُحَمَّدٍ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا مَعْمَرٌ، عَنْ هَمَّامِ بْنِ مُنَبِّهٍ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "كُلُّ كَلْمٍ يُكْلَمُهُ الْمُسْلِمُ فِي سَبِيلِ اللَّهِ يَكُونُ يَوْمَ الْقِيَامَةِ كَهَيْئَتِهَا إِذْ طُعِنَتْ، تَفَجَّرُ دَمًا، اللَّوْنُ لَوْنُ الدَّمِ، وَالْعَرْفُ عَرْفُ الْمِسْكِ .",
+     "gharib": [
+      {
+       "word": "كَلْمٍ",
+       "meaning": "جرح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٤٤."
+      },
+      {
+       "word": "يُكْلَمُهُ",
+       "meaning": "يجرحه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٤٤."
+      },
+      {
+       "word": "الْعَرْفُ",
+       "meaning": "الرائحة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٤٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 237"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"A wound which a Muslim receives in Allah's cause will appear on the Day of Resurrection as it was at the time of infliction; blood will be flowing from the wound and its color will be that of the blood but will smell like musk",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 238,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، قَالَ أَخْبَرَنَا أَبُو الزِّنَادِ، أَنَّ عَبْدَ الرَّحْمَنِ بْنَ هُرْمُزَ الأَعْرَجَ، حَدَّثَهُ أَنَّهُ، سَمِعَ أَبَا هُرَيْرَةَ،",
+     "matn": "أَنَّهُ سَمِعَ رَسُولَ اللَّهِ ﷺ يَقُولُ  نَحْنُ الآخِرُونَ السَّابِقُونَ .",
+     "gharib": [
+      {
+       "word": "الآخِرُونَ",
+       "meaning": "الآخرون زمانًا في ظهور الأمم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ٢/٣٥٤."
+      },
+      {
+       "word": "السَّابِقُونَ",
+       "meaning": "الأولون منزلة يوم القيامة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ٢/٣٥٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٨",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 238"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"We (Muslims) are the last (people to come in the world) but (will be) the foremost (on the Day of Resurrection)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1YXeTM_J1_vdTjn49X8rHSjuObVyl5n6Y",
+      "player": "1PCsX9mJroIBJio5XH6tkQI3poBNX-547"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 239,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "وَبِإِسْنَادِهِ قَالَ",
+     "matn": "لاَ يَبُولَنَّ أَحَدُكُمْ فِي الْمَاءِ الدَّائِمِ الَّذِي لاَ يَجْرِي، ثُمَّ يَغْتَسِلُ فِيهِ .",
+     "gharib": [
+      {
+       "word": "الدَّائِمِ",
+       "meaning": "الساكن الذي لا يجري.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٤٦–٣٤٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 239"
+     },
+     "en": {
+      "narrator": "",
+      "text": "The same narrator said that the Prophet (ﷺ) had said: \"You should not pass urine in stagnant water which is not flowing then (you may need to) wash in it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "10DyGGo1x_qZEAoVUazD9epds237a4x5S",
+      "player": "1SUm5h6eJC4e0Ny6ytDTrMIbvZ7qfz1X5"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 240,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنِي أَبِي، عَنْ شُعْبَةَ، عَنْ أَبِي إِسْحَاقَ، عَنْ عَمْرِو بْنِ مَيْمُونٍ، عَنْ عَبْدِ اللَّهِ، قَالَ بَيْنَا رَسُولُ اللَّهِ ﷺ سَاجِدٌ ح قَالَ وَحَدَّثَنِي أَحْمَدُ بْنُ عُثْمَانَ قَالَ حَدَّثَنَا شُرَيْحُ بْنُ مَسْلَمَةَ قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ يُوسُفَ عَنْ أَبِيهِ عَنْ أَبِي إِسْحَاقَ قَالَ حَدَّثَنِي عَمْرُو بْنُ مَيْمُونٍ أَنَّ عَبْدَ اللَّهِ بْنَ مَسْعُودٍ حَدَّثَهُ أَنَّ النَّبِيَّ ﷺ كَانَ يُصَلِّي عِنْدَ الْبَيْتِ، وَأَبُو جَهْلٍ وَأَصْحَابٌ لَهُ جُلُوسٌ، إِذْ قَالَ بَعْضُهُمْ لِبَعْضٍ أَيُّكُمْ يَجِيءُ بِسَلَى جَزُورِ بَنِي فُلاَنٍ فَيَضَعُهُ عَلَى ظَهْرِ مُحَمَّدٍ إِذَا سَجَدَ فَانْبَعَثَ أَشْقَى الْقَوْمِ فَجَاءَ بِهِ، فَنَظَرَ حَتَّى إِذَا سَجَدَ النَّبِيُّ ﷺ وَضَعَهُ عَلَى ظَهْرِهِ بَيْنَ كَتِفَيْهِ وَأَنَا أَنْظُرُ، لاَ أُغَيِّرُ شَيْئًا، لَوْ كَانَ لِي مَنْعَةٌ. قَالَ فَجَعَلُوا يَضْحَكُونَ وَيُحِيلُ بَعْضُهُمْ عَلَى بَعْضٍ، وَرَسُولُ اللَّهِ ﷺ سَاجِدٌ لاَ يَرْفَعُ رَأْسَهُ، حَتَّى جَاءَتْهُ فَاطِمَةُ، فَطَرَحَتْ عَنْ ظَهْرِهِ، فَرَفَعَ رَأْسَهُ ثُمَّ قَالَ",
+     "matn": "اللَّهُمَّ عَلَيْكَ بِقُرَيْشٍ . ثَلاَثَ مَرَّاتٍ، فَشَقَّ عَلَيْهِمْ إِذْ دَعَا عَلَيْهِمْ ـ قَالَ وَكَانُوا يُرَوْنَ أَنَّ الدَّعْوَةَ فِي ذَلِكَ الْبَلَدِ مُسْتَجَابَةٌ ـ ثُمَّ سَمَّى  اللَّهُمَّ عَلَيْكَ بِأَبِي جَهْلٍ، وَعَلَيْكَ بِعُتْبَةَ بْنِ رَبِيعَةَ، وَشَيْبَةَ بْنِ رَبِيعَةَ، وَالْوَلِيدِ بْنِ عُتْبَةَ، وَأُمَيَّةَ بْنِ خَلَفٍ، وَعُقْبَةَ بْنِ أَبِي مُعَيْطٍ . وَعَدَّ السَّابِعَ فَلَمْ يَحْفَظْهُ قَالَ فَوَالَّذِي نَفْسِي بِيَدِهِ، لَقَدْ رَأَيْتُ الَّذِينَ عَدَّ رَسُولُ اللَّهِ ﷺ صَرْعَى فِي الْقَلِيبِ قَلِيبِ بَدْرٍ.",
+     "gharib": [
+      {
+       "word": "الْقَلِيبِ",
+       "meaning": "البئر التي لم تبن جوانبها؛ وقيل البئر القديمة التي لا يعرف صاحبها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٢."
+      },
+      {
+       "word": "بِسَلَى",
+       "meaning": "بالجلدة التي يكون فيها ولد البهيمة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٠."
+      },
+      {
+       "word": "جَزُورِ",
+       "meaning": "ما ينحر من الإبل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٠."
+      },
+      {
+       "word": "مَنْعَةٌ",
+       "meaning": "قوة تحمي صاحبها وتكف عنه الأذى.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٠."
+      },
+      {
+       "word": "وَيُحِيلُ",
+       "meaning": "ينسب بعضهم الفعل إلى بعض بالإشارة تهكمًا؛ وقيل يثب بعضهم على بعض من المرح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٤٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 240"
+     },
+     "en": {
+      "narrator": "`Abdullah",
+      "text": "While Allah's Messenger (ﷺ) was prostrating (as stated below). Narrated `Abdullah bin Mas`ud: Once the Prophet (ﷺ) was offering prayers at the Ka`ba. Abu Jahl was sitting with some of his companions. One of them said to the others, \"Who amongst you will bring the Abdominal contents (intestines, etc.) of a camel of Bani so and so and put it on the back of Muhammad, when he prostrates?\" The most unfortunate of them got up and brought it. He waited till the Prophet (ﷺ) prostrated and then placed it on his back between his shoulders. I was watching but could not do any thing. I wish I had some people with me to hold out against them. They started laughing and falling on one another. Allah's Messenger (ﷺ) was in prostration and he did not lift his head up till Fatima (Prophet's daughter) came and threw that (camel's Abdominal contents) away from his back. He raised his head and said thrice, \"O Allah! Punish Quraish.\" So it was hard for Abu Jahl and his companions when the Prophet invoked Allah against them as they had a conviction that the prayers and invocations were accepted in this city (Mecca). The Prophet (ﷺ) said, \"O Allah! Punish Abu Jahl, `Utba bin Rabi`a, Shaiba bin Rabi`a, Al-Walid bin `Utba, Umaiya bin Khalaf, and `Uqba bin Al Mu'it [??] (and he mentioned the seventh whose name I cannot recall). By Allah in Whose Hands my life is, I saw the dead bodies of those persons who were counted by Allah's Messenger (ﷺ) in the Qalib (one of the wells) of Badr",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 241,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ حُمَيْدٍ، عَنْ أَنَسٍ، قَالَ بَزَقَ النَّبِيُّ ﷺ فِي ثَوْبِهِ. طَوَّلَهُ ابْنُ أَبِي مَرْيَمَ قَالَ أَخْبَرَنَا يَحْيَى بْنُ أَيُّوبَ حَدَّثَنِي حُمَيْدٌ قَالَ سَمِعْتُ أَنَسًا عَنِ النَّبِيِّ ﷺ.",
+     "gharib": [
+      {
+       "word": "بَزَقَ",
+       "meaning": "بصق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٥٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٤١",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 241"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) once spat in his clothes",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "19WW9t0Z-SbfwXLbxTsfY4-uUJMf2B8N-",
+      "player": "1ypxc5i4oM9znWP3bTDeC7tXcf5RzSLgC"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 242,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَدَّثَنَا الزُّهْرِيُّ، عَنْ أَبِي سَلَمَةَ، عَنْ عَائِشَةَ، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "كُلُّ شَرَابٍ أَسْكَرَ فَهُوَ حَرَامٌ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٤٢",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 242"
+     },
+     "en": {
+      "narrator": "Aisha",
+      "text": "The Prophet (ﷺ) said, \"All drinks that produce intoxication are Haram (forbidden to drink)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "16SZaNK0WLaWBaS4IdqgV7XfYxe0d1Ido",
+      "player": "1FTJIejBspB_jgxyKDOZuH_Bj2ww1OBDZ"
      },
      "video": null,
      "sharh": null,
