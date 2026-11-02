@@ -1,6 +1,6 @@
 // Source: CV (helghareeb-hub/CV/cv_2026/cv_en.tex), June 2026; DOIs verified on Crossref 2026-10-11.
 // Author lists corrected 2026-11-02 from Crossref/OpenAlex/Zenodo (professor-promotion-dossier/dossier/cv/cv.json);
-// "(co-author)" marks items whose full author list is not yet verified.
+// Remaining author lists completed from the Google Scholar profile, 2026-11-02.
 export type Publication = {
   type: 'journal' | 'conference' | 'chapter' | 'book';
   title: string;
@@ -136,8 +136,15 @@ export const publications: Publication[] = [
   },
   {
     "type": "journal",
+    "title": "E-government adoption in Egypt: analysis, challenges and prospects",
+    "authors": "A. N. H. Zaied, A. H. Ali, H. A. El-Ghareeb",
+    "venue": "International Journal of Engineering Trends and Technology, vol. 52, no. 2, pp. 70–79",
+    "year": "2017"
+  },
+  {
+    "type": "journal",
     "title": "Context-aware mobile cloud computing: applications, limitations and a novel new solution",
-    "authors": "H. A. El-Ghareeb (co-author)",
+    "authors": "R. El Stohy, H. A. El-Ghareeb, N. E. Khamessy",
     "venue": "International Journal on Information Technologies and Security",
     "year": "2017"
   },
@@ -160,7 +167,7 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Push-notification service for enhancing the relation between parents and educational institutions: a case study on Egyptian schools",
-    "authors": "H. A. El-Ghareeb (co-author)",
+    "authors": "R. A. S. A. El Stohy, H. A. El-Ghareeb, N. E. Khamessy",
     "venue": "IJIMT / IRJECE",
     "year": "2016"
   },
@@ -224,21 +231,14 @@ export const publications: Publication[] = [
   {
     "type": "journal",
     "title": "Online social-learning suggestion system based on student behavior",
-    "authors": "H. A. El-Ghareeb (co-author)",
+    "authors": "M. Yaqub, A. M. Riad, H. M. El-Bakry, H. A. El-Ghareeb",
     "venue": "International Journal of Advance Foundation and Research in Computer",
     "year": "2014"
   },
   {
     "type": "journal",
-    "title": "Open social-learning network",
-    "authors": "H. A. El-Ghareeb (co-author)",
-    "venue": "International Journal of Computer Engineering and Intelligent Systems",
-    "year": "2014"
-  },
-  {
-    "type": "journal",
     "title": "Review in finding-path problem classification and algorithms in vehicle routing",
-    "authors": "H. A. El-Ghareeb (co-author)",
+    "authors": "M. M. A. El Aziz, H. A. El-Ghareeb, M. S. M. Ksasy",
     "venue": "International Journal of Information Science and Intelligent Systems",
     "year": "2014"
   },
