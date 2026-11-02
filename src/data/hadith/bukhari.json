@@ -12341,7 +12341,7 @@
    "ar": "كتاب الحيض",
    "en": "Menstrual Periods",
    "first": 294,
-   "last": 314,
+   "last": 322,
    "hadith": [
     {
      "n": 294,
@@ -13261,6 +13261,428 @@
       },
       "id": "1ERlenjD6ZAYQX-MKmaPMvob86R5UfpIb",
       "player": "1T25ODjaEajgdhPtTdgxvzHwLy1Wvgm27"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 315,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسْلِمٌ، قَالَ حَدَّثَنَا وُهَيْبٌ، حَدَّثَنَا مَنْصُورٌ، عَنْ أُمِّهِ، عَنْ عَائِشَةَ،",
+     "matn": "أَنَّ امْرَأَةً، مِنَ الأَنْصَارِ قَالَتْ لِلنَّبِيِّ ﷺ كَيْفَ أَغْتَسِلُ مِنَ الْمَحِيضِ قَالَ  خُذِي فِرْصَةً مُمَسَّكَةً، فَتَوَضَّئِي ثَلاَثًا . ثُمَّ إِنَّ النَّبِيَّ ﷺ اسْتَحْيَا فَأَعْرَضَ بِوَجْهِهِ أَوْ قَالَ  تَوَضَّئِي بِهَا  فَأَخَذْتُهَا فَجَذَبْتُهَا فَأَخْبَرْتُهَا بِمَا يُرِيدُ النَّبِيُّ ﷺ.",
+     "gharib": [
+      {
+       "word": "فِرْصَةً",
+       "meaning": "قطعة من صوف أو قطن أو جلدة عليها صوف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٥–٤١٧."
+      },
+      {
+       "word": "مُمَسَّكَةً",
+       "meaning": "مطيبة بالمسك على تفسير التطيب الذي رجحه الشارح مع مناقشة ضبط الروايات.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٥–٤١٧."
+      },
+      {
+       "word": "فَتَوَضَّئِي",
+       "meaning": "تنظفي في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٥–٤١٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٥",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 315"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "An Ansari woman asked the Prophet (ﷺ) how to take a bath after finishing from the menses. He replied, \"Take a piece of cloth perfumed with musk and clean the private parts with it thrice.\" The Prophet (ﷺ) felt shy and turned his face. So I pulled her to me and told her what the Prophet (ﷺ) meant",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1-Iz2lTtxwY21xCTmDaqSMhJgj-YYxOJ4",
+      "player": "1hHfE5J4njqk6a6HzEk14MZaj9yd-hfX8"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 316,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، حَدَّثَنَا إِبْرَاهِيمُ، حَدَّثَنَا ابْنُ شِهَابٍ، عَنْ عُرْوَةَ، أَنَّ عَائِشَةَ،",
+     "matn": "قَالَتْ أَهْلَلْتُ مَعَ رَسُولِ اللَّهِ ﷺ فِي حَجَّةِ الْوَدَاعِ، فَكُنْتُ مِمَّنْ تَمَتَّعَ، وَلَمْ يَسُقِ الْهَدْىَ، فَزَعَمَتْ أَنَّهَا حَاضَتْ، وَلَمْ تَطْهُرْ حَتَّى دَخَلَتْ لَيْلَةُ عَرَفَةَ فَقَالَتْ يَا رَسُولَ اللَّهِ، هَذِهِ لَيْلَةُ عَرَفَةَ، وَإِنَّمَا كُنْتُ تَمَتَّعْتُ بِعُمْرَةٍ. فَقَالَ لَهَا رَسُولُ اللَّهِ ﷺ  انْقُضِي رَأْسَكِ، وَامْتَشِطِي، وَأَمْسِكِي عَنْ عُمْرَتِكِ . فَفَعَلْتُ، فَلَمَّا قَضَيْتُ الْحَجَّ أَمَرَ عَبْدَ الرَّحْمَنِ لَيْلَةَ الْحَصْبَةِ فَأَعْمَرَنِي مِنَ التَّنْعِيمِ مَكَانَ عُمْرَتِي الَّتِي نَسَكْتُ.",
+     "gharib": [
+      {
+       "word": "انْقُضِي",
+       "meaning": "حلي ضفر شعرك.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٧."
+      },
+      {
+       "word": "أَهْلَلْتُ",
+       "meaning": "أحرمت؛ وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "نَسَكْتُ",
+       "meaning": "أحرمت بها أو قصدت النسك بها؛ هذا تفسير لفظ نسكت، مع بقاء الروايات الأخرى في موضعها.",
+       "source": "العيني، عمدة القاري شرح صحيح البخاري، ٣/٢٨٨، الشاهد الرقمي المقروء."
+      },
+      {
+       "word": "الْهَدْيَ",
+       "meaning": "ما يهدى إلى البيت الحرام من النعم لتنحر.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، ٥/٢٥٤، مادة هدا."
+      },
+      {
+       "word": "الْحَصْبَةِ",
+       "meaning": "ليلة النزول بالمحصب بعد النفر من منى خارج مكة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٦",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 316"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "In the last Hajj of Allah's Messenger (ﷺ) assumed the Ihram for Hajj along with Allah's Apostle. I was one of those who intended Tamattu` (to perform Hajj and `Umra) and did not take the Hadi (animal for sacrifice) with me. I got my menses and was not clean till the night of `Arafa I said, \"O Allah's Apostle! It is the night of the day of `Arafat and I intended to perform the Hajj Tamattu` with `Umra. Allah's Messenger (ﷺ) told me to undo my hair and comb it and to postpone the `Umra. I did the same and completed the Hajj. On the night of Al-Hasba (i.e. place outside Mecca where the pilgrims go after finishing all the ceremonies of Hajj at Mina) he (the Prophet) ordered `Abdur Rahman (`Aisha's brother) to take me to at-Tan`im to assume the Ihram for `Umra in lieu of that of Hajj-at-Tamattu` which I had intended to perform",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 317,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عُبَيْدُ بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، عَنْ هِشَامٍ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ خَرَجْنَا مُوَافِينَ لِهِلاَلِ ذِي الْحِجَّةِ، فَقَالَ رَسُولُ اللَّهِ ﷺ  مَنْ أَحَبَّ أَنْ يُهِلَّ بِعُمْرَةٍ فَلْيُهْلِلْ، فَإِنِّي لَوْلاَ أَنِّي أَهْدَيْتُ لأَهْلَلْتُ بِعُمْرَةٍ . فَأَهَلَّ بَعْضُهُمْ بِعُمْرَةٍ، وَأَهَلَّ بَعْضُهُمْ بِحَجٍّ، وَكُنْتُ أَنَا مِمَّنْ أَهَلَّ بِعُمْرَةٍ، فَأَدْرَكَنِي يَوْمُ عَرَفَةَ وَأَنَا حَائِضٌ، فَشَكَوْتُ إِلَى النَّبِيِّ ﷺ فَقَالَ  دَعِي عُمْرَتَكِ، وَانْقُضِي رَأْسَكِ وَامْتَشِطِي، وَأَهِلِّي بِحَجٍّ . فَفَعَلْتُ حَتَّى إِذَا كَانَ لَيْلَةُ الْحَصْبَةِ أَرْسَلَ مَعِي أَخِي عَبْدَ الرَّحْمَنِ بْنَ أَبِي بَكْرٍ، فَخَرَجْتُ إِلَى التَّنْعِيمِ، فَأَهْلَلْتُ بِعُمْرَةٍ مَكَانَ عُمْرَتِي. قَالَ هِشَامٌ وَلَمْ يَكُنْ فِي شَىْءٍ مِنْ ذَلِكَ هَدْىٌ وَلاَ صَوْمٌ وَلاَ صَدَقَةٌ.",
+     "gharib": [
+      {
+       "word": "فَأَهَلَّ",
+       "meaning": "فأحرم. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "فَأَهْلَلْتُ",
+       "meaning": "فأحرمت. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "فَلْيُهْلِلْ",
+       "meaning": "فليحرم. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "لأَهْلَلْتُ",
+       "meaning": "لأحرمت. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "وَأَهَلَّ",
+       "meaning": "وأحرم. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "وَأَهِلِّي",
+       "meaning": "وأحرمي. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "يُهِلَّ",
+       "meaning": "يحرم. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "هَدْيٌ",
+       "meaning": "ما يهدى إلى البيت الحرام من النعم لتنحر.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، ٥/٢٥٤، مادة هدا."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٧",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 317"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "On the 1st of Dhul-Hijja we set out with the intention of performing Hajj. Allah's Messenger (ﷺ) said, \"Any one who likes to assume the Ihram for `Umra he can do so. Had I not brought the Hadi with me, I would have assumed the Ihram for `Umra. \"Some of us assumed the Ihram for `Umra while the others assumed the Ihram for Hajj. I was one of those who assumed the Ihram for `Umra. I got menses and kept on menstruating until the day of `Arafat and complained of that to the Prophet. He told me to postpone my `Umra, undo and comb my hair, and to assume the Ihram of Hajj and I did so. On the night of Hasba, he sent my brother `Abdur-Rahman bin Abi Bakr with me to at-Tan`im, where I assumed the Ihram for `Umra in lieu of the previous one. Hisham said, \"For that (`Umra) no Hadi, fasting or alms were required",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "16Ft4RDwea5qjpnfgTUH6LQs8JjzQo2YS",
+      "player": "1g361Y5QCZsxvljBKRlIUtGEgrd_0z8zK"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 318,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا حَمَّادٌ، عَنْ عُبَيْدِ اللَّهِ بْنِ أَبِي بَكْرٍ، عَنْ أَنَسِ بْنِ مَالِكٍ، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "إِنَّ اللَّهَ ـ عَزَّ وَجَلَّ ـ وَكَّلَ بِالرَّحِمِ مَلَكًا يَقُولُ يَا رَبِّ نُطْفَةٌ، يَا رَبِّ عَلَقَةٌ، يَا رَبِّ مُضْغَةٌ. فَإِذَا أَرَادَ أَنْ يَقْضِيَ خَلْقَهُ قَالَ أَذَكَرٌ أَمْ أُنْثَى شَقِيٌّ أَمْ سَعِيدٌ فَمَا الرِّزْقُ وَالأَجَلُ فَيُكْتَبُ فِي بَطْنِ أُمِّهِ .",
+     "gharib": [
+      {
+       "word": "مُضْغَةٌ",
+       "meaning": "قطعة من اللحم قدر ما يمضغ، في البيان اللغوي.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، ٤/٣٣٩، مادة مضغ."
+      },
+      {
+       "word": "نُطْفَةٌ",
+       "meaning": "الماء القليل، وسمي المني نطفة لقلته.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، ٥/٧٥، مادة نطف."
+      },
+      {
+       "word": "عَلَقَةٌ",
+       "meaning": "قطعة دم منعقد في أصل الاستعمال اللغوي الذي يذكره المعجم.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، ٣/٢٩٠، مادة علق."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٨",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 318"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) said, \"At every womb Allah appoints an angel who says, 'O Lord! A drop of semen, O Lord! A clot. O Lord! A little lump of flesh.\" Then if Allah wishes (to complete) its creation, the angel asks, (O Lord!) Will it be a male or female, a wretched or a blessed, and how much will his provision be? And what will his age be?' So all that is written while the child is still in the mother's womb",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 319,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، قَالَتْ خَرَجْنَا مَعَ النَّبِيِّ ﷺ فِي حَجَّةِ الْوَدَاعِ، فَمِنَّا مَنْ أَهَلَّ بِعُمْرَةٍ، وَمِنَّا مَنْ أَهَلَّ بِحَجٍّ، فَقَدِمْنَا مَكَّةَ فَقَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "مَنْ أَحْرَمَ بِعُمْرَةٍ وَلَمْ يُهْدِ فَلْيُحْلِلْ، وَمَنْ أَحْرَمَ بِعُمْرَةٍ وَأَهْدَى فَلاَ يَحِلُّ حَتَّى يَحِلَّ بِنَحْرِ هَدْيِهِ، وَمَنْ أَهَلَّ بِحَجٍّ فَلْيُتِمَّ حَجَّهُ . قَالَتْ فَحِضْتُ فَلَمْ أَزَلْ حَائِضًا حَتَّى كَانَ يَوْمُ عَرَفَةَ، وَلَمْ أُهْلِلْ إِلاَّ بِعُمْرَةٍ، فَأَمَرَنِي النَّبِيُّ ﷺ أَنْ أَنْقُضَ رَأْسِي وَأَمْتَشِطَ، وَأُهِلَّ بِحَجٍّ، وَأَتْرُكَ الْعُمْرَةَ، فَفَعَلْتُ ذَلِكَ حَتَّى قَضَيْتُ حَجِّي، فَبَعَثَ مَعِي عَبْدَ الرَّحْمَنِ بْنَ أَبِي بَكْرٍ، وَأَمَرَنِي أَنْ أَعْتَمِرَ مَكَانَ عُمْرَتِي مِنَ التَّنْعِيمِ.",
+     "gharib": [
+      {
+       "word": "أَنْقُضَ",
+       "meaning": "أحل ضفر شعري.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٧–٤١٩."
+      },
+      {
+       "word": "وَأَهَلَّ",
+       "meaning": "وأحرم. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "أُهْلِلْ",
+       "meaning": "أحرم. وأصل الإهلال رفع الصوت بالتلبية.",
+       "source": "ابن منظور، لسان العرب، ١١/٧٠١، مادة هلل."
+      },
+      {
+       "word": "هَدْيِهِ",
+       "meaning": "ما أهداه من النعم إلى البيت الحرام لينحر.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، ٥/٢٥٤، مادة هدا."
+      },
+      {
+       "word": "يُهْدِ",
+       "meaning": "يسق الهدي، وهو ما يهدى إلى البيت الحرام من النعم لتنحر.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، ٥/٢٥٤، مادة هدا."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٩",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 319"
+     },
+     "en": {
+      "narrator": "`Urwa",
+      "text": "`Aisha said, \"We set out with the Prophet (ﷺ) in his last Hajj. Some of us intended to perform `Umra while others Hajj. When we reached Mecca, Allah's Messenger (ﷺ) said, 'Those who had assumed the Ihram for `Umra and had not brought the Hadi should finish his Ihram and whoever had assumed the Ihram for `Umra and brought the Hadi should not finish the Ihram till he has slaughtered his Hadi and whoever had assumed the Ihram for Hajj should complete his Hajj.\" `Aisha further said, \"I got my periods (menses) and kept on menstruating till the day of `Arafat, and I had assumed the Ihram for `Umra only (Tamattu`). The Prophet (ﷺ) ordered me to undo and comb my head hair and assume the Ihram for Hajj only and leave the `Umra. I did the same till I completed the Hajj. Then the Prophet (ﷺ) sent `Abdur Rahman bin Abi Bakr with me and ordered me to perform `Umra from at-Tan`im in lieu of the missed `Umra",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Oi7dE_a59VFnvlrbMskvez4H_54iGFiE",
+      "player": "1x-wNuZMoafNMKFdlUA0TG0d_gwg25F9G"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 320,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ هِشَامٍ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "أَنَّ فَاطِمَةَ بِنْتَ أَبِي حُبَيْشٍ، كَانَتْ تُسْتَحَاضُ فَسَأَلَتِ النَّبِيَّ ﷺ فَقَالَ  ذَلِكِ عِرْقٌ، وَلَيْسَتْ بِالْحَيْضَةِ، فَإِذَا أَقْبَلَتِ الْحَيْضَةُ فَدَعِي الصَّلاَةَ، وَإِذَا أَدْبَرَتْ فَاغْتَسِلِي وَصَلِّي .",
+     "gharib": [
+      {
+       "word": "تُسْتَحَاضُ",
+       "meaning": "يخرج منها دم الاستحاضة المتميز في هذا الجواب من الحيضة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٠–٤٢١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٠",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 320"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Fatima bint Abi Hubaish used to have bleeding in between the periods, so she asked the Prophet (ﷺ) about it. He replied, \"The bleeding is from a blood vessel and not the menses. So give up the prayers when the (real) menses begins and when it has finished, take a bath and start praying",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Pg2jtp51K67MTcIRkS00fvfobDtFPyme",
+      "player": "1zBXLh5N6iVTvFMpVbeOnbiwA_jEJMXsX"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 321,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا هَمَّامٌ، قَالَ حَدَّثَنَا قَتَادَةُ، قَالَ حَدَّثَتْنِي مُعَاذَةُ، أَنَّ امْرَأَةً، قَالَتْ لِعَائِشَةَ أَتَجْزِي إِحْدَانَا صَلاَتَهَا إِذَا طَهُرَتْ فَقَالَتْ أَحَرُورِيَّةٌ أَنْتِ كُنَّا نَحِيضُ مَعَ النَّبِيِّ ﷺ فَلاَ يَأْمُرُنَا بِهِ. أَوْ قَالَتْ فَلاَ نَفْعَلُهُ.",
+     "gharib": [
+      {
+       "word": "أَحَرُورِيَّةٌ",
+       "meaning": "نسبة إلى حروراء، واشتهرت بها طائفة الخوارج؛ جاءت هنا في سياق استفهام الإنكار الذي شرحه ابن حجر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٢."
+      },
+      {
+       "word": "أَتَجْزِي",
+       "meaning": "أتقضي، على القراءة المشهورة التي بينها الشارح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢١",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 321"
+     },
+     "en": {
+      "narrator": "Mu`adha",
+      "text": "A woman asked `Aisha, \"Should I offer the prayers that which I did not offer because of menses\" `Aisha said, \"Are you from the Huraura' (a town in Iraq?) We were with the Prophet (ﷺ) and used to get our periods but he never ordered us to offer them (the Prayers missed during menses).\" `Aisha perhaps said, \"We did not offer them",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1KxNAwJIv68fNM2GWqrm1KbChMLg4wLdS",
+      "player": "1orzkN1IEGiAPlAhqx9Y5GssCwOwBldSI"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 322,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سَعْدُ بْنُ حَفْصٍ، قَالَ حَدَّثَنَا شَيْبَانُ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ زَيْنَبَ ابْنَةِ أَبِي سَلَمَةَ، حَدَّثَتْهُ أَنَّ أُمَّ سَلَمَةَ قَالَتْ حِضْتُ وَأَنَا مَعَ النَّبِيِّ، ﷺ فِي الْخَمِيلَةِ، فَانْسَلَلْتُ فَخَرَجْتُ مِنْهَا، فَأَخَذْتُ ثِيَابَ حِيضَتِي فَلَبِسْتُهَا، فَقَالَ لِي رَسُولُ اللَّهِ ﷺ",
+     "matn": "أَنُفِسْتِ . قُلْتُ نَعَمْ، فَدَعَانِي فَأَدْخَلَنِي مَعَهُ فِي الْخَمِيلَةِ. قَالَتْ وَحَدَّثَتْنِي أَنَّ النَّبِيَّ ﷺ كَانَ يُقَبِّلُهَا وَهُوَ صَائِمٌ، وَكُنْتُ أَغْتَسِلُ أَنَا وَالنَّبِيُّ ﷺ مِنْ إِنَاءٍ وَاحِدٍ مِنَ الْجَنَابَةِ.",
+     "gharib": [
+      {
+       "word": "أَنُفِسْتِ",
+       "meaning": "أحضت في هذا السياق، وذكر الشارح وجهي الضبط.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣؛ وانظر ٤٢٢."
+      },
+      {
+       "word": "الْخَمِيلَةِ",
+       "meaning": "كساء له خمل أو هدب؛ وفسرت بالقطيفة والطنفسة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣؛ وانظر ٤٢٢."
+      },
+      {
+       "word": "فَانْسَلَلْتُ",
+       "meaning": "ذهبت في خفية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣؛ وانظر ٤٢٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٢",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 322"
+     },
+     "en": {
+      "narrator": "Zainab bint Abi Salama",
+      "text": "Um-Salama said, \"I got my menses while I was lying with the Prophet (ﷺ) under a woolen sheet. So I slipped away, took the clothes for menses and put them on. Allah's Messenger (ﷺ) said, 'Have you got your menses?' I replied, 'Yes.' Then he called me and took me with him under the woolen sheet.\" Um Salama further said, \"The Prophet (ﷺ) used to kiss me while he was fasting. The Prophet (ﷺ) and I used to take the bath of Janaba from a single pot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1anNYm1-HJx_k-VGDjTDPfM3Wo-B3Qrjm",
+      "player": "1lNSuD6kmaTRG6veqs8qGTfeOoQWo3UOP"
      },
      "video": null,
      "sharh": null,
