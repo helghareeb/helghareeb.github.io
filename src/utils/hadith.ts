@@ -21,7 +21,7 @@ export type Hadith = {
   takhrij: Record<Lang, string>;
   en: { narrator: string; text: string; source: string };
   audio: { reader: Record<Lang, string>; id: string | null; player?: string | null };
-  video: { id: string } | null;
+  video: { id: string; shorts?: string; whatsapp?: string } | null;
   sharh: { ar: string; source?: string } | null;
   fawaid: { ar: string }[];
   notesStatus?: 'review' | 'approved';

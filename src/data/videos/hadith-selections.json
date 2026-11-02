@@ -1,0 +1,24 @@
+[
+  {
+    "key": "bukhari-0082-knowledge",
+    "order": 1,
+    "title": "Knowledge — Sahih al-Bukhari 82",
+    "titleAr": "قال: العلم — صحيح البخاري ٨٢",
+    "summary": {
+      "ar": "حديث ابن عمر في رؤيا النبي ﷺ اللبن وتأويله بالعلم، بصوت د. يوسف بن نوح أحمد، مع غريب الحديث بمعان معزوة إلى فتح الباري والصحاح.",
+      "en": "Ibn Umar's report of the Prophet's dream of milk, interpreted as knowledge, read by Dr. Yusuf bin Nuh Ahmad, with sourced Arabic vocabulary."
+    },
+    "duration": "0:27",
+    "repoPath": "",
+    "id": "1wzOmKjDYRaGO5-eYMXxwyJqaAuiJbqrh",
+    "fileName": "bukhari-0082-video.mp4",
+    "mobile": ["1P4Un5Een2BUkYCxL9qkCmH8PFqrf92rT"],
+    "status": ["1Ac59ugfc7vrFH1jghCwdK3qTFugNx-95"],
+    "modified": "2026-11-02",
+    "thumb": "/videos/thumbs/bukhari-0082.jpg",
+    "article": {
+      "ar": "/hadith-bukhari/ar/82/",
+      "en": "/hadith-bukhari/en/82/"
+    }
+  }
+]

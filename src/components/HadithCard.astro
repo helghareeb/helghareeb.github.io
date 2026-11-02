@@ -41,6 +41,23 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
     )}
   </div>
 
+  {h.video?.id && (
+    <section class="hadith-card__slot hadith-selected-video" aria-label={lang === 'ar' ? 'فيديو الحديث ونسخ التحميل' : 'Hadith video and downloads'}>
+      <h4>{lang === 'ar' ? 'فيديو الحديث' : 'Hadith video'}</h4>
+      <div class="hadith-audio" data-audio-id={h.video.id} data-player-title={`${book[lang]} · ${t.hadith(h.n)} · ${lang === 'ar' ? 'فيديو' : 'Video'}`}>
+        <div class="hadith-audio__toolbar">
+          <button type="button" class="button hadith-audio__play" aria-expanded="false" aria-controls={`video-${book.id}-${h.n}`} data-open-label={lang === 'ar' ? 'مشاهدة الفيديو' : 'Watch video'} data-close-label={lang === 'ar' ? 'إغلاق الفيديو' : 'Close video'}>
+            <span aria-hidden="true">▶</span> <span data-play-label>{lang === 'ar' ? 'مشاهدة الفيديو' : 'Watch video'}</span>
+          </button>
+          <a class="hadith-audio__download" href={getFileDownloadUrl(h.video.id)} target="_blank" rel="noopener noreferrer">{lang === 'ar' ? 'تحميل الفيديو الأفقي ↓' : 'Download landscape video ↓'}</a>
+          {h.video.shorts && <a class="hadith-audio__download" href={getFileDownloadUrl(h.video.shorts)} target="_blank" rel="noopener noreferrer">{lang === 'ar' ? 'تحميل الشورت الرأسي ↓' : 'Download vertical short ↓'}</a>}
+          {h.video.whatsapp && <a class="hadith-audio__download" href={getFileDownloadUrl(h.video.whatsapp)} target="_blank" rel="noopener noreferrer">{lang === 'ar' ? 'تحميل حالة واتساب ↓' : 'Download WhatsApp status ↓'}</a>}
+        </div>
+        <div class="hadith-audio__frame" id={`video-${book.id}-${h.n}`} hidden></div>
+      </div>
+    </section>
+  )}
+
   <div class="hadith-card__text" dir="rtl" lang="ar">
     {h.isnad && (
       <p class="hadith-card__isnad">

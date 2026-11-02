@@ -7,6 +7,7 @@ import bookSummaries from '../data/videos/book-summaries.json';
 import dsa20 from '../data/videos/dsa20.json';
 import lawQalu from '../data/videos/law-qalu.json';
 import quranRecitations from '../data/videos/quran-recitations.json';
+import hadithSelections from '../data/videos/hadith-selections.json';
 
 type Lang = 'ar' | 'en';
 
@@ -45,6 +46,19 @@ export type Playlist = {
 const byOrder = (videos: unknown) => [...(videos as Video[])].sort((a, b) => a.order - b.order);
 
 export const playlists: Playlist[] = [
+  {
+    slug: 'hadith-selections',
+    kind: 'dawah',
+    title: { ar: 'مختارات من السنة النبوية', en: 'Selected Prophetic Hadith' },
+    course: { ar: 'أحاديث مختارة', en: 'Hadith selections' },
+    year: '2026',
+    summary: {
+      ar: 'أحاديث مختارة بصوت د. يوسف بن نوح أحمد، مع نص الحديث وغريبه. لكل حديث فيديو أفقي وشورت رأسي ونسخة خفيفة لحالة واتساب، متاحة للاستماع والتحميل مجانا.',
+      en: 'Selected hadith read by Dr. Yusuf bin Nuh Ahmad, with Arabic text and contextual vocabulary. Landscape video, vertical short and a compact WhatsApp status are available to watch and download free.',
+    },
+    folderId: '1Z8gD43jtnFzROjmpQ_NYmePGdDnPbHe4',
+    videos: byOrder(hadithSelections),
+  },
   {
     slug: 'law-qalu',
     kind: 'dawah',
