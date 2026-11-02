@@ -12335,6 +12335,361 @@
      "fawaid": []
     }
    ]
+  },
+  {
+   "slug": "al-hayd",
+   "ar": "كتاب الحيض",
+   "en": "Menstrual Periods",
+   "first": 294,
+   "last": 301,
+   "hadith": [
+    {
+     "n": 294,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ سَمِعْتُ عَبْدَ الرَّحْمَنِ بْنَ الْقَاسِمِ، قَالَ سَمِعْتُ الْقَاسِمَ، يَقُولُ سَمِعْتُ عَائِشَةَ، تَقُولُ خَرَجْنَا لاَ نَرَى إِلاَّ الْحَجَّ، فَلَمَّا كُنَّا بِسَرِفَ حِضْتُ، فَدَخَلَ عَلَىَّ رَسُولُ اللَّهِ ﷺ وَأَنَا أَبْكِي قَالَ",
+     "matn": "مَا لَكِ أَنُفِسْتِ . قُلْتُ نَعَمْ. قَالَ  إِنَّ هَذَا أَمْرٌ كَتَبَهُ اللَّهُ عَلَى بَنَاتِ آدَمَ، فَاقْضِي مَا يَقْضِي الْحَاجُّ، غَيْرَ أَنْ لاَ تَطُوفِي بِالْبَيْتِ . قَالَتْ وَضَحَّى رَسُولُ اللَّهِ ﷺ عَنْ نِسَائِهِ بِالْبَقَرِ.",
+     "gharib": [
+      {
+       "word": "أَنُفِسْتِ",
+       "meaning": "أحضتِ؛ يطلق النفاس هنا على الحيض.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٠؛ و٤٠٣."
+      },
+      {
+       "word": "بِسَرِفَ",
+       "meaning": "بموضع قريب من مكة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٠–٤٠١."
+      },
+      {
+       "word": "فَاقْضِي",
+       "meaning": "فأدّي؛ المراد هنا أداء أعمال الحج.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٢٩٤",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 294"
+     },
+     "en": {
+      "narrator": "Al-Qasim",
+      "text": "`Aisha said, \"We set out with the sole intention of performing Hajj and when we reached Sarif, (a place six miles from Mecca) I got my menses. Allah's Messenger (ﷺ) came to me while I was weeping. He said 'What is the matter with you? Have you got your menses?' I replied, 'Yes.' He said, 'This is a thing which Allah has ordained for the daughters of Adam. So do what all the pilgrims do with the exception of the Tawaf (Circumambulation) round the Ka`ba.\" `Aisha added, \"Allah's Messenger (ﷺ) sacrificed cows on behalf of his wives",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 295,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا مَالِكٌ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كُنْتُ أُرَجِّلُ رَأْسَ رَسُولِ اللَّهِ ﷺ وَأَنَا حَائِضٌ.",
+     "gharib": [
+      {
+       "word": "أُرَجِّلُ",
+       "meaning": "أسرح شعر الرأس.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٢٩٥",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 295"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "While in menses, I used to comb the hair of Allah's Messenger (ﷺ)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 296,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ مُوسَى، قَالَ أَخْبَرَنَا هِشَامُ بْنُ يُوسُفَ، أَنَّ ابْنَ جُرَيْجٍ، أَخْبَرَهُمْ قَالَ أَخْبَرَنِي هِشَامٌ، عَنْ عُرْوَةَ، أَنَّهُ سُئِلَ أَتَخْدُمُنِي الْحَائِضُ أَوْ تَدْنُو مِنِّي الْمَرْأَةُ وَهْىَ جُنُبٌ فَقَالَ عُرْوَةُ كُلُّ ذَلِكَ عَلَىَّ هَيِّنٌ، وَكُلُّ ذَلِكَ تَخْدُمُنِي، وَلَيْسَ عَلَى أَحَدٍ فِي ذَلِكَ بَأْسٌ، أَخْبَرَتْنِي عَائِشَةُ",
+     "matn": "أَنَّهَا كَانَتْ تُرَجِّلُ ـ تَعْنِي ـ رَأْسَ رَسُولِ اللَّهِ ﷺ وَهِيَ حَائِضٌ، وَرَسُولُ اللَّهِ ﷺ حِينَئِذٍ مُجَاوِرٌ فِي الْمَسْجِدِ، يُدْنِي لَهَا رَأْسَهُ وَهْىَ فِي حُجْرَتِهَا، فَتُرَجِّلُهُ وَهْىَ حَائِضٌ.",
+     "gharib": [
+      {
+       "word": "مُجَاوِرٌ",
+       "meaning": "معتكف في المسجد في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٢٩٦",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 296"
+     },
+     "en": {
+      "narrator": "`Urwa",
+      "text": "A person asked me, \"Can a woman in menses serve me? And can a Junub woman come close to me?\" I replied, \"All this is easy for me. All of them can serve me, and there is no harm for any other person to do the same. `Aisha told me that she used to comb the hair of Allah's Messenger (ﷺ) while she was in her menses, and he was in I`tikaf (in the mosque). He would bring his head near her in her room and she would comb his hair, while she used to be in her menses",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 297,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ الْفَضْلُ بْنُ دُكَيْنٍ، سَمِعَ زُهَيْرًا، عَنْ مَنْصُورٍ ابْنِ صَفِيَّةَ، أَنَّ أُمَّهُ، حَدَّثَتْهُ أَنَّ عَائِشَةَ",
+     "matn": "حَدَّثَتْهَا أَنَّ النَّبِيَّ ﷺ كَانَ يَتَّكِئُ فِي حَجْرِي وَأَنَا حَائِضٌ، ثُمَّ يَقْرَأُ الْقُرْآنَ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٢٩٧",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 297"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) used to lean on my lap and recite Qur'an while I was in menses",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 298,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا الْمَكِّيُّ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ يَحْيَى بْنِ أَبِي كَثِيرٍ، عَنْ أَبِي سَلَمَةَ، أَنَّ زَيْنَبَ ابْنَةَ أُمِّ سَلَمَةَ، حَدَّثَتْهُ أَنَّ أُمَّ سَلَمَةَ حَدَّثَتْهَا قَالَتْ، بَيْنَا أَنَا مَعَ النَّبِيِّ، ﷺ مُضْطَجِعَةً فِي خَمِيصَةٍ إِذْ حِضْتُ، فَانْسَلَلْتُ فَأَخَذْتُ ثِيَابَ حِيضَتِي قَالَ",
+     "matn": "أَنُفِسْتِ . قُلْتُ نَعَمْ. فَدَعَانِي فَاضْطَجَعْتُ مَعَهُ فِي الْخَمِيلَةِ.",
+     "gharib": [
+      {
+       "word": "أَنُفِسْتِ",
+       "meaning": "أحضتِ؛ وردت الرواية بفتح النون وضمها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣."
+      },
+      {
+       "word": "الْخَمِيلَةِ",
+       "meaning": "ثوب له خمل، أي هدب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣."
+      },
+      {
+       "word": "خَمِيصَةٍ",
+       "meaning": "كساء أسود له أعلام، يكون من صوف وغيره.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٢–٤٠٣."
+      },
+      {
+       "word": "فَانْسَلَلْتُ",
+       "meaning": "ذهبت في خفية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٢٩٨",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 298"
+     },
+     "en": {
+      "narrator": "Um Salama",
+      "text": "While I was laying with the Prophet (ﷺ) under a single woolen sheet, I got the menses. I slipped away and put on the clothes for menses. He said, \"Have you got \"Nifas\" (menses)?\" I replied, \"Yes.\" He then called me and made me lie with him under the same sheet",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 299,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا قَبِيصَةُ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ مَنْصُورٍ، عَنْ إِبْرَاهِيمَ، عَنِ الأَسْوَدِ، عَنْ عَائِشَةَ، قَالَتْ كُنْتُ أَغْتَسِلُ أَنَا وَالنَّبِيُّ، ﷺ مِنْ إِنَاءٍ وَاحِدٍ، كِلاَنَا جُنُبٌ. وَكَانَ يَأْمُرُنِي فَأَتَّزِرُ، فَيُبَاشِرُنِي وَأَنَا حَائِضٌ. وَكَانَ يُخْرِجُ رَأْسَهُ إِلَىَّ وَهُوَ مُعْتَكِفٌ، فَأَغْسِلُهُ وَأَنَا حَائِضٌ.",
+     "gharib": [
+      {
+       "word": "فَأَتَّزِرُ",
+       "meaning": "فأشد إزاري على وسطي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣–٤٠٤."
+      },
+      {
+       "word": "مُعْتَكِفٌ",
+       "meaning": "ملازم للمسجد للاعتكاف في هذا الخبر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٢٩٩",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 299"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) and I used to take a bath from a single pot while we were Junub. During the menses, he used to order me to put on an Izar (dress worn below the waist) and used to fondle me. While in I`tikaf, he used to bring his head near me and I would wash it while I used to be in my periods (menses)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 300,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قَبِيصَةُ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ مَنْصُورٍ، عَنْ إِبْرَاهِيمَ، عَنِ الأَسْوَدِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كُنْتُ أَغْتَسِلُ أَنَا وَالنَّبِيُّ، ﷺ مِنْ إِنَاءٍ وَاحِدٍ، كِلاَنَا جُنُبٌ. وَكَانَ يَأْمُرُنِي فَأَتَّزِرُ، فَيُبَاشِرُنِي وَأَنَا حَائِضٌ. وَكَانَ يُخْرِجُ رَأْسَهُ إِلَىَّ وَهُوَ مُعْتَكِفٌ، فَأَغْسِلُهُ وَأَنَا حَائِضٌ.",
+     "gharib": [
+      {
+       "word": "فَأَتَّزِرُ",
+       "meaning": "فأشد إزاري على وسطي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣–٤٠٤."
+      },
+      {
+       "word": "مُعْتَكِفٌ",
+       "meaning": "ملازم للمسجد للاعتكاف في هذا الخبر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٠",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 300"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) and I used to take a bath from a single pot while we were Junub. During the menses, he used to order me to put on an Izar (dress worn below the waist) and used to fondle me. While in I`tikaf, he used to bring his head near me and I would wash it while I used to be in my periods (menses)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 301,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قَبِيصَةُ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ مَنْصُورٍ، عَنْ إِبْرَاهِيمَ، عَنِ الأَسْوَدِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كُنْتُ أَغْتَسِلُ أَنَا وَالنَّبِيُّ، ﷺ مِنْ إِنَاءٍ وَاحِدٍ، كِلاَنَا جُنُبٌ. وَكَانَ يَأْمُرُنِي فَأَتَّزِرُ، فَيُبَاشِرُنِي وَأَنَا حَائِضٌ. وَكَانَ يُخْرِجُ رَأْسَهُ إِلَىَّ وَهُوَ مُعْتَكِفٌ، فَأَغْسِلُهُ وَأَنَا حَائِضٌ.",
+     "gharib": [
+      {
+       "word": "فَأَتَّزِرُ",
+       "meaning": "فأشد إزاري على وسطي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣–٤٠٤."
+      },
+      {
+       "word": "مُعْتَكِفٌ",
+       "meaning": "ملازم للمسجد للاعتكاف في هذا الخبر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠١",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 301"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) and I used to take a bath from a single pot while we were Junub. During the menses, he used to order me to put on an Izar (dress worn below the waist) and used to fondle me. While in I`tikaf, he used to bring his head near me and I would wash it while I used to be in my periods (menses)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    }
+   ]
   }
  ]
 }
