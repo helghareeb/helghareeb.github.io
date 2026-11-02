@@ -10538,6 +10538,319 @@
      "fawaid": []
     }
    ]
+  },
+  {
+   "slug": "al-ghusl",
+   "ar": "كتاب الغسل",
+   "en": "Bathing (Ghusl)",
+   "first": 248,
+   "last": 255,
+   "hadith": [
+    {
+     "n": 248,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ هِشَامٍ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ، زَوْجِ النَّبِيِّ ﷺ أَنَّ النَّبِيَّ ﷺ كَانَ إِذَا اغْتَسَلَ مِنَ الْجَنَابَةِ بَدَأَ فَغَسَلَ يَدَيْهِ، ثُمَّ يَتَوَضَّأُ كَمَا يَتَوَضَّأُ لِلصَّلاَةِ، ثُمَّ يُدْخِلُ أَصَابِعَهُ فِي الْمَاءِ، فَيُخَلِّلُ بِهَا أُصُولَ شَعَرِهِ ثُمَّ يَصُبُّ عَلَى رَأْسِهِ ثَلاَثَ غُرَفٍ بِيَدَيْهِ، ثُمَّ يُفِيضُ الْمَاءَ عَلَى جِلْدِهِ كُلِّهِ.",
+     "gharib": [
+      {
+       "word": "فَيُخَلِّلُ",
+       "meaning": "يدخل أصابعه المبتلة بين الشعر لإيصال الماء إلى أصوله والبشرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦٠."
+      },
+      {
+       "word": "غُرَفٍ",
+       "meaning": "جمع غرفة: قدر ما يغرف من الماء بالكف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦١."
+      },
+      {
+       "word": "يُفِيضُ",
+       "meaning": "يسيل الماء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٤٨",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 248"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Whenever the Prophet (ﷺ) took a bath after Janaba he started by washing his hands and then performed ablution like that for the prayer. After that he would put his fingers in water and move the roots of his hair with them, and then pour three handfuls of water over his head and then pour water all over his body",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1wQPDsQg_mpvgmNci0mb0rD6G-f3D7r17",
+      "player": "1KO745J0cqf-l0vfH_P1_OQzzkEPKawKv"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 249,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنِ الأَعْمَشِ، عَنْ سَالِمِ بْنِ أَبِي الْجَعْدِ، عَنْ كُرَيْبٍ، عَنِ ابْنِ عَبَّاسٍ، عَنْ مَيْمُونَةَ، زَوْجِ النَّبِيِّ ﷺ قَالَتْ تَوَضَّأَ رَسُولُ اللَّهِ ﷺ وُضُوءَهُ لِلصَّلاَةِ غَيْرَ رِجْلَيْهِ، وَغَسَلَ فَرْجَهُ، وَمَا أَصَابَهُ مِنَ الأَذَى، ثُمَّ أَفَاضَ عَلَيْهِ الْمَاءَ، ثُمَّ نَحَّى رِجْلَيْهِ فَغَسَلَهُمَا، هَذِهِ غُسْلُهُ مِنَ الْجَنَابَةِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٤٩",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 249"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "(the wife of the Prophet) Allah's Messenger (ﷺ) performed ablution like that for the prayer but did not wash his feet. He washed off the discharge from his private parts and then poured water over his body. He withdrew his feet from that place (the place where he took the bath) and then washed them. And that was his way of taking the bath of Janaba",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1JjJwwCqrU7sa8ozeLCUa6J7GDATF4AlH",
+      "player": "1JeIwq4ovmqEDuk7CdE1XoRIrVOBNwiAS"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 250,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا آدَمُ بْنُ أَبِي إِيَاسٍ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، عَنِ الزُّهْرِيِّ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، قَالَتْ كُنْتُ أَغْتَسِلُ أَنَا وَالنَّبِيُّ، ﷺ مِنْ إِنَاءٍ وَاحِدٍ مِنْ قَدَحٍ يُقَالُ لَهُ الْفَرَقُ.",
+     "gharib": [
+      {
+       "word": "الْفَرَقِ",
+       "meaning": "مكيال، المشهور أن مقداره ثلاثة آصع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٠",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 250"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) and I used to take a bath from a single pot called 'Faraq",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1qs2RZl1iYQ1RRRZMrHLq5ctmokVQ6MLo",
+      "player": "1pzm70dUapNgGlLjv73Sww3Uk0zjNFci5"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 251,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ، قَالَ حَدَّثَنِي عَبْدُ الصَّمَدِ، قَالَ حَدَّثَنِي شُعْبَةُ، قَالَ حَدَّثَنِي أَبُو بَكْرِ بْنُ حَفْصٍ، قَالَ سَمِعْتُ أَبَا سَلَمَةَ، يَقُولُ دَخَلْتُ أَنَا وَأَخُو، عَائِشَةَ",
+     "matn": "عَلَى عَائِشَةَ فَسَأَلَهَا أَخُوهَا عَنْ غُسْلِ النَّبِيِّ، ﷺ فَدَعَتْ بِإِنَاءٍ نَحْوًا مِنْ صَاعٍ، فَاغْتَسَلَتْ وَأَفَاضَتْ عَلَى رَأْسِهَا، وَبَيْنَنَا وَبَيْنَهَا حِجَابٌ. قَالَ أَبُو عَبْدِ اللَّهِ قَالَ يَزِيدُ بْنُ هَارُونَ وَبَهْزٌ وَالْجُدِّيُّ عَنْ شُعْبَةَ قَدْرِ صَاعٍ.",
+     "gharib": [
+      {
+       "word": "صَاعٍ",
+       "meaning": "مكيال معروف؛ والمراد هنا ملؤه من الماء تقريبًا لا تحديدًا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦٤–٣٦٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥١",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 251"
+     },
+     "en": {
+      "narrator": "Abu Salama",
+      "text": "`Aisha's brother and I went to `Aisha and he asked her about the bath of the Prophet. She brought a pot containing about a Sa` of water and took a bath and poured it over her head and at that time there was a screen between her and us",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1t6oe6nJZNH637wbswXEvF33kDk2Q3iay",
+      "player": "1HZVt4FndAATcWtjTdg8lRbR84ghBJcTg"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 252,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ، قَالَ حَدَّثَنَا يَحْيَى بْنُ آدَمَ، قَالَ حَدَّثَنَا زُهَيْرٌ، عَنْ أَبِي إِسْحَاقَ، قَالَ حَدَّثَنَا أَبُو جَعْفَرٍ، أَنَّهُ كَانَ عِنْدَ جَابِرِ بْنِ عَبْدِ اللَّهِ هُوَ وَأَبُوهُ، وَعِنْدَهُ قَوْمٌ فَسَأَلُوهُ عَنِ الْغُسْلِ،. فَقَالَ يَكْفِيكَ صَاعٌ. فَقَالَ رَجُلٌ مَا يَكْفِينِي. فَقَالَ جَابِرٌ كَانَ يَكْفِي مَنْ هُوَ أَوْفَى مِنْكَ شَعَرًا، وَخَيْرٌ مِنْكَ، ثُمَّ أَمَّنَا فِي ثَوْبٍ.",
+     "gharib": [
+      {
+       "word": "أَوْفَى",
+       "meaning": "أطول شعرًا وأكثر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٢",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 252"
+     },
+     "en": {
+      "narrator": "Abu Ja`far",
+      "text": "While I and my father were with Jabir bin `Abdullah, some people asked him about taking a bath. He replied, \"A Sa` of water is sufficient for you.\" A man said, \"A Sa` is not sufficient for me.\" Jabir said, \"A Sa` was sufficient for one who had more hair than you and was better than you (meaning the Prophet).\" And then Jabir (put on) his garment and led the prayer",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 253,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا ابْنُ عُيَيْنَةَ، عَنْ عَمْرٍو، عَنْ جَابِرِ بْنِ زَيْدٍ،",
+     "matn": "عَنِ ابْنِ عَبَّاسٍ، أَنَّ النَّبِيَّ ﷺ وَمَيْمُونَةَ كَانَا يَغْتَسِلاَنِ مِنْ إِنَاءٍ وَاحِدٍ. قَالَ أَبُو عَبْدِ اللَّهِ كَانَ ابْنُ عُيَيْنَةَ يَقُولُ أَخِيرًا عَنِ ابْنِ عَبَّاسٍ عَنْ مَيْمُونَةَ، وَالصَّحِيحُ مَا رَوَى أَبُو نُعَيْمٍ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٣",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 253"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "The Prophet (ﷺ) and Maimuna used to take a bath from a single pot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 254,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا زُهَيْرٌ، عَنْ أَبِي إِسْحَاقَ، قَالَ حَدَّثَنِي سُلَيْمَانُ بْنُ صُرَدٍ، قَالَ حَدَّثَنِي جُبَيْرُ بْنُ مُطْعِمٍ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "أَمَّا أَنَا فَأُفِيضُ عَلَى رَأْسِي ثَلاَثًا . وَأَشَارَ بِيَدَيْهِ كِلْتَيْهِمَا.",
+     "gharib": [
+      {
+       "word": "فَأُفِيضُ",
+       "meaning": "فأسيل الماء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦١، ٣٦٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٤",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 254"
+     },
+     "en": {
+      "narrator": "Jubair bin Mut`im",
+      "text": "Allah's Messenger (ﷺ) said, \"As for me, I pour water three times on my head.\" And he pointed with both his hands",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 255,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ، قَالَ حَدَّثَنَا غُنْدَرٌ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ مِخْوَلِ بْنِ رَاشِدٍ، عَنْ مُحَمَّدِ بْنِ عَلِيٍّ، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ، قَالَ كَانَ النَّبِيُّ ﷺ يُفْرِغُ عَلَى رَأْسِهِ ثَلاَثًا.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٥",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 255"
+     },
+     "en": {
+      "narrator": "Jabir bin `Abdullah",
+      "text": "The Prophet (ﷺ) used to pour water three times on his head",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    }
+   ]
   }
  ]
 }
