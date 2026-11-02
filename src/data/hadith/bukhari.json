@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 202,
+   "last": 210,
    "hadith": [
     {
      "n": 135,
@@ -8673,6 +8673,331 @@
      "en": {
       "narrator": "`Abdullah bin `Umar",
       "text": "Sa`d bin Abi Waqqas said, \"The Prophet (ﷺ) passed wet hands over his Khuffs (socks made from thick fabric or leather).\" `Abdullah bin `Umar asked `Umar about it. `Umar replied in the affirmative and added, \"Whenever Sa`d narrates a Hadith from the Prophet, there is no need to ask anyone else about it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 203,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَمْرُو بْنُ خَالِدٍ الْحَرَّانِيُّ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ يَحْيَى بْنِ سَعِيدٍ، عَنْ سَعْدِ بْنِ إِبْرَاهِيمَ، عَنْ نَافِعِ بْنِ جُبَيْرٍ، عَنْ عُرْوَةَ بْنِ الْمُغِيرَةِ،",
+     "matn": "عَنْ أَبِيهِ الْمُغِيرَةِ بْنِ شُعْبَةَ، عَنْ رَسُولِ اللَّهِ ﷺ أَنَّهُ خَرَجَ لِحَاجَتِهِ فَاتَّبَعَهُ الْمُغِيرَةُ بِإِدَاوَةٍ فِيهَا مَاءٌ، فَصَبَّ عَلَيْهِ حِينَ فَرَغَ مِنْ حَاجَتِهِ، فَتَوَضَّأَ وَمَسَحَ عَلَى الْخُفَّيْنِ.",
+     "gharib": [
+      {
+       "word": "بِإِدَاوَةٍ",
+       "meaning": "بإناء صغير من جلد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٥١."
+      },
+      {
+       "word": "الْخُفَّيْنِ",
+       "meaning": "مثنى خف، وهو لباس للقدم.",
+       "source": "ابن منظور، لسان العرب، ٩/٨١، مادة خفف؛ وانظر ابن حجر، فتح الباري، ١/٣٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٣",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 203"
+     },
+     "en": {
+      "narrator": "Al-Mughira bin Shu`ba",
+      "text": "Once Allah's Messenger (ﷺ) went out to answer the call of nature and I followed him with a tumbler containing water, and when he finished, I poured water and he performed ablution and passed wet hands over his Khuffs (socks made from thick fabric or leather)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1N81al2qyqEdHBiXZtMc015D-7ZE6S1Ib",
+      "player": "1_-5qhBOV6R8crTYCmotE052gdJAn8w4a"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 204,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا شَيْبَانُ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ جَعْفَرِ بْنِ عَمْرِو بْنِ أُمَيَّةَ الضَّمْرِيِّ،",
+     "matn": "أَنَّ أَبَاهُ، أَخْبَرَهُ أَنَّهُ، رَأَى النَّبِيَّ ﷺ يَمْسَحُ عَلَى الْخُفَّيْنِ. وَتَابَعَهُ حَرْبُ بْنُ شَدَّادٍ وَأَبَانُ عَنْ يَحْيَى.",
+     "gharib": [
+      {
+       "word": "الْخُفَّيْنِ",
+       "meaning": "مثنى خف، وهو لباس للقدم.",
+       "source": "ابن منظور، لسان العرب، ٩/٨١، مادة خفف؛ وانظر ابن حجر، فتح الباري، ١/٣٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٤",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 204"
+     },
+     "en": {
+      "narrator": "Ja`far bin `Amr bin Umaiya Ad-Damri",
+      "text": "My father said, \"I saw the Prophet (ﷺ) passing wet hands over his Khuffs (socks made from thick fabric or leather)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "15cYboikFemEM8AvNmjcuPJlfxYXSXHig",
+      "player": "1yaK7-cG_YF_d8WJ00AAqmQ8tbsPe__-y"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 205,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا الأَوْزَاعِيُّ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ جَعْفَرِ بْنِ عَمْرٍو،",
+     "matn": "عَنْ أَبِيهِ، قَالَ رَأَيْتُ النَّبِيَّ ﷺ يَمْسَحُ عَلَى عِمَامَتِهِ وَخُفَّيْهِ. وَتَابَعَهُ مَعْمَرٌ عَنْ يَحْيَى عَنْ أَبِي سَلَمَةَ عَنْ عَمْرٍو قَالَ رَأَيْتُ النَّبِيَّ ﷺ.",
+     "gharib": [
+      {
+       "word": "وَخُفَّيْهِ",
+       "meaning": "مثنى خف، وهو لباس للقدم.",
+       "source": "ابن منظور، لسان العرب، ٩/٨١، مادة خفف؛ وانظر ابن حجر، فتح الباري، ١/٣٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 205"
+     },
+     "en": {
+      "narrator": "Ja`far bin `Amr",
+      "text": "My father said, \"I saw the Prophet (ﷺ) passing wet hands over his turban and Khuffs (socks made from thick fabric or leather)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1qFDkWkPa-fh8cjOL22miHjaRC01qwDiX",
+      "player": "1846sKct1S210Kvr7iNHEGFdvCpXRD6Aw"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 206,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا زَكَرِيَّاءُ، عَنْ عَامِرٍ، عَنْ عُرْوَةَ بْنِ الْمُغِيرَةِ،",
+     "matn": "عَنْ أَبِيهِ، قَالَ كُنْتُ مَعَ النَّبِيِّ ﷺ فِي سَفَرٍ، فَأَهْوَيْتُ لأَنْزِعَ خُفَّيْهِ فَقَالَ  دَعْهُمَا، فَإِنِّي أَدْخَلْتُهُمَا طَاهِرَتَيْنِ . فَمَسَحَ عَلَيْهِمَا.",
+     "gharib": [
+      {
+       "word": "فَأَهْوَيْتُ",
+       "meaning": "مددت يدي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٩."
+      },
+      {
+       "word": "خُفَّيْهِ",
+       "meaning": "مثنى خف، وهو لباس للقدم.",
+       "source": "ابن منظور، لسان العرب، ٩/٨١، مادة خفف؛ وانظر ابن حجر، فتح الباري، ١/٣٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 206"
+     },
+     "en": {
+      "narrator": "`Urwa bin Al-Mughira",
+      "text": "My father said, \"Once I was in the company of the Prophet (ﷺ) on a journey and I dashed to take off his Khuffs (socks made from thick fabric or leather). He ordered me to leave them as he had put them after performing ablution. So he passed wet hands over them",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1VkPA9-cjfvvqjQUR3nRpwKe-UeoaYkxp",
+      "player": "1Ojv-MlV8IABfUNGMO6dgK4HzagnYLu-Q"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 207,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ زَيْدِ بْنِ أَسْلَمَ، عَنْ عَطَاءِ بْنِ يَسَارٍ، عَنْ عَبْدِ اللَّهِ بْنِ عَبَّاسٍ،.",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ أَكَلَ كَتِفَ شَاةٍ، ثُمَّ صَلَّى وَلَمْ يَتَوَضَّأْ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 207"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Abbas",
+      "text": "Allah's Messenger (ﷺ) ate a piece of cooked mutton from the shoulder region and prayed without repeating ablution",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "11Zd__gDPSXZR55jOYGj58qFftj9T-drO",
+      "player": "1eDMfLM4T6hhOdvc01SbzlC9Hu2HgJix_"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 208,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي جَعْفَرُ بْنُ عَمْرِو بْنِ أُمَيَّةَ،",
+     "matn": "أَنَّ أَبَاهُ، أَخْبَرَهُ أَنَّهُ، رَأَى رَسُولَ اللَّهِ ﷺ يَحْتَزُّ مِنْ كَتِفِ شَاةٍ، فَدُعِيَ إِلَى الصَّلاَةِ فَأَلْقَى السِّكِّينَ فَصَلَّى وَلَمْ يَتَوَضَّأْ.",
+     "gharib": [
+      {
+       "word": "يَحْتَزُّ",
+       "meaning": "يقطع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣١١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٨",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 208"
+     },
+     "en": {
+      "narrator": "Ja`far bin `Amr bin Umaiya",
+      "text": "My father said, \"I saw Allah's Messenger (ﷺ) taking a piece of (cooked) mutton from the shoulder region and then he was called for prayer. He put his knife down and prayed without repeating ablution",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1eF57JgNw7BZ-8h5PyEpXNKgSqDa--XaM",
+      "player": "1zBRl4xBWgPfm-VzUU67SAlVvbvh9yCYx"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 209,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ يَحْيَى بْنِ سَعِيدٍ، عَنْ بُشَيْرِ بْنِ يَسَارٍ، مَوْلَى بَنِي حَارِثَةَ أَنَّ سُوَيْدَ بْنَ النُّعْمَانِ،",
+     "matn": "أَخْبَرَهُ. أَنَّهُ، خَرَجَ مَعَ رَسُولِ اللَّهِ ﷺ عَامَ خَيْبَرَ، حَتَّى إِذَا كَانُوا بِالصَّهْبَاءِ ـ وَهِيَ أَدْنَى خَيْبَرَ ـ فَصَلَّى الْعَصْرَ، ثُمَّ دَعَا بِالأَزْوَادِ، فَلَمْ يُؤْتَ إِلاَّ بِالسَّوِيقِ، فَأَمَرَ بِهِ فَثُرِّيَ، فَأَكَلَ رَسُولُ اللَّهِ ﷺ وَأَكَلْنَا، ثُمَّ قَامَ إِلَى الْمَغْرِبِ، فَمَضْمَضَ وَمَضْمَضْنَا، ثُمَّ صَلَّى وَلَمْ يَتَوَضَّأْ.",
+     "gharib": [
+      {
+       "word": "بِالسَّوِيقِ",
+       "meaning": "بدقيق الشعير أو السلت المقلي، ويكون من القمح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣١٢."
+      },
+      {
+       "word": "فَثُرِّيَ",
+       "meaning": "بل بالماء لما لحقه من اليبس.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣١٢."
+      },
+      {
+       "word": "بالأزواد",
+       "meaning": "بطعام السفر الذي يحمل معه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣١٢، شرح الدعاء بالأزواد وحملها في الأسفار."
+      },
+      {
+       "word": "بِالصَّهْبَاءِ",
+       "meaning": "بموضع من خيبر؛ وتفسيره هنا بأنه طرفها مما يلي المدينة من قول يحيى بن سعيد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣١٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 209"
+     },
+     "en": {
+      "narrator": "Suwaid bin Al-Nu`man",
+      "text": "In the year of the conquest of Khaibar I went with Allah's Messenger (ﷺ) till we reached Sahba, a place near Khaibar, where Allah's Messenger (ﷺ) offered the `Asr prayer and asked for food. Nothing but saweeq was brought. He ordered it to be moistened with water. He and all of us ate it and the Prophet (ﷺ) got up for the evening prayer (Maghrib prayer), rinsed his mouth with water and we did the same, and he then prayed without repeating the ablution",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 210,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "وَحَدَّثَنَا أَصْبَغُ، قَالَ أَخْبَرَنَا ابْنُ وَهْبٍ، قَالَ أَخْبَرَنِي عَمْرٌو، عَنْ بُكَيْرٍ، عَنْ كُرَيْبٍ، عَنْ مَيْمُونَةَ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ أَكَلَ عِنْدَهَا كَتِفًا، ثُمَّ صَلَّى وَلَمْ يَتَوَضَّأْ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢١٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 210"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "The Prophet (ﷺ) ate (a piece of) mutton from the shoulder region and then prayed without repeating the ablution",
       "source": "sunnah.com (Muhsin Khan)"
      },
      "audio": {
