@@ -10544,7 +10544,7 @@
    "ar": "كتاب الغسل",
    "en": "Bathing (Ghusl)",
    "first": 248,
-   "last": 263,
+   "last": 271,
    "hadith": [
     {
      "n": 248,
@@ -11140,6 +11140,327 @@
      "en": {
       "narrator": "`Aisha",
       "text": "The Prophet (ﷺ) and I used to take a bath from a single pot of water after Janaba",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 264,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو الْوَلِيدِ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ عَبْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ جَبْرٍ، قَالَ سَمِعْتُ أَنَسَ بْنَ مَالِكٍ، يَقُولُ كَانَ النَّبِيُّ ﷺ وَالْمَرْأَةُ مِنْ نِسَائِهِ يَغْتَسِلاَنِ مِنْ إِنَاءٍ وَاحِدٍ. زَادَ مُسْلِمٌ وَوَهْبٌ عَنْ شُعْبَةَ مِنَ الْجَنَابَةِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٤",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 264"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) and one of his wives used to take a bath from a single pot of water. (Shu`ba added to Anas' Statement \"After the Janaba)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1pfhGJrupEQaXaTrPnUTvgMcZJ9LD1hDK",
+      "player": "1yTlvNaSjpEFLgtZcpc4s134g05X0Qfip"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 265,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ مَحْبُوبٍ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ، قَالَ حَدَّثَنَا الأَعْمَشُ، عَنْ سَالِمِ بْنِ أَبِي الْجَعْدِ، عَنْ كُرَيْبٍ، مَوْلَى ابْنِ عَبَّاسٍ عَنِ ابْنِ عَبَّاسٍ، قَالَ قَالَتْ مَيْمُونَةُ وَضَعْتُ لِرَسُولِ اللَّهِ ﷺ مَاءً يَغْتَسِلُ بِهِ، فَأَفْرَغَ عَلَى يَدَيْهِ، فَغَسَلَهُمَا مَرَّتَيْنِ مَرَّتَيْنِ أَوْ ثَلاَثًا، ثُمَّ أَفْرَغَ بِيَمِينِهِ عَلَى شِمَالِهِ، فَغَسَلَ مَذَاكِيرَهُ، ثُمَّ دَلَكَ يَدَهُ بِالأَرْضِ، ثُمَّ مَضْمَضَ وَاسْتَنْشَقَ، ثُمَّ غَسَلَ وَجْهَهُ وَيَدَيْهِ ثُمَّ غَسَلَ رَأْسَهُ ثَلاَثًا، ثُمَّ أَفْرَغَ عَلَى جَسَدِهِ، ثُمَّ تَنَحَّى مِنْ مَقَامِهِ فَغَسَلَ قَدَمَيْهِ.",
+     "gharib": [
+      {
+       "word": "مَذَاكِيرَهُ",
+       "meaning": "فرجه وما يتصل به؛ عبر بالجمع بالنظر إلى مجموع أجزائه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦٩."
+      },
+      {
+       "word": "تَنَحَّى",
+       "meaning": "تحول إلى ناحية، أي انتقل من مكانه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٢، ٣٧٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٥",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 265"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "I placed water for the bath of Allah's Messenger (ﷺ) and he poured water over his hands and washed them twice or thrice; then he poured water with his right hand over his left and washed his private parts (with his left hand). He rubbed his hand over the earth and rinsed his mouth and washed his nose by putting water in it and blowing it out. After that he washed his face, both fore arms and head thrice and then poured water over his body. He withdrew from that place and washed his feet",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 266,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا أَبُو عَوَانَةَ، حَدَّثَنَا الأَعْمَشُ، عَنْ سَالِمِ بْنِ أَبِي الْجَعْدِ، عَنْ كُرَيْبٍ، مَوْلَى ابْنِ عَبَّاسٍ عَنِ ابْنِ عَبَّاسٍ، عَنْ مَيْمُونَةَ بِنْتِ الْحَارِثِ،",
+     "matn": "قَالَتْ وَضَعْتُ لِرَسُولِ اللَّهِ ﷺ غُسْلاً وَسَتَرْتُهُ، فَصَبَّ عَلَى يَدِهِ، فَغَسَلَهَا مَرَّةً أَوْ مَرَّتَيْنِ ـ قَالَ سُلَيْمَانُ لاَ أَدْرِي أَذَكَرَ الثَّالِثَةَ أَمْ لاَ ـ ثُمَّ أَفْرَغَ بِيَمِينِهِ عَلَى شِمَالِهِ، فَغَسَلَ فَرْجَهُ، ثُمَّ دَلَكَ يَدَهُ بِالأَرْضِ أَوْ بِالْحَائِطِ، ثُمَّ تَمَضْمَضَ وَاسْتَنْشَقَ، وَغَسَلَ وَجْهَهُ وَيَدَيْهِ، وَغَسَلَ رَأْسَهُ، ثُمَّ صَبَّ عَلَى جَسَدِهِ، ثُمَّ تَنَحَّى فَغَسَلَ قَدَمَيْهِ، فَنَاوَلْتُهُ خِرْقَةً، فَقَالَ بِيَدِهِ هَكَذَا، وَلَمْ يُرِدْهَا.",
+     "gharib": [
+      {
+       "word": "غُسْلاً",
+       "meaning": "ماء الاغتسال.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٢."
+      },
+      {
+       "word": "يُرِدْهَا",
+       "meaning": "يريدها؛ والأصل يريدها، وحذفت الياء للجزم بلم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٦",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 266"
+     },
+     "en": {
+      "narrator": "Maimuna bint Al-Harith",
+      "text": "I placed water for the bath of Allah's Messenger (ﷺ) and put a screen. He poured water over his hands, and washed them once or twice. (The sub-narrator added that he did not remember if she had said thrice or not). Then he poured water with his right hand over his left one and washed his private parts. He rubbed his hand over the earth or the wall and washed it. He rinsed his mouth and washed his nose by putting water in it and blowing it out. He washed his face, forearms and head. He poured water over his body and then withdrew from that place and washed his feet. I presented him a piece of cloth (towel) and he pointed with his hand (that he does not want it) and did not take it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 267,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ، قَالَ حَدَّثَنَا ابْنُ أَبِي عَدِيٍّ، وَيَحْيَى بْنُ سَعِيدٍ، عَنْ شُعْبَةَ، عَنْ إِبْرَاهِيمَ بْنِ مُحَمَّدِ بْنِ الْمُنْتَشِرِ، عَنْ أَبِيهِ، قَالَ ذَكَرْتُهُ لِعَائِشَةَ فَقَالَتْ يَرْحَمُ اللَّهُ أَبَا عَبْدِ الرَّحْمَنِ، كُنْتُ أُطَيِّبُ رَسُولَ اللَّهِ ﷺ، فَيَطُوفُ عَلَى نِسَائِهِ، ثُمَّ يُصْبِحُ مُحْرِمًا يَنْضَخُ طِيبًا.",
+     "gharib": [
+      {
+       "word": "يَنْضَخُ",
+       "meaning": "يظهر عليه أثر الطيب بكثرة حتى كأنه يتساقط منه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٧",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 267"
+     },
+     "en": {
+      "narrator": "Muhammad bin Al-Muntathir",
+      "text": "on the authority of his father that he had asked `Aisha (about the Hadith of Ibn `Umar). She said, \"May Allah be Merciful to Abu `Abdur-Rahman. I used to put scent on Allah's Messenger (ﷺ) and he used to go round his wives, and in the morning he assumed the Ihram, and the fragrance of scent was still coming out from his body",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 268,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ، قَالَ حَدَّثَنَا مُعَاذُ بْنُ هِشَامٍ، قَالَ حَدَّثَنِي أَبِي، عَنْ قَتَادَةَ، قَالَ حَدَّثَنَا أَنَسُ بْنُ مَالِكٍ، قَالَ كَانَ النَّبِيُّ ﷺ يَدُورُ عَلَى نِسَائِهِ فِي السَّاعَةِ الْوَاحِدَةِ مِنَ اللَّيْلِ وَالنَّهَارِ، وَهُنَّ إِحْدَى عَشْرَةَ. قَالَ قُلْتُ لأَنَسٍ أَوَكَانَ يُطِيقُهُ قَالَ كُنَّا نَتَحَدَّثُ أَنَّهُ أُعْطِيَ قُوَّةَ ثَلاَثِينَ. وَقَالَ سَعِيدٌ عَنْ قَتَادَةَ إِنَّ أَنَسًا حَدَّثَهُمْ تِسْعُ نِسْوَةٍ.",
+     "gharib": [
+      {
+       "word": "السَّاعَةِ",
+       "meaning": "قدر من الزمن، وليست هنا الساعة الاصطلاحية المحددة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٨",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 268"
+     },
+     "en": {
+      "narrator": "Qatada",
+      "text": "Anas bin Malik said, \"The Prophet (ﷺ) used to visit all his wives in a round, during the day and night and they were eleven in number.\" I asked Anas, \"Had the Prophet (ﷺ) the strength for it?\" Anas replied, \"We used to say that the Prophet (ﷺ) was given the strength of thirty (men).\" And Sa`id said on the authority of Qatada that Anas had told him about nine wives only (not eleven)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 269,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْوَلِيدِ، قَالَ حَدَّثَنَا زَائِدَةُ، عَنْ أَبِي حَصِينٍ، عَنْ أَبِي عَبْدِ الرَّحْمَنِ، عَنْ عَلِيٍّ، قَالَ كُنْتُ رَجُلاً مَذَّاءً فَأَمَرْتُ رَجُلاً أَنْ يَسْأَلَ النَّبِيَّ ﷺ لِمَكَانِ ابْنَتِهِ فَسَأَلَ فَقَالَ",
+     "matn": "تَوَضَّأْ وَاغْسِلْ ذَكَرَكَ .",
+     "gharib": [
+      {
+       "word": "مَذَّاءً",
+       "meaning": "كثير خروج المذي، وهو ماء رقيق لزج يخرج عند الشهوة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٩",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 269"
+     },
+     "en": {
+      "narrator": "`Ali",
+      "text": "I used to get emotional urethral discharge frequently. Being the son-in-law of the Prophet (ﷺ) I requested a man to ask him about it. So the man asked the Prophet (ﷺ) about it. The Prophet (ﷺ) replied, \"Perform ablution after washing your organ (penis)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1hxTbu4QkJbzgQLsZafADIN0cD7u_HrQR",
+      "player": "1ld8Cirm-s2kS8IW6FcNEqjYRCA84WqpF"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 270,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا أَبُو عَوَانَةَ، عَنْ إِبْرَاهِيمَ بْنِ مُحَمَّدِ بْنِ الْمُنْتَشِرِ، عَنْ أَبِيهِ، قَالَ سَأَلْتُ عَائِشَةَ فَذَكَرْتُ لَهَا قَوْلَ ابْنِ عُمَرَ مَا أُحِبُّ أَنْ أُصْبِحَ، مُحْرِمًا أَنْضَخُ طِيبًا. فَقَالَتْ عَائِشَةُ أَنَا طَيَّبْتُ رَسُولَ اللَّهِ ﷺ ثُمَّ طَافَ فِي نِسَائِهِ ثُمَّ أَصْبَحَ مُحْرِمًا.",
+     "gharib": [
+      {
+       "word": "أَنْضَخُ",
+       "meaning": "يظهر علي أثر الطيب بكثرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٧٠",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 270"
+     },
+     "en": {
+      "narrator": "Muhammad bin Al-Muntathir",
+      "text": "on the authority of his father that he had asked `Aisha about the saying of Ibn `Umar (i.e. he did not like to be a Muhrim while the smell of scent was still coming from his body). `Aisha said, \"I scented Allah's Messenger (ﷺ) and he went round (had sexual intercourse with) all his wives, and in the morning he was Muhrim (after taking a bath)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "16SAceyNt-atppLxATR2Jan7-gNqsESGs",
+      "player": "1zbD7i_xhR9HNt4oWIhSj8dm1jtYPiFsq"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 271,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا الْحَكَمُ، عَنْ إِبْرَاهِيمَ، عَنِ الأَسْوَدِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كَأَنِّي أَنْظُرُ إِلَى وَبِيصِ الطِّيبِ فِي مَفْرِقِ النَّبِيِّ ﷺ وَهْوَ مُحْرِمٌ.",
+     "gharib": [
+      {
+       "word": "وَبِيصِ",
+       "meaning": "بريق الطيب وتلألؤه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٨١–٣٨٢."
+      },
+      {
+       "word": "مَفْرِقِ",
+       "meaning": "وسط الرأس، وهو الموضع الذي يفرق فيه الشعر.",
+       "source": "ابن منظور، لسان العرب، ١٠/٣٠١، مادة فرق."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٧١",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 271"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "It is as if I am just looking at the glitter of scent in the parting of the Prophet's head hair while he was a Muhrim",
       "source": "sunnah.com (Muhsin Khan)"
      },
      "audio": {
