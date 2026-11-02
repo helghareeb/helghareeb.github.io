@@ -10544,7 +10544,7 @@
    "ar": "كتاب الغسل",
    "en": "Bathing (Ghusl)",
    "first": 248,
-   "last": 285,
+   "last": 293,
    "hadith": [
     {
      "n": 248,
@@ -12048,6 +12048,287 @@
       },
       "id": null,
       "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 286,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا هِشَامٌ، وَشَيْبَانُ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، قَالَ سَأَلْتُ عَائِشَةَ أَكَانَ النَّبِيُّ ﷺ يَرْقُدُ وَهْوَ جُنُبٌ قَالَتْ نَعَمْ وَيَتَوَضَّأُ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٦",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 286"
+     },
+     "en": {
+      "narrator": "Abu Salama",
+      "text": "I asked `Aisha \"Did the Prophet (ﷺ) use to sleep while he was Junub?\" She replied, \"Yes, but he used to perform ablution (before going to bed)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_zSTgyBvtFmgpI_2zGK8cnIlS5PMCcr3",
+      "player": "1qhAS4xsdIupHDhtd2440uyaOxZf72Dsp"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 287,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، أَنَّ عُمَرَ بْنَ الْخَطَّابِ، سَأَلَ رَسُولَ اللَّهِ ﷺ أَيَرْقُدُ أَحَدُنَا وَهْوَ جُنُبٌ قَالَ",
+     "matn": "نَعَمْ إِذَا تَوَضَّأَ أَحَدُكُمْ فَلْيَرْقُدْ وَهُوَ جُنُبٌ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٧",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 287"
+     },
+     "en": {
+      "narrator": "`Umar bin Al-Khattab",
+      "text": "I asked Allah's Messenger (ﷺ) \"Can any one of us sleep while he is Junub?\" He replied, \"Yes, if he performs ablution, he can sleep while he is Junub",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1AX1rJE7pX-d_-IPzv22IID7nqBIAUx8I",
+      "player": "1N-agU6pvkjd3TvpPH-mOsO7a6JHvGQUy"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 288,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُبَيْدِ اللَّهِ بْنِ أَبِي جَعْفَرٍ، عَنْ مُحَمَّدِ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، قَالَتْ كَانَ النَّبِيُّ ﷺ إِذَا أَرَادَ أَنْ يَنَامَ وَهْوَ جُنُبٌ، غَسَلَ فَرْجَهُ، وَتَوَضَّأَ لِلصَّلاَةِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٨",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 288"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Whenever the Prophet (ﷺ) intended to sleep while he was Junub, he used to wash his private parts and perform ablution like that for the prayer",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1gKnxdM5OXLZiPIPzFODcWkP0LipEMZ72",
+      "player": "1nhbiKiSDbLnzN7VG-ieAgTzTknrFQOQL"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 289,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا جُوَيْرِيَةُ، عَنْ نَافِعٍ، عَنْ عَبْدِ اللَّهِ، قَالَ اسْتَفْتَى عُمَرُ النَّبِيَّ ﷺ أَيَنَامُ أَحَدُنَا وَهْوَ جُنُبٌ قَالَ",
+     "matn": "نَعَمْ، إِذَا تَوَضَّأَ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٩",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 289"
+     },
+     "en": {
+      "narrator": "`Abdullah",
+      "text": "`Umar asked the Prophet (ﷺ) \"Can anyone of us sleep while he is Junub?\" He replied, \"Yes, if he performs ablution",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 290,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ عَبْدِ اللَّهِ بْنِ دِينَارٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ،",
+     "matn": "أَنَّهُ قَالَ ذَكَرَ عُمَرُ بْنُ الْخَطَّابِ لِرَسُولِ اللَّهِ ﷺ أَنَّهُ تُصِيبُهُ الْجَنَابَةُ مِنَ اللَّيْلِ، فَقَالَ لَهُ رَسُولُ اللَّهِ ﷺ  تَوَضَّأْ وَاغْسِلْ ذَكَرَكَ ثُمَّ نَمْ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٩٠",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 290"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "`Umar bin Al-Khattab told Allah's Messenger (ﷺ), \"I became Junub at night.\" Allah's Messenger (ﷺ) replied, \"Perform ablution after washing your private parts and then sleep",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "12rsnMTuA9Iyk1RZpX3ak-kksMfCPJAqc",
+      "player": "1N0aHf8yJMJMC0j0DXJgQKRU5f8OHVCjZ"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 291,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُعَاذُ بْنُ فَضَالَةَ، قَالَ حَدَّثَنَا هِشَامٌ، ح وَحَدَّثَنَا أَبُو نُعَيْمٍ، عَنْ هِشَامٍ، عَنْ قَتَادَةَ، عَنِ الْحَسَنِ، عَنْ أَبِي رَافِعٍ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "إِذَا جَلَسَ بَيْنَ شُعَبِهَا الأَرْبَعِ ثُمَّ جَهَدَهَا، فَقَدْ وَجَبَ الْغَسْلُ . تَابَعَهُ عَمْرُو بْنُ مَرْزُوقٍ عَنْ شُعْبَةَ مِثْلَهُ. وَقَالَ مُوسَى حَدَّثَنَا أَبَانُ قَالَ حَدَّثَنَا قَتَادَةُ أَخْبَرَنَا الْحَسَنُ مِثْلَهُ.",
+     "gharib": [
+      {
+       "word": "شُعَبِهَا",
+       "meaning": "جمع شعبة، وهي القطعة من الشيء؛ والعبارة هنا كناية عن الجماع، وقد ذكر الشارح أقوالا في تعيين الشعب الأربع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٩٥."
+      },
+      {
+       "word": "جَهَدَهَا",
+       "meaning": "كناية في هذا السياق عن الإيلاج؛ ولا يراد مجرد الملامسة الخارجية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٩٥–٣٩٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٩١",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 291"
+     },
+     "en": {
+      "narrator": "Hisham",
+      "text": "as the following Hadith 290. Narrated Abu Huraira: The Prophet (ﷺ) said, \"When a man sits in between the four parts of a woman and did the sexual intercourse with her, bath becomes compulsory",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1WkZ4Z3JiILrTbRYourpKSreNgcCXAe-Y",
+      "player": "11bp0bM01AeQgxpB_XX79u8boBGQdysD2"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 292,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو مَعْمَرٍ، حَدَّثَنَا عَبْدُ الْوَارِثِ، عَنِ الْحُسَيْنِ، قَالَ يَحْيَى وَأَخْبَرَنِي أَبُو سَلَمَةَ، أَنَّ عَطَاءَ بْنَ يَسَارٍ، أَخْبَرَهُ أَنَّ زَيْدَ بْنَ خَالِدٍ الْجُهَنِيَّ أَخْبَرَهُ أَنَّهُ، سَأَلَ عُثْمَانَ بْنَ عَفَّانَ فَقَالَ أَرَأَيْتَ إِذَا جَامَعَ الرَّجُلُ امْرَأَتَهُ فَلَمْ يُمْنِ. قَالَ عُثْمَانُ يَتَوَضَّأُ كَمَا يَتَوَضَّأُ لِلصَّلاَةِ، وَيَغْسِلُ ذَكَرَهُ. قَالَ عُثْمَانُ سَمِعْتُهُ مِنْ رَسُولِ اللَّهِ ﷺ. فَسَأَلْتُ عَنْ ذَلِكَ عَلِيَّ بْنَ أَبِي طَالِبٍ وَالزُّبَيْرَ بْنَ الْعَوَّامِ وَطَلْحَةَ بْنَ عُبَيْدِ اللَّهِ وَأُبَىَّ بْنَ كَعْبٍ ـ رضى الله عنهم ـ فَأَمَرُوهُ بِذَلِكَ. قَالَ يَحْيَى وَأَخْبَرَنِي أَبُو سَلَمَةَ أَنَّ عُرْوَةَ بْنَ الزُّبَيْرِ أَخْبَرَهُ أَنَّ أَبَا أَيُّوبَ أَخْبَرَهُ أَنَّهُ سَمِعَ ذَلِكَ مِنْ رَسُولِ اللَّهِ ﷺ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٩٢",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 292"
+     },
+     "en": {
+      "narrator": "Zaid bin Khalid Al-Juhani",
+      "text": "I asked `Uthman bin `Affan about a man who engaged in the sexual intercourse with his wife but did not discharge. `Uthman replied, \"He should perform ablution like that for the prayer after washing his private parts.\" `Uthman added, \"I heard that from Allah's Messenger (ﷺ).\" I asked `Ali bin Abi Talib, Az-Zubair bin Al-`Awwam, Talha bin 'Ubaidullah and Ubai bin Ka`b and they gave the same reply. (Abu Aiyub said that he had heard that from Allah's Messenger (ﷺ) ) (This order was canceled later on so one has to take a bath. See, Hadith No)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_EK6yOsG2JGoUjVdTXDd-JQ1XZEfDyVt",
+      "player": "1Lfy7VHqoVfbNjQJAuTg0WJIsFQYY9-WA"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 293,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، حَدَّثَنَا يَحْيَى، عَنْ هِشَامِ بْنِ عُرْوَةَ، قَالَ أَخْبَرَنِي أَبِي قَالَ، أَخْبَرَنِي أَبُو أَيُّوبَ، قَالَ أَخْبَرَنِي أُبَىُّ بْنُ كَعْبٍ، أَنَّهُ قَالَ يَا رَسُولَ اللَّهِ إِذَا جَامَعَ الرَّجُلُ الْمَرْأَةَ فَلَمْ يُنْزِلْ قَالَ",
+     "matn": "يَغْسِلُ مَا مَسَّ الْمَرْأَةَ مِنْهُ، ثُمَّ يَتَوَضَّأُ وَيُصَلِّي . قَالَ أَبُو عَبْدِ اللَّهِ الْغَسْلُ أَحْوَطُ، وَذَاكَ الآخِرُ، وَإِنَّمَا بَيَّنَّا لاِخْتِلاَفِهِمْ.",
+     "gharib": [
+      {
+       "word": "أَحْوَطُ",
+       "meaning": "أشد احتياطا للدين؛ وشرح ابن حجر هذا التعقيب على تقدير عدم ثبوت الناسخ أو ظهور الترجيح، مع ترجيحه وجوب الغسل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٩٨–٣٩٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٩٣",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 293"
+     },
+     "en": {
+      "narrator": "Ubai bin Ka`b",
+      "text": "I asked Allah's Messenger (ﷺ) about a man who engages in sexual intercourse with his wife but does not discharge. He replied, \"He should wash the parts which comes in contact with the private parts of the woman, perform ablution and then pray.\" (Abu `Abdullah said, \"Taking a bath is safer and is the last order)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1stFWs2TE9GoSDC5KGjTPexuI1xGPpquo",
+      "player": "1WEUEauELs7wuGbD5XbHZ2ZCXwXsxxBiG"
      },
      "video": null,
      "sharh": null,
