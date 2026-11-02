@@ -10544,7 +10544,7 @@
    "ar": "كتاب الغسل",
    "en": "Bathing (Ghusl)",
    "first": 248,
-   "last": 255,
+   "last": 263,
    "hadith": [
     {
      "n": 248,
@@ -10836,6 +10836,310 @@
      "en": {
       "narrator": "Jabir bin `Abdullah",
       "text": "The Prophet (ﷺ) used to pour water three times on his head",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 256,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا مَعْمَرُ بْنُ يَحْيَى بْنِ سَامٍ، حَدَّثَنِي أَبُو جَعْفَرٍ، قَالَ قَالَ لِي جَابِرٌ",
+     "matn": "أَتَانِي ابْنُ عَمِّكَ يُعَرِّضُ بِالْحَسَنِ بْنِ مُحَمَّدٍ ابْنِ الْحَنَفِيَّةِ قَالَ كَيْفَ الْغُسْلُ مِنَ الْجَنَابَةِ فَقُلْتُ كَانَ النَّبِيُّ ﷺ يَأْخُذُ ثَلاَثَةَ أَكُفٍّ وَيُفِيضُهَا عَلَى رَأْسِهِ، ثُمَّ يُفِيضُ عَلَى سَائِرِ جَسَدِهِ. فَقَالَ لِي الْحَسَنُ إِنِّي رَجُلٌ كَثِيرُ الشَّعَرِ. فَقُلْتُ كَانَ النَّبِيُّ ﷺ أَكْثَرَ مِنْكَ شَعَرًا.",
+     "gharib": [
+      {
+       "word": "أَكُفٍّ",
+       "meaning": "جمع كف؛ والمراد هنا الأخذ بالكفين في كل مرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٦",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 256"
+     },
+     "en": {
+      "narrator": "Abu Ja`far",
+      "text": "Jabir bin `Abdullah said to me, \"Your cousin (Hasan bin Muhammad bin Al-Hanafiya) came to me and asked about the bath of Janaba. I replied, 'The Prophet (ﷺ) used to take three handfuls of water, pour them on his head and then pour more water over his body.' Al-Hasan said to me, 'I am a hairy man.' I replied, 'The Prophet (ﷺ) had more hair than you",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 257,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ،",
+     "matn": "عَنِ الأَعْمَشِ، عَنْ سَالِمِ بْنِ أَبِي الْجَعْدِ، عَنْ كُرَيْبٍ، عَنِ ابْنِ عَبَّاسٍ، قَالَ قَالَتْ مَيْمُونَةُ وَضَعْتُ لِلنَّبِيِّ ﷺ مَاءً لِلْغُسْلِ، فَغَسَلَ يَدَيْهِ مَرَّتَيْنِ أَوْ ثَلاَثًا، ثُمَّ أَفْرَغَ عَلَى شِمَالِهِ فَغَسَلَ مَذَاكِيرَهُ، ثُمَّ مَسَحَ يَدَهُ بِالأَرْضِ، ثُمَّ مَضْمَضَ وَاسْتَنْشَقَ وَغَسَلَ وَجْهَهُ وَيَدَيْهِ، ثُمَّ أَفَاضَ عَلَى جَسَدِهِ، ثُمَّ تَحَوَّلَ مِنْ مَكَانِهِ فَغَسَلَ قَدَمَيْهِ.",
+     "gharib": [
+      {
+       "word": "مَذَاكِيرَهُ",
+       "meaning": "فرجه وما يتصل به؛ عبر بالجمع بالنظر إلى مجموع أجزائه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٧",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 257"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "I placed water for the bath of the Prophet. He washed his hands twice or thrice and then poured water on his left hand and washed his private parts. He rubbed his hands over the earth (and cleaned them), rinsed his mouth, washed his nose by putting water in it and blowing it out, washed his face and both forearms and then poured water over his body. Then he withdrew from that place and washed his feet",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1aRMu4su7Ei-PkW3nQUqGVm0RgQrLq896",
+      "player": "1CzNAUyY2T8POa9MqLESp3Hu66mLvP0lk"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 258,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا أَبُو عَاصِمٍ، عَنْ حَنْظَلَةَ، عَنِ الْقَاسِمِ، عَنْ عَائِشَةَ، قَالَتْ كَانَ النَّبِيُّ ﷺ إِذَا اغْتَسَلَ مِنَ الْجَنَابَةِ دَعَا بِشَىْءٍ نَحْوَ الْحِلاَبِ، فَأَخَذَ بِكَفِّهِ، فَبَدَأَ بِشِقِّ رَأْسِهِ الأَيْمَنِ ثُمَّ الأَيْسَرِ، فَقَالَ بِهِمَا عَلَى رَأْسِهِ.",
+     "gharib": [
+      {
+       "word": "الْحِلاَبِ",
+       "meaning": "إناء الماء الذي يغتسل منه، وهو في الأصل ما يحلب فيه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٦٩–٣٧١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٨",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 258"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Whenever the Prophet (ﷺ) took the bath of Janaba (sexual relation or wet dream) he asked for the Hilab or some other scent. He used to take it in his hand, rub it first over the right side of his head and then over the left and then rub the middle of his head with both hands",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1xkV5xIRhK7317RUTAy_BWShBhy6V3XqC",
+      "player": "1mP8SmmlPnD1Ey_mPvoV7PMkKRmO8ic56"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 259,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عُمَرُ بْنُ حَفْصِ بْنِ غِيَاثٍ، قَالَ حَدَّثَنَا أَبِي، حَدَّثَنَا الأَعْمَشُ، قَالَ حَدَّثَنِي سَالِمٌ، عَنْ كُرَيْبٍ، عَنِ ابْنِ عَبَّاسٍ، قَالَ حَدَّثَتْنَا مَيْمُونَةُ، قَالَتْ صَبَبْتُ لِلنَّبِيِّ ﷺ غُسْلاً، فَأَفْرَغَ بِيَمِينِهِ عَلَى يَسَارِهِ فَغَسَلَهُمَا، ثُمَّ غَسَلَ فَرْجَهُ، ثُمَّ قَالَ بِيَدِهِ الأَرْضَ فَمَسَحَهَا بِالتُّرَابِ، ثُمَّ غَسَلَهَا، ثُمَّ تَمَضْمَضَ وَاسْتَنْشَقَ، ثُمَّ غَسَلَ وَجْهَهُ، وَأَفَاضَ عَلَى رَأْسِهِ، ثُمَّ تَنَحَّى فَغَسَلَ قَدَمَيْهِ، ثُمَّ أُتِيَ بِمِنْدِيلٍ، فَلَمْ يَنْفُضْ بِهَا.",
+     "gharib": [
+      {
+       "word": "غُسْلاً",
+       "meaning": "ماء الاغتسال.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٢."
+      },
+      {
+       "word": "تَنَحَّى",
+       "meaning": "تحول إلى ناحية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٢."
+      },
+      {
+       "word": "يَنْفُضْ",
+       "meaning": "يتمسح بالخرقة؛ ورد هنا مع النفي: فلم ينفض بها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٥٩",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 259"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "I placed water for the bath of the Prophet (ﷺ) and he poured water with his right hand on his left and washed them. Then he washed his private parts and rubbed his hands on the ground, washed them with water, rinsed his mouth and washed his nose by putting water in it and blowing it out, washed his face and poured water on his head. He withdrew from that place and washed his feet. A piece of cloth (towel) was given to him but he did not use it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Bz3FLawTMfvnzQsCiedlH_BxcdHSm5Rk",
+      "player": "1JgOMXT5k0cKqlhZ_Z5vpL89gZ_Jft5-f"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 260,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا الْحُمَيْدِيُّ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَدَّثَنَا الأَعْمَشُ، عَنْ سَالِمِ بْنِ أَبِي الْجَعْدِ، عَنْ كُرَيْبٍ، عَنِ ابْنِ عَبَّاسٍ، عَنْ مَيْمُونَةَ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ اغْتَسَلَ مِنَ الْجَنَابَةِ، فَغَسَلَ فَرْجَهُ بِيَدِهِ، ثُمَّ دَلَكَ بِهَا الْحَائِطَ ثُمَّ غَسَلَهَا، ثُمَّ تَوَضَّأَ وُضُوءَهُ لِلصَّلاَةِ، فَلَمَّا فَرَغَ مِنْ غُسْلِهِ غَسَلَ رِجْلَيْهِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٠",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 260"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "The Prophet (ﷺ) took the bath of Janaba. (sexual relation or wet dream). He first cleaned his private parts with his hand, and then rubbed it (that hand) on the wall (earth) and washed it. Then he performed ablution like that for the prayer, and after the bath he washed his feet",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1BFABH8Ei-1-ytOsoP_jJhZJLDnRGFW-F",
+      "player": "17ECfoUELQUMq_pwBTT4uKmlczeHEXtNj"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 261,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، أَخْبَرَنَا أَفْلَحُ، عَنِ الْقَاسِمِ، عَنْ عَائِشَةَ، قَالَتْ كُنْتُ أَغْتَسِلُ أَنَا وَالنَّبِيُّ، ﷺ مِنْ إِنَاءٍ وَاحِدٍ تَخْتَلِفُ أَيْدِينَا فِيهِ.",
+     "gharib": [
+      {
+       "word": "تَخْتَلِفُ",
+       "meaning": "يغترف أحدهما تارة قبل الآخر، ثم يغترف الآخر قبله.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦١",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 261"
+     },
+     "en": {
+      "narrator": "Aisha",
+      "text": "The Prophet (ﷺ) and I used to take a bath from a single pot of water and our hands used to go in the pot after each other in turn",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1b8BW9QF9Rc2QHo4VD8H-H1Ro0wZsXZ-4",
+      "player": "1buuFtG4HnPdCYH8Qnluav7-93PJ5PaYT"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 262,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا حَمَّادٌ، عَنْ هِشَامٍ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كَانَ رَسُولُ اللَّهِ ﷺ إِذَا اغْتَسَلَ مِنَ الْجَنَابَةِ غَسَلَ يَدَهُ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٢",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 262"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Whenever Allah's Messenger (ﷺ) took a bath of Janaba, he washed his hands first",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1zxWSvOY_D3D8q2uE1Z2O4Gk1GTkL1-oy",
+      "player": "15vcxwhGsHpKv5rJzmvpeSuQLcEPESjU6"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 263,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْوَلِيدِ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ أَبِي بَكْرِ بْنِ حَفْصٍ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كُنْتُ أَغْتَسِلُ أَنَا وَالنَّبِيُّ، ﷺ مِنْ إِنَاءٍ وَاحِدٍ مِنْ جَنَابَةٍ. وَعَنْ عَبْدِ الرَّحْمَنِ بْنِ الْقَاسِمِ عَنْ أَبِيهِ عَنْ عَائِشَةَ مِثْلَهُ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٦٣",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 263"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) and I used to take a bath from a single pot of water after Janaba",
       "source": "sunnah.com (Muhsin Khan)"
      },
      "audio": {
