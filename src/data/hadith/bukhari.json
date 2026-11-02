@@ -10544,7 +10544,7 @@
    "ar": "كتاب الغسل",
    "en": "Bathing (Ghusl)",
    "first": 248,
-   "last": 277,
+   "last": 285,
    "hadith": [
     {
      "n": 248,
@@ -11724,6 +11724,321 @@
      "en": {
       "narrator": "Aisha",
       "text": "Whenever any one of us was Junub, she poured water over her head thrice with both her hands and then rubbed the right side of her head with one hand and rubbed the left side of the head with the other hand",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 278,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْحَاقُ بْنُ نَصْرٍ، قَالَ حَدَّثَنَا عَبْدُ الرَّزَّاقِ، عَنْ مَعْمَرٍ، عَنْ هَمَّامِ بْنِ مُنَبِّهٍ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "كَانَتْ بَنُو إِسْرَائِيلَ يَغْتَسِلُونَ عُرَاةً، يَنْظُرُ بَعْضُهُمْ إِلَى بَعْضٍ، وَكَانَ مُوسَى يَغْتَسِلُ وَحْدَهُ، فَقَالُوا وَاللَّهِ مَا يَمْنَعُ مُوسَى أَنْ يَغْتَسِلَ مَعَنَا إِلاَّ أَنَّهُ آدَرُ، فَذَهَبَ مَرَّةً يَغْتَسِلُ، فَوَضَعَ ثَوْبَهُ عَلَى حَجَرٍ، فَفَرَّ الْحَجَرُ بِثَوْبِهِ، فَخَرَجَ مُوسَى فِي إِثْرِهِ يَقُولُ ثَوْبِي يَا حَجَرُ. حَتَّى نَظَرَتْ بَنُو إِسْرَائِيلَ إِلَى مُوسَى، فَقَالُوا وَاللَّهِ مَا بِمُوسَى مِنْ بَأْسٍ. وَأَخَذَ ثَوْبَهُ، فَطَفِقَ بِالْحَجَرِ ضَرْبًا . فَقَالَ أَبُو هُرَيْرَةَ وَاللَّهِ إِنَّهُ لَنَدَبٌ بِالْحَجَرِ سِتَّةٌ أَوْ سَبْعَةٌ ضَرْبًا بِالْحَجَرِ.",
+     "gharib": [
+      {
+       "word": "آدَرُ",
+       "meaning": "ذو انتفاخ في الخصية؛ وهذا عيب نسبه القوم إلى موسى فظهر بطلان قولهم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٨٦."
+      },
+      {
+       "word": "لَنَدَبٌ",
+       "meaning": "لأثر من الضرب في الحجر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٨٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٧٨",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 278"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, 'The (people of) Bani Israel used to take bath naked (all together) looking at each other. The Prophet Moses (ﷺ) used to take a bath alone. They said, 'By Allah! Nothing prevents Moses from taking a bath with us except that he has a scrotal hernia.' So once Moses went out to take a bath and put his clothes over a stone and then that stone ran away with his clothes. Moses followed that stone saying, \"My clothes, O stone! My clothes, O stone! till the people of Bani Israel saw him and said, 'By Allah, Moses has got no defect in his body. Moses took his clothes and began to beat the stone.\" Abu Huraira added, \"By Allah! There are still six or seven marks present on the stone from that excessive beating",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "17B-QWxiNVss6ngURAs6C_XlbgtOK6TIz",
+      "player": "116xzWv4f-hHitSK2b5Sxj0M3WmO9ijVh"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 279,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "وَعَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ ﷺ قَالَ  بَيْنَا أَيُّوبُ يَغْتَسِلُ عُرْيَانًا فَخَرَّ عَلَيْهِ جَرَادٌ مِنْ ذَهَبٍ، فَجَعَلَ أَيُّوبُ يَحْتَثِي فِي ثَوْبِهِ، فَنَادَاهُ رَبُّهُ يَا أَيُّوبُ، أَلَمْ أَكُنْ أَغْنَيْتُكَ عَمَّا تَرَى قَالَ بَلَى وَعِزَّتِكَ وَلَكِنْ لاَ غِنَى بِي عَنْ بَرَكَتِكَ . وَرَوَاهُ إِبْرَاهِيمُ عَنْ مُوسَى بْنِ عُقْبَةَ عَنْ صَفْوَانَ عَنْ عَطَاءِ بْنِ يَسَارٍ عَنْ أَبِي هُرَيْرَةَ",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  بَيْنَا أَيُّوبُ يَغْتَسِلُ عُرْيَانًا .",
+     "gharib": [
+      {
+       "word": "يَحْتَثِي",
+       "meaning": "يأخذ بيده.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٨٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٧٩",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 279"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"When the Prophet Job (Aiyub) (ﷺ) was taking a bath naked, golden locusts began to fall on him. Job started collecting them in his clothes. His Lord addressed him, 'O Job! Haven't I given you enough so that you are not in need of them.' Job replied, 'Yes! By Your Honor (power)! But I cannot dispense with Your Blessings",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 280,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ أَبِي النَّضْرِ، مَوْلَى عُمَرَ بْنِ عُبَيْدِ اللَّهِ أَنَّ أَبَا مُرَّةَ، مَوْلَى أُمِّ هَانِئٍ بِنْتِ أَبِي طَالِبٍ أَخْبَرَهُ أَنَّهُ، سَمِعَ أُمَّ هَانِئٍ بِنْتَ أَبِي طَالِبٍ، تَقُولُ ذَهَبْتُ إِلَى رَسُولِ اللَّهِ ﷺ عَامَ الْفَتْحِ، فَوَجَدْتُهُ يَغْتَسِلُ وَفَاطِمَةُ تَسْتُرُهُ فَقَالَ",
+     "matn": "مَنْ هَذِهِ . فَقُلْتُ أَنَا أُمُّ هَانِئٍ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٠",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 280"
+     },
+     "en": {
+      "narrator": "Um Hani bint Abi Talib",
+      "text": "I went to Allah's Messenger (ﷺ) in the year of the conquest of Mecca and found him taking a bath while Fatima was screening him. The Prophet (ﷺ) asked, \"Who is it?\" I replied, \"I am Um-Hani",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 281,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا سُفْيَانُ، عَنِ الأَعْمَشِ، عَنْ سَالِمِ بْنِ أَبِي الْجَعْدِ، عَنْ كُرَيْبٍ، عَنِ ابْنِ عَبَّاسٍ، عَنْ مَيْمُونَةَ، قَالَتْ سَتَرْتُ النَّبِيَّ ﷺ وَهُوَ يَغْتَسِلُ مِنَ الْجَنَابَةِ، فَغَسَلَ يَدَيْهِ ثُمَّ صَبَّ بِيَمِينِهِ عَلَى شِمَالِهِ، فَغَسَلَ فَرْجَهُ، وَمَا أَصَابَهُ، ثُمَّ مَسَحَ بِيَدِهِ عَلَى الْحَائِطِ أَوِ الأَرْضِ، ثُمَّ تَوَضَّأَ وُضُوءَهُ لِلصَّلاَةِ، غَيْرَ رِجْلَيْهِ، ثُمَّ أَفَاضَ عَلَى جَسَدِهِ الْمَاءَ، ثُمَّ تَنَحَّى فَغَسَلَ قَدَمَيْهِ. تَابَعَهُ أَبُو عَوَانَةَ وَابْنُ فُضَيْلٍ فِي السَّتْرِ.",
+     "gharib": [
+      {
+       "word": "تَنَحَّى",
+       "meaning": "تحول إلى ناحية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٧٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨١",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 281"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "I screened the Prophet (ﷺ) while he was taking a bath of Janaba. He washed his hands, poured water from his right hand over his left and washed his private parts. Then he rubbed his hand over a wall or the earth, and performed ablution similar to that for the prayer but did not wash his feet. Then he poured water over his body, shifted from that place, and washed his feet",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 282,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ زَيْنَبَ بِنْتِ أَبِي سَلَمَةَ، عَنْ أُمِّ سَلَمَةَ أُمِّ الْمُؤْمِنِينَ، أَنَّهَا قَالَتْ جَاءَتْ أُمُّ سُلَيْمٍ امْرَأَةُ أَبِي طَلْحَةَ إِلَى رَسُولِ اللَّهِ ﷺ فَقَالَتْ يَا رَسُولَ اللَّهِ، إِنَّ اللَّهَ لاَ يَسْتَحْيِي مِنَ الْحَقِّ، هَلْ عَلَى الْمَرْأَةِ مِنْ غُسْلٍ إِذَا هِيَ احْتَلَمَتْ فَقَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "نَعَمْ إِذَا رَأَتِ الْمَاءَ .",
+     "gharib": [
+      {
+       "word": "احْتَلَمَتْ",
+       "meaning": "رأت في المنام الجماع؛ والحكم هنا مقيد برؤية الماء بعد الاستيقاظ.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٨٩."
+      },
+      {
+       "word": "الْمَاءَ",
+       "meaning": "المني بعد الاستيقاظ في سياق هذا الحديث.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٨٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٢",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 282"
+     },
+     "en": {
+      "narrator": "Um-Salama",
+      "text": "(the mother of the believers) Um Sulaim, the wife of Abu Talha, came to Allah's Messenger (ﷺ) and said, \"O Allah's Messenger (ﷺ)! Verily Allah is not shy of (telling you) the truth. Is it necessary for a woman to take a bath after she has a wet dream (nocturnal sexual discharge)?\" Allah's Messenger (ﷺ) replied, \"Yes, if she notices a discharge",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_NSLDetsrbRzBlJKvVpQpAuBY2YS5-u3",
+      "player": "1ht_VVwLv3r6sSQY51Q8_EWfldsOwYR4q"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 283,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا يَحْيَى، قَالَ حَدَّثَنَا حُمَيْدٌ، قَالَ حَدَّثَنَا بَكْرٌ، عَنْ أَبِي رَافِعٍ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ النَّبِيَّ ﷺ لَقِيَهُ فِي بَعْضِ طَرِيقِ الْمَدِينَةِ وَهْوَ جُنُبٌ، فَانْخَنَسْتُ مِنْهُ، فَذَهَبَ فَاغْتَسَلَ، ثُمَّ جَاءَ فَقَالَ",
+     "matn": "أَيْنَ كُنْتَ يَا أَبَا هُرَيْرَةَ . قَالَ كُنْتُ جُنُبًا، فَكَرِهْتُ أَنْ أُجَالِسَكَ وَأَنَا عَلَى غَيْرِ طَهَارَةٍ. فَقَالَ  سُبْحَانَ اللَّهِ، إِنَّ الْمُؤْمِنَ لاَ يَنْجُسُ .",
+     "gharib": [
+      {
+       "word": "فَانْخَنَسْتُ",
+       "meaning": "مضيت عنه مستخفيًا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٩٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٣",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 283"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) came across me in one of the streets of Medina and at that time I was Junub. So I slipped away from him and went to take a bath. On my return the Prophet (ﷺ) said, \"O Abu Huraira! Where have you been?\" I replied, \"I was Junub, so I disliked to sit in your company.\" The Prophet (ﷺ) said, \"Subhan Allah! A believer never becomes impure",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ucDG55g90kahy1bQfY67H2DAzcotvar-",
+      "player": "1y3RSeCCN3oWFn_5ZhaNI_dYLlpXX-LhK"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 284,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ الأَعْلَى بْنُ حَمَّادٍ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ زُرَيْعٍ، قَالَ حَدَّثَنَا سَعِيدٌ، عَنْ قَتَادَةَ، أَنَّ أَنَسَ بْنَ مَالِكٍ، حَدَّثَهُمْ أَنَّ نَبِيَّ اللَّهِ ﷺ كَانَ يَطُوفُ عَلَى نِسَائِهِ فِي اللَّيْلَةِ الْوَاحِدَةِ، وَلَهُ يَوْمَئِذٍ تِسْعُ نِسْوَةٍ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٤",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 284"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) used to visit all his wives in one night and he had nine wives at that time",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 285,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَيَّاشٌ، قَالَ حَدَّثَنَا عَبْدُ الأَعْلَى، حَدَّثَنَا حُمَيْدٌ، عَنْ بَكْرٍ، عَنْ أَبِي رَافِعٍ، عَنْ أَبِي هُرَيْرَةَ، قَالَ لَقِيَنِي رَسُولُ اللَّهِ ﷺ وَأَنَا جُنُبٌ، فَأَخَذَ بِيَدِي، فَمَشَيْتُ مَعَهُ حَتَّى قَعَدَ فَانْسَلَلْتُ، فَأَتَيْتُ الرَّحْلَ، فَاغْتَسَلْتُ ثُمَّ جِئْتُ وَهْوَ قَاعِدٌ فَقَالَ",
+     "matn": "أَيْنَ كُنْتَ يَا أَبَا هِرٍّ  فَقُلْتُ لَهُ. فَقَالَ  سُبْحَانَ اللَّهِ يَا أَبَا هِرٍّ إِنَّ الْمُؤْمِنَ لاَ يَنْجُسُ .",
+     "gharib": [
+      {
+       "word": "فَانْسَلَلْتُ",
+       "meaning": "ذهبت في خفية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٩٢."
+      },
+      {
+       "word": "الرَّحْلَ",
+       "meaning": "المكان الذي يأوي إليه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٩٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الغسل، حديث رقم ٢٨٥",
+      "en": "Sahih al-Bukhari, Bathing (Ghusl), hadith 285"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) came across me and I was Junub. He took my hand and I went along with him till he sat down I slipped away, went home and took a bath. When I came back, he was still sitting there. He then said to me, \"O Abu Huraira! Where have you been?' I told him about it. The Prophet (ﷺ) said, \"Subhan Allah! O Abu Huraira! A believer never becomes impure",
       "source": "sunnah.com (Muhsin Khan)"
      },
      "audio": {
