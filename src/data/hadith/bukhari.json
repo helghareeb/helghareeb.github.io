@@ -12341,7 +12341,7 @@
    "ar": "كتاب الحيض",
    "en": "Menstrual Periods",
    "first": 294,
-   "last": 306,
+   "last": 314,
    "hadith": [
     {
      "n": 294,
@@ -12914,6 +12914,353 @@
       },
       "id": "1OpbjHYE1NehlfpOq90j2zaNyPF8YH-cD",
       "player": "1WdduMhCPujmS5oLUeAxceXOf67cUlLLL"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 307,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ هِشَامٍ، عَنْ فَاطِمَةَ بِنْتِ الْمُنْذِرِ، عَنْ أَسْمَاءَ بِنْتِ أَبِي بَكْرٍ، أَنَّهَا قَالَتْ سَأَلَتِ امْرَأَةٌ رَسُولَ اللَّهِ ﷺ فَقَالَتْ يَا رَسُولَ اللَّهِ، أَرَأَيْتَ إِحْدَانَا إِذَا أَصَابَ ثَوْبَهَا الدَّمُ مِنَ الْحَيْضَةِ، كَيْفَ تَصْنَعُ فَقَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "إِذَا أَصَابَ ثَوْبَ إِحْدَاكُنَّ الدَّمُ مِنَ الْحَيْضَةِ، فَلْتَقْرُصْهُ ثُمَّ لِتَنْضَحْهُ بِمَاءٍ، ثُمَّ لِتُصَلِّي فِيهِ .",
+     "gharib": [
+      {
+       "word": "فَلْتَقْرُصْهُ",
+       "meaning": "لتعالج موضع الدم بأطراف الأصابع عند غسله، كما فسرت الرواية التالية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٠."
+      },
+      {
+       "word": "لِتَنْضَحْهُ",
+       "meaning": "لتغسله بالماء في هذا السياق؛ فسر الشارح رواية أسماء برواية عائشة المصرحة بالغسل، وميزها من رش سائر الثوب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٧",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 307"
+     },
+     "en": {
+      "narrator": "Asma' bint Abi Bakr",
+      "text": "A woman asked Allah's Messenger (ﷺ), \"O Allah's Messenger (ﷺ)! What should we do, if the blood of menses falls on our clothes?\" Allah's Messenger (ﷺ) replied, \"If the blood of menses falls on the garment of anyone of you, she must take hold of the blood spot, rub it, and wash it with water and then pray in (with it)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1WAi8vtRAQdbIQ9058epLJotos9pEcs1n",
+      "player": "1DAa_fDflp1qN97QpjCCFTVPkPtZsYgrk"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 308,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَصْبَغُ، قَالَ أَخْبَرَنِي ابْنُ وَهْبٍ، قَالَ أَخْبَرَنِي عَمْرُو بْنُ الْحَارِثِ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ الْقَاسِمِ، حَدَّثَهُ عَنْ أَبِيهِ، عَنْ عَائِشَةَ، قَالَتْ كَانَتْ إِحْدَانَا تَحِيضُ، ثُمَّ تَقْتَرِصُ الدَّمَ مِنْ ثَوْبِهَا عِنْدَ طُهْرِهَا فَتَغْسِلُهُ، وَتَنْضَحُ عَلَى سَائِرِهِ، ثُمَّ تُصَلِّي فِيهِ.",
+     "gharib": [
+      {
+       "word": "تَقْتَرِصُ",
+       "meaning": "تغسل موضع الدم بأطراف أصابعها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٠–٤١١."
+      },
+      {
+       "word": "وَتَنْضَحُ",
+       "meaning": "ترش سائر الثوب في هذا السياق بعد غسل موضع الدم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٠–٤١١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٨",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 308"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Whenever anyone of us got her menses, she, on becoming clean, used to take hold of the blood spot and rub the blood off her garment, and pour water over it and wash that portion thoroughly and sprinkle water over the rest of the garment. After that she would pray in (with) it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 309,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْحَاقُ، قَالَ حَدَّثَنَا خَالِدُ بْنُ عَبْدِ اللَّهِ، عَنْ خَالِدٍ، عَنْ عِكْرِمَةَ، عَنْ عَائِشَةَ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ اعْتَكَفَ مَعَهُ بَعْضُ نِسَائِهِ وَهْىَ مُسْتَحَاضَةٌ تَرَى الدَّمَ، فَرُبَّمَا وَضَعَتِ الطَّسْتَ تَحْتَهَا مِنَ الدَّمِ. وَزَعَمَ أَنَّ عَائِشَةَ رَأَتْ مَاءَ الْعُصْفُرِ فَقَالَتْ كَأَنَّ هَذَا شَىْءٌ كَانَتْ فُلاَنَةُ تَجِدُهُ.",
+     "gharib": [
+      {
+       "word": "مُسْتَحَاضَةٌ",
+       "meaning": "موصوفة بخروج دم الاستحاضة؛ حكمه في هذا السياق غير حكم الحيض.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١١–٤١٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٠٩",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 309"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Once one of the wives of the Prophet (ﷺ) did I`tikaf along with him and she was getting bleeding in between her periods. She used to see the blood (from her private parts) and she would perhaps put a dish under her for the blood. (The sub-narrator `Ikrima added, `Aisha once saw the liquid of safflower and said, \"It looks like what so and so used to have)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1MvZgPPf0XwwaRdXj5Jzna5PFRvdT08vQ",
+      "player": "1B-Xyt5sQxpsV6aOWnQ00KVwFKpUPfGbR"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 310,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ زُرَيْعٍ، عَنْ خَالِدٍ، عَنْ عِكْرِمَةَ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتِ اعْتَكَفَتْ مَعَ رَسُولِ اللَّهِ ﷺ امْرَأَةٌ مِنْ أَزْوَاجِهِ، فَكَانَتْ تَرَى الدَّمَ وَالصُّفْرَةَ، وَالطَّسْتُ تَحْتَهَا وَهْىَ تُصَلِّي.",
+     "gharib": [
+      {
+       "word": "وَالصُّفْرَةَ",
+       "meaning": "وصف لون ما تراه المرأة المستحاضة المذكورة؛ ليس حكما عاما لكل صفرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١١–٤١٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٠",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 310"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "\"One of the wives of Allah's Messenger (ﷺ) joined him in I`tikaf and she noticed blood and yellowish discharge (from her private parts) and put a dish under her when she prayed",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ESU702Xy0DshIb6hiFos0SkpWgnb65yF",
+      "player": "1JJfCbgBTFxs4nOaoVMDW_BuESqU61Yei"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 311,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا مُعْتَمِرٌ، عَنْ خَالِدٍ، عَنْ عِكْرِمَةَ، عَنْ عَائِشَةَ،",
+     "matn": "أَنَّ بَعْضَ، أُمَّهَاتِ الْمُؤْمِنِينَ اعْتَكَفَتْ وَهْىَ مُسْتَحَاضَةٌ.",
+     "gharib": [
+      {
+       "word": "مُسْتَحَاضَةٌ",
+       "meaning": "من يخرج منها دم الاستحاضة، مع بقاء جواز الاعتكاف في السياق المشروح وأمن التلويث.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١١–٤١٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١١",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 311"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "One of the mothers of the faithful believers (i.e. the wives of the Prophet (ﷺ) ) did I`tikaf while she was having bleeding in between her periods",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1XolcxCewLX_rTjf3h7o9TUh0SxvS1-XC",
+      "player": "1fIsgdXW6o4ldd2P1_MHSAegIeP__j37T"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 312,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ نَافِعٍ، عَنِ ابْنِ أَبِي نَجِيحٍ، عَنْ مُجَاهِدٍ، قَالَ قَالَتْ عَائِشَةُ",
+     "matn": "مَا كَانَ لإِحْدَانَا إِلاَّ ثَوْبٌ وَاحِدٌ تَحِيضُ فِيهِ، فَإِذَا أَصَابَهُ شَىْءٌ مِنْ دَمٍ، قَالَتْ بِرِيقِهَا فَقَصَعَتْهُ بِظُفْرِهَا.",
+     "gharib": [
+      {
+       "word": "فَقَصَعَتْهُ",
+       "meaning": "فدلكته؛ وورد فمصعته بمعنى حكته وفركته.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٢",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 312"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "None of us had more than a single garment and we used to have our menses while wearing it. Whenever it got soiled with blood of menses we used to apply saliva to the blood spot and rub off the blood with our nails",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1C3IwTNxpDky14Q1xI55PfV6K3_DgBT3q",
+      "player": "1GTw5zxSZzanlhxUYcxZGR1l-Iv5z8zXr"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 313,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ عَبْدِ الْوَهَّابِ، قَالَ حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ، عَنْ أَيُّوبَ، عَنْ حَفْصَةَ ـ قَالَ أَبُو عَبْدِ اللَّهِ أَوْ هِشَامِ بْنِ حَسَّانَ عَنْ حَفْصَةَ، عَنْ أُمِّ عَطِيَّةَ ـ قَالَتْ كُنَّا نُنْهَى أَنْ نُحِدَّ عَلَى مَيِّتٍ فَوْقَ ثَلاَثٍ، إِلاَّ عَلَى زَوْجٍ أَرْبَعَةَ أَشْهُرٍ وَعَشْرًا، وَلاَ نَكْتَحِلَ وَلاَ نَتَطَيَّبَ وَلاَ نَلْبَسَ ثَوْبًا مَصْبُوغًا إِلاَّ ثَوْبَ عَصْبٍ، وَقَدْ رُخِّصَ لَنَا عِنْدَ الطُّهْرِ إِذَا اغْتَسَلَتْ إِحْدَانَا مِنْ مَحِيضِهَا فِي نُبْذَةٍ مِنْ كُسْتِ أَظْفَارٍ، وَكُنَّا نُنْهَى عَنِ اتِّبَاعِ الْجَنَائِزِ. قَالَ رَوَاهُ هِشَامُ بْنُ حَسَّانَ عَنْ حَفْصَةَ عَنْ أُمِّ عَطِيَّةَ عَنِ النَّبِيِّ ﷺ.",
+     "gharib": [
+      {
+       "word": "عَصْبٍ",
+       "meaning": "ضرب من برود اليمن يجمع غزله ثم يصبغ ثم ينسج.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٤."
+      },
+      {
+       "word": "نُبْذَةٍ",
+       "meaning": "قطعة يسيرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٤."
+      },
+      {
+       "word": "كُسْتِ",
+       "meaning": "هو القسط، نوع من البخور المعروف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٤."
+      },
+      {
+       "word": "نُحِدَّ",
+       "meaning": "نمتنع من الزينة على الوجه المذكور في الإحداد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٤."
+      },
+      {
+       "word": "أَظْفَارٍ",
+       "meaning": "ضرب من العطر يشبه الظفر؛ ذكر الشارح اختلاف رواية العبارة وضبطها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٣",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 313"
+     },
+     "en": {
+      "narrator": "Um-`Atiya",
+      "text": "We were forbidden to mourn for a dead person for more than three days except in the case of a husband for whom mourning was allowed for four months and ten days. (During that time) we were not allowed to put kohl (Antimony eye power) in our eyes or to use perfumes or to put on colored clothes except a dress made of `Asb (a kind of Yemen cloth, very coarse and rough). We were allowed very light perfumes at the time of taking a bath after menses and also we were forbidden to go with the funeral procession",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "16zIwd4IxoQXwgzJIjkwtFAEw8LZvyV4K",
+      "player": "1dH0d9shHUz-3v3gMs_z6tu5FJv9EL8Jk"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 314,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى، قَالَ حَدَّثَنَا ابْنُ عُيَيْنَةَ، عَنْ مَنْصُورِ ابْنِ صَفِيَّةَ، عَنْ أُمِّهِ، عَنْ عَائِشَةَ، أَنَّ امْرَأَةً، سَأَلَتِ النَّبِيَّ ﷺ عَنْ غُسْلِهَا مِنَ الْمَحِيضِ، فَأَمَرَهَا كَيْفَ تَغْتَسِلُ قَالَ",
+     "matn": "خُذِي فِرْصَةً مِنْ مِسْكٍ فَتَطَهَّرِي بِهَا . قَالَتْ كَيْفَ أَتَطَهَّرُ قَالَ  تَطَهَّرِي بِهَا . قَالَتْ كَيْفَ قَالَ  سُبْحَانَ اللَّهِ تَطَهَّرِي . فَاجْتَبَذْتُهَا إِلَىَّ فَقُلْتُ تَتَبَّعِي بِهَا أَثَرَ الدَّمِ.",
+     "gharib": [
+      {
+       "word": "فِرْصَةً",
+       "meaning": "قطعة من صوف أو قطن أو جلدة عليها صوف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٥–٤١٦."
+      },
+      {
+       "word": "فَتَطَهَّرِي",
+       "meaning": "تنظفي في هذا الموضع؛ وورد في طريق توضئي بهذا المعنى.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤١٥–٤١٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣١٤",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 314"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "A woman asked the Prophet (ﷺ) about the bath which is taken after finishing from the menses. The Prophet (ﷺ) told her what to do and said, \"Purify yourself with a piece of cloth scented with musk.\" The woman asked, \"How shall I purify myself with it?\" He said, \"Subhan Allah! Purify yourself (with it).\" I pulled her to myself and said, \"Rub the place soiled with blood with it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ERlenjD6ZAYQX-MKmaPMvob86R5UfpIb",
+      "player": "1T25ODjaEajgdhPtTdgxvzHwLy1Wvgm27"
      },
      "video": null,
      "sharh": null,
