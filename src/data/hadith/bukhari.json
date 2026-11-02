@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 194,
+   "last": 202,
    "hadith": [
     {
      "n": 135,
@@ -8321,6 +8321,367 @@
       },
       "id": "1zH5YzGqb2kPzrsV4GKbayy3d3m_fM0ZI",
       "player": "1oDqMMdxiTyQ5RQlrSVNlV24TNZamnptI"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 195,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُنِيرٍ، سَمِعَ عَبْدَ اللَّهِ بْنَ بَكْرٍ، قَالَ حَدَّثَنَا حُمَيْدٌ، عَنْ أَنَسٍ،",
+     "matn": "قَالَ حَضَرَتِ الصَّلاَةُ، فَقَامَ مَنْ كَانَ قَرِيبَ الدَّارِ إِلَى أَهْلِهِ، وَبَقِيَ قَوْمٌ، فَأُتِيَ رَسُولُ اللَّهِ ﷺ بِمِخْضَبٍ مِنْ حِجَارَةٍ فِيهِ مَاءٌ، فَصَغُرَ الْمِخْضَبُ أَنْ يَبْسُطَ فِيهِ كَفَّهُ، فَتَوَضَّأَ الْقَوْمُ كُلُّهُمْ. قُلْنَا كَمْ كُنْتُمْ قَالَ ثَمَانِينَ وَزِيَادَةً.",
+     "gharib": [
+      {
+       "word": "الْمِخْضَبِ",
+       "meaning": "إناء يغسل فيه الثياب، ويطلق على الصغير والكبير.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠١."
+      },
+      {
+       "word": "بِمِخْضَبٍ",
+       "meaning": "بإناء يغسل فيه؛ وقد يطلق على الصغير والكبير.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٩٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 195"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "It was the time for prayer, and those whose houses were near got up and went to their people (to perform ablution), and there remained some people (sitting). Then a painted stove pot (Mikhdab) containing water was brought to Allah's Messenger (ﷺ). The pot was small, not broad enough for one to spread one's hand in; yet all the people performed ablution. (The sub narrator said, \"We asked Anas, 'How many persons were you?' Anas replied 'We were eighty or more\"). (It was one of the miracles of Allah's Messenger (ﷺ)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "18g7Jqz2b7E1z2U3PV56SFS9dMDxXNVqw",
+      "player": "1DLsZW7xsbIXQsDikpoXyCcoep-dpgDWX"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 196,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ الْعَلاَءِ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، عَنْ بُرَيْدٍ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى، أَنَّ النَّبِيَّ ﷺ دَعَا بِقَدَحٍ فِيهِ مَاءٌ، فَغَسَلَ يَدَيْهِ وَوَجْهَهُ فِيهِ وَمَجَّ فِيهِ.",
+     "gharib": [
+      {
+       "word": "وَمَجَّ",
+       "meaning": "صب ما تناوله من الماء في الإناء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩٥ و٣٠٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٩٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 196"
+     },
+     "en": {
+      "narrator": "Abu Musa",
+      "text": "Once the Prophet (ﷺ) asked for a tumbler containing water. He washed his hands and face in it and also threw a mouthful of water in it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "11NQb7fnIsf879DyQxFGvP_jKsWSbZlBQ",
+      "player": "1xRVDkdzBLeE35QouNiwMiomicdXn10Yx"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 197,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَحْمَدُ بْنُ يُونُسَ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ أَبِي سَلَمَةَ، قَالَ حَدَّثَنَا عَمْرُو بْنُ يَحْيَى، عَنْ أَبِيهِ، عَنْ عَبْدِ اللَّهِ بْنِ زَيْدٍ،",
+     "matn": "قَالَ أَتَى رَسُولُ اللَّهِ ﷺ فَأَخْرَجْنَا لَهُ مَاءً فِي تَوْرٍ مِنْ صُفْرٍ فَتَوَضَّأَ، فَغَسَلَ وَجْهَهُ ثَلاَثًا وَيَدَيْهِ مَرَّتَيْنِ مَرَّتَيْنِ، وَمَسَحَ بِرَأْسِهِ فَأَقْبَلَ بِهِ وَأَدْبَرَ، وَغَسَلَ رِجْلَيْهِ.",
+     "gharib": [
+      {
+       "word": "تَوْرٌ",
+       "meaning": "إناء يشبه الطست، وقيل هو الطست.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٣."
+      },
+      {
+       "word": "صُفْرٍ",
+       "meaning": "نحاس جيد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٩٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 197"
+     },
+     "en": {
+      "narrator": "`Abdullah bin Zaid",
+      "text": "Once Allah's Messenger (ﷺ) came to us and we brought out water for him in a brass pot. He performed ablution thus: He washed his face thrice, and his forearms to the elbows twice, then passed his wet hands lightly over the head from front to rear and brought them to front again and washed his feet (up to the ankles)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 198,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي عُبَيْدُ اللَّهِ بْنُ عَبْدِ اللَّهِ بْنِ عُتْبَةَ، أَنَّ عَائِشَةَ،",
+     "matn": "قَالَتْ لَمَّا ثَقُلَ النَّبِيُّ ﷺ وَاشْتَدَّ بِهِ وَجَعُهُ، اسْتَأْذَنَ أَزْوَاجَهُ فِي أَنْ يُمَرَّضَ فِي بَيْتِي، فَأَذِنَّ لَهُ، فَخَرَجَ النَّبِيُّ ﷺ بَيْنَ رَجُلَيْنِ تَخُطُّ رِجْلاَهُ فِي الأَرْضِ بَيْنَ عَبَّاسٍ وَرَجُلٍ آخَرَ. قَالَ عُبَيْدُ اللَّهِ فَأَخْبَرْتُ عَبْدَ اللَّهِ بْنَ عَبَّاسٍ فَقَالَ أَتَدْرِي مَنِ الرَّجُلُ الآخَرُ قُلْتُ لاَ. قَالَ هُوَ عَلِيٌّ. وَكَانَتْ عَائِشَةُ ـ رضى الله عنها ـ تُحَدِّثُ أَنَّ النَّبِيَّ ﷺ قَالَ بَعْدَ مَا دَخَلَ بَيْتَهُ وَاشْتَدَّ وَجَعُهُ  هَرِيقُوا عَلَىَّ مِنْ سَبْعِ قِرَبٍ، لَمْ تُحْلَلْ أَوْكِيَتُهُنَّ، لَعَلِّي أَعْهَدُ إِلَى النَّاسِ . وَأُجْلِسَ فِي مِخْضَبٍ لِحَفْصَةَ زَوْجِ النَّبِيِّ ﷺ، ثُمَّ طَفِقْنَا نَصُبُّ عَلَيْهِ تِلْكَ حَتَّى طَفِقَ يُشِيرُ إِلَيْنَا أَنْ قَدْ فَعَلْتُنَّ، ثُمَّ خَرَجَ إِلَى النَّاسِ.",
+     "gharib": [
+      {
+       "word": "أَوْكِيَتُهُنَّ",
+       "meaning": "جمع وكاء، وهو ما يربط به فم القربة.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، ٥/٢٢٢، مادة وكا؛ وانظر ابن حجر، فتح الباري، ١/١٨٧."
+      },
+      {
+       "word": "مِخْضَبٍ",
+       "meaning": "إناء يغسل فيه الثياب، ويطلق على الصغير والكبير.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠١."
+      },
+      {
+       "word": "هَرِيقُوا",
+       "meaning": "أريقوا؛ والمراد صب الماء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٣."
+      },
+      {
+       "word": "أَعْهَدُ",
+       "meaning": "أوصي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٩٨",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 198"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "When the ailment of the Prophet (ﷺ) became aggravated and his disease became severe, he asked his wives to permit him to be nursed (treated) in my house. So they gave him the permission. Then the Prophet came (to my house) with the support of two men, and his legs were dragging on the ground, between `Abbas, and another man.\" 'Ubaidullah (the sub narrator) said, \"I informed `Abdullah bin `Abbas of what `Aisha said. Ibn `Abbas said: 'Do you know who was the other man?' I replied in the negative. Ibn `Abbas said, 'He was `Ali (bin Abi Talib).\" `Aisha further said, \"When the Prophet (ﷺ) came to my house and his sickness became aggravated he ordered us to pour seven skins full of water on him, so that he might give some advice to the people. So he was seated in a Mikhdab (brass tub) belonging to Hafsa, the wife of the Prophet. Then, all of us started pouring water on him from the water skins till he beckoned to us to stop and that we have done (what he wanted us to do). After that he went out to the people",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1gxCl88WCOHG3N5Fb4IFO0oBblaxMfuGg",
+      "player": "1T7ahkvdidyPC5i5mIJhpAWfD7Xh2vULb"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 199,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا خَالِدُ بْنُ مَخْلَدٍ، قَالَ حَدَّثَنَا سُلَيْمَانُ، قَالَ حَدَّثَنِي عَمْرُو بْنُ يَحْيَى، عَنْ أَبِيهِ، قَالَ كَانَ عَمِّي يُكْثِرُ مِنَ الْوُضُوءِ، قَالَ لِعَبْدِ اللَّهِ بْنِ زَيْدٍ",
+     "matn": "أَخْبِرْنِي كَيْفَ رَأَيْتَ النَّبِيَّ ﷺ يَتَوَضَّأُ فَدَعَا بِتَوْرٍ مِنْ مَاءٍ، فَكَفَأَ عَلَى يَدَيْهِ فَغَسَلَهُمَا ثَلاَثَ مِرَارٍ، ثُمَّ أَدْخَلَ يَدَهُ فِي التَّوْرِ، فَمَضْمَضَ وَاسْتَنْثَرَ ثَلاَثَ مَرَّاتٍ مِنْ غَرْفَةٍ وَاحِدَةٍ، ثُمَّ أَدْخَلَ يَدَهُ فَاغْتَرَفَ بِهَا فَغَسَلَ وَجْهَهُ ثَلاَثَ مَرَّاتٍ، ثُمَّ غَسَلَ يَدَيْهِ إِلَى الْمِرْفَقَيْنِ مَرَّتَيْنِ مَرَّتَيْنِ، ثُمَّ أَخَذَ بِيَدِهِ مَاءً، فَمَسَحَ رَأْسَهُ، فَأَدْبَرَ بِيَدَيْهِ وَأَقْبَلَ ثُمَّ غَسَلَ رِجْلَيْهِ، فَقَالَ هَكَذَا رَأَيْتُ النَّبِيَّ ﷺ يَتَوَضَّأُ.",
+     "gharib": [
+      {
+       "word": "بِتَوْرٍ",
+       "meaning": "بإناء يشبه الطست، وقيل هو الطست.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٣."
+      },
+      {
+       "word": "التور",
+       "meaning": "إناء يشبه الطست، وقيل هو الطست.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٣."
+      },
+      {
+       "word": "واستنثر",
+       "meaning": "أخرج من أنفه الماء الذي استنشقه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٦٢."
+      },
+      {
+       "word": "المرفقين",
+       "meaning": "مثنى مرفق، وهو العظم الناتئ في آخر الذراع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩٢."
+      },
+      {
+       "word": "فَكَفَأَ",
+       "meaning": "أمال الإناء لإفراغ الماء على يديه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٢٩١ و٢٩٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ١٩٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 199"
+     },
+     "en": {
+      "narrator": "`Amr bin Yahya",
+      "text": "(on the authority of his father) My uncle used to perform ablution extravagantly and once he asked `Abdullah bin Zaid to tell him how he had seen the Prophet (ﷺ) performing ablution. He asked for an earthenware pot containing water, and poured water from it on his hands and washed them thrice, and then put his hand in the earthenware pot and rinsed his mouth and washed his nose by putting water in it and then blowing it out thrice with one handful of water; he again put his hand in the water and took a handful of water and washed his face thrice, then washed his hands up to the elbows twice, and took water with his hand, and passed it over his head from front to back and then from back to front, and then washed his feet (up to the ankles) and said, \"I saw the Prophet (ﷺ) performing ablution in that way",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "14LNwu6pHYtFVETL1mYI4nnMJoiC0d7lQ",
+      "player": "1f4wnnUgknOHsjdL4_RwG-Iu99-oQB1ZU"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 200,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا حَمَّادٌ، عَنْ ثَابِتٍ، عَنْ أَنَسٍ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ دَعَا بِإِنَاءٍ مِنْ مَاءٍ، فَأُتِيَ بِقَدَحٍ رَحْرَاحٍ فِيهِ شَىْءٌ مِنْ مَاءٍ، فَوَضَعَ أَصَابِعَهُ فِيهِ. قَالَ أَنَسٌ فَجَعَلْتُ أَنْظُرُ إِلَى الْمَاءِ يَنْبُعُ مِنْ بَيْنِ أَصَابِعِهِ، قَالَ أَنَسٌ فَحَزَرْتُ مَنْ تَوَضَّأَ مَا بَيْنَ السَّبْعِينَ إِلَى الثَّمَانِينَ.",
+     "gharib": [
+      {
+       "word": "رَحْرَاحٍ",
+       "meaning": "متسع الفم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٤."
+      },
+      {
+       "word": "فَحَزَرْتُ",
+       "meaning": "قدرت.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 200"
+     },
+     "en": {
+      "narrator": "Thabit",
+      "text": "Anas said, \"The Prophet (ﷺ) asked for water and a tumbler with a broad base and not so deep, containing a small quantity of water, was brought to him whereby he put his fingers in it.\" Anas further said, 'I noticed the water springing out from amongst his fingers.' Anas added, 'I estimated that the people who performed ablution with it numbered between seventy to eighty",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Saw6KZvsIch3WHRdKMpgFkQQc8suWBKF",
+      "player": "14ZWPbBk-mLRQ7zSnMv0VSFIo3n3lsSUm"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 201,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا مِسْعَرٌ، قَالَ حَدَّثَنِي ابْنُ جَبْرٍ، قَالَ سَمِعْتُ أَنَسًا، يَقُولُ كَانَ النَّبِيُّ ﷺ يَغْسِلُ ـ أَوْ كَانَ يَغْتَسِلُ ـ بِالصَّاعِ إِلَى خَمْسَةِ أَمْدَادٍ، وَيَتَوَضَّأُ بِالْمُدِّ.",
+     "gharib": [
+      {
+       "word": "بِالصَّاعِ",
+       "meaning": "بمكيال يسع أربعة أمداد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٥."
+      },
+      {
+       "word": "بِالْمُدِّ",
+       "meaning": "بمكيال؛ والصاع أربعة أمداد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٠٤–٣٠٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠١",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 201"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) used to take a bath with one Sa` up to five Mudds (1 Sa` = [??] Mudds) of water and used to perform ablution with one Mudd of water",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 202,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَصْبَغُ بْنُ الْفَرَجِ الْمِصْرِيُّ، عَنِ ابْنِ وَهْبٍ، قَالَ حَدَّثَنِي عَمْرٌو، حَدَّثَنِي أَبُو النَّضْرِ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ،",
+     "matn": "عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، عَنْ سَعْدِ بْنِ أَبِي وَقَّاصٍ، عَنِ النَّبِيِّ ﷺ أَنَّهُ مَسَحَ عَلَى الْخُفَّيْنِ. وَأَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ سَأَلَ عُمَرَ عَنْ ذَلِكَ فَقَالَ نَعَمْ إِذَا حَدَّثَكَ شَيْئًا سَعْدٌ عَنِ النَّبِيِّ ﷺ فَلاَ تَسْأَلْ عَنْهُ غَيْرَهُ. وَقَالَ مُوسَى بْنُ عُقْبَةَ أَخْبَرَنِي أَبُو النَّضْرِ أَنَّ أَبَا سَلَمَةَ أَخْبَرَهُ أَنَّ سَعْدًا حَدَّثَهُ فَقَالَ عُمَرُ لِعَبْدِ اللَّهِ. نَحْوَهُ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٠٢",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 202"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "Sa`d bin Abi Waqqas said, \"The Prophet (ﷺ) passed wet hands over his Khuffs (socks made from thick fabric or leather).\" `Abdullah bin `Umar asked `Umar about it. `Umar replied in the affirmative and added, \"Whenever Sa`d narrates a Hadith from the Prophet, there is no need to ask anyone else about it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
