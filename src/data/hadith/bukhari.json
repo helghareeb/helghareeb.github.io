@@ -14178,6 +14178,377 @@
      "fawaid": []
     }
    ]
+  },
+  {
+   "slug": "al-tayammum",
+   "ar": "كتاب التيمم",
+   "en": "Rubbing hands and feet with dust (Tayammum)",
+   "first": 334,
+   "last": 341,
+   "hadith": [
+    {
+     "n": 334,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ الْقَاسِمِ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ، زَوْجِ النَّبِيِّ ﷺ قَالَتْ خَرَجْنَا مَعَ رَسُولِ اللَّهِ ﷺ فِي بَعْضِ أَسْفَارِهِ، حَتَّى إِذَا كُنَّا بِالْبَيْدَاءِ ـ أَوْ بِذَاتِ الْجَيْشِ ـ انْقَطَعَ عِقْدٌ لِي، فَأَقَامَ رَسُولُ اللَّهِ ﷺ عَلَى الْتِمَاسِهِ، وَأَقَامَ النَّاسُ مَعَهُ، وَلَيْسُوا عَلَى مَاءٍ، فَأَتَى النَّاسُ إِلَى أَبِي بَكْرٍ الصِّدِّيقِ فَقَالُوا أَلاَ تَرَى مَا صَنَعَتْ عَائِشَةُ أَقَامَتْ بِرَسُولِ اللَّهِ ﷺ وَالنَّاسِ، وَلَيْسُوا عَلَى مَاءٍ، وَلَيْسَ مَعَهُمْ مَاءٌ. فَجَاءَ أَبُو بَكْرٍ وَرَسُولُ اللَّهِ ﷺ وَاضِعٌ رَأْسَهُ عَلَى فَخِذِي قَدْ نَامَ فَقَالَ حَبَسْتِ رَسُولَ اللَّهِ ﷺ وَالنَّاسَ، وَلَيْسُوا عَلَى مَاءٍ، وَلَيْسَ مَعَهُمْ مَاءٌ. فَقَالَتْ عَائِشَةُ فَعَاتَبَنِي أَبُو بَكْرٍ، وَقَالَ مَا شَاءَ اللَّهُ أَنْ يَقُولَ، وَجَعَلَ يَطْعُنُنِي بِيَدِهِ فِي خَاصِرَتِي، فَلاَ يَمْنَعُنِي مِنَ التَّحَرُّكِ إِلاَّ مَكَانُ رَسُولِ اللَّهِ ﷺ عَلَى فَخِذِي، فَقَامَ رَسُولُ اللَّهِ ﷺ حِينَ أَصْبَحَ عَلَى غَيْرِ مَاءٍ، فَأَنْزَلَ اللَّهُ آيَةَ التَّيَمُّمِ فَتَيَمَّمُوا. فَقَالَ أُسَيْدُ بْنُ الْحُضَيْرِ مَا هِيَ بِأَوَّلِ بَرَكَتِكُمْ يَا آلَ أَبِي بَكْرٍ. قَالَتْ فَبَعَثْنَا الْبَعِيرَ الَّذِي كُنْتُ عَلَيْهِ، فَأَصَبْنَا الْعِقْدَ تَحْتَهُ.",
+     "gharib": [
+      {
+       "word": "خَاصِرَتِي",
+       "meaning": "الخاصرة الشاكلة، وقيل ما بين الحرقفة والقصيرى؛ وهما الخاصرتان في جانبي البدن.",
+       "source": "الزبيدي، تاج العروس، مادة خصر، ١١/١٧١."
+      },
+      {
+       "word": "عِقْدٌ",
+       "meaning": "ما يعقد ويعلق في العنق؛ ويسمى قلادة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٣؛ ٤٣٥."
+      },
+      {
+       "word": "الْتِمَاسِهِ",
+       "meaning": "طلبه والبحث عنه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٣؛ ٤٣٥."
+      },
+      {
+       "word": "يَطْعُنُنِي",
+       "meaning": "يدفع بيده في الموضع المذكور، وهو فعل حسي؛ وذكر الشارح اختلاف ضبط الفعل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٣؛ ٤٣٥."
+      },
+      {
+       "word": "فَبَعَثْنَا",
+       "meaning": "أثرنا البعير، أي أقمناه من موضعه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٣؛ ٤٣٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب التيمم، حديث رقم ٣٣٤",
+      "en": "Sahih al-Bukhari, Rubbing hands and feet with dust (Tayammum), hadith 334"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "(the wife of the Prophet) We set out with Allah's Messenger (ﷺ) on one of his journeys till we reached Al- Baida' or Dhatul-Jaish, a necklace of mine was broken (and lost). Allah's Messenger (ﷺ) stayed there to search for it, and so did the people along with him. There was no water at that place, so the people went to Abu- Bakr As-Siddiq and said, \"Don't you see what `Aisha has done? She has made Allah's Apostle and the people stay where there is no water and they have no water with them.\" Abu Bakr came while Allah's Messenger (ﷺ) was sleeping with his head on my thigh, He said, to me: \"You have detained Allah's Messenger (ﷺ) and the people where there is no water and they have no water with them. So he admonished me and said what Allah wished him to say and hit me on my flank with his hand. Nothing prevented me from moving (because of pain) but the position of Allah's Messenger (ﷺ) on my thigh. Allah's Messenger (ﷺ) got up when dawn broke and there was no water. So Allah revealed the Divine Verses of Tayammum. So they all performed Tayammum. Usaid bin Hudair said, \"O the family of Abu Bakr! This is not the first blessing of yours.\" Then the camel on which I was riding was caused to move from its place and the necklace was found beneath it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Vovb92Nty5yG33sr615X_gG0oyKZJ7_n",
+      "player": "1kwB0Glltru7GqZtA8b2c-xegPD7KmjMo"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 335,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ سِنَانٍ، قَالَ حَدَّثَنَا هُشَيْمٌ، ح قَالَ وَحَدَّثَنِي سَعِيدُ بْنُ النَّضْرِ، قَالَ أَخْبَرَنَا هُشَيْمٌ، قَالَ أَخْبَرَنَا سَيَّارٌ، قَالَ حَدَّثَنَا يَزِيدُ ـ هُوَ ابْنُ صُهَيْبٍ الْفَقِيرُ ـ قَالَ أَخْبَرَنَا جَابِرُ بْنُ عَبْدِ اللَّهِ، أَنَّ النَّبِيَّ ﷺ قَالَ",
+     "matn": "أُعْطِيتُ خَمْسًا لَمْ يُعْطَهُنَّ أَحَدٌ قَبْلِي نُصِرْتُ بِالرُّعْبِ مَسِيرَةَ شَهْرٍ، وَجُعِلَتْ لِيَ الأَرْضُ مَسْجِدًا وَطَهُورًا، فَأَيُّمَا رَجُلٍ مِنْ أُمَّتِي أَدْرَكَتْهُ الصَّلاَةُ فَلْيُصَلِّ، وَأُحِلَّتْ لِيَ الْمَغَانِمُ وَلَمْ تَحِلَّ لأَحَدٍ قَبْلِي، وَأُعْطِيتُ الشَّفَاعَةَ، وَكَانَ النَّبِيُّ يُبْعَثُ إِلَى قَوْمِهِ خَاصَّةً، وَبُعِثْتُ إِلَى النَّاسِ عَامَّةً .",
+     "gharib": [
+      {
+       "word": "الْفَقِيرُ",
+       "meaning": "لقب يزيد بن صهيب هنا؛ ذكر الشارح أنه كان يشكو فقار ظهره، وليس المراد فقر المال.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٦–٤٣٩."
+      },
+      {
+       "word": "بِالرُّعْبِ",
+       "meaning": "بالخوف الذي يقع في قلوب أعدائه في سياق هذه الخصيصة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٦–٤٣٩."
+      },
+      {
+       "word": "مَسْجِدًا",
+       "meaning": "موضع سجود، فلا تختص الصلاة هنا بمكان مبني لها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٦–٤٣٩."
+      },
+      {
+       "word": "وَطَهُورًا",
+       "meaning": "مطهرة لغيرها؛ وذكر الشارح خلاف الفقهاء فيما يتيمم به.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٦–٤٣٩."
+      },
+      {
+       "word": "الْمَغَانِمُ",
+       "meaning": "الغنائم التي تنال في القتال، وبيّن الشارح خصوصية إباحتها له ولأمته.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٦–٤٣٩."
+      },
+      {
+       "word": "الشَّفَاعَةَ",
+       "meaning": "من معانيها المذكورة في الشرح شفاعته ﷺ لإراحة الناس من هول الموقف، وذكر غير ذلك من التفصيل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٦–٤٣٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب التيمم، حديث رقم ٣٣٥",
+      "en": "Sahih al-Bukhari, Rubbing hands and feet with dust (Tayammum), hadith 335"
+     },
+     "en": {
+      "narrator": "Jabir bin `Abdullah",
+      "text": "The Prophet (ﷺ) said, \"I have been given five things which were not given to any one else before me. -1. Allah made me victorious by awe, (by His frightening my enemies) for a distance of one month's journey. -2. The earth has been made for me (and for my followers) a place for praying and a thing to perform Tayammum, therefore anyone of my followers can pray wherever the time of a prayer is due. -3. The booty has been made Halal (lawful) for me yet it was not lawful for anyone else before me. -4. I have been given the right of intercession (on the Day of Resurrection). -5. Every Prophet used to be sent to his nation only but I have been sent to all mankind",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "12TWY77Qm60kuFwPOF9MYx9gBsiAyP8Zf",
+      "player": "1budVQDdpw9FY6K2KxxTNyKTBnqUK5U3k"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 336,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا زَكَرِيَّاءُ بْنُ يَحْيَى، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ نُمَيْرٍ،",
+     "matn": "قَالَ حَدَّثَنَا هِشَامُ بْنُ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ، أَنَّهَا اسْتَعَارَتْ مِنْ أَسْمَاءَ قِلاَدَةً فَهَلَكَتْ، فَبَعَثَ رَسُولُ اللَّهِ ﷺ رَجُلاً، فَوَجَدَهَا فَأَدْرَكَتْهُمُ الصَّلاَةُ وَلَيْسَ مَعَهُمْ مَاءٌ فَصَلَّوْا، فَشَكَوْا ذَلِكَ إِلَى رَسُولِ اللَّهِ ﷺ فَأَنْزَلَ اللَّهُ آيَةَ التَّيَمُّمِ. فَقَالَ أُسَيْدُ بْنُ حُضَيْرٍ لِعَائِشَةَ جَزَاكِ اللَّهُ خَيْرًا، فَوَاللَّهِ مَا نَزَلَ بِكِ أَمْرٌ تَكْرَهِينَهُ إِلاَّ جَعَلَ اللَّهُ ذَلِكِ لَكِ وَلِلْمُسْلِمِينَ فِيهِ خَيْرًا.",
+     "gharib": [
+      {
+       "word": "قِلَادَةً",
+       "meaning": "ما يعلق في العنق؛ وهي هنا الحلي المستعار من أسماء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٥؛ ٤٤٠."
+      },
+      {
+       "word": "فَهَلَكَتْ",
+       "meaning": "ضاعت في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٥؛ ٤٤٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب التيمم، حديث رقم ٣٣٦",
+      "en": "Sahih al-Bukhari, Rubbing hands and feet with dust (Tayammum), hadith 336"
+     },
+     "en": {
+      "narrator": "`Urwa's father",
+      "text": "Aisha said, \"I borrowed a necklace from Asma' and it was lost. So Allah's Messenger (ﷺ) sent a man to search for it and he found it. Then the time of the prayer became due and there was no water. They prayed (without ablution) and informed Allah's Messenger (ﷺ) about it, so the verse of Tayammum was revealed.\" Usaid bin Hudair said to `Aisha, \"May Allah reward you. By Allah, whenever anything happened which you did not like, Allah brought good for you and for the Muslims in that",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "17KkUIrG53v7ueK4RRt9sPgLwZTSO6qWG",
+      "player": "1Nm1cwspjmI6A1zCzpFWPz9GJV3X3Yl69"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 337,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ جَعْفَرِ بْنِ رَبِيعَةَ، عَنِ الأَعْرَجِ، قَالَ سَمِعْتُ عُمَيْرًا، مَوْلَى ابْنِ عَبَّاسٍ قَالَ أَقْبَلْتُ أَنَا وَعَبْدُ اللَّهِ بْنُ يَسَارٍ، مَوْلَى مَيْمُونَةَ زَوْجِ النَّبِيِّ ﷺ حَتَّى دَخَلْنَا عَلَى أَبِي جُهَيْمِ بْنِ الْحَارِثِ بْنِ الصِّمَّةِ الأَنْصَارِيِّ فَقَالَ أَبُو الْجُهَيْمِ أَقْبَلَ النَّبِيُّ ﷺ مِنْ نَحْوِ بِئْرِ جَمَلٍ، فَلَقِيَهُ رَجُلٌ فَسَلَّمَ عَلَيْهِ، فَلَمْ يَرُدَّ عَلَيْهِ النَّبِيُّ ﷺ حَتَّى أَقْبَلَ عَلَى الْجِدَارِ، فَمَسَحَ بِوَجْهِهِ وَيَدَيْهِ، ثُمَّ رَدَّ عَلَيْهِ السَّلاَمَ.",
+     "gharib": [
+      {
+       "word": "جَمَلٍ",
+       "meaning": "بئر جمل اسم موضع معروف بالمدينة في سياق هذا الخبر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٤٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب التيمم، حديث رقم ٣٣٧",
+      "en": "Sahih al-Bukhari, Rubbing hands and feet with dust (Tayammum), hadith 337"
+     },
+     "en": {
+      "narrator": "Abu Juhaim Al-Ansari",
+      "text": "The Prophet (ﷺ) came from the direction of Bir Jamal. A man met him and greeted him. But he did not return back the greeting till he went to a (mud) wall and wiped his face and hands with its dust (performed Tayammum) and then returned back the greeting",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "19YNJvAi3-TnHV-_VChCwC6W2rcwvl4Sk",
+      "player": "1R0uBR876TZFKRJp7SNbVfvb4jC5jLm_X"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 338,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، حَدَّثَنَا الْحَكَمُ، عَنْ ذَرٍّ، عَنْ سَعِيدِ بْنِ عَبْدِ الرَّحْمَنِ بْنِ أَبْزَى، عَنْ أَبِيهِ، قَالَ جَاءَ رَجُلٌ إِلَى عُمَرَ بْنِ الْخَطَّابِ فَقَالَ إِنِّي أَجْنَبْتُ فَلَمْ أُصِبِ الْمَاءَ. فَقَالَ عَمَّارُ بْنُ يَاسِرٍ لِعُمَرَ بْنِ الْخَطَّابِ أَمَا تَذْكُرُ أَنَّا كُنَّا فِي سَفَرٍ أَنَا وَأَنْتَ فَأَمَّا أَنْتَ فَلَمْ تُصَلِّ، وَأَمَّا أَنَا فَتَمَعَّكْتُ فَصَلَّيْتُ، فَذَكَرْتُ لِلنَّبِيِّ ﷺ فَقَالَ النَّبِيُّ ﷺ",
+     "matn": "إِنَّمَا كَانَ يَكْفِيكَ هَكَذَا . فَضَرَبَ النَّبِيُّ ﷺ بِكَفَّيْهِ الأَرْضَ، وَنَفَخَ فِيهِمَا ثُمَّ مَسَحَ بِهِمَا وَجْهَهُ وَكَفَّيْهِ.",
+     "gharib": [
+      {
+       "word": "فَتَمَعَّكْتُ",
+       "meaning": "تمرغت وتقلبت في التراب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٤٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب التيمم، حديث رقم ٣٣٨",
+      "en": "Sahih al-Bukhari, Rubbing hands and feet with dust (Tayammum), hadith 338"
+     },
+     "en": {
+      "narrator": "`Abdur Rahman bin Abza [??]",
+      "text": "A man came to `Umar bin Al-Khattab and said, \"I became Junub but no water was available.\" `Ammar bin Yasir said to `Umar, \"Do you remember that you and I (became Junub while both of us) were together on a journey and you didn't pray but I rolled myself on the ground and prayed? I informed the Prophet (ﷺ) about it and he said, 'It would have been sufficient for you to do like this.' The Prophet then stroked lightly the earth with his hands and then blew off the dust and passed his hands over his face and hands",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1djiL3diFaRfmIWMytlgQfeCyfdx3tl1_",
+      "player": "1-IOYmOe2trMFNVyen8jSNiOQZKhfQ0Yu"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 339,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا حَجَّاجٌ، قَالَ أَخْبَرَنَا شُعْبَةُ، أَخْبَرَنِي الْحَكَمُ، عَنْ ذَرٍّ، عَنْ سَعِيدِ بْنِ عَبْدِ الرَّحْمَنِ بْنِ أَبْزَى، عَنْ أَبِيهِ، قَالَ عَمَّارٌ بِهَذَا،",
+     "matn": "وَضَرَبَ شُعْبَةُ بِيَدَيْهِ الأَرْضَ، ثُمَّ أَدْنَاهُمَا مِنْ فِيهِ، ثُمَّ مَسَحَ وَجْهَهُ وَكَفَّيْهِ. وَقَالَ النَّضْرُ أَخْبَرَنَا شُعْبَةُ عَنِ الْحَكَمِ قَالَ سَمِعْتُ ذَرًّا يَقُولُ عَنِ ابْنِ عَبْدِ الرَّحْمَنِ بْنِ أَبْزَى قَالَ الْحَكَمُ وَقَدْ سَمِعْتُهُ مِنِ ابْنِ عَبْدِ الرَّحْمَنِ عَنْ أَبِيهِ قَالَ قَالَ عَمَّارٌ.",
+     "gharib": [
+      {
+       "word": "فِيهِ",
+       "meaning": "فمه؛ وتقريب اليدين منه كناية عن النفخ في هذه الطريق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٤٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب التيمم، حديث رقم ٣٣٩",
+      "en": "Sahih al-Bukhari, Rubbing hands and feet with dust (Tayammum), hadith 339"
+     },
+     "en": {
+      "narrator": "Sa`id bin `Abdur Rahman bin Abza",
+      "text": "(on the authority of his father who said) `Ammar said so (the above Statement). And Shu`ba stroked lightly the earth with his hands and brought them close to his mouth (blew off the dust) and passed them over his face and then the backs of his hands. `Ammar said, \"Ablution (meaning Tayammum here) is sufficient for a Muslim if water is not available",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1PKjFiyid7ffy6ggVQp9ICM3N168WJb04",
+      "player": "1BIs-_LlLdp7Vw1FIS2Nf7iNRRDcbwd0S"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 340,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سُلَيْمَانُ بْنُ حَرْبٍ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنِ الْحَكَمِ، عَنْ ذَرٍّ، عَنِ ابْنِ عَبْدِ الرَّحْمَنِ بْنِ أَبْزَى، عَنْ أَبِيهِ، أَنَّهُ شَهِدَ عُمَرَ وَقَالَ لَهُ عَمَّارٌ كُنَّا فِي سَرِيَّةٍ فَأَجْنَبْنَا،",
+     "matn": "وَقَالَ تَفَلَ فِيهِمَا.",
+     "gharib": [
+      {
+       "word": "تَفَلَ",
+       "meaning": "التفل دون البزق، كما نقل الشارح عن أهل اللغة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٤٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب التيمم، حديث رقم ٣٤٠",
+      "en": "Sahih al-Bukhari, Rubbing hands and feet with dust (Tayammum), hadith 340"
+     },
+     "en": {
+      "narrator": "`Abdur Rahman bin Abza",
+      "text": "that while he was in the company of `Umar, `Ammar said to `Umar, \"We were in a detachment and became Junub and I blew the dust off my hands (performed the rolling over the earth and prayed)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1CIQtS17riEDwvXsHVLUdt18_rsKhpajl",
+      "player": "1_gOCUqQkX8ctBBGsptgxEALa4GjHtCJW"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 341,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ كَثِيرٍ، أَخْبَرَنَا شُعْبَةُ، عَنِ الْحَكَمِ، عَنْ ذَرٍّ، عَنِ ابْنِ عَبْدِ الرَّحْمَنِ بْنِ أَبْزَى، عَنْ عَبْدِ الرَّحْمَنِ، قَالَ قَالَ عَمَّارٌ",
+     "matn": "لِعُمَرَ تَمَعَّكْتُ فَأَتَيْتُ النَّبِيَّ ﷺ فَقَالَ  يَكْفِيكَ الْوَجْهُ وَالْكَفَّانِ .",
+     "gharib": [
+      {
+       "word": "تَمَعَّكْتُ",
+       "meaning": "تمرغت وتقلبت في التراب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٤٤–٤٤٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب التيمم، حديث رقم ٣٤١",
+      "en": "Sahih al-Bukhari, Rubbing hands and feet with dust (Tayammum), hadith 341"
+     },
+     "en": {
+      "narrator": "`Abdur Rahman bin Abza",
+      "text": "`Ammar said to `Umar \"I rolled myself in the dust and came to the Prophet (ﷺ) who said, 'Passing dusted hands over the face and the backs of the hands is sufficient for you",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    }
+   ]
   }
  ]
 }
