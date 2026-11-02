@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 226,
+   "last": 234,
    "hadith": [
     {
      "n": 135,
@@ -9663,6 +9663,341 @@
       },
       "id": "1nl8z6hIFznYSFA2DIWBNI80qmfLZFE61",
       "player": "1AgZjwHm1nub8JHJAf5lq0BvEMKX-bNIo"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 227,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا يَحْيَى، عَنْ هِشَامٍ، قَالَ حَدَّثَتْنِي فَاطِمَةُ، عَنْ أَسْمَاءَ، قَالَتْ جَاءَتِ امْرَأَةٌ النَّبِيَّ ﷺ فَقَالَتْ أَرَأَيْتَ إِحْدَانَا تَحِيضُ فِي الثَّوْبِ كَيْفَ تَصْنَعُ قَالَ",
+     "matn": "تَحُتُّهُ، ثُمَّ تَقْرُصُهُ بِالْمَاءِ، وَتَنْضَحُهُ وَتُصَلِّي فِيهِ .",
+     "gharib": [
+      {
+       "word": "تَحُتُّهُ",
+       "meaning": "تحكه لإزالة عين الدم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣١."
+      },
+      {
+       "word": "تَقْرُصُهُ",
+       "meaning": "تدلك موضع الدم بأطراف الأصابع مع الماء ليخرج ما تشربه الثوب منه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣١."
+      },
+      {
+       "word": "وَتَنْضَحُهُ",
+       "meaning": "وتغسله؛ هذا ما رجحه ابن حجر في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٧",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 227"
+     },
+     "en": {
+      "narrator": "Asma'",
+      "text": "A woman came to the Prophet (ﷺ) and said, \"If anyone of us gets menses in her clothes then what should she do?\" He replied, \"She should (take hold of the soiled place), rub it and put it in the water and rub it in order to remove the traces of blood and then pour water over it. Then she can pray in it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1gDNpyU3Bs4MpjmSQBiZ8f_fE_qWXsR17",
+      "player": "1n5UCj6VEg-HbgU1gVPti5JiLlOw9m1eE"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 228,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدٌ، قَالَ حَدَّثَنَا أَبُو مُعَاوِيَةَ، حَدَّثَنَا هِشَامُ بْنُ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ، قَالَتْ جَاءَتْ فَاطِمَةُ ابْنَةُ أَبِي حُبَيْشٍ إِلَى النَّبِيِّ ﷺ فَقَالَتْ يَا رَسُولَ اللَّهِ إِنِّي امْرَأَةٌ أُسْتَحَاضُ فَلاَ أَطْهُرُ، أَفَأَدَعُ الصَّلاَةَ فَقَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "لاَ، إِنَّمَا ذَلِكِ عِرْقٌ، وَلَيْسَ بِحَيْضٍ، فَإِذَا أَقْبَلَتْ حَيْضَتُكِ فَدَعِي الصَّلاَةَ، وَإِذَا أَدْبَرَتْ فَاغْسِلِي عَنْكِ الدَّمَ ثُمَّ صَلِّي . قَالَ وَقَالَ أَبِي  ثُمَّ تَوَضَّئِي لِكُلِّ صَلاَةٍ، حَتَّى يَجِيءَ ذَلِكَ الْوَقْتُ .",
+     "gharib": [
+      {
+       "word": "أُسْتَحَاضُ",
+       "meaning": "يستمر بي الدم في غير أوان الحيض المعتاد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٨",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 228"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Fatima bint Abi Hubaish came to the Prophet (ﷺ) and said, \"O Allah's Messenger (ﷺ) I get persistent bleeding from the uterus and do not become clean. Shall I give up my prayers?\" Allah's Messenger (ﷺ) replied, \"No, because it is from a blood vessel and not the menses. So when your real menses begins give up your prayers and when it has finished wash off the blood (take a bath) and offer your prayers.\" Hisham (the sub narrator) narrated that his father had also said, (the Prophet (ﷺ) told her): \"Perform ablution for every prayer till the time of the next period comes",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1sBZI7sHRFgQBNz8R8z43p6QUWON0ZDLM",
+      "player": "1_AZH-4aIDtvLEi9rf95vM08uKfpDAyH3"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 229,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا عَمْرُو بْنُ مَيْمُونٍ الْجَزَرِيُّ، عَنْ سُلَيْمَانَ بْنِ يَسَارٍ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ كُنْتُ أَغْسِلُ الْجَنَابَةَ مِنْ ثَوْبِ النَّبِيِّ ﷺ، فَيَخْرُجُ إِلَى الصَّلاَةِ، وَإِنَّ بُقَعَ الْمَاءِ فِي ثَوْبِهِ.",
+     "gharib": [
+      {
+       "word": "الْجَنَابَةَ",
+       "meaning": "أثر الجنابة؛ أو أطلق هنا على المني مجازًا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣٣."
+      },
+      {
+       "word": "بُقَعَ",
+       "meaning": "جمع بقعة؛ والبقع اختلاف اللونين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 229"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "I used to wash the traces of Janaba (semen) from the clothes of the Prophet (ﷺ) and he used to go for prayers while traces of water were still on it (water spots were still visible)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "16ywlqubEgHDZB3jhm-Q1RGD0tMIfm4GV",
+      "player": "1nkPPM_-rOJEeBzpS7YWqSyqn99KmLKPk"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 230,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا يَزِيدُ، قَالَ حَدَّثَنَا عَمْرٌو، عَنْ سُلَيْمَانَ، قَالَ سَمِعْتُ عَائِشَةَ،",
+     "matn": "ح وَحَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ، قَالَ حَدَّثَنَا عَمْرُو بْنُ مَيْمُونٍ، عَنْ سُلَيْمَانَ بْنِ يَسَارٍ، قَالَ سَأَلْتُ عَائِشَةَ عَنِ الْمَنِيِّ، يُصِيبُ الثَّوْبَ فَقَالَتْ كُنْتُ أَغْسِلُهُ مِنْ ثَوْبِ رَسُولِ اللَّهِ ﷺ، فَيَخْرُجُ إِلَى الصَّلاَةِ وَأَثَرُ الْغَسْلِ فِي ثَوْبِهِ بُقَعُ الْمَاءِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 230"
+     },
+     "en": {
+      "narrator": "Sulaiman bin Yasar",
+      "text": "I asked `Aisha about the clothes soiled with semen. She replied, \"I used to wash it off the clothes of Allah's Messenger (ﷺ) and he would go for the prayer while water spots were still visible",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1REPPg9R4r7Q9twnvCDcVaL9oHpOrdIyz",
+      "player": "1DqkdsiUBrAXhnZwEJywLHOJNo0ZqgVrW"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 231,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ، قَالَ حَدَّثَنَا عَمْرُو بْنُ مَيْمُونٍ، قَالَ سَأَلْتُ سُلَيْمَانَ بْنَ يَسَارٍ فِي الثَّوْبِ تُصِيبُهُ الْجَنَابَةُ قَالَ قَالَتْ عَائِشَةُ",
+     "matn": "كُنْتُ أَغْسِلُهُ مِنْ ثَوْبِ رَسُولِ اللَّهِ ﷺ، ثُمَّ يَخْرُجُ إِلَى الصَّلاَةِ وَأَثَرُ الْغَسْلِ فِيهِ بُقَعُ الْمَاءِ.",
+     "gharib": [
+      {
+       "word": "الْجَنَابَةُ",
+       "meaning": "أثر الجنابة أو المني في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣١",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 231"
+     },
+     "en": {
+      "narrator": "`Amr bin Maimun",
+      "text": "I heard Sulaiman bin Yasar talking about the clothes soiled with semen. He said that `Aisha had said, \"I used to wash it off the clothes of Allah's Messenger (ﷺ) and he would go for the prayers while water spots were still visible on them",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1wqEA3-oANV9D-WjI2GLVl10waE3SjQzB",
+      "player": "1m7B_6Oiz_g9DZiRNYlHVtI6Mm5ivIFQ-"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 232,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَمْرُو بْنُ خَالِدٍ، قَالَ حَدَّثَنَا زُهَيْرٌ، قَالَ حَدَّثَنَا عَمْرُو بْنُ مَيْمُونِ بْنِ مِهْرَانَ، عَنْ سُلَيْمَانَ بْنِ يَسَارٍ، عَنْ عَائِشَةَ،",
+     "matn": "أَنَّهَا كَانَتْ تَغْسِلُ الْمَنِيَّ مِنْ ثَوْبِ النَّبِيِّ ﷺ، ثُمَّ أَرَاهُ فِيهِ بُقْعَةً أَوْ بُقَعًا.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٢",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 232"
+     },
+     "en": {
+      "narrator": "`Aishah",
+      "text": "I used to wash the semen off the clothes of the Prophet (ﷺ) and even then I used to notice one or more spots on them",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "15qdPS6bKy-8ktFk_kkDkUNi4PmE6nJKh",
+      "player": "1r7-Zf35YCMcpxhI9-SN_Y5mcNyY6O8HW"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 233,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا سُلَيْمَانُ بْنُ حَرْبٍ، قَالَ حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ، عَنْ أَيُّوبَ، عَنْ أَبِي قِلاَبَةَ، عَنْ أَنَسٍ، قَالَ قَدِمَ أُنَاسٌ مِنْ عُكْلٍ أَوْ عُرَيْنَةَ، فَاجْتَوَوُا الْمَدِينَةَ، فَأَمَرَهُمُ النَّبِيُّ ﷺ بِلِقَاحٍ، وَأَنْ يَشْرَبُوا مِنْ أَبْوَالِهَا وَأَلْبَانِهَا، فَانْطَلَقُوا، فَلَمَّا صَحُّوا قَتَلُوا رَاعِيَ النَّبِيِّ ﷺ وَاسْتَاقُوا النَّعَمَ، فَجَاءَ الْخَبَرُ فِي أَوَّلِ النَّهَارِ، فَبَعَثَ فِي آثَارِهِمْ، فَلَمَّا ارْتَفَعَ النَّهَارُ جِيءَ بِهِمْ، فَأَمَرَ فَقَطَعَ أَيْدِيَهُمْ وَأَرْجُلَهُمْ، وَسُمِرَتْ أَعْيُنُهُمْ، وَأُلْقُوا فِي الْحَرَّةِ يَسْتَسْقُونَ فَلاَ يُسْقَوْنَ. قَالَ أَبُو قِلاَبَةَ فَهَؤُلاَءِ سَرَقُوا وَقَتَلُوا وَكَفَرُوا بَعْدَ إِيمَانِهِمْ، وَحَارَبُوا اللَّهَ وَرَسُولَهُ.",
+     "gharib": [
+      {
+       "word": "فَاجْتَوَوُا",
+       "meaning": "استوخموا المقام بالمدينة وتضرروا به.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣٧."
+      },
+      {
+       "word": "وَسُمِرَتْ",
+       "meaning": "السمر والسمل هنا فقء العين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٤٠."
+      },
+      {
+       "word": "بِلِقَاحٍ",
+       "meaning": "بنوق ذوات ألبان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣٨."
+      },
+      {
+       "word": "وَاسْتَاقُوا",
+       "meaning": "ساقوا؛ والسوق هنا سير عنيف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣٩."
+      },
+      {
+       "word": "الْحَرَّةِ",
+       "meaning": "أرض ذات حجارة سود معروفة بالمدينة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٤٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٣",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 233"
+     },
+     "en": {
+      "narrator": "Abu Qilaba",
+      "text": "Anas said, \"Some people of `Ukl or `Uraina tribe came to Medina and its climate did not suit them. So the Prophet (ﷺ) ordered them to go to the herd of (Milch) camels and to drink their milk and urine (as a medicine). So they went as directed and after they became healthy, they killed the shepherd of the Prophet and drove away all the camels. The news reached the Prophet (ﷺ) early in the morning and he sent (men) in their pursuit and they were captured and brought at noon. He then ordered to cut their hands and feet (and it was done), and their eyes were branded with heated pieces of iron, They were put in 'Al-Harra' and when they asked for water, no water was given to them.\" Abu Qilaba said, \"Those people committed theft and murder, became infidels after embracing Islam and fought against Allah and His Apostle",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1HkwZRRhjcZ8q27IMp_Nmk6KtVwL2kP4q",
+      "player": "1_teQAbeFwV4CCGuRWJyuaNRzgD-kjaNh"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 234,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ أَخْبَرَنَا أَبُو التَّيَّاحِ، يَزِيدُ بْنُ حُمَيْدٍ عَنْ أَنَسٍ،",
+     "matn": "قَالَ كَانَ النَّبِيُّ ﷺ يُصَلِّي قَبْلَ أَنْ يُبْنَى الْمَسْجِدُ فِي مَرَابِضِ الْغَنَمِ.",
+     "gharib": [
+      {
+       "word": "مَرَابِضِ",
+       "meaning": "مواضع مأوى الغنم وربوضها.",
+       "source": "ابن منظور، لسان العرب، ٧/١٤٩، مادة ربض؛ وانظر ابن حجر، فتح الباري، ١/٣٣٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٣٤",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 234"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "Prior to the construction of the mosque, the Prophet (ﷺ) offered the prayers at sheep-folds",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Xy9kO08-co1yy7z_Z2Bij3jh99f84SUq",
+      "player": "1DRPzxJXUhkTfDoitM-K8kHIbHCtV4GDi"
      },
      "video": null,
      "sharh": null,
