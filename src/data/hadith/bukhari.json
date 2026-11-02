@@ -5827,7 +5827,7 @@
    "ar": "كتاب الوضوء",
    "en": "Ablutions (Wudu')",
    "first": 135,
-   "last": 218,
+   "last": 226,
    "hadith": [
     {
      "n": 135,
@@ -9332,6 +9332,337 @@
       },
       "id": "1LQ81zMg4qf1Fhvpi2oc2sarOuJ4i7zAW",
       "player": "1NNBdVO6ZJD2D2q_SSjcKo6at0xcepADn"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 219,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا هَمَّامٌ، أَخْبَرَنَا إِسْحَاقُ، عَنْ أَنَسِ بْنِ مَالِكٍ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ رَأَى أَعْرَابِيًّا يَبُولُ فِي الْمَسْجِدِ فَقَالَ  دَعُوهُ . حَتَّى إِذَا فَرَغَ دَعَا بِمَاءٍ فَصَبَّهُ عَلَيْهِ.",
+     "gharib": [
+      {
+       "word": "أَعْرَابِيًّا",
+       "meaning": "من سكان البادية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢١٩",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 219"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) saw a Bedouin making water in the mosque and told the people not to disturb him. When he finished, the Prophet (ﷺ) asked for some water and poured it over (the urine)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1t21Ezb7DfrjpJ0VxnK1d7goh6hQxJrRy",
+      "player": "1x_D4xfYfqqNjSw7sFDsfBi-aB8rP9oaB"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 220,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي عُبَيْدُ اللَّهِ بْنُ عَبْدِ اللَّهِ بْنِ عُتْبَةَ بْنِ مَسْعُودٍ، أَنَّ أَبَا هُرَيْرَةَ،",
+     "matn": "قَالَ قَامَ أَعْرَابِيٌّ فَبَالَ فِي الْمَسْجِدِ فَتَنَاوَلَهُ النَّاسُ، فَقَالَ لَهُمُ النَّبِيُّ ﷺ  دَعُوهُ وَهَرِيقُوا عَلَى بَوْلِهِ سَجْلاً مِنْ مَاءٍ، أَوْ ذَنُوبًا مِنْ مَاءٍ، فَإِنَّمَا بُعِثْتُمْ مُيَسِّرِينَ، وَلَمْ تُبْعَثُوا مُعَسِّرِينَ .",
+     "gharib": [
+      {
+       "word": "ذَنُوبًا",
+       "meaning": "دلوًا فيها ماء قريب من الملء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٤."
+      },
+      {
+       "word": "سَجْلاً",
+       "meaning": "دلوًا ملأى؛ وقيل دلوًا واسعة أو ضخمة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٤."
+      },
+      {
+       "word": "وَهَرِيقُوا",
+       "meaning": "وصبوا الماء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٤؛ وانظر ٣٠٣."
+      },
+      {
+       "word": "فَتَنَاوَلَهُ",
+       "meaning": "زجروه بألسنتهم، لا بأيديهم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٠",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 220"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "A Bedouin stood up and started making water in the mosque. The people caught him but the Prophet (ﷺ) ordered them to leave him and to pour a bucket or a tumbler of water over the place where he had passed the urine. The Prophet (ﷺ) then said, \"You have been sent to make things easy and not to make them difficult",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1NjhYnCPtsK3TCgm-v8HnmcpJqiick7hi",
+      "player": "1eDijjSdjMf2mDH040HJHSbY56ySUb7oU"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 221,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا يَحْيَى بْنُ سَعِيدٍ، قَالَ سَمِعْتُ أَنَسَ بْنَ مَالِكٍ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢١",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 221"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) said as above",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 222,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ،",
+     "matn": "عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ أُمِّ الْمُؤْمِنِينَ، أَنَّهَا قَالَتْ أُتِيَ رَسُولُ اللَّهِ ﷺ بِصَبِيٍّ، فَبَالَ عَلَى ثَوْبِهِ، فَدَعَا بِمَاءٍ فَأَتْبَعَهُ إِيَّاهُ.",
+     "gharib": [
+      {
+       "word": "فَأَتْبَعَهُ",
+       "meaning": "أتبع البول الذي على الثوب بالماء يصبه عليه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٢",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 222"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "(the mother of faithful believers) A child was brought to Allah's Messenger (ﷺ) and it urinated on the garment of the Prophet. The Prophet (ﷺ) asked for water and poured it over the soiled place",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1AgfGSYEinO-ZJJ5IT-7yAOSIUuw2nhc4",
+      "player": "1VzvJGaIkd2MLtLp8YM6vH9QeLt8jcp0y"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 223,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ عُتْبَةَ، عَنْ أُمِّ قَيْسٍ بِنْتِ مِحْصَنٍ، أَنَّهَا أَتَتْ بِابْنٍ لَهَا صَغِيرٍ، لَمْ يَأْكُلِ الطَّعَامَ إِلَى رَسُولِ اللَّهِ ﷺ، فَأَجْلَسَهُ رَسُولُ اللَّهِ ﷺ فِي حِجْرِهِ، فَبَالَ عَلَى ثَوْبِهِ، فَدَعَا بِمَاءٍ فَنَضَحَهُ وَلَمْ يَغْسِلْهُ.",
+     "gharib": [
+      {
+       "word": "فَنَضَحَهُ",
+       "meaning": "رش عليه الماء وصبه؛ جمع ابن حجر بين لفظي الرش والنضح بهذا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٣",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 223"
+     },
+     "en": {
+      "narrator": "Um Qais bint Mihsin",
+      "text": "I brought my young son, who had not started eating (ordinary food) to Allah's Messenger (ﷺ) who took him and made him sit in his lap. The child urinated on the garment of the Prophet, so he asked for water and poured it over the soiled (area) and did not wash it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "114_l6kV-655xyyVQFTPxRgzyZv-HSnO0",
+      "player": "1gjxXF2GmzKqLQ9Neg7DjF7W9KslZcTcj"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 224,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنِ الأَعْمَشِ، عَنْ أَبِي وَائِلٍ، عَنْ حُذَيْفَةَ، قَالَ أَتَى النَّبِيُّ ﷺ سُبَاطَةَ قَوْمٍ فَبَالَ قَائِمًا، ثُمَّ دَعَا بِمَاءٍ، فَجِئْتُهُ بِمَاءٍ فَتَوَضَّأَ.",
+     "gharib": [
+      {
+       "word": "سُبَاطَةَ",
+       "meaning": "المزبلة والكناسة تكون بفناء الدور مرفقًا لأهلها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٤",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 224"
+     },
+     "en": {
+      "narrator": "Hudhaifa",
+      "text": "Once the Prophet (ﷺ) went to the dumps of some people and passed urine while standing. He then asked for water and so I brought it to him and he performed ablution",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1jXdKLofiaN9OQi1ccRI3uHGzFKq0EN01",
+      "player": "1Q6ak0JD7BC_NJJoBHOUWt097fJJ4yrW1"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 225,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عُثْمَانُ بْنُ أَبِي شَيْبَةَ، قَالَ حَدَّثَنَا جَرِيرٌ، عَنْ مَنْصُورٍ، عَنْ أَبِي وَائِلٍ، عَنْ حُذَيْفَةَ،",
+     "matn": "قَالَ رَأَيْتُنِي أَنَا وَالنَّبِيُّ، ﷺ نَتَمَاشَى، فَأَتَى سُبَاطَةَ قَوْمٍ خَلْفَ حَائِطٍ، فَقَامَ كَمَا يَقُومُ أَحَدُكُمْ فَبَالَ، فَانْتَبَذْتُ مِنْهُ، فَأَشَارَ إِلَىَّ فَجِئْتُهُ، فَقُمْتُ عِنْدَ عَقِبِهِ حَتَّى فَرَغَ.",
+     "gharib": [
+      {
+       "word": "سُبَاطَةَ",
+       "meaning": "المزبلة والكناسة تكون بفناء الدور مرفقًا لأهلها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٨."
+      },
+      {
+       "word": "فَانْتَبَذْتُ",
+       "meaning": "تنحيت.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٥",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 225"
+     },
+     "en": {
+      "narrator": "Hudhaifa'",
+      "text": "The Prophet (ﷺ) and I walked till we reached the dumps of some people. He stood, as any one of you stands, behind a wall and urinated. I went away, but he beckoned me to come. So I approached him and stood near his back till he finished",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1paqKuwix71u6yD_TFwit15ABjrNoqqzU",
+      "player": "1rqxUT6pEbH_J--lVRaBEL9X5FpZZ2V06"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 226,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ عَرْعَرَةَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ مَنْصُورٍ، عَنْ أَبِي وَائِلٍ، قَالَ كَانَ أَبُو مُوسَى الأَشْعَرِيُّ يُشَدِّدُ فِي الْبَوْلِ وَيَقُولُ إِنَّ بَنِي إِسْرَائِيلَ كَانَ إِذَا أَصَابَ ثَوْبَ أَحَدِهِمْ قَرَضَهُ. فَقَالَ حُذَيْفَةُ لَيْتَهُ أَمْسَكَ،",
+     "matn": "أَتَى رَسُولُ اللَّهِ ﷺ سُبَاطَةَ قَوْمٍ فَبَالَ قَائِمًا.",
+     "gharib": [
+      {
+       "word": "سُبَاطَةَ",
+       "meaning": "المزبلة والكناسة تكون بفناء الدور مرفقًا لأهلها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٢٨."
+      },
+      {
+       "word": "قَرَضَهُ",
+       "meaning": "قطعه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٣٣٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الوضوء، حديث رقم ٢٢٦",
+      "en": "Sahih al-Bukhari, Ablutions (Wudu'), hadith 226"
+     },
+     "en": {
+      "narrator": "Abu Wail",
+      "text": "Abu Musa Al-Ash`ari used to lay great stress on the question of urination and he used to say, \"If anyone from Bani Israel happened to soil his clothes with urine, he used to cut that portion away.\" Hearing that, Hudhaifa said to Abu Wail, \"I wish he (Abu Musa) didn't (lay great stress on that matter).\" Hudhaifa added, \"Allah's Messenger (ﷺ) went to the dumps of some people and urinated while standing",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1nl8z6hIFznYSFA2DIWBNI80qmfLZFE61",
+      "player": "1AgZjwHm1nub8JHJAf5lq0BvEMKX-bNIo"
      },
      "video": null,
      "sharh": null,
