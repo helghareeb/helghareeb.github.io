@@ -12341,7 +12341,7 @@
    "ar": "كتاب الحيض",
    "en": "Menstrual Periods",
    "first": 294,
-   "last": 330,
+   "last": 333,
    "hadith": [
     {
      "n": 294,
@@ -14035,6 +14035,143 @@
       },
       "id": null,
       "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 331,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَحْمَدُ بْنُ يُونُسَ، عَنْ زُهَيْرٍ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، قَالَتْ قَالَ النَّبِيُّ ﷺ",
+     "matn": "إِذَا أَقْبَلَتِ الْحَيْضَةُ فَدَعِي الصَّلاَةَ، وَإِذَا أَدْبَرَتْ فَاغْسِلِي عَنْكِ الدَّمَ وَصَلِّي .",
+     "gharib": [
+      {
+       "word": "الْحَيْضَةُ",
+       "meaning": "جاء زمن الحيض الذي ميزه سياق القصة من دم الاستحاضة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٨–٤٢٩."
+      },
+      {
+       "word": "أَدْبَرَتْ",
+       "meaning": "انقضت الحيضة؛ وسياق الشرح يميز ذلك من زمن الاستحاضة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٨–٤٢٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٣١",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 331"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "The Prophet (ﷺ) said to me, \"Give up the prayer when your menses begin and when it has finished, wash the blood off your body (take a bath) and start praying",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_l82yVDBOWhnUxoSoE3Ax6xxx7Bit-c6",
+      "player": "1krubb4LRtPFg7IxkPhSvBU1Q-uruIwDz"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 332,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَحْمَدُ بْنُ أَبِي سُرَيْجٍ، قَالَ أَخْبَرَنَا شَبَابَةُ، قَالَ أَخْبَرَنَا شُعْبَةُ، عَنْ حُسَيْنٍ الْمُعَلِّمِ، عَنِ ابْنِ بُرَيْدَةَ، عَنْ سَمُرَةَ بْنِ جُنْدُبٍ، أَنَّ امْرَأَةً، مَاتَتْ فِي بَطْنٍ، فَصَلَّى عَلَيْهَا النَّبِيُّ ﷺ فَقَامَ وَسَطَهَا.",
+     "gharib": [
+      {
+       "word": "بَطْنٍ",
+       "meaning": "بسبب الحمل في هذا الخبر؛ بينته الرواية الأخرى بقولها ماتت في نفاسها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٩."
+      },
+      {
+       "word": "وَسَطَهَا",
+       "meaning": "عند وسط المرأة في صلاة الجنازة، كما في الرواية التي نقلها الشارح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٩–٤٣٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٣٢",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 332"
+     },
+     "en": {
+      "narrator": "Samura bin Jundub",
+      "text": "The Prophet (ﷺ) offered the funeral prayer for the dead body of a woman who died during delivery (i.e. childbirth) and he stood by the middle of her body",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1nW-qNT5y5lqHTym-pEWOU8IcQ4MFP6G3",
+      "player": "1xyyQccU7jBPMN9ROKAxVK8Iao2Mv_wqQ"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 333,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا الْحَسَنُ بْنُ مُدْرِكٍ، قَالَ حَدَّثَنَا يَحْيَى بْنُ حَمَّادٍ، قَالَ أَخْبَرَنَا أَبُو عَوَانَةَ ـ اسْمُهُ الْوَضَّاحُ ـ مِنْ كِتَابِهِ قَالَ أَخْبَرَنَا سُلَيْمَانُ الشَّيْبَانِيُّ، عَنْ عَبْدِ اللَّهِ بْنِ شَدَّادٍ، قَالَ سَمِعْتُ خَالَتِي، مَيْمُونَةَ ـ زَوْجَ النَّبِيِّ ﷺ أَنَّهَا كَانَتْ تَكُونُ حَائِضًا لاَ تُصَلِّي، وَهْىَ مُفْتَرِشَةٌ بِحِذَاءِ مَسْجِدِ رَسُولِ اللَّهِ ﷺ وَهْوَ يُصَلِّي عَلَى خُمْرَتِهِ، إِذَا سَجَدَ أَصَابَنِي بَعْضُ ثَوْبِهِ.",
+     "gharib": [
+      {
+       "word": "خُمْرَتِهِ",
+       "meaning": "مصلى صغير من سعف النخل، ونقل الشارح استعمال الخمرة فيما زاد على موضع الوجه والكفين أيضا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٠."
+      },
+      {
+       "word": "بِحِذَاءِ",
+       "meaning": "بجانب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٠."
+      },
+      {
+       "word": "مَسْجِدِ",
+       "meaning": "مكان سجوده في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٣٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٣٣",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 333"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "(the wife of the Prophet) During my menses, I never prayed, but used to sit on the mat beside the mosque of Allah's Messenger (ﷺ). He used to offer the prayer on his sheet and in prostration some of his clothes used to touch me",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1toEGfzoWVTl_LKIFGAaevyJpuO3nfnbs",
+      "player": "1YGKwWqcKfs23bhGwVb-0njjZ0zFzc5M7"
      },
      "video": null,
      "sharh": null,
