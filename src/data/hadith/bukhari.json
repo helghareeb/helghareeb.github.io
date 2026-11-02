@@ -12341,7 +12341,7 @@
    "ar": "كتاب الحيض",
    "en": "Menstrual Periods",
    "first": 294,
-   "last": 322,
+   "last": 330,
    "hadith": [
     {
      "n": 294,
@@ -13683,6 +13683,358 @@
       },
       "id": "1anNYm1-HJx_k-VGDjTDPfM3Wo-B3Qrjm",
       "player": "1lNSuD6kmaTRG6veqs8qGTfeOoQWo3UOP"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 323,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُعَاذُ بْنُ فَضَالَةَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ زَيْنَبَ ابْنَةِ أَبِي سَلَمَةَ، عَنْ أُمِّ سَلَمَةَ، قَالَتْ بَيْنَا أَنَا مَعَ النَّبِيِّ، ﷺ مُضْطَجِعَةً فِي خَمِيلَةٍ حِضْتُ، فَانْسَلَلْتُ فَأَخَذْتُ ثِيَابَ حِيضَتِي فَقَالَ",
+     "matn": "أَنُفِسْتِ . فَقُلْتُ نَعَمْ. فَدَعَانِي فَاضْطَجَعْتُ مَعَهُ فِي الْخَمِيلَةِ.",
+     "gharib": [
+      {
+       "word": "أَنُفِسْتِ",
+       "meaning": "أحضت في هذا السياق؛ وذكر الشارح وجهي الضبط.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣؛ وانظر ٤٢٣."
+      },
+      {
+       "word": "الْخَمِيلَةِ",
+       "meaning": "كساء له خمل أو هدب؛ وفسرت بالقطيفة والطنفسة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣؛ وانظر ٤٢٣."
+      },
+      {
+       "word": "فَانْسَلَلْتُ",
+       "meaning": "ذهبت في خفية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٠٣؛ وانظر ٤٢٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٣",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 323"
+     },
+     "en": {
+      "narrator": "Um Salama",
+      "text": "While I was lying with the Prophet (ﷺ) under a woolen sheet, I got my menses. I slipped away and put on the clothes for menses. The Prophet (ﷺ) said, \"Have you got your menses?\" I replied, \"Yes.\" He called me and I slept with him under the woolen sheet",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 324,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدٌ ـ هُوَ ابْنُ سَلاَمٍ ـ قَالَ أَخْبَرَنَا عَبْدُ الْوَهَّابِ، عَنْ أَيُّوبَ، عَنْ حَفْصَةَ، قَالَتْ كُنَّا نَمْنَعُ عَوَاتِقَنَا أَنْ يَخْرُجْنَ فِي الْعِيدَيْنِ، فَقَدِمَتِ امْرَأَةٌ فَنَزَلَتْ قَصْرَ بَنِي خَلَفٍ، فَحَدَّثَتْ عَنْ أُخْتِهَا، وَكَانَ زَوْجُ أُخْتِهَا غَزَا مَعَ النَّبِيِّ ﷺ ثِنْتَىْ عَشَرَةَ، وَكَانَتْ أُخْتِي مَعَهُ فِي سِتٍّ. قَالَتْ كُنَّا نُدَاوِي الْكَلْمَى، وَنَقُومُ عَلَى الْمَرْضَى، فَسَأَلَتْ أُخْتِي النَّبِيَّ ﷺ أَعَلَى إِحْدَانَا بَأْسٌ إِذَا لَمْ يَكُنْ لَهَا جِلْبَابٌ أَنْ لاَ تَخْرُجَ قَالَ",
+     "matn": "لِتُلْبِسْهَا صَاحِبَتُهَا مِنْ جِلْبَابِهَا، وَلْتَشْهَدِ الْخَيْرَ وَدَعْوَةَ الْمُسْلِمِينَ . فَلَمَّا قَدِمَتْ أُمُّ عَطِيَّةَ سَأَلْتُهَا أَسَمِعْتِ النَّبِيَّ ﷺ قَالَتْ بِأَبِي نَعَمْ ـ وَكَانَتْ لاَ تَذْكُرُهُ إِلاَّ قَالَتْ بِأَبِي ـ سَمِعْتُهُ يَقُولُ  يَخْرُجُ الْعَوَاتِقُ وَذَوَاتُ الْخُدُورِ، أَوِ الْعَوَاتِقُ ذَوَاتُ الْخُدُورِ وَالْحُيَّضُ، وَلْيَشْهَدْنَ الْخَيْرَ وَدَعْوَةَ الْمُؤْمِنِينَ، وَيَعْتَزِلُ الْحُيَّضُ الْمُصَلَّى . قَالَتْ حَفْصَةُ فَقُلْتُ الْحُيَّضُ فَقَالَتْ أَلَيْسَ تَشْهَدُ عَرَفَةَ وَكَذَا وَكَذَا",
+     "gharib": [
+      {
+       "word": "الْخُدُورِ",
+       "meaning": "جمع خدر، وهو ستر في ناحية البيت تقعد البكر وراءه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٣–٤٢٤."
+      },
+      {
+       "word": "الْعَوَاتِقُ",
+       "meaning": "جمع عاتق؛ من بلغت الحلم أو قاربت، وذكر الشارح معاني متقاربة للفظ.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٣–٤٢٤."
+      },
+      {
+       "word": "الْكَلْمَى",
+       "meaning": "الجرحى، جمع كليم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٣–٤٢٤."
+      },
+      {
+       "word": "عَوَاتِقَنَا",
+       "meaning": "جمع عاتق؛ من بلغت الحلم أو قاربت، وذكر الشارح معاني متقاربة للفظ.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٣–٤٢٤."
+      },
+      {
+       "word": "جِلْبَابٌ",
+       "meaning": "ذكر الشارح فيه معاني متقاربة من الثوب الواسع وما تستتر به المرأة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٣–٤٢٤."
+      },
+      {
+       "word": "بِأَبِي",
+       "meaning": "أي هو مفدى بأبي، كما شرح ابن حجر العبارة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٣–٤٢٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٤",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 324"
+     },
+     "en": {
+      "narrator": "Aiyub",
+      "text": "Hafsa said, 'We used to forbid our young women to go out for the two `Id prayers. A woman came and stayed at the palace of Bani Khalaf and she narrated about her sister whose husband took part in twelve holy battles along with the Prophet (ﷺ) and her sister was with her husband in six (out of these twelve). She (the woman's sister) said, \"We used to treat the wounded, look after the patients and once I asked the Prophet, 'Is there any harm for any of us to stay at home if she doesn't have a veil?' He said, 'She should cover herself with the veil of her companion and should participate in the good deeds and in the religious gathering of the Muslims.' When Um `Atiya came I asked her whether she had heard it from the Prophet. She replied, \"Yes. May my father be sacrificed for him (the Prophet)! (Whenever she mentioned the Prophet (ﷺ) she used to say, 'May my father be sacrificed for him) I have heard the Prophet (ﷺ) saying, 'The unmarried young virgins and the mature girl who stay often screened or the young unmarried virgins who often stay screened and the menstruating women should come out and participate in the good deeds as well as the religious gathering of the faithful believers but the menstruating women should keep away from the Musalla (praying place).' \" Hafsa asked Um `Atiya surprisingly, \"Do you say the menstruating women?\" She replied, \"Doesn't a menstruating woman attend `Arafat (Hajj) and such and such (other deeds)?",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "18qcbZYK8q9fcc2znEPcQFyYvYIlqacXK",
+      "player": "1AGzq2K35Mo8r-7v9JCiUcfEOql1WQmDY"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 325,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَحْمَدُ بْنُ أَبِي رَجَاءٍ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، قَالَ سَمِعْتُ هِشَامَ بْنَ عُرْوَةَ، قَالَ أَخْبَرَنِي أَبِي، عَنْ عَائِشَةَ،. أَنَّ فَاطِمَةَ بِنْتَ أَبِي حُبَيْشٍ، سَأَلَتِ النَّبِيَّ ﷺ قَالَتْ إِنِّي أُسْتَحَاضُ فَلاَ أَطْهُرُ، أَفَأَدَعُ الصَّلاَةَ فَقَالَ",
+     "matn": "لاَ، إِنَّ ذَلِكِ عِرْقٌ، وَلَكِنْ دَعِي الصَّلاَةَ قَدْرَ الأَيَّامِ الَّتِي كُنْتِ تَحِيضِينَ فِيهَا، ثُمَّ اغْتَسِلِي وَصَلِّي .",
+     "gharib": [
+      {
+       "word": "أُسْتَحَاضُ",
+       "meaning": "يخرج مني دم الاستحاضة الذي ميز الجواب بينه وبين الحيضة المعتادة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٥–٤٢٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٥",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 325"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Fatima bint Abi Hubaish asked the Prophet, \"I got persistent bleeding (in between the periods) and do not become clean. Shall I give up prayers?\" He replied, \"No, this is from a blood vessel. Give up the prayers only for the days on which you usually get the menses and then take a bath and offer your prayers",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1iDtFe8wlsrxCZly18G6tgqTNvnTArDDU",
+      "player": "1wEjgGLXC3imY0ZZcXGkup1BsrTeUjQ5p"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 326,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ، عَنْ أَيُّوبَ، عَنْ مُحَمَّدٍ، عَنْ أُمِّ عَطِيَّةَ، قَالَتْ كُنَّا لاَ نَعُدُّ الْكُدْرَةَ وَالصُّفْرَةَ شَيْئًا.",
+     "gharib": [
+      {
+       "word": "الْكُدْرَةَ",
+       "meaning": "وصف للماء الذي تراه المرأة كالصديد يعلوه اصفرار، كما شرحه الشارح مع الصفرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٦."
+      },
+      {
+       "word": "وَالصُّفْرَةَ",
+       "meaning": "ما يعلوه اصفرار في السياق المذكور؛ قيد الشارح نفي الاعتداد هنا بما بعد الطهر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٦",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 326"
+     },
+     "en": {
+      "narrator": "Um `Atiya",
+      "text": "We never considered yellowish discharge as a thing of importance (as menses)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "13J33rS7D8Vt0r8upDfQNNkAkDs_FmsaZ",
+      "player": "12LH-lOe9Bd7KDb0XyyJ2Wer5qwVsi89K"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 327,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ الْمُنْذِرِ، قَالَ حَدَّثَنَا مَعْنٌ، قَالَ حَدَّثَنِي ابْنُ أَبِي ذِئْبٍ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، وَعَنْ عَمْرَةَ، عَنْ عَائِشَةَ، زَوْجِ النَّبِيِّ ﷺ أَنَّ أُمَّ حَبِيبَةَ اسْتُحِيضَتْ سَبْعَ سِنِينَ، فَسَأَلَتْ رَسُولَ اللَّهِ ﷺ عَنْ ذَلِكَ، فَأَمَرَهَا أَنْ تَغْتَسِلَ فَقَالَ",
+     "matn": "هَذَا عِرْقٌ . فَكَانَتْ تَغْتَسِلُ لِكُلِّ صَلاَةٍ.",
+     "gharib": [
+      {
+       "word": "اسْتُحِيضَتْ",
+       "meaning": "خرج منها دم الاستحاضة الذي ميزه الجواب من الحيضة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٦–٤٢٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٧",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 327"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "(the wife of the Prophet) Um Habiba got bleeding in between the periods for seven years. She asked Allah's Messenger (ﷺ) about it. He ordered her to take a bath (after the termination of actual periods) and added that it was (from) a blood vessel. So she used to take a bath for every prayer",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "17BZINpNYFbfCimK0F4hk9hqyiyuGB_hS",
+      "player": "1YpR3RRlaPOKzK1_h8fBcxnZu2bBT0UKe"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 328,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، أَخْبَرَنَا مَالِكٌ، عَنْ عَبْدِ اللَّهِ بْنِ أَبِي بَكْرِ بْنِ مُحَمَّدِ بْنِ عَمْرِو بْنِ حَزْمٍ، عَنْ أَبِيهِ، عَنْ عَمْرَةَ بِنْتِ عَبْدِ الرَّحْمَنِ، عَنْ عَائِشَةَ، زَوْجِ النَّبِيِّ ﷺ",
+     "matn": "أَنَّهَا قَالَتْ لِرَسُولِ اللَّهِ ﷺ يَا رَسُولَ اللَّهِ، إِنَّ صَفِيَّةَ بِنْتَ حُيَىٍّ قَدْ حَاضَتْ. قَالَ رَسُولُ اللَّهِ ﷺ  لَعَلَّهَا تَحْبِسُنَا، أَلَمْ تَكُنْ طَافَتْ مَعَكُنَّ . فَقَالُوا بَلَى. قَالَ  فَاخْرُجِي .",
+     "gharib": [
+      {
+       "word": "تَحْبِسُنَا",
+       "meaning": "تؤخر خروجنا في سياق رحلة الحج المذكورة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٨",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 328"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "(the wife of the Prophet) I told Allah's Messenger (ﷺ) that Safiya bint Huyai had got her menses. He said, \"She will probably delay us. Did she perform Tawaf (Al-Ifada) with you?\" We replied, \"Yes.\" On that the Prophet (ﷺ) told her to depart",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 329,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُعَلَّى بْنُ أَسَدٍ، قَالَ حَدَّثَنَا وُهَيْبٌ، عَنْ عَبْدِ اللَّهِ بْنِ طَاوُسٍ، عَنْ أَبِيهِ، عَنِ ابْنِ عَبَّاسٍ، قَالَ رُخِّصَ لِلْحَائِضِ أَنْ تَنْفِرَ، إِذَا حَاضَتْ. وَكَانَ ابْنُ عُمَرَ يَقُولُ فِي أَوَّلِ أَمْرِهِ إِنَّهَا لاَ تَنْفِرُ. ثُمَّ سَمِعْتُهُ يَقُولُ تَنْفِرُ إِنَّ رَسُولَ اللَّهِ ﷺ رَخَّصَ لَهُنَّ.",
+     "gharib": [
+      {
+       "word": "تَنْفِرَ",
+       "meaning": "تخرج بعد الحج في الرخصة المذكورة للحائض في طواف الوداع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٢٩",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 329"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "A woman is allowed to leave (go back home) if she gets menses (after Tawaf-Al-Ifada). Ibn `Umar formerly used to say that she should not leave but later on I heard him saying, \"She may leave, since Allah's Messenger (ﷺ) gave them the permission to leave (after Tawaf-Al-Ifada)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 330,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُعَلَّى بْنُ أَسَدٍ، قَالَ حَدَّثَنَا وُهَيْبٌ، عَنْ عَبْدِ اللَّهِ بْنِ طَاوُسٍ، عَنْ أَبِيهِ، عَنِ ابْنِ عَبَّاسٍ،",
+     "matn": "قَالَ رُخِّصَ لِلْحَائِضِ أَنْ تَنْفِرَ، إِذَا حَاضَتْ. وَكَانَ ابْنُ عُمَرَ يَقُولُ فِي أَوَّلِ أَمْرِهِ إِنَّهَا لاَ تَنْفِرُ. ثُمَّ سَمِعْتُهُ يَقُولُ تَنْفِرُ إِنَّ رَسُولَ اللَّهِ ﷺ رَخَّصَ لَهُنَّ.",
+     "gharib": [
+      {
+       "word": "تَنْفِرَ",
+       "meaning": "تخرج بعد الحج في الرخصة المذكورة للحائض في طواف الوداع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٢٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الحيض، حديث رقم ٣٣٠",
+      "en": "Sahih al-Bukhari, Menstrual Periods, hadith 330"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "A woman is allowed to leave (go back home) if she gets menses (after Tawaf-Al-Ifada). Ibn `Umar formerly used to say that she should not leave but later on I heard him saying, \"She may leave, since Allah's Messenger (ﷺ) gave them the permission to leave (after Tawaf-Al-Ifada)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
