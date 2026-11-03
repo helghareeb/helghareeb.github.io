@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 405,
+   "last": 407,
    "hadith": [
     {
      "n": 349,
@@ -17569,6 +17569,94 @@
       },
       "id": "1bsRxsmmuv7LVtjO49GSdkAL45jVTsVwr",
       "player": "1fwhQZv9d7wbr9nPzY_gHEZJuV_SwadXG"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 406,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ،.",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ رَأَى بُصَاقًا فِي جِدَارِ الْقِبْلَةِ فَحَكَّهُ، ثُمَّ أَقْبَلَ عَلَى النَّاسِ فَقَالَ  إِذَا كَانَ أَحَدُكُمْ يُصَلِّي، فَلاَ يَبْصُقْ قِبَلَ وَجْهِهِ، فَإِنَّ اللَّهَ قِبَلَ وَجْهِهِ إِذَا صَلَّى .",
+     "gharib": [
+      {
+       "word": "فَحَكَّهُ",
+       "meaning": "أزاله من الجدار بالحك.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٩."
+      },
+      {
+       "word": "قِبَلَ",
+       "meaning": "جهة وجهه وتجاهه في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 406"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "Allah's Messenger (ﷺ) saw sputum on the wall of the mosque in the direction of the Qibla and scraped it off. He faced the people and said, \"Whenever any one of you is praying, he should not spit in front of him because in the prayer Allah is in front of him",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ABUKZFBPm6hEl9Zk3RILHEQyF2XdBI0k",
+      "player": "1hRQl64XcQKfsfNJ2K_l3wLSUMGxy0oYM"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 407,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ أُمِّ الْمُؤْمِنِينَ، أَنَّ رَسُولَ اللَّهِ ﷺ رَأَى فِي جِدَارِ الْقِبْلَةِ مُخَاطًا أَوْ بُصَاقًا أَوْ نُخَامَةً فَحَكَّهُ.",
+     "gharib": [
+      {
+       "word": "مُخَاطًا",
+       "meaning": "مادة ذات جرم لزج في وصف الشارح؛ وقع تعيينها هنا على شك الرواية.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٩."
+      },
+      {
+       "word": "نُخَامَةً",
+       "meaning": "ما يطرح من الرأس أو الصدر؛ نقل الشارح اختلاف التفريق بينها وبين النخاعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 407"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "(the mother of faithful believers) Allah's Messenger (ﷺ) saw some nasal secretions, expectoration or sputum on the wall of the mosque in the direction of the Qibla and scraped it off",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1u09JJVbikX_ZPbLhzk1tVrjLswSmpGLz",
+      "player": "1YqYrAoTY8dLaIcjwoA9-TVzLIqMCAIhR"
      },
      "video": null,
      "sharh": null,
