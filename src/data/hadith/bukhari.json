@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 374,
+   "last": 382,
    "hadith": [
     {
      "n": 349,
@@ -16184,6 +16184,388 @@
      "en": {
       "narrator": "Anas",
       "text": "`Aisha had a Qiram (a thin marked woolen curtain) with which she had screened one side of her home. The Prophet (ﷺ) said, \"Take away this Qiram of yours, as its pictures are still displayed in front of me during my prayer (i.e. they divert my attention from the prayer)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 375,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ يَزِيدَ، عَنْ أَبِي الْخَيْرِ، عَنْ عُقْبَةَ بْنِ عَامِرٍ، قَالَ أُهْدِيَ إِلَى النَّبِيِّ ﷺ فَرُّوجُ حَرِيرٍ، فَلَبِسَهُ فَصَلَّى فِيهِ، ثُمَّ انْصَرَفَ فَنَزَعَهُ نَزْعًا شَدِيدًا كَالْكَارِهِ لَهُ وَقَالَ",
+     "matn": "لاَ يَنْبَغِي هَذَا لِلْمُتَّقِينَ .",
+     "gharib": [
+      {
+       "word": "فَرُّوجُ",
+       "meaning": "قباء مشقوق من خلف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 375"
+     },
+     "en": {
+      "narrator": "`Uqba bin 'Amir",
+      "text": "The Prophet (ﷺ) was given a silken Farruj [??] as a present. He wore it while praying. When he had finished his prayer, he took it off violently as if with a strong aversion to it and said, \"It is not the dress of Allah-fearing pious people",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ms8l4r5MBYurvmcYUC8xfycXhy9dzl1q",
+      "player": "1x_DpQO-8speYVi7tkHlo3QZ8RyBF-fDM"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 376,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ عَرْعَرَةَ، قَالَ حَدَّثَنِي عُمَرُ بْنُ أَبِي زَائِدَةَ، عَنْ عَوْنِ بْنِ أَبِي جُحَيْفَةَ، عَنْ أَبِيهِ، قَالَ رَأَيْتُ رَسُولَ اللَّهِ ﷺ فِي قُبَّةٍ حَمْرَاءَ مِنْ أَدَمٍ، وَرَأَيْتُ بِلاَلاً أَخَذَ وَضُوءَ رَسُولِ اللَّهِ ﷺ وَرَأَيْتُ النَّاسَ يَبْتَدِرُونَ ذَاكَ الْوَضُوءَ، فَمَنْ أَصَابَ مِنْهُ شَيْئًا تَمَسَّحَ بِهِ، وَمَنْ لَمْ يُصِبْ مِنْهُ شَيْئًا أَخَذَ مِنْ بَلَلِ يَدِ صَاحِبِهِ، ثُمَّ رَأَيْتُ بِلاَلاً أَخَذَ عَنَزَةً فَرَكَزَهَا، وَخَرَجَ النَّبِيُّ ﷺ فِي حُلَّةٍ حَمْرَاءَ مُشَمِّرًا، صَلَّى إِلَى الْعَنَزَةِ بِالنَّاسِ رَكْعَتَيْنِ، وَرَأَيْتُ النَّاسَ وَالدَّوَابَّ يَمُرُّونَ مِنْ بَيْنِ يَدَىِ الْعَنَزَةِ.",
+     "gharib": [
+      {
+       "word": "أَدَمٍ",
+       "meaning": "جلود؛ الأديم الجلد، والأدم اسم للجمع.",
+       "source": "ابن منظور، لسان العرب، مادة أدم، ١٢/٩–١٠."
+      },
+      {
+       "word": "الْعَنَزَةِ",
+       "meaning": "رمح قصير نحو نصف الرمح، له سنان.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة عنز، ٣/٣٠٨."
+      },
+      {
+       "word": "عَنَزَةً",
+       "meaning": "رمح قصير نحو نصف الرمح، له سنان.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة عنز، ٣/٣٠٨."
+      },
+      {
+       "word": "قُبَّةٍ",
+       "meaning": "بيت صغير مستدير من الخيام.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة قبب، ٤/٣."
+      },
+      {
+       "word": "حُلَّةٍ",
+       "meaning": "لباس من ثوبين من جنس واحد، ومنه برود اليمن.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة حلل، ١/٤٣٢."
+      },
+      {
+       "word": "وَضُوءَ",
+       "meaning": "الماء الذي توضأ به، بفتح الواو.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٥."
+      },
+      {
+       "word": "فَرَكَزَهَا",
+       "meaning": "أثبتها في الأرض.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 376"
+     },
+     "en": {
+      "narrator": "Abu Juhaifa",
+      "text": "I saw Allah's Messenger (ﷺ) in a red leather tent and I saw Bilal taking the remaining water with which the Prophet had performed ablution. I saw the people taking the utilized water impatiently and whoever got some of it rubbed it on his body and those who could not get any took the moisture from the others' hands. Then I saw Bilal carrying a short spear (or stick) which he planted in the ground. The Prophet came out tucking up his red cloak, and led the people in prayer and offered two rak`at (facing the Ka`ba) taking a short spear (or stick) as a Sutra for his prayer. I saw the people and animals passing in front of him beyond the stick",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1PFj-AsOGwkqMU91zuDxW-jKSkJegwI-w",
+      "player": "10R1YkgVwDDlbSCZ5VMi8m-lfF7NBPbPg"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 377,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَدَّثَنَا أَبُو حَازِمٍ، قَالَ سَأَلُوا سَهْلَ بْنَ سَعْدٍ مِنْ أَىِّ شَىْءٍ الْمِنْبَرُ فَقَالَ مَا بَقِيَ بِالنَّاسِ أَعْلَمُ مِنِّي هُوَ مِنْ أَثْلِ الْغَابَةِ، عَمِلَهُ فُلاَنٌ مَوْلَى فُلاَنَةَ لِرَسُولِ اللَّهِ ﷺ، وَقَامَ عَلَيْهِ رَسُولُ اللَّهِ ﷺ حِينَ عُمِلَ، وَوُضِعَ، فَاسْتَقْبَلَ الْقِبْلَةَ كَبَّرَ وَقَامَ النَّاسُ خَلْفَهُ، فَقَرَأَ وَرَكَعَ وَرَكَعَ النَّاسُ خَلْفَهُ، ثُمَّ رَفَعَ رَأْسَهُ، ثُمَّ رَجَعَ الْقَهْقَرَى، فَسَجَدَ عَلَى الأَرْضِ، ثُمَّ عَادَ إِلَى الْمِنْبَرِ، ثُمَّ قَرَأَ ثُمَّ رَكَعَ، ثُمَّ رَفَعَ رَأْسَهُ، ثُمَّ رَجَعَ الْقَهْقَرَى حَتَّى سَجَدَ بِالأَرْضِ، فَهَذَا شَأْنُهُ. قَالَ أَبُو عَبْدِ اللَّهِ قَالَ عَلِيُّ بْنُ عَبْدِ اللَّهِ سَأَلَنِي أَحْمَدُ بْنُ حَنْبَلٍ ـ رَحِمَهُ اللَّهُ ـ عَنْ هَذَا الْحَدِيثِ، قَالَ فَإِنَّمَا أَرَدْتُ أَنَّ النَّبِيَّ ﷺ كَانَ أَعْلَى مِنَ النَّاسِ، فَلاَ بَأْسَ أَنْ يَكُونَ الإِمَامُ أَعْلَى مِنَ النَّاسِ بِهَذَا الْحَدِيثِ. قَالَ فَقُلْتُ إِنَّ سُفْيَانَ بْنَ عُيَيْنَةَ كَانَ يُسْأَلُ عَنْ هَذَا كَثِيرًا فَلَمْ تَسْمَعْهُ مِنْهُ قَالَ لاَ.",
+     "gharib": [
+      {
+       "word": "أَثْلِ",
+       "meaning": "نوع من الشجر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٦."
+      },
+      {
+       "word": "الْقَهْقَرَى",
+       "meaning": "المشي إلى الخلف دون تحويل الوجه إلى جهة المشي.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة قهقر، ٤/١٢٩."
+      },
+      {
+       "word": "الْغَابَةِ",
+       "meaning": "موضع من عوالي المدينة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 377"
+     },
+     "en": {
+      "narrator": "Abu Hazim",
+      "text": "Sahl bin Sa`d was asked about the (Prophet's) pulpit as to what thing it was made of? Sahl replied: \"None remains alive amongst the people, who knows about it better than I. It was made of tamarisk (wood) of the forest. So and so, the slave of so and so prepared it for Allah's Messenger (ﷺ) . When it was constructed and place (in the Mosque), Allah's Messenger (ﷺ) stood on it facing the Qibla and said 'Allahu Akbar', and the people stood behind him (and led the people in prayer). He recited and bowed and the people bowed behind him. Then he raised his head and stepped back, got down and prostrated on the ground and then he again ascended the pulpit, recited, bowed, raised his head and stepped back, got down and prostrated on the ground. So, this is what I know about the pulpit.\" Ahmad bin Hanbal said, \"As the Prophet (ﷺ) was at a higher level than the people, there is no harm according to the above-mentioned Hadith if the Imam is at a higher level than his followers during the prayers",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1-tQ0cAJ2s3cUQB1xsdIofM9LmlshRbjl",
+      "player": "1LWXylVDyknnajzN8AUiXlEiRxHjDImic"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 378,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ الرَّحِيمِ،",
+     "matn": "قَالَ حَدَّثَنَا يَزِيدُ بْنُ هَارُونَ، قَالَ أَخْبَرَنَا حُمَيْدٌ الطَّوِيلُ، عَنْ أَنَسِ بْنِ مَالِكٍ، أَنَّ رَسُولَ اللَّهِ ﷺ سَقَطَ عَنْ فَرَسِهِ، فَجُحِشَتْ سَاقُهُ أَوْ كَتِفُهُ، وَآلَى مِنْ نِسَائِهِ شَهْرًا، فَجَلَسَ فِي مَشْرُبَةٍ لَهُ، دَرَجَتُهَا مِنْ جُذُوعٍ، فَأَتَاهُ أَصْحَابُهُ يَعُودُونَهُ، فَصَلَّى بِهِمْ جَالِسًا، وَهُمْ قِيَامٌ فَلَمَّا سَلَّمَ قَالَ  إِنَّمَا جُعِلَ الإِمَامُ لِيُؤْتَمَّ بِهِ، فَإِذَا كَبَّرَ فَكَبِّرُوا، وَإِذَا رَكَعَ فَارْكَعُوا، وَإِذَا سَجَدَ فَاسْجُدُوا، وَإِنْ صَلَّى قَائِمًا فَصَلُّوا قِيَامًا . وَنَزَلَ لِتِسْعٍ وَعِشْرِينَ فَقَالُوا يَا رَسُولَ اللَّهِ إِنَّكَ آلَيْتَ شَهْرًا فَقَالَ  إِنَّ الشَّهْرَ تِسْعٌ وَعِشْرُونَ .",
+     "gharib": [
+      {
+       "word": "فَجُحِشَتْ",
+       "meaning": "خدشت أو أصابها ما هو أشد من الخدش قليلا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٧–٤٨٨."
+      },
+      {
+       "word": "وَآلَى",
+       "meaning": "حلف ألا يدخل على نسائه شهرا؛ وليس المراد هنا الاصطلاح الفقهي الخاص بالإيلاء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٧–٤٨٨."
+      },
+      {
+       "word": "مَشْرُبَةٍ",
+       "meaning": "غرفة مرتفعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٧–٤٨٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٨",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 378"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "Once Allah's Messenger (ﷺ) fell off a horse and his leg or shoulder got injured. He swore that he would not go to his wives for one month and he stayed in a Mashruba [??] (attic room) having stairs made of date palm trunks. So his companions came to visit him, and he led them in prayer sitting, whereas his companions were standing. When he finished the prayer, he said, \"Imam is meant to be followed, so when he says 'Allahu Akbar,' say 'Allahu Akbar' and when he bows, bow and when he prostrates, prostrate and if he prays standing pray, standing. After the 29th day the Prophet (ﷺ) came down (from the attic room) and the people asked him, \"O Allah's Messenger (ﷺ)! You swore that you will not go to your wives for one month.\" He said, \"The month is 29 days",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ePMeHR09nrwG7KC5txnZE6gBygqhjKi-",
+      "player": "1Eg-mdjwR6-MbC0AYljRKtLLnJU0bAKIe"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 379,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُسَدَّدٌ، عَنْ خَالِدٍ، قَالَ حَدَّثَنَا سُلَيْمَانُ الشَّيْبَانِيُّ، عَنْ عَبْدِ اللَّهِ بْنِ شَدَّادٍ، عَنْ مَيْمُونَةَ، قَالَتْ كَانَ رَسُولُ اللَّهِ ﷺ يُصَلِّي وَأَنَا حِذَاءَهُ وَأَنَا حَائِضٌ وَرُبَّمَا أَصَابَنِي ثَوْبُهُ إِذَا سَجَدَ. قَالَتْ وَكَانَ يُصَلِّي عَلَى الْخُمْرَةِ.",
+     "gharib": [
+      {
+       "word": "الْخُمْرَةِ",
+       "meaning": "حصير صغير أو نسيجة خوص بقدر ما يوضع عليه الوجه في السجود.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة خمر، ٢/٧٧."
+      },
+      {
+       "word": "حِذَاءَهُ",
+       "meaning": "بإزائه ومحاذاته.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة حذا، ١/٣٥٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 379"
+     },
+     "en": {
+      "narrator": "",
+      "text": "Narrates `Abdullah bin Shaddad:Maimuna said, \"Allah's Messenger (ﷺ) was praying while I was in my menses, sitting beside him and sometimes his clothes would touch me during his prostration.\" Maimuna added, \"He prayed on a Khumra (a small mat sufficient just for the face and the hands while prostrating during prayers)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "15lgdnoStgHY1wjJiHDBaCG3-JnS4Rqxs",
+      "player": "15dz3KnzGPTpomDKMKHuScGHmKyB_Sy-A"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 380,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا مَالِكٌ،",
+     "matn": "عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ، أَنَّ جَدَّتَهُ، مُلَيْكَةَ دَعَتْ رَسُولَ اللَّهِ ﷺ لِطَعَامٍ صَنَعَتْهُ لَهُ، فَأَكَلَ مِنْهُ ثُمَّ قَالَ  قُومُوا فَلأُصَلِّ لَكُمْ . قَالَ أَنَسٌ فَقُمْتُ إِلَى حَصِيرٍ لَنَا قَدِ اسْوَدَّ مِنْ طُولِ مَا لُبِسَ، فَنَضَحْتُهُ بِمَاءٍ، فَقَامَ رَسُولُ اللَّهِ ﷺ وَصَفَفْتُ وَالْيَتِيمَ وَرَاءَهُ، وَالْعَجُوزُ مِنْ وَرَائِنَا، فَصَلَّى لَنَا رَسُولُ اللَّهِ ﷺ رَكْعَتَيْنِ ثُمَّ انْصَرَفَ.",
+     "gharib": [
+      {
+       "word": "فَنَضَحْتُهُ",
+       "meaning": "رششته بالماء؛ لا يجزم من ذلك بسبق النجاسة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٠."
+      },
+      {
+       "word": "لُبِسَ",
+       "meaning": "استعمل في الافتراش؛ سمي الافتراش لبسا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 380"
+     },
+     "en": {
+      "narrator": "'Is-haq",
+      "text": "Anas bin Malik said, \"My grandmother Mulaika invited Allah's Messenger (ﷺ) for a meal which she herself had prepared. He ate from it and said, 'Get up! I will lead you in the prayer.' \" Anas added, \"I took my Hasir, washed it with water as it had become dark because of long use and Allah's Messenger (ﷺ) stood on it. The orphan (Damira or Ruh) and I aligned behind him and the old lady (Mulaika) stood behind us. Allah's Messenger (ﷺ) led us in the prayer and offered two rak`at and then left",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1QU_sizvYtKbGAvYNkoqP5EkFx5InbANm",
+      "player": "1C2i0yAp0Jy-toEEoaBseY9UuIZRBXimd"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 381,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْوَلِيدِ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا سُلَيْمَانُ الشَّيْبَانِيُّ، عَنْ عَبْدِ اللَّهِ بْنِ شَدَّادٍ، عَنْ مَيْمُونَةَ،",
+     "matn": "قَالَتْ كَانَ النَّبِيُّ ﷺ يُصَلِّي عَلَى الْخُمْرَةِ.",
+     "gharib": [
+      {
+       "word": "الْخُمْرَةِ",
+       "meaning": "حصير صغير أو نسيجة خوص بقدر ما يوضع عليه الوجه في السجود.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة خمر، ٢/٧٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 381"
+     },
+     "en": {
+      "narrator": "Maimuna",
+      "text": "Allah's Messenger (ﷺ) used to pray on Khumra",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1eHVcp4JQex51n7hiTUkPDwDUTkYi6AnK",
+      "player": "1eS3mkhVfADg23FsRHjmdORPIqsjbTgbR"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 382,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ، قَالَ حَدَّثَنِي مَالِكٌ،",
+     "matn": "عَنْ أَبِي النَّضْرِ، مَوْلَى عُمَرَ بْنِ عُبَيْدِ اللَّهِ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ عَائِشَةَ، زَوْجِ النَّبِيِّ ﷺ أَنَّهَا قَالَتْ كُنْتُ أَنَامُ بَيْنَ يَدَىْ رَسُولِ اللَّهِ ﷺ وَرِجْلاَىَ فِي قِبْلَتِهِ، فَإِذَا سَجَدَ غَمَزَنِي، فَقَبَضْتُ رِجْلَىَّ، فَإِذَا قَامَ بَسَطْتُهُمَا. قَالَتْ وَالْبُيُوتُ يَوْمَئِذٍ لَيْسَ فِيهَا مَصَابِيحُ.",
+     "gharib": [
+      {
+       "word": "قِبْلَتِهِ",
+       "meaning": "موضع سجوده في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٢."
+      },
+      {
+       "word": "غَمَزَنِي",
+       "meaning": "مسني منبها لي لأقبض رجلي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٢."
+      },
+      {
+       "word": "فَقَبَضْتُ",
+       "meaning": "ضممت رجلي وأبعدتهما عن موضع سجوده.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 382"
+     },
+     "en": {
+      "narrator": "Abu Salama",
+      "text": "`Aisha the wife of the Prophet (ﷺ) said, \"I used to sleep in front of Allah's Messenger (ﷺ) and my legs were opposite his Qibla and in prostration he pushed my legs and I withdrew then and when he stood, I stretched them.' `Aisha added, \"In those days the houses were without lights",
       "source": "sunnah.com (Muhsin Khan)"
      },
      "audio": {
