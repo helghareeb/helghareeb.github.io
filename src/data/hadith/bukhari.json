@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 390,
+   "last": 394,
    "hadith": [
     {
      "n": 349,
@@ -16891,6 +16891,170 @@
       },
       "id": "1ja-St6rZLCmgEQn-i3LWPYN7m-oKjv8m",
       "player": "1c5suEQtDd63roV6vIhY75D8J39D3Gzbz"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 391,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَمْرُو بْنُ عَبَّاسٍ، قَالَ حَدَّثَنَا ابْنُ الْمَهْدِيِّ، قَالَ حَدَّثَنَا مَنْصُورُ بْنُ سَعْدٍ، عَنْ مَيْمُونِ بْنِ سِيَاهٍ، عَنْ أَنَسِ بْنِ مَالِكٍ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ",
+     "matn": "مَنْ صَلَّى صَلاَتَنَا، وَاسْتَقْبَلَ قِبْلَتَنَا، وَأَكَلَ ذَبِيحَتَنَا، فَذَلِكَ الْمُسْلِمُ الَّذِي لَهُ ذِمَّةُ اللَّهِ وَذِمَّةُ رَسُولِهِ، فَلاَ تُخْفِرُوا اللَّهَ فِي ذِمَّتِهِ .",
+     "gharib": [
+      {
+       "word": "تُخْفِرُوا",
+       "meaning": "تنقضوا العهد والأمان وتغدروا بمن له الذمة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٦."
+      },
+      {
+       "word": "ذِمَّةِ",
+       "meaning": "العهد والأمان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٦."
+      },
+      {
+       "word": "ذِمَّتِهِ",
+       "meaning": "العهد والأمان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٦."
+      },
+      {
+       "word": "وذمة",
+       "meaning": "العهد والأمان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٩١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 391"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "Allah's Messenger (ﷺ) said, \"Whoever prays like us and faces our Qibla and eats our slaughtered animals is a Muslim and is under Allah's and His Apostle's protection. So do not betray Allah by betraying those who are in His protection",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 392,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا نُعَيْمٌ، قَالَ حَدَّثَنَا ابْنُ الْمُبَارَكِ، عَنْ حُمَيْدٍ الطَّوِيلِ، عَنْ أَنَسِ بْنِ مَالِكٍ،",
+     "matn": "قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  أُمِرْتُ أَنْ أُقَاتِلَ النَّاسَ حَتَّى يَقُولُوا لاَ إِلَهَ إِلاَّ اللَّهُ. فَإِذَا قَالُوهَا وَصَلَّوْا صَلاَتَنَا، وَاسْتَقْبَلُوا قِبْلَتَنَا، وَذَبَحُوا ذَبِيحَتَنَا، فَقَدْ حَرُمَتْ عَلَيْنَا دِمَاؤُهُمْ وَأَمْوَالُهُمْ إِلاَّ بِحَقِّهَا، وَحِسَابُهُمْ عَلَى اللَّهِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٩٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 392"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "Allah's Messenger (ﷺ) said, \"I have been ordered to fight the people till they say: 'None has the right to be worshipped but Allah.' And if they say so, pray like our prayers, face our Qibla and slaughter as we slaughter, then their blood and property will be sacred to us and we will not interfere with them except legally and their reckoning will be with Allah",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 393,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "قَالَ ابْنُ أَبِي مَرْيَمَ أَخْبَرَنَا يَحْيَى، حَدَّثَنَا حُمَيْدٌ، حَدَّثَنَا أَنَسٌ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ. وَقَالَ عَلِيُّ بْنُ عَبْدِ اللَّهِ حَدَّثَنَا خَالِدُ بْنُ الْحَارِثِ قَالَ حَدَّثَنَا حُمَيْدٌ قَالَ سَأَلَ مَيْمُونُ بْنُ سِيَاهٍ أَنَسَ بْنَ مَالِكٍ قَالَ يَا أَبَا حَمْزَةَ، مَا يُحَرِّمُ دَمَ الْعَبْدِ وَمَالَهُ فَقَالَ مَنْ شَهِدَ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ، وَاسْتَقْبَلَ قِبْلَتَنَا، وَصَلَّى صَلاَتَنَا، وَأَكَلَ ذَبِيحَتَنَا، فَهُوَ الْمُسْلِمُ، لَهُ مَا لِلْمُسْلِمِ، وَعَلَيْهِ مَا عَلَى الْمُسْلِمِ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٩٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 393"
+     },
+     "en": {
+      "narrator": "",
+      "text": "Narrated Maimun bin Siyah that he asked Anas bin Malik, \"O Abu Hamza! What makes the life and property of a person sacred?\" He replied, \"Whoever says, 'None has the right to be worshipped but Allah', faces our Qibla during the prayers, prays like us and eats our slaughtered animal, then he is a Muslim, and has got the same rights and obligations as other Muslims have",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 394,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَدَّثَنَا الزُّهْرِيُّ، عَنْ عَطَاءِ بْنِ يَزِيدَ، عَنْ أَبِي أَيُّوبَ الأَنْصَارِيِّ، أَنَّ النَّبِيَّ ﷺ قَالَ",
+     "matn": "إِذَا أَتَيْتُمُ الْغَائِطَ فَلاَ تَسْتَقْبِلُوا الْقِبْلَةَ وَلاَ تَسْتَدْبِرُوهَا، وَلَكِنْ شَرِّقُوا أَوْ غَرِّبُوا . قَالَ أَبُو أَيُّوبَ فَقَدِمْنَا الشَّأْمَ فَوَجَدْنَا مَرَاحِيضَ بُنِيَتْ قِبَلَ الْقِبْلَةِ، فَنَنْحَرِفُ وَنَسْتَغْفِرُ اللَّهَ تَعَالَى. وَعَنِ الزُّهْرِيِّ عَنْ عَطَاءٍ قَالَ سَمِعْتُ أَبَا أَيُّوبَ عَنِ النَّبِيِّ ﷺ مِثْلَهُ.",
+     "gharib": [
+      {
+       "word": "شَرِّقُوا",
+       "meaning": "اتجهوا إلى الشرق؛ الخطاب لأهل المدينة ومن على سمتهم، لا لجميع البلدان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٨."
+      },
+      {
+       "word": "غَرِّبُوا",
+       "meaning": "اتجهوا إلى الغرب؛ بحسب جهة القبلة عند المخاطبين من أهل المدينة ومن على سمتهم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٩٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 394"
+     },
+     "en": {
+      "narrator": "Abu Aiyub Al-Ansari",
+      "text": "The Prophet (ﷺ) said, \"While defecating, neither face nor turn your back to the Qibla but face either east or west.\" Abu Aiyub added. \"When we arrived in Sham we came across some lavatories facing the Qibla; therefore we turned ourselves while using them and asked for Allah's forgiveness",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Bf8rtsp8VrWsEiejKsbvVEP8sanvyzdZ",
+      "player": "1EFHloJbQLXNhiLbU7t7PFNzPAO8m3dUa"
      },
      "video": null,
      "sharh": null,
