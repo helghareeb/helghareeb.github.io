@@ -3,3 +3,7 @@ Official paired font/text package: https://download.qurancomplex.gov.sa/resource
 Source: https://qurancomplex.gov.sa/quran-dev/
 Package SHA256: 227e6b1564d980f2bd09c2c35ebfb0330ac268c79a7c247cd1ab665bc635f245
 Quran excerpts are copied without character changes from aya_text_unicode in the paired official JSON. The verse-number suffix is outside each excerpt.
+
+Amiri Regular and Bold: local ArabicResearch-Amiri font installation; Copyright 2010-2022 The Amiri Project Authors (https://github.com/aliftype/amiri). Both actual faces embedded for hadith pages, weights400/700. SIL Open Font License1.1, see AMIRI-OFL.txt, downloaded from official project repository.
+amiri-regular.ttf SHA256 ab391c4147d054c48976e98322ad0eefe1427aa0e0502a12a4c75d80a70cfcd7
+amiri-bold.ttf SHA256 cfccb794268e7d573d857e6d6a67f89cf8a053e8ffd85dfa0c8ec1bb36fc4827

@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 350,
+   "last": 358,
    "hadith": [
     {
      "n": 349,
@@ -15074,6 +15074,341 @@
       },
       "id": "1_Rxcm_WxsWbCx_AER-Bh-YIDs0NgiuJM",
       "player": "13KtrDGjWURgahvpEjGgEF-8R_1djkU-2"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 351,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ إِبْرَاهِيمَ، عَنْ مُحَمَّدٍ، عَنْ أُمِّ عَطِيَّةَ، قَالَتْ أُمِرْنَا أَنْ نُخْرِجَ، الْحُيَّضَ يَوْمَ الْعِيدَيْنِ وَذَوَاتِ الْخُدُورِ، فَيَشْهَدْنَ جَمَاعَةَ الْمُسْلِمِينَ وَدَعْوَتَهُمْ، وَيَعْتَزِلُ الْحُيَّضُ عَنْ مُصَلاَّهُنَّ. قَالَتِ امْرَأَةٌ يَا رَسُولَ اللَّهِ، إِحْدَانَا لَيْسَ لَهَا جِلْبَابٌ. قَالَ",
+     "matn": "لِتُلْبِسْهَا صَاحِبَتُهَا مِنْ جِلْبَابِهَا . وَقَالَ عَبْدُ اللَّهِ بْنُ رَجَاءٍ حَدَّثَنَا عِمْرَانُ، حَدَّثَنَا مُحَمَّدُ بْنُ سِيرِينَ، حَدَّثَتْنَا أُمُّ عَطِيَّةَ، سَمِعْتُ النَّبِيَّ ﷺ بِهَذَا.",
+     "gharib": [
+      {
+       "word": "الْخُدُورِ",
+       "meaning": "جمع خدر، وهو ناحية من البيت يجعل عليها ستر، تكون فيها الجارية البكر.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة خدر، ٢/١٣."
+      },
+      {
+       "word": "جِلْبَابٌ",
+       "meaning": "ثوب تشتمل به المرأة؛ قيل الرداء أو الملحفة، وقيل ما تغطي به رأسها وظهرها وصدرها.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة جلب، ١/٢٨٣."
+      },
+      {
+       "word": "الْحُيَّضَ",
+       "meaning": "النساء اللاتي عليهن الحيض، لا دم الحيض في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 351"
+     },
+     "en": {
+      "narrator": "Um `Atiya",
+      "text": "We were ordered to bring out our menstruating women and veiled women in the religious gatherings and invocation of Muslims on the two `Id festivals. These menstruating women were to keep away from their Musalla. A woman asked, \"O Allah's Messenger (ﷺ) ' What about one who does not have a veil?\" He said, \"Let her share the veil of her companion",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 352,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَحْمَدُ بْنُ يُونُسَ، قَالَ حَدَّثَنَا عَاصِمُ بْنُ مُحَمَّدٍ، قَالَ حَدَّثَنِي وَاقِدُ بْنُ مُحَمَّدٍ، عَنْ مُحَمَّدِ بْنِ الْمُنْكَدِرِ، قَالَ صَلَّى جَابِرٌ فِي إِزَارٍ قَدْ عَقَدَهُ مِنْ قِبَلِ قَفَاهُ، وَثِيَابُهُ مَوْضُوعَةٌ عَلَى الْمِشْجَبِ قَالَ لَهُ قَائِلٌ تُصَلِّي فِي إِزَارٍ وَاحِدٍ فَقَالَ إِنَّمَا صَنَعْتُ ذَلِكَ لِيَرَانِي أَحْمَقُ مِثْلُكَ، وَأَيُّنَا كَانَ لَهُ ثَوْبَانِ عَلَى عَهْدِ النَّبِيِّ ﷺ",
+     "gharib": [
+      {
+       "word": "الْمِشْجَبِ",
+       "meaning": "عيدان تضم رؤوسها ويفرج بين قوائمها، توضع عليها الثياب وغيرها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٧."
+      },
+      {
+       "word": "قَفَاهُ",
+       "meaning": "مؤخر عنقه؛ أي عقد الإزار من تلك الجهة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٧."
+      },
+      {
+       "word": "أَحْمَقُ",
+       "meaning": "مراده في هذا السياق جاهل بهذا الحكم، كما فسره الشارح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 352"
+     },
+     "en": {
+      "narrator": "Muhammad bin Al-Munkadir",
+      "text": "Once Jabir prayed with his Izar tied to his back while his clothes were Lying beside him on a wooden peg. Somebody asked him, \"Do you offer your prayer in a single Izar?\" He replied, \"I did so to show it to a fool like you. Had anyone of us two garments in the lifetime of the Prophet?",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1oeEcSYUZdJWav7UuCc1XMxzH34nh8wh3",
+      "player": "17uSgPGG_GzrzcgAC53_9i1QimyxT4SvS"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 353,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُطَرِّفٌ أَبُو مُصْعَبٍ، قَالَ حَدَّثَنَا عَبْدُ الرَّحْمَنِ بْنُ أَبِي الْمَوَالِي، عَنْ مُحَمَّدِ بْنِ الْمُنْكَدِرِ، قَالَ رَأَيْتُ جَابِرَ بْنَ عَبْدِ اللَّهِ يُصَلِّي فِي ثَوْبٍ وَاحِدٍ وَقَالَ رَأَيْتُ النَّبِيَّ ﷺ يُصَلِّي فِي ثَوْبٍ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 353"
+     },
+     "en": {
+      "narrator": "Muhammad bin Al Munkadir",
+      "text": "I saw Jabir bin `Abdullah praying in a single garment and he said that he had seen the Prophet (ﷺ) praying in a single garment",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1BoVk7Io2HDWzggWXXIrtIO4c6bHGkFLz",
+      "player": "1OUOLPyBWeI-IKXNsw2lR1gHGzR0dXFYb"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 354,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُوسَى، قَالَ حَدَّثَنَا هِشَامُ بْنُ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عُمَرَ بْنِ أَبِي سَلَمَةَ، أَنَّ النَّبِيَّ ﷺ صَلَّى فِي ثَوْبٍ وَاحِدٍ قَدْ خَالَفَ بَيْنَ طَرَفَيْهِ.",
+     "gharib": [
+      {
+       "word": "خَالَفَ",
+       "meaning": "جعل طرفي الثوب على عاتقيه متخالفين، وهو من هيئة التوشح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 354"
+     },
+     "en": {
+      "narrator": "`Umar bin Abi Salama",
+      "text": "The Prophet (ﷺ) prayed in one garment and crossed its ends",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 355,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا يَحْيَى، قَالَ حَدَّثَنَا هِشَامٌ، قَالَ حَدَّثَنِي أَبِي، عَنْ عُمَرَ بْنِ أَبِي سَلَمَةَ، أَنَّهُ رَأَى النَّبِيَّ ﷺ يُصَلِّي فِي ثَوْبٍ وَاحِدٍ فِي بَيْتِ أُمِّ سَلَمَةَ، قَدْ أَلْقَى طَرَفَيْهِ عَلَى عَاتِقَيْهِ.",
+     "gharib": [
+      {
+       "word": "عَاتِقَيْهِ",
+       "meaning": "ناحيتا ما بين المنكبين وأصل العنق؛ والمراد هنا موضعا إلقاء طرفي الثوب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 355"
+     },
+     "en": {
+      "narrator": "`Umar bin Abi Salama",
+      "text": "I saw the Prophet (ﷺ) offering prayers in a single garment in the house of Um-Salama and he had crossed its ends around his shoulders",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 356,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عُبَيْدُ بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، عَنْ هِشَامٍ، عَنْ أَبِيهِ، أَنَّ عُمَرَ بْنَ أَبِي سَلَمَةَ،",
+     "matn": "أَخْبَرَهُ قَالَ رَأَيْتُ رَسُولَ اللَّهِ ﷺ يُصَلِّي فِي ثَوْبٍ وَاحِدٍ مُشْتَمِلاً بِهِ فِي بَيْتِ أُمِّ سَلَمَةَ، وَاضِعًا طَرَفَيْهِ عَلَى عَاتِقَيْهِ.",
+     "gharib": [
+      {
+       "word": "عَاتِقَيْهِ",
+       "meaning": "ناحيتا ما بين المنكبين وأصل العنق؛ والمراد هنا موضعا إلقاء طرفي الثوب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧١."
+      },
+      {
+       "word": "مُشْتَمِلاً",
+       "meaning": "ملتفا بالثوب على الهيئة المبينة في الباب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 356"
+     },
+     "en": {
+      "narrator": "`Umar bin Abi Salama",
+      "text": "In the house of Um-Salama I saw Allah's Messenger (ﷺ) offering prayers, wrapped in a single garment around his body with its ends crossed round his shoulders",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1QVn9ozz96tBlwl0amuArP3LWsn_oYspK",
+      "player": "1u1kpFiXATRNvZJnPxru27JOp0pXjQAu3"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 357,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ أَبِي أُوَيْسٍ،",
+     "matn": "قَالَ حَدَّثَنِي مَالِكُ بْنُ أَنَسٍ، عَنْ أَبِي النَّضْرِ، مَوْلَى عُمَرَ بْنِ عُبَيْدِ اللَّهِ أَنَّ أَبَا مُرَّةَ، مَوْلَى أُمِّ هَانِئٍ بِنْتِ أَبِي طَالِبٍ أَخْبَرَهُ أَنَّهُ، سَمِعَ أُمَّ هَانِئٍ بِنْتَ أَبِي طَالِبٍ، تَقُولُ ذَهَبْتُ إِلَى رَسُولِ اللَّهِ ﷺ عَامَ الْفَتْحِ، فَوَجَدْتُهُ يَغْتَسِلُ، وَفَاطِمَةُ ابْنَتُهُ تَسْتُرُهُ قَالَتْ فَسَلَّمْتُ عَلَيْهِ فَقَالَ  مَنْ هَذِهِ . فَقُلْتُ أَنَا أُمُّ هَانِئٍ بِنْتُ أَبِي طَالِبٍ. فَقَالَ  مَرْحَبًا بِأُمِّ هَانِئٍ . فَلَمَّا فَرَغَ مِنْ غُسْلِهِ، قَامَ فَصَلَّى ثَمَانِيَ رَكَعَاتٍ، مُلْتَحِفًا فِي ثَوْبٍ وَاحِدٍ، فَلَمَّا انْصَرَفَ قُلْتُ يَا رَسُولَ اللَّهِ، زَعَمَ ابْنُ أُمِّي أَنَّهُ قَاتِلٌ رَجُلاً قَدْ أَجَرْتُهُ فُلاَنَ بْنَ هُبَيْرَةَ. فَقَالَ رَسُولُ اللَّهِ ﷺ  قَدْ أَجَرْنَا مَنْ أَجَرْتِ يَا أُمَّ هَانِئٍ . قَالَتْ أُمُّ هَانِئٍ وَذَاكَ ضُحًى.",
+     "gharib": [
+      {
+       "word": "مُلْتَحِفًا",
+       "meaning": "ملتفا بالثوب، مع المخالفة بين طرفيه على العاتقين في الطرق المفسرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٩–٤٧٠."
+      },
+      {
+       "word": "زَعَمَ",
+       "meaning": "ادعى في هذا الموضع، ولا يلزم من اللفظ هنا الحكم بكذب القائل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٩–٤٧٠."
+      },
+      {
+       "word": "أَجَرْتُهُ",
+       "meaning": "أعطيته الأمان والحماية من القتل في هذه القصة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٦٩–٤٧٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 357"
+     },
+     "en": {
+      "narrator": "Abu Murra",
+      "text": "(the freed slave of Um Hani) Um Hani, the daughter of Abi Talib said, \"I went to Allah's Messenger (ﷺ) in the year of the conquest of Mecca and found him taking a bath and his daughter Fatima was screening him. I greeted him. He asked, 'Who is she?' I replied, 'I am Um Hani bint Abi Talib.' He said, 'Welcome! O Um Hani.' When he finished his bath he stood up and prayed eight rak`at while wearing a single garment wrapped round his body and when he finished I said, 'O Allah's Messenger (ﷺ) ! My brother has told me that he will kill a person whom I gave shelter and that person is so and so the son of Hubaira.' The Prophet (ﷺ) said, 'We shelter the person whom you have sheltered.' \" Um Hani added, \"And that was before noon (Duha)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "11lifkVlGH7vH0Q5Ccy9cq-IjAPIS5qIV",
+      "player": "12hm6BBbAvs79wvG--P7pijN3TDsvWGKL"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 358,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "أَنَّ سَائِلاً، سَأَلَ رَسُولَ اللَّهِ ﷺ عَنِ الصَّلاَةِ فِي ثَوْبٍ وَاحِدٍ فَقَالَ رَسُولُ اللَّهِ ﷺ  أَوَلِكُلِّكُمْ ثَوْبَانِ .",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥٨",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 358"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "A person asked Allah's Messenger (ﷺ) about the offering of the prayer in a single garment. Allah's Messenger (ﷺ) replied, \"Has every one of you got two garments?",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "11zmlzDRXQVxY0r02CKU24Uk4JVAueWy-",
+      "player": "1TWsuqBP2DO8myx25-cMbm8UXzbnhStQ4"
      },
      "video": null,
      "sharh": null,
