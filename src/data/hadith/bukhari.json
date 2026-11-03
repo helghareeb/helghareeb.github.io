@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 401,
+   "last": 405,
    "hadith": [
     {
      "n": 349,
@@ -17383,6 +17383,192 @@
       },
       "id": null,
       "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 402,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَمْرُو بْنُ عَوْنٍ، قَالَ حَدَّثَنَا هُشَيْمٌ، عَنْ حُمَيْدٍ، عَنْ أَنَسٍ، قَالَ قَالَ عُمَرُ وَافَقْتُ رَبِّي فِي ثَلاَثٍ، فَقُلْتُ يَا رَسُولَ اللَّهِ لَوِ اتَّخَذْنَا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى فَنَزَلَتْ {وَاتَّخِذُوا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى} وَآيَةُ الْحِجَابِ قُلْتُ يَا رَسُولَ اللَّهِ، لَوْ أَمَرْتَ نِسَاءَكَ أَنْ يَحْتَجِبْنَ، فَإِنَّهُ يُكَلِّمُهُنَّ الْبَرُّ وَالْفَاجِرُ. فَنَزَلَتْ آيَةُ الْحِجَابِ، وَاجْتَمَعَ نِسَاءُ النَّبِيِّ ﷺ فِي الْغَيْرَةِ عَلَيْهِ فَقُلْتُ لَهُنَّ عَسَى رَبُّهُ إِنْ طَلَّقَكُنَّ أَنْ يُبَدِّلَهُ أَزْوَاجًا خَيْرًا مِنْكُنَّ. فَنَزَلَتْ هَذِهِ الآيَةُ. حَدَّثَنَا ابْنُ أَبِي مَرْيَمَ، قَالَ أَخْبَرَنَا يَحْيَى بْنُ أَيُّوبَ، قَالَ حَدَّثَنِي حُمَيْدٌ، قَالَ سَمِعْتُ أَنَسًا، بِهَذَا.",
+     "gharib": [
+      {
+       "word": "وَافَقْتُ",
+       "meaning": "وافقت الوحي في الوقائع المذكورة؛ نسب الموافقة إلى نفسه من الأدب، كما شرح ابن حجر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٥–٥٠٦."
+      },
+      {
+       "word": "مَقَامِ",
+       "meaning": "مقام إبراهيم؛ الحجر الذي وقف عليه، وهو الأظهر في الأقوال التي ذكرها الشارح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٥–٥٠٦."
+      },
+      {
+       "word": "بِهَذَا",
+       "meaning": "بهذا الإسناد والمتن؛ متابعة أنس عن عمر في تفسير الشارح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٥–٥٠٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 402"
+     },
+     "en": {
+      "narrator": "`Umar (bin Al-Khattab)",
+      "text": "My Lord agreed with me in three things: -1. I said, \"O Allah's Messenger (ﷺ), I wish we took the station of Abraham as our praying place (for some of our prayers). So came the Divine Inspiration: And take you (people) the station of Abraham as a place of prayer (for some of your prayers e.g. two rak`at of Tawaf of Ka`ba)\". (2.125) -2. And as regards the (verse of) the veiling of the women, I said, 'O Allah's Messenger (ﷺ)! I wish you ordered your wives to cover themselves from the men because good and bad ones talk to them.' So the verse of the veiling of the women was revealed. -3. Once the wives of the Prophet (ﷺ) made a united front against the Prophet (ﷺ) and I said to them, 'It may be if he (the Prophet) divorced you, (all) that his Lord (Allah) will give him instead of you wives better than you.' So this verse (the same as I had said) was revealed Narrated Anas:as above",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1kgkuoPScbCjjs-i5Js7vQjzDHdbrrDHF",
+      "player": "1qEbUmZtibdtjzlfT4LOeeBMUc1CizsRe"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 403,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكُ بْنُ أَنَسٍ، عَنْ عَبْدِ اللَّهِ بْنِ دِينَارٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، قَالَ بَيْنَا النَّاسُ بِقُبَاءٍ فِي صَلاَةِ الصُّبْحِ إِذْ جَاءَهُمْ آتٍ فَقَالَ إِنَّ رَسُولَ اللَّهِ ﷺ قَدْ أُنْزِلَ عَلَيْهِ اللَّيْلَةَ قُرْآنٌ، وَقَدْ أُمِرَ أَنْ يَسْتَقْبِلَ الْكَعْبَةَ فَاسْتَقْبِلُوهَا، وَكَانَتْ وُجُوهُهُمْ إِلَى الشَّأْمِ، فَاسْتَدَارُوا إِلَى الْكَعْبَةِ.",
+     "gharib": [
+      {
+       "word": "بِقُبَاءٍ",
+       "meaning": "بمسجد أهل قباء، وهو موضع معروف خارج المدينة في تفسير الشارح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 403"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "While the people were offering the Fajr prayer at Quba' (near Medina), someone came to them and said: \"It has been revealed to Allah's Messenger (ﷺ) tonight, and he has been ordered to pray facing the Ka`ba.\" So turn your faces to the Ka`ba. Those people were facing Sham (Jerusalem) so they turned their faces towards Ka`ba (at Mecca)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 404,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ شُعْبَةَ، عَنِ الْحَكَمِ، عَنْ إِبْرَاهِيمَ، عَنْ عَلْقَمَةَ، عَنْ عَبْدِ اللَّهِ، قَالَ صَلَّى النَّبِيُّ ﷺ الظُّهْرَ خَمْسًا فَقَالُوا أَزِيدَ فِي الصَّلاَةِ قَالَ",
+     "matn": "وَمَا ذَاكَ . قَالُوا صَلَّيْتَ خَمْسًا. فَثَنَى رِجْلَيْهِ وَسَجَدَ سَجْدَتَيْنِ.",
+     "gharib": [
+      {
+       "word": "أَزِيدَ",
+       "meaning": "هل شرعت زيادة في عدد الصلاة؟",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٤، ٥٠٧."
+      },
+      {
+       "word": "فَثَنَى",
+       "meaning": "رد رجليه وتوجه للسجود؛ وبينت الرواية الأخرى أنه استقبل القبلة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٤، ٥٠٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 404"
+     },
+     "en": {
+      "narrator": "`Abdullah",
+      "text": "\"Once the Prophet (ﷺ) offered five rak`at in Zuhr prayer. He was asked, \"Is there an increase in the prayer?\" The Prophet (ﷺ) said, \"And what is it?\" They said, \"You have prayed five rak`at.' So he bent his legs and performed two prostrations (of Sahu)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1I8Pjy9J3YGXgdDqwMKiWG4uvbjRa75-1",
+      "player": "12G1ewFgH81nH3Zb9FkDs1kGJAXZQIl-W"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 405,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ بْنُ جَعْفَرٍ، عَنْ حُمَيْدٍ، عَنْ أَنَسٍ، أَنَّ النَّبِيَّ ﷺ رَأَى نُخَامَةً فِي الْقِبْلَةِ، فَشَقَّ ذَلِكَ عَلَيْهِ حَتَّى رُئِيَ فِي وَجْهِهِ، فَقَامَ فَحَكَّهُ بِيَدِهِ فَقَالَ",
+     "matn": "إِنَّ أَحَدَكُمْ إِذَا قَامَ فِي صَلاَتِهِ، فَإِنَّهُ يُنَاجِي رَبَّهُ ـ أَوْ إِنَّ رَبَّهُ بَيْنَهُ وَبَيْنَ الْقِبْلَةِ ـ فَلاَ يَبْزُقَنَّ أَحَدُكُمْ قِبَلَ قِبْلَتِهِ، وَلَكِنْ عَنْ يَسَارِهِ، أَوْ تَحْتَ قَدَمَيْهِ . ثُمَّ أَخَذَ طَرَفَ رِدَائِهِ فَبَصَقَ فِيهِ، ثُمَّ رَدَّ بَعْضَهُ عَلَى بَعْضٍ، فَقَالَ  أَوْ يَفْعَلْ هَكَذَا .",
+     "gharib": [
+      {
+       "word": "نُخَامَةً",
+       "meaning": "ما يطرح من الرأس أو الصدر؛ نقل الشارح اختلاف التفريق بينها وبين النخاعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥٠٩."
+      },
+      {
+       "word": "الْقِبْلَةِ",
+       "meaning": "الحائط الذي من جهة القبلة في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥٠٩."
+      },
+      {
+       "word": "قِبَلَ",
+       "meaning": "جهة قبلته.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥٠٩."
+      },
+      {
+       "word": "رِدَائِهِ",
+       "meaning": "الثوب الذي يلبسه على أعلى بدنه؛ استعمل طرفه لما بادره البزاق في شرح الباب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 405"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) saw some sputum in the direction of the Qibla (on the wall of the mosque) and he disliked that and the sign of disgust was apparent from his face. So he got up and scraped it off with his hand and said, \"Whenever anyone of you stands for the prayer, he is speaking in private to his Lord or his Lord is between him and his Qibla. So, none of you should spit in the direction of the Qibla but one can spit to the left or under his foot.\" The Prophet (ﷺ) then took the corner of his sheet and spat in it and folded it and said, \"Or you can do this",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1bsRxsmmuv7LVtjO49GSdkAL45jVTsVwr",
+      "player": "1fwhQZv9d7wbr9nPzY_gHEZJuV_SwadXG"
      },
      "video": null,
      "sharh": null,
