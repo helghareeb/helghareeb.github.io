@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 366,
+   "last": 374,
    "hadith": [
     {
      "n": 349,
@@ -15737,6 +15737,453 @@
      "en": {
       "narrator": "Ibn `Umar",
       "text": "A person asked Allah's Messenger (ﷺ), \"What should a Muhrim wear?\" He replied, \"He should not wear shirts, trousers, a burnus (a hooded cloak), or clothes which are stained with saffron or Wars (a kind of perfume). Whoever does not find a sandal to wear can wear Khuffs (socks made from thick fabric or leather), but these should be cut short so as not to cover the ankles",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 367,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا لَيْثٌ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ عُتْبَةَ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، أَنَّهُ قَالَ نَهَى رَسُولُ اللَّهِ ﷺ عَنِ اشْتِمَالِ الصَّمَّاءِ وَأَنْ يَحْتَبِيَ الرَّجُلُ فِي ثَوْبٍ وَاحِدٍ، لَيْسَ عَلَى فَرْجِهِ مِنْهُ شَىْءٌ.",
+     "gharib": [
+      {
+       "word": "الصَّمَّاءَ",
+       "meaning": "هيئة تلفف بالثوب؛ فسرها أهل اللغة بسد منافذه، والفقهاء برفع أحد جانبيه حتى ينكشف بعض العورة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٧."
+      },
+      {
+       "word": "يَحْتَبِيَ",
+       "meaning": "يجلس على أليتيه وينصب ساقيه ويجمعهما إلى بدنه بثوب؛ والنهي هنا عند عدم ستر الفرج.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 367"
+     },
+     "en": {
+      "narrator": "Abu Sa`id Al-Khudri",
+      "text": "Allah's Messenger (ﷺ) forbade Ishtimal-As-Samma' (wrapping one's body with a garment so that one cannot raise its end or take one's hand out of it). He also forbade Al-Ihtiba' (sitting on buttocks with knees close to `Abdomen and feet apart with the hands circling the knees) while wrapping oneself with a single garment, without having a part of it over the private parts",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 368,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا قَبِيصَةُ بْنُ عُقْبَةَ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ، قَالَ نَهَى النَّبِيُّ ﷺ عَنْ بَيْعَتَيْنِ عَنِ اللِّمَاسِ وَالنِّبَاذِ، وَأَنْ يَشْتَمِلَ الصَّمَّاءَ، وَأَنْ يَحْتَبِيَ الرَّجُلُ فِي ثَوْبٍ وَاحِدٍ.",
+     "gharib": [
+      {
+       "word": "الصَّمَّاءَ",
+       "meaning": "هيئة تلفف بالثوب؛ فسرها أهل اللغة بسد منافذه، والفقهاء برفع أحد جانبيه حتى ينكشف بعض العورة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٧."
+      },
+      {
+       "word": "يَحْتَبِيَ",
+       "meaning": "يجلس على أليتيه وينصب ساقيه ويجمعهما إلى بدنه بثوب؛ والنهي هنا عند عدم ستر الفرج.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٧."
+      },
+      {
+       "word": "اللِّمَاسِ",
+       "meaning": "بيع الملامسة؛ يجعل لمس الثوب سببا للزوم البيع.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة لمس، ٤/٢٦٩."
+      },
+      {
+       "word": "والنِّبَاذِ",
+       "meaning": "بيع المنابذة؛ يجعل نبذ الثوب أو إلقاء الحصاة سببا للزوم البيع.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة نبذ، ٥/٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٨",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 368"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) forbade two kinds of sales i.e. Al-Limais and An-Nibadh (the former is a kind of sale in which the deal is completed if the buyer touches a thing, without seeing or checking it properly and the latter is a kind of a sale in which the deal is completed when the seller throws a thing towards the buyer giving him no opportunity to see, touch or check it) and (the Prophet (ﷺ) forbade) also Ishtimal-As-Samma' and Al-Ihtiba' in a single garment",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 369,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا إِسْحَاقُ، قَالَ حَدَّثَنَا يَعْقُوبُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا ابْنُ أَخِي ابْنِ شِهَابٍ، عَنْ عَمِّهِ، قَالَ أَخْبَرَنِي حُمَيْدُ بْنُ عَبْدِ الرَّحْمَنِ بْنِ عَوْفٍ، أَنَّ أَبَا هُرَيْرَةَ، قَالَ بَعَثَنِي أَبُو بَكْرٍ فِي تِلْكَ الْحَجَّةِ فِي مُؤَذِّنِينَ يَوْمَ النَّحْرِ نُؤَذِّنُ بِمِنًى أَنْ لاَ يَحُجَّ بَعْدَ الْعَامِ مُشْرِكٌ، وَلاَ يَطُوفَ بِالْبَيْتِ عُرْيَانٌ. قَالَ حُمَيْدُ بْنُ عَبْدِ الرَّحْمَنِ ثُمَّ أَرْدَفَ رَسُولُ اللَّهِ ﷺ عَلِيًّا، فَأَمَرَهُ أَنْ يُؤَذِّنَ بِبَرَاءَةَ قَالَ أَبُو هُرَيْرَةَ فَأَذَّنَ مَعَنَا عَلِيٌّ فِي أَهْلِ مِنًى يَوْمَ النَّحْرِ لاَ يَحُجُّ بَعْدَ الْعَامِ مُشْرِكٌ، وَلاَ يَطُوفُ بِالْبَيْتِ عُرْيَانٌ.",
+     "gharib": [
+      {
+       "word": "مُؤَذِّنِينَ",
+       "meaning": "منادين معلنين للناس.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٧–٤٧٨."
+      },
+      {
+       "word": "بِبَرَاءَةَ",
+       "meaning": "بالإعلان الذي أمر به في شأن براءة؛ وتفصيله في أبواب الحج والتفسير.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٧–٤٧٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 369"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "On the Day of Nahr (10th of Dhul-Hijja, in the year prior to the last Hajj of the Prophet (ﷺ) when Abu Bakr was the leader of the pilgrims in that Hajj) Abu Bakr sent me along with other announcers to Mina to make a public announcement: \"No pagan is allowed to perform Hajj after this year and no naked person is allowed to perform the Tawaf around the Ka`ba. Then Allah's Messenger (ﷺ) sent `Ali to read out the Surat Bara'a (at-Tauba) to the people; so he made the announcement along with us on the day of Nahr in Mina: \"No pagan is allowed to perform Hajj after this year and no naked person is allowed to perform the Tawaf around the Ka`ba",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 370,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنِي ابْنُ أَبِي الْمَوَالِي، عَنْ مُحَمَّدِ بْنِ الْمُنْكَدِرِ، قَالَ دَخَلْتُ عَلَى جَابِرِ بْنِ عَبْدِ اللَّهِ وَهُوَ يُصَلِّي فِي ثَوْبٍ مُلْتَحِفًا بِهِ وَرِدَاؤُهُ مَوْضُوعٌ، فَلَمَّا انْصَرَفَ قُلْنَا يَا أَبَا عَبْدِ اللَّهِ تُصَلِّي وَرِدَاؤُكَ مَوْضُوعٌ قَالَ نَعَمْ، أَحْبَبْتُ أَنْ يَرَانِي الْجُهَّالُ مِثْلُكُمْ، رَأَيْتُ النَّبِيَّ ﷺ يُصَلِّي هَكَذَا.",
+     "gharib": [
+      {
+       "word": "مُلْتَحِفًا",
+       "meaning": "متغطيا بالثوب ملتفا به.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 370"
+     },
+     "en": {
+      "narrator": "Muhammad bin Al-Munkadir",
+      "text": "I went to Jabir bin `Abdullah and he was praying wrapped in a garment and his Rida was Lying beside him. When he finished the prayers, I said \"O `Abdullah! You pray (in a single garment) while your Rida' is lying beside you.\" He replied, \"Yes, I did it intentionally so that the ignorant ones like you might see me. I saw the Prophet (ﷺ) praying like this",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 371,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَعْقُوبُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ ابْنُ عُلَيَّةَ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ صُهَيْبٍ،",
+     "matn": "عَنْ أَنَسٍ، أَنَّ رَسُولَ اللَّهِ ﷺ غَزَا خَيْبَرَ، فَصَلَّيْنَا عِنْدَهَا صَلاَةَ الْغَدَاةِ بِغَلَسٍ، فَرَكِبَ نَبِيُّ اللَّهِ ﷺ وَرَكِبَ أَبُو طَلْحَةَ، وَأَنَا رَدِيفُ أَبِي طَلْحَةَ، فَأَجْرَى نَبِيُّ اللَّهِ ﷺ فِي زُقَاقِ خَيْبَرَ، وَإِنَّ رُكْبَتِي لَتَمَسُّ فَخِذَ نَبِيِّ اللَّهِ ﷺ، ثُمَّ حَسَرَ الإِزَارَ عَنْ فَخِذِهِ حَتَّى إِنِّي أَنْظُرُ إِلَى بَيَاضِ فَخِذِ نَبِيِّ اللَّهِ ﷺ، فَلَمَّا دَخَلَ الْقَرْيَةَ قَالَ  اللَّهُ أَكْبَرُ، خَرِبَتْ خَيْبَرُ، إِنَّا إِذَا نَزَلْنَا بِسَاحَةِ قَوْمٍ فَسَاءَ صَبَاحُ الْمُنْذَرِينَ . قَالَهَا ثَلاَثًا. قَالَ وَخَرَجَ الْقَوْمُ إِلَى أَعْمَالِهِمْ فَقَالُوا مُحَمَّدٌ ـ قَالَ عَبْدُ الْعَزِيزِ وَقَالَ بَعْضُ أَصْحَابِنَا ـ وَالْخَمِيسُ. يَعْنِي الْجَيْشَ، قَالَ فَأَصَبْنَاهَا عَنْوَةً، فَجُمِعَ السَّبْىُ، فَجَاءَ دِحْيَةُ فَقَالَ يَا نَبِيَّ اللَّهِ، أَعْطِنِي جَارِيَةً مِنَ السَّبْىِ. قَالَ  اذْهَبْ فَخُذْ جَارِيَةً . فَأَخَذَ صَفِيَّةَ بِنْتَ حُيَىٍّ، فَجَاءَ رَجُلٌ إِلَى النَّبِيِّ ﷺ فَقَالَ يَا نَبِيَّ اللَّهِ، أَعْطَيْتَ دِحْيَةَ صَفِيَّةَ بِنْتَ حُيَىٍّ سَيِّدَةَ قُرَيْظَةَ وَالنَّضِيرِ، لاَ تَصْلُحُ إِلاَّ لَكَ. قَالَ  ادْعُوهُ بِهَا . فَجَاءَ بِهَا، فَلَمَّا نَظَرَ إِلَيْهَا النَّبِيُّ ﷺ قَالَ  خُذْ جَارِيَةً مِنَ السَّبْىِ غَيْرَهَا . قَالَ فَأَعْتَقَهَا النَّبِيُّ ﷺ وَتَزَوَّجَهَا. فَقَالَ لَهُ ثَابِتٌ يَا أَبَا حَمْزَةَ، مَا أَصْدَقَهَا قَالَ نَفْسَهَا، أَعْتَقَهَا وَتَزَوَّجَهَا، حَتَّى إِذَا كَانَ بِالطَّرِيقِ جَهَّزَتْهَا لَهُ أُمُّ سُلَيْمٍ فَأَهْدَتْهَا لَهُ مِنَ اللَّيْلِ، فَأَصْبَحَ النَّبِيُّ ﷺ عَرُوسًا فَقَالَ  مَنْ كَانَ عِنْدَهُ شَىْءٌ فَلْيَجِئْ بِهِ . وَبَسَطَ نِطَعًا، فَجَعَلَ الرَّجُلُ يَجِيءُ بِالتَّمْرِ، وَجَعَلَ الرَّجُلُ يَجِيءُ بِالسَّمْنِ ـ قَالَ وَأَحْسِبُهُ قَدْ ذَكَرَ السَّوِيقَ ـ قَالَ فَحَاسُوا حَيْسًا، فَكَانَتْ وَلِيمَةَ رَسُولِ اللَّهِ ﷺ.",
+     "gharib": [
+      {
+       "word": "السَّوِيقَ",
+       "meaning": "طعام يتخذ من الحنطة أو الشعير.",
+       "source": "ابن منظور، لسان العرب، مادة سوق، ١٠/١٧٠."
+      },
+      {
+       "word": "الْغَدَاةِ",
+       "meaning": "صلاة الصبح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٩–٤٨٢."
+      },
+      {
+       "word": "بِغَلَسٍ",
+       "meaning": "في ظلمة آخر الليل المختلطة بضوء الصباح.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة غلس، ٣/٣٧٧."
+      },
+      {
+       "word": "حَسَرَ",
+       "meaning": "كشف؛ ويحفظ لفظ هذه الطريق، مع وجود رواية أخرى بانحسر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٩–٤٨٢."
+      },
+      {
+       "word": "حَيْسًا",
+       "meaning": "طعام يخلط فيه التمر والسمن والأقط، وقد يدخل معه غيرها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٩–٤٨٢."
+      },
+      {
+       "word": "رَدِيفُ",
+       "meaning": "الراكب خلف الراكب.",
+       "source": "ابن منظور، لسان العرب، مادة ردف، ٩/١١٦."
+      },
+      {
+       "word": "زُقَاقِ",
+       "meaning": "طريق.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة زقق، ٢/٣٠٦."
+      },
+      {
+       "word": "والْخَمِيسُ",
+       "meaning": "الجيش؛ وقد بيّن الراوي هذا المعنى.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٩–٤٨٢."
+      },
+      {
+       "word": "نِطَعًا",
+       "meaning": "بساطا من الجلد.",
+       "source": "الزبيدي، تاج العروس، مادة نطع، ٢٢/٢٦١."
+      },
+      {
+       "word": "السَّبْيُ",
+       "meaning": "الأخذ من الناس عبيدا وإماء في الحرب؛ واللفظ هنا للمأخوذين.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة سبي، ٢/٣٤٠."
+      },
+      {
+       "word": "عَنْوَةً",
+       "meaning": "قهرا وغلبة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٩–٤٨٢."
+      },
+      {
+       "word": "أَصْدَقَهَا",
+       "meaning": "جعل لها صداقا؛ والمقصود هنا السؤال عن مهرها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٩–٤٨٢."
+      },
+      {
+       "word": "فَأَهْدَتْهَا",
+       "meaning": "زفتها إلى زوجها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٩–٤٨٢."
+      },
+      {
+       "word": "فَحَاسُوا",
+       "meaning": "خلطوا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٩–٤٨٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 371"
+     },
+     "en": {
+      "narrator": "`Abdul `Aziz",
+      "text": "Anas said, 'When Allah's Messenger (ﷺ) invaded Khaibar, we offered the Fajr prayer there (early in the morning) when it was still dark. The Prophet (ﷺ) rode and Abu Talha rode too and I was riding behind Abu Talha. The Prophet (ﷺ) passed through the lane of Khaibar quickly and my knee was touching the thigh of the Prophet (ﷺ) . He uncovered his thigh and I saw the whiteness of the thigh of the Prophet. When he entered the town, he said, 'Allahu Akbar! Khaibar is ruined. Whenever we approach near a (hostile) nation (to fight) then evil will be the morning of those who have been warned.' He repeated this thrice. The people came out for their jobs and some of them said, 'Muhammad (has come).' (Some of our companions added, \"With his army.\") We conquered Khaibar, took the captives, and the booty was collected. Dihya came and said, 'O Allah's Prophet! Give me a slave girl from the captives.' The Prophet said, 'Go and take any slave girl.' He took Safiya bint Huyai. A man came to the Prophet (ﷺ) and said, 'O Allah's Messenger (ﷺ)! You gave Safiya bint Huyai to Dihya and she is the chief mistress of the tribes of Quraidha and An-Nadir and she befits none but you.' So the Prophet (ﷺ) said, 'Bring him along with her.' So Dihya came with her and when the Prophet (ﷺ) saw her, he said to Dihya, 'Take any slave girl other than her from the captives.' Anas added: The Prophet (ﷺ) then manumitted her and married her.\" Thabit asked Anas, \"O Abu Hamza! What did the Prophet (ﷺ) pay her (as Mahr)?\" He said, \"Her self was her Mahr for he manumitted her and then married her.\" Anas added, \"While on the way, Um Sulaim dressed her for marriage (ceremony) and at night she sent her as a bride to the Prophet (ﷺ) . So the Prophet was a bridegroom and he said, 'Whoever has anything (food) should bring it.' He spread out a leather sheet (for the food) and some brought dates and others cooking butter. (I think he (Anas) mentioned As-Sawaq). So they prepared a dish of Hais (a kind of meal). And that was Walima (the marriage banquet) of Allah's Messenger (ﷺ)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1m66G9BjuOcgsC3r5JMR4cl-NJ5aXtx1l",
+      "player": "1T1K18qjWlsjfu1K0n9-CttLrBgxGWBHK"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 372,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي عُرْوَةُ، أَنَّ عَائِشَةَ، قَالَتْ لَقَدْ كَانَ رَسُولُ اللَّهِ ﷺ يُصَلِّي الْفَجْرَ، فَيَشْهَدُ مَعَهُ نِسَاءٌ مِنَ الْمُؤْمِنَاتِ مُتَلَفِّعَاتٍ فِي مُرُوطِهِنَّ ثُمَّ يَرْجِعْنَ إِلَى بُيُوتِهِنَّ مَا يَعْرِفُهُنَّ أَحَدٌ.",
+     "gharib": [
+      {
+       "word": "مُرُوطِهِنَّ",
+       "meaning": "أكسيتهن؛ جمع مرط، من صوف أو خز أو غيرهما.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٢."
+      },
+      {
+       "word": "مُتَلَفِّعَاتٍ",
+       "meaning": "متغطيات بالثياب تغطية تشمل الرأس.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 372"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Allah's Messenger (ﷺ) used to offer the Fajr prayer and some believing women covered with their veiling sheets used to attend the Fajr prayer with him and then they would return to their homes unrecognized",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1AvFwWkIPij2LrjX5Odjec_KlfquyH0Rh",
+      "player": "1TdwiifDiyL3iVScf53nz4FJYZmT-XJG2"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 373,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَحْمَدُ بْنُ يُونُسَ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، قَالَ حَدَّثَنَا ابْنُ شِهَابٍ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، أَنَّ النَّبِيَّ ﷺ صَلَّى فِي خَمِيصَةٍ لَهَا أَعْلاَمٌ، فَنَظَرَ إِلَى أَعْلاَمِهَا نَظْرَةً، فَلَمَّا انْصَرَفَ قَالَ",
+     "matn": "اذْهَبُوا بِخَمِيصَتِي هَذِهِ إِلَى أَبِي جَهْمٍ وَائْتُونِي بِأَنْبِجَانِيَّةِ أَبِي جَهْمٍ، فَإِنَّهَا أَلْهَتْنِي آنِفًا عَنْ صَلاَتِي . وَقَالَ هِشَامُ بْنُ عُرْوَةَ عَنْ أَبِيهِ عَنْ عَائِشَةَ قَالَ النَّبِيُّ ﷺ  كُنْتُ أَنْظُرُ إِلَى عَلَمِهَا وَأَنَا فِي الصَّلاَةِ فَأَخَافُ أَنْ تَفْتِنَنِي .",
+     "gharib": [
+      {
+       "word": "بِأَنْبِجَانِيَّةِ",
+       "meaning": "بكساء غليظ لا علم له.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٣."
+      },
+      {
+       "word": "بِخَمِيصَتِي",
+       "meaning": "بكسائي ذي الأعلام.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٣."
+      },
+      {
+       "word": "خَمِيصَةٍ",
+       "meaning": "كساء مربع له أعلام.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٣."
+      },
+      {
+       "word": "أَعْلاَمٌ",
+       "meaning": "خطوط أو علامات في الثوب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٣."
+      },
+      {
+       "word": "أَلْهَتْنِي",
+       "meaning": "شغلتني؛ وناقش الشارح معناها مع رواية كادت.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٣."
+      },
+      {
+       "word": "آنِفًا",
+       "meaning": "قريبا، في الوقت القريب الماضي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 373"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "the Prophet (ﷺ) prayed in a Khamisa (a square garment) having marks. During the prayer, he looked at its marks. So when he finished the prayer he said, \"Take this Khamisa of mine to Abu Jahm and get me his Inbijaniya (a woolen garment without marks) as it (the Khamisa) has diverted my attention from the prayer.\" Narrated `Aisha: The Prophet (ﷺ) said, 'I was looking at its (Khamisa's) marks during the prayers and I was afraid that it may put me in trial (by taking away my attention)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "11QVQR3wPibkTeB0Wryfpx9kUwIDr9e5Y",
+      "player": "1WgXwIkIP-cvXtFUeVH-wwFEs2gXgP6xq"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 374,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو مَعْمَرٍ عَبْدُ اللَّهِ بْنُ عَمْرٍو، قَالَ حَدَّثَنَا عَبْدُ الْوَارِثِ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ صُهَيْبٍ، عَنْ أَنَسٍ، كَانَ قِرَامٌ لِعَائِشَةَ سَتَرَتْ بِهِ جَانِبَ بَيْتِهَا فَقَالَ النَّبِيُّ ﷺ",
+     "matn": "أَمِيطِي عَنَّا قِرَامَكِ هَذَا، فَإِنَّهُ لاَ تَزَالُ تَصَاوِيرُهُ تَعْرِضُ فِي صَلاَتِي .",
+     "gharib": [
+      {
+       "word": "أَمِيطِي",
+       "meaning": "أزيلي.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٤."
+      },
+      {
+       "word": "قِرَامٌ",
+       "meaning": "ستر رقيق من صوف ذي ألوان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٤."
+      },
+      {
+       "word": "قِرَامَكِ",
+       "meaning": "سترك الرقيق ذو الألوان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٤."
+      },
+      {
+       "word": "تَعْرِضُ",
+       "meaning": "تلوح وتظهر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٨٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٧٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 374"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "`Aisha had a Qiram (a thin marked woolen curtain) with which she had screened one side of her home. The Prophet (ﷺ) said, \"Take away this Qiram of yours, as its pictures are still displayed in front of me during my prayer (i.e. they divert my attention from the prayer)",
       "source": "sunnah.com (Muhsin Khan)"
      },
      "audio": {
