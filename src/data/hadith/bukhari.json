@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 358,
+   "last": 366,
    "hadith": [
     {
      "n": 349,
@@ -15409,6 +15409,343 @@
       },
       "id": "11zmlzDRXQVxY0r02CKU24Uk4JVAueWy-",
       "player": "1TWsuqBP2DO8myx25-cMbm8UXzbnhStQ4"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 359,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو عَاصِمٍ، عَنْ مَالِكٍ، عَنْ أَبِي الزِّنَادِ، عَنْ عَبْدِ الرَّحْمَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ، قَالَ قَالَ النَّبِيُّ ﷺ",
+     "matn": "لاَ يُصَلِّي أَحَدُكُمْ فِي الثَّوْبِ الْوَاحِدِ، لَيْسَ عَلَى عَاتِقَيْهِ شَىْءٌ .",
+     "gharib": [
+      {
+       "word": "عَاتِقَيْهِ",
+       "meaning": "ناحيتا ما بين المنكبين وأصل العنق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٥٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 359"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"None of you should offer prayer in a single garment that does not cover the shoulders",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 360,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا شَيْبَانُ، عَنْ يَحْيَى بْنِ أَبِي كَثِيرٍ، عَنْ عِكْرِمَةَ، قَالَ سَمِعْتُهُ ـ أَوْ، كُنْتُ سَأَلْتُهُ ـ قَالَ سَمِعْتُ أَبَا هُرَيْرَةَ،",
+     "matn": "يَقُولُ أَشْهَدُ أَنِّي سَمِعْتُ رَسُولَ اللَّهِ ﷺ يَقُولُ  مَنْ صَلَّى فِي ثَوْبٍ وَاحِدٍ، فَلْيُخَالِفْ بَيْنَ طَرَفَيْهِ .",
+     "gharib": [
+      {
+       "word": "فَلْيُخَالِفْ",
+       "meaning": "ليجعل طرفي الثوب على عاتقيه متخالفين، كما بينته الطرق الأخرى.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 360"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"Whoever prays in a single garment must cross its ends (over the shoulders)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Ah1Q8h2vj5YwLP9ekp4-plz9i6Pyuo53",
+      "player": "17cm_KRCGXO3DjFffzRp7Ab8w5clIcomI"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 361,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ صَالِحٍ، قَالَ حَدَّثَنَا فُلَيْحُ بْنُ سُلَيْمَانَ، عَنْ سَعِيدِ بْنِ الْحَارِثِ، قَالَ سَأَلْنَا جَابِرَ بْنَ عَبْدِ اللَّهِ عَنِ الصَّلاَةِ، فِي الثَّوْبِ الْوَاحِدِ فَقَالَ خَرَجْتُ مَعَ النَّبِيِّ ﷺ فِي بَعْضِ أَسْفَارِهِ، فَجِئْتُ لَيْلَةً لِبَعْضِ أَمْرِي، فَوَجَدْتُهُ يُصَلِّي وَعَلَىَّ ثَوْبٌ وَاحِدٌ، فَاشْتَمَلْتُ بِهِ وَصَلَّيْتُ إِلَى جَانِبِهِ، فَلَمَّا انْصَرَفَ قَالَ",
+     "matn": "مَا السُّرَى يَا جَابِرُ . فَأَخْبَرْتُهُ بِحَاجَتِي، فَلَمَّا فَرَغْتُ قَالَ  مَا هَذَا الاِشْتِمَالُ الَّذِي رَأَيْتُ . قُلْتُ كَانَ ثَوْبٌ. يَعْنِي ضَاقَ. قَالَ  فَإِنْ كَانَ وَاسِعًا فَالْتَحِفْ بِهِ، وَإِنْ كَانَ ضَيِّقًا فَاتَّزِرْ بِهِ .",
+     "gharib": [
+      {
+       "word": "فَاشْتَمَلْتُ",
+       "meaning": "التففت بالثوب وتغطيت به؛ وتبحث كيفية هذا الاشتمال في سياق ضيق الثوب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٢."
+      },
+      {
+       "word": "السُّرَى",
+       "meaning": "السير ليلا؛ والسؤال هنا عن سبب المجيء في الليل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٢."
+      },
+      {
+       "word": "فَاتَّزِرْ",
+       "meaning": "اجعل الثوب إزارا يستر أسفل البدن.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 361"
+     },
+     "en": {
+      "narrator": "Sa`id bin Al-Harith",
+      "text": "I asked Jabir bin `Abdullah about praying in a single garment. He said, \"I traveled with the Prophet (ﷺ) during some of his journeys, and I came to him at night for some purpose and I found him praying. At that time, I was wearing a single garment with which I covered my shoulders and prayed by his side. When he finished the prayer, he asked, 'O Jabir! What has brought you here?' I told him what I wanted. When I finished, he asked, 'O Jabir! What is this garment which I have seen and with which you covered your shoulders?' I replied, 'It is a (tight) garment.' He said, 'If the garment is large enough, wrap it round the body (covering the shoulders) and if it is tight (too short) then use it as an Izar (tie it around your waist only)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Nor3lyuzBAKu9TYyc321VIas5FQEVUJi",
+      "player": "1ae2n9VkxCDn0_220zKv4yTTHokwwswo5"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 362,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ سُفْيَانَ، قَالَ حَدَّثَنِي أَبُو حَازِمٍ، عَنْ سَهْلٍ، قَالَ كَانَ رِجَالٌ يُصَلُّونَ مَعَ النَّبِيِّ ﷺ عَاقِدِي أُزْرِهِمْ عَلَى أَعْنَاقِهِمْ كَهَيْئَةِ الصِّبْيَانِ، وَقَالَ لِلنِّسَاءِ لاَ تَرْفَعْنَ رُءُوسَكُنَّ حَتَّى يَسْتَوِيَ الرِّجَالُ جُلُوسًا.",
+     "gharib": [
+      {
+       "word": "أُزْرِهِمْ",
+       "meaning": "جمع إزار؛ وقد عقدوها على الأعناق لضيقها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 362"
+     },
+     "en": {
+      "narrator": "Sahl",
+      "text": "The men used to pray with the Prophet (ﷺ) with their Izars tied around their necks as boys used to do; therefore the Prophet (ﷺ) told the women not to raise their heads till the men sat down straight (while praying)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 363,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى، قَالَ حَدَّثَنَا أَبُو مُعَاوِيَةَ، عَنِ الأَعْمَشِ، عَنْ مُسْلِمٍ، عَنْ مَسْرُوقٍ، عَنْ مُغِيرَةَ بْنِ شُعْبَةَ، قَالَ كُنْتُ مَعَ النَّبِيِّ ﷺ فِي سَفَرٍ فَقَالَ",
+     "matn": "يَا مُغِيرَةُ، خُذِ الإِدَاوَةَ . فَأَخَذْتُهَا فَانْطَلَقَ رَسُولُ اللَّهِ ﷺ حَتَّى تَوَارَى عَنِّي فَقَضَى حَاجَتَهُ، وَعَلَيْهِ جُبَّةٌ شَأْمِيَّةٌ، فَذَهَبَ لِيُخْرِجَ يَدَهُ مِنْ كُمِّهَا فَضَاقَتْ، فَأَخْرَجَ يَدَهُ مِنْ أَسْفَلِهَا، فَصَبَبْتُ عَلَيْهِ فَتَوَضَّأَ وُضُوءَهُ لِلصَّلاَةِ، وَمَسَحَ عَلَى خُفَّيْهِ، ثُمَّ صَلَّى.",
+     "gharib": [
+      {
+       "word": "الإِدَاوَةَ",
+       "meaning": "إناء صغير من جلد يتخذ للماء.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة أدا، ١/٣٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 363"
+     },
+     "en": {
+      "narrator": "Mughira bin Shu`ba",
+      "text": "Once I was traveling with the Prophet (ﷺ) and he said, \"O Mughira! take this container of water.\" I took it and Allah's Messenger (ﷺ) went far away till he disappeared. He answered the call of nature and was wearing a Syrian cloak. He tried to take out his hands from its sleeve but it was very tight so he took out his hands from under it. I poured water and he performed ablution like that for prayers and passed his wet hands over his Khuff (socks made from thick fabric or leather) and then prayed",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "17zZN98aDk5e3rutn2Ph34H4smuC_jMmh",
+      "player": "1h6iJ633I2cPj5B7gyVrrCTU1KtL47JNH"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 364,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مَطَرُ بْنُ الْفَضْلِ، قَالَ حَدَّثَنَا رَوْحٌ، قَالَ حَدَّثَنَا زَكَرِيَّاءُ بْنُ إِسْحَاقَ، حَدَّثَنَا عَمْرُو بْنُ دِينَارٍ، قَالَ سَمِعْتُ جَابِرَ بْنَ عَبْدِ اللَّهِ، يُحَدِّثُ أَنَّ رَسُولَ اللَّهِ ﷺ كَانَ يَنْقُلُ مَعَهُمُ الْحِجَارَةَ لِلْكَعْبَةِ وَعَلَيْهِ إِزَارُهُ. فَقَالَ لَهُ الْعَبَّاسُ عَمُّهُ يَا ابْنَ أَخِي، لَوْ حَلَلْتَ إِزَارَكَ فَجَعَلْتَ عَلَى مَنْكِبَيْكَ دُونَ الْحِجَارَةِ. قَالَ فَحَلَّهُ فَجَعَلَهُ عَلَى مَنْكِبَيْهِ، فَسَقَطَ مَغْشِيًّا عَلَيْهِ، فَمَا رُئِيَ بَعْدَ ذَلِكَ عُرْيَانًا ﷺ.",
+     "gharib": [
+      {
+       "word": "مَنْكِبَيْكَ",
+       "meaning": "المنكب ما بين الكتف والعنق؛ واللفظ مثنى.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة نكب، ٥/١١٣."
+      },
+      {
+       "word": "مَنْكِبَيْهِ",
+       "meaning": "المنكب ما بين الكتف والعنق؛ واللفظ مثنى.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة نكب، ٥/١١٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 364"
+     },
+     "en": {
+      "narrator": "Jabir bin `Abdullah",
+      "text": "While Allah's Messenger (ﷺ) was carrying stones (along) with the people of Mecca for (the building of) the Ka`ba wearing an Izar (waist-sheet cover), his uncle Al-`Abbas said to him, \"O my nephew! (It would be better) if you take off your Izar and put it over your shoulders underneath the stones.\" So he took off his Izar and put it over his shoulders, but he fell unconscious and since then he had never been seen naked",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1b4MjjLP50SyY0zfRsNEdRoSVsVGbvT6z",
+      "player": "1jlxOXTGx5B3ugFty90O8DcGdNg7zAVhg"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 365,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا سُلَيْمَانُ بْنُ حَرْبٍ، قَالَ حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ، عَنْ أَيُّوبَ، عَنْ مُحَمَّدٍ، عَنْ أَبِي هُرَيْرَةَ، قَالَ قَامَ رَجُلٌ إِلَى النَّبِيِّ ﷺ فَسَأَلَهُ عَنِ الصَّلاَةِ فِي الثَّوْبِ الْوَاحِدِ فَقَالَ",
+     "matn": "أَوَكُلُّكُمْ يَجِدُ ثَوْبَيْنِ . ثُمَّ سَأَلَ رَجُلٌ عُمَرَ فَقَالَ إِذَا وَسَّعَ اللَّهُ فَأَوْسِعُوا، جَمَعَ رَجُلٌ عَلَيْهِ ثِيَابَهُ، صَلَّى رَجُلٌ فِي إِزَارٍ وَرِدَاءٍ، فِي إِزَارٍ وَقَمِيصٍ، فِي إِزَارٍ وَقَبَاءٍ، فِي سَرَاوِيلَ وَرِدَاءٍ، فِي سَرَاوِيلَ وَقَمِيصٍ، فِي سَرَاوِيلَ وَقَبَاءٍ، فِي تُبَّانٍ وَقَبَاءٍ، فِي تُبَّانٍ وَقَمِيصٍ ـ قَالَ وَأَحْسِبُهُ قَالَ ـ فِي تُبَّانٍ وَرِدَاءٍ.",
+     "gharib": [
+      {
+       "word": "تُبَّانٍ",
+       "meaning": "لباس على هيئة السراويل إلا أنه ليس له رجلان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٥."
+      },
+      {
+       "word": "وَقَبَاءٍ",
+       "meaning": "نوع من اللباس تنضم أطرافه؛ يذكر الشارح اشتقاقه من الضم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٧٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 365"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "A man stood up and asked the Prophet (ﷺ) about praying in a single garment. The Prophet (ﷺ) said, \"Has every one of you two garments?\" A man put a similar question to `Umar on which he replied, \"When Allah makes you wealthier then you should clothe yourself properly during prayers. Otherwise one can pray with an Izar and a Rida' (a sheet covering the upper part of the body.) Izar and a shirt, Izar and a Qaba', trousers and a Rida, trousers and a shirt or trousers and a Qaba', Tubban and a Qaba' or Tubban and a shirt.\" (The narrator added, \"I think that he also said a Tubban and a Rida)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 366,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَاصِمُ بْنُ عَلِيٍّ، قَالَ حَدَّثَنَا ابْنُ أَبِي ذِئْبٍ، عَنِ الزُّهْرِيِّ، عَنْ سَالِمٍ، عَنِ ابْنِ عُمَرَ، قَالَ سَأَلَ رَجُلٌ رَسُولَ اللَّهِ ﷺ فَقَالَ مَا يَلْبَسُ الْمُحْرِمُ فَقَالَ",
+     "matn": "لاَ يَلْبَسُ الْقَمِيصَ وَلاَ السَّرَاوِيلَ وَلاَ الْبُرْنُسَ وَلاَ ثَوْبًا مَسَّهُ الزَّعْفَرَانُ وَلاَ وَرْسٌ، فَمَنْ لَمْ يَجِدِ النَّعْلَيْنِ فَلْيَلْبَسِ الْخُفَّيْنِ وَلْيَقْطَعْهُمَا حَتَّى يَكُونَا أَسْفَلَ مِنَ الْكَعْبَيْنِ . وَعَنْ نَافِعٍ عَنِ ابْنِ عُمَرَ عَنِ النَّبِيِّ ﷺ مِثْلَهُ.",
+     "gharib": [
+      {
+       "word": "الْبُرْنُسَ",
+       "meaning": "ثوب له غطاء للرأس متصل به، من جبة أو نحوها.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة برنس، ١/١٢٢."
+      },
+      {
+       "word": "وَرْسٌ",
+       "meaning": "نبت أصفر يصبغ به.",
+       "source": "ابن الأثير، النهاية في غريب الحديث والأثر، مادة ورس، ٥/١٧٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٦٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 366"
+     },
+     "en": {
+      "narrator": "Ibn `Umar",
+      "text": "A person asked Allah's Messenger (ﷺ), \"What should a Muhrim wear?\" He replied, \"He should not wear shirts, trousers, a burnus (a hooded cloak), or clothes which are stained with saffron or Wars (a kind of perfume). Whoever does not find a sandal to wear can wear Khuffs (socks made from thick fabric or leather), but these should be cut short so as not to cover the ankles",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
