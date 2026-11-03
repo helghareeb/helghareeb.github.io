@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 398,
+   "last": 401,
    "hadith": [
     {
      "n": 349,
@@ -17241,6 +17241,148 @@
       },
       "id": "1oOClwoviD2-fRE4DFO3q6mDHe4sNCuDo",
       "player": "1iPesnaYMBgS2O7WdxsdumKv4cvlsUOZC"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 399,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ رَجَاءٍ، قَالَ حَدَّثَنَا إِسْرَائِيلُ، عَنْ أَبِي إِسْحَاقَ، عَنِ الْبَرَاءِ بْنِ عَازِبٍ ـ رضى الله عنهما ـ قَالَ كَانَ رَسُولُ اللَّهِ ﷺ صَلَّى نَحْوَ بَيْتِ الْمَقْدِسِ سِتَّةَ عَشَرَ أَوْ سَبْعَةَ عَشَرَ شَهْرًا، وَكَانَ رَسُولُ اللَّهِ ﷺ يُحِبُّ أَنْ يُوَجَّهَ إِلَى الْكَعْبَةِ، فَأَنْزَلَ اللَّهُ {قَدْ نَرَى تَقَلُّبَ وَجْهِكَ فِي السَّمَاءِ} فَتَوَجَّهَ نَحْوَ الْكَعْبَةِ، وَقَالَ السُّفَهَاءُ مِنَ النَّاسِ ـ وَهُمُ الْيَهُودُ ـ مَا وَلاَّهُمْ عَنْ قِبْلَتِهِمُ الَّتِي كَانُوا عَلَيْهَا {قُلْ لِلَّهِ الْمَشْرِقُ وَالْمَغْرِبُ يَهْدِي مَنْ يَشَاءُ إِلَى صِرَاطٍ مُسْتَقِيمٍ} فَصَلَّى مَعَ النَّبِيِّ ﷺ رَجُلٌ ثُمَّ خَرَجَ بَعْدَ مَا صَلَّى، فَمَرَّ عَلَى قَوْمٍ مِنَ الأَنْصَارِ فِي صَلاَةِ الْعَصْرِ نَحْوَ بَيْتِ الْمَقْدِسِ فَقَالَ هُوَ يَشْهَدُ أَنَّهُ صَلَّى مَعَ رَسُولِ اللَّهِ ﷺ، وَأَنَّهُ تَوَجَّهَ نَحْوَ الْكَعْبَةِ. فَتَحَرَّفَ الْقَوْمُ حَتَّى تَوَجَّهُوا نَحْوَ الْكَعْبَةِ.",
+     "gharib": [
+      {
+       "word": "يُوَجَّهَ",
+       "meaning": "يؤمر بالتوجه إلى الكعبة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٢–٥٠٣."
+      },
+      {
+       "word": "فَتَحَرَّفَ",
+       "meaning": "استداروا وتحولوا حتى استقبلوا الكعبة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٢–٥٠٣."
+      },
+      {
+       "word": "يَشْهَدُ",
+       "meaning": "يخبر عن نفسه بالشهادة؛ عبّر عنها بلفظ الغائب في هذا السياق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٢–٥٠٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٩٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 399"
+     },
+     "en": {
+      "narrator": "Bara' bin `Azib",
+      "text": "Allah's Messenger (ﷺ) prayed facing Baitul-Maqdis for sixteen or seventeen months but he loved to face the Ka`ba (at Mecca) so Allah revealed: \"Verily, We have seen the turning of your face to the heaven!\" (2:144) So the Prophet (ﷺ) faced the Ka`ba and the fools amongst the people namely \"the Jews\" said, \"What has turned them from their Qibla (Baitul-Maqdis) which they formerly observed\"\" (Allah revealed): \"Say: 'To Allah belongs the East and the West. He guides whom He wills to a straight path'.\" (2:142) A man prayed with the Prophet (facing the Ka`ba) and went out. He saw some of the Ansar praying the `Asr prayer with their faces towards Baitul-Maqdis, he said, \"I bear witness that I prayed with Allah's Messenger (ﷺ) facing the Ka`ba.\" So all the people turned their faces towards the Ka`ba",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1yipleeB-NSmVmUd5fWrnKWs6STahU-7V",
+      "player": "1d54Sg_TN7k-3te9U958SKlhV_cSUOclj"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 400,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُسْلِمٌ، قَالَ حَدَّثَنَا هِشَامٌ، قَالَ حَدَّثَنَا يَحْيَى بْنُ أَبِي كَثِيرٍ، عَنْ مُحَمَّدِ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ جَابِرٍ، قَالَ كَانَ رَسُولُ اللَّهِ ﷺ يُصَلِّي عَلَى رَاحِلَتِهِ حَيْثُ تَوَجَّهَتْ، فَإِذَا أَرَادَ الْفَرِيضَةَ نَزَلَ فَاسْتَقْبَلَ الْقِبْلَةَ.",
+     "gharib": [
+      {
+       "word": "رَاحِلَتِهِ",
+       "meaning": "الدابة التي يركبها في سيره.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٣."
+      },
+      {
+       "word": "الْفَرِيضَةَ",
+       "meaning": "الصلاة المكتوبة، في مقابل النافلة على الراحلة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 400"
+     },
+     "en": {
+      "narrator": "Jabir",
+      "text": "Allah's Messenger (ﷺ) used to pray (optional, non-obligatory prayer) while riding on his mount (Rahila) wherever it turned, and whenever he wanted to pray the compulsory prayer he dismounted and prayed facing the Qibla",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 401,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عُثْمَانُ، قَالَ حَدَّثَنَا جَرِيرٌ، عَنْ مَنْصُورٍ، عَنْ إِبْرَاهِيمَ، عَنْ عَلْقَمَةَ، قَالَ قَالَ عَبْدُ اللَّهِ صَلَّى النَّبِيُّ ﷺ ـ قَالَ إِبْرَاهِيمُ لاَ أَدْرِي زَادَ أَوْ نَقَصَ ـ فَلَمَّا سَلَّمَ قِيلَ لَهُ يَا رَسُولَ اللَّهِ، أَحَدَثَ فِي الصَّلاَةِ شَىْءٌ قَالَ",
+     "matn": "وَمَا ذَاكَ . قَالُوا صَلَّيْتَ كَذَا وَكَذَا. فَثَنَى رِجْلَيْهِ وَاسْتَقْبَلَ الْقِبْلَةَ، وَسَجَدَ سَجْدَتَيْنِ ثُمَّ سَلَّمَ، فَلَمَّا أَقْبَلَ عَلَيْنَا بِوَجْهِهِ قَالَ  إِنَّهُ لَوْ حَدَثَ فِي الصَّلاَةِ شَىْءٌ لَنَبَّأْتُكُمْ بِهِ، وَلَكِنْ إِنَّمَا أَنَا بَشَرٌ مِثْلُكُمْ، أَنْسَى كَمَا تَنْسَوْنَ، فَإِذَا نَسِيتُ فَذَكِّرُونِي، وَإِذَا شَكَّ أَحَدُكُمْ فِي صَلاَتِهِ فَلْيَتَحَرَّى الصَّوَابَ، فَلْيُتِمَّ عَلَيْهِ ثُمَّ يُسَلِّمْ، ثُمَّ يَسْجُدْ سَجْدَتَيْنِ .",
+     "gharib": [
+      {
+       "word": "أَحَدَثَ",
+       "meaning": "هل نزل وحي يغير حكم الصلاة عما عهدوه؟",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٤."
+      },
+      {
+       "word": "لَنَبَّأْتُكُمْ",
+       "meaning": "لأخبرتكم وبينت لكم ذلك.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٤."
+      },
+      {
+       "word": "فَلْيَتَحَرَّى",
+       "meaning": "فليقصد الصواب؛ وفسره الشارح هنا بالبناء على اليقين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 401"
+     },
+     "en": {
+      "narrator": "`Abdullah",
+      "text": "The Prophet (ﷺ) prayed (and the sub-narrator Ibrahim said, \"I do not know whether he prayed more or less than usual\"), and when he had finished the prayers he was asked, \"O Allah's Messenger (ﷺ)! Has there been any change in the prayers?\" He said, \"What is it?' The people said, \"You have prayed so much and so much.\" So the Prophet (ﷺ) bent his legs, faced the Qibla and performed two prostration's (of Sahu) and finished his prayers with Taslim (by turning his face to right and left saying: 'As-Salamu `Alaikum- Warahmat-ullah'). When he turned his face to us he said, \"If there had been anything changed in the prayer, surely I would have informed you but I am a human being like you and liable to forget like you. So if I forget remind me and if anyone of you is doubtful about his prayer, he should follow what he thinks to be correct and complete his prayer accordingly and finish it and do two prostrations (of Sahu)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
