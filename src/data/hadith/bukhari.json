@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 382,
+   "last": 390,
    "hadith": [
     {
      "n": 349,
@@ -16575,6 +16575,322 @@
       },
       "id": null,
       "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 383,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عُرْوَةُ، أَنَّ عَائِشَةَ، أَخْبَرَتْهُ أَنَّ رَسُولَ اللَّهِ ﷺ كَانَ يُصَلِّي وَهْىَ بَيْنَهُ وَبَيْنَ الْقِبْلَةِ عَلَى فِرَاشِ أَهْلِهِ، اعْتِرَاضَ الْجَنَازَةِ.",
+     "gharib": [
+      {
+       "word": "اعْتِرَاضَ",
+       "meaning": "امتدادا عرضيا من جهة يمين المصلي إلى جهة شماله، كموضع الجنازة أمام المصلي عليها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 383"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Allah's Apostle prayed while I was lying like a dead body on his family bed between him and his Qibla",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Q4OH1QMcUOav3VrvOkW4Z6bs3WiHM6Y4",
+      "player": "1Kinbz8ctrMYhK4LFBgl6xwEb_1Jl12gx"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 384,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ يَزِيدَ، عَنْ عِرَاكٍ، عَنْ عُرْوَةَ، أَنَّ النَّبِيَّ ﷺ كَانَ يُصَلِّي وَعَائِشَةُ مُعْتَرِضَةٌ بَيْنَهُ وَبَيْنَ الْقِبْلَةِ عَلَى الْفِرَاشِ الَّذِي يَنَامَانِ عَلَيْهِ.",
+     "gharib": [
+      {
+       "word": "مُعْتَرِضَةٌ",
+       "meaning": "ممتدة عرضا بينه وبين القبلة، من جهة يمينه إلى شماله.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 384"
+     },
+     "en": {
+      "narrator": "`Urwa",
+      "text": "The Prophet (ﷺ) prayed while `Aisha was lying between him and his Qibla on the bed on which they used to sleep",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1bTfkVgExU7rvQDhtF24P3to35P8in7M7",
+      "player": "1EXADWm9vBOU3j48RIYBrG9Gix394XVjp"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 385,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا أَبُو الْوَلِيدِ، هِشَامُ بْنُ عَبْدِ الْمَلِكِ قَالَ حَدَّثَنَا بِشْرُ بْنُ الْمُفَضَّلِ، قَالَ حَدَّثَنِي غَالِبٌ الْقَطَّانُ، عَنْ بَكْرِ بْنِ عَبْدِ اللَّهِ، عَنْ أَنَسِ بْنِ مَالِكٍ، قَالَ كُنَّا نُصَلِّي مَعَ النَّبِيِّ ﷺ فَيَضَعُ أَحَدُنَا طَرَفَ الثَّوْبِ مِنْ شِدَّةِ الْحَرِّ فِي مَكَانِ السُّجُودِ.",
+     "gharib": [
+      {
+       "word": "طَرَفَ",
+       "meaning": "ناحية الثوب التي يبسطها في موضع السجود اتقاء حر الأرض.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 385"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "We used to pray with the Prophet (ﷺ) and some of us used to place the ends of their clothes at the place of prostration because of scorching heat",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 386,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا آدَمُ بْنُ أَبِي إِيَاسٍ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ أَخْبَرَنَا أَبُو مَسْلَمَةَ، سَعِيدُ بْنُ يَزِيدَ الأَزْدِيُّ قَالَ سَأَلْتُ أَنَسَ بْنَ مَالِكٍ أَكَانَ النَّبِيُّ ﷺ يُصَلِّي فِي نَعْلَيْهِ قَالَ نَعَمْ.",
+     "gharib": [],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 386"
+     },
+     "en": {
+      "narrator": "Abu Maslama",
+      "text": "Sa`id bin Yazid Al-Azdi: I asked Anas bin Malik whether the Prophet (ﷺ) had ever, prayed with his shoes on. He replied \"Yes",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Y0bieDBZ0dUYqX2OaqGZC1HAqLRiJj2t",
+      "player": "1Ha1DrazI1CcWGal0o0JKBAH7K7MljQMc"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 387,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنِ الأَعْمَشِ، قَالَ سَمِعْتُ إِبْرَاهِيمَ، يُحَدِّثُ عَنْ هَمَّامِ بْنِ الْحَارِثِ، قَالَ رَأَيْتُ جَرِيرَ بْنَ عَبْدِ اللَّهِ بَالَ ثُمَّ تَوَضَّأَ، وَمَسَحَ عَلَى خُفَّيْهِ، ثُمَّ قَامَ فَصَلَّى، فَسُئِلَ فَقَالَ رَأَيْتُ النَّبِيَّ ﷺ صَنَعَ مِثْلَ هَذَا. قَالَ إِبْرَاهِيمُ فَكَانَ يُعْجِبُهُمْ، لأَنَّ جَرِيرًا كَانَ مِنْ آخِرِ مَنْ أَسْلَمَ.",
+     "gharib": [
+      {
+       "word": "خُفَّيْهِ",
+       "meaning": "مثنى خف؛ من لباس الرجلين الذي يمسح عليه في الوضوء.",
+       "source": "الزبيدي، تاج العروس، مادة خفف، ٢٣/٢٣٣؛ وابن حجر، فتح الباري، ط السلفية، ١/٤٩٤–٤٩٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 387"
+     },
+     "en": {
+      "narrator": "Ibrahim",
+      "text": "Hammam bin Al-Harith said, \"I saw Jarir bin `Abdullah urinating. Then he performed ablution and passed his (wet) hands over his Khuffs (socks made from thick fabric or leather), stood up and prayed. He was asked about it. He replied that he had seen the Prophet (ﷺ) doing the same.\" They approved of this narration as Jarir was one of those who embraced Islam very late",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1xXJ1jZRN7fijWJ8dgrZj_T6iwBuefVIn",
+      "player": "1IBDhPtLnd8qm-bhTLHk0AaUQ71cVHPUn"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 388,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا إِسْحَاقُ بْنُ نَصْرٍ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، عَنِ الأَعْمَشِ، عَنْ مُسْلِمٍ، عَنْ مَسْرُوقٍ، عَنِ الْمُغِيرَةِ بْنِ شُعْبَةَ، قَالَ وَضَّأْتُ النَّبِيَّ ﷺ فَمَسَحَ عَلَى خُفَّيْهِ وَصَلَّى.",
+     "gharib": [
+      {
+       "word": "خُفَّيْهِ",
+       "meaning": "مثنى خف؛ من لباس الرجلين الذي يمسح عليه في الوضوء.",
+       "source": "الزبيدي، تاج العروس، مادة خفف، ٢٣/٢٣٣؛ وابن حجر، فتح الباري، ط السلفية، ١/٤٩٤–٤٩٥."
+      },
+      {
+       "word": "وَضَّأْتُ",
+       "meaning": "أعنته على الوضوء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٤٩٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٨",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 388"
+     },
+     "en": {
+      "narrator": "Al-Mughira bin Shu'ba",
+      "text": "I helped the Prophet (ﷺ) in performing ablution and he passed his wet hands over his Khuffs and prayed",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1KJ1FW4nIot0bgcjKgOZgL_PJYGQlTXtS",
+      "player": "1pR7qFjyxde0WLKXmBaf4nuU3_dbjlXmf"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 389,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "أَخْبَرَنَا الصَّلْتُ بْنُ مُحَمَّدٍ، أَخْبَرَنَا مَهْدِيٌّ، عَنْ وَاصِلٍ، عَنْ أَبِي وَائِلٍ، عَنْ حُذَيْفَةَ، رَأَى رَجُلاً لاَ يُتِمُّ رُكُوعَهُ وَلاَ سُجُودَهُ، فَلَمَّا قَضَى صَلاَتَهُ قَالَ لَهُ حُذَيْفَةُ مَا صَلَّيْتَ ـ قَالَ وَأَحْسِبُهُ قَالَ ـ لَوْ مُتَّ مُتَّ عَلَى غَيْرِ سُنَّةِ مُحَمَّدٍ ﷺ.",
+     "gharib": [
+      {
+       "word": "سُنَّةِ",
+       "meaning": "طريقة النبي وهديه؛ والعبارة هنا في الزجر عن الإخلال بالصلاة، مع حفظ تأويلات العلماء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ٢/٢٧٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٨٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 389"
+     },
+     "en": {
+      "narrator": "Hudhaifa that he saw a person bowing and prostrating imperfectly. When he finished his Salat, Hudhaifa told him that he had not offered Salat. The subnarrator added, \"I think that Hudhaifa also said",
+      "text": "Were you to die you would die on a \"Sunna\" (legal way) other than that of Muhammad (ﷺ)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "177H1hmhvffRpysmCQ4KiF0w7fPrVjrTu",
+      "player": "1Mi5khTmDcfshI6HJUhbvhmMZ62MT4kQK"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 390,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "أَخْبَرَنَا يَحْيَى بْنُ بُكَيْرٍ، حَدَّثَنَا بَكْرُ بْنُ مُضَرَ، عَنْ جَعْفَرٍ، عَنِ ابْنِ هُرْمُزَ، عَنْ عَبْدِ اللَّهِ بْنِ مَالِكٍ ابْنِ بُحَيْنَةَ، أَنَّ النَّبِيَّ ﷺ كَانَ إِذَا صَلَّى فَرَّجَ بَيْنَ يَدَيْهِ حَتَّى يَبْدُوَ بَيَاضُ إِبْطَيْهِ. وَقَالَ اللَّيْثُ حَدَّثَنِي جَعْفَرُ بْنُ رَبِيعَةَ نَحْوَهُ.",
+     "gharib": [
+      {
+       "word": "فَرَّجَ",
+       "meaning": "نحّى كل يد عن الجنب الذي يليها في السجود.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ٢/٢٩٤–٢٩٥."
+      },
+      {
+       "word": "يَبْدُوَ",
+       "meaning": "يظهر بياض الإبطين للناظر عند التفريج في السجود.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ٢/٢٩٤–٢٩٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٣٩٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 390"
+     },
+     "en": {
+      "narrator": "'Abdullah bin Malik",
+      "text": "Ibn Buhaina, \"When the Prophet (ﷺ) prayed, he used to separate his arms from his body so widely that the whiteness of his armpits was visible",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1ja-St6rZLCmgEQn-i3LWPYN7m-oKjv8m",
+      "player": "1c5suEQtDd63roV6vIhY75D8J39D3Gzbz"
      },
      "video": null,
      "sharh": null,
