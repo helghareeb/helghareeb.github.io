@@ -18,6 +18,7 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 <article class="content-card hadith-card" id={`h${h.n}`}>
   <header class="hadith-card__head">
     <a class="hadith-card__num" href={hadithPath(lang, book.id, h.n)}>{book[lang]} · {num(lang, h.n)}</a>
+    <button type="button" class="button-secondary" data-reading-path={hadithPath(lang, book.id, h.n)} data-reading-title={`${book[lang]} · ${num(lang,h.n)}`} aria-pressed="false">{lang === 'ar' ? 'تمت القراءة' : 'Mark as read'}</button>
     {h.grade[lang] && <span class="hadith-card__grade">{t.grade}: {h.grade[lang]}</span>}
   </header>
 

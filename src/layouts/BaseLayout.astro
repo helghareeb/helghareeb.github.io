@@ -4,6 +4,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import SiteBreadcrumbs from '../components/SiteBreadcrumbs.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteAnalytics from '../components/SiteAnalytics.astro';
+import ReaderTools from '../components/ReaderTools.astro';
 import { getAlternateLocalePath } from '../utils/locale-switch';
 
 export interface Props {
@@ -171,6 +172,14 @@ const structuredData = {
     <meta name="twitter:image" content={socialImageUrl.toString()} />
     <meta name="twitter:image:alt" content={title} />
     <meta name="theme-color" content="#f5efe3" />
+    <script is:inline>
+      try {
+        const p = JSON.parse(localStorage.getItem('helghareeb-reader-preferences-v1') || '{}');
+        document.documentElement.dataset.readerTheme = p.theme === 'dark' || (p.theme !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        document.documentElement.dataset.readerFont = p.font === 'system' ? 'system' : 'amiri';
+        if (typeof p.size === 'number' && Number.isFinite(p.size)) document.documentElement.style.setProperty('--reader-scale', String(Math.max(85, Math.min(150, p.size)) / 100));
+      } catch {}
+    </script>
     <link rel="canonical" href={canonicalUrl} />
     {hasTranslation && (
       <>
@@ -195,5 +204,6 @@ const structuredData = {
       </div>
       <SiteFooter lang={lang} currentPath={currentPath} />
     </div>
+    <ReaderTools lang={lang} />
   </body>
 </html>

@@ -40,7 +40,7 @@ const crumbs = [
       {h ? <p class="hero__lead"><a href={kitabPath(lang, b.book.id, k.slug)}>{k[lang]}</a></p> : <p class="hero__lead">{t.count(k.hadith.length)}</p>}
       <ShareButtons lang={lang} url={new URL(Astro.url.pathname, siteConfig.siteUrl).toString()} title={title} />
     </section>
-    <section class="shell section hadith-list">
+    <section class="shell section hadith-list" data-reading-root>
       {h ? <HadithCard lang={lang} book={b.book} h={h} full /> : k.hadith.map((x) => <HadithCard lang={lang} book={b.book} h={x} />)}
       {h && (
         <nav class="hero__actions">

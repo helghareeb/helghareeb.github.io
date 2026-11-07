@@ -1,0 +1,40 @@
+---
+import '../styles/reader.css';
+interface Props { lang: 'ar' | 'en' }
+const { lang } = Astro.props;
+const ar = lang === 'ar';
+---
+<div class="reader-launch" data-pagefind-ignore>
+  <a id="reader-last" class="reader-resume" hidden>{ar ? 'أكمل قراءتك' : 'Continue reading'}</a>
+  <button id="reader-open" type="button" aria-haspopup="dialog" aria-controls="reader-dialog">{ar ? 'القراءة والملاحظات' : 'Reading & notes'}</button>
+</div>
+<dialog id="reader-dialog" class="reader-dialog" aria-labelledby="reader-heading" data-pagefind-ignore>
+  <div class="reader-heading"><h2 id="reader-heading">{ar ? 'رفيق القراءة' : 'Reading companion'}</h2><button id="reader-close" type="button">{ar ? 'إغلاق' : 'Close'}</button></div>
+  <p class="reader-help">{ar ? 'موضع القراءة والملاحظات محفوظان في هذا المتصفح على جهازك، دون حساب أو إرسالها إلى الخادم. مسح بيانات المتصفح أو التصفح الخاص قد يفقدها؛ صدّر نسخة للاحتفاظ بها أو نقلها إلى جهاز آخر.' : 'Your place and notes stay in this browser on your device, with no account or server upload. Clearing browser data or using private browsing may lose them; export a copy to keep them or move to another device.'}</p>
+  <p id="reader-status" role="status" aria-live="polite"></p>
+  <fieldset><legend>{ar ? 'راحة القراءة' : 'Reading preferences'}</legend>
+    <label>{ar ? 'المظهر' : 'Theme'}<select id="reader-theme"><option value="auto">{ar ? 'حسب الجهاز' : 'System'}</option><option value="light">{ar ? 'نهاري' : 'Light'}</option><option value="dark">{ar ? 'ليلي' : 'Dark'}</option></select></label>
+    <label>{ar ? 'الخط' : 'Font'}<select id="reader-font"><option value="amiri">{ar ? 'أميري' : 'Amiri / Serif'}</option><option value="system">{ar ? 'خط الجهاز' : 'System / Sans serif'}</option></select></label>
+    <label>{ar ? 'حجم النص' : 'Text size'} <output id="reader-size-value">100%</output><input id="reader-size" type="range" min="85" max="150" step="5" value="100" /></label>
+    <button id="reader-reset" type="button">{ar ? 'إعدادات القراءة الأصلية' : 'Reset reading preferences'}</button>
+    <small>{ar ? 'يظل النص القرآني بخط حفص، مهما اخترت من خطوط.' : 'Quranic text keeps its Hafs font, regardless of your font choice.'}</small>
+  </fieldset>
+  <section id="reader-current" hidden>
+    <h3>{ar ? 'هذه الصفحة' : 'This page'}</h3>
+    <p id="reader-progress"></p>
+    <div class="reader-actions"><button id="reader-restore" type="button">{ar ? 'العودة إلى موضع التوقف' : 'Return to saved place'}</button><button id="reader-read" type="button" aria-pressed="false">{ar ? 'تمت القراءة' : 'Mark as read'}</button></div>
+    <label for="reader-note">{ar ? 'ملاحظاتي على هذه الصفحة' : 'My notes on this page'}</label>
+    <textarea id="reader-note" rows="5" maxlength="12000" placeholder={ar ? 'اكتب ملاحظتك هنا…' : 'Write your note here…'}></textarea>
+    <small>{ar ? 'حفظ تلقائي أثناء الكتابة. علامة «تمت القراءة» تسجل اختيارك أنت.' : 'Notes save automatically as you type. “Read” is marked only when you choose it.'}</small>
+  </section>
+  <section><h3>{ar ? 'سجل قراءتي' : 'My reading history'}</h3>
+    <label>{ar ? 'عرض' : 'Show'}<select id="reader-filter"><option value="all">{ar ? 'الكل' : 'All'}</option><option value="unfinished">{ar ? 'قيد القراءة' : 'In progress'}</option><option value="read">{ar ? 'تمت قراءته' : 'Read'}</option><option value="notes">{ar ? 'له ملاحظات' : 'With notes'}</option></select></label>
+    <ul id="reader-history" class="reader-history"></ul>
+  </section>
+  <div class="reader-actions"><button id="reader-export" type="button">{ar ? 'تصدير السجل والملاحظات' : 'Export history & notes'}</button><label class="reader-import">{ar ? 'استيراد نسخة محفوظة' : 'Import a saved copy'}<input id="reader-import" type="file" accept="application/json,.json" /></label></div>
+  <small>{ar ? 'الاستيراد يدمج السجلات ويحتفظ بالأحدث لكل صفحة. لا تشارك ملف التصدير إذا احتوى ملاحظات خاصة.' : 'Import merges records, keeping the newest for each page. Keep the exported file private if it contains personal notes.'}</small>
+</dialog>
+<script>
+  import { initializeReader } from '../scripts/reader';
+  initializeReader();
+</script>

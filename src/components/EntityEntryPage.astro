@@ -52,7 +52,7 @@ const pageUrl = new URL(Astro.url.pathname, siteConfig.siteUrl).toString();
   </section>
 
   <section class="shell entity-grid">
-    <article class="entity-summary">
+    <article class="entity-summary" data-reading-root>
       <slot />
       <div class="entity-share">
         <ShareButtons lang={lang} url={pageUrl} title={title} />

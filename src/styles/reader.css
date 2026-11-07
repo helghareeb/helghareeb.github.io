@@ -1,0 +1,46 @@
+@font-face { font-family: 'Amiri'; src: url('../assets/fonts/amiri-regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Amiri'; src: url('../assets/fonts/amiri-bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Reader Hafs'; src: url('../assets/fonts/kfgqpc-hafs-v30.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+.quran-text { font-family: 'Reader Hafs', serif; font-weight: 400; font-size: 1.08em; line-height: 2.1; }
+:root { --reader-scale: 1; }
+html[lang='ar'] body { font-family: 'Amiri', serif; }
+[data-reading-root] { font-size: calc(1.06rem * var(--reader-scale)); }
+html [data-reading-root] .hadith-card__matn { font-size: calc(1.7rem * var(--reader-scale)); }
+html [data-reading-root] .hadith-card__isnad { font-size: calc(1.2rem * var(--reader-scale)); }
+html [data-reading-root] :is(.hadith-card__slot p,.hadith-card__slot li,.hadith-card__gharib dd,.hadith-card__en p) { font-size: calc(1.15rem * var(--reader-scale)); }
+html [data-reading-root] .hadith-card__text { font-family: 'Amiri', serif; }
+html[data-reader-font='system'] [data-reading-root] .hadith-card__text { font-family: Tahoma, Arial, sans-serif; }
+html[data-reader-font='system'] [data-reading-root] { font-family: Tahoma, Arial, sans-serif; }
+.reader-launch { position: fixed; inset-inline-end: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); display: flex; gap: .5rem; z-index: 25; max-width: calc(100vw - 2rem); flex-wrap: wrap; }
+.reader-launch button, .reader-resume { border: 1px solid var(--brand); border-radius: 999px; padding: .55rem 1rem; background: var(--surface-strong); color: var(--text); box-shadow: var(--shadow); font: inherit; cursor: pointer; }
+.reader-resume { font-size: .9rem; }
+.reader-launch [hidden], .reader-dialog [hidden] { display: none !important; }
+.reader-dialog { background: var(--surface-strong); color: var(--text); border: 1px solid var(--line); border-radius: 20px; padding: 1.25rem; width: min(600px, calc(100vw - 1.5rem)); max-height: calc(100dvh - 2rem); overscroll-behavior: contain; line-height: 1.7; }
+.reader-dialog::backdrop { background: rgb(0 0 0 / .45); }
+.reader-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; position: sticky; top: -1.25rem; padding-block: .4rem; background: var(--surface-strong); z-index: 2; }
+.reader-heading h2 { margin: 0; font-size: 1.45rem; }
+.reader-dialog :is(button,select,textarea,input) { font: inherit; color: var(--text); }
+.reader-dialog :is(button,select,textarea) { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px; padding: .4rem .65rem; }
+.reader-dialog button { cursor: pointer; }
+.reader-dialog button[aria-pressed='true'], [data-reading-path][aria-pressed='true'] { border-color: var(--brand); color: var(--brand-strong); }
+.reader-dialog fieldset { border: 1px solid var(--line); border-radius: 12px; display: grid; gap: .75rem; }
+.reader-dialog label { display: grid; gap: .35rem; }
+.reader-dialog textarea { width: 100%; resize: vertical; }
+.reader-dialog :is(small,.reader-help) { color: var(--muted); font-size: .9rem; }
+.reader-dialog section { margin-block: 1rem; }
+.reader-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-block: .7rem; }
+.reader-import input { max-width: 100%; font-size: .85rem; }
+.reader-history { list-style: none; padding: 0; max-height: 18rem; overflow-y: auto; }
+.reader-history li { padding: .65rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: .3rem .6rem; }
+.reader-history a { text-decoration: underline; overflow-wrap: anywhere; }
+.reader-history small { grid-column: 1; }
+.reader-history button { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+.reader-dialog :focus-visible, .reader-launch :focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+html[data-reader-theme='dark'] { color-scheme: dark; --bg: #141c19; --bg-soft: #1e2a25; --surface: #202e27; --surface-strong: #1a2620; --text: #eeeade; --muted: #b8c4b9; --line: #536156; --brand: #d9b879; --brand-strong: #edcf93; --accent: #b7d6c1; --shadow: 0 18px 50px rgb(0 0 0 / .2); }
+html[data-reader-theme='dark'] body { background: var(--bg); }
+html[data-reader-theme='dark'] :is(.site-header,.site-footer,.content-card,.entity-summary,.entity-panel,.notice-card,.section--soft,.visit-counter__item,.hadith-card__slot) { background: var(--surface-strong); color: var(--text); }
+html[data-reader-theme='dark'] :is(.button,.button-secondary,.hero__badge,.hadith-card__grade,.gharib-pop,.site-header__controls) { background: var(--bg-soft); color: var(--text); }
+html[data-reader-theme='dark'] .hadith-card__text { color: var(--text); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print { .reader-launch, .reader-dialog { display: none !important; } }
+@media (max-width: 40rem) { html [data-reading-root] .hadith-card__matn { font-size: calc(1.45rem * var(--reader-scale)); } }
