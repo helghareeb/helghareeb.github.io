@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 407,
+   "last": 415,
    "hadith": [
     {
      "n": 349,
@@ -17657,6 +17657,388 @@
       },
       "id": "1u09JJVbikX_ZPbLhzk1tVrjLswSmpGLz",
       "player": "1YqYrAoTY8dLaIcjwoA9-TVzLIqMCAIhR"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 408,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ أَخْبَرَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، أَخْبَرَنَا ابْنُ شِهَابٍ، عَنْ حُمَيْدِ بْنِ عَبْدِ الرَّحْمَنِ، أَنَّ أَبَا هُرَيْرَةَ، وَأَبَا، سَعِيدٍ حَدَّثَاهُ أَنَّ رَسُولَ اللَّهِ ﷺ رَأَى نُخَامَةً فِي جِدَارِ الْمَسْجِدِ، فَتَنَاوَلَ حَصَاةً فَحَكَّهَا فَقَالَ",
+     "matn": "إِذَا تَنَخَّمَ أَحَدُكُمْ فَلاَ يَتَنَخَّمَنَّ قِبَلَ وَجْهِهِ وَلاَ عَنْ يَمِينِهِ، وَلْيَبْصُقْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ الْيُسْرَى .",
+     "gharib": [
+      {
+       "word": "تَنَخَّمَ",
+       "meaning": "أخرج النخامة؛ ذكر الشارح اشتراك النخامة والبصاق في حكم الباب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠–٥١١."
+      },
+      {
+       "word": "يَتَنَخَّمَنَّ",
+       "meaning": "يخرج النخامة؛ النهي هنا عن جهة الوجه واليمين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠–٥١١."
+      },
+      {
+       "word": "نُخَامَةً",
+       "meaning": "ما يطرح من الرأس أو الصدر، وقد ذكر الشارح اختلاف التفريق بينها وبين النخاعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥١١."
+      },
+      {
+       "word": "فَحَكَّهَا",
+       "meaning": "أزالها من الجدار بالحك بالحصاة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٨",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 408"
+     },
+     "en": {
+      "narrator": "Abu Huraira and Abu Sa`id",
+      "text": "Allah's Messenger (ﷺ) saw some expectoration on the wall of the mosque; he took gravel and scraped it off and said, \"If anyone of you wanted to spit he should neither spit in front of him nor on his right but he could spit either on his left or under his left foot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 409,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ أَخْبَرَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، أَخْبَرَنَا ابْنُ شِهَابٍ، عَنْ حُمَيْدِ بْنِ عَبْدِ الرَّحْمَنِ، أَنَّ أَبَا هُرَيْرَةَ، وَأَبَا، سَعِيدٍ حَدَّثَاهُ أَنَّ رَسُولَ اللَّهِ ﷺ رَأَى نُخَامَةً فِي جِدَارِ الْمَسْجِدِ، فَتَنَاوَلَ حَصَاةً فَحَكَّهَا فَقَالَ",
+     "matn": "إِذَا تَنَخَّمَ أَحَدُكُمْ فَلاَ يَتَنَخَّمَنَّ قِبَلَ وَجْهِهِ وَلاَ عَنْ يَمِينِهِ، وَلْيَبْصُقْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ الْيُسْرَى .",
+     "gharib": [
+      {
+       "word": "تَنَخَّمَ",
+       "meaning": "أخرج النخامة؛ ذكر الشارح اشتراك النخامة والبصاق في حكم الباب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠–٥١١."
+      },
+      {
+       "word": "يَتَنَخَّمَنَّ",
+       "meaning": "يخرج النخامة؛ النهي هنا عن جهة الوجه واليمين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠–٥١١."
+      },
+      {
+       "word": "نُخَامَةً",
+       "meaning": "ما يطرح من الرأس أو الصدر، وقد ذكر الشارح اختلاف التفريق بينها وبين النخاعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥١١."
+      },
+      {
+       "word": "فَحَكَّهَا",
+       "meaning": "أزالها من الجدار بالحك بالحصاة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٠٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 409"
+     },
+     "en": {
+      "narrator": "Abu Huraira and Abu Sa`id",
+      "text": "Allah's Messenger (ﷺ) saw some expectoration on the wall of the mosque; he took gravel and scraped it off and said, \"If anyone of you wanted to spit he should neither spit in front of him nor on his right but he could spit either on his left or under his left foot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 410,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، عَنْ حُمَيْدِ بْنِ عَبْدِ الرَّحْمَنِ، أَنَّ أَبَا هُرَيْرَةَ، وَأَبَا، سَعِيدٍ أَخْبَرَاهُ أَنَّ رَسُولَ اللَّهِ ﷺ رَأَى نُخَامَةً فِي حَائِطِ الْمَسْجِدِ، فَتَنَاوَلَ رَسُولُ اللَّهِ ﷺ حَصَاةً فَحَتَّهَا ثُمَّ قَالَ",
+     "matn": "إِذَا تَنَخَّمَ أَحَدُكُمْ فَلاَ يَتَنَخَّمْ قِبَلَ وَجْهِهِ وَلاَ عَنْ يَمِينِهِ، وَلْيَبْصُقْ عَنْ يَسَارِهِ، أَوْ تَحْتَ قَدَمِهِ الْيُسْرَى .",
+     "gharib": [
+      {
+       "word": "تَنَخَّمَ",
+       "meaning": "أخرج النخامة؛ ذكر الشارح اشتراك النخامة والبصاق في حكم الباب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠–٥١١."
+      },
+      {
+       "word": "فَحَتَّهَا",
+       "meaning": "أزالها وقشرها بالحصاة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠."
+      },
+      {
+       "word": "يَتَنَخَّمْ",
+       "meaning": "يخرج النخامة؛ يحفظ لفظ هذا الطريق دون إلحاق نون من مدخل موروث.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠–٥١١."
+      },
+      {
+       "word": "نُخَامَةً",
+       "meaning": "ما يطرح من الرأس أو الصدر، وقد ذكر الشارح اختلاف التفريق بينها وبين النخاعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥١١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 410"
+     },
+     "en": {
+      "narrator": "Abu Huraira and Abu Sa`id",
+      "text": "Allah's Messenger (ﷺ) saw some expectoration on the wall of the mosque; he took gravel and scraped it off and said, \"If anyone of you wanted to spit, he should neither spit in front of him nor on his right but could spit either on his left or under his left foot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 411,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، عَنْ حُمَيْدِ بْنِ عَبْدِ الرَّحْمَنِ، أَنَّ أَبَا هُرَيْرَةَ، وَأَبَا، سَعِيدٍ أَخْبَرَاهُ أَنَّ رَسُولَ اللَّهِ ﷺ رَأَى نُخَامَةً فِي حَائِطِ الْمَسْجِدِ، فَتَنَاوَلَ رَسُولُ اللَّهِ ﷺ حَصَاةً فَحَتَّهَا ثُمَّ قَالَ",
+     "matn": "إِذَا تَنَخَّمَ أَحَدُكُمْ فَلاَ يَتَنَخَّمْ قِبَلَ وَجْهِهِ وَلاَ عَنْ يَمِينِهِ، وَلْيَبْصُقْ عَنْ يَسَارِهِ، أَوْ تَحْتَ قَدَمِهِ الْيُسْرَى .",
+     "gharib": [
+      {
+       "word": "تَنَخَّمَ",
+       "meaning": "أخرج النخامة؛ ذكر الشارح اشتراك النخامة والبصاق في حكم الباب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠–٥١١."
+      },
+      {
+       "word": "نُخَامَةً",
+       "meaning": "ما يطرح من الرأس أو الصدر، وقد ذكر الشارح اختلاف التفريق بينها وبين النخاعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥١١."
+      },
+      {
+       "word": "يَتَنَخَّمْ",
+       "meaning": "يخرج النخامة؛ يحفظ لفظ هذا الطريق دون إلحاق نون من مدخل موروث.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠–٥١١."
+      },
+      {
+       "word": "فَحَتَّهَا",
+       "meaning": "أزالها وقشرها بالحصاة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 411"
+     },
+     "en": {
+      "narrator": "Abu Huraira and Abu Sa`id",
+      "text": "Allah's Messenger (ﷺ) saw some expectoration on the wall of the mosque; he took gravel and scraped it off and said, \"If anyone of you wanted to spit, he should neither spit in front of him nor on his right but could spit either on his left or under his left foot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 412,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا حَفْصُ بْنُ عُمَرَ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ أَخْبَرَنِي قَتَادَةُ، قَالَ سَمِعْتُ أَنَسًا، قَالَ قَالَ النَّبِيُّ ﷺ",
+     "matn": "لاَ يَتْفِلَنَّ أَحَدُكُمْ بَيْنَ يَدَيْهِ وَلاَ عَنْ يَمِينِهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ رِجْلِهِ .",
+     "gharib": [
+      {
+       "word": "يَتْفِلَنَّ",
+       "meaning": "التفل أخف من البزاق؛ ذكر الشارح أن النفث أخف من التفل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 412"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) said, \"None of you should spit in front or on his right but he could spit either on his left or under his foot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1I7PvdrEqC2cVJwpOyf2fx38kwlbxgvwx",
+      "player": "1Z3YnMdE3HDbkFYbe4CJ40lKY0WpcNd1y"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 413,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا قَتَادَةُ، قَالَ سَمِعْتُ أَنَسَ بْنَ مَالِكٍ،",
+     "matn": "قَالَ قَالَ النَّبِيُّ ﷺ  إِنَّ الْمُؤْمِنَ إِذَا كَانَ فِي الصَّلاَةِ فَإِنَّمَا يُنَاجِي رَبَّهُ، فَلاَ يَبْزُقَنَّ بَيْنَ يَدَيْهِ وَلاَ عَنْ يَمِينِهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ .",
+     "gharib": [
+      {
+       "word": "يُنَاجِي",
+       "meaning": "يناجي ربه في صلاته؛ وهو تعليل الحديث لأدب المصلي مع قبلته.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 413"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) said, \"A faithful believer while in prayer is speaking in private to his Lord, so he should neither spit in front of him nor to his right side but he could spit either on his left or under his foot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1FBavIvo0ajZRwju4NHhShC0Fvwyb2JVB",
+      "player": "1dscb21KP4C2wfG5lc98m15VMU5ntk713"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 414,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَلِيٌّ، قَالَ حَدَّثَنَا سُفْيَانُ، حَدَّثَنَا الزُّهْرِيُّ، عَنْ حُمَيْدِ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ أَبِي سَعِيدٍ،. أَنَّ النَّبِيَّ ﷺ أَبْصَرَ نُخَامَةً فِي قِبْلَةِ الْمَسْجِدِ فَحَكَّهَا بِحَصَاةٍ، ثُمَّ نَهَى أَنْ يَبْزُقَ الرَّجُلُ بَيْنَ يَدَيْهِ أَوْ عَنْ يَمِينِهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ الْيُسْرَى. وَعَنِ الزُّهْرِيِّ سَمِعَ حُمَيْدًا عَنْ أَبِي سَعِيدٍ نَحْوَهُ.",
+     "gharib": [
+      {
+       "word": "نُخَامَةً",
+       "meaning": "ما يطرح من الرأس أو الصدر، وقد ذكر الشارح اختلاف التفريق بينها وبين النخاعة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٠٨–٥١١."
+      },
+      {
+       "word": "نَحْوَهُ",
+       "meaning": "مثله في المعنى؛ الزيادة بيان لسماع الزهري من حميد في هذا الطريق الموصول.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 414"
+     },
+     "en": {
+      "narrator": "Abu Sa`id",
+      "text": "The Prophet (ﷺ) saw sputum on (the wall of) the mosque in the direction of the Qibla and scraped it off with gravel. Then he forbade Spitting in front or on the right, but allowed it on one's left or under one's left foot",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "15azTnljgCUcbG5EiA53xedOWBg6iptu6",
+      "player": "1YVFQ_W2R6pYReptqi_z2fDrPaDLre2dF"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 415,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا قَتَادَةُ، قَالَ سَمِعْتُ أَنَسَ بْنَ مَالِكٍ،",
+     "matn": "قَالَ قَالَ النَّبِيُّ ﷺ  الْبُزَاقُ فِي الْمَسْجِدِ خَطِيئَةٌ، وَكَفَّارَتُهَا دَفْنُهَا .",
+     "gharib": [
+      {
+       "word": "وَكَفَّارَتُهَا",
+       "meaning": "ما يكفر أثر الخطيئة المذكورة؛ ناقش الشارح الخلاف في النهي والدفن.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١١–٥١٢."
+      },
+      {
+       "word": "دَفْنُهَا",
+       "meaning": "سترها في تراب المسجد أو رمله أو حصبائه عند الجمهور كما نقله الشارح، ونقل تفسيره بإخراجها؛ لا يسوغ تلويث الفرش.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 415"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) said, \"Spitting in the mosque is a sin and its expiation is to bury it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1y1jQz2E-bxmvePZozidZlJ0pCpNW6gdn",
+      "player": "16EL2Ql5ckQvgQP022S3-jemGliAVNHKh"
      },
      "video": null,
      "sharh": null,
