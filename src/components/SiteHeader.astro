@@ -44,7 +44,7 @@ const languageAria = lang === 'ar' ? 'الانتقال إلى النسخة ال�
               const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
 
               return (
-                <a class:list={['site-nav__link', { 'is-active': isActive }]} href={link.href}>
+                <a class:list={['site-nav__link', { 'is-active': isActive }]} href={link.href} aria-current={isActive ? 'page' : undefined}>
                   {link.label}
                 </a>
               );
@@ -56,7 +56,7 @@ const languageAria = lang === 'ar' ? 'الانتقال إلى النسخة ال�
               const isActive = currentPath === link.href || currentPath === link.href.slice(0, -1);
 
               return (
-                <a class:list={['site-nav__link', 'site-nav__link--secondary', { 'is-active': isActive }]} href={link.href}>
+                <a class:list={['site-nav__link', 'site-nav__link--secondary', { 'is-active': isActive }]} href={link.href} aria-current={isActive ? 'page' : undefined}>
                   {link.label}
                 </a>
               );
