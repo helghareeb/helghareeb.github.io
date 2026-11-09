@@ -38,6 +38,8 @@ html[data-reader-font='system'] [data-reading-root] { font-family: Tahoma, Arial
 .reader-dialog :focus-visible, .reader-launch :focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
 html[data-reader-theme='dark'] { color-scheme: dark; --bg: #141c19; --bg-soft: #1e2a25; --surface: #202e27; --surface-strong: #1a2620; --text: #eeeade; --muted: #b8c4b9; --line: #536156; --brand: #d9b879; --brand-strong: #edcf93; --accent: #b7d6c1; --shadow: 0 18px 50px rgb(0 0 0 / .2); }
 html[data-reader-theme='dark'] body { background: var(--bg); }
+/* Hero variants use fixed light gradients; pair them with the reader's dark-theme palette. */
+html[data-reader-theme='dark'] .hero { background: var(--surface-strong); color: var(--text); border-color: var(--line); }
 html[data-reader-theme='dark'] :is(.site-header,.site-footer,.content-card,.entity-summary,.entity-panel,.notice-card,.section--soft,.visit-counter__item,.hadith-card__slot) { background: var(--surface-strong); color: var(--text); }
 html[data-reader-theme='dark'] :is(.button,.button-secondary,.hero__badge,.hadith-card__grade,.gharib-pop,.site-header__controls) { background: var(--bg-soft); color: var(--text); }
 html[data-reader-theme='dark'] .hadith-card__text { color: var(--text); }
