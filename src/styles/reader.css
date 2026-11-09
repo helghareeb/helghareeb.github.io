@@ -46,3 +46,10 @@ html[data-reader-theme='dark'] .hadith-card__text { color: var(--text); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print { .reader-launch, .reader-dialog { display: none !important; } }
 @media (max-width: 40rem) { html [data-reading-root] .hadith-card__matn { font-size: calc(1.45rem * var(--reader-scale)); } }
+
+/* Keep secondary reading surfaces legible when the device/theme is dark. */
+html[data-reader-theme='dark'] :is(.entity-tags li,.flashcard-item__panel,.flashcard-item__panel--question,.flashcard-item__answer,.flashcard-item__notes,.quiz-question__feedback) { background: var(--bg-soft); color: var(--text); border-color: var(--line); }
+html[data-reader-theme='dark'] .flashcard-item { background: var(--surface-strong); }
+html[data-reader-theme='dark'] .card-link:hover :is(.feature-card,.content-card) { background: var(--bg-soft); }
+html[data-reader-theme='dark'] .breadcrumbs__sep { color: var(--muted); }
+html[data-reader-theme='dark'] :is(.is-wrong .quiz-question__verdict,.exam__clock strong.is-low,.exam__warn) { color: #ffb4a1; }
