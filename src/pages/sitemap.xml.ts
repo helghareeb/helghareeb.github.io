@@ -23,6 +23,7 @@ const staticPaths = [
   '/en/mushaf-gharib/',
   '/ar/books/',
   '/en/books/',
+  '/ar/books/qatra-min-al-hayah/read/',
   '/ar/editions/',
   '/en/critical-editions/',
   '/ar/articles/',
@@ -109,16 +110,18 @@ export const GET: APIRoute = async () => {
     }
   }
 
+  // Publication/start years are not page modification dates. Omit lastmod unless
+  // an actual content modification timestamp is available.
   for (const entry of books) {
-    urls.set(getEntryPath('books', entry.data.lang, entry.slug), entry.data.year ? `${entry.data.year}-01-01` : undefined);
+    urls.set(getEntryPath('books', entry.data.lang, entry.slug), undefined);
   }
 
   for (const entry of editions) {
-    urls.set(getEntryPath('editions', entry.data.lang, entry.slug), entry.data.year ? `${entry.data.year}-01-01` : undefined);
+    urls.set(getEntryPath('editions', entry.data.lang, entry.slug), undefined);
   }
 
   for (const entry of projects) {
-    urls.set(getEntryPath('projects', entry.data.lang, entry.slug), entry.data.startYear ? `${entry.data.startYear}-01-01` : undefined);
+    urls.set(getEntryPath('projects', entry.data.lang, entry.slug), undefined);
   }
 
   for (const entry of externalLinks) {
