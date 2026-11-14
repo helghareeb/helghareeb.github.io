@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 415,
+   "last": 423,
    "hadith": [
     {
      "n": 349,
@@ -18039,6 +18039,383 @@
       },
       "id": "1y1jQz2E-bxmvePZozidZlJ0pCpNW6gdn",
       "player": "16EL2Ql5ckQvgQP022S3-jemGliAVNHKh"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 416,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا إِسْحَاقُ بْنُ نَصْرٍ، قَالَ حَدَّثَنَا عَبْدُ الرَّزَّاقِ، عَنْ مَعْمَرٍ، عَنْ هَمَّامٍ، سَمِعَ أَبَا هُرَيْرَةَ، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "إِذَا قَامَ أَحَدُكُمْ إِلَى الصَّلاَةِ فَلاَ يَبْصُقْ أَمَامَهُ، فَإِنَّمَا يُنَاجِي اللَّهَ مَا دَامَ فِي مُصَلاَّهُ، وَلاَ عَنْ يَمِينِهِ، فَإِنَّ عَنْ يَمِينِهِ مَلَكًا، وَلْيَبْصُقْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ، فَيَدْفِنُهَا .",
+     "gharib": [
+      {
+       "word": "يُنَاجِي",
+       "meaning": "يخاطب ربه في صلاته بما يقتضي التعظيم والأدب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٢–٥١٣."
+      },
+      {
+       "word": "فَيَدْفِنُهَا",
+       "meaning": "يواريها في باطن التراب بحيث يزول الأذى؛ ولا يراد تلويث البلاط أو الفرش.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٢–٥١٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 416"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Prophet said, \"If anyone of you stands for prayer, he should not spit in front of him because in prayer he is speaking in private to Allah and he should not spit on his right as there is an angel, but he can spit either on his left or under his left foot and bury it (i.e. expectoration)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 417,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مَالِكُ بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا زُهَيْرٌ، قَالَ حَدَّثَنَا حُمَيْدٌ، عَنْ أَنَسٍ، أَنَّ النَّبِيَّ ﷺ رَأَى نُخَامَةً فِي الْقِبْلَةِ فَحَكَّهَا بِيَدِهِ، وَرُئِيَ مِنْهُ كَرَاهِيَةٌ ـ أَوْ رُئِيَ كَرَاهِيَتُهُ لِذَلِكَ وَشِدَّتُهُ عَلَيْهِ ـ وَقَالَ",
+     "matn": "إِنَّ أَحَدَكُمْ إِذَا قَامَ فِي صَلاَتِهِ فَإِنَّمَا يُنَاجِي رَبَّهُ ـ أَوْ رَبُّهُ بَيْنَهُ وَبَيْنَ قِبْلَتِهِ ـ فَلاَ يَبْزُقَنَّ فِي قِبْلَتِهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ . ثُمَّ أَخَذَ طَرَفَ رِدَائِهِ فَبَزَقَ فِيهِ، وَرَدَّ بَعْضَهُ عَلَى بَعْضٍ، قَالَ  أَوْ يَفْعَلُ هَكَذَا .",
+     "gharib": [
+      {
+       "word": "نُخَامَةً",
+       "meaning": "ما يخرج من الحلق من البلغم، مما يصان عنه المسجد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٣–٥١٤."
+      },
+      {
+       "word": "فَحَكَّهَا",
+       "meaning": "أزالها بحكها بيده.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٣–٥١٤."
+      },
+      {
+       "word": "رِدَائِهِ",
+       "meaning": "ثوبه الذي يلبس على أعلى البدن؛ أخذ طرفه ليستعمله عند الحاجة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٣–٥١٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 417"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "The Prophet (ﷺ) saw expectoration (on the wall of the mosque) in the direction of the Qibla and scraped it off with his hand. It seemed that he disliked it and the sign of disgust was apparent from his face. He said, \"If anyone of you stands for the prayer, he is speaking in private to his Lord, (or) his Lord is between him and his Qibla, therefore he should not spit towards his Qibla, but he could spit either on his left or under his foot.\" Then he took the corner of his sheet and spat in it, folded it and said, \"Or do this",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 418,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ،",
+     "matn": "عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  هَلْ تَرَوْنَ قِبْلَتِي هَا هُنَا فَوَاللَّهِ مَا يَخْفَى عَلَىَّ خُشُوعُكُمْ وَلاَ رُكُوعُكُمْ، إِنِّي لأَرَاكُمْ مِنْ وَرَاءِ ظَهْرِي .",
+     "gharib": [
+      {
+       "word": "خُشُوعُكُمْ",
+       "meaning": "خضوعكم وسكونكم في الصلاة؛ ذكر الشارح عمومه للأركان واحتمال إرادة السجود.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٤–٥١٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٨",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 418"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"Do you consider or see that my face is towards the Qibla? By Allah, neither your submissiveness nor your bowing is hidden from me, surely I see you from my back",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 419,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ صَالِحٍ، قَالَ حَدَّثَنَا فُلَيْحُ بْنُ سُلَيْمَانَ، عَنْ هِلاَلِ بْنِ عَلِيٍّ، عَنْ أَنَسِ بْنِ مَالِكٍ، قَالَ صَلَّى بِنَا النَّبِيُّ ﷺ صَلاَةً ثُمَّ رَقِيَ الْمِنْبَرَ، فَقَالَ فِي الصَّلاَةِ وَفِي الرُّكُوعِ",
+     "matn": "إِنِّي لأَرَاكُمْ مِنْ وَرَائِي كَمَا أَرَاكُمْ .",
+     "gharib": [
+      {
+       "word": "رَقِيَ",
+       "meaning": "صعد، بكسر القاف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٥."
+      },
+      {
+       "word": "الْمِنْبَرَ",
+       "meaning": "الموضع المرتفع الذي يصعد عليه للخطبة أو الموعظة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤١٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 419"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "The Prophet (ﷺ) led us in a prayer and then got up on the pulpit and said, \"In your prayer and bowing, I certainly see you from my back as I see you (while looking at you)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 420,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ،",
+     "matn": "عَنْ نَافِعٍ، عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، أَنَّ رَسُولَ اللَّهِ ﷺ سَابَقَ بَيْنَ الْخَيْلِ الَّتِي أُضْمِرَتْ مِنَ الْحَفْيَاءِ، وَأَمَدُهَا ثَنِيَّةُ الْوَدَاعِ، وَسَابَقَ بَيْنَ الْخَيْلِ الَّتِي لَمْ تُضْمَرْ مِنَ الثَّنِيَّةِ إِلَى مَسْجِدِ بَنِي زُرَيْقٍ، وَأَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ كَانَ فِيمَنْ سَابَقَ بِهَا.",
+     "gharib": [
+      {
+       "word": "أُضْمِرَتْ",
+       "meaning": "علفت حتى تقوى ثم قلل علفها بقدر القوت وعولجت حتى يخف لحمها وتقوى على الجري.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٥–٥١٦؛ ٦/٧١–٧٢."
+      },
+      {
+       "word": "تُضْمَرْ",
+       "meaning": "تهيأ بالإضمار للسباق؛ شرح الإضمار بتقوية الخيل ثم تخفيف لحمها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٥–٥١٦؛ ٦/٧١–٧٢."
+      },
+      {
+       "word": "الثَّنِيَّةِ",
+       "meaning": "ثنية الوداع المذكورة قبلها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٥–٥١٦؛ ٦/٧١–٧٢."
+      },
+      {
+       "word": "ثَنِيَّةُ",
+       "meaning": "طريق مرتفع، والمراد هنا ثنية الوداع.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٥–٥١٦؛ ٦/٧١–٧٢."
+      },
+      {
+       "word": "الْحَفْيَاءِ",
+       "meaning": "اسم مكان خارج المدينة، بفتح الحاء وسكون الفاء والمد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٥–٥١٦؛ ٦/٧١–٧٢."
+      },
+      {
+       "word": "وَأَمَدُهَا",
+       "meaning": "غايتها التي ينتهي إليها السباق.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٥–٥١٦؛ ٦/٧١–٧٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٢٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 420"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "Allah's Messenger (ﷺ) ordered for a horse race; the trained horses were to run from a place called Al-Hafya' to Thaniyat Al-Wada` and the horses which were not trained were to run from Al-Thaniya to the Masjid (mosque of) Bani Zuraiq. The sub narrator added: Ibn `Umar was one of those who took part in the race",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 421,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "وَقَالَ إِبْرَاهِيمُ عَنْ عَبْدِ الْعَزِيزِ بْنِ صُهَيْبٍ، عَنْ أَنَسٍ ـ رضى الله عنه ـ قَالَ أُتِيَ النَّبِيُّ ﷺ بِمَالٍ مِنَ الْبَحْرَيْنِ فَقَالَ",
+     "matn": "انْثُرُوهُ فِي الْمَسْجِدِ . وَكَانَ أَكْثَرَ مَالٍ أُتِيَ بِهِ رَسُولُ اللَّهِ ﷺ، فَخَرَجَ رَسُولُ اللَّهِ ﷺ إِلَى الصَّلاَةِ، وَلَمْ يَلْتَفِتْ إِلَيْهِ، فَلَمَّا قَضَى الصَّلاَةَ جَاءَ فَجَلَسَ إِلَيْهِ، فَمَا كَانَ يَرَى أَحَدًا إِلاَّ أَعْطَاهُ، إِذْ جَاءَهُ الْعَبَّاسُ فَقَالَ يَا رَسُولَ اللَّهِ، أَعْطِنِي فَإِنِّي فَادَيْتُ نَفْسِي وَفَادَيْتُ عَقِيلاً، فَقَالَ لَهُ رَسُولُ اللَّهِ ﷺ  خُذْ . فَحَثَا فِي ثَوْبِهِ، ثُمَّ ذَهَبَ يُقِلُّهُ فَلَمْ يَسْتَطِعْ فَقَالَ يَا رَسُولَ اللَّهِ، أُؤْمُرْ بَعْضَهُمْ يَرْفَعُهُ إِلَىَّ. قَالَ  لاَ . قَالَ فَارْفَعْهُ أَنْتَ عَلَىَّ. قَالَ  لاَ . فَنَثَرَ مِنْهُ، ثُمَّ ذَهَبَ يُقِلُّهُ، فَقَالَ يَا رَسُولَ اللَّهِ، أُؤْمُرْ بَعْضَهُمْ يَرْفَعْهُ عَلَىَّ. قَالَ  لاَ . قَالَ فَارْفَعْهُ أَنْتَ عَلَىَّ. قَالَ  لاَ . فَنَثَرَ مِنْهُ، ثُمَّ احْتَمَلَهُ فَأَلْقَاهُ عَلَى كَاهِلِهِ ثُمَّ انْطَلَقَ، فَمَا زَالَ رَسُولُ اللَّهِ ﷺ يُتْبِعُهُ بَصَرَهُ حَتَّى خَفِيَ عَلَيْنَا، عَجَبًا مِنْ حِرْصِهِ، فَمَا قَامَ رَسُولُ اللَّهِ ﷺ وَثَمَّ مِنْهَا دِرْهَمٌ.",
+     "gharib": [
+      {
+       "word": "فَحَثَا",
+       "meaning": "أخذ بيديه وجمع في ثوبه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٦–٥١٧."
+      },
+      {
+       "word": "كَاهِلِهِ",
+       "meaning": "ما بين كتفيه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٦–٥١٧."
+      },
+      {
+       "word": "انْثُرُوهُ",
+       "meaning": "صبوه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٦–٥١٧."
+      },
+      {
+       "word": "يُقِلُّهُ",
+       "meaning": "يرفعه ويحمله، من الإقلال.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٦–٥١٧."
+      },
+      {
+       "word": "وَثَمَّ",
+       "meaning": "وهناك.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٦–٥١٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٢١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 421"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "Some goods came to Allah's Messenger (ﷺ) from Bahrain. The Prophet (ﷺ) ordered the people to spread them in the mosque --it was the biggest amount of goods Allah's Messenger (ﷺ) had ever received. He left for prayer and did not even look at it. After finishing the prayer, he sat by those goods and gave from those to everybody he saw. Al-`Abbas came to him and said, \"O Allah's Messenger (ﷺ)! give me (something) too, because I gave ransom for myself and `Aqil\". Allah's Messenger (ﷺ) told him to take. So he stuffed his garment with it and tried to carry it away but he failed to do so. He said, \"O Allah's Messenger (ﷺ)! Order someone to help me in lifting it.\" The Prophet (ﷺ) refused. He then said to the Prophet: Will you please help me to lift it?\" Allah's Messenger (ﷺ) refused. Then Al-`Abbas threw some of it and tried to lift it (but failed). He again said, \"O Allah's Messenger (ﷺ) Order someone to help me to lift it.\" He refused. Al-`Abbas then said to the Prophet: \"Will you please help me to lift it?\" He again refused. Then Al-`Abbas threw some of it, and lifted it on his shoulders and went away. Allah's Messenger (ﷺ) kept on watching him till he disappeared from his sight and was astonished at his greediness. Allah's Messenger (ﷺ) did not get up till the last coin was distributed",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 422,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، أَخْبَرَنَا مَالِكٌ،",
+     "matn": "عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ، سَمِعَ أَنَسًا، قَالَ وَجَدْتُ النَّبِيَّ ﷺ فِي الْمَسْجِدِ مَعَهُ نَاسٌ فَقُمْتُ، فَقَالَ لِي  آرْسَلَكَ أَبُو طَلْحَةَ  قُلْتُ نَعَمْ. فَقَالَ  لِطَعَامٍ . قُلْتُ نَعَمْ. فَقَالَ لِمَنْ حَوْلَهُ  قُومُوا . فَانْطَلَقَ وَانْطَلَقْتُ بَيْنَ أَيْدِيهِمْ.",
+     "gharib": [
+      {
+       "word": "آرْسَلَكَ",
+       "meaning": "أأرسلك؛ استفهام عن إرسال أبي طلحة له.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٧–٥١٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٢٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 422"
+     },
+     "en": {
+      "narrator": "Anas",
+      "text": "I found the Prophet (ﷺ) in the mosque along with some people. He said to me, \"Did Abu Talha send you?\" I said, \"Yes\". He said, \"For a meal?\" I said, \"Yes.\" Then he said to his companions, \"Get up.\" They set out and I was ahead of them",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 423,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا يَحْيَى، قَالَ أَخْبَرَنَا عَبْدُ الرَّزَّاقِ، قَالَ أَخْبَرَنَا ابْنُ جُرَيْجٍ، قَالَ أَخْبَرَنِي ابْنُ شِهَابٍ، عَنْ سَهْلِ بْنِ سَعْدٍ، أَنَّ رَجُلاً، قَالَ يَا رَسُولَ اللَّهِ، أَرَأَيْتَ رَجُلاً وَجَدَ مَعَ امْرَأَتِهِ رَجُلاً أَيَقْتُلُهُ فَتَلاَعَنَا فِي الْمَسْجِدِ وَأَنَا شَاهِدٌ.",
+     "gharib": [
+      {
+       "word": "فَتَلاَعَنَا",
+       "meaning": "وقع اللعان بين الزوجين؛ باب خاص من القضاء، وله شروطه وتفصيله في كتاب اللعان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥١٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٢٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 423"
+     },
+     "en": {
+      "narrator": "Sahl bin Sa`d",
+      "text": "A man said, \"O Allah's Messenger (ﷺ)! If a man finds another man with his wife, (committing adultery) should the husband kill him?\" Later on I saw them (the man and his wife) doing Li`an in the mosque (taking oaths, one accusing, and the other denying adultery)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
