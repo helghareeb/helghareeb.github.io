@@ -6,6 +6,7 @@ status: "Published on GitHub"
 year: "2026"
 publisher: "GitHub"
 workType: "Book"
+category: "Information Systems and Computing"
 externalUrl: "https://github.com/helghareeb/DSS"
 ---
 

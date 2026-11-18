@@ -6,6 +6,7 @@ status: "Published on GitHub"
 year: "2026"
 publisher: "GitHub"
 workType: "E-Book"
+category: "Islamic Studies"
 externalUrl: "https://github.com/helghareeb/tabary-01"
 ---
 

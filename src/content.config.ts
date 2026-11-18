@@ -29,6 +29,7 @@ const books = defineCollection({
     year: z.string().optional(),
     publisher: z.string().optional(),
     workType: z.string().optional(),
+    category: z.string().optional(),
     externalUrl: z.string().url().optional(),
   }),
 });

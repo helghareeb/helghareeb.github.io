@@ -2309,6 +2309,17 @@ button.gharib:focus-visible {
 }
 
 .share__more { position: relative; }
+/* Cards that clip overflow for their decoration must not cut off the open share menu. */
+:is(.hero, .entity-card, .video-card):has(.share__more[open]) { overflow: visible; }
+.hero:has(.share__more[open])::after { display: none; }
+@media (max-width: 560px) {
+  /* On phones the menu opens in place under its button, inside the page width. */
+  .share .share__more .share__options {
+    position: static;
+    min-width: 0;
+    margin-top: 0.5rem;
+  }
+}
 .share__more > summary { list-style: none; }
 .share__more > summary::-webkit-details-marker { display: none; }
 .share__more[open] > summary { border-color: var(--brand); }
@@ -2366,3 +2377,31 @@ button.gharib:focus-visible {
 .hero .share {
   margin-top: 1rem;
 }
+
+/* Embedded book viewer (Google Drive preview) on book pages */
+.book-embed {
+  position: relative;
+  width: 100%;
+  height: min(85vh, 900px);
+  min-height: 420px;
+  margin: 1rem 0 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface-strong);
+}
+.book-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.books-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.books-nav a { text-decoration: none; }
+.page-main .section[id] { scroll-margin-top: 6rem; }

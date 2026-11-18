@@ -6,6 +6,7 @@ status: "Published on GitHub"
 year: "2026"
 publisher: "GitHub"
 workType: "Book"
+category: "Islamic Studies"
 externalUrl: "https://github.com/helghareeb/muslim-la-yahon"
 ---
 

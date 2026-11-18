@@ -5,6 +5,7 @@ summary: "كتاب موجّه لطلاب السنة الأولى في الجام
 status: "نسخة محدَّثة على الموقع (يوليو 2026) · النسخة الأولى في مكتبة الألوكة (يونيو 2026)"
 year: "2026"
 workType: "كتاب"
+category: "التربية والأدب"
 externalUrl: "https://helghareeb.github.io/books/ula-jamia/ula-jamia-updated-2026-07.pdf"
 ---
 

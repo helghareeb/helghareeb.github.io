@@ -14,24 +14,27 @@ const books = (await getCollection('books'))
     return a.data.title.localeCompare(b.data.title, 'en');
   });
 
-const groupOrder = ['Book', 'E-Book'];
-const groupLabels: Record<string, string> = {
-  Book: 'Books',
-  'E-Book': 'E-books: edited lesson transcriptions',
+// Books are grouped by subject.
+const groupOrder = ['Information Systems and Computing', 'Islamic Studies', 'Education and Literature'];
+const groupId: Record<string, string> = {
+  'Information Systems and Computing': 'computing',
+  'Islamic Studies': 'islamic-studies',
+  'Education and Literature': 'education',
 };
 const groupMap = new Map<string, typeof books>();
 
 for (const book of books) {
-  const key = book.data.workType ?? 'Other works';
+  const key = book.data.category ?? 'Other works';
   groupMap.set(key, [...(groupMap.get(key) ?? []), book]);
 }
 
-const groups = Array.from(groupMap.entries()).sort((a, b) => {
-  const aIndex = groupOrder.indexOf(a[0]);
-  const bIndex = groupOrder.indexOf(b[0]);
-
-  return (aIndex === -1 ? groupOrder.length : aIndex) - (bIndex === -1 ? groupOrder.length : bIndex);
-});
+const rank = (key: string) => {
+  const index = groupOrder.indexOf(key);
+  return index === -1 ? groupOrder.length : index;
+};
+const groups = Array.from(groupMap.entries())
+  .sort((a, b) => rank(a[0]) - rank(b[0]))
+  .map(([key, entries]) => ({ key, id: groupId[key] ?? 'other', title: key, entries }));
 
 const seoTitle = buildSeoTitle('Books', {
   lang: 'en',
@@ -39,7 +42,7 @@ const seoTitle = buildSeoTitle('Books', {
 });
 const seoDescription = buildSeoDescription(
   'Books by Dr. Haitham A. El-Ghareeb: academic monographs on service-oriented architecture and enterprise integration, information systems textbooks, and Islamic studies titles.',
-  [`${books.length} titles`, books[0]?.data.year ? `Latest ${books[0].data.year}` : undefined],
+  [`${books.length + 1} titles`, books[0]?.data.year ? `Latest ${books[0].data.year}` : undefined],
 );
 ---
 
@@ -55,37 +58,43 @@ const seoDescription = buildSeoDescription(
       <h1 class="hero__title">Books</h1>
       <p class="hero__lead">
         Monographs on service-oriented architecture, e-learning and enterprise integration, course
-        textbooks in information systems, a collection of Arabic short stories, and edited transcriptions
-        of lessons on al-Shafi'i's al-Risalah and al-Tabari's Tafsir, listed newest first.
+        textbooks in information systems, Arabic works in creed and Islamic studies, a collection of
+        Arabic short stories, and edited transcriptions of lessons on al-Shafi'i's al-Risalah and
+        al-Tabari's Tafsir, grouped by subject and listed newest first.
       </p>
 
       <div class="hero__badge-row">
-        <span class="hero__badge">{books.length} titles</span>
+        <span class="hero__badge">{books.length + 1} titles</span>
       </div>
     </section>
 
-    <section class="shell section">
-      <a class="card-link" href="/en/mushaf-gharib/">
-        <article class="content-card entity-card">
-          <p class="content-card__meta">Book · read and download (PDF)</p>
-          <h3>Mushaf al-Gharib</h3>
-          <p>
-            The Madina mushaf (Hafs) with a facing commentary page for every page: rare words from six
-            classical books, occasions of revelation, and the tafsir hadiths with their grades. Thirty-one
-            volumes and a single complete file, in Arabic.
-          </p>
-        </article>
-      </a>
-    </section>
+    <nav class="shell books-nav" aria-label="Book categories">
+      {groups.map((group) => (
+        <a class="hero__badge" href={`#${group.id}`}>{group.title} ({group.entries.length + (group.id === 'islamic-studies' ? 1 : 0)})</a>
+      ))}
+    </nav>
 
-    {groups.map(([workType, entries]) => (
-      <section class="shell section">
+    {groups.map((group) => (
+      <section class="shell section" id={group.id}>
         <div class="section-heading">
-          <h2 class="section-title">{groupLabels[workType] ?? workType} ({entries.length})</h2>
+          <h2 class="section-title">{group.title}</h2>
         </div>
 
         <div class="grid-two">
-          {entries.map((book) => (
+          {group.id === 'islamic-studies' && (
+            <a class="card-link" href="/en/mushaf-gharib/">
+              <article class="content-card entity-card">
+                <p class="content-card__meta">Book · read and download (PDF)</p>
+                <h3>Mushaf al-Gharib</h3>
+                <p>
+                  The Madina mushaf (Hafs) with a facing commentary page for every page: rare words from six
+                  classical books, occasions of revelation, and the tafsir hadiths with their grades. Thirty-one
+                  volumes and a single complete file, in Arabic.
+                </p>
+              </article>
+            </a>
+          )}
+          {group.entries.map((book) => (
             <a class="card-link" href={getEntryPath('books', 'en', book.slug)}>
               <article class="content-card entity-card">
                 <p class="content-card__meta">{[book.data.year, book.data.publisher].filter(Boolean).join(' | ')}</p>

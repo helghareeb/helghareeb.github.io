@@ -14,27 +14,31 @@ const books = (await getCollection('books'))
     return a.data.title.localeCompare(b.data.title, 'ar');
   });
 
-const groupLabels: Record<string, string> = {
-  'كتاب': 'الكتب',
-  'كتاب إلكتروني': 'الكتب الإلكترونية',
-  'شرائح عرض': 'شرائح العرض',
+// Books are grouped by subject; slides stay in their own group at the end.
+const SLIDES = 'شرائح عرض';
+const groupOrder = ['العقيدة والدعوة', 'القرآن وعلومه', 'أصول الفقه', 'التربية والأدب', 'نظم المعلومات والحوسبة', SLIDES];
+const groupId: Record<string, string> = {
+  'العقيدة والدعوة': 'creed',
+  'القرآن وعلومه': 'quran',
+  'أصول الفقه': 'usul',
+  'التربية والأدب': 'education',
+  'نظم المعلومات والحوسبة': 'computing',
+  [SLIDES]: 'slides',
 };
-const groupOrder = ['كتاب', 'كتاب إلكتروني', 'شرائح عرض'];
 
 const groupMap = new Map<string, typeof books>();
 for (const book of books) {
-  const key = book.data.workType ?? 'كتاب';
+  const key = book.data.workType === SLIDES ? SLIDES : (book.data.category ?? 'أعمال أخرى');
   groupMap.set(key, [...(groupMap.get(key) ?? []), book]);
 }
 
+const rank = (key: string) => {
+  const index = groupOrder.indexOf(key);
+  return index === -1 ? groupOrder.length : index;
+};
 const groups = Array.from(groupMap.entries())
-  .sort((a, b) => {
-    const aIndex = groupOrder.indexOf(a[0]);
-    const bIndex = groupOrder.indexOf(b[0]);
-
-    return (aIndex === -1 ? groupOrder.length : aIndex) - (bIndex === -1 ? groupOrder.length : bIndex);
-  })
-  .map(([workType, entries]) => ({ title: groupLabels[workType] ?? workType, entries }));
+  .sort((a, b) => rank(a[0]) - rank(b[0]))
+  .map(([key, entries]) => ({ key, id: groupId[key] ?? 'other', title: key === SLIDES ? 'شرائح العرض' : key, entries }));
 
 const seoTitle = buildSeoTitle('الكتب', {
   lang: 'ar',
@@ -57,31 +61,36 @@ const seoDescription = buildSeoDescription(
       <p class="hero__eyebrow">الكتب</p>
       <h1 class="hero__title">الكتب والمؤلفات</h1>
       <p class="hero__lead">
-        مؤلفات في العلوم الشرعية والقصة الاجتماعية، وتفريغات منقحة لشروح أهل العلم، وكتب
-        أكاديمية في المعمارية الموجهة للخدمات والتعليم الإلكتروني وتكامل المؤسسات.
+        مؤلفات في العقيدة وعلوم القرآن وأصول الفقه، وفي التربية والقصة الاجتماعية، وتفريغات منقحة
+        لشروح أهل العلم، وكتب أكاديمية في نظم المعلومات، مرتبة حسب الموضوع.
       </p>
     </section>
 
-    <section class="shell section">
-      <a class="card-link" href="/ar/mushaf-gharib/">
-        <article class="content-card entity-card">
-          <p class="content-card__meta">كتاب · قراءة وتحميل PDF</p>
-          <h3>مصحف الغريب</h3>
-          <p>
-            مصحف المدينة برواية حفص، تقابل كل صفحة منه صفحة شرح: غريب القرآن من ستة كتب، وأسباب النزول،
-            وأحاديث كتب التفسير بأحكامها. في واحد وثلاثين مجلدًا وملف كامل.
-          </p>
-        </article>
-      </a>
-    </section>
+    <nav class="shell books-nav" aria-label="أقسام الكتب">
+      {groups.map((group) => (
+        <a class="hero__badge" href={`#${group.id}`}>{group.title} ({group.entries.length + (group.id === 'quran' ? 1 : 0)})</a>
+      ))}
+    </nav>
 
     {groups.map((group) => (
-      <section class="shell section">
+      <section class="shell section" id={group.id}>
         <div class="section-heading">
           <h2 class="section-title">{group.title}</h2>
         </div>
 
         <div class="grid-two">
+          {group.id === 'quran' && (
+            <a class="card-link" href="/ar/mushaf-gharib/">
+              <article class="content-card entity-card">
+                <p class="content-card__meta">كتاب · قراءة وتحميل PDF</p>
+                <h3>مصحف الغريب</h3>
+                <p>
+                  مصحف المدينة برواية حفص، تقابل كل صفحة منه صفحة شرح: غريب القرآن من ستة كتب، وأسباب النزول،
+                  وأحاديث كتب التفسير بأحكامها. في واحد وثلاثين مجلدًا وملف كامل.
+                </p>
+              </article>
+            </a>
+          )}
           {group.entries.map((book) => (
             <a class="card-link" href={getEntryPath('books', 'ar', book.slug)}>
               <article class="content-card entity-card">

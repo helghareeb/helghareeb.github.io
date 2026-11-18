@@ -6,6 +6,7 @@ status: "منشور (ورقي وإلكتروني)"
 year: "2025"
 publisher: "دار طابة للنشر والترجمة"
 workType: "كتاب"
+category: "التربية والأدب"
 externalUrl: "https://helghareeb.github.io/ar/books/qatra-min-al-hayah/read/"
 ---
 

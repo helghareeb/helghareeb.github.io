@@ -5,6 +5,7 @@ summary: "An Arabic book for first-year university students, accompanying them t
 status: "Updated version on this site (July 2026) · First version in the Alukah library (June 2026)"
 year: "2026"
 workType: "Book"
+category: "Education and Literature"
 externalUrl: "https://helghareeb.github.io/books/ula-jamia/ula-jamia-updated-2026-07.pdf"
 ---
 

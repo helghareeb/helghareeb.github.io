@@ -6,6 +6,7 @@ status: "Published (print and online)"
 year: "2025"
 publisher: "Dar Taba for Publishing and Translation"
 workType: "Book"
+category: "Education and Literature"
 externalUrl: "https://helghareeb.github.io/ar/books/qatra-min-al-hayah/read/"
 ---
 

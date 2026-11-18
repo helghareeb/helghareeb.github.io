@@ -6,6 +6,7 @@ status: "منشور على GitHub"
 year: "2026"
 publisher: "GitHub"
 workType: "كتاب"
+category: "العقيدة والدعوة"
 externalUrl: "https://github.com/helghareeb/muslim-la-yahon"
 ---
 

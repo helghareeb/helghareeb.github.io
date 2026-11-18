@@ -6,6 +6,7 @@ status: "منشور على GitHub"
 year: "2026"
 publisher: "GitHub"
 workType: "كتاب إلكتروني"
+category: "أصول الفقه"
 externalUrl: "https://github.com/helghareeb/resala-shafi-samy"
 ---
 
