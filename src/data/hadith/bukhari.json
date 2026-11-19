@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 447,
+   "last": 455,
    "hadith": [
     {
      "n": 349,
@@ -19466,6 +19466,333 @@
        "en": "Dr. Yusuf bin Nuh Ahmad"
       },
       "id": "1MsgppWmk8JWGo9Q8wy0rtfMhWaO9SCdG"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 448,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ، عَنْ أَبِي حَازِمٍ، عَنْ سَهْلٍ،",
+     "matn": "قَالَ بَعَثَ رَسُولُ اللَّهِ ﷺ إِلَى امْرَأَةٍ أَنْ مُرِي غُلاَمَكِ النَّجَّارَ يَعْمَلْ لِي أَعْوَادًا أَجْلِسُ عَلَيْهِنَّ.",
+     "gharib": [
+      {
+       "word": "أَعْوَادًا",
+       "meaning": "قطعًا من الخشب يُصنع منها المنبر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٣–٥٤٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٨",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 448"
+     },
+     "en": {
+      "narrator": "Sahl",
+      "text": "Allah's Messenger (ﷺ) sent someone to a woman telling her to \"Order her slave, carpenter, to prepare a wooden pulpit for him to sit on",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "104HMgGR5iEGMXe2MaEN1ImZjAPqqx7ws"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 449,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا خَلاَّدٌ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ بْنُ أَيْمَنَ،",
+     "matn": "عَنْ أَبِيهِ، عَنْ جَابِرٍ، أَنَّ امْرَأَةً، قَالَتْ يَا رَسُولَ اللَّهِ، أَلاَ أَجْعَلُ لَكَ شَيْئًا تَقْعُدُ عَلَيْهِ، فَإِنَّ لِي غُلاَمًا نَجَّارًا قَالَ  إِنْ شِئْتِ . فَعَمِلَتِ الْمِنْبَرَ.",
+     "gharib": [
+      {
+       "word": "الْمِنْبَرَ",
+       "meaning": "الموضع المرتفع الذي صُنع للنبي ﷺ ليجلس عليه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٣–٥٤٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 449"
+     },
+     "en": {
+      "narrator": "Jabir",
+      "text": "A woman said, \"O Allah's Messenger (ﷺ)! Shall I get something constructed for you to sit on as I have a slave who is a carpenter?\" He replied, \"Yes, if you like.\" So she had that pulpit constructed",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1Tp5eVz749XQNl1AoJw81Qim9IEtKNcbL"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 450,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ سُلَيْمَانَ، حَدَّثَنِي ابْنُ وَهْبٍ، أَخْبَرَنِي عَمْرٌو، أَنَّ بُكَيْرًا، حَدَّثَهُ أَنَّ عَاصِمَ بْنَ عُمَرَ بْنِ قَتَادَةَ حَدَّثَهُ أَنَّهُ، سَمِعَ عُبَيْدَ اللَّهِ الْخَوْلاَنِيَّ، أَنَّهُ سَمِعَ عُثْمَانَ بْنَ عَفَّانَ،",
+     "matn": "يَقُولُ عِنْدَ قَوْلِ النَّاسِ فِيهِ حِينَ بَنَى مَسْجِدَ الرَّسُولِ ﷺ إِنَّكُمْ أَكْثَرْتُمْ، وَإِنِّي سَمِعْتُ النَّبِيَّ ﷺ يَقُولُ  مَنْ بَنَى مَسْجِدًا ـ قَالَ بُكَيْرٌ حَسِبْتُ أَنَّهُ قَالَ ـ يَبْتَغِي بِهِ وَجْهَ اللَّهِ، بَنَى اللَّهُ لَهُ مِثْلَهُ فِي الْجَنَّةِ .",
+     "gharib": [
+      {
+       "word": "يَبْتَغِي",
+       "meaning": "يطلب، والمراد طلب رضا الله.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٤–٥٤٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٥٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 450"
+     },
+     "en": {
+      "narrator": "'Ubaidullah Al-Khaulani",
+      "text": "I heard `Uthman bin `Affan saying, when people argued too much about his intention to reconstruct the mosque of Allah's Messenger (ﷺ), \"You have talked too much. I heard the Prophet (ﷺ) saying, 'Whoever built a mosque, (Bukair thought that `Asim, another sub-narrator, added, \"Intending Allah's Pleasure\"), Allah would build for him a similar place in Paradise",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1_klWg9U2cmO2g2SDVMlXyey30zoWvGbh"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 451,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ قُلْتُ لِعَمْرٍو أَسَمِعْتَ جَابِرَ بْنَ عَبْدِ اللَّهِ",
+     "matn": "يَقُولُ مَرَّ رَجُلٌ فِي الْمَسْجِدِ وَمَعَهُ سِهَامٌ، فَقَالَ لَهُ رَسُولُ اللَّهِ ﷺ  أَمْسِكْ بِنِصَالِهَا .",
+     "gharib": [
+      {
+       "word": "بِنِصَالِهَا",
+       "meaning": "بأطرافها الحديدية. والنصال جمع نصل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٦–٥٤٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٥١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 451"
+     },
+     "en": {
+      "narrator": "`Amr",
+      "text": "I heard Jabir bin `Abdullah saying, \"A man passed through the mosque carrying arrows. Allah's Apostle said to him, 'Hold them by their heads",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1TDrBl1VM9eLzDcab-fNUGDjNBXg5wM1P"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 452,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ، قَالَ حَدَّثَنَا أَبُو بُرْدَةَ بْنُ عَبْدِ اللَّهِ، قَالَ سَمِعْتُ أَبَا بُرْدَةَ، عَنْ أَبِيهِ، عَنِ النَّبِيِّ ﷺ قَالَ",
+     "matn": "مَنْ مَرَّ فِي شَىْءٍ مِنْ مَسَاجِدِنَا أَوْ أَسْوَاقِنَا بِنَبْلٍ، فَلْيَأْخُذْ عَلَى نِصَالِهَا، لاَ يَعْقِرْ بِكَفِّهِ مُسْلِمًا .",
+     "gharib": [
+      {
+       "word": "نِصَالِهَا",
+       "meaning": "أطراف السهام الحديدية، جمع نصل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٧."
+      },
+      {
+       "word": "يَعْقِرْ",
+       "meaning": "يجرح.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٥٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 452"
+     },
+     "en": {
+      "narrator": "Abu Burda bin `Abdullah",
+      "text": "(on the authority of his father) The Prophet (ﷺ) said, \"Whoever passes through our mosques or markets with arrows should hold them by their heads lest he should injure a Muslim",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 453,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ الْحَكَمُ بْنُ نَافِعٍ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي أَبُو سَلَمَةَ بْنُ عَبْدِ الرَّحْمَنِ بْنِ عَوْفٍ، أَنَّهُ سَمِعَ حَسَّانَ بْنَ ثَابِتٍ الأَنْصَارِيَّ،",
+     "matn": "يَسْتَشْهِدُ أَبَا هُرَيْرَةَ أَنْشُدُكَ اللَّهَ هَلْ سَمِعْتَ النَّبِيَّ ﷺ يَقُولُ  يَا حَسَّانُ، أَجِبْ عَنْ رَسُولِ اللَّهِ ﷺ، اللَّهُمَّ أَيِّدْهُ بِرُوحِ الْقُدُسِ . قَالَ أَبُو هُرَيْرَةَ نَعَمْ.",
+     "gharib": [
+      {
+       "word": "أَنْشُدُكَ",
+       "meaning": "أسألك بالله.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٨–٥٤٩."
+      },
+      {
+       "word": "أَيِّدْهُ",
+       "meaning": "قوّه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٨–٥٤٩."
+      },
+      {
+       "word": "الْقُدُسِ",
+       "meaning": "روح القدس هنا جبريل، كما فسّره ابن حجر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٨–٥٤٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٥٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 453"
+     },
+     "en": {
+      "narrator": "Hassan bin Thabit Al-Ansari",
+      "text": "I asked Abu Huraira \"By Allah! Tell me the truth whether you heard the Prophet (ﷺ) saying, 'O Hassan! Reply on behalf of Allah's Messenger (ﷺ). O Allah! Help him with the Holy Spirit.\" Abu Huraira said, \"Yes",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1QQAhSIWke125WfZxHMdoIQWd2C7jUZiW"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 454,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، عَنْ صَالِحٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عُرْوَةُ بْنُ الزُّبَيْرِ، أَنَّ عَائِشَةَ،",
+     "matn": "قَالَتْ لَقَدْ رَأَيْتُ رَسُولَ اللَّهِ ﷺ يَوْمًا عَلَى باب حُجْرَتِي، وَالْحَبَشَةُ يَلْعَبُونَ فِي الْمَسْجِدِ وَرَسُولُ اللَّهِ ﷺ يَسْتُرُنِي بِرِدَائِهِ، أَنْظُرُ إِلَى لَعِبِهِمْ. زَادَ إِبْرَاهِيمُ بْنُ الْمُنْذِرِ حَدَّثَنَا ابْنُ وَهْبٍ، أَخْبَرَنِي يُونُسُ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، قَالَتْ رَأَيْتُ النَّبِيَّ ﷺ وَالْحَبَشَةُ يَلْعَبُونَ بِحِرَابِهِمْ.",
+     "gharib": [
+      {
+       "word": "حُجْرَتِي",
+       "meaning": "موضع سكن عائشة المذكور في الخبر.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٩–٥٥٠."
+      },
+      {
+       "word": "بِرِدَائِهِ",
+       "meaning": "بثوبه الذي يوضع على أعلى البدن.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٩–٥٥٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٥٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 454"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Once I saw Allah's Messenger (ﷺ) at the door of my house while some Ethiopians were playing in the mosque (displaying their skill with spears). Allah's Messenger (ﷺ) was screening me with his Rida' so as to enable me to see their display. (`Urwa said that `Aisha said, \"I saw the Prophet (ﷺ) and the Ethiopians were playing with their spears",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 455,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، عَنْ صَالِحٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عُرْوَةُ بْنُ الزُّبَيْرِ، أَنَّ عَائِشَةَ،",
+     "matn": "قَالَتْ لَقَدْ رَأَيْتُ رَسُولَ اللَّهِ ﷺ يَوْمًا عَلَى باب حُجْرَتِي، وَالْحَبَشَةُ يَلْعَبُونَ فِي الْمَسْجِدِ وَرَسُولُ اللَّهِ ﷺ يَسْتُرُنِي بِرِدَائِهِ، أَنْظُرُ إِلَى لَعِبِهِمْ. زَادَ إِبْرَاهِيمُ بْنُ الْمُنْذِرِ حَدَّثَنَا ابْنُ وَهْبٍ، أَخْبَرَنِي يُونُسُ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، قَالَتْ رَأَيْتُ النَّبِيَّ ﷺ وَالْحَبَشَةُ يَلْعَبُونَ بِحِرَابِهِمْ.",
+     "gharib": [
+      {
+       "word": "بِحِرَابِهِمْ",
+       "meaning": "الحِراب جمع حربة. وهي آلة طعن قديمة، ونصّ هذا الطريق على أن لعبهم كان بها.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤٩–٥٥٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٥٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 455"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "Once I saw Allah's Messenger (ﷺ) at the door of my house while some Ethiopians were playing in the mosque (displaying their skill with spears). Allah's Messenger (ﷺ) was screening me with his Rida' so as to enable me to see their display. (`Urwa said that `Aisha said, \"I saw the Prophet (ﷺ) and the Ethiopians were playing with their spears",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
      },
      "video": null,
      "sharh": null,
