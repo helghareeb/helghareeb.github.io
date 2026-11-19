@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 492,
+      "last": 495,
       "hadith": [
         {
           "n": 349,
@@ -21306,6 +21306,123 @@
           "en": {
             "narrator": "",
             "text": "See translation for hadith 484 above",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 493,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ بْنِ عُتْبَةَ، عَنْ عَبْدِ اللَّهِ بْنِ عَبَّاسٍ، أَنَّهُ قَالَ أَقْبَلْتُ رَاكِبًا عَلَى حِمَارٍ أَتَانٍ، وَأَنَا يَوْمَئِذٍ قَدْ نَاهَزْتُ الاِحْتِلاَمَ، وَرَسُولُ اللَّهِ ﷺ يُصَلِّي بِالنَّاسِ بِمِنًى إِلَى غَيْرِ جِدَارٍ، فَمَرَرْتُ بَيْنَ يَدَىْ بَعْضِ الصَّفِّ، فَنَزَلْتُ وَأَرْسَلْتُ الأَتَانَ تَرْتَعُ، وَدَخَلْتُ فِي الصَّفِّ، فَلَمْ يُنْكِرْ ذَلِكَ عَلَىَّ أَحَدٌ.",
+          "gharib": [
+            {
+              "word": "نَاهَزْتُ",
+              "meaning": "قاربتُ البلوغ.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧١–٥٧٢."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٩٣",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 493"
+          },
+          "en": {
+            "narrator": "Ibn `Abbas",
+            "text": "Once I came riding a she-ass when I had just attained the age of puberty. Allah's Messenger (ﷺ) was offering the prayer at Mina with no wall in front of him and I passed in front of some of the row. There I dismounted and let my she-ass loose to graze and entered the row and nobody objected to me about it",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 494,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "حَدَّثَنَا إِسْحَاقُ، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ نُمَيْرٍ،",
+          "matn": "قَالَ حَدَّثَنَا عُبَيْدُ اللَّهِ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، أَنَّ رَسُولَ اللَّهِ ﷺ كَانَ إِذَا خَرَجَ يَوْمَ الْعِيدِ أَمَرَ بِالْحَرْبَةِ فَتُوضَعُ بَيْنَ يَدَيْهِ، فَيُصَلِّي إِلَيْهَا وَالنَّاسُ وَرَاءَهُ، وَكَانَ يَفْعَلُ ذَلِكَ فِي السَّفَرِ، فَمِنْ ثَمَّ اتَّخَذَهَا الأُمَرَاءُ.",
+          "gharib": [
+            {
+              "word": "الْحَرْبَةِ",
+              "meaning": "آلةٌ لها سنان اتُّخذت سترة للصلاة.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٣."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٩٤",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 494"
+          },
+          "en": {
+            "narrator": "Ibn `Umar",
+            "text": "Whenever Allah's Messenger (ﷺ) came out on `Id day, he used to order that a Harba [??] (a short spear) to be planted in front of him (as a Sutra for his prayer) and then he used to pray facing it with the people behind him and used to do the same while on a journey. After the Prophet (ﷺ) , this practice was adopted by the Muslim rulers (who followed his traditions)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 495,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا أَبُو الْوَلِيدِ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ عَوْنِ بْنِ أَبِي جُحَيْفَةَ، قَالَ سَمِعْتُ أَبِي أَنَّ النَّبِيَّ ﷺ صَلَّى بِهِمْ بِالْبَطْحَاءِ ـ وَبَيْنَ يَدَيْهِ عَنَزَةٌ ـ الظُّهْرَ رَكْعَتَيْنِ، وَالْعَصْرَ رَكْعَتَيْنِ، تَمُرُّ بَيْنَ يَدَيْهِ الْمَرْأَةُ وَالْحِمَارُ.",
+          "gharib": [
+            {
+              "word": "عَنَزَةٌ",
+              "meaning": "حربة قصيرة.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٣–٥٧٤."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٩٥",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 495"
+          },
+          "en": {
+            "narrator": "`Aun bin Abi Juhaifa",
+            "text": "I heard my father saying, \"The Prophet (ﷺ) led us, and prayed a two-rak`at Zuhr prayer and then a two-rak` at `Asr prayer at Al-Batha' [??] with a short spear (planted) in front of him (as a Sutra) while women and donkeys were passing in front of him (beyond that stick)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {

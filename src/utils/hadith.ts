@@ -88,6 +88,7 @@ export function markGharib(text: string, gharib: Gharib[]) {
     const b = bare(tok);
     let i = keys.get(b);
     if (i === undefined && /^[وف]/.test(b)) i = keys.get(b.slice(1));
+    if (i === undefined && /^[وف]?[بكل]ال/.test(b)) i = keys.get(b.replace(/^[وف]?[بكل]/, ''));
     if (i === undefined) for (const [k, v] of keys) if (k.length > 3 && (b.startsWith(k) || k.startsWith(b)) && Math.abs(k.length - b.length) <= 2) { i = v; break; }
     return { tok, g: i === undefined ? null : gharib[i] };
   };
