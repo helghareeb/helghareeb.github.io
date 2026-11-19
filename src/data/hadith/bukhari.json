@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 469,
+   "last": 477,
    "hadith": [
     {
      "n": 349,
@@ -20412,6 +20412,324 @@
        "en": "Dr. Yusuf bin Nuh Ahmad"
       },
       "id": "1prcPNTMwAdN38GQGvMd38-9AUpHDMyfs"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 470,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا الْجُعَيْدُ بْنُ عَبْدِ الرَّحْمَنِ، قَالَ حَدَّثَنِي يَزِيدُ بْنُ خُصَيْفَةَ، عَنِ السَّائِبِ بْنِ يَزِيدَ، قَالَ كُنْتُ قَائِمًا فِي الْمَسْجِدِ فَحَصَبَنِي رَجُلٌ، فَنَظَرْتُ فَإِذَا عُمَرُ بْنُ الْخَطَّابِ",
+     "matn": "فَقَالَ اذْهَبْ فَأْتِنِي بِهَذَيْنِ. فَجِئْتُهُ بِهِمَا. قَالَ مَنْ أَنْتُمَا ـ أَوْ مِنْ أَيْنَ أَنْتُمَا قَالاَ مِنْ أَهْلِ الطَّائِفِ. قَالَ لَوْ كُنْتُمَا مِنْ أَهْلِ الْبَلَدِ لأَوْجَعْتُكُمَا، تَرْفَعَانِ أَصْوَاتَكُمَا فِي مَسْجِدِ رَسُولِ اللَّهِ ﷺ",
+     "gharib": [
+      {
+       "word": "فَحَصَبَنِي",
+       "meaning": "رماني بالحصباء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦٠–٥٦١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٧٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 470"
+     },
+     "en": {
+      "narrator": "Al-Sa'ib bin Yazid",
+      "text": "I was standing in the mosque and somebody threw a gravel at me. I looked and found that he was `Umar bin Al-Khattab. He said to me, \"Fetch those two men to me.\" When I did, he said to them, \"Who are you? (Or) where do you come from?\" They replied, \"We are from Ta'if.\" `Umar said, \"Were you from this city (Medina) I would have punished you for raising your voices in the mosque of Allah's Messenger (ﷺ)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1BlxPfBdo0ktTYxXCe2alCYjvGpGjsbXz"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 471,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَحْمَدُ، قَالَ حَدَّثَنَا ابْنُ وَهْبٍ، قَالَ أَخْبَرَنِي يُونُسُ بْنُ يَزِيدَ، عَنِ ابْنِ شِهَابٍ، حَدَّثَنِي عَبْدُ اللَّهِ بْنُ كَعْبِ بْنِ مَالِكٍ،",
+     "matn": "أَنَّ كَعْبَ بْنَ مَالِكٍ، أَخْبَرَهُ أَنَّهُ، تَقَاضَى ابْنَ أَبِي حَدْرَدٍ دَيْنًا لَهُ عَلَيْهِ، فِي عَهْدِ رَسُولِ اللَّهِ ﷺ فِي الْمَسْجِدِ، فَارْتَفَعَتْ أَصْوَاتُهُمَا حَتَّى سَمِعَهَا رَسُولُ اللَّهِ ﷺ وَهُوَ فِي بَيْتِهِ، فَخَرَجَ إِلَيْهِمَا رَسُولُ اللَّهِ ﷺ حَتَّى كَشَفَ سِجْفَ حُجْرَتِهِ وَنَادَى  يَا كَعْبُ بْنَ مَالِكٍ، يَا كَعْبُ . قَالَ لَبَّيْكَ يَا رَسُولَ اللَّهِ. فَأَشَارَ بِيَدِهِ أَنْ ضَعِ الشَّطْرَ مِنْ دَيْنِكَ. قَالَ كَعْبٌ قَدْ فَعَلْتُ يَا رَسُولَ اللَّهِ. قَالَ رَسُولُ اللَّهِ ﷺ  قُمْ فَاقْضِهِ .",
+     "gharib": [
+      {
+       "word": "سِجْفَ",
+       "meaning": "ستر الحجرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦١، ٥٥١–٥٥٢."
+      },
+      {
+       "word": "الشَّطْرَ",
+       "meaning": "النصف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦١، ٥٥١–٥٥٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٧١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 471"
+     },
+     "en": {
+      "narrator": "Ka`b bin Malik",
+      "text": "During the lifetime of Allah's Messenger (ﷺ) I asked Ibn Abi Hadrad in the mosque to pay the debts which he owed to me and our voices grew so loud that Allah's Messenger (ﷺ) heard them while he was in his house. So he came to us after raising the curtain of his room. The Prophet (ﷺ) said, \"O Ka`b bin Malik!\" I replied, \"Labaik, O Allah's Messenger (ﷺ).\" He gestured with his hand to me to reduce the debt to one half. I said, \"O Allah's Messenger (ﷺ), I have done it.\" Allah's Messenger (ﷺ) said (to Ibn Abi Hadrad), \"Get up and pay it",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1i6_RE8aYbpWD_ew-kJ5NdTPLNe5Kk2R-"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 472,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا بِشْرُ بْنُ الْمُفَضَّلِ، عَنْ عُبَيْدِ اللَّهِ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ،",
+     "matn": "قَالَ سَأَلَ رَجُلٌ النَّبِيَّ ﷺ وَهْوَ عَلَى الْمِنْبَرِ مَا تَرَى فِي صَلاَةِ اللَّيْلِ قَالَ  مَثْنَى مَثْنَى، فَإِذَا خَشِيَ الصُّبْحَ صَلَّى وَاحِدَةً، فَأَوْتَرَتْ لَهُ مَا صَلَّى . وَإِنَّهُ كَانَ يَقُولُ اجْعَلُوا آخِرَ صَلاَتِكُمْ وِتْرًا، فَإِنَّ النَّبِيَّ ﷺ أَمَرَ بِهِ.",
+     "gharib": [
+      {
+       "word": "مَثْنَى",
+       "meaning": "اثنتين اثنتين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦١–٥٦٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٧٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 472"
+     },
+     "en": {
+      "narrator": "Nafi`",
+      "text": "Ibn `Umar said, \"While the Prophet (ﷺ) was on the pulpit, a man asked him how to offer the night prayers. He replied, 'Pray two rak`at at a time and then two and then two and so on, and if you are afraid of the dawn (the approach of the time of the Fajr prayer) pray one rak`a and that will be the witr for all the rak`at which you have offered.\" Ibn `Umar said, \"The last rak`at of the night prayer should be odd, for the Prophet (ﷺ) ordered it to be so",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 473,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا حَمَّادٌ، عَنْ أَيُّوبَ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ،",
+     "matn": "أَنَّ رَجُلاً، جَاءَ إِلَى النَّبِيِّ ﷺ وَهْوَ يَخْطُبُ فَقَالَ كَيْفَ صَلاَةُ اللَّيْلِ فَقَالَ  مَثْنَى مَثْنَى، فَإِذَا خَشِيتَ الصُّبْحَ فَأَوْتِرْ بِوَاحِدَةٍ، تُوتِرُ لَكَ مَا قَدْ صَلَّيْتَ . قَالَ الْوَلِيدُ بْنُ كَثِيرٍ حَدَّثَنِي عُبَيْدُ اللَّهِ بْنُ عَبْدِ اللَّهِ أَنَّ ابْنَ عُمَرَ حَدَّثَهُمْ أَنَّ رَجُلاً نَادَى النَّبِيَّ ﷺ وَهُوَ فِي الْمَسْجِدِ.",
+     "gharib": [
+      {
+       "word": "تُوتِرُ",
+       "meaning": "تجعل الصلاة التي قبلها وترًا.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٧٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 473"
+     },
+     "en": {
+      "narrator": "Ibn `Umar",
+      "text": "A man came to the Prophet (ﷺ) while he was delivering the sermon and asked him how to offer the night prayers. The Prophet (ﷺ) replied, 'Pray two rak`at at a time and then two and then two and so on and if you are afraid of dawn (the approach of the time of the Fajr prayer) pray one rak`a and that will be the witr for all the rak`at which you have prayed.\" Narrated 'Ubaidullah bin `Abdullah bin `Umar: A man called the Prophet (ﷺ) while he was in the mosque",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 474,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، أَنَّ أَبَا مُرَّةَ، مَوْلَى عَقِيلِ بْنِ أَبِي طَالِبٍ أَخْبَرَهُ عَنْ أَبِي وَاقِدٍ اللَّيْثِيِّ،",
+     "matn": "قَالَ بَيْنَمَا رَسُولُ اللَّهِ ﷺ فِي الْمَسْجِدِ فَأَقْبَلَ ثَلاَثَةُ نَفَرٍ، فَأَقْبَلَ اثْنَانِ إِلَى رَسُولِ اللَّهِ ﷺ وَذَهَبَ وَاحِدٌ، فَأَمَّا أَحَدُهُمَا فَرَأَى فُرْجَةً فَجَلَسَ، وَأَمَّا الآخَرُ فَجَلَسَ خَلْفَهُمْ، فَلَمَّا فَرَغَ رَسُولُ اللَّهِ ﷺ قَالَ  أَلاَ أُخْبِرُكُمْ عَنِ الثَّلاَثَةِ أَمَّا أَحَدُهُمْ فَأَوَى إِلَى اللَّهِ، فَآوَاهُ اللَّهُ، وَأَمَّا الآخَرُ فَاسْتَحْيَا، فَاسْتَحْيَا اللَّهُ مِنْهُ، وَأَمَّا الآخَرُ فَأَعْرَضَ، فَأَعْرَضَ اللَّهُ عَنْهُ .",
+     "gharib": [
+      {
+       "word": "فُرْجَةً",
+       "meaning": "موضع خالٍ بين الجالسين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦٢–٥٦٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٧٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 474"
+     },
+     "en": {
+      "narrator": "Abu Waqid al-Laithi",
+      "text": "While Allah's Messenger (ﷺ) was sitting in the mosque (with some people) three men came, two of them came in front of Allah's Messenger (ﷺ) and the third one went away, and then one of them found a place in the circle and sat there while the second man sat behind the gathering, and the third one went away. When Allah's Messenger (ﷺ) finished his preaching, he said, \"Shall I tell you about these three persons? One of them betook himself to Allah and so Allah accepted him and accommodated him; the second felt shy before Allah so Allah did the same for him and sheltered him in His Mercy (and did not punish him), while the third turned his face from Allah, and went away, so Allah turned His face from him likewise",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1RYGLazWl-Uh2ZYbNb_LDL0QoGekhqsPx"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 475,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنِ ابْنِ شِهَابٍ، عَنْ عَبَّادِ بْنِ تَمِيمٍ، عَنْ عَمِّهِ، أَنَّهُ رَأَى رَسُولَ اللَّهِ ﷺ مُسْتَلْقِيًا فِي الْمَسْجِدِ، وَاضِعًا إِحْدَى رِجْلَيْهِ عَلَى الأُخْرَى. وَعَنِ ابْنِ شِهَابٍ عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ قَالَ كَانَ عُمَرُ وَعُثْمَانُ يَفْعَلاَنِ ذَلِكَ.",
+     "gharib": [
+      {
+       "word": "مُسْتَلْقِيًا",
+       "meaning": "مضطجعًا على ظهره.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦٣."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٧٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 475"
+     },
+     "en": {
+      "narrator": "`Abbad bin Tamim",
+      "text": "that his uncle said, \"I saw Allah's Messenger (ﷺ) lying flat (on his back) in the mosque with one leg on the other.\" Narrated Sa`id bin Al-Musaiyab that `Umar and `Uthman used to do the same",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 476,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عُرْوَةُ بْنُ الزُّبَيْرِ، أَنَّ عَائِشَةَ، زَوْجَ النَّبِيِّ ﷺ",
+     "matn": "قَالَتْ لَمْ أَعْقِلْ أَبَوَىَّ إِلاَّ وَهُمَا يَدِينَانِ الدِّينَ، وَلَمْ يَمُرَّ عَلَيْنَا يَوْمٌ إِلاَّ يَأْتِينَا فِيهِ رَسُولُ اللَّهِ ﷺ طَرَفَىِ النَّهَارِ بُكْرَةً وَعَشِيَّةً، ثُمَّ بَدَا لأَبِي بَكْرٍ فَابْتَنَى مَسْجِدًا بِفِنَاءِ دَارِهِ، فَكَانَ يُصَلِّي فِيهِ وَيَقْرَأُ الْقُرْآنَ، فَيَقِفُ عَلَيْهِ نِسَاءُ الْمُشْرِكِينَ، وَأَبْنَاؤُهُمْ يَعْجَبُونَ مِنْهُ وَيَنْظُرُونَ إِلَيْهِ، وَكَانَ أَبُو بَكْرٍ رَجُلاً بَكَّاءً لاَ يَمْلِكُ عَيْنَيْهِ إِذَا قَرَأَ الْقُرْآنَ، فَأَفْزَعَ ذَلِكَ أَشْرَافَ قُرَيْشٍ مِنَ الْمُشْرِكِينَ.",
+     "gharib": [
+      {
+       "word": "بِفِنَاءِ",
+       "meaning": "بالساحة التي أمام الدار.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦٣–٥٦٤."
+      },
+      {
+       "word": "بَكَّاءً",
+       "meaning": "كثير البكاء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦٣–٥٦٤."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٧٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 476"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "(the wife of the Prophet) I had seen my parents following Islam since I attained the age of puberty. Not a day passed but the Prophet (ﷺ) visited us, both in the mornings and evenings. My father Abu Bakr thought of building a mosque in the courtyard of his house and he did so. He used to pray and recite the Qur'an in it. The pagan women and their children used to stand by him and look at him with surprise. Abu Bakr was a Softhearted person and could not help weeping while reciting the Qur'an. The chiefs of the Quraish pagans became afraid of that (i.e. that their children and women might be affected by the recitation of Qur'an)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 477,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا أَبُو مُعَاوِيَةَ، عَنِ الأَعْمَشِ، عَنْ أَبِي صَالِحٍ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "عَنِ النَّبِيِّ ﷺ قَالَ  صَلاَةُ الْجَمِيعِ تَزِيدُ عَلَى صَلاَتِهِ فِي بَيْتِهِ، وَصَلاَتِهِ فِي سُوقِهِ خَمْسًا وَعِشْرِينَ دَرَجَةً، فَإِنَّ أَحَدَكُمْ إِذَا تَوَضَّأَ فَأَحْسَنَ وَأَتَى الْمَسْجِدَ، لاَ يُرِيدُ إِلاَّ الصَّلاَةَ، لَمْ يَخْطُ خُطْوَةً إِلاَّ رَفَعَهُ اللَّهُ بِهَا دَرَجَةً، وَحَطَّ عَنْهُ خَطِيئَةً، حَتَّى يَدْخُلَ الْمَسْجِدَ، وَإِذَا دَخَلَ الْمَسْجِدَ كَانَ فِي صَلاَةٍ مَا كَانَتْ تَحْبِسُهُ، وَتُصَلِّي ـ يَعْنِي عَلَيْهِ ـ الْمَلاَئِكَةُ مَا دَامَ فِي مَجْلِسِهِ الَّذِي يُصَلِّي فِيهِ اللَّهُمَّ اغْفِرْ لَهُ، اللَّهُمَّ ارْحَمْهُ، مَا لَمْ يُحْدِثْ فِيهِ .",
+     "gharib": [
+      {
+       "word": "يُحْدِثْ",
+       "meaning": "يقع منه ما ينقض الوضوء.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦٤–٥٦٥."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٧٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 477"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) said, \"The prayer offered in congregation is twenty five times more superior (in reward) to the prayer offered alone in one's house or in a business center, because if one performs ablution and does it perfectly, and then proceeds to the mosque with the sole intention of praying, then for each step which he takes towards the mosque, Allah upgrades him a degree in reward and (forgives) crosses out one sin till he enters the mosque. When he enters the mosque he is considered in prayer as long as he is waiting for the prayer and the angels keep on asking for Allah's forgiveness for him and they keep on saying: 'O Allah! Be Merciful to him, O Allah! Forgive him, as long as he keeps on sitting at his praying place and does not pass wind. (See Hadith No)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "10duIog1OX-rzjVmdCqwbUyD_MqA8Ou5n"
      },
      "video": null,
      "sharh": null,
