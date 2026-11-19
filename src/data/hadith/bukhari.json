@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 461,
+   "last": 469,
    "hadith": [
     {
      "n": 349,
@@ -20067,6 +20067,351 @@
       },
       "id": null,
       "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 462,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا اللَّيْثُ، قَالَ حَدَّثَنَا سَعِيدُ بْنُ أَبِي سَعِيدٍ، سَمِعَ أَبَا هُرَيْرَةَ،",
+     "matn": "قَالَ بَعَثَ النَّبِيُّ ﷺ خَيْلاً قِبَلَ نَجْدٍ، فَجَاءَتْ بِرَجُلٍ مِنْ بَنِي حَنِيفَةَ يُقَالُ لَهُ ثُمَامَةُ بْنُ أُثَالٍ، فَرَبَطُوهُ بِسَارِيَةٍ مِنْ سَوَارِي الْمَسْجِدِ، فَخَرَجَ إِلَيْهِ النَّبِيُّ ﷺ فَقَالَ  أَطْلِقُوا ثُمَامَةَ . فَانْطَلَقَ إِلَى نَخْلٍ قَرِيبٍ مِنَ الْمَسْجِدِ، فَاغْتَسَلَ ثُمَّ دَخَلَ الْمَسْجِدَ فَقَالَ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ.",
+     "gharib": [
+      {
+       "word": "خَيْلًا",
+       "meaning": "فُرسانًا على خيل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٥–٥٥٦."
+      },
+      {
+       "word": "سَوَارِى",
+       "meaning": "جمع سارية ، وهى العمود .",
+       "source": "عون المعبود ٦ / ٥"
+      },
+      {
+       "word": "بسارية",
+       "meaning": "بعمود .",
+       "source": "عون المعبود ٦ / ٥"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٦٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 462"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "The Prophet (ﷺ) sent some horsemen to Najd and they brought a man called Thumama bin Uthal from Bani Hanifa. They fastened him to one of the pillars of the mosque. The Prophet (ﷺ) came and ordered them to release him. He went to a (garden of) date-palms near the mosque, took a bath and entered the mosque again and said, \"None has the right to be worshipped but Allah and Muhammad is His Apostle\" (i.e. he embraced Islam)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1l4jUMZXiBX_Qq5RGhJnccIM_O5GmmGgv"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 463,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا زَكَرِيَّاءُ بْنُ يَحْيَى، قَالَ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ نُمَيْرٍ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ،",
+     "matn": "قَالَتْ أُصِيبَ سَعْدٌ يَوْمَ الْخَنْدَقِ فِي الأَكْحَلِ، فَضَرَبَ النَّبِيُّ ﷺ خَيْمَةً فِي الْمَسْجِدِ لِيَعُودَهُ مِنْ قَرِيبٍ، فَلَمْ يَرُعْهُمْ ـ وَفِي الْمَسْجِدِ خَيْمَةٌ مِنْ بَنِي غِفَارٍ ـ إِلاَّ الدَّمُ يَسِيلُ إِلَيْهِمْ فَقَالُوا يَا أَهْلَ الْخَيْمَةِ، مَا هَذَا الَّذِي يَأْتِينَا مِنْ قِبَلِكُمْ فَإِذَا سَعْدٌ يَغْذُو جُرْحُهُ دَمًا، فَمَاتَ فِيهَا.",
+     "gharib": [
+      {
+       "word": "الْأَكْحَلِ",
+       "meaning": "عِرق في اليد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٦–٥٥٧."
+      },
+      {
+       "word": "يَرُعْهُمْ",
+       "meaning": "يُفزعهم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٦–٥٥٧."
+      },
+      {
+       "word": "يَغْذُو",
+       "meaning": "يسيل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٦–٥٥٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٦٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 463"
+     },
+     "en": {
+      "narrator": "`Aisha",
+      "text": "On the day of Al-Khandaq (battle of the Trench) the medial arm vein of Sa`d bin Mu`ad [??] was injured and the Prophet (ﷺ) pitched a tent in the mosque to look after him. There was another tent for Banu Ghaffar in the mosque and the blood started flowing from Sa`d's tent to the tent of Bani Ghaffar. They shouted, \"O occupants of the tent! What is coming from you to us?\" They found that Sa`d's wound was bleeding profusely and Sa`d died in his tent",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 464,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ مُحَمَّدِ بْنِ عَبْدِ الرَّحْمَنِ بْنِ نَوْفَلٍ، عَنْ عُرْوَةَ، عَنْ زَيْنَبَ بِنْتِ أَبِي سَلَمَةَ، عَنْ أُمِّ سَلَمَةَ، قَالَتْ شَكَوْتُ إِلَى رَسُولِ اللَّهِ ﷺ أَنِّي أَشْتَكِي. قَالَ",
+     "matn": "طُوفِي مِنْ وَرَاءِ النَّاسِ وَأَنْتِ رَاكِبَةٌ . فَطُفْتُ وَرَسُولُ اللَّهِ ﷺ يُصَلِّي إِلَى جَنْبِ الْبَيْتِ، يَقْرَأُ بِالطُّورِ وَكِتَابٍ مَسْطُورٍ.",
+     "gharib": [
+      {
+       "word": "أَشْتَكِي",
+       "meaning": "أعاني علّةً.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٦٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 464"
+     },
+     "en": {
+      "narrator": "Um Salama",
+      "text": "I complained to Allah's Messenger (ﷺ) that I was sick. He told me to perform the Tawaf behind the people while riding. So I did so and Allah's Messenger (ﷺ) was praying beside the Ka`ba and reciting the Sura starting with \"Wat-tur wa kitabin mastur",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 465,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى، قَالَ حَدَّثَنَا مُعَاذُ بْنُ هِشَامٍ، قَالَ حَدَّثَنِي أَبِي، عَنْ قَتَادَةَ، قَالَ حَدَّثَنَا أَنَسٌ،",
+     "matn": "أَنَّ رَجُلَيْنِ، مِنْ أَصْحَابِ النَّبِيِّ ﷺ خَرَجَا مِنْ عِنْدِ النَّبِيِّ ﷺ فِي لَيْلَةٍ مُظْلِمَةٍ، وَمَعَهُمَا مِثْلُ الْمِصْبَاحَيْنِ يُضِيآنِ بَيْنَ أَيْدِيهِمَا، فَلَمَّا افْتَرَقَا صَارَ مَعَ كُلِّ وَاحِدٍ مِنْهُمَا وَاحِدٌ حَتَّى أَتَى أَهْلَهُ.",
+     "gharib": [
+      {
+       "word": "الْمِصْبَاحَيْنِ",
+       "meaning": "السراجين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٧–٥٥٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٦٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 465"
+     },
+     "en": {
+      "narrator": "Anas bin Malik",
+      "text": "Two of the companions of the Prophet (ﷺ) departed from him on a dark night and were led by two lights like lamps (going in front of them from Allah as a miracle) lighting the way in front of them, and when they parted, each of them was accompanied by one of these lights till he reached their (respective) houses",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 466,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ سِنَانٍ، قَالَ حَدَّثَنَا فُلَيْحٌ، قَالَ حَدَّثَنَا أَبُو النَّضْرِ، عَنْ عُبَيْدِ بْنِ حُنَيْنٍ، عَنْ بُسْرِ بْنِ سَعِيدٍ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ، قَالَ خَطَبَ النَّبِيُّ ﷺ فَقَالَ",
+     "matn": "إِنَّ اللَّهَ خَيَّرَ عَبْدًا بَيْنَ الدُّنْيَا وَبَيْنَ مَا عِنْدَهُ، فَاخْتَارَ مَا عِنْدَ اللَّهِ . فَبَكَى أَبُو بَكْرٍ ـ رضى الله عنه ـ فَقُلْتُ فِي نَفْسِي مَا يُبْكِي هَذَا الشَّيْخَ إِنْ يَكُنِ اللَّهُ خَيَّرَ عَبْدًا بَيْنَ الدُّنْيَا وَبَيْنَ مَا عِنْدَهُ فَاخْتَارَ مَا عِنْدَ اللَّهِ، فَكَانَ رَسُولُ اللَّهِ ﷺ هُوَ الْعَبْدَ، وَكَانَ أَبُو بَكْرٍ أَعْلَمَنَا. قَالَ  يَا أَبَا بَكْرٍ لاَ تَبْكِ، إِنَّ أَمَنَّ النَّاسِ عَلَىَّ فِي صُحْبَتِهِ وَمَالِهِ أَبُو بَكْرٍ، وَلَوْ كُنْتُ مُتَّخِذًا خَلِيلاً مِنْ أُمَّتِي لاَتَّخَذْتُ أَبَا بَكْرٍ، وَلَكِنْ أُخُوَّةُ الإِسْلاَمِ وَمَوَدَّتُهُ، لاَ يَبْقَيَنَّ فِي الْمَسْجِدِ باب إِلاَّ سُدَّ إِلاَّ باب أَبِي بَكْرٍ .",
+     "gharib": [
+      {
+       "word": "أَمَنَّ",
+       "meaning": "أكثر جودًا وبذلًا في الصحبة والمال.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٨–٥٥٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٦٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 466"
+     },
+     "en": {
+      "narrator": "Abu Sa`id Al-Khudri",
+      "text": "The Prophet (ﷺ) delivered a sermon and said, \"Allah gave a choice to one of (His) slaves either to choose this world or what is with Him in the Hereafter. He chose the latter.\" Abu Bakr wept. I said to myself, \"Why is this Sheikh weeping, if Allah gave choice to one (of His) slaves either to choose this world or what is with Him in the Here after and he chose the latter?\" And that slave was Allah's Messenger (ﷺ) himself. Abu Bakr knew more than us. The Prophet (ﷺ) said, \"O Abu Bakr! Don't weep. The Prophet (ﷺ) added: Abu- Bakr has favored me much with his property and company. If I were to take a Khalil from mankind I would certainly have taken Abu Bakr but the Islamic brotherhood and friendship is sufficient. Close all the gates in the mosque except that of Abu Bakr",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 467,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ الْجُعْفِيُّ، قَالَ حَدَّثَنَا وَهْبُ بْنُ جَرِيرٍ، قَالَ حَدَّثَنَا أَبِي قَالَ، سَمِعْتُ يَعْلَى بْنَ حَكِيمٍ، عَنْ عِكْرِمَةَ، عَنِ ابْنِ عَبَّاسٍ،",
+     "matn": "قَالَ خَرَجَ رَسُولُ اللَّهِ ﷺ فِي مَرَضِهِ الَّذِي مَاتَ فِيهِ عَاصِبٌ رَأْسَهُ بِخِرْقَةٍ، فَقَعَدَ عَلَى الْمِنْبَرِ، فَحَمِدَ اللَّهَ وَأَثْنَى عَلَيْهِ ثُمَّ قَالَ  إِنَّهُ لَيْسَ مِنَ النَّاسِ أَحَدٌ أَمَنَّ عَلَىَّ فِي نَفْسِهِ وَمَالِهِ مِنْ أَبِي بَكْرِ بْنِ أَبِي قُحَافَةَ، وَلَوْ كُنْتُ مُتَّخِذًا مِنَ النَّاسِ خَلِيلاً لاَتَّخَذْتُ أَبَا بَكْرٍ خَلِيلاً، وَلَكِنْ خُلَّةُ الإِسْلاَمِ أَفْضَلُ، سُدُّوا عَنِّي كُلَّ خَوْخَةٍ فِي هَذَا الْمَسْجِدِ غَيْرَ خَوْخَةِ أَبِي بَكْرٍ .",
+     "gharib": [
+      {
+       "word": "خَوْخَةٍ",
+       "meaning": "باب صغير في الحائط.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٨–٥٥٩."
+      },
+      {
+       "word": "خُلَّةُ",
+       "meaning": "صداقة ومحبّة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٨–٥٥٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٦٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 467"
+     },
+     "en": {
+      "narrator": "Ibn `Abbas",
+      "text": "\"Allah's Messenger (ﷺ) in his fatal illness came out with a piece of cloth tied round his head and sat on the pulpit. After thanking and praising Allah he said, \"There is no one who had done more favor to me with life and property than Abu Bakr bin Abi Quhafa. If I were to take a Khalil, I would certainly have taken Abu- Bakr but the Islamic brotherhood is superior. Close all the small doors in this mosque except that of Abu Bakr",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 468,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا أَبُو النُّعْمَانِ، وَقُتَيْبَةُ، قَالاَ حَدَّثَنَا حَمَّادٌ، عَنْ أَيُّوبَ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ،",
+     "matn": "أَنَّ النَّبِيَّ ﷺ قَدِمَ مَكَّةَ، فَدَعَا عُثْمَانَ بْنَ طَلْحَةَ، فَفَتَحَ الْبَابَ، فَدَخَلَ النَّبِيُّ ﷺ وَبِلاَلٌ وَأُسَامَةُ بْنُ زَيْدٍ وَعُثْمَانُ بْنُ طَلْحَةَ، ثُمَّ أُغْلِقَ الْبَابُ، فَلَبِثَ فِيهِ سَاعَةً ثُمَّ خَرَجُوا. قَالَ ابْنُ عُمَرَ فَبَدَرْتُ فَسَأَلْتُ بِلاَلاً فَقَالَ صَلَّى فِيهِ. فَقُلْتُ فِي أَىٍّ قَالَ بَيْنَ الأُسْطُوَانَتَيْنِ. قَالَ ابْنُ عُمَرَ فَذَهَبَ عَلَىَّ أَنْ أَسْأَلَهُ كَمْ صَلَّى.",
+     "gharib": [
+      {
+       "word": "الأُسْطُوَانَتَيْنِ",
+       "meaning": "العمودين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٥٩–٥٦٠."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٦٨",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 468"
+     },
+     "en": {
+      "narrator": "Nafi`",
+      "text": "Ibn `Umar said, \"The Prophet (ﷺ) arrived at Mecca and sent for `Uthman bin Talha. He opened the gate of the Ka`ba and the Prophet, Bilal, Usama bin Zaid and `Uthman bin Talha entered the Ka`ba and then they closed its door (from inside). They stayed there for an hour, and then came out.\" Ibn `Umar added, \"I quickly went to Bilal and asked him (whether the Prophet (ﷺ) had prayed). Bilal replied, 'He prayed in it.' I asked, 'Where?' He replied, 'Between the two pillars.' \"Ibn `Umar added, \"I forgot to ask how many rak`at he (the Prophet) had prayed in the Ka`ba",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 469,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ سَعِيدِ بْنِ أَبِي سَعِيدٍ، أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ،",
+     "matn": "يَقُولُ بَعَثَ رَسُولُ اللَّهِ ﷺ خَيْلاً قِبَلَ نَجْدٍ، فَجَاءَتْ بِرَجُلٍ مِنْ بَنِي حَنِيفَةَ يُقَالُ لَهُ ثُمَامَةُ بْنُ أُثَالٍ، فَرَبَطُوهُ بِسَارِيَةٍ مِنْ سَوَارِي الْمَسْجِدِ.",
+     "gharib": [
+      {
+       "word": "قِبَلَ",
+       "meaning": "ناحيةَ.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٦٠."
+      },
+      {
+       "word": "سَوَارِى",
+       "meaning": "جمع سارية ، وهى العمود .",
+       "source": "عون المعبود ٦ / ٥"
+      },
+      {
+       "word": "بسارية",
+       "meaning": "بعمود .",
+       "source": "عون المعبود ٦ / ٥"
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٦٩",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 469"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) sent some horse men to Najd and they brought a man called Thumama bin Uthal from Bani Hanifa. They fastened him to one of the pillars of the mosque",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1prcPNTMwAdN38GQGvMd38-9AUpHDMyfs"
      },
      "video": null,
      "sharh": null,
