@@ -101,6 +101,14 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 
   <details class="hadith-card__en" open={lang === 'en'}>
     <summary>{t.english}</summary>
+    {h.projectTranslation && (
+      <section class="hadith-card__slot" data-project-translation>
+        <h4>{t.projectTranslation}<span class="hadith-card__review">{t.review}</span></h4>
+        <p dir="ltr" lang="en">{h.projectTranslation.text}</p>
+        <p class="content-card__meta" dir="ltr" lang="en">{h.projectTranslation.source}</p>
+      </section>
+    )}
+    {h.projectTranslation && <h4>{t.sourceTranslation}</h4>}
     <p dir="ltr" lang="en">{h.en.narrator && <strong>Narrated {h.en.narrator}: </strong>}{h.en.text}</p>
     <p class="content-card__meta" dir="ltr">{h.en.source}</p>
   </details>

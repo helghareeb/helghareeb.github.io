@@ -10,6 +10,7 @@ import malikNotes from '../data/hadith/notes/malik.json';
 type Lang = 'ar' | 'en';
 
 export type Gharib = { word: string; meaning: string; source: string };
+type ProjectTranslation = { text: string; source: string; status: 'review' };
 export type QuranQuote = { original: string; uthmani: string; reference: string; sourceUrl: string };
 export type Hadith = {
   n: number;
@@ -25,12 +26,13 @@ export type Hadith = {
   sharh: { ar: string; source?: string } | null;
   fawaid: { ar: string }[];
   notesStatus?: 'review' | 'approved';
+  projectTranslation?: ProjectTranslation;
   quran?: QuranQuote[];
 };
 export type Kitab = { slug: string; ar: string; en: string; first: number; last: number; hadith: Hadith[] };
 export type Book = { book: { id: string; ar: string; en: string }; kutub: Kitab[] };
 
-type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[]; quran?: QuranQuote[] } | string>;
+type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[]; quran?: QuranQuote[]; projectTranslation?: ProjectTranslation } | string>;
 
 /** Merge the hand-written commentary and benefits (src/data/hadith/notes/<book>.json) into the records. */
 function withNotes(book: Book, notes: Notes): Book {
@@ -42,6 +44,7 @@ function withNotes(book: Book, notes: Notes): Book {
       if (n.fawaid) h.fawaid = n.fawaid.map((ar) => ({ ar }));
       h.notesStatus = n.status;
       if (n.quran) h.quran = n.quran;
+      if (n.projectTranslation) h.projectTranslation = n.projectTranslation;
     }
   return book;
 }
@@ -81,13 +84,37 @@ export const bare = (s: string) =>
 /** Split text into tokens, marking each that matches a gharib word (by bare form, ignoring a leading و/ف). */
 export function markGharib(text: string, gharib: Gharib[]) {
   const keys = new Map(gharib.map((g, i) => [bare(g.word), i]));
-  return text.split(/(\s+)/).map((tok) => {
+  const markWord = (tok: string) => {
     const b = bare(tok);
     let i = keys.get(b);
     if (i === undefined && /^[وف]/.test(b)) i = keys.get(b.slice(1));
     if (i === undefined) for (const [k, v] of keys) if (k.length > 3 && (b.startsWith(k) || k.startsWith(b)) && Math.abs(k.length - b.length) <= 2) { i = v; break; }
     return { tok, g: i === undefined ? null : gharib[i] };
-  });
+  };
+  const tokens = text.split(/(\s+)/);
+  const phrases = gharib
+    .filter((g) => /\s/.test(g.word.trim()))
+    .map((g) => ({ g, words: g.word.trim().split(/\s+/).map(bare) }))
+    .sort((a, b) => b.words.length - a.words.length);
+  if (!phrases.length) return tokens.map(markWord);
+
+  const marks: ReturnType<typeof markWord>[] = [];
+  for (let i = 0; i < tokens.length;) {
+    const phrase = phrases.find(({ words }) =>
+      words.every((word, j) => {
+        const token = bare(tokens[i + j * 2] || '');
+        return token === word || (j === 0 && token.replace(/^[وف]?[بكل]?/, '') === word);
+      }),
+    );
+    if (!phrase) {
+      marks.push(markWord(tokens[i++]));
+      continue;
+    }
+    const end = i + phrase.words.length * 2 - 1;
+    marks.push({ tok: tokens.slice(i, end).join(''), g: phrase.g });
+    i = end;
+  }
+  return marks;
 }
 
 export const hadithLabels = {
@@ -97,6 +124,8 @@ export const hadithLabels = {
     grade: 'الحكم',
     takhrij: 'التخريج',
     english: 'الترجمة الإنجليزية',
+    projectTranslation: 'ترجمة المشروع',
+    sourceTranslation: 'النص الإنجليزي في المرجع',
     reader: 'القراءة',
     listen: 'استماع',
     audioSoon: 'يُضاف الصوت بعد التقسيم والمراجعة',
@@ -117,6 +146,8 @@ export const hadithLabels = {
     grade: 'Grade',
     takhrij: 'Reference',
     english: 'English translation',
+    projectTranslation: 'Project translation',
+    sourceTranslation: 'English text in the source edition',
     reader: 'Reading',
     listen: 'Listen',
     audioSoon: 'Audio will be added after splitting and review',
