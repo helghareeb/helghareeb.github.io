@@ -40,7 +40,7 @@ html[data-reader-theme='dark'] { color-scheme: dark; --bg: #141c19; --bg-soft: #
 html[data-reader-theme='dark'] body { background: var(--bg); }
 /* Hero variants use fixed light gradients; pair them with the reader's dark-theme palette. */
 html[data-reader-theme='dark'] .hero { background: var(--surface-strong); color: var(--text); border-color: var(--line); }
-html[data-reader-theme='dark'] :is(.site-header,.site-footer,.content-card,.entity-summary,.entity-panel,.notice-card,.section--soft,.visit-counter__item,.hadith-card__slot) { background: var(--surface-strong); color: var(--text); }
+html[data-reader-theme='dark'] :is(.site-header,.site-footer,.content-card,.entity-summary,.entity-panel,.notice-card,.section--soft,.hadith-card__slot) { background: var(--surface-strong); color: var(--text); }
 html[data-reader-theme='dark'] :is(.button,.button-secondary,.hero__badge,.hadith-card__grade,.gharib-pop,.site-header__controls) { background: var(--bg-soft); color: var(--text); }
 html[data-reader-theme='dark'] .hadith-card__text { color: var(--text); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

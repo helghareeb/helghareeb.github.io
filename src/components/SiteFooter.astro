@@ -1,7 +1,6 @@
 ---
 import { navigation } from '../../config/navigation';
 import { siteConfig } from '../../config/site';
-import VisitCounter from './VisitCounter.astro';
 
 interface Props {
   lang: 'ar' | 'en';
@@ -62,7 +61,6 @@ const year = new Date().getFullYear();
 
   <div class="shell site-footer__bottom">
     <p>{siteName}</p>
-    <VisitCounter lang={lang} currentPath={currentPath} />
     <p>{year}</p>
   </div>
 </footer>
