@@ -14929,7 +14929,7 @@
    "ar": "كتاب الصلاة",
    "en": "Prayers (Salat)",
    "first": 349,
-   "last": 439,
+   "last": 447,
    "hadith": [
     {
      "n": 349,
@@ -19105,6 +19105,367 @@
        "en": "Dr. Yusuf bin Nuh Ahmad"
       },
       "id": "11PkJYM7X-DrogKy6KmhTzB2ddjp6o3Uy"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 440,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "",
+     "matn": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ عُبَيْدِ اللَّهِ، قَالَ حَدَّثَنِي نَافِعٌ، قَالَ أَخْبَرَنِي عَبْدُ اللَّهِ، أَنَّهُ كَانَ يَنَامُ وَهْوَ شَابٌّ أَعْزَبُ لاَ أَهْلَ لَهُ فِي مَسْجِدِ النَّبِيِّ ﷺ.",
+     "gharib": [
+      {
+       "word": "أَعْزَبُ",
+       "meaning": "من لا زوجة له.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٥–٥٣٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٠",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 440"
+     },
+     "en": {
+      "narrator": "Nafi`",
+      "text": "`Abdullah bin `Umar said: I used to sleep in the mosque of the Prophet (ﷺ) while I was young and unmarried",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "15r-u6uHeK2ZBDUNOA6mUYi_VA6FmVwJK"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 441,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ أَبِي حَازِمٍ، عَنْ أَبِي حَازِمٍ، عَنْ سَهْلِ بْنِ سَعْدٍ،",
+     "matn": "قَالَ جَاءَ رَسُولُ اللَّهِ ﷺ بَيْتَ فَاطِمَةَ، فَلَمْ يَجِدْ عَلِيًّا فِي الْبَيْتِ فَقَالَ  أَيْنَ ابْنُ عَمِّكِ . قَالَتْ كَانَ بَيْنِي وَبَيْنَهُ شَىْءٌ، فَغَاضَبَنِي فَخَرَجَ فَلَمْ يَقِلْ عِنْدِي. فَقَالَ رَسُولُ اللَّهِ ﷺ لإِنْسَانٍ  انْظُرْ أَيْنَ هُوَ . فَجَاءَ فَقَالَ يَا رَسُولَ اللَّهِ، هُوَ فِي الْمَسْجِدِ رَاقِدٌ، فَجَاءَ رَسُولُ اللَّهِ ﷺ وَهْوَ مُضْطَجِعٌ، قَدْ سَقَطَ رِدَاؤُهُ عَنْ شِقِّهِ، وَأَصَابَهُ تُرَابٌ، فَجَعَلَ رَسُولُ اللَّهِ ﷺ يَمْسَحُهُ عَنْهُ وَيَقُولُ  قُمْ أَبَا تُرَابٍ، قُمْ أَبَا تُرَابٍ .",
+     "gharib": [
+      {
+       "word": "يَقِلْ",
+       "meaning": "ينم وقت القيلولة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٥–٥٣٦."
+      },
+      {
+       "word": "شِقِّهِ",
+       "meaning": "جانب بدنه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٥–٥٣٦."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤١",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 441"
+     },
+     "en": {
+      "narrator": "Sahl bin Sa`d",
+      "text": "Allah's Messenger (ﷺ) went to Fatima's house but did not find `Ali there. So he asked, \"Where is your cousin?\" She replied, \"There was something between us and he got angry with me and went out. He did not sleep (midday nap) in the house.\" Allah's Messenger (ﷺ) asked a person to look for him. That person came and said, \"O Allah's Messenger (ﷺ)! He (Ali) is sleeping in the mosque.\" Allah's Messenger (ﷺ) went there and `Ali was lying. His upper body cover had fallen down to one side of his body and he was covered with dust. Allah's Messenger (ﷺ) started cleaning the dust from him saying: \"Get up! O Aba Turab. Get up! O Aba Turab (literally means: O father of dust)",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "13UPi3Ddoh1lGeuXI3YULS_i1X4gGpfZu"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 442,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا يُوسُفُ بْنُ عِيسَى، قَالَ حَدَّثَنَا ابْنُ فُضَيْلٍ، عَنْ أَبِيهِ، عَنْ أَبِي حَازِمٍ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "قَالَ رَأَيْتُ سَبْعِينَ مِنْ أَصْحَابِ الصُّفَّةِ، مَا مِنْهُمْ رَجُلٌ عَلَيْهِ رِدَاءٌ، إِمَّا إِزَارٌ وَإِمَّا كِسَاءٌ، قَدْ رَبَطُوا فِي أَعْنَاقِهِمْ، فَمِنْهَا مَا يَبْلُغُ نِصْفَ السَّاقَيْنِ، وَمِنْهَا مَا يَبْلُغُ الْكَعْبَيْنِ، فَيَجْمَعُهُ بِيَدِهِ، كَرَاهِيَةَ أَنْ تُرَى عَوْرَتُهُ.",
+     "gharib": [
+      {
+       "word": "الصُّفَّةِ",
+       "meaning": "موضع مظلل في المسجد النبوي كان يأوي إليه من لم يكن له منزل.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٦–٥٣٧."
+      },
+      {
+       "word": "الْكَعْبَيْنِ",
+       "meaning": "العظمان الناتئان عند ملتقى الساق والقدم.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٦–٥٣٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٢",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 442"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "I saw seventy of As-Suffa men and none of them had a Rida' (a garment covering the upper part of the body). They had either Izars (only) or sheets which they tied round their necks. Some of these sheets reached the middle of their legs and some reached their heels and they used to gather them with their hands lest their private parts should become naked",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1kVA8fMDWLuGw3kJQjiHzvaYdmZqG4ZSw"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 443,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا خَلاَّدُ بْنُ يَحْيَى، قَالَ حَدَّثَنَا مِسْعَرٌ، قَالَ حَدَّثَنَا مُحَارِبُ بْنُ دِثَارٍ، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ،",
+     "matn": "قَالَ أَتَيْتُ النَّبِيَّ ﷺ وَهُوَ فِي الْمَسْجِدِ ـ قَالَ مِسْعَرٌ أُرَاهُ قَالَ ضُحًى ـ فَقَالَ  صَلِّ رَكْعَتَيْنِ . وَكَانَ لِي عَلَيْهِ دَيْنٌ فَقَضَانِي وَزَادَنِي.",
+     "gharib": [
+      {
+       "word": "أُرَاهُ",
+       "meaning": "أظنّه. والضمير عند ابن حجر لمحارب.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٧."
+      },
+      {
+       "word": "فَقَضَانِي",
+       "meaning": "فأدّى إليّ ما كان لي عليه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٧."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٣",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 443"
+     },
+     "en": {
+      "narrator": "Jabir bin `Abdullah",
+      "text": "I went to the Prophet (ﷺ) in the mosque (the sub-narrator Mis`ar thought that Jabir had said, \"In the forenoon.\") He ordered me to pray two rak`at. He owed me some money and he repaid it to me and gave more than what was due to me",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 444,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ عَامِرِ بْنِ عَبْدِ اللَّهِ بْنِ الزُّبَيْرِ، عَنْ عَمْرِو بْنِ سُلَيْمٍ الزُّرَقِيِّ، عَنْ أَبِي قَتَادَةَ السَّلَمِيِّ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  إِذَا دَخَلَ أَحَدُكُمُ الْمَسْجِدَ فَلْيَرْكَعْ رَكْعَتَيْنِ قَبْلَ أَنْ يَجْلِسَ .",
+     "gharib": [
+      {
+       "word": "فَلْيَرْكَعْ",
+       "meaning": "فليُصلِّ، والمراد ركعتان عند دخول المسجد.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٧–٥٣٨."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٤",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 444"
+     },
+     "en": {
+      "narrator": "Abu Qatada Al-Aslami",
+      "text": "Allah's Messenger (ﷺ) said, \"If anyone of you enters a mosque, he should pray two rak`at before sitting",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1V6qaVhLLEpVlSW0ZBl1q6qplkt55r8lm"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 445,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ،",
+     "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  الْمَلاَئِكَةُ تُصَلِّي عَلَى أَحَدِكُمْ مَا دَامَ فِي مُصَلاَّهُ الَّذِي صَلَّى فِيهِ، مَا لَمْ يُحْدِثْ، تَقُولُ اللَّهُمَّ اغْفِرْ لَهُ اللَّهُمَّ ارْحَمْهُ .",
+     "gharib": [
+      {
+       "word": "مُصَلَّاهُ",
+       "meaning": "موضع صلاته، وذكر ابن حجر احتمال إرادة المكان المعدّ للصلاة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٨–٥٣٩."
+      },
+      {
+       "word": "يُحْدِثْ",
+       "meaning": "ينتقض وضوؤه، وهو التفسير الذي ذكره الشارح عن أبي هريرة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٨–٥٣٩."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٥",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 445"
+     },
+     "en": {
+      "narrator": "Abu Huraira",
+      "text": "Allah's Messenger (ﷺ) said, \"The angels keep on asking Allah's forgiveness for anyone of you, as long as he is at his Musalla (praying place) and he does not pass wind (Hadath). They say, 'O Allah! Forgive him, O Allah! be Merciful to him",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1q6c4guKlrDXOxvnniEqF3ux4HUeSyxwH"
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 446,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا يَعْقُوبُ بْنُ إِبْرَاهِيمَ بْنِ سَعْدٍ، قَالَ حَدَّثَنِي أَبِي، عَنْ صَالِحِ بْنِ كَيْسَانَ، قَالَ حَدَّثَنَا نَافِعٌ، أَنَّ عَبْدَ اللَّهِ، أَخْبَرَهُ أَنَّ الْمَسْجِدَ كَانَ عَلَى عَهْدِ رَسُولِ اللَّهِ ﷺ مَبْنِيًّا بِاللَّبِنِ، وَسَقْفُهُ الْجَرِيدُ، وَعُمُدُهُ خَشَبُ النَّخْلِ، فَلَمْ يَزِدْ فِيهِ أَبُو بَكْرٍ شَيْئًا، وَزَادَ فِيهِ عُمَرُ",
+     "matn": "وَبَنَاهُ عَلَى بُنْيَانِهِ فِي عَهْدِ رَسُولِ اللَّهِ ﷺ بِاللَّبِنِ وَالْجَرِيدِ، وَأَعَادَ عُمُدَهُ خَشَبًا، ثُمَّ غَيَّرَهُ عُثْمَانُ، فَزَادَ فِيهِ زِيَادَةً كَثِيرَةً، وَبَنَى جِدَارَهُ بِالْحِجَارَةِ الْمَنْقُوشَةِ وَالْقَصَّةِ، وَجَعَلَ عُمُدَهُ مِنْ حِجَارَةٍ مَنْقُوشَةٍ، وَسَقَفَهُ بِالسَّاجِ.",
+     "gharib": [
+      {
+       "word": "بِاللَّبِنِ",
+       "meaning": "بالطوب المصنوع من الطين.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٩–٥٤١."
+      },
+      {
+       "word": "الْجَرِيدُ",
+       "meaning": "سَعَف النخل الذي يُجعل في السقف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٩–٥٤١."
+      },
+      {
+       "word": "وَعُمُدُهُ",
+       "meaning": "وأعمدته التي يحمل عليها السقف.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٩–٥٤١."
+      },
+      {
+       "word": "وَالْقَصَّةِ",
+       "meaning": "الجصّ في لغة أهل الحجاز، وذكر الخطابي أنها تشبهه.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٩–٥٤١."
+      },
+      {
+       "word": "بِالسَّاجِ",
+       "meaning": "بخشب الساج، وهو نوع من الخشب ذكر الشارح أنه كان يؤتى به من الهند.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٣٩–٥٤١."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٦",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 446"
+     },
+     "en": {
+      "narrator": "`Abdullah bin `Umar",
+      "text": "In the lifetime of Allah's Messenger (ﷺ) the mosque was built of adobes, its roof of the leaves of date-palms and its pillars of the stems of date-palms. Abu Bakr did not alter it. `Umar expanded it on the same pattern as it was in the lifetime of Allah's Messenger (ﷺ) by using adobes, leaves of date-palms and changing the pillars into wooden ones. `Uthman changed it by expanding it to a great extent and built its walls with engraved stones and lime and made its pillars of engraved stones and its roof of teak wood",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": null,
+      "player": null
+     },
+     "video": null,
+     "sharh": null,
+     "fawaid": []
+    },
+    {
+     "n": 447,
+     "bab": {
+      "ar": ""
+     },
+     "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ مُخْتَارٍ، قَالَ حَدَّثَنَا خَالِدٌ الْحَذَّاءُ، عَنْ عِكْرِمَةَ، قَالَ لِي ابْنُ عَبَّاسٍ وَلاِبْنِهِ عَلِيٍّ انْطَلِقَا إِلَى أَبِي سَعِيدٍ فَاسْمَعَا مِنْ حَدِيثِهِ. فَانْطَلَقْنَا فَإِذَا هُوَ فِي حَائِطٍ يُصْلِحُهُ، فَأَخَذَ رِدَاءَهُ فَاحْتَبَى، ثُمَّ أَنْشَأَ يُحَدِّثُنَا حَتَّى أَتَى ذِكْرُ بِنَاءِ الْمَسْجِدِ فَقَالَ كُنَّا نَحْمِلُ لَبِنَةً لَبِنَةً، وَعَمَّارٌ لَبِنَتَيْنِ لَبِنَتَيْنِ، فَرَآهُ النَّبِيُّ ﷺ فَيَنْفُضُ التُّرَابَ عَنْهُ وَيَقُولُ",
+     "matn": "وَيْحَ عَمَّارٍ تَقْتُلُهُ الْفِئَةُ الْبَاغِيَةُ، يَدْعُوهُمْ إِلَى الْجَنَّةِ، وَيَدْعُونَهُ إِلَى النَّارِ . قَالَ يَقُولُ عَمَّارٌ أَعُوذُ بِاللَّهِ مِنَ الْفِتَنِ.",
+     "gharib": [
+      {
+       "word": "حَائِطٍ",
+       "meaning": "بستان.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤١–٥٤٢."
+      },
+      {
+       "word": "فَاحْتَبَى",
+       "meaning": "فجمع ساقيه إلى بدنه ورداءه يحيط بهما وبظهره.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤١–٥٤٢."
+      },
+      {
+       "word": "أَنْشَأَ",
+       "meaning": "ابتدأ.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤١–٥٤٢."
+      },
+      {
+       "word": "وَيْحَ",
+       "meaning": "كلمة رحمة.",
+       "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٤١–٥٤٢."
+      }
+     ],
+     "grade": {
+      "ar": "صحيح",
+      "en": "Sahih"
+     },
+     "takhrij": {
+      "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٤٧",
+      "en": "Sahih al-Bukhari, Prayers (Salat), hadith 447"
+     },
+     "en": {
+      "narrator": "`Ikrima",
+      "text": "Ibn `Abbas said to me and to his son `Ali, \"Go to Abu Sa`id and listen to what he narrates.\" So we went and found him in a garden looking after it. He picked up his Rida', wore it and sat down and started narrating till the topic of the construction of the mosque reached. He said, \"We were carrying one adobe at a time while `Ammar was carrying two. The Prophet (ﷺ) saw him and started removing the dust from his body and said, \"May Allah be Merciful to `Ammar. He will be inviting them (i.e. his murderers, the rebellious group) to Paradise and they will invite him to Hell-fire.\" `Ammar said, \"I seek refuge with Allah from affliction",
+      "source": "sunnah.com (Muhsin Khan)"
+     },
+     "audio": {
+      "reader": {
+       "ar": "د. يوسف بن نوح أحمد",
+       "en": "Dr. Yusuf bin Nuh Ahmad"
+      },
+      "id": "1MsgppWmk8JWGo9Q8wy0rtfMhWaO9SCdG"
      },
      "video": null,
      "sharh": null,
