@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 495,
+      "last": 501,
       "hadith": [
         {
           "n": 349,
@@ -21423,6 +21423,240 @@
           "en": {
             "narrator": "`Aun bin Abi Juhaifa",
             "text": "I heard my father saying, \"The Prophet (ﷺ) led us, and prayed a two-rak`at Zuhr prayer and then a two-rak` at `Asr prayer at Al-Batha' [??] with a short spear (planted) in front of him (as a Sutra) while women and donkeys were passing in front of him (beyond that stick)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 496,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا عَمْرُو بْنُ زُرَارَةَ، قَالَ أَخْبَرَنَا عَبْدُ الْعَزِيزِ بْنُ أَبِي حَازِمٍ، عَنْ أَبِيهِ، عَنْ سَهْلٍ، قَالَ كَانَ بَيْنَ مُصَلَّى رَسُولِ اللَّهِ ﷺ وَبَيْنَ الْجِدَارِ مَمَرُّ الشَّاةِ.",
+          "gharib": [
+            {
+              "word": "مَمَرُّ الشَّاةِ",
+              "meaning": "موضعٌ يتسع لمرور الشاة.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٤."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٩٦",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 496"
+          },
+          "en": {
+            "narrator": "Sahl (bin Sa`d)",
+            "text": "The distance between the Musalla of Allah's Messenger (ﷺ) and the wall was just sufficient for a sheep to pass through",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 497,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا الْمَكِّيُّ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ أَبِي عُبَيْدٍ، عَنْ سَلَمَةَ، قَالَ كَانَ جِدَارُ الْمَسْجِدِ عِنْدَ الْمِنْبَرِ مَا كَادَتِ الشَّاةُ تَجُوزُهَا.",
+          "gharib": [
+            {
+              "word": "تَجُوزُهَا",
+              "meaning": "تَعْبُر المسافة بين المنبر والجدار.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٥."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٩٧",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 497"
+          },
+          "en": {
+            "narrator": "Salama",
+            "text": "The distance between the wall of the mosque and the pulpit was hardly enough for a sheep to pass through",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 498,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ عُبَيْدِ اللَّهِ، أَخْبَرَنِي نَافِعٌ، عَنْ عَبْدِ اللَّهِ،",
+          "matn": "أَنَّ النَّبِيَّ ﷺ كَانَ يُرْكَزُ لَهُ الْحَرْبَةُ فَيُصَلِّي إِلَيْهَا.",
+          "gharib": [
+            {
+              "word": "يُرْكَزُ",
+              "meaning": "يُغْرَز في الأرض.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٥."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٩٨",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 498"
+          },
+          "en": {
+            "narrator": "`Abdullah",
+            "text": "The Prophet (ﷺ) used to get a Harba planted in front of him (as a Sutra) and pray behind it",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 499,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا عَوْنُ بْنُ أَبِي جُحَيْفَةَ، قَالَ سَمِعْتُ أَبِي قَالَ، خَرَجَ عَلَيْنَا رَسُولُ اللَّهِ ﷺ بِالْهَاجِرَةِ، فَأُتِيَ بِوَضُوءٍ فَتَوَضَّأَ فَصَلَّى بِنَا الظُّهْرَ وَالْعَصْرَ وَبَيْنَ يَدَيْهِ عَنَزَةٌ، وَالْمَرْأَةُ وَالْحِمَارُ يَمُرُّونَ مِنْ وَرَائِهَا.",
+          "gharib": [
+            {
+              "word": "عَنَزَةٌ",
+              "meaning": "حربة قصيرة.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٦."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٤٩٩",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 499"
+          },
+          "en": {
+            "narrator": "`Aun bin Abi Juhaifa",
+            "text": "that he had heard his father saying, \"Allah's Messenger (ﷺ) came to us at midday and water was brought for his ablution. He performed ablution and led us in Zuhr and `Asr prayers with a short spear (or stick) planted in front of him (as a Sutra), while women and donkeys were passing beyond it",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 500,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ حَاتِمِ بْنِ بَزِيعٍ، قَالَ حَدَّثَنَا شَاذَانُ، عَنْ شُعْبَةَ، عَنْ عَطَاءِ بْنِ أَبِي مَيْمُونَةَ، قَالَ سَمِعْتُ أَنَسَ بْنَ مَالِكٍ، قَالَ كَانَ النَّبِيُّ ﷺ إِذَا خَرَجَ لِحَاجَتِهِ تَبِعْتُهُ أَنَا وَغُلاَمٌ وَمَعَنَا عُكَّازَةٌ أَوْ عَصًا أَوْ عَنَزَةٌ وَمَعَنَا إِدَاوَةٌ، فَإِذَا فَرَغَ مِنْ حَاجَتِهِ نَاوَلْنَاهُ الإِدَاوَةَ.",
+          "gharib": [
+            {
+              "word": "إِدَاوَةٌ",
+              "meaning": "إناء صغير يُحمل فيه الماء.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٦."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٠٠",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 500"
+          },
+          "en": {
+            "narrator": "Anas Ibn Malik",
+            "text": "Whenever the Prophet (ﷺ) went for answering the call of nature, I and another boy used to go after him with a staff, a stick or a short spear (or stick) and a tumbler of water and when he finished from answering the call of nature we would hand that tumbler of water to him",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 501,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا سُلَيْمَانُ بْنُ حَرْبٍ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنِ الْحَكَمِ، عَنْ أَبِي جُحَيْفَةَ، قَالَ خَرَجَ رَسُولُ اللَّهِ ﷺ بِالْهَاجِرَةِ فَصَلَّى بِالْبَطْحَاءِ الظُّهْرَ وَالْعَصْرَ رَكْعَتَيْنِ، وَنَصَبَ بَيْنَ يَدَيْهِ عَنَزَةً، وَتَوَضَّأَ، فَجَعَلَ النَّاسُ يَتَمَسَّحُونَ بِوَضُوئِهِ.",
+          "gharib": [
+            {
+              "word": "الْبَطْحَاءِ",
+              "meaning": "بطحاء مكة في هذا الخبر.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٦."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٠١",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 501"
+          },
+          "en": {
+            "narrator": "Abu Juhaifa",
+            "text": "Allah's Messenger (ﷺ) came out at midday and offered a two-rak`at Zuhr and `Asr prayers at Al-Batha and a short spear (or stick) was planted in front of him (as a Sutra). He performed ablution and the people took the remaining water left after his ablution and rubbed their bodies with it",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
