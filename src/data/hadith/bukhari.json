@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 559,
+      "last": 560,
       "hadith": [
         {
           "n": 521,
@@ -24033,6 +24033,60 @@
           "en": {
             "narrator": "Rafi` bin Khadij",
             "text": "We used to offer the Maghrib prayer with the Prophet (ﷺ) and after finishing the prayer one of us may go away and could still see as far as the spots where one's arrow might reach when shot by a bow",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 560,
+          "bab": {
+            "ar": "باب وقت المغرب، وقال عطاء: يجمع المريض بين المغرب والعشاء"
+          },
+          "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ، قَالَ حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ سَعْدٍ، عَنْ مُحَمَّدِ بْنِ عَمْرِو بْنِ الْحَسَنِ بْنِ عَلِيٍّ،",
+          "matn": "قَالَ قَدِمَ الْحَجَّاجُ فَسَأَلْنَا جَابِرَ بْنَ عَبْدِ اللَّهِ فَقَالَ كَانَ النَّبِيُّ ﷺ يُصَلِّي الظُّهْرَ بِالْهَاجِرَةِ، وَالْعَصْرَ وَالشَّمْسُ نَقِيَّةٌ، وَالْمَغْرِبَ إِذَا وَجَبَتْ، وَالْعِشَاءَ أَحْيَانًا وَأَحْيَانًا، إِذَا رَآهُمُ اجْتَمَعُوا عَجَّلَ، وَإِذَا رَآهُمْ أَبْطَوْا أَخَّرَ، وَالصُّبْحَ كَانُوا ـ أَوْ كَانَ النَّبِيُّ ﷺ يُصَلِّيهَا بِغَلَسٍ.",
+          "gharib": [
+            {
+              "word": "بِالْهَاجِرَةِ",
+              "meaning": "وقت اشتداد حرّ النهار بعد الزوال.",
+              "source": "فتح الباري ٢/٤٢"
+            },
+            {
+              "word": "نَقِيَّةٌ",
+              "meaning": "صافية لم تدخلها صفرة.",
+              "source": "فتح الباري ٢/٤٢"
+            },
+            {
+              "word": "وَجَبَتْ",
+              "meaning": "غربت الشمس وسقط قرصها.",
+              "source": "فتح الباري ٢/٤٢"
+            },
+            {
+              "word": "بِغَلَسٍ",
+              "meaning": "في ظلمة آخر الليل.",
+              "source": "فتح الباري ٢/٤٢"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٦٠",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 560"
+          },
+          "en": {
+            "narrator": "Jabir bin `Abdullah",
+            "text": "The Prophet (ﷺ) used to pray the Zuhr at midday, and the `Asr at a time when the sun was still bright, the Maghrib after sunset (at its stated time) and the `Isha at a variable time. Whenever he saw the people assembled (for `Isha' prayer) he would pray earlier and if the people delayed, he would delay the prayer. And they or the Prophet (ﷺ) used to offer the Fajr Prayers when it was still dark",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
