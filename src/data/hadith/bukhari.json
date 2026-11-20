@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 519,
+      "last": 520,
       "hadith": [
         {
           "n": 349,
@@ -22389,6 +22389,60 @@
           "en": {
             "narrator": "`Aisha",
             "text": "It is not good that you people have made us (women) equal to dogs and donkeys. No doubt I saw Allah's Messenger (ﷺ) praying while I used to lie between him and the Qibla and when he wanted to prostrate, he pushed my legs and I withdrew them",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 520,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "حَدَّثَنَا أَحْمَدُ بْنُ إِسْحَاقَ السُّرْمَارِيُّ، قَالَ حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُوسَى، قَالَ حَدَّثَنَا إِسْرَائِيلُ، عَنْ أَبِي إِسْحَاقَ، عَنْ عَمْرِو بْنِ مَيْمُونٍ،",
+          "matn": "عَنْ عَبْدِ اللَّهِ، قَالَ بَيْنَمَا رَسُولُ اللَّهِ ﷺ قَائِمٌ يُصَلِّي عِنْدَ الْكَعْبَةِ، وَجَمْعُ قُرَيْشٍ فِي مَجَالِسِهِمْ إِذْ قَالَ قَائِلٌ مِنْهُمْ أَلاَ تَنْظُرُونَ إِلَى هَذَا الْمُرَائِي أَيُّكُمْ يَقُومُ إِلَى جَزُورِ آلِ فُلاَنٍ، فَيَعْمِدُ إِلَى فَرْثِهَا وَدَمِهَا وَسَلاَهَا فَيَجِيءُ بِهِ، ثُمَّ يُمْهِلُهُ حَتَّى إِذَا سَجَدَ وَضَعَهُ بَيْنَ كَتِفَيْهِ فَانْبَعَثَ أَشْقَاهُمْ، فَلَمَّا سَجَدَ رَسُولُ اللَّهِ ﷺ وَضَعَهُ بَيْنَ كَتِفَيْهِ، وَثَبَتَ النَّبِيُّ ﷺ سَاجِدًا، فَضَحِكُوا حَتَّى مَالَ بَعْضُهُمْ إِلَى بَعْضٍ مِنَ الضَّحِكِ، فَانْطَلَقَ مُنْطَلِقٌ إِلَى فَاطِمَةَ ـ عَلَيْهَا السَّلاَمُ ـ وَهْىَ جُوَيْرِيَةٌ، فَأَقْبَلَتْ تَسْعَى وَثَبَتَ النَّبِيُّ ﷺ سَاجِدًا حَتَّى أَلْقَتْهُ عَنْهُ، وَأَقْبَلَتْ عَلَيْهِمْ تَسُبُّهُمْ، فَلَمَّا قَضَى رَسُولُ اللَّهِ ﷺ الصَّلاَةَ قَالَ  اللَّهُمَّ عَلَيْكَ بِقُرَيْشٍ، اللَّهُمَّ عَلَيْكَ بِقُرَيْشٍ، اللَّهُمَّ عَلَيْكَ بِقُرَيْشٍ ـ ثُمَّ سَمَّى ـ اللَّهُمَّ عَلَيْكَ بِعَمْرِو بْنِ هِشَامٍ، وَعُتْبَةَ بْنِ رَبِيعَةَ، وَشَيْبَةَ بْنِ رَبِيعَةَ، وَالْوَلِيدِ بْنِ عُتْبَةَ، وَأُمَيَّةَ بْنِ خَلَفٍ، وَعُقْبَةَ بْنِ أَبِي مُعَيْطٍ، وَعُمَارَةَ بْنِ الْوَلِيدِ . قَالَ عَبْدُ اللَّهِ فَوَاللَّهِ لَقَدْ رَأَيْتُهُمْ صَرْعَى يَوْمَ بَدْرٍ، ثُمَّ سُحِبُوا إِلَى الْقَلِيبِ قَلِيبِ بَدْرٍ، ثُمَّ قَالَ رَسُولُ اللَّهِ ﷺ  وَأُتْبِعَ أَصْحَابُ الْقَلِيبِ لَعْنَةً .",
+          "gharib": [
+            {
+              "word": "جَزُورِ",
+              "meaning": "بعير معدّ للذبح.",
+              "source": "صحيح البخاري، ٥٢٠، وفتح الباري، ١/٥٩٤ وشرح الحديث ٢٤٠"
+            },
+            {
+              "word": "جُوَيْرِيَةٌ",
+              "meaning": "صبيّة صغيرة.",
+              "source": "صحيح البخاري، ٥٢٠، وفتح الباري، ١/٥٩٤ وشرح الحديث ٢٤٠"
+            },
+            {
+              "word": "صَرْعَى",
+              "meaning": "مطروحين على الأرض بعد مقتلهم.",
+              "source": "صحيح البخاري، ٥٢٠، وفتح الباري، ١/٥٩٤ وشرح الحديث ٢٤٠"
+            },
+            {
+              "word": "الْقَلِيبِ",
+              "meaning": "البئر، والمراد هنا بئر بدر.",
+              "source": "صحيح البخاري، ٥٢٠، وفتح الباري، ١/٥٩٤ وشرح الحديث ٢٤٠"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٢٠",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 520"
+          },
+          "en": {
+            "narrator": "`Amr bin Maimun [??]",
+            "text": "`Abdullah bin Mas`ud said, \"While Allah's Messenger (ﷺ) was praying beside the Ka`ba, there were some Quraish people sitting in a gathering. One of them said, 'Don't you see this (who does deeds just to show off)? Who amongst you can go and bring the dung, blood and the Abdominal contents (intestines, etc.) of the slaughtered camels of the family of so and so and then wait till he prostrates and put that in between his shoulders?' The most unfortunate amongst them (`Uqba bin Abi Mu'ait) went (and brought them) and when Allah's Messenger (ﷺ) prostrated, he put them between his shoulders. The Prophet remained in prostration and they laughed so much so that they fell on each other. A passerby went to Fatima, who was a young girl in those days. She came running and the Prophet (ﷺ) was still in prostration. She removed them and cursed upon the Quraish on their faces. When Allah's Messenger (ﷺ) completed his prayer, he said, 'O Allah! Take revenge on Quraish.' He said so thrice and added, 'O Allah! take revenge on `Amr bin Hisham, `Utba bin Rabi`a, Shaiba bin Rabi`a, Al-Walid bin `Utba, Umaiya bin Khalaf, `Uqba bin Abi Mu'ait and `Umara bin Al-Walid.\" `Abdullah added, \"By Allah! I saw all of them dead in the battle field on the day of Badr and they were dragged and thrown in the Qalib (a well) at Badr: Allah's Messenger (ﷺ) then said, 'Allah's curse has descended upon the people of the Qalib (well)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
