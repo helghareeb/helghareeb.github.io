@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 548,
+      "last": 549,
       "hadith": [
         {
           "n": 521,
@@ -23589,6 +23589,45 @@
           "en": {
             "narrator": "Anas bin Malik",
             "text": "We used to pray the `Asr prayer and after that if someone happened to go to the tribe of Bani `Amr bin `Auf, he would find them still praying the `Asr (prayer)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 549,
+          "bab": {
+            "ar": "باب وقت العصر"
+          },
+          "isnad": "حَدَّثَنَا ابْنُ مُقَاتِلٍ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا أَبُو بَكْرِ بْنُ عُثْمَانَ بْنِ سَهْلِ بْنِ حُنَيْفٍ، قَالَ سَمِعْتُ أَبَا أُمَامَةَ،",
+          "matn": "يَقُولُ صَلَّيْنَا مَعَ عُمَرَ بْنِ عَبْدِ الْعَزِيزِ الظُّهْرَ، ثُمَّ خَرَجْنَا حَتَّى دَخَلْنَا عَلَى أَنَسِ بْنِ مَالِكٍ فَوَجَدْنَاهُ يُصَلِّي الْعَصْرَ فَقُلْتُ يَا عَمِّ، مَا هَذِهِ الصَّلاَةُ الَّتِي صَلَّيْتَ قَالَ الْعَصْرُ، وَهَذِهِ صَلاَةُ رَسُولِ اللَّهِ ﷺ الَّتِي كُنَّا نُصَلِّي مَعَهُ.",
+          "gharib": [
+            {
+              "word": "يَا عَمِّ",
+              "meaning": "نداء توقير لأنس، وكان أكبر سنًّا من أبي أمامة.",
+              "source": "فتح الباري ٢/٢٨"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٤٩",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 549"
+          },
+          "en": {
+            "narrator": "Abu Bakr bin `Uthman bin Sahl bin Hunaif",
+            "text": "that he heard Abu Umama saying: We prayed the Zuhr prayer with `Umar bin `Abdul `Aziz and then went to Anas bin Malik and found him offering the `Asr prayer. I asked him, \"O uncle! Which prayer have you offered?\" He said 'The `Asr and this is (the time of) the prayer of Allah's Apostle which we used to pray with him",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
