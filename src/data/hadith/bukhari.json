@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 537,
+      "last": 538,
       "hadith": [
         {
           "n": 521,
@@ -23140,6 +23140,45 @@
           "en": {
             "narrator": "Abu Huraira",
             "text": "The Prophet (ﷺ) said, \"In very hot weather delay the Zuhr prayer till it becomes (a bit) cooler because the severity of heat is from the raging of the Hell-fire. The Hell-fire of Hell complained to its Lord saying: O Lord! My parts are eating (destroying) one another. So Allah allowed it to take two breaths, one in the winter and the other in the summer. The breath in the summer is at the time when you feel the severest heat and the breath in the winter is at the time when you feel the severest cold",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 538,
+          "bab": {
+            "ar": "باب الإبراد بالظهر في شدة الحر"
+          },
+          "isnad": "حَدَّثَنَا عُمَرُ بْنُ حَفْصٍ، قَالَ حَدَّثَنَا أَبِي قَالَ، حَدَّثَنَا الأَعْمَشُ، حَدَّثَنَا أَبُو صَالِحٍ، عَنْ أَبِي سَعِيدٍ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ",
+          "matn": "أَبْرِدُوا بِالظُّهْرِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ . تَابَعَهُ سُفْيَانُ وَيَحْيَى وَأَبُو عَوَانَةَ عَنِ الأَعْمَشِ.",
+          "gharib": [
+            {
+              "word": "فَيْحِ",
+              "meaning": "سعة انتشارها وتنفّسها، وهو كناية عن شدة اشتعالها.",
+              "source": "فتح الباري ٢/١٧"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣٨",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 538"
+          },
+          "en": {
+            "narrator": "Abu Sa`id",
+            "text": "that Allah's Messenger (ﷺ) said, \"Pray Zuhr prayer when it becomes (a bit) cooler as the severity of heat is from the raging of the Hell-fire",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
