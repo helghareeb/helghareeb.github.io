@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 515,
+      "last": 516,
       "hadith": [
         {
           "n": 349,
@@ -22223,6 +22223,50 @@
           "en": {
             "narrator": "`Aisha",
             "text": "(the wife of the Prophet) Allah's Messenger (ﷺ) used to get up at night and pray while I used to lie across between him and the Qibla on his family's bed",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 516,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ عَامِرِ بْنِ عَبْدِ اللَّهِ بْنِ الزُّبَيْرِ، عَنْ عَمْرِو بْنِ سُلَيْمٍ الزُّرَقِيِّ، عَنْ أَبِي قَتَادَةَ الأَنْصَارِيِّ، أَنَّ رَسُولَ اللَّهِ ﷺ كَانَ يُصَلِّي وَهْوَ حَامِلٌ أُمَامَةَ بِنْتَ زَيْنَبَ بِنْتِ رَسُولِ اللَّهِ ﷺ وَلأَبِي الْعَاصِ بْنِ رَبِيعَةَ بْنِ عَبْدِ شَمْسٍ، فَإِذَا سَجَدَ وَضَعَهَا، وَإِذَا قَامَ حَمَلَهَا.",
+          "gharib": [
+            {
+              "word": "أُمَامَةَ بِنْتَ زَيْنَبَ",
+              "meaning": "حفيدة النبي ﷺ، أمها زينب بنت رسول الله ﷺ وأبوها أبو العاص بن الربيع.",
+              "source": "صحيح البخاري، ٥١٦، وفتح الباري، ص ٥٩٠–٥٩٢"
+            },
+            {
+              "word": "وَضَعَهَا",
+              "meaning": "أنزلها حين سجد.",
+              "source": "صحيح البخاري، ٥١٦، وفتح الباري، ص ٥٩٠–٥٩٢"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥١٦",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 516"
+          },
+          "en": {
+            "narrator": "Abu Qatada Al-Ansari",
+            "text": "Allah's Messenger (ﷺ) was praying and he was carrying Umama the daughter of Zainab, the daughter of Allah's Messenger (ﷺ) and she was the daughter of 'As bin Rabi`a bin `Abd Shams. When he prostrated, he put her down and when he stood, he carried her (on his neck)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
