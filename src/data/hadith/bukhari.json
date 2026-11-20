@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 566,
+      "last": 567,
       "hadith": [
         {
           "n": 521,
@@ -24351,6 +24351,55 @@
           "en": {
             "narrator": "`Aisha",
             "text": "Allah's Messenger (ﷺ) once delayed the `Isha' prayer and that was during the days when Islam still had not spread. The Prophet (ﷺ) did not come out till `Umar informed him that the women and children had slept. Then he came out and said to the people of the mosque: \"None amongst the dwellers of the earth has been waiting for it (`Isha prayer) except you",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 567,
+          "bab": {
+            "ar": "باب فضل العشاء"
+          },
+          "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ الْعَلاَءِ، قَالَ أَخْبَرَنَا أَبُو أُسَامَةَ، عَنْ بُرَيْدٍ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى،",
+          "matn": "قَالَ كُنْتُ أَنَا وَأَصْحَابِي الَّذِينَ، قَدِمُوا مَعِي فِي السَّفِينَةِ نُزُولاً فِي بَقِيعِ بُطْحَانَ، وَالنَّبِيُّ ﷺ بِالْمَدِينَةِ، فَكَانَ يَتَنَاوَبُ النَّبِيَّ ﷺ عِنْدَ صَلاَةِ الْعِشَاءِ كُلَّ لَيْلَةٍ نَفَرٌ مِنْهُمْ، فَوَافَقْنَا النَّبِيَّ ـ عليه السلام ـ أَنَا وَأَصْحَابِي وَلَهُ بَعْضُ الشُّغْلِ فِي بَعْضِ أَمْرِهِ فَأَعْتَمَ بِالصَّلاَةِ حَتَّى ابْهَارَّ اللَّيْلُ، ثُمَّ خَرَجَ النَّبِيُّ ﷺ فَصَلَّى بِهِمْ، فَلَمَّا قَضَى صَلاَتَهُ قَالَ لِمَنْ حَضَرَهُ عَلَى رِسْلِكُمْ، أَبْشِرُوا إِنَّ مِنْ نِعْمَةِ اللَّهِ عَلَيْكُمْ أَنَّهُ لَيْسَ أَحَدٌ مِنَ النَّاسِ يُصَلِّي هَذِهِ السَّاعَةَ غَيْرُكُمْ . أَوْ قَالَ  مَا صَلَّى هَذِهِ السَّاعَةَ أَحَدٌ غَيْرُكُمْ . لاَ يَدْرِي أَىَّ الْكَلِمَتَيْنِ قَالَ. قَالَ أَبُو مُوسَى فَرَجَعْنَا فَفَرِحْنَا بِمَا سَمِعْنَا مِنْ رَسُولِ اللَّهِ ﷺ.",
+          "gharib": [
+            {
+              "word": "بُطْحَانَ",
+              "meaning": "اسم وادٍ بالمدينة، وضبطه ابن حجر بضم الباء.",
+              "source": "فتح الباري ٢/٤٧–٤٩"
+            },
+            {
+              "word": "ابْهَارَّ اللَّيْلُ",
+              "meaning": "انتصف الليل، وقيل اشتدّ ظلامه.",
+              "source": "فتح الباري ٢/٤٧–٤٩"
+            },
+            {
+              "word": "عَلَى رِسْلِكُمْ",
+              "meaning": "تمهّلوا.",
+              "source": "فتح الباري ٢/٤٧–٤٩"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٦٧",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 567"
+          },
+          "en": {
+            "narrator": "Abu Musa",
+            "text": "My companions, who came with me in the boat and I landed at a place called Baqi [??] Buthan [??] . The Prophet (ﷺ) was in Medina at that time. One of us used to go to the Prophet (ﷺ) by turns every night at the time of the `Isha prayer. Once I along with my companions went to the Prophet (ﷺ) and he was busy in some of his affairs, so the `Isha' prayer was delayed to the middle of the night He then came out and led the people (in prayer). After finishing from the prayer, he addressed the people present there saying, \"Be patient! Don't go away. Have the glad tiding. It is from the blessing of Allah upon you that none amongst mankind has prayed at this time save you.\" Or said, \"None except you has prayed at this time.\" Abu Musa added, 'So we returned happily after what we heard from Allah's Messenger (ﷺ)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
