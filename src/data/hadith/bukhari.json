@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 541,
+      "last": 542,
       "hadith": [
         {
           "n": 521,
@@ -23301,6 +23301,50 @@
           "en": {
             "narrator": "Abu Al-Minhal",
             "text": "Abu Barza said, \"The Prophet (ﷺ) used to offer the Fajr (prayer) when one could recognize the person sitting by him (after the prayer) and he used to recite between 60 to 100 Ayat (verses) of the Qur'an. He used to offer the Zuhr prayer as soon as the sun declined (at noon) and the `Asr prayer at a time when a man might go and return from the farthest place in Medina and find the sun still hot. (The sub-narrator forgot what was said about the Maghrib). He did not mind delaying the `Isha prayer to one third of the night or the middle of the night",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 542,
+          "bab": {
+            "ar": "باب وقت الظهر عند الزوال"
+          },
+          "isnad": "حَدَّثَنَا مُحَمَّدٌ ـ يَعْنِي ابْنَ مُقَاتِلٍ ـ قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا خَالِدُ بْنُ عَبْدِ الرَّحْمَنِ، حَدَّثَنِي غَالِبٌ الْقَطَّانُ، عَنْ بَكْرِ بْنِ عَبْدِ اللَّهِ الْمُزَنِيِّ، عَنْ أَنَسِ بْنِ مَالِكٍ،",
+          "matn": "قَالَ كُنَّا إِذَا صَلَّيْنَا خَلْفَ رَسُولِ اللَّهِ ﷺ بِالظَّهَائِرِ فَسَجَدْنَا عَلَى ثِيَابِنَا اتِّقَاءَ الْحَرِّ.",
+          "gharib": [
+            {
+              "word": "بِالظَّهَائِرِ",
+              "meaning": "جمع ظهيرة، وهي الهاجرة. والمراد صلاة الظهر.",
+              "source": "فتح الباري ٢/٢٣"
+            },
+            {
+              "word": "اتِّقَاءَ الْحَرِّ",
+              "meaning": "طلبًا للوقاية من الحر.",
+              "source": "فتح الباري ٢/٢٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٤٢",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 542"
+          },
+          "en": {
+            "narrator": "Anas bin Malik",
+            "text": "When we offered the Zuhr prayers behind Allah's Messenger (ﷺ) we used to prostrate on our clothes to protect ourselves from the heat",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
