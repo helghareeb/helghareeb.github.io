@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 501,
+      "last": 503,
       "hadith": [
         {
           "n": 349,
@@ -21657,6 +21657,84 @@
           "en": {
             "narrator": "Abu Juhaifa",
             "text": "Allah's Messenger (ﷺ) came out at midday and offered a two-rak`at Zuhr and `Asr prayers at Al-Batha and a short spear (or stick) was planted in front of him (as a Sutra). He performed ablution and the people took the remaining water left after his ablution and rubbed their bodies with it",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 502,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا الْمَكِّيُّ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ أَبِي عُبَيْدٍ، قَالَ كُنْتُ آتِي مَعَ سَلَمَةَ بْنِ الأَكْوَعِ فَيُصَلِّي عِنْدَ الأُسْطُوَانَةِ الَّتِي عِنْدَ الْمُصْحَفِ. فَقُلْتُ يَا أَبَا مُسْلِمٍ أَرَاكَ تَتَحَرَّى الصَّلاَةَ عِنْدَ هَذِهِ الأُسْطُوَانَةِ. قَالَ فَإِنِّي رَأَيْتُ النَّبِيَّ ﷺ يَتَحَرَّى الصَّلاَةَ عِنْدَهَا.",
+          "gharib": [
+            {
+              "word": "يَتَحَرَّى",
+              "meaning": "يَقْصِدُ.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٧."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٠٢",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 502"
+          },
+          "en": {
+            "narrator": "Yazid bin Al `Ubaid",
+            "text": "I used to accompany Salama bin Al-Akwa` and he used to pray behind the pillar which was near the place where the Qur'ans were kept. I said, \"O Abu Muslim! I see you always seeking to pray behind this pillar.\" He replied, \"I saw Allah's Messenger (ﷺ) always seeking to pray near that pillar",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 503,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا قَبِيصَةُ، قَالَ حَدَّثَنَا سُفْيَانُ، عَنْ عَمْرِو بْنِ عَامِرٍ، عَنْ أَنَسٍ، قَالَ لَقَدْ رَأَيْتُ كِبَارَ أَصْحَابِ النَّبِيِّ ﷺ يَبْتَدِرُونَ السَّوَارِيَ عِنْدَ الْمَغْرِبِ. وَزَادَ شُعْبَةُ عَنْ عَمْرٍو عَنْ أَنَسٍ حَتَّى يَخْرُجَ النَّبِيُّ ﷺ.",
+          "gharib": [
+            {
+              "word": "يَبْتَدِرُونَ السَّوَارِيَ",
+              "meaning": "يُبادِرُون إلى أعمدة المسجد ليصلّوا إليها.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٧٧–٥٧٨."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٠٣",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 503"
+          },
+          "en": {
+            "narrator": "Anas",
+            "text": "I saw the most famous people amongst the companions of the Prophet (ﷺ) hurrying towards the pillars at the Maghrib prayer before the Prophet (ﷺ) came for the prayer",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
