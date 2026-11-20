@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 508,
+      "last": 509,
       "hadith": [
         {
           "n": 349,
@@ -21930,6 +21930,45 @@
           "en": {
             "narrator": "`Aisha",
             "text": "Do you make us (women) equal to dogs and donkeys? While I used to lie in my bed, the Prophet (ﷺ) would come and pray facing the middle of the bed. I used to consider it not good to stand in front of him in his prayers. So I used to slip away slowly and quietly from the foot of the bed till I got out of my guilt",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 509,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "حَدَّثَنَا أَبُو مَعْمَرٍ، قَالَ حَدَّثَنَا عَبْدُ الْوَارِثِ، قَالَ حَدَّثَنَا يُونُسُ، عَنْ حُمَيْدِ بْنِ هِلاَلٍ، عَنْ أَبِي صَالِحٍ، أَنَّ أَبَا سَعِيدٍ، قَالَ قَالَ النَّبِيُّ ﷺ وَحَدَّثَنَا آدَمُ بْنُ أَبِي إِيَاسٍ قَالَ حَدَّثَنَا سُلَيْمَانُ بْنُ الْمُغِيرَةِ قَالَ حَدَّثَنَا حُمَيْدُ بْنُ هِلاَلٍ الْعَدَوِيُّ قَالَ حَدَّثَنَا أَبُو صَالِحٍ السَّمَّانُ قَالَ رَأَيْتُ أَبَا سَعِيدٍ الْخُدْرِيَّ فِي يَوْمِ جُمُعَةٍ يُصَلِّي إِلَى شَىْءٍ يَسْتُرُهُ مِنَ النَّاسِ، فَأَرَادَ شَابٌّ مِنْ بَنِي أَبِي مُعَيْطٍ أَنْ يَجْتَازَ بَيْنَ يَدَيْهِ فَدَفَعَ أَبُو سَعِيدٍ فِي صَدْرِهِ، فَنَظَرَ الشَّابُّ فَلَمْ يَجِدْ مَسَاغًا إِلاَّ بَيْنَ يَدَيْهِ، فَعَادَ لِيَجْتَازَ فَدَفَعَهُ أَبُو سَعِيدٍ أَشَدَّ مِنَ الأُولَى، فَنَالَ مِنْ أَبِي سَعِيدٍ، ثُمَّ دَخَلَ عَلَى مَرْوَانَ فَشَكَا إِلَيْهِ مَا لَقِيَ مِنْ أَبِي سَعِيدٍ، وَدَخَلَ أَبُو سَعِيدٍ خَلْفَهُ عَلَى مَرْوَانَ فَقَالَ مَا لَكَ وَلاِبْنِ أَخِيكَ يَا أَبَا سَعِيدٍ قَالَ سَمِعْتُ النَّبِيَّ ﷺ يَقُولُ",
+          "matn": "إِذَا صَلَّى أَحَدُكُمْ إِلَى شَىْءٍ يَسْتُرُهُ مِنَ النَّاسِ، فَأَرَادَ أَحَدٌ أَنْ يَجْتَازَ بَيْنَ يَدَيْهِ فَلْيَدْفَعْهُ، فَإِنْ أَبَى فَلْيُقَاتِلْهُ، فَإِنَّمَا هُوَ شَيْطَانٌ .",
+          "gharib": [
+            {
+              "word": "مَسَاغًا",
+              "meaning": "مَمَرًّا.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٨٣."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٠٩",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 509"
+          },
+          "en": {
+            "narrator": "Abu Sa`id",
+            "text": "The Prophet (ﷺ) said, (what is ascribed to him in the following Hadith): Narrated Abu Salih As-Samman: I saw Abu Sa`id Al-Khudri praying on a Friday, behind something which acted as a Sutra. A young man from Bani Abi Mu'ait [??] , wanted to pass in front of him, but Abu Sa`id repulsed him with a push on his chest. Finding no alternative he again tried to pass but Abu Sa`id pushed him with a greater force. The young man abused Abu Sa`id and went to Marwan and lodged a complaint against Abu Sa`id and Abu Sa`id followed the young man to Marwan who asked him, \"O Abu Sa`id! What has happened between you and the son of your brother?\" Abu Sa`id said to him, \"I heard the Prophet (ﷺ) saying, 'If anybody amongst you is praying behind something as a Sutra and somebody tries to pass in front of him, then he should repulse him and if he refuses, he should use force against him for he is a Shaitan (a Satan)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
