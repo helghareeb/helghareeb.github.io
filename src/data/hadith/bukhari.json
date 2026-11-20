@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 505,
+      "last": 506,
       "hadith": [
         {
           "n": 349,
@@ -21813,6 +21813,45 @@
           "en": {
             "narrator": "Nafi`",
             "text": "`Abdullah bin `Umar said, \"Allah's Messenger (ﷺ) entered the Ka`ba along with Usama bin Zaid, Bilal and `Uthman bin Talha Al-Hajabi and closed the door and stayed there for some time. I asked Bilal when he came out, 'What did the Prophet (ﷺ) do?' He replied, 'He offered prayer with one pillar to his left and one to his right and three behind.' In those days the Ka`ba was supported by six pillars.\" Malik said: \"There were two pillars on his (the Prophet's) right side",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 506,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ الْمُنْذِرِ، قَالَ حَدَّثَنَا أَبُو ضَمْرَةَ، قَالَ حَدَّثَنَا مُوسَى بْنُ عُقْبَةَ، عَنْ نَافِعٍ، أَنَّ عَبْدَ اللَّهِ، كَانَ إِذَا دَخَلَ الْكَعْبَةَ مَشَى قِبَلَ وَجْهِهِ حِينَ يَدْخُلُ، وَجَعَلَ الْبَابَ قِبَلَ ظَهْرِهِ، فَمَشَى حَتَّى يَكُونَ بَيْنَهُ وَبَيْنَ الْجِدَارِ الَّذِي قِبَلَ وَجْهِهِ قَرِيبًا مِنْ ثَلاَثَةِ أَذْرُعٍ، صَلَّى يَتَوَخَّى الْمَكَانَ الَّذِي أَخْبَرَهُ بِهِ بِلاَلٌ أَنَّ النَّبِيَّ ﷺ صَلَّى فِيهِ. قَالَ وَلَيْسَ عَلَى أَحَدِنَا بَأْسٌ إِنْ صَلَّى فِي أَىِّ نَوَاحِي الْبَيْتِ شَاءَ.",
+          "gharib": [
+            {
+              "word": "يَتَوَخَّى",
+              "meaning": "يَقْصِدُ.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٨٠."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٠٦",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 506"
+          },
+          "en": {
+            "narrator": "Nafi'",
+            "text": "Whenever 'Abdullah entered the Ka'bah, he used to go ahead leaving the door of the Ka'bah behind him. He would proceed on till the remaining distance between him and the opposite wall was about three cubits. Then he would offer prayer there where the Prophet (ﷺ) had offered Salat, as Bilal informed me. Ibn 'Umar said, \"It does not matter for any of us to offer prayers at any place inside the Ka'bah",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
