@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 527,
+      "last": 528,
       "hadith": [
         {
           "n": 521,
@@ -22740,6 +22740,45 @@
           "en": {
             "narrator": "`Abdullah",
             "text": "I asked the Prophet (ﷺ) \"Which deed is the dearest to Allah?\" He replied, \"To offer the prayers at their early stated fixed times.\" I asked, \"What is the next (in goodness)?\" He replied, \"To be good and dutiful to your parents\" I again asked, \"What is the next (in goodness)?\" He replied, 'To participate in Jihad (religious fighting) in Allah's cause.\" `Abdullah added, \"I asked only that much and if I had asked more, the Prophet (ﷺ) would have told me more",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 528,
+          "bab": {
+            "ar": "باب الصلوات الخمس كفارة"
+          },
+          "isnad": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ حَمْزَةَ، قَالَ حَدَّثَنِي ابْنُ أَبِي حَازِمٍ، وَالدَّرَاوَرْدِيُّ، عَنْ يَزِيدَ، عَنْ مُحَمَّدِ بْنِ إِبْرَاهِيمَ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّهُ سَمِعَ رَسُولَ اللَّهِ ﷺ يَقُولُ",
+          "matn": "أَرَأَيْتُمْ لَوْ أَنَّ نَهَرًا بِبَابِ أَحَدِكُمْ، يَغْتَسِلُ فِيهِ كُلَّ يَوْمٍ خَمْسًا، مَا تَقُولُ ذَلِكَ يُبْقِي مِنْ دَرَنِهِ . قَالُوا لاَ يُبْقِي مِنْ دَرَنِهِ شَيْئًا. قَالَ  فَذَلِكَ مِثْلُ الصَّلَوَاتِ الْخَمْسِ، يَمْحُو اللَّهُ بِهَا الْخَطَايَا .",
+          "gharib": [
+            {
+              "word": "دَرَنِهِ",
+              "meaning": "وسخه.",
+              "source": "فتح الباري ٢/١١، شرح حديث ٥٢٨"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٢٨",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 528"
+          },
+          "en": {
+            "narrator": "Abu Huraira",
+            "text": "I heard Allah's Messenger (ﷺ) saying, \"If there was a river at the door of anyone of you and he took a bath in it five times a day would you notice any dirt on him?\" They said, \"Not a trace of dirt would be left.\" The Prophet (ﷺ) added, \"That is the example of the five prayers with which Allah blots out (annuls) evil deeds",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
