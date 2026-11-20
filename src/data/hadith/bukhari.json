@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 565,
+      "last": 566,
       "hadith": [
         {
           "n": 521,
@@ -24307,6 +24307,50 @@
           "en": {
             "narrator": "Muhammad bin `Amr",
             "text": "We asked Jabir bin `Abdullah about the prayers of the Prophet (ﷺ) . He said, \"He used to pray Zuhr prayer at midday, the `Asr when the sun was still hot, and the Maghrib after sunset (at its stated time). The `Isha was offered early if the people gathered, and used to be delayed if their number was less; and the morning prayer was offered when it was still dark",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 566,
+          "bab": {
+            "ar": "باب فضل العشاء"
+          },
+          "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، أَنَّ عَائِشَةَ، أَخْبَرَتْهُ قَالَتْ،",
+          "matn": "أَعْتَمَ رَسُولُ اللَّهِ ﷺ لَيْلَةً بِالْعِشَاءِ، وَذَلِكَ قَبْلَ أَنْ يَفْشُوَ الإِسْلاَمُ، فَلَمْ يَخْرُجْ حَتَّى قَالَ عُمَرُ نَامَ النِّسَاءُ وَالصِّبْيَانُ. فَخَرَجَ فَقَالَ لأَهْلِ الْمَسْجِدِ مَا يَنْتَظِرُهَا أَحَدٌ مِنْ أَهْلِ الأَرْضِ غَيْرُكُمْ .",
+          "gharib": [
+            {
+              "word": "أَعْتَمَ",
+              "meaning": "أخّر صلاة العشاء إلى العتمة.",
+              "source": "فتح الباري ٢/٤٧–٤٨"
+            },
+            {
+              "word": "يَفْشُوَ",
+              "meaning": "ينتشر ويظهر، وفسّره ابن حجر بانتشاره خارج المدينة.",
+              "source": "فتح الباري ٢/٤٧–٤٨"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٦٦",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 566"
+          },
+          "en": {
+            "narrator": "`Aisha",
+            "text": "Allah's Messenger (ﷺ) once delayed the `Isha' prayer and that was during the days when Islam still had not spread. The Prophet (ﷺ) did not come out till `Umar informed him that the women and children had slept. Then he came out and said to the people of the mosque: \"None amongst the dwellers of the earth has been waiting for it (`Isha prayer) except you",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
