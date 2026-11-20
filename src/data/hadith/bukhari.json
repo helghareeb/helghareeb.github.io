@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 560,
+      "last": 561,
       "hadith": [
         {
           "n": 521,
@@ -24087,6 +24087,45 @@
           "en": {
             "narrator": "Jabir bin `Abdullah",
             "text": "The Prophet (ﷺ) used to pray the Zuhr at midday, and the `Asr at a time when the sun was still bright, the Maghrib after sunset (at its stated time) and the `Isha at a variable time. Whenever he saw the people assembled (for `Isha' prayer) he would pray earlier and if the people delayed, he would delay the prayer. And they or the Prophet (ﷺ) used to offer the Fajr Prayers when it was still dark",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 561,
+          "bab": {
+            "ar": "باب وقت المغرب، وقال عطاء: يجمع المريض بين المغرب والعشاء"
+          },
+          "isnad": "حَدَّثَنَا الْمَكِّيُّ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ أَبِي عُبَيْدٍ، عَنْ سَلَمَةَ، قَالَ",
+          "matn": "كُنَّا نُصَلِّي مَعَ النَّبِيِّ ﷺ الْمَغْرِبَ إِذَا تَوَارَتْ بِالْحِجَابِ.",
+          "gharib": [
+            {
+              "word": "تَوَارَتْ بِالْحِجَابِ",
+              "meaning": "استترت الشمس وغاب قرصها، كما بيّن الخطابي فيما نقله ابن حجر.",
+              "source": "فتح الباري ٢/٤٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٦١",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 561"
+          },
+          "en": {
+            "narrator": "Salama",
+            "text": "We used to pray the Maghrib prayer with the Prophet (ﷺ) when the sun disappeared from the horizon",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
