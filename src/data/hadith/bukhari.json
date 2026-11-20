@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 554,
+      "last": 555,
       "hadith": [
         {
           "n": 521,
@@ -23828,6 +23828,45 @@
           "en": {
             "narrator": "Qais",
             "text": "Jarir said, \"We were with the Prophet (ﷺ) and he looked at the moon--full-moon--and said, 'Certainly you will see your Lord as you see this moon and you will have no trouble in seeing Him. So if you can avoid missing (through sleep or business, etc.) a prayer before the sunrise (Fajr) and a prayer before sunset (`Asr), you must do so.' He then recited Allah's Statement: And celebrate the praises Of your Lord before the rising of the sun and before (its) setting.\" (50.39) Isma`il said, \"Offer those prayers and do not miss them",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 555,
+          "bab": {
+            "ar": "باب فضل صلاة العصر"
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ حَدَّثَنَا مَالِكٌ، عَنْ أَبِي الزِّنَادِ، عَنِ الأَعْرَجِ، عَنْ أَبِي هُرَيْرَةَ،",
+          "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ  يَتَعَاقَبُونَ فِيكُمْ مَلاَئِكَةٌ بِاللَّيْلِ وَمَلاَئِكَةٌ بِالنَّهَارِ، وَيَجْتَمِعُونَ فِي صَلاَةِ الْفَجْرِ وَصَلاَةِ الْعَصْرِ، ثُمَّ يَعْرُجُ الَّذِينَ بَاتُوا فِيكُمْ، فَيَسْأَلُهُمْ وَهْوَ أَعْلَمُ بِهِمْ كَيْفَ تَرَكْتُمْ عِبَادِي فَيَقُولُونَ تَرَكْنَاهُمْ وَهُمْ يُصَلُّونَ، وَأَتَيْنَاهُمْ وَهُمْ يُصَلُّونَ .",
+          "gharib": [
+            {
+              "word": "يَتَعَاقَبُونَ",
+              "meaning": "تأتي طائفةٌ منهم عَقِب طائفة.",
+              "source": "فتح الباري ٢/٣٤"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥٥",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 555"
+          },
+          "en": {
+            "narrator": "Abu Huraira",
+            "text": "Allah's Messenger (ﷺ) said, \"Angels come to you in succession by night and day and all of them get together at the time of the Fajr and `Asr prayers. Those who have passed the night with you (or stayed with you) ascend (to the Heaven) and Allah asks them, though He knows everything about you, well, \"In what state did you leave my slaves?\" The angels reply: \"When we left them they were praying and when we reached them, they were praying",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
