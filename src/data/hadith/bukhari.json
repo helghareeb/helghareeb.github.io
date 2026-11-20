@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 547,
+      "last": 548,
       "hadith": [
         {
           "n": 521,
@@ -23550,6 +23550,45 @@
           "en": {
             "narrator": "Saiyar bin Salama",
             "text": "I along with my father went to Abu- Barza Al-Aslami and my father asked him, \"How Allah's Messenger (ﷺ) used to offer the five compulsory congregational prayers?\" Abu- Barza said, \"The Prophet (ﷺ) used to pray the Zuhr prayer which you (people) call the first one at midday when the sun had just declined The `Asr prayer at a time when after the prayer, a man could go to the house at the farthest place in Medina (and arrive) while the sun was still hot. (I forgot about the Maghrib prayer). The Prophet (ﷺ) Loved to delay the `Isha which you call Al- `Atama [??] and he disliked sleeping before it and speaking after it. After the Fajr prayer he used to leave when a man could recognize the one sitting beside him and he used to recite between 60 to 100 Ayat (in the Fajr prayer)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 548,
+          "bab": {
+            "ar": "باب وقت العصر"
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ، عَنْ مَالِكٍ، عَنْ إِسْحَاقَ بْنِ عَبْدِ اللَّهِ بْنِ أَبِي طَلْحَةَ، عَنْ أَنَسِ بْنِ مَالِكٍ،",
+          "matn": "قَالَ كُنَّا نُصَلِّي الْعَصْرَ ثُمَّ يَخْرُجُ الإِنْسَانُ إِلَى بَنِي عَمْرِو بْنِ عَوْفٍ فَنَجِدُهُمْ يُصَلُّونَ الْعَصْرَ.",
+          "gharib": [
+            {
+              "word": "إِلَى بَنِي عَمْرِو بْنِ عَوْفٍ",
+              "meaning": "إلى قباء، حيث كانت منازل بني عمرو بن عوف.",
+              "source": "فتح الباري ٢/٢٧"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٤٨",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 548"
+          },
+          "en": {
+            "narrator": "Anas bin Malik",
+            "text": "We used to pray the `Asr prayer and after that if someone happened to go to the tribe of Bani `Amr bin `Auf, he would find them still praying the `Asr (prayer)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
