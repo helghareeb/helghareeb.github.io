@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 516,
+      "last": 518,
       "hadith": [
         {
           "n": 349,
@@ -22267,6 +22267,84 @@
           "en": {
             "narrator": "Abu Qatada Al-Ansari",
             "text": "Allah's Messenger (ﷺ) was praying and he was carrying Umama the daughter of Zainab, the daughter of Allah's Messenger (ﷺ) and she was the daughter of 'As bin Rabi`a bin `Abd Shams. When he prostrated, he put her down and when he stood, he carried her (on his neck)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 517,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "حَدَّثَنَا عَمْرُو بْنُ زُرَارَةَ، قَالَ أَخْبَرَنَا هُشَيْمٌ، عَنِ الشَّيْبَانِيِّ، عَنْ عَبْدِ اللَّهِ بْنِ شَدَّادِ بْنِ الْهَادِ، قَالَ أَخْبَرَتْنِي خَالَتِي، مَيْمُونَةُ بِنْتُ الْحَارِثِ",
+          "matn": "قَالَتْ كَانَ فِرَاشِي حِيَالَ مُصَلَّى النَّبِيِّ ﷺ فَرُبَّمَا وَقَعَ ثَوْبُهُ عَلَىَّ وَأَنَا عَلَى فِرَاشِي.",
+          "gharib": [
+            {
+              "word": "حِيَالَ مُصَلَّى",
+              "meaning": "بجانب الموضع الذي يصلّي فيه.",
+              "source": "ابن حجر، فتح الباري، ص ٥٩٣."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥١٧",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 517"
+          },
+          "en": {
+            "narrator": "Maimuna bint Al-Harith",
+            "text": "My bed was beside the praying place (Musalla) of the Prophet (ﷺ) and sometimes his garment fell on me while I used to lie in my bed",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 518,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا عَبْدُ الْوَاحِدِ بْنُ زِيَادٍ، قَالَ حَدَّثَنَا الشَّيْبَانِيُّ، سُلَيْمَانُ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ شَدَّادٍ، قَالَ سَمِعْتُ مَيْمُونَةَ، تَقُولُ كَانَ النَّبِيُّ ﷺ يُصَلِّي وَأَنَا إِلَى جَنْبِهِ نَائِمَةٌ، فَإِذَا سَجَدَ أَصَابَنِي ثَوْبُهُ، وَأَنَا حَائِضٌ. وَزَادَ مُسَدَّدٌ عَنْ خَالِدٍ قَالَ حَدَّثَنَا سُلَيْمَانُ الشَّيْبَانِيُّ، وَأَنَا حَائِضٌ.",
+          "gharib": [
+            {
+              "word": "أَصَابَنِي ثَوْبُهُ",
+              "meaning": "مَسَّني ثوبه عند سجوده.",
+              "source": "ابن حجر، فتح الباري، ص ٥٩٣."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥١٨",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 518"
+          },
+          "en": {
+            "narrator": "Maimuna",
+            "text": "The Prophet (ﷺ) used to pray while I used to sleep beside him during my periods (menses) and in prostration his garment used to touch me",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
