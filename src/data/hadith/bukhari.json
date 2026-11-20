@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 564,
+      "last": 565,
       "hadith": [
         {
           "n": 521,
@@ -24258,6 +24258,55 @@
           "en": {
             "narrator": "`Abdullah",
             "text": "\"One night Allah's Messenger (ﷺ) led us in the `Isha' prayer and that is the one called Al-`Atma [??] by the people. After the completion of the prayer, he faced us and said, \"Do you know the importance of this night? Nobody present on the surface of the earth tonight will be living after one hundred years from this night.\" (See Hadith No)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 565,
+          "bab": {
+            "ar": "باب وقت العشاء إذا اجتمع الناس أو تأخروا"
+          },
+          "isnad": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا شُعْبَةُ، عَنْ سَعْدِ بْنِ إِبْرَاهِيمَ، عَنْ مُحَمَّدِ بْنِ عَمْرٍو ـ هُوَ ابْنُ الْحَسَنِ بْنِ عَلِيٍّ ـ",
+          "matn": "قَالَ سَأَلْنَا جَابِرَ بْنَ عَبْدِ اللَّهِ عَنْ صَلاَةِ النَّبِيِّ، ﷺ فَقَالَ كَانَ يُصَلِّي الظُّهْرَ بِالْهَاجِرَةِ، وَالْعَصْرَ وَالشَّمْسُ حَيَّةٌ، وَالْمَغْرِبَ إِذَا وَجَبَتْ، وَالْعِشَاءَ إِذَا كَثُرَ النَّاسُ عَجَّلَ، وَإِذَا قَلُّوا أَخَّرَ، وَالصُّبْحَ بِغَلَسٍ.",
+          "gharib": [
+            {
+              "word": "حَيَّةٌ",
+              "meaning": "باقية الضوء، ويفسر نظيرها في الرواية الأخرى صفاء الشمس.",
+              "source": "فتح الباري ٢/٤٢ و٤٧"
+            },
+            {
+              "word": "وَجَبَتْ",
+              "meaning": "غربت الشمس وسقط قرصها.",
+              "source": "فتح الباري ٢/٤٢ و٤٧"
+            },
+            {
+              "word": "بِغَلَسٍ",
+              "meaning": "في ظلمة آخر الليل.",
+              "source": "فتح الباري ٢/٤٢ و٤٧"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٦٥",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 565"
+          },
+          "en": {
+            "narrator": "Muhammad bin `Amr",
+            "text": "We asked Jabir bin `Abdullah about the prayers of the Prophet (ﷺ) . He said, \"He used to pray Zuhr prayer at midday, the `Asr when the sun was still hot, and the Maghrib after sunset (at its stated time). The `Isha was offered early if the people gathered, and used to be delayed if their number was less; and the morning prayer was offered when it was still dark",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
