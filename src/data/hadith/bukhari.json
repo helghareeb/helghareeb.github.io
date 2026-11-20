@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 542,
+      "last": 543,
       "hadith": [
         {
           "n": 521,
@@ -23345,6 +23345,45 @@
           "en": {
             "narrator": "Anas bin Malik",
             "text": "When we offered the Zuhr prayers behind Allah's Messenger (ﷺ) we used to prostrate on our clothes to protect ourselves from the heat",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 543,
+          "bab": {
+            "ar": "باب تأخير الظهر إلى العصر"
+          },
+          "isnad": "حَدَّثَنَا أَبُو النُّعْمَانِ، قَالَ حَدَّثَنَا حَمَّادٌ ـ هُوَ ابْنُ زَيْدٍ ـ عَنْ عَمْرِو بْنِ دِينَارٍ، عَنْ جَابِرِ بْنِ زَيْدٍ، عَنِ ابْنِ عَبَّاسٍ،",
+          "matn": "أَنَّ النَّبِيَّ ﷺ صَلَّى بِالْمَدِينَةِ سَبْعًا وَثَمَانِيًا الظُّهْرَ وَالْعَصْرَ، وَالْمَغْرِبَ وَالْعِشَاءَ. فَقَالَ أَيُّوبُ لَعَلَّهُ فِي لَيْلَةٍ مَطِيرَةٍ. قَالَ عَسَى.",
+          "gharib": [
+            {
+              "word": "سَبْعًا وَثَمَانِيًا",
+              "meaning": "سبع ركعات للمغرب والعشاء، وثمان ركعات للظهر والعصر.",
+              "source": "فتح الباري ٢/٢٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٤٣",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 543"
+          },
+          "en": {
+            "narrator": "Ibn `Abbas",
+            "text": "\"The Prophet (ﷺ) prayed eight rak`at for the Zuhr and `Asr, and seven for the Maghrib and `Isha prayers in Medina.\" Aiyub said, \"Perhaps those were rainy nights.\" Anas said, \"May be",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
