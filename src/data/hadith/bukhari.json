@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 510,
+      "last": 511,
       "hadith": [
         {
           "n": 349,
@@ -22008,6 +22008,50 @@
           "en": {
             "narrator": "Busr bin Sa`id",
             "text": "that Zaid bin Khalid sent him to Abi Juhaim to ask him what he had heard from Allah's Messenger (ﷺ) about a person passing in front of another person who was praying. Abu Juhaim replied, \"Allah's Messenger (ﷺ) said, 'If the person who passes in front of another person in prayer knew the magnitude of his sin he would prefer to wait for 40 (days, months or years) rather than to pass in front of him.\" Abu An-Nadr said, \"I do not remember exactly whether he said 40 days, months or years",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 511,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ خَلِيلٍ، حَدَّثَنَا عَلِيُّ بْنُ مُسْهِرٍ، عَنِ الأَعْمَشِ، عَنْ مُسْلِمٍ ـ يَعْنِي ابْنَ صُبَيْحٍ ـ عَنْ مَسْرُوقٍ، عَنْ عَائِشَةَ،",
+          "matn": "أَنَّهُ ذُكِرَ عِنْدَهَا مَا يَقْطَعُ الصَّلاَةَ فَقَالُوا يَقْطَعُهَا الْكَلْبُ وَالْحِمَارُ وَالْمَرْأَةُ. قَالَتْ قَدْ جَعَلْتُمُونَا كِلاَبًا، لَقَدْ رَأَيْتُ النَّبِيَّ ـ عَلَيْهِ السَّلاَمُ ـ يُصَلِّي، وَإِنِّي لَبَيْنَهُ وَبَيْنَ الْقِبْلَةِ، وَأَنَا مُضْطَجِعَةٌ عَلَى السَّرِيرِ، فَتَكُونُ لِي الْحَاجَةُ، فَأَكْرَهُ أَنْ أَسْتَقْبِلَهُ فَأَنْسَلُّ انْسِلاَلاً. وَعَنِ الأَعْمَشِ عَنْ إِبْرَاهِيمَ عَنِ الأَسْوَدِ عَنْ عَائِشَةَ نَحْوَهُ.",
+          "gharib": [
+            {
+              "word": "مُضْطَجِعَةٌ",
+              "meaning": "مستلقية على السرير.",
+              "source": "ابن حجر، فتح الباري، ص ٥٨٧، في شرح الحديث ٥١١ وسياقه."
+            },
+            {
+              "word": "فَأَنْسَلُّ انْسِلَالًا",
+              "meaning": "فأخرج في خفاء وتدرّج.",
+              "source": "ابن حجر، فتح الباري، ص ٥٨٧، في شرح الحديث ٥١١ وسياقه."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥١١",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 511"
+          },
+          "en": {
+            "narrator": "`Aisha",
+            "text": "The things which annul the prayers were mentioned before me. They said, \"Prayer is annulled by a dog, a donkey and a woman (if they pass in front of the praying people).\" I said, \"You have made us (i.e. women) dogs. I saw the Prophet (ﷺ) praying while I used to lie in my bed between him and the Qibla. Whenever I was in need of something, I would slip away. for I disliked to face him",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
