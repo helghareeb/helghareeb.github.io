@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 513,
+      "last": 515,
       "hadith": [
         {
           "n": 349,
@@ -22140,6 +22140,89 @@
           "en": {
             "narrator": "`Aisha",
             "text": "the wife of the Prophet, \"I used to sleep in front of Allah's Messenger (ﷺ) with my legs opposite his Qibla (facing him); and whenever he prostrated, he pushed my feet and I withdrew them and whenever he stood, I stretched them.\" `Aisha added, \"In those days there were no lamps in the houses",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 514,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "حَدَّثَنَا عُمَرُ بْنُ حَفْصٍ، قَالَ حَدَّثَنَا أَبِي قَالَ، حَدَّثَنَا الأَعْمَشُ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ، عَنِ الأَسْوَدِ، عَنْ عَائِشَةَ،. قَالَ الأَعْمَشُ وَحَدَّثَنِي مُسْلِمٌ،",
+          "matn": "عَنْ مَسْرُوقٍ، عَنْ عَائِشَةَ، ذُكِرَ عِنْدَهَا مَا يَقْطَعُ الصَّلاَةَ الْكَلْبُ وَالْحِمَارُ وَالْمَرْأَةُ فَقَالَتْ شَبَّهْتُمُونَا بِالْحُمُرِ وَالْكِلاَبِ، وَاللَّهِ لَقَدْ رَأَيْتُ النَّبِيَّ ﷺ يُصَلِّي، وَإِنِّي عَلَى السَّرِيرِ ـ بَيْنَهُ وَبَيْنَ الْقِبْلَةِ ـ مُضْطَجِعَةً فَتَبْدُو لِي الْحَاجَةُ، فَأَكْرَهُ أَنْ أَجْلِسَ فَأُوذِيَ النَّبِيَّ ﷺ فَأَنْسَلُّ مِنْ عِنْدِ رِجْلَيْهِ.",
+          "gharib": [
+            {
+              "word": "فَتَبْدُو لِي الْحَاجَةُ",
+              "meaning": "فتعرض لي حاجة.",
+              "source": "صحيح البخاري، ٥١٤، وفتح الباري، ص ٥٨٩."
+            },
+            {
+              "word": "فَأَنْسَلُّ مِنْ عِنْدِ رِجْلَيْهِ",
+              "meaning": "فأخرج في خفاء من جهة رجليه.",
+              "source": "صحيح البخاري، ٥١٤، وفتح الباري، ص ٥٨٩."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥١٤",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 514"
+          },
+          "en": {
+            "narrator": "`Aisha",
+            "text": "The things which annul prayer were mentioned before me (and those were): a dog, a donkey and a woman. I said, \"You have compared us (women) to donkeys and dogs. By Allah! I saw the Prophet (ﷺ) praying while I used to lie in (my) bed between him and the Qibla. Whenever I was in need of something, I disliked to sit and trouble the Prophet. So, I would slip away by the side of his feet",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 515,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا إِسْحَاقُ، قَالَ أَخْبَرَنَا يَعْقُوبُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنِي ابْنُ أَخِي ابْنِ شِهَابٍ، أَنَّهُ سَأَلَ عَمَّهُ عَنِ الصَّلاَةِ، يَقْطَعُهَا شَىْءٌ فَقَالَ لاَ يَقْطَعُهَا شَىْءٌ، أَخْبَرَنِي عُرْوَةُ بْنُ الزُّبَيْرِ أَنَّ عَائِشَةَ زَوْجَ النَّبِيِّ ﷺ قَالَتْ لَقَدْ كَانَ رَسُولُ اللَّهِ ﷺ يَقُومُ فَيُصَلِّي مِنَ اللَّيْلِ، وَإِنِّي لَمُعْتَرِضَةٌ بَيْنَهُ وَبَيْنَ الْقِبْلَةِ عَلَى فِرَاشِ أَهْلِهِ.",
+          "gharib": [
+            {
+              "word": "لَمُعْتَرِضَةٌ",
+              "meaning": "لممتدّةٌ بعرض الفراش أمامه.",
+              "source": "صحيح البخاري، ٥١٥، وفتح الباري، ص ٥٩٠."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥١٥",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 515"
+          },
+          "en": {
+            "narrator": "`Aisha",
+            "text": "(the wife of the Prophet) Allah's Messenger (ﷺ) used to get up at night and pray while I used to lie across between him and the Qibla on his family's bed",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
