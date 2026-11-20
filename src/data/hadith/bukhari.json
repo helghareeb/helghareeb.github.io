@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 507,
+      "last": 508,
       "hadith": [
         {
           "n": 349,
@@ -21891,6 +21891,45 @@
           "en": {
             "narrator": "Nafi`",
             "text": "\"The Prophet (ﷺ) used to make his she-camel sit across and he would pray facing it (as a Sutra).\" I asked, \"What would the Prophet (ﷺ) do if the she-camel was provoked and moved?\" He said, \"He would take its camel-saddle and put it in front of him and pray facing its back part (as a Sutra). And Ibn `Umar used to do the same.\" (This indicates that one should not pray except behind a Sutra)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 508,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا عُثْمَانُ بْنُ أَبِي شَيْبَةَ، قَالَ حَدَّثَنَا جَرِيرٌ، عَنْ مَنْصُورٍ، عَنْ إِبْرَاهِيمَ، عَنِ الأَسْوَدِ، عَنْ عَائِشَةَ، قَالَتْ أَعَدَلْتُمُونَا بِالْكَلْبِ وَالْحِمَارِ لَقَدْ رَأَيْتُنِي مُضْطَجِعَةً عَلَى السَّرِيرِ، فَيَجِيءُ النَّبِيُّ ﷺ فَيَتَوَسَّطُ السَّرِيرَ فَيُصَلِّي، فَأَكْرَهُ أَنْ أُسَنِّحَهُ فَأَنْسَلُّ مِنْ قِبَلِ رِجْلَىِ السَّرِيرِ حَتَّى أَنْسَلَّ مِنْ لِحَافِي.",
+          "gharib": [
+            {
+              "word": "أَنْسَلُّ",
+              "meaning": "أَخْرُجُ في خُفْيَةٍ أو بِرِفْقٍ.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٨١."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٠٨",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 508"
+          },
+          "en": {
+            "narrator": "`Aisha",
+            "text": "Do you make us (women) equal to dogs and donkeys? While I used to lie in my bed, the Prophet (ﷺ) would come and pray facing the middle of the bed. I used to consider it not good to stand in front of him in his prayers. So I used to slip away slowly and quietly from the foot of the bed till I got out of my guilt",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
