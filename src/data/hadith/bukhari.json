@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 568,
+      "last": 569,
       "hadith": [
         {
           "n": 521,
@@ -24439,6 +24439,50 @@
           "en": {
             "narrator": "Abu Barza",
             "text": "Allah's Messenger (ﷺ) disliked to sleep before the `Isha' prayer and to talk after it",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 569,
+          "bab": {
+            "ar": "باب النوم قبل العشاء لمن غلب"
+          },
+          "isnad": "حَدَّثَنَا أَيُّوبُ بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنِي أَبُو بَكْرٍ، عَنْ سُلَيْمَانَ، قَالَ صَالِحُ بْنُ كَيْسَانَ أَخْبَرَنِي ابْنُ شِهَابٍ، عَنْ عُرْوَةَ، أَنَّ عَائِشَةَ، قَالَتْ",
+          "matn": "أَعْتَمَ رَسُولُ اللَّهِ ﷺ بِالْعِشَاءِ حَتَّى نَادَاهُ عُمَرُ الصَّلاَةَ، نَامَ النِّسَاءُ وَالصِّبْيَانُ. فَخَرَجَ فَقَالَ  مَا يَنْتَظِرُهَا أَحَدٌ مِنْ أَهْلِ الأَرْضِ غَيْرُكُمْ . قَالَ وَلاَ يُصَلَّى يَوْمَئِذٍ إِلاَّ بِالْمَدِينَةِ، وَكَانُوا يُصَلُّونَ فِيمَا بَيْنَ أَنْ يَغِيبَ الشَّفَقُ إِلَى ثُلُثِ اللَّيْلِ الأَوَّلِ.",
+          "gharib": [
+            {
+              "word": "أَعْتَمَ",
+              "meaning": "أخّر صلاة العشاء إلى العتمة.",
+              "source": "فتح الباري ٢/٤٩–٥٠"
+            },
+            {
+              "word": "يَغِيبَ الشَّفَقُ",
+              "meaning": "يزول الضوء الباقي في الأفق بعد غروب الشمس.",
+              "source": "فتح الباري ٢/٤٩–٥٠"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٦٩",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 569"
+          },
+          "en": {
+            "narrator": "Ibn Shihab from `Urwa",
+            "text": "`Aisha said, \"Once Allah's Messenger (ﷺ) delayed the `Isha' prayer till `Umar reminded him by saying, \"The prayer!\" The women and children have slept. Then the Prophet (ﷺ) came out and said, 'None amongst the dwellers of the earth has been waiting for it (the prayer) except you.\" `Urwa said, \"Nowhere except in Medina the prayer used to be offered (in those days).\" He further said, \"The Prophet (ﷺ) used to offer the `Isha' prayer in the period between the disappearance of the twilight and the end of the first third of the night",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
