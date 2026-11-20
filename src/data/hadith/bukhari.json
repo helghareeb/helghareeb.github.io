@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 535,
+      "last": 537,
       "hadith": [
         {
           "n": 521,
@@ -23052,6 +23052,94 @@
           "en": {
             "narrator": "Abu Dhar",
             "text": "The Mu'adh-dhin (call-maker) of the Prophet (ﷺ) pronounced the Adhan (call) for the Zuhr prayer but the Prophet said, \"Let it be cooler, let it be cooler.\" Or said, 'Wait, wait, because the severity of heat is from the raging of the Hell-fire. In severe hot weather, pray when it becomes (a bit) cooler and the shadows of hillocks appear",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 536,
+          "bab": {
+            "ar": "باب الإبراد بالظهر في شدة الحر"
+          },
+          "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَفِظْنَاهُ مِنَ الزُّهْرِيِّ عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ ﷺ قَالَ",
+          "matn": "إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا بِالصَّلاَةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ .  وَاشْتَكَتِ النَّارُ إِلَى رَبِّهَا فَقَالَتْ يَا رَبِّ أَكَلَ بَعْضِي بَعْضًا. فَأَذِنَ لَهَا بِنَفَسَيْنِ نَفَسٍ فِي الشِّتَاءِ، وَنَفَسٍ فِي الصَّيْفِ، فَهُوَ أَشَدُّ مَا تَجِدُونَ مِنَ الْحَرِّ، وَأَشَدُّ مَا تَجِدُونَ مِنَ الزَّمْهَرِيرِ .",
+          "gharib": [
+            {
+              "word": "فَيْحِ",
+              "meaning": "سعة انتشارها وتنفّسها، وهو كناية عن شدة اشتعالها.",
+              "source": "فتح الباري ٢/١٧"
+            },
+            {
+              "word": "الزَّمْهَرِيرِ",
+              "meaning": "شدة البرد.",
+              "source": "فتح الباري ٢/١٩"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣٦",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 536"
+          },
+          "en": {
+            "narrator": "Abu Huraira",
+            "text": "The Prophet (ﷺ) said, \"In very hot weather delay the Zuhr prayer till it becomes (a bit) cooler because the severity of heat is from the raging of the Hell-fire. The Hell-fire of Hell complained to its Lord saying: O Lord! My parts are eating (destroying) one another. So Allah allowed it to take two breaths, one in the winter and the other in the summer. The breath in the summer is at the time when you feel the severest heat and the breath in the winter is at the time when you feel the severest cold",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 537,
+          "bab": {
+            "ar": "باب الإبراد بالظهر في شدة الحر"
+          },
+          "isnad": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا سُفْيَانُ، قَالَ حَفِظْنَاهُ مِنَ الزُّهْرِيِّ عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ، عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ ﷺ قَالَ",
+          "matn": "إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا بِالصَّلاَةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ .  وَاشْتَكَتِ النَّارُ إِلَى رَبِّهَا فَقَالَتْ يَا رَبِّ أَكَلَ بَعْضِي بَعْضًا. فَأَذِنَ لَهَا بِنَفَسَيْنِ نَفَسٍ فِي الشِّتَاءِ، وَنَفَسٍ فِي الصَّيْفِ، فَهُوَ أَشَدُّ مَا تَجِدُونَ مِنَ الْحَرِّ، وَأَشَدُّ مَا تَجِدُونَ مِنَ الزَّمْهَرِيرِ .",
+          "gharib": [
+            {
+              "word": "فَيْحِ",
+              "meaning": "سعة انتشارها وتنفّسها، وهو كناية عن شدة اشتعالها.",
+              "source": "فتح الباري ٢/١٧"
+            },
+            {
+              "word": "الزَّمْهَرِيرِ",
+              "meaning": "شدة البرد.",
+              "source": "فتح الباري ٢/١٩"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣٧",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 537"
+          },
+          "en": {
+            "narrator": "Abu Huraira",
+            "text": "The Prophet (ﷺ) said, \"In very hot weather delay the Zuhr prayer till it becomes (a bit) cooler because the severity of heat is from the raging of the Hell-fire. The Hell-fire of Hell complained to its Lord saying: O Lord! My parts are eating (destroying) one another. So Allah allowed it to take two breaths, one in the winter and the other in the summer. The breath in the summer is at the time when you feel the severest heat and the breath in the winter is at the time when you feel the severest cold",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
