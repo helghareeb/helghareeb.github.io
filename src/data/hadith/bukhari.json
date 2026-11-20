@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 551,
+      "last": 552,
       "hadith": [
         {
           "n": 521,
@@ -23711,6 +23711,45 @@
           "en": {
             "narrator": "Anas bin Malik",
             "text": "We used to pray the `Asr and after that if one of us went to Quba' he would arrive there while the sun was still high",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 552,
+          "bab": {
+            "ar": "باب إثم من فاتته العصر"
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ",
+          "matn": "الَّذِي تَفُوتُهُ صَلاَةُ الْعَصْرِ كَأَنَّمَا وُتِرَ أَهْلَهُ وَمَالَهُ .",
+          "gharib": [
+            {
+              "word": "وُتِرَ",
+              "meaning": "أُصيب بأهله وماله، وقيل سُلِبَهما.",
+              "source": "فتح الباري ٢/٣٠"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥٢",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 552"
+          },
+          "en": {
+            "narrator": "Ibn `Umar",
+            "text": "Allah's Messenger (ﷺ) said, \"Whoever misses the `Asr prayer (intentionally) then it is as if he lost his family and property",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
