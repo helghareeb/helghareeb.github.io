@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 538,
+      "last": 539,
       "hadith": [
         {
           "n": 521,
@@ -23179,6 +23179,45 @@
           "en": {
             "narrator": "Abu Sa`id",
             "text": "that Allah's Messenger (ﷺ) said, \"Pray Zuhr prayer when it becomes (a bit) cooler as the severity of heat is from the raging of the Hell-fire",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 539,
+          "bab": {
+            "ar": "باب الإبراد بالظهر في السفر"
+          },
+          "isnad": "حَدَّثَنَا آدَمُ بْنُ أَبِي إِيَاسٍ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا مُهَاجِرٌ أَبُو الْحَسَنِ، مَوْلًى لِبَنِي تَيْمِ اللَّهِ قَالَ سَمِعْتُ زَيْدَ بْنَ وَهْبٍ، عَنْ أَبِي ذَرٍّ الْغِفَارِيِّ، قَالَ كُنَّا مَعَ النَّبِيِّ ﷺ فِي سَفَرٍ، فَأَرَادَ الْمُؤَذِّنُ أَنْ يُؤَذِّنَ لِلظُّهْرِ فَقَالَ النَّبِيُّ ﷺ",
+          "matn": "أَبْرِدْ . ثُمَّ أَرَادَ أَنْ يُؤَذِّنَ فَقَالَ لَهُ  أَبْرِدْ . حَتَّى رَأَيْنَا فَىْءَ التُّلُولِ، فَقَالَ النَّبِيُّ ﷺ  إِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ، فَإِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا بِالصَّلاَةِ . وَقَالَ ابْنُ عَبَّاسٍ تَتَفَيَّأُ تَتَمَيَّلُ.",
+          "gharib": [
+            {
+              "word": "فَىْءَ التُّلُولِ",
+              "meaning": "ظلَّ التلال حين يميل من جهة إلى أخرى.",
+              "source": "فتح الباري ٢/٢١"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣٩",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 539"
+          },
+          "en": {
+            "narrator": "Abu Dhar Al-Ghifar",
+            "text": "We were with the Prophet (ﷺ) on a journey and the Mu'adh-dhin (call maker for the prayer) wanted to pronounce the Adhan (call) for the Zuhr prayer. The Prophet (ﷺ) said, 'Let it become cooler.\" He again (after a while) wanted to pronounce the Adhan but the Prophet (ﷺ) said to him, \"Let it become cooler till we see the shadows of hillocks.\" The Prophet (ﷺ) added, \"The severity of heat is from the raging of the Hell-fire, and in very hot weather pray (Zuhr) when it becomes cooler",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {

@@ -83,6 +83,18 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
     {h.quran?.length && <p class="content-card__meta">{h.quran.map((q,i) => <>{i ? '؛ ' : ''}<span>{q.reference}</span></>)} — النص القرآني بالرسم العثماني من <a href="https://qurancomplex.gov.sa/quran-dev/" target="_blank" rel="noopener noreferrer">مجمع الملك فهد لطباعة المصحف الشريف</a>.</p>}
   </div>
 
+  {full && h.glossQuran && (
+    <div class="hadith-card__text" data-gloss-quran dir="rtl" lang="ar">
+      <p>
+        <HadithText text={h.glossQuran.uthmani} gharib={[]}
+          quran={[{ ...h.glossQuran, original: h.glossQuran.uthmani }]} />
+      </p>
+      <p class="content-card__meta">
+        <span>{h.glossQuran.reference}</span> · <a href={h.glossQuran.sourceUrl} target="_blank" rel="noopener noreferrer">مجمع الملك فهد لطباعة المصحف الشريف</a>
+      </p>
+    </div>
+  )}
+
   {h.gharib.length > 0 && (
     <details class="hadith-card__gharib" open={full}>
       <summary>{t.gharib} ({num(lang, h.gharib.length)})</summary>

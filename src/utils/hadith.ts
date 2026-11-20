@@ -30,11 +30,12 @@ export type Hadith = {
   projectTranslation?: ProjectTranslation;
   quran?: QuranQuote[];
   chapterQuran?: QuranCitation;
+  glossQuran?: QuranCitation;
 };
 export type Kitab = { slug: string; ar: string; en: string; first: number; last: number; hadith: Hadith[] };
 export type Book = { book: { id: string; ar: string; en: string }; kutub: Kitab[] };
 
-type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[]; quran?: QuranQuote[]; chapterQuran?: QuranCitation; projectTranslation?: ProjectTranslation } | string>;
+type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[]; quran?: QuranQuote[]; chapterQuran?: QuranCitation; glossQuran?: QuranCitation; projectTranslation?: ProjectTranslation } | string>;
 
 /** Merge the hand-written commentary and benefits (src/data/hadith/notes/<book>.json) into the records. */
 function withNotes(book: Book, notes: Notes): Book {
@@ -47,6 +48,7 @@ function withNotes(book: Book, notes: Notes): Book {
       h.notesStatus = n.status;
       if (n.quran) h.quran = n.quran;
       if (n.chapterQuran) h.chapterQuran = n.chapterQuran;
+      if (n.glossQuran) h.glossQuran = n.glossQuran;
       if (n.projectTranslation) h.projectTranslation = n.projectTranslation;
     }
   return book;
