@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 545,
+      "last": 546,
       "hadith": [
         {
           "n": 521,
@@ -23462,6 +23462,45 @@
           "en": {
             "narrator": "`Aisha",
             "text": "Allah's Messenger (ﷺ) used to offer the `Asr prayers at a time when the sunshine was still inside my chamber and no shadow had yet appeared in it",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 546,
+          "bab": {
+            "ar": "باب وقت العصر"
+          },
+          "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ أَخْبَرَنَا ابْنُ عُيَيْنَةَ، عَنِ الزُّهْرِيِّ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ،",
+          "matn": "قَالَتْ كَانَ النَّبِيُّ ﷺ يُصَلِّي صَلاَةَ الْعَصْرِ وَالشَّمْسُ طَالِعَةٌ فِي حُجْرَتِي لَمْ يَظْهَرِ الْفَىْءُ بَعْدُ. وَقَالَ مَالِكٌ وَيَحْيَى بْنُ سَعِيدٍ وَشُعَيْبٌ وَابْنُ أَبِي حَفْصَةَ وَالشَّمْسُ قَبْلَ أَنْ تَظْهَرَ.",
+          "gharib": [
+            {
+              "word": "لَمْ يَظْهَرِ الْفَىْءُ بَعْدُ",
+              "meaning": "لم ينبسط الظل بعد في الموضع الذي كان فيه ضوء الشمس.",
+              "source": "فتح الباري ٢/٢٥"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٤٦",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 546"
+          },
+          "en": {
+            "narrator": "Aisha",
+            "text": "The Prophet (ﷺ) used to pray the `Asr prayers at a time when the sunshine was still inside my chamber and no shadow had yet appeared in it",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
