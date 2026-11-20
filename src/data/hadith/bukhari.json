@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 528,
+      "last": 530,
       "hadith": [
         {
           "n": 521,
@@ -22779,6 +22779,84 @@
           "en": {
             "narrator": "Abu Huraira",
             "text": "I heard Allah's Messenger (ﷺ) saying, \"If there was a river at the door of anyone of you and he took a bath in it five times a day would you notice any dirt on him?\" They said, \"Not a trace of dirt would be left.\" The Prophet (ﷺ) added, \"That is the example of the five prayers with which Allah blots out (annuls) evil deeds",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 529,
+          "bab": {
+            "ar": "باب تضييع الصلاة عن وقتها"
+          },
+          "isnad": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ، قَالَ حَدَّثَنَا مَهْدِيٌّ، عَنْ غَيْلاَنَ، عَنْ أَنَسٍ،",
+          "matn": "قَالَ مَا أَعْرِفُ شَيْئًا مِمَّا كَانَ عَلَى عَهْدِ النَّبِيِّ ﷺ. قِيلَ الصَّلاَةُ. قَالَ أَلَيْسَ ضَيَّعْتُمْ مَا ضَيَّعْتُمْ فِيهَا.",
+          "gharib": [
+            {
+              "word": "ضَيَّعْتُمْ",
+              "meaning": "فرّطتم في الصلاة، وترجم البخاري هنا بتضييعها عن وقتها.",
+              "source": "فتح الباري ٢/١٣–١٤"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٢٩",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 529"
+          },
+          "en": {
+            "narrator": "Ghailan",
+            "text": "Anas said, \"I do not find (now-a-days) things as they were (practiced) at the time of the Prophet.\" Somebody said \"The prayer (is as it was.)\" Anas said, \"Have you not done in the prayer what you have done?",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 530,
+          "bab": {
+            "ar": "باب تضييع الصلاة عن وقتها"
+          },
+          "isnad": "حَدَّثَنَا عَمْرُو بْنُ زُرَارَةَ، قَالَ أَخْبَرَنَا عَبْدُ الْوَاحِدِ بْنُ وَاصِلٍ أَبُو عُبَيْدَةَ الْحَدَّادُ، عَنْ عُثْمَانَ بْنِ أَبِي رَوَّادٍ، أَخِي عَبْدِ الْعَزِيزِ قَالَ سَمِعْتُ الزُّهْرِيَّ، يَقُولُ دَخَلْتُ عَلَى أَنَسِ بْنِ مَالِكٍ",
+          "matn": "بِدِمَشْقَ وَهُوَ يَبْكِي فَقُلْتُ مَا يُبْكِيكَ فَقَالَ لاَ أَعْرِفُ شَيْئًا مِمَّا أَدْرَكْتُ إِلاَّ هَذِهِ الصَّلاَةَ، وَهَذِهِ الصَّلاَةُ قَدْ ضُيِّعَتْ. وَقَالَ بَكْرٌ حَدَّثَنَا مُحَمَّدُ بْنُ بَكْرٍ الْبُرْسَانِيُّ أَخْبَرَنَا عُثْمَانُ بْنُ أَبِي رَوَّادٍ نَحْوَهُ.",
+          "gharib": [
+            {
+              "word": "ضُيِّعَتْ",
+              "meaning": "وقع التفريط في إقامتها، وناقش ابن حجر تأخيرها عن وقتها.",
+              "source": "فتح الباري ٢/١٤"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣٠",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 530"
+          },
+          "en": {
+            "narrator": "",
+            "text": "Narrated Az-Zuhri that he visited Anas bin Malik at Damascus and found him weeping and asked him why he was weeping. He replied, \"I do not know anything which I used to know during the life-time of Allah's Apostle except this prayer which is being lost (not offered as it should be)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
