@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 506,
+      "last": 507,
       "hadith": [
         {
           "n": 349,
@@ -21852,6 +21852,45 @@
           "en": {
             "narrator": "Nafi'",
             "text": "Whenever 'Abdullah entered the Ka'bah, he used to go ahead leaving the door of the Ka'bah behind him. He would proceed on till the remaining distance between him and the opposite wall was about three cubits. Then he would offer prayer there where the Prophet (ﷺ) had offered Salat, as Bilal informed me. Ibn 'Umar said, \"It does not matter for any of us to offer prayers at any place inside the Ka'bah",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 507,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "",
+          "matn": "حَدَّثَنَا مُحَمَّدُ بْنُ أَبِي بَكْرٍ الْمُقَدَّمِيُّ، حَدَّثَنَا مُعْتَمِرٌ، عَنْ عُبَيْدِ اللَّهِ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، عَنِ النَّبِيِّ ﷺ أَنَّهُ كَانَ يُعَرِّضُ رَاحِلَتَهُ فَيُصَلِّي إِلَيْهَا. قُلْتُ أَفَرَأَيْتَ إِذَا هَبَّتِ الرِّكَابُ. قَالَ كَانَ يَأْخُذُ هَذَا الرَّحْلَ فَيُعَدِّلُهُ فَيُصَلِّي إِلَى آخِرَتِهِ ـ أَوْ قَالَ مُؤَخَّرِهِ ـ وَكَانَ ابْنُ عُمَرَ ـ رضى الله عنه ـ يَفْعَلُهُ.",
+          "gharib": [
+            {
+              "word": "يُعَرِّضُ",
+              "meaning": "يَجْعَلُ الرَّاحِلَةَ عَرْضًا.",
+              "source": "ابن حجر، فتح الباري، ط السلفية، ١/٥٨٠."
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥٠٧",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 507"
+          },
+          "en": {
+            "narrator": "Nafi`",
+            "text": "\"The Prophet (ﷺ) used to make his she-camel sit across and he would pray facing it (as a Sutra).\" I asked, \"What would the Prophet (ﷺ) do if the she-camel was provoked and moved?\" He said, \"He would take its camel-saddle and put it in front of him and pray facing its back part (as a Sutra). And Ibn `Umar used to do the same.\" (This indicates that one should not pray except behind a Sutra)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
