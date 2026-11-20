@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 555,
+      "last": 556,
       "hadith": [
         {
           "n": 521,
@@ -23867,6 +23867,45 @@
           "en": {
             "narrator": "Abu Huraira",
             "text": "Allah's Messenger (ﷺ) said, \"Angels come to you in succession by night and day and all of them get together at the time of the Fajr and `Asr prayers. Those who have passed the night with you (or stayed with you) ascend (to the Heaven) and Allah asks them, though He knows everything about you, well, \"In what state did you leave my slaves?\" The angels reply: \"When we left them they were praying and when we reached them, they were praying",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 556,
+          "bab": {
+            "ar": "باب من أدرك ركعة من العصر قبل الغروب"
+          },
+          "isnad": "حَدَّثَنَا أَبُو نُعَيْمٍ، قَالَ حَدَّثَنَا شَيْبَانُ، عَنْ يَحْيَى، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ",
+          "matn": "إِذَا أَدْرَكَ أَحَدُكُمْ سَجْدَةً مِنْ صَلاَةِ الْعَصْرِ قَبْلَ أَنْ تَغْرُبَ الشَّمْسُ فَلْيُتِمَّ صَلاَتَهُ، وَإِذَا أَدْرَكَ سَجْدَةً مِنْ صَلاَةِ الصُّبْحِ قَبْلَ أَنْ تَطْلُعَ الشَّمْسُ فَلْيُتِمَّ صَلاَتَهُ .",
+          "gharib": [
+            {
+              "word": "سَجْدَةً",
+              "meaning": "المراد ركعة بركوعها وسجودها، كما فسّرها الخطابي.",
+              "source": "فتح الباري ٢/٣٨"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥٦",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 556"
+          },
+          "en": {
+            "narrator": "Abu Huraira",
+            "text": "Allah's Messenger (ﷺ) said, \"If anyone of you can get one rak`a of the `Asr prayer before sunset, he should complete his prayer. If any of you can get one rak`a of the Fajr prayer before sunrise, he should complete his prayer",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
