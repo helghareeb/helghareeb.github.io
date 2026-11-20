@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 549,
+      "last": 550,
       "hadith": [
         {
           "n": 521,
@@ -23628,6 +23628,50 @@
           "en": {
             "narrator": "Abu Bakr bin `Uthman bin Sahl bin Hunaif",
             "text": "that he heard Abu Umama saying: We prayed the Zuhr prayer with `Umar bin `Abdul `Aziz and then went to Anas bin Malik and found him offering the `Asr prayer. I asked him, \"O uncle! Which prayer have you offered?\" He said 'The `Asr and this is (the time of) the prayer of Allah's Apostle which we used to pray with him",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 550,
+          "bab": {
+            "ar": "باب وقت العصر"
+          },
+          "isnad": "حَدَّثَنَا أَبُو الْيَمَانِ، قَالَ أَخْبَرَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ حَدَّثَنِي أَنَسُ بْنُ مَالِكٍ،",
+          "matn": "قَالَ كَانَ رَسُولُ اللَّهِ ﷺ يُصَلِّي الْعَصْرَ وَالشَّمْسُ مُرْتَفِعَةٌ حَيَّةٌ، فَيَذْهَبُ الذَّاهِبُ إِلَى الْعَوَالِي فَيَأْتِيهِمْ وَالشَّمْسُ مُرْتَفِعَةٌ، وَبَعْضُ الْعَوَالِي مِنَ الْمَدِينَةِ عَلَى أَرْبَعَةِ أَمْيَالٍ أَوْ نَحْوِهِ.",
+          "gharib": [
+            {
+              "word": "حَيَّةٌ",
+              "meaning": "المراد بقاء حرِّ الشمس وضوئها.",
+              "source": "فتح الباري ٢/٢٨"
+            },
+            {
+              "word": "الْعَوَالِي",
+              "meaning": "القرى المجتمعة حول المدينة من جهة نجدها.",
+              "source": "فتح الباري ٢/٢٩"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥٠",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 550"
+          },
+          "en": {
+            "narrator": "Anas bin Malik",
+            "text": "Allah's Messenger (ﷺ) used to offer the `Asr prayer at a time when the sun was still hot and high and if a person went to Al-`Awali (a place) of Medina, he would reach there when the sun was still high. Some of Al-`Awali of Medina were about four miles or so from the town",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
