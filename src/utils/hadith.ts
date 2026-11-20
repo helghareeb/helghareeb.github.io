@@ -11,7 +11,8 @@ type Lang = 'ar' | 'en';
 
 export type Gharib = { word: string; meaning: string; source: string };
 type ProjectTranslation = { text: string; source: string; status: 'review' };
-export type QuranQuote = { original: string; uthmani: string; reference: string; sourceUrl: string };
+export type QuranCitation = { uthmani: string; reference: string; sourceUrl: string };
+export type QuranQuote = QuranCitation & { original: string };
 export type Hadith = {
   n: number;
   bab: { ar: string };
@@ -28,11 +29,12 @@ export type Hadith = {
   notesStatus?: 'review' | 'approved';
   projectTranslation?: ProjectTranslation;
   quran?: QuranQuote[];
+  chapterQuran?: QuranCitation;
 };
 export type Kitab = { slug: string; ar: string; en: string; first: number; last: number; hadith: Hadith[] };
 export type Book = { book: { id: string; ar: string; en: string }; kutub: Kitab[] };
 
-type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[]; quran?: QuranQuote[]; projectTranslation?: ProjectTranslation } | string>;
+type Notes = Record<string, { status: 'review' | 'approved'; sharh?: string; source?: string; fawaid?: string[]; quran?: QuranQuote[]; chapterQuran?: QuranCitation; projectTranslation?: ProjectTranslation } | string>;
 
 /** Merge the hand-written commentary and benefits (src/data/hadith/notes/<book>.json) into the records. */
 function withNotes(book: Book, notes: Notes): Book {
@@ -44,6 +46,7 @@ function withNotes(book: Book, notes: Notes): Book {
       if (n.fawaid) h.fawaid = n.fawaid.map((ar) => ({ ar }));
       h.notesStatus = n.status;
       if (n.quran) h.quran = n.quran;
+      if (n.chapterQuran) h.chapterQuran = n.chapterQuran;
       if (n.projectTranslation) h.projectTranslation = n.projectTranslation;
     }
   return book;

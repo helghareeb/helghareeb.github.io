@@ -24,6 +24,18 @@ const mail = `mailto:helghareeb@gmail.com?subject=${encodeURIComponent(`${book.a
 
   {h.bab.ar && <p class="hadith-card__bab" dir="rtl">{h.bab.ar}</p>}
 
+  {h.chapterQuran && (
+    <div class="hadith-card__text" data-chapter-quran dir="rtl" lang="ar">
+      <p>
+        <HadithText text={h.chapterQuran.uthmani} gharib={[]}
+          quran={[{ ...h.chapterQuran, original: h.chapterQuran.uthmani }]} />
+      </p>
+      <p class="content-card__meta">
+        <span>{h.chapterQuran.reference}</span> · <a href={h.chapterQuran.sourceUrl} target="_blank" rel="noopener noreferrer">مجمع الملك فهد لطباعة المصحف الشريف</a>
+      </p>
+    </div>
+  )}
+
   <div class="hadith-card__audio">
     {h.audio.id ? (
       <div class="hadith-audio" data-audio-id={h.audio.player ?? h.audio.id} data-player-title={`${book[lang]} · ${t.hadith(h.n)}`}>
