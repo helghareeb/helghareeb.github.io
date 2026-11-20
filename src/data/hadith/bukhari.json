@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 557,
+      "last": 558,
       "hadith": [
         {
           "n": 521,
@@ -23950,6 +23950,50 @@
           "en": {
             "narrator": "Salim bin `Abdullah",
             "text": "My father said, \"I heard Allah's Messenger (ﷺ) saying, 'The period of your stay as compared to the previous nations is like the period equal to the time between the `Asr prayer and sunset. The people of the Torah were given the Torah and they acted (upon it) till midday then they were exhausted and were given one Qirat (of gold) each. And then the people of the Gospel were given the Gospel and they acted (upon it) till the `Asr prayer then they were exhausted and were given one Qirat each. And then we were given the Qur'an and we acted (upon it) till sunset and we were given two Qirats each. On that the people of both the scriptures said, 'O our Lord! You have given them two Qirats and given us one Qirat, though we have worked more than they.' Allah said, 'Have I usurped some of your right?' They said, 'No.' Allah said: \"That is my blessing I bestow upon whomsoever I wish",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 558,
+          "bab": {
+            "ar": "باب من أدرك ركعة من العصر قبل الغروب"
+          },
+          "isnad": "حَدَّثَنَا أَبُو كُرَيْبٍ، قَالَ حَدَّثَنَا أَبُو أُسَامَةَ، عَنْ بُرَيْدٍ، عَنْ أَبِي بُرْدَةَ، عَنْ أَبِي مُوسَى، عَنِ النَّبِيِّ ﷺ",
+          "matn": "مَثَلُ الْمُسْلِمِينَ وَالْيَهُودِ وَالنَّصَارَى كَمَثَلِ رَجُلٍ اسْتَأْجَرَ قَوْمًا يَعْمَلُونَ لَهُ عَمَلاً إِلَى اللَّيْلِ، فَعَمِلُوا إِلَى نِصْفِ النَّهَارِ، فَقَالُوا لاَ حَاجَةَ لَنَا إِلَى أَجْرِكَ، فَاسْتَأْجَرَ آخَرِينَ فَقَالَ أَكْمِلُوا بَقِيَّةَ يَوْمِكُمْ، وَلَكُمُ الَّذِي شَرَطْتُ، فَعَمِلُوا حَتَّى إِذَا كَانَ حِينَ صَلاَةِ الْعَصْرِ قَالُوا لَكَ مَا عَمِلْنَا. فَاسْتَأْجَرَ قَوْمًا فَعَمِلُوا بَقِيَّةَ يَوْمِهِمْ حَتَّى غَابَتِ الشَّمْسُ، وَاسْتَكْمَلُوا أَجْرَ الْفَرِيقَيْنِ .",
+          "gharib": [
+            {
+              "word": "أَكْمِلُوا",
+              "meaning": "أَتِمّوا بقيّة العمل. وهو لفظ الأكثر كما ذكر ابن حجر.",
+              "source": "فتح الباري ٢/٣٨–٤٠"
+            },
+            {
+              "word": "شَرَطْتُ",
+              "meaning": "عيّنتُ لكم من الأجر في الاتفاق.",
+              "source": "فتح الباري ٢/٣٨–٤٠"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥٨",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 558"
+          },
+          "en": {
+            "narrator": "Abu Musa",
+            "text": "The Prophet (ﷺ) said, \"The example of Muslims, Jews and Christians is like the example of a man who employed laborers to work for him from morning till night. They worked till midday and they said, 'We are not in need of your reward.' So the man employed another batch and said to them, 'Complete the rest of the day and yours will be the wages I had fixed (for the first batch). They worked until the time of the `Asr prayer and said, 'Whatever we have done is for you.' He employed another batch. They worked for the rest of the day till sunset, and they received the wages of the two former batches",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
