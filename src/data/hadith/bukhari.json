@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 558,
+      "last": 559,
       "hadith": [
         {
           "n": 521,
@@ -23994,6 +23994,45 @@
           "en": {
             "narrator": "Abu Musa",
             "text": "The Prophet (ﷺ) said, \"The example of Muslims, Jews and Christians is like the example of a man who employed laborers to work for him from morning till night. They worked till midday and they said, 'We are not in need of your reward.' So the man employed another batch and said to them, 'Complete the rest of the day and yours will be the wages I had fixed (for the first batch). They worked until the time of the `Asr prayer and said, 'Whatever we have done is for you.' He employed another batch. They worked for the rest of the day till sunset, and they received the wages of the two former batches",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 559,
+          "bab": {
+            "ar": "باب وقت المغرب، وقال عطاء: يجمع المريض بين المغرب والعشاء"
+          },
+          "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ مِهْرَانَ، قَالَ حَدَّثَنَا الْوَلِيدُ، قَالَ حَدَّثَنَا الأَوْزَاعِيُّ، قَالَ حَدَّثَنَا أَبُو النَّجَاشِيِّ، صُهَيْبٌ مَوْلَى رَافِعِ بْنِ خَدِيجٍ قَالَ سَمِعْتُ رَافِعَ بْنَ خَدِيجٍ، يَقُولُ",
+          "matn": "كُنَّا نُصَلِّي الْمَغْرِبَ مَعَ النَّبِيِّ ﷺ فَيَنْصَرِفُ أَحَدُنَا وَإِنَّهُ لَيُبْصِرُ مَوَاقِعَ نَبْلِهِ.",
+          "gharib": [
+            {
+              "word": "مَوَاقِعَ نَبْلِهِ",
+              "meaning": "المواضع التي تبلغها سهامه عند الرمي.",
+              "source": "فتح الباري ٢/٤١"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥٩",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 559"
+          },
+          "en": {
+            "narrator": "Rafi` bin Khadij",
+            "text": "We used to offer the Maghrib prayer with the Prophet (ﷺ) and after finishing the prayer one of us may go away and could still see as far as the spots where one's arrow might reach when shot by a bow",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
