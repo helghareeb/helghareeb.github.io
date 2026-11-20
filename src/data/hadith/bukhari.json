@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 543,
+      "last": 544,
       "hadith": [
         {
           "n": 521,
@@ -23384,6 +23384,45 @@
           "en": {
             "narrator": "Ibn `Abbas",
             "text": "\"The Prophet (ﷺ) prayed eight rak`at for the Zuhr and `Asr, and seven for the Maghrib and `Isha prayers in Medina.\" Aiyub said, \"Perhaps those were rainy nights.\" Anas said, \"May be",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 544,
+          "bab": {
+            "ar": "باب وقت العصر"
+          },
+          "isnad": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ الْمُنْذِرِ، قَالَ حَدَّثَنَا أَنَسُ بْنُ عِيَاضٍ، عَنْ هِشَامٍ، عَنْ أَبِيهِ، أَنَّ عَائِشَةَ،",
+          "matn": "قَالَتْ كَانَ رَسُولُ اللَّهِ ﷺ يُصَلِّي الْعَصْرَ وَالشَّمْسُ لَمْ تَخْرُجْ مِنْ حُجْرَتِهَا. وَقَالَ أَبُو أُسَامَةَ عَنْ هِشَامٍ مِنْ قَعْرِ حُجْرَتِهَا.",
+          "gharib": [
+            {
+              "word": "مِنْ قَعْرِ حُجْرَتِهَا",
+              "meaning": "من داخل الحجرة، والمراد موضع بقاء ضوء الشمس فيها.",
+              "source": "فتح الباري ٢/٢٥–٢٦"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٤٤",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 544"
+          },
+          "en": {
+            "narrator": "Aisha",
+            "text": "Allah's Messenger (ﷺ) used to offer the `Asr prayer when the sunshine had not disappeared from my chamber",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
