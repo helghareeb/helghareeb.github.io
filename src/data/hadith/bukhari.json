@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 561,
+      "last": 562,
       "hadith": [
         {
           "n": 521,
@@ -24126,6 +24126,50 @@
           "en": {
             "narrator": "Salama",
             "text": "We used to pray the Maghrib prayer with the Prophet (ﷺ) when the sun disappeared from the horizon",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 562,
+          "bab": {
+            "ar": "باب وقت المغرب، وقال عطاء: يجمع المريض بين المغرب والعشاء"
+          },
+          "isnad": "حَدَّثَنَا آدَمُ، قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ حَدَّثَنَا عَمْرُو بْنُ دِينَارٍ، قَالَ سَمِعْتُ جَابِرَ بْنَ زَيْدٍ، عَنِ ابْنِ عَبَّاسٍ، قَالَ",
+          "matn": "صَلَّى النَّبِيُّ ﷺ سَبْعًا جَمِيعًا وَثَمَانِيًا جَمِيعًا.",
+          "gharib": [
+            {
+              "word": "سَبْعًا جَمِيعًا",
+              "meaning": "مجموع ركعات المغرب والعشاء عند الجمع بينهما.",
+              "source": "فتح الباري ٢/٤١ و٤٣"
+            },
+            {
+              "word": "ثَمَانِيًا جَمِيعًا",
+              "meaning": "مجموع ركعات الظهر والعصر عند الجمع بينهما.",
+              "source": "فتح الباري ٢/٤١ و٤٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٦٢",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 562"
+          },
+          "en": {
+            "narrator": "Ibn `Abbas",
+            "text": "The Prophet (ﷺ) prayed seven rak`at together and eight rak`at together",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
