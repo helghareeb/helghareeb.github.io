@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 530,
+      "last": 532,
       "hadith": [
         {
           "n": 521,
@@ -22857,6 +22857,84 @@
           "en": {
             "narrator": "",
             "text": "Narrated Az-Zuhri that he visited Anas bin Malik at Damascus and found him weeping and asked him why he was weeping. He replied, \"I do not know anything which I used to know during the life-time of Allah's Apostle except this prayer which is being lost (not offered as it should be)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 531,
+          "bab": {
+            "ar": "باب المصلي يناجي ربه"
+          },
+          "isnad": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا هِشَامٌ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ،",
+          "matn": "قَالَ قَالَ النَّبِيُّ ﷺ  إِنَّ أَحَدَكُمْ إِذَا صَلَّى يُنَاجِي رَبَّهُ فَلاَ يَتْفِلَنَّ عَنْ يَمِينِهِ، وَلَكِنْ تَحْتَ قَدَمِهِ الْيُسْرَى . وَقَالَ سَعِيدٌ عَنْ قَتَادَةَ لاَ يَتْفِلُ قُدَّامَهُ أَوْ بَيْنَ يَدَيْهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمَيْهِ. وَقَالَ شُعْبَةُ لاَ يَبْزُقُ بَيْنَ يَدَيْهِ وَلاَ عَنْ يَمِينِهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ. وَقَالَ حُمَيْدٌ عَنْ أَنَسٍ عَنِ النَّبِيِّ ﷺ  لاَ يَبْزُقْ فِي الْقِبْلَةِ وَلاَ عَنْ يَمِينِهِ، وَلَكِنْ عَنْ يَسَارِهِ أَوْ تَحْتَ قَدَمِهِ .",
+          "gharib": [
+            {
+              "word": "يَتْفِلَنَّ",
+              "meaning": "يبصقنّ. وجاء في المتابعات التعبير بالبزاق.",
+              "source": "فتح الباري ٢/١٤"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣١",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 531"
+          },
+          "en": {
+            "narrator": "Anas",
+            "text": "The Prophet (ﷺ) said, \"Whenever anyone of you offers his prayer he is speaking in private to his Lord. So he should not spit to his right but under his left foot.\" Qatada said, \"He should not spit in front of him but to his left or under his feet.\" And Shu`ba said, \"He should not spit in front of him, nor to his right but to his left or under his foot.\" Anas said: The Prophet (ﷺ) said, \"He should neither spit in the direction of his Qibla nor to his right but to his left or under his foot",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 532,
+          "bab": {
+            "ar": "باب المصلي يناجي ربه"
+          },
+          "isnad": "حَدَّثَنَا حَفْصُ بْنُ عُمَرَ، قَالَ حَدَّثَنَا يَزِيدُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا قَتَادَةُ، عَنْ أَنَسٍ، عَنِ النَّبِيِّ ﷺ قَالَ",
+          "matn": "اعْتَدِلُوا فِي السُّجُودِ، وَلاَ يَبْسُطْ ذِرَاعَيْهِ كَالْكَلْبِ، وَإِذَا بَزَقَ فَلاَ يَبْزُقَنَّ بَيْنَ يَدَيْهِ وَلاَ عَنْ يَمِينِهِ، فَإِنَّهُ يُنَاجِي رَبَّهُ .",
+          "gharib": [
+            {
+              "word": "اعْتَدِلُوا فِي السُّجُودِ",
+              "meaning": "ائتوا بالسجود على هيئته من غير بسط الذراعين كبسط الكلب.",
+              "source": "فتح الباري ٢/١٥"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣٢",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 532"
+          },
+          "en": {
+            "narrator": "Anas",
+            "text": "The Prophet (ﷺ) said, \"Do the prostration properly and do not put your forearms flat with elbows touching the ground like a dog. And if you want to spit, do not spit in front, nor to the right for the person in prayer is speaking in private to his Lord",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
