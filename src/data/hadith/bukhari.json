@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 532,
+      "last": 534,
       "hadith": [
         {
           "n": 521,
@@ -22935,6 +22935,84 @@
           "en": {
             "narrator": "Anas",
             "text": "The Prophet (ﷺ) said, \"Do the prostration properly and do not put your forearms flat with elbows touching the ground like a dog. And if you want to spit, do not spit in front, nor to the right for the person in prayer is speaking in private to his Lord",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 533,
+          "bab": {
+            "ar": "باب الإبراد بالظهر في شدة الحر"
+          },
+          "isnad": "حَدَّثَنَا أَيُّوبُ بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنَا أَبُو بَكْرٍ، عَنْ سُلَيْمَانَ، قَالَ صَالِحُ بْنُ كَيْسَانَ حَدَّثَنَا الأَعْرَجُ عَبْدُ الرَّحْمَنِ، وَغَيْرُهُ، عَنْ أَبِي هُرَيْرَةَ.وَنَافِعٌ مَوْلَى عَبْدِ اللَّهِ بْنِ عُمَرَ عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، أَنَّهُمَا حَدَّثَاهُ عَنْ رَسُولِ اللَّهِ ﷺ أَنَّهُ قَالَ",
+          "matn": "إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا عَنِ الصَّلاَةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ .",
+          "gharib": [
+            {
+              "word": "فَيْحِ",
+              "meaning": "سعة انتشارها وتنفّسها. قال ابن حجر إن ذلك كناية عن شدة اشتعالها.",
+              "source": "فتح الباري ٢/١٧"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣٣",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 533"
+          },
+          "en": {
+            "narrator": "Abu Huraira and `Abdullah bin `Umar",
+            "text": "Allah's Messenger (ﷺ) said, \"If it is very hot, then pray the Zuhr prayer when it becomes (a bit) cooler, as the severity of the heat is from the raging of the Hell-fire",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 534,
+          "bab": {
+            "ar": "باب الإبراد بالظهر في شدة الحر"
+          },
+          "isnad": "حَدَّثَنَا أَيُّوبُ بْنُ سُلَيْمَانَ، قَالَ حَدَّثَنَا أَبُو بَكْرٍ، عَنْ سُلَيْمَانَ، قَالَ صَالِحُ بْنُ كَيْسَانَ حَدَّثَنَا الأَعْرَجُ عَبْدُ الرَّحْمَنِ، وَغَيْرُهُ، عَنْ أَبِي هُرَيْرَةَ.وَنَافِعٌ مَوْلَى عَبْدِ اللَّهِ بْنِ عُمَرَ عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ، أَنَّهُمَا حَدَّثَاهُ عَنْ رَسُولِ اللَّهِ ﷺ أَنَّهُ قَالَ",
+          "matn": "إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا عَنِ الصَّلاَةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ .",
+          "gharib": [
+            {
+              "word": "فَيْحِ",
+              "meaning": "سعة انتشارها وتنفّسها. قال ابن حجر إن ذلك كناية عن شدة اشتعالها.",
+              "source": "فتح الباري ٢/١٧"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٣٤",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 534"
+          },
+          "en": {
+            "narrator": "Abu Huraira and `Abdullah bin `Umar",
+            "text": "Allah's Messenger (ﷺ) said, \"If it is very hot, then pray the Zuhr prayer when it becomes (a bit) cooler, as the severity of the heat is from the raging of the Hell-fire",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
