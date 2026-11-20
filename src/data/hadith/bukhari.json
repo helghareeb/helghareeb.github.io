@@ -14929,7 +14929,7 @@
       "ar": "كتاب الصلاة",
       "en": "Prayers (Salat)",
       "first": 349,
-      "last": 512,
+      "last": 513,
       "hadith": [
         {
           "n": 349,
@@ -22096,6 +22096,50 @@
           "en": {
             "narrator": "`Aisha",
             "text": "The Prophet (ﷺ) used to pray while I was sleeping across in his bed in front of him. Whenever he wanted to pray witr, he would wake me up and I would pray witr",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 513,
+          "bab": {
+            "ar": ""
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ أَبِي النَّضْرِ، مَوْلَى عُمَرَ بْنِ عُبَيْدِ اللَّهِ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ عَائِشَةَ، زَوْجِ النَّبِيِّ ﷺ",
+          "matn": "أَنَّهَا قَالَتْ كُنْتُ أَنَامُ بَيْنَ يَدَىْ رَسُولِ اللَّهِ ﷺ وَرِجْلاَىَ فِي قِبْلَتِهِ، فَإِذَا سَجَدَ غَمَزَنِي فَقَبَضْتُ رِجْلَىَّ، فَإِذَا قَامَ بَسَطْتُهُمَا. قَالَتْ وَالْبُيُوتُ يَوْمَئِذٍ لَيْسَ فِيهَا مَصَابِيحُ.",
+          "gharib": [
+            {
+              "word": "غَمَزَنِي",
+              "meaning": "مسَّني لينبّهني إلى موضع رجليّ.",
+              "source": "صحيح البخاري، ٥١٣، وفتح الباري، ص ٥٨٨"
+            },
+            {
+              "word": "فَقَبَضْتُ رِجْلَىَّ",
+              "meaning": "فثنيتُ رجليّ وأبعدتهما عن موضع سجوده.",
+              "source": "صحيح البخاري، ٥١٣، وفتح الباري، ص ٥٨٨"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب الصلاة، حديث رقم ٥١٣",
+            "en": "Sahih al-Bukhari, Prayers (Salat), hadith 513"
+          },
+          "en": {
+            "narrator": "`Aisha",
+            "text": "the wife of the Prophet, \"I used to sleep in front of Allah's Messenger (ﷺ) with my legs opposite his Qibla (facing him); and whenever he prostrated, he pushed my feet and I withdrew them and whenever he stood, I stretched them.\" `Aisha added, \"In those days there were no lamps in the houses",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
