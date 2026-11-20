@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 526,
+      "last": 527,
       "hadith": [
         {
           "n": 521,
@@ -22701,6 +22701,45 @@
           "en": {
             "narrator": "Ibn Mas`ud",
             "text": "A man kissed a woman (unlawfully) and then went to the Prophet (ﷺ) and informed him. Allah revealed: And offer prayers perfectly At the two ends of the day And in some hours of the night (i.e. the five compulsory prayers). Verily! good deeds remove (annul) the evil deeds (small sins) (11.114). The man asked Allah's Messenger (ﷺ), \"Is it for me?\" He said, \"It is for all my followers",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 527,
+          "bab": {
+            "ar": "باب فضل الصلاة لوقتها"
+          },
+          "isnad": "حَدَّثَنَا أَبُو الْوَلِيدِ، هِشَامُ بْنُ عَبْدِ الْمَلِكِ قَالَ حَدَّثَنَا شُعْبَةُ، قَالَ الْوَلِيدُ بْنُ الْعَيْزَارِ أَخْبَرَنِي قَالَ سَمِعْتُ أَبَا عَمْرٍو الشَّيْبَانِيَّ، يَقُولُ حَدَّثَنَا صَاحِبُ، هَذِهِ الدَّارِ وَأَشَارَ إِلَى دَارِ عَبْدِ اللَّهِ قَالَ سَأَلْتُ النَّبِيَّ ﷺ أَىُّ الْعَمَلِ أَحَبُّ إِلَى اللَّهِ قَالَ",
+          "matn": "الصَّلاَةُ عَلَى وَقْتِهَا . قَالَ ثُمَّ أَىُّ قَالَ  ثُمَّ بِرُّ الْوَالِدَيْنِ . قَالَ ثُمَّ أَىُّ قَالَ  الْجِهَادُ فِي سَبِيلِ اللَّهِ . قَالَ حَدَّثَنِي بِهِنَّ وَلَوِ اسْتَزَدْتُهُ لَزَادَنِي.",
+          "gharib": [
+            {
+              "word": "اسْتَزَدْتُهُ",
+              "meaning": "طلبتُ منه مزيدًا من الجواب.",
+              "source": "فتح الباري ٢/١٠، شرح حديث ٥٢٧"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٢٧",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 527"
+          },
+          "en": {
+            "narrator": "`Abdullah",
+            "text": "I asked the Prophet (ﷺ) \"Which deed is the dearest to Allah?\" He replied, \"To offer the prayers at their early stated fixed times.\" I asked, \"What is the next (in goodness)?\" He replied, \"To be good and dutiful to your parents\" I again asked, \"What is the next (in goodness)?\" He replied, 'To participate in Jihad (religious fighting) in Allah's cause.\" `Abdullah added, \"I asked only that much and if I had asked more, the Prophet (ﷺ) would have told me more",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
