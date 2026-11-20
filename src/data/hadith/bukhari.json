@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 550,
+      "last": 551,
       "hadith": [
         {
           "n": 521,
@@ -23672,6 +23672,45 @@
           "en": {
             "narrator": "Anas bin Malik",
             "text": "Allah's Messenger (ﷺ) used to offer the `Asr prayer at a time when the sun was still hot and high and if a person went to Al-`Awali (a place) of Medina, he would reach there when the sun was still high. Some of Al-`Awali of Medina were about four miles or so from the town",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 551,
+          "bab": {
+            "ar": "باب وقت العصر"
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ أَنَسِ بْنِ مَالِكٍ،",
+          "matn": "قَالَ كُنَّا نُصَلِّي الْعَصْرَ ثُمَّ يَذْهَبُ الذَّاهِبُ مِنَّا إِلَى قُبَاءٍ، فَيَأْتِيهِمْ وَالشَّمْسُ مُرْتَفِعَةٌ.",
+          "gharib": [
+            {
+              "word": "قُبَاءٍ",
+              "meaning": "موضع من العوالي، ولفظه هنا أخص من ذكر العوالي عامةً.",
+              "source": "فتح الباري ٢/٢٩"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥١",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 551"
+          },
+          "en": {
+            "narrator": "Anas bin Malik",
+            "text": "We used to pray the `Asr and after that if one of us went to Quba' he would arrive there while the sun was still high",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
