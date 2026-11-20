@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 552,
+      "last": 553,
       "hadith": [
         {
           "n": 521,
@@ -23750,6 +23750,45 @@
           "en": {
             "narrator": "Ibn `Umar",
             "text": "Allah's Messenger (ﷺ) said, \"Whoever misses the `Asr prayer (intentionally) then it is as if he lost his family and property",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 553,
+          "bab": {
+            "ar": "باب من ترك العصر"
+          },
+          "isnad": "حَدَّثَنَا مُسْلِمُ بْنُ إِبْرَاهِيمَ، قَالَ حَدَّثَنَا هِشَامٌ، قَالَ حَدَّثَنَا يَحْيَى بْنُ أَبِي كَثِيرٍ، عَنْ أَبِي قِلاَبَةَ، عَنْ أَبِي الْمَلِيحِ،",
+          "matn": "قَالَ كُنَّا مَعَ بُرَيْدَةَ فِي غَزْوَةٍ فِي يَوْمٍ ذِي غَيْمٍ فَقَالَ بَكِّرُوا بِصَلاَةِ الْعَصْرِ فَإِنَّ النَّبِيَّ ﷺ قَالَ مَنْ تَرَكَ صَلاَةَ الْعَصْرِ فَقَدْ حَبِطَ عَمَلُهُ .",
+          "gharib": [
+            {
+              "word": "بَكِّرُوا",
+              "meaning": "بادِروا وعجّلوا.",
+              "source": "فتح الباري ٢/٣٢"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥٣",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 553"
+          },
+          "en": {
+            "narrator": "Abu Al-Malih [??]",
+            "text": "We were with Buraida in a battle on a cloudy day and he said, \"Offer the `Asr prayer early as the Prophet said, \"Whoever leaves the `Asr prayer, all his (good) deeds will be annulled",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
