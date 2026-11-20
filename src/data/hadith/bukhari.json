@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 544,
+      "last": 545,
       "hadith": [
         {
           "n": 521,
@@ -23423,6 +23423,45 @@
           "en": {
             "narrator": "Aisha",
             "text": "Allah's Messenger (ﷺ) used to offer the `Asr prayer when the sunshine had not disappeared from my chamber",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 545,
+          "bab": {
+            "ar": "باب وقت العصر"
+          },
+          "isnad": "حَدَّثَنَا قُتَيْبَةُ، قَالَ حَدَّثَنَا اللَّيْثُ، عَنِ ابْنِ شِهَابٍ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ،",
+          "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ صَلَّى الْعَصْرَ وَالشَّمْسُ فِي حُجْرَتِهَا، لَمْ يَظْهَرِ الْفَىْءُ مِنْ حُجْرَتِهَا.",
+          "gharib": [
+            {
+              "word": "لَمْ يَظْهَرِ الْفَىْءُ",
+              "meaning": "لم ينبسط الظل في الموضع الذي كان ضوء الشمس فيه.",
+              "source": "فتح الباري ٢/٢٥"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٤٥",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 545"
+          },
+          "en": {
+            "narrator": "`Aisha",
+            "text": "Allah's Messenger (ﷺ) used to offer the `Asr prayers at a time when the sunshine was still inside my chamber and no shadow had yet appeared in it",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
