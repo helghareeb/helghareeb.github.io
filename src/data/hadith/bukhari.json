@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 553,
+      "last": 554,
       "hadith": [
         {
           "n": 521,
@@ -23789,6 +23789,45 @@
           "en": {
             "narrator": "Abu Al-Malih [??]",
             "text": "We were with Buraida in a battle on a cloudy day and he said, \"Offer the `Asr prayer early as the Prophet said, \"Whoever leaves the `Asr prayer, all his (good) deeds will be annulled",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 554,
+          "bab": {
+            "ar": "باب فضل صلاة العصر"
+          },
+          "isnad": "حَدَّثَنَا الْحُمَيْدِيُّ، قَالَ حَدَّثَنَا مَرْوَانُ بْنُ مُعَاوِيَةَ، قَالَ حَدَّثَنَا إِسْمَاعِيلُ، عَنْ قَيْسٍ، عَنْ جَرِيرٍ،",
+          "matn": "قَالَ كُنَّا عِنْدَ النَّبِيِّ ﷺ فَنَظَرَ إِلَى الْقَمَرِ لَيْلَةً ـ يَعْنِي الْبَدْرَ ـ فَقَالَ إِنَّكُمْ سَتَرَوْنَ رَبَّكُمْ كَمَا تَرَوْنَ هَذَا الْقَمَرَ لاَ تُضَامُّونَ فِي رُؤْيَتِهِ، فَإِنِ اسْتَطَعْتُمْ أَنْ لاَ تُغْلَبُوا عَلَى صَلاَةٍ قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا فَافْعَلُوا . ثُمَّ قَرَأَ {وَسَبِّحْ بِحَمْدِ رَبِّكَ قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ الْغُرُوبِ}. قَالَ إِسْمَاعِيلُ افْعَلُوا لاَ تَفُوتَنَّكُمْ.",
+          "gharib": [
+            {
+              "word": "تُضَامُّونَ",
+              "meaning": "من الضم، أي لا تزدحمون على رؤيته، وذكر ابن حجر أيضًا رواية التخفيف بمعنى نفي الضيم.",
+              "source": "فتح الباري ٢/٣٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٥٤",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 554"
+          },
+          "en": {
+            "narrator": "Qais",
+            "text": "Jarir said, \"We were with the Prophet (ﷺ) and he looked at the moon--full-moon--and said, 'Certainly you will see your Lord as you see this moon and you will have no trouble in seeing Him. So if you can avoid missing (through sleep or business, etc.) a prayer before the sunrise (Fajr) and a prayer before sunset (`Asr), you must do so.' He then recited Allah's Statement: And celebrate the praises Of your Lord before the rising of the sun and before (its) setting.\" (50.39) Isma`il said, \"Offer those prayers and do not miss them",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
