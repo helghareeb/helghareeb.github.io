@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 563,
+      "last": 564,
       "hadith": [
         {
           "n": 521,
@@ -24214,6 +24214,50 @@
           "en": {
             "narrator": "`Abdullah Al-Muzani",
             "text": "The Prophet (ﷺ) said, \"Do not be influenced by bedouins regarding the name of your Maghrib prayer which is called `Isha' by them",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 564,
+          "bab": {
+            "ar": "باب ذكر العشاء والعتمة ومن رآه واسعًا. قال أبو عبد الله: والاختيار أن يقول العشاء، لقوله تعالى"
+          },
+          "isnad": "حَدَّثَنَا عَبْدَانُ، قَالَ أَخْبَرَنَا عَبْدُ اللَّهِ، قَالَ أَخْبَرَنَا يُونُسُ، عَنِ الزُّهْرِيِّ، قَالَ سَالِمٌ أَخْبَرَنِي عَبْدُ اللَّهِ، قَالَ",
+          "matn": "صَلَّى لَنَا رَسُولُ اللَّهِ ﷺ لَيْلَةً صَلاَةَ الْعِشَاءِ ـ وَهْىَ الَّتِي يَدْعُو النَّاسُ الْعَتَمَةَ ـ ثُمَّ انْصَرَفَ فَأَقْبَلَ عَلَيْنَا فَقَالَ  أَرَأَيْتُمْ لَيْلَتَكُمْ هَذِهِ فَإِنَّ رَأْسَ مِائَةِ سَنَةٍ مِنْهَا لاَ يَبْقَى مِمَّنْ هُوَ عَلَى ظَهْرِ الأَرْضِ أَحَدٌ .",
+          "gharib": [
+            {
+              "word": "الْعَتَمَةَ",
+              "meaning": "اسمٌ كان الناس يطلقونه على صلاة العشاء، وأصل العَتْم تأخيرٌ مخصوص.",
+              "source": "فتح الباري ٢/٤٥–٤٧ و١/٢١١–٢١٢"
+            },
+            {
+              "word": "رَأْسَ مِائَةِ سَنَةٍ",
+              "meaning": "عند تمام مائة سنة من تلك الليلة، كما في شرح نظيره في باب السمر في العلم.",
+              "source": "فتح الباري ٢/٤٥–٤٧ و١/٢١١–٢١٢"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٦٤",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 564"
+          },
+          "en": {
+            "narrator": "`Abdullah",
+            "text": "\"One night Allah's Messenger (ﷺ) led us in the `Isha' prayer and that is the one called Al-`Atma [??] by the people. After the completion of the prayer, he faced us and said, \"Do you know the importance of this night? Nobody present on the surface of the earth tonight will be living after one hundred years from this night.\" (See Hadith No)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
