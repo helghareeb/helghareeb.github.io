@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 574,
+      "last": 575,
       "hadith": [
         {
           "n": 521,
@@ -24678,6 +24678,45 @@
           "en": {
             "narrator": "Abu Bakr bin Abi Musa",
             "text": "My father said, \"Allah's Messenger (ﷺ) said, 'Whoever prays the two cool prayers (`Asr and Fajr) will go to Paradise",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 575,
+          "bab": {
+            "ar": "باب وقت الفجر"
+          },
+          "isnad": "حَدَّثَنَا عَمْرُو بْنُ عَاصِمٍ، قَالَ حَدَّثَنَا هَمَّامٌ، عَنْ قَتَادَةَ، عَنْ أَنَسٍ، أَنَّ زَيْدَ بْنَ ثَابِتٍ، حَدَّثَهُ",
+          "matn": "أَنَّهُمْ، تَسَحَّرُوا مَعَ النَّبِيِّ ﷺ ثُمَّ قَامُوا إِلَى الصَّلاَةِ. قُلْتُ كَمْ بَيْنَهُمَا قَالَ قَدْرُ خَمْسِينَ أَوْ سِتِّينَ ـ يَعْنِي آيَةً ـ ح.",
+          "gharib": [
+            {
+              "word": "تَسَحَّرُوا",
+              "meaning": "أكلوا السحور آخر الليل.",
+              "source": "فتح الباري ٢/٥٣–٥٤"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٧٥",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 575"
+          },
+          "en": {
+            "narrator": "Anas",
+            "text": "Zaid bin Thabit said, \"We took the \"Suhur\" (the meal taken before dawn while fasting is observed) with the Prophet (ﷺ) and then stood up for the (morning) prayer.\" I asked him how long the interval between the two (Suhur and prayer) was. He replied, 'The interval between the two was just sufficient to recite fifty to sixty 'Ayat",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
