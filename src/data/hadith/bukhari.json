@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 584,
+      "last": 585,
       "hadith": [
         {
           "n": 521,
@@ -25108,6 +25108,45 @@
           "en": {
             "narrator": "Abu Huraira",
             "text": "Allah's Messenger (ﷺ) forbade two kinds of sales, two kinds of dresses, and two prayers. He forbade offering prayers after the Fajr prayer till the rising of the sun and after the `Asr prayer till its setting. He also forbade \"Ishtimal-Assama [??] \" and \"al-Ihtiba\" in one garment in such a way that one's private parts are exposed towards the sky. He also forbade the sales called \"Munabadha\" and \"Mulamasa.\" (See Hadith No. 354 and 355 Vol)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 585,
+          "bab": {
+            "ar": "باب لا تتحرى الصلاة قبل غروب الشمس"
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ نَافِعٍ، عَنِ ابْنِ عُمَرَ، أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ",
+          "matn": "لاَ يَتَحَرَّى أَحَدُكُمْ فَيُصَلِّي عِنْدَ طُلُوعِ الشَّمْسِ وَلاَ عِنْدَ غُرُوبِهَا .",
+          "gharib": [
+            {
+              "word": "يَتَحَرَّى",
+              "meaning": "يتعمّد اختيار وقت الصلاة.",
+              "source": "ابن حجر، فتح الباري، كتاب مواقيت الصلاة، باب لا تتحرى الصلاة قبل غروب الشمس، ٢/٧٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٨٥",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 585"
+          },
+          "en": {
+            "narrator": "Ibn `Umar",
+            "text": "Allah's Messenger (ﷺ) said, \"None of you should try to pray at sunrise or sunset",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
