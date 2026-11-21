@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 583,
+      "last": 584,
       "hadith": [
         {
           "n": 521,
@@ -25054,6 +25054,60 @@
           "en": {
             "narrator": "Hisham's father",
             "text": "Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'Do not pray at the time of sunrise and at the time of sunset.' \" Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'If the edge of the sun appears (above the horizon) delay the prayer till it becomes high, and if the edge of the sun disappears, delay the prayer till it sets (disappears completely)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 584,
+          "bab": {
+            "ar": "باب الصلاة بعد الفجر حتى ترتفع الشمس"
+          },
+          "isnad": "حَدَّثَنَا عُبَيْدُ بْنُ إِسْمَاعِيلَ، عَنْ أَبِي أُسَامَةَ، عَنْ عُبَيْدِ اللَّهِ، عَنْ خُبَيْبِ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ حَفْصِ بْنِ عَاصِمٍ، عَنْ أَبِي هُرَيْرَةَ،",
+          "matn": "أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى عَنْ بَيْعَتَيْنِ وَعَنْ لِبْسَتَيْنِ وَعَنْ صَلاَتَيْنِ نَهَى عَنِ الصَّلاَةِ بَعْدَ الْفَجْرِ حَتَّى تَطْلُعَ الشَّمْسُ، وَبَعْدَ الْعَصْرِ حَتَّى تَغْرُبَ الشَّمْسُ، وَعَنِ اشْتِمَالِ الصَّمَّاءِ وَعَنْ الاِحْتِبَاءِ فِي ثَوْبٍ وَاحِدٍ يُفْضِي بِفَرْجِهِ إِلَى السَّمَاءِ، وَعَنِ الْمُنَابَذَةِ وَالْمُلاَمَسَةِ.",
+          "gharib": [
+            {
+              "word": "اشْتِمَالِ الصَّمَّاءِ",
+              "meaning": "من صورها أن يلتحف بثوب فيلقي طرفيه على شق واحد، فينكشف الشق الآخر.",
+              "source": "ابن حجر، فتح الباري، باب اشتمال الصماء"
+            },
+            {
+              "word": "الاِحْتِبَاءِ",
+              "meaning": "أن يضمّ الجالس ساقيه إلى بطنه، ويلفّ عليهما وعلى ظهره ثوبًا ونحوه.",
+              "source": "ابن حجر، فتح الباري، باب اشتمال الصماء"
+            },
+            {
+              "word": "الْمُنَابَذَةِ",
+              "meaning": "من صورها أن يطرح أحد المتبايعين الثوب إلى الآخر ويجعل طرحه بيعًا قبل النظر فيه.",
+              "source": "ابن حجر، فتح الباري، باب بيع الملامسة"
+            },
+            {
+              "word": "الْمُلاَمَسَةِ",
+              "meaning": "من صورها أن يجعل لمس الثوب بيعًا قبل تأمّله.",
+              "source": "ابن حجر، فتح الباري، باب بيع الملامسة"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٨٤",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 584"
+          },
+          "en": {
+            "narrator": "Abu Huraira",
+            "text": "Allah's Messenger (ﷺ) forbade two kinds of sales, two kinds of dresses, and two prayers. He forbade offering prayers after the Fajr prayer till the rising of the sun and after the `Asr prayer till its setting. He also forbade \"Ishtimal-Assama [??] \" and \"al-Ihtiba\" in one garment in such a way that one's private parts are exposed towards the sky. He also forbade the sales called \"Munabadha\" and \"Mulamasa.\" (See Hadith No. 354 and 355 Vol)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
