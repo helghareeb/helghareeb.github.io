@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 581,
+      "last": 583,
       "hadith": [
         {
           "n": 521,
@@ -24976,6 +24976,84 @@
           "en": {
             "narrator": "`Umar",
             "text": "\"The Prophet (ﷺ) forbade praying after the Fajr prayer till the sun rises and after the `Asr prayer till the sun sets.\" Narrated Ibn `Abbas: Some people told me the same narration (as above)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 582,
+          "bab": {
+            "ar": "باب الصلاة بعد الفجر حتى ترتفع الشمس"
+          },
+          "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ، عَنْ هِشَامٍ، قَالَ أَخْبَرَنِي أَبِي قَالَ، أَخْبَرَنِي ابْنُ عُمَرَ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ",
+          "matn": "لاَ تَحَرَّوْا بِصَلاَتِكُمْ طُلُوعَ الشَّمْسِ وَلاَ غُرُوبَهَا . وَقَالَ حَدَّثَنِي ابْنُ عُمَرَ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  إِذَا طَلَعَ حَاجِبُ الشَّمْسِ فَأَخِّرُوا الصَّلاَةَ حَتَّى تَرْتَفِعَ، وَإِذَا غَابَ حَاجِبُ الشَّمْسِ فَأَخِّرُوا الصَّلاَةَ حَتَّى تَغِيبَ . تَابَعَهُ عَبْدَةُ.",
+          "gharib": [
+            {
+              "word": "لاَ تَحَرَّوْا",
+              "meaning": "لا تتقصّدوا ذلك الوقت للصلاة.",
+              "source": "ابن رجب، فتح الباري، باب الصلاة بعد الفجر حتى ترتفع الشمس، شرح حديثي ٥٨٢ و٥٨٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٨٢",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 582"
+          },
+          "en": {
+            "narrator": "Hisham's father",
+            "text": "Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'Do not pray at the time of sunrise and at the time of sunset.' \" Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'If the edge of the sun appears (above the horizon) delay the prayer till it becomes high, and if the edge of the sun disappears, delay the prayer till it sets (disappears completely)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 583,
+          "bab": {
+            "ar": "باب الصلاة بعد الفجر حتى ترتفع الشمس"
+          },
+          "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ، عَنْ هِشَامٍ، قَالَ أَخْبَرَنِي أَبِي قَالَ، أَخْبَرَنِي ابْنُ عُمَرَ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ",
+          "matn": "لاَ تَحَرَّوْا بِصَلاَتِكُمْ طُلُوعَ الشَّمْسِ وَلاَ غُرُوبَهَا . وَقَالَ حَدَّثَنِي ابْنُ عُمَرَ، قَالَ قَالَ رَسُولُ اللَّهِ ﷺ  إِذَا طَلَعَ حَاجِبُ الشَّمْسِ فَأَخِّرُوا الصَّلاَةَ حَتَّى تَرْتَفِعَ، وَإِذَا غَابَ حَاجِبُ الشَّمْسِ فَأَخِّرُوا الصَّلاَةَ حَتَّى تَغِيبَ . تَابَعَهُ عَبْدَةُ.",
+          "gharib": [
+            {
+              "word": "حَاجِبُ الشَّمْسِ",
+              "meaning": "طرف قرص الشمس الذي يبدو عند الطلوع أو يغيب عند الغروب.",
+              "source": "ابن حجر، فتح الباري، شرح حديث ٥٨٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٨٣",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 583"
+          },
+          "en": {
+            "narrator": "Hisham's father",
+            "text": "Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'Do not pray at the time of sunrise and at the time of sunset.' \" Ibn `Umar said, \"Allah's Messenger (ﷺ) said, 'If the edge of the sun appears (above the horizon) delay the prayer till it becomes high, and if the edge of the sun disappears, delay the prayer till it sets (disappears completely)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
