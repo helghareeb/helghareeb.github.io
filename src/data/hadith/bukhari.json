@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 572,
+      "last": 573,
       "hadith": [
         {
           "n": 521,
@@ -24600,6 +24600,45 @@
           "en": {
             "narrator": "Anas",
             "text": "The Prophet (ﷺ) delayed the `Isha' prayer till midnight and then he offered the prayer and said, \"The people prayed and slept but you have been in prayer as long as you have been waiting for it (the prayer).\" Anas added: As if I am looking now at the glitter of the ring of the Prophet (ﷺ) on that night",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 573,
+          "bab": {
+            "ar": "باب فضل صلاة الفجر"
+          },
+          "isnad": "حَدَّثَنَا مُسَدَّدٌ، قَالَ حَدَّثَنَا يَحْيَى، عَنْ إِسْمَاعِيلَ، حَدَّثَنَا قَيْسٌ،",
+          "matn": "قَالَ لِي جَرِيرُ بْنُ عَبْدِ اللَّهِ كُنَّا عِنْدَ النَّبِيِّ ﷺ إِذْ نَظَرَ إِلَى الْقَمَرِ لَيْلَةَ الْبَدْرِ فَقَالَ  أَمَا إِنَّكُمْ سَتَرَوْنَ رَبَّكُمْ كَمَا تَرَوْنَ هَذَا، لاَ تُضَامُّونَ ـ أَوْ لاَ تُضَاهُونَ ـ فِي رُؤْيَتِهِ، فَإِنِ اسْتَطَعْتُمْ أَنْ لاَ تُغْلَبُوا عَلَى صَلاَةٍ قَبْلَ طُلُوعِ الشَّمْسِ، وَقَبْلَ غُرُوبِهَا فَافْعَلُوا . ثُمَّ قَالَ  فَسَبِّحْ بِحَمْدِ رَبِّكَ قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا .",
+          "gharib": [
+            {
+              "word": "تُغْلَبُوا",
+              "meaning": "يمنعكم شاغل أو يغلبكم نوم فتفوتكم الصلاة.",
+              "source": "فتح الباري ٢/٥٢–٥٣"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٧٣",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 573"
+          },
+          "en": {
+            "narrator": "Jarir bin `Abdullah",
+            "text": "We were with the Prophet (ﷺ) on a full moon night. He looked at the moon and said, \"You will certainly see your Lord as you see this moon, and there will be no trouble in seeing Him. So if you can avoid missing (through sleep, business, etc.) a prayer before the rising of the sun (Fajr) and before its setting (`Asr) you must do so. He (the Prophet (ﷺ) ) then recited the following verse: And celebrate the praises Of Your Lord before The rising of the sun And before (its) setting",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
