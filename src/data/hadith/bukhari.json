@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 579,
+      "last": 580,
       "hadith": [
         {
           "n": 521,
@@ -24893,6 +24893,45 @@
           "en": {
             "narrator": "Abu Huraira",
             "text": "Allah's Messenger (ﷺ) said, \"Whoever could get one rak`a (of the Fajr prayer) before sunrise, he has got the (morning) prayer and whoever could get one rak`a of the `Asr prayer before sunset, he has got the (`Asr) prayer",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 580,
+          "bab": {
+            "ar": "باب من أدرك من الصلاة ركعة"
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنِ ابْنِ شِهَابٍ، عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ",
+          "matn": "مَنْ أَدْرَكَ رَكْعَةً مِنَ الصَّلاَةِ فَقَدْ أَدْرَكَ الصَّلاَةَ .",
+          "gharib": [
+            {
+              "word": "أَدْرَكَ",
+              "meaning": "لحق، والمراد هنا إدراك وقت الصلاة أو حكمها مع إتمام ما بقي، كما بيّن ابن حجر.",
+              "source": "ابن حجر، فتح الباري، شرح حديث ٥٨٠"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٨٠",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 580"
+          },
+          "en": {
+            "narrator": "Abu Huraira",
+            "text": "Allah's Messenger (ﷺ) said, \"Whoever could get one rak`a of a prayer, (in its proper time) he has got the prayer",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
