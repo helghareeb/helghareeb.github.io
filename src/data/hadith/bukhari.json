@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 571,
+      "last": 572,
       "hadith": [
         {
           "n": 521,
@@ -24561,6 +24561,45 @@
           "en": {
             "narrator": "Ibn Juraij from Nafi`",
             "text": "`Abdullah bin `Umar said, \"Once Allah's Messenger (ﷺ) was busy (at the time of the `Isha'), so the prayer was delayed so much so that we slept and woke up and slept and woke up again. The Prophet (ﷺ) came out and said, 'None amongst the dwellers of the earth but you have been waiting for the prayer.\" Ibn `Umar did not find any harm in praying it earlier or in delaying it unless he was afraid that sleep might overwhelm him and he might miss the prayer, and sometimes he used to sleep before the `Isha' prayer. Ibn Juraij said, \"I said to `Ata', 'I heard Ibn `Abbas saying: Once Allah's Messenger (ﷺ) delayed the `Isha' prayer to such an extent that the people slept and got up and slept again and got up again. Then `Umar bin Al-Khattab, stood up and reminded the Prophet (ﷺ) of the prayer.' `Ata' said, 'Ibn `Abbas said: The Prophet came out as if I was looking at him at this time, and water was trickling from his head and he was putting his hand on his head and then said, 'Hadn't I thought it hard for my followers, I would have ordered them to pray (`Isha' prayer) at this time.' I asked `Ata' for further information, how the Prophet had kept his hand on his head as he was told by Ibn `Abbas. `Ata' separated his fingers slightly and put their tips on the side of the head, brought the fingers downwards approximating them till the thumb touched the lobe of the ear at the side of the temple and the beard on the face. He neither slowed nor hurried in this action but he acted like that. The Prophet (ﷺ) said: \"Hadn't I thought it hard for my followers I would have ordered them to pray at this time",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 572,
+          "bab": {
+            "ar": "باب وقت العشاء إلى نصف الليل. وقال أبو برزة: كان النبي ﷺ يستحب تأخيرها."
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ الرَّحِيمِ الْمُحَارِبِيُّ، قَالَ حَدَّثَنَا زَائِدَةُ، عَنْ حُمَيْدٍ الطَّوِيلِ، عَنْ أَنَسٍ،",
+          "matn": "قَالَ أَخَّرَ النَّبِيُّ ﷺ صَلاَةَ الْعِشَاءِ إِلَى نِصْفِ اللَّيْلِ، ثُمَّ صَلَّى ثُمَّ قَالَ قَدْ صَلَّى النَّاسُ وَنَامُوا، أَمَا إِنَّكُمْ فِي صَلاَةٍ مَا انْتَظَرْتُمُوهَا . وَزَادَ ابْنُ أَبِي مَرْيَمَ أَخْبَرَنَا يَحْيَى بْنُ أَيُّوبَ حَدَّثَنِي حُمَيْدٌ سَمِعَ أَنَسًا كَأَنِّي أَنْظُرُ إِلَى وَبِيصِ خَاتَمِهِ لَيْلَتَئِذٍ.",
+          "gharib": [
+            {
+              "word": "وَبِيصِ",
+              "meaning": "بريق ولمعان.",
+              "source": "فتح الباري ٢/٥١–٥٢"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٧٢",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 572"
+          },
+          "en": {
+            "narrator": "Anas",
+            "text": "The Prophet (ﷺ) delayed the `Isha' prayer till midnight and then he offered the prayer and said, \"The people prayed and slept but you have been in prayer as long as you have been waiting for it (the prayer).\" Anas added: As if I am looking now at the glitter of the ring of the Prophet (ﷺ) on that night",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
