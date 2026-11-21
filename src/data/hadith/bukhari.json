@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 585,
+      "last": 586,
       "hadith": [
         {
           "n": 521,
@@ -25147,6 +25147,45 @@
           "en": {
             "narrator": "Ibn `Umar",
             "text": "Allah's Messenger (ﷺ) said, \"None of you should try to pray at sunrise or sunset",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 586,
+          "bab": {
+            "ar": "باب لا تتحرى الصلاة قبل غروب الشمس"
+          },
+          "isnad": "حَدَّثَنَا عَبْدُ الْعَزِيزِ بْنُ عَبْدِ اللَّهِ، قَالَ حَدَّثَنَا إِبْرَاهِيمُ بْنُ سَعْدٍ، عَنْ صَالِحٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عَطَاءُ بْنُ يَزِيدَ الْجُنْدَعِيُّ، أَنَّهُ سَمِعَ أَبَا سَعِيدٍ الْخُدْرِيَّ، يَقُولُ سَمِعْتُ رَسُولَ اللَّهِ ﷺ يَقُولُ",
+          "matn": "لاَ صَلاَةَ بَعْدَ الصُّبْحِ حَتَّى تَرْتَفِعَ الشَّمْسُ، وَلاَ صَلاَةَ بَعْدَ الْعَصْرِ حَتَّى تَغِيبَ الشَّمْسُ .",
+          "gharib": [
+            {
+              "word": "بَعْدَ الصُّبْحِ",
+              "meaning": "بعد أداء صلاة الصبح.",
+              "source": "ابن حجر، فتح الباري، كتاب مواقيت الصلاة، شرح حديث ٥٨٦"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٨٦",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 586"
+          },
+          "en": {
+            "narrator": "Abu Sa`id Al-Khudri",
+            "text": "I heard Allah's Messenger (ﷺ) saying, \"There is no prayer after the morning prayer till the sun rises, and there is no prayer after the `Asr prayer till the sun sets",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
