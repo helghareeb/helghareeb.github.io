@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 587,
+      "last": 588,
       "hadith": [
         {
           "n": 521,
@@ -25225,6 +25225,45 @@
           "en": {
             "narrator": "Muawiya",
             "text": "You offer a prayer which I did not see being offered by Allah's Messenger (ﷺ) when we were in his company and he certainly had forbidden it (i.e. two rak`at after the `Asr prayer)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 588,
+          "bab": {
+            "ar": "باب لا تتحرى الصلاة قبل غروب الشمس"
+          },
+          "isnad": "حَدَّثَنَا مُحَمَّدُ بْنُ سَلاَمٍ، قَالَ حَدَّثَنَا عَبْدَةُ، عَنْ عُبَيْدِ اللَّهِ، عَنْ خُبَيْبٍ، عَنْ حَفْصِ بْنِ عَاصِمٍ، عَنْ أَبِي هُرَيْرَةَ، قَالَ",
+          "matn": "نَهَى رَسُولُ اللَّهِ ﷺ عَنْ صَلاَتَيْنِ بَعْدَ الْفَجْرِ حَتَّى تَطْلُعَ الشَّمْسُ، وَبَعْدَ الْعَصْرِ حَتَّى تَغْرُبَ الشَّمْسُ.",
+          "gharib": [
+            {
+              "word": "بَعْدَ الْفَجْرِ",
+              "meaning": "أي بعد أداء صلاة الفجر، كما فسّر ابن حجر البعدية في أحاديث هذا الباب بالبعدية عن الصلاة.",
+              "source": "ابن حجر، فتح الباري، كتاب مواقيت الصلاة، باب لا تتحرى الصلاة قبل غروب الشمس، شرح حديث ٥٨٨ (٢/٦١–٦٢)"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٨٨",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 588"
+          },
+          "en": {
+            "narrator": "Abu Huraira",
+            "text": "Allah's Messenger (ﷺ) forbade the offering of two prayers: -1. after the morning prayer till the sunrises. -2. after the `Asr prayer till the sun sets",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
