@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 576,
+      "last": 577,
       "hadith": [
         {
           "n": 521,
@@ -24756,6 +24756,50 @@
           "en": {
             "narrator": "Qatada",
             "text": "Anas bin Malik said, \"The Prophet (ﷺ) and Zaid bin Thabit took the 'Suhur' together and after finishing the meal, the Prophet (ﷺ) stood up and prayed (Fajr prayer).\" I asked Anas, \"How long was the interval between finishing their 'Suhur' and starting the prayer?\" He replied, \"The interval between the two was just sufficient to recite fifty 'Ayat.\" (Verses of the Qur'an)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 577,
+          "bab": {
+            "ar": "باب وقت الفجر"
+          },
+          "isnad": "حَدَّثَنَا إِسْمَاعِيلُ بْنُ أَبِي أُوَيْسٍ، عَنْ أَخِيهِ، عَنْ سُلَيْمَانَ، عَنْ أَبِي حَازِمٍ، أَنَّهُ سَمِعَ سَهْلَ بْنَ سَعْدٍ،",
+          "matn": "يَقُولُ كُنْتُ أَتَسَحَّرُ فِي أَهْلِي ثُمَّ يَكُونُ سُرْعَةٌ بِي أَنْ أُدْرِكَ صَلاَةَ الْفَجْرِ مَعَ رَسُولِ اللَّهِ ﷺ.",
+          "gharib": [
+            {
+              "word": "أَتَسَحَّرُ",
+              "meaning": "آكل طعام السحور قبل الفجر.",
+              "source": "فتح الباري ٢/٥٤–٥٥، باب وقت الفجر"
+            },
+            {
+              "word": "سُرْعَةٌ بِي",
+              "meaning": "أُسرع لكي أدرك الصلاة.",
+              "source": "فتح الباري ٢/٥٤–٥٥، باب وقت الفجر"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٧٧",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 577"
+          },
+          "en": {
+            "narrator": "Sahl bin Sa`d",
+            "text": "I used to take the \"Suhur\" meal with my family and hasten so as to catch the Fajr (morning prayer) with Allah's Messenger (ﷺ)",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
