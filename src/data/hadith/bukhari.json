@@ -22464,7 +22464,7 @@
       "ar": "كتاب مواقيت الصلاة",
       "en": "Times of the Prayers",
       "first": 521,
-      "last": 577,
+      "last": 578,
       "hadith": [
         {
           "n": 521,
@@ -24800,6 +24800,55 @@
           "en": {
             "narrator": "Sahl bin Sa`d",
             "text": "I used to take the \"Suhur\" meal with my family and hasten so as to catch the Fajr (morning prayer) with Allah's Messenger (ﷺ)",
+            "source": "sunnah.com (Muhsin Khan)"
+          },
+          "audio": {
+            "reader": {
+              "ar": "د. يوسف بن نوح أحمد",
+              "en": "Dr. Yusuf bin Nuh Ahmad"
+            },
+            "id": null,
+            "player": null
+          },
+          "video": null,
+          "sharh": null,
+          "fawaid": []
+        },
+        {
+          "n": 578,
+          "bab": {
+            "ar": "باب وقت الفجر"
+          },
+          "isnad": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ، قَالَ أَخْبَرَنَا اللَّيْثُ، عَنْ عُقَيْلٍ، عَنِ ابْنِ شِهَابٍ، قَالَ أَخْبَرَنِي عُرْوَةُ بْنُ الزُّبَيْرِ، أَنَّ عَائِشَةَ، أَخْبَرَتْهُ قَالَتْ،",
+          "matn": "كُنَّ نِسَاءُ الْمُؤْمِنَاتِ يَشْهَدْنَ مَعَ رَسُولِ اللَّهِ ﷺ صَلاَةَ الْفَجْرِ مُتَلَفِّعَاتٍ بِمُرُوطِهِنَّ، ثُمَّ يَنْقَلِبْنَ إِلَى بُيُوتِهِنَّ حِينَ يَقْضِينَ الصَّلاَةَ، لاَ يَعْرِفُهُنَّ أَحَدٌ مِنَ الْغَلَسِ.",
+          "gharib": [
+            {
+              "word": "مُتَلَفِّعَاتٍ",
+              "meaning": "ملتحفات بالثياب.",
+              "source": "ابن حجر، فتح الباري، شرح حديثي ٣٧٢ و٥٧٨"
+            },
+            {
+              "word": "بِمُرُوطِهِنَّ",
+              "meaning": "بأكسيتهن، والمروط جمع مِرط، وهو كساء من صوف أو خز أو غيرهما.",
+              "source": "ابن حجر، فتح الباري، شرح حديثي ٣٧٢ و٥٧٨"
+            },
+            {
+              "word": "الْغَلَسِ",
+              "meaning": "ظلمة آخر الليل عند ابتداء ضوء الصبح.",
+              "source": "ابن حجر، فتح الباري، شرح حديثي ٣٧٢ و٥٧٨"
+            }
+          ],
+          "grade": {
+            "ar": "صحيح",
+            "en": "Sahih"
+          },
+          "takhrij": {
+            "ar": "صحيح البخاري، كتاب مواقيت الصلاة، حديث رقم ٥٧٨",
+            "en": "Sahih al-Bukhari, Times of the Prayers, hadith 578"
+          },
+          "en": {
+            "narrator": "`Aisha",
+            "text": "The believing women covered with their veiling sheets used to attend the Fajr prayer with Allah's Apostle, and after finishing the prayer they would return to their home and nobody could recognize them because of darkness",
             "source": "sunnah.com (Muhsin Khan)"
           },
           "audio": {
